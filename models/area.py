@@ -20,5 +20,5 @@ class AreaContainer:
     def get_area(self, map_id: str):
         return self.areas[map_id]
 
-    def get_area_all(self):
+    def get_all(self):
         return self.areas

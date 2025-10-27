@@ -6,7 +6,7 @@ from data.event import EventType
 from context import Context
 
 from ui.view import View
-from ui.select import Select
+from ui.select import LookSelect
 from ui.embed import LookEmbed
 
 class LookState(State):

@@ -13,7 +13,7 @@ class PlayerManager:
             self.players[ID] = Player(ID, name)
             print(f"[PlayerManager] User data {name} not found, now registered.")
         else:
-            print(f"[PlayerManager] User data {name} exsisted.")
+            print(f"[PlayerManager] User data {name} existed.")
         return self.players[ID]
 
     def remove_player(self, ID):

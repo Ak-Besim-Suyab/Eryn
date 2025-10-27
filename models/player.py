@@ -20,7 +20,7 @@ class Player:
 		return f"<Player {self.name} {self.ID}>"
 
 	def restore_data(self):
-		data_manager = Context.get_manager("data_manager")
+		data_manager = Context.get_manager("data")
 		data_manager.load_player_data(self)
 
 	def update(self):
@@ -38,7 +38,7 @@ class Player:
 			skill_data[f"{name}_level"] = getattr(self.skill, name).level
 			skill_data[f"{name}_experience"] = getattr(self.skill, name).experience
 
-		data_manager = Context.get_manager("data_manager")
+		data_manager = Context.get_manager("data")
 		data_manager.save_data("players", self.ID, player_data)
 		data_manager.save_data("skills", self.ID, skill_data)
 		data_manager.save_data("items", self.ID, self.inventory.items)

@@ -16,15 +16,15 @@ class LookEmbed(discord.Embed):
         areas = Context.get_container("area").get_all()
 
         description_lines = {
-            CommandType.EXCAVATION: "你嘗試在**{location}**某處採掘... 你發現不少東西，並將其放入背包裡",
+            CommandType.EXCAVATE: "你嘗試在**{location}**某處採掘... 你發現不少東西，並將其放入背包裡",
             CommandType.LOOK: "你查看{location}四周，發現一些目標... 你想選擇誰？"
         }
 
-        return description_lines.get(command_type).format(location=area[player.location]["name"])
+        return description_lines.get(command_type).format(location=areas[player.location]["name"])
 
     def set_image(self, command_type):
         image_urls = {
-            CommandType.EXCAVATION: "https://cdn.discordapp.com/attachments/1193049715638538283/1430213789252587681/75781c45-a160-4e37-a448-8f49fa3df0bc.png",
+            CommandType.EXCAVATE: "https://cdn.discordapp.com/attachments/1193049715638538283/1430213789252587681/75781c45-a160-4e37-a448-8f49fa3df0bc.png",
             CommandType.LOOK: "https://cdn.discordapp.com/attachments/1193049715638538283/1430214100838781050/75781c45-a160-4e37-a448-8f49fa3df0bc.png"
         }
 

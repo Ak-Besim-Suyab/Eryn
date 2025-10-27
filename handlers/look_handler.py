@@ -6,7 +6,7 @@ class LookHandler:
     def __init__(self):
         print("[LookHandler] Handler loaded.")
 
-    def draw_entity(self, ) -> list[dict[str, Any]]:
+    def draw_entity(self, ) -> list[dict[str, any]]:
         entity_container = Context.get_container("entity") 
         entities = entity_container.get_all() # get entity dict with { ID/str : Entity/object }
 

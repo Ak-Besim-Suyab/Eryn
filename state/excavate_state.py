@@ -6,7 +6,7 @@ from data.event import EventType
 from context import Context
 
 from ui.view import View
-from ui.select import Select
+from ui.select import LookSelect
 from ui.embed import LookEmbed
 
 class ExcavateState(State):
@@ -30,7 +30,7 @@ class ExcavateState(State):
         embed = LookEmbed(CommandType.EXCAVATE, self.player)
         embed.set_image(CommandType.EXCAVATE)
         embed.add_event_field(EventType.OBTAIN_ITEM, excavate_result)
-        embed.add_event_field(EventType.OBTAIN_EXPERIENCE, experienct_result)
+        embed.add_event_field(EventType.OBTAIN_EXPERIENCE, experience_result)
 
         leveling_result = self.player.skill.process_all_leveling()
         if leveling_result:

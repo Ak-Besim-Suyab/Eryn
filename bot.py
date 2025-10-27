@@ -17,6 +17,9 @@ from models.entity import EntityContainer
 
 import traceback
 import sys
+import os
+
+from dotenv import load_dotenv
 
 intents = discord.Intents.default()
 intents.message_content = True  
@@ -32,8 +35,8 @@ async def on_ready():
         await bot.load_extension("cogs.hello")
         #await bot.load_extension("cogs.excavate")
 
-        synced_haven = await bot.tree.sync(guild=Context.GUILD_HAVEN)
-        synced_besim = await bot.tree.sync(guild=Context.GUILD_BESIM)
+        synced_haven = await bot.tree.sync(guild=Context.GUILD_TH_HAVEN)
+        synced_besim = await bot.tree.sync(guild=Context.GUILD_AK_BESIM)
 
         Context.register_bot(bot)
         Context.register_loader(LootLoader())
@@ -63,5 +66,8 @@ async def on_ready():
         traceback.print_exc() 
         
     print(f"✅ 已登入：{bot.user}")
+    
+load_dotenv()
+TOKEN = os.getenv("DISCORD_TOKEN")
 
-bot.run("MTM5NzIwMzg4OTY5ODM3MzYzMg.G7w-ri.9ugKdNVAbln9ftI5jhgwIgtF1P2JckwUqkVbaA")
+bot.run(TOKEN)
