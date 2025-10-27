@@ -3,7 +3,7 @@ from data.event import EventType
 EVENT_SCHEMAS = {
     EventType.LEVEL_UP: {
         "expected_keys": {
-            "skill_name": str,
+            "skill_id": str,
             "old_level": int,
             "new_level": int
         },
@@ -23,7 +23,7 @@ EVENT_SCHEMAS = {
     },
     EventType.OBTAIN_EXPERIENCE: {
         "expected_keys": {
-            "skill": str,
+            "skill_id": str,
             "experience": int
         },
         "line_template": "{skill} +{experience} EXP",

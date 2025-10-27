@@ -19,7 +19,7 @@ class ExcavationHandler:
                 looted_quantity = random.randint(1, 5)
                 result.append(
                     { 
-                        "item_id": looted_item.ID,
+                        "item_id": looted_item.item_id,
                         "name": looted_item.name,
                         "image": looted_item.image,
                         "quantity": looted_quantity
