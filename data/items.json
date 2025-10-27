@@ -1,0 +1,8 @@
+{
+	"ID": "INTEGER PRIMARY KEY",
+	"mudstone": "INTEGER DEFAULT 0",
+	"slate": "INTEGER DEFAULT 0",
+	"metal_ore": "INTEGER DEFAULT 0",
+	"antique_silver_coin": "INTEGER DEFAULT 0",
+	"gold": "INTEGER DEFAULT 0"
+}

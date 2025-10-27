@@ -1,0 +1,69 @@
+{
+    "baby_chicken": {
+        "display_name": "小雞",
+		"icon": "<:chicken:1425477172499451964>",
+		"tags": "動物",
+		"descriptions": "可以馴養的小動物",
+		"sellable": false,
+		"ranchable": true,
+		"family": "chicken",
+        "base_value": 4, 
+		"base_shop_value": 8,
+		"base_exp": 2
+    },
+    "chicken": {
+        "display_name": "雞", 
+		"category": "livestock",
+		"icon": "<:chicken:1425477172499451964>",
+		"sellable": true,
+		"ranchable": false,
+		"family": "chick",
+        "base_value": 4, 
+		"base_shop_value": 8,
+		"base_exp": 2
+    },
+	"baby_lamb":{
+        "display_name": "小羊", 
+		"category": "livestock",
+		"icon": "<:sheep:1425479305223340095>",
+		"sellable": false,
+		"ranchable": true,
+		"family": "sheep",
+        "base_value": 10, 
+		"base_sell_value": 15,
+		"base_exp": 7
+	},
+	"sheep":{
+        "display_name": "羊", 
+		"category": "livestock",
+		"icon": "<:sheep:1425479305223340095>",
+		"sellable": true,
+		"ranchable": false,
+		"family": "lamb",
+        "base_value": 10, 
+		"base_sell_value": 15,
+		"base_exp": 7
+	},
+	"baby_pig":{
+        "display_name": "小豬", 
+		"category": "livestock",
+		"icon": "<:pig:1425477425344807002>",
+		"sellable": false,
+		"ranchable": true,
+		"family": "pig",
+        "base_value": 20, 
+		"base_sell_value": 35,
+		"base_exp": 13
+	},
+	"pig":{
+        "display_name": "豬", 
+		"category": "livestock",
+		"icon": "<:pig:1425477425344807002>",
+		"sellable": true,
+		"ranchable": false,
+		"family": "piggy",
+        "base_value": 20, 
+		"base_sell_value": 35,
+		"base_exp": 13
+	}
+}

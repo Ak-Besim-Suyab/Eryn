@@ -1,0 +1,18 @@
+{
+	"sheep": {
+		"name": "羊",
+		"level": 1
+	},
+	"deer": {
+		"name": "鹿",
+		"level": 1
+	},
+	"chicken": {
+		"name": "雞",
+		"level": 1
+	},
+	"wolf": {
+		"name": "狼",
+		"level": 3
+	}
+}
