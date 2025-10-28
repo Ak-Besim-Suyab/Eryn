@@ -103,7 +103,7 @@ class DataManager:
                             case "players":
                                 setattr(player, col, row[i])
                             case "items":
-                                player.inventory.set(col, row[i])
+                                player.inventory.set_item(col, row[i])
                             case "skills":
                                 if "_" in col:
                                     skill_name, attr = col.split("_", 1)

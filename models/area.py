@@ -1,11 +1,11 @@
 from context import Context
 
 class Area:
-    def __init__(self, ID: str, name: str):
-        self.ID = ID
+    def __init__(self, uid: str, name: str):
+        self.uid = uid
         self.name = name
 
-        print(f"[Log|Area] {self.ID} registered.")
+        print(f"[Log|Area] UID:{self.uid} registered.")
 
 class AreaContainer:
     def __init__(self):
@@ -14,11 +14,11 @@ class AreaContainer:
     def register(self):
         data_areas = Context.loader.load("data/areas")
 
-        for ID, data in data_areas.items():
-            self.areas[ID] = Area(ID=ID, name=data.get("name"))
+        for uid, data in data_areas.items():
+            self.areas[uid] = Area(uid=uid, name=data.get("name"))
 
-    def get_area(self, map_id: str):
-        return self.areas[map_id]
+    def get_area(self, uid: str):
+        return self.areas[uid]
 
     def get_all(self):
         return self.areas

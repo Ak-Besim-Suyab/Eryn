@@ -33,7 +33,7 @@ async def on_ready():
         await bot.load_extension("cogs.look")
         await bot.load_extension("cogs.play")
         await bot.load_extension("cogs.hello")
-        #await bot.load_extension("cogs.excavate")
+        await bot.load_extension("cogs.excavate")
 
         synced_haven = await bot.tree.sync(guild=Context.GUILD_TH_HAVEN)
         synced_besim = await bot.tree.sync(guild=Context.GUILD_AK_BESIM)
@@ -43,7 +43,7 @@ async def on_ready():
         Context.register_manager("player", PlayerManager())
         Context.register_manager("data", DataManager())
 
-        Context.register_handler("excavation", ExcavationHandler())
+        Context.register_handler("excavate", ExcavationHandler())
         Context.register_handler("look", LookHandler())
 
         Context.register_container("item", ItemContainer())

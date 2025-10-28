@@ -46,10 +46,14 @@ EVENT_SCHEMAS = {
 COMMAND_SCHEMAS = {
     CommandType.LOOK: {
         "image": "https://cdn.discordapp.com/attachments/1193049715638538283/1430214100838781050/75781c45-a160-4e37-a448-8f49fa3df0bc.png",
-        "description": "你查看**{location}**四周，發現一些目標... 你想選擇誰？"
+        "description": "你查看**{area_name}**四周，發現一些目標... 你想選擇誰？"
+    },
+    CommandType.TARGET: {
+        "image": "https://cdn.discordapp.com/attachments/1193049715638538283/1430214100838781050/75781c45-a160-4e37-a448-8f49fa3df0bc.png",
+        "description": "你選擇**{target_name}**做為目標，接下來要做什麼？"
     },
     CommandType.EXCAVATE: {
         "image": "https://cdn.discordapp.com/attachments/1193049715638538283/1430214100838781050/75781c45-a160-4e37-a448-8f49fa3df0bc.png",
-        "description": "你嘗試在**{location}**某處採掘... 你發現不少東西，並將其放入背包裡"
+        "description": "你嘗試在**{area_name}**某處採掘... 你發現不少東西，並將其放入背包裡"
     }
 }

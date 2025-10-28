@@ -5,3 +5,4 @@ class CommandType(Enum):
     HOME = "home"
     COMBAT = "combat"
     EXCAVATE = "excavate"
+    TARGET = "target"
