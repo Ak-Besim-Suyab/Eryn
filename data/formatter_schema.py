@@ -1,4 +1,5 @@
 from data.event import EventType
+from data.command import CommandType
 
 EVENT_SCHEMAS = {
     EventType.LEVEL_UP: {
@@ -18,7 +19,7 @@ EVENT_SCHEMAS = {
             "quantity": int
         },
         "line_template": "{image} {name} x{quantity}",
-        "field_name": "獲得物品",
+        "field_name": "獲得物品：",
         "inline": False,
     },
     EventType.OBTAIN_EXPERIENCE: {
@@ -27,17 +28,28 @@ EVENT_SCHEMAS = {
             "experience": int
         },
         "line_template": "{skill} +{experience} EXP",
-        "field_name": "獲得經驗",
+        "field_name": "獲得經驗：",
         "inline": False,
     },
     EventType.FIND_ENTITY: {
         "expected_keys": {
-            "image": str,
-            "name": str,
-            "level": int
+            "entity_name": str,
+            "level": int,
+            "image": str
         },
-        "line_template": "{image} {name} Lv.{level}",
-        "field_name": "附近有",
+        "line_template": "{image} {entity_name} Lv.{level}",
+        "field_name": "附近有：",
         "inline": False,
+    }
+}
+
+COMMAND_SCHEMAS = {
+    CommandType.LOOK: {
+        "image": "https://cdn.discordapp.com/attachments/1193049715638538283/1430214100838781050/75781c45-a160-4e37-a448-8f49fa3df0bc.png",
+        "description": "你查看**{location}**四周，發現一些目標... 你想選擇誰？"
+    },
+    CommandType.EXCAVATE: {
+        "image": "https://cdn.discordapp.com/attachments/1193049715638538283/1430214100838781050/75781c45-a160-4e37-a448-8f49fa3df0bc.png",
+        "description": "你嘗試在**{location}**某處採掘... 你發現不少東西，並將其放入背包裡"
     }
 }

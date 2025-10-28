@@ -18,7 +18,7 @@ class LookState(State):
         player = player_manager.get_player(self.interaction)
         
         look_handler = Context.get_handler("look")
-        found_entity = look_handler.draw_entity()
+        found_entity = look_handler.draw_entity(player)
 
         select = LookSelect(found_entity)
 
