@@ -6,7 +6,7 @@ class LookHandler:
     def __init__(self):
         print("[LookHandler] Handler loaded.")
 
-    def draw_entity(self, player) -> list[dict[str, any]]:
+    def draw_target(self, player) -> list[dict[str, any]]:
         spawner = Context.loader.load(f"assets/spawners/{player.location}")
         spawner_pool = spawner.get("pool") 
 
@@ -19,8 +19,8 @@ class LookHandler:
             entity = entities.get(entry.get("entity_id"))
             found_entities.append(
                 { 
-                    "entity_id":entity.entity_id,
-                    "entity_name": entity.entity_name,
+                    "entity_id":entity.uid,
+                    "entity_name": entity.name,
                     "level": entity.level,
                     "image": entity.image
                 }

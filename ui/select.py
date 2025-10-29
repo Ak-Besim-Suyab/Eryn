@@ -1,18 +1,28 @@
 import discord
 
 class LookSelect(discord.ui.Select):
-    def __init__(self, state: object, entry: list):
+    def __init__(self, state: object, entries: list[dict]):
         self.state = state
-        self.entry = entry
-        super().__init__(placeholder = "請選擇", options = [], min_values = 1, max_values = 1)
+        self.entries = entries
 
-    def set_option(self, data: list):
-        options = [discord.SelectOption(label=e.get("entity_name"), value=e.get("entity_id"), emoji="❓") for e in self.entry]
+        options = [
+            discord.SelectOption(
+                label=entry.get("entity_name"), 
+                value=entry.get("entity_id"), 
+                emoji="❓"
+            ) 
+            for entry in entries
+        ]
 
-        self.options = options
+        super().__init__(
+            placeholder = "請選擇", 
+            options = options, 
+            min_values = 1, 
+            max_values = 1
+        )
 
     async def callback(self, interaction: discord.Interaction):
         choice = self.values[0]
-        for e in self.entry:
-            if e.get("entity_id") is choice:
-                await self.state.on_target(e)
+        for entry in self.entries:
+            if entry.get("entity_id") is choice:
+                await self.state.select_entry(entry)
