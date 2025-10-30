@@ -1,7 +1,7 @@
 {
     "pool": [
         {
-            "entity_id": "wolf",
+            "uid": "wolf",
             "conditions": {
                 "global_weather": "all",
                 "local_weather": "all",
@@ -9,7 +9,7 @@
             }
         },
         {
-            "entity_id": "chicken",
+            "uid": "chicken",
             "conditions": {
                 "global_weather": "all",
                 "local_weather": "all",
@@ -17,7 +17,7 @@
             }
         },
         {
-            "entity_id": "sheep",
+            "uid": "sheep",
             "conditions": {
                 "global_weather": "all",
                 "local_weather": "all",
@@ -25,7 +25,7 @@
             }
         },
         {
-            "entity_id": "deer",
+            "uid": "deer",
             "conditions": {
                 "global_weather": "all",
                 "local_weather": "all",

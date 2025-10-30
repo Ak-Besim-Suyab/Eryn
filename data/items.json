@@ -1,5 +1,5 @@
 {
-	"ID": "INTEGER PRIMARY KEY",
+	"uid": "INTEGER PRIMARY KEY",
 	"mudstone": "INTEGER DEFAULT 0",
 	"slate": "INTEGER DEFAULT 0",
 	"metal_ore": "INTEGER DEFAULT 0",

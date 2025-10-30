@@ -9,7 +9,7 @@ class Formatter:
         schema = self.schemas[event_type]
         expected_keys = schema.get("expected_keys", {})
         for i, entry in enumerate(data):
-            # 檢欄位+型別
+            # 檢測欄位跟型別
             for key, tp in expected_keys.items():
                 if key not in entry:
                     raise KeyError(f"[Formatter] 第 {i+1} 筆缺少欄位 {key} ({event_type.name})")

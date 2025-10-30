@@ -11,6 +11,7 @@ from ui.embed import LookEmbed
 
 class LookState(State):
     def __init__(self, interaction: object):
+        self.state = 'look'
         self.interaction = interaction
         self.player = Context.get_manager("player").get_player(interaction)
 
@@ -37,8 +38,8 @@ class LookState(State):
 
         await self.interaction.response.send_message(embed=embed, view=view)
 
-    async def select_entry(self, entry):
-        print(entry)
+    async def select_entry(self, interaction, entry):
+
         content = {
             "target_name": entry.get("entity_name")
         }
@@ -46,7 +47,13 @@ class LookState(State):
         embed = LookEmbed(self.player, CommandType.TARGET)
         embed.set_description(content)
 
-        await self.interaction.response.edit_message(embed=embed)
+        commands = [CommandType.COMBAT, CommandType.HOME]
+
+        view = TargetView(entry)
+        for command in commands:
+            view.add_item(Context.get_container("button").get_button(command))
+
+        await interaction.response.edit_message(embed=embed, view=view)
 
     async def end(self):
         pass

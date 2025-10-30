@@ -2,9 +2,9 @@ import random
 
 from context import Context
 
-class ExcavationHandler:
+class ExcavateHandler:
     def __init__(self):
-        print("[ExcavationHandler] Handler loaded.")
+        print("[ExcavateHandler] Handler loaded.")
 
     def draw(self, player) -> list:
         table = Context.loader.load("loot_table/excavation_loot")

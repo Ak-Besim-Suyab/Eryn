@@ -1,5 +1,0 @@
-{
-	"user_id": "INTEGER PRIMARY KEY",
-	"message_count": "INTEGER DEFAULT 1",
-	"combat_count": "INTEGER DEFAULT 0"
-}

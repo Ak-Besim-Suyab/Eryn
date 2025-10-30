@@ -4,20 +4,21 @@ from models.skill import SkillContainer
 from context import Context
 
 class Player:
-	def __init__(self, ID: int, name: str):
-		self.ID = ID
+	def __init__(self, uid: int, name: str):
+		self.uid = uid
 		self.name = name
 		self.gold = 0
 		self.turn = 0
 		self.location = 'forest'
+		self.state = 'home'
 
-		self.inventory = Inventory(ID)
-		self.skill = SkillContainer(ID)
+		self.inventory = Inventory(uid)
+		self.skill = SkillContainer(uid)
 
 		self.restore_data()
 
 	def __repr__(self):
-		return f"<Player {self.name} {self.ID}>"
+		return f"<Player {self.name} {self.uid}>"
 
 	def restore_data(self):
 		data_manager = Context.get_manager("data")
@@ -39,6 +40,6 @@ class Player:
 			skill_data[f"{name}_experience"] = getattr(self.skill, name).experience
 
 		data_manager = Context.get_manager("data")
-		data_manager.save_data("players", self.ID, player_data)
-		data_manager.save_data("skills", self.ID, skill_data)
-		data_manager.save_data("items", self.ID, self.inventory.items)
+		data_manager.save_data("players", self.uid, player_data)
+		data_manager.save_data("skills", self.uid, skill_data)
+		data_manager.save_data("items", self.uid, self.inventory.items)

@@ -24,5 +24,5 @@ class LookSelect(discord.ui.Select):
     async def callback(self, interaction: discord.Interaction):
         choice = self.values[0]
         for entry in self.entries:
-            if entry.get("entity_id") is choice:
-                await self.state.select_entry(entry)
+            if entry.get("entity_id") == choice:
+                await self.state.select_entry(interaction, entry)

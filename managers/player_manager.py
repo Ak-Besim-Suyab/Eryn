@@ -6,15 +6,15 @@ class PlayerManager:
         print("[PlayerManager] Manager loaded.")
 
     def get_player(self, interaction):
-        ID = interaction.user.id
+        uid = interaction.user.id
         name = interaction.user.display_name
 
-        if ID not in self.players:
-            self.players[ID] = Player(ID, name)
+        if uid not in self.players:
+            self.players[uid] = Player(uid, name)
             print(f"[PlayerManager] User data {name} not found, now registered.")
         else:
             print(f"[PlayerManager] User data {name} existed.")
-        return self.players[ID]
+        return self.players[uid]
 
-    def remove_player(self, ID):
-        self.players.pop(ID, None)
+    def remove_player(self, uid):
+        self.players.pop(uid, None)

@@ -8,12 +8,13 @@ from loot_loader import LootLoader
 from managers.player_manager import PlayerManager
 from managers.data_manager import DataManager
 
-from handlers.excavation_handler import ExcavationHandler
+from handlers.excavate_handler import ExcavateHandler
 from handlers.look_handler import LookHandler
 
 from models.item import ItemContainer
 from models.area import AreaContainer
 from models.entity import EntityContainer
+from models.button import ButtonContainer
 
 import traceback
 import sys
@@ -43,18 +44,20 @@ async def on_ready():
         Context.register_manager("player", PlayerManager())
         Context.register_manager("data", DataManager())
 
-        Context.register_handler("excavate", ExcavationHandler())
+        Context.register_handler("excavate", ExcavateHandler())
         Context.register_handler("look", LookHandler())
 
         Context.register_container("item", ItemContainer())
         Context.register_container("area", AreaContainer())
         Context.register_container("entity", EntityContainer())
+        Context.register_container("button", ButtonContainer())
 
         Context.get_manager("data").load_database()
 
         Context.get_container("item").register()
         Context.get_container("area").register()
         Context.get_container("entity").register()
+        Context.get_container("button").register()
 
         print(f'Synced {len(synced_haven)} commands to guild Ak Besim')
         print(f'Synced {len(synced_besim)} commands to guild Th Haven')

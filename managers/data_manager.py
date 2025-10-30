@@ -18,7 +18,7 @@ class Database:
 
 class SkillRegistry:
     def register(self):
-        skill_data = {"ID": "INTEGER PRIMARY KEY"}
+        skill_data = {"uid": "INTEGER PRIMARY KEY"}
         skills = Context.get_skill_entry()
 
         for name in skills:
@@ -78,20 +78,20 @@ class DataManager:
     def check_player_database(self, player: object):
         with Database() as c:
             for name in self.data:
-                c.execute(f"INSERT OR IGNORE INTO {name} (ID) VALUES (?)", (player.ID,))
+                c.execute(f"INSERT OR IGNORE INTO {name} (uid) VALUES (?)", (player.uid,))
 
-                print(f"{player.ID}'s {name} data checked successfully.")
+                print(f"{player.uid}'s {name} data checked successfully.")
 
     #--- load data in database.
     def load_player_database(self, player: object):
         with Database() as c:
             for name, data in self.data.items():
                 # catch 'name' in column of data
-                cols = [col for col in data if col != "ID"] 
+                cols = [col for col in data if col != "uid"] 
                 cols_str = ", ".join(cols)
 
                 # catch 'value' in column of data
-                c.execute(f"SELECT {cols_str} FROM {name} WHERE ID = ?", (player.ID,)) 
+                c.execute(f"SELECT {cols_str} FROM {name} WHERE uid = ?", (player.uid,)) 
                 row = c.fetchone()
 
                 print(f"[DataManager] {name} data loaded: {row}")
@@ -116,10 +116,10 @@ class DataManager:
                 print(f"[DataManager] {player.name}'s {name} data done!")
 
     #--- save data in database.
-    def save_data(self, name: str, ID: int, data: dict):
+    def save_data(self, name: str, uid: int, data: dict):
         with Database() as c:
             update_columns = ", ".join(f"{key}=?" for key in data.keys())
             update_values = list(data.values())
-            update_values.append(ID)
+            update_values.append(uid)
 
-            c.execute(f"UPDATE {name} SET {update_columns} WHERE ID=?", update_values)
+            c.execute(f"UPDATE {name} SET {update_columns} WHERE uid=?", update_values)

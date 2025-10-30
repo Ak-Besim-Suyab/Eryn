@@ -12,13 +12,13 @@ class EntityContainer:
 		self.entitites: dict[str, Entity] = {}
 
 	def register(self):
-		data_entity = Context.loader.load("data/entities")
+		entity_data = Context.loader.load("data/entities")
 
-		for uid, data in data_entity.items():
-			self.entitites[uid] = Entity(uid=uid, name=data["name"], level=data["level"])
+		for uid, data in entity_data.items():
+			self.entitites[uid] = Entity(uid=uid, name=data.get("name"), level=data.get("level"))
 
 	def get_entity(self, uid: str) -> Entity:
 		return self.entitites[uid]
 
-	def get_all(self):
+	def get_all(self) -> dict[str, Entity]:
 		return self.entitites
