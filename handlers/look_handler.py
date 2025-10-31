@@ -18,13 +18,6 @@ class LookHandler:
         found_entities = []
         for entry in spawner_pool:
             entity = entities.get(entry.get("uid"))
-            found_entities.append(
-                { 
-                    "entity_id":entity.uid,
-                    "entity_name": entity.name,
-                    "level": entity.level,
-                    "image": entity.image
-                }
-            ) 
+            found_entities.append(entity.to_dict()) 
 
         return found_entities

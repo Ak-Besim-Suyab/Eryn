@@ -1,18 +1,22 @@
 {
 	"sheep": {
 		"name": "羊",
-		"level": 1
+		"level": 1,
+		"health": 6
 	},
 	"deer": {
 		"name": "鹿",
-		"level": 1
+		"level": 1,
+		"health": 8
 	},
 	"chicken": {
 		"name": "雞",
-		"level": 1
+		"level": 1,
+		"health": 2
 	},
 	"wolf": {
 		"name": "狼",
-		"level": 3
+		"level": 3,
+		"health": 20
 	}
 }

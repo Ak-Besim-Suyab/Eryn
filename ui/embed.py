@@ -8,10 +8,10 @@ from data.formatter_schema import COMMAND_SCHEMAS, EVENT_SCHEMAS
 
 from context import Context
 
-class LookEmbed(discord.Embed):
-    def __init__(self, player, command_type):
-        self.player = player
+class EventEmbed(discord.Embed):
+    def __init__(self, command_type, player):
         self.command_type = command_type
+        self.player = player
         self.set_image()
 
         super().__init__(title=player.name, description="", color=discord.Color.greyple())

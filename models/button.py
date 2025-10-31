@@ -2,7 +2,7 @@
 
 from context import Context
 
-from state.combat_state import CombatState
+from state.state_machine import state_machine
 
 from data.command import CommandType
 
@@ -14,69 +14,63 @@ from data.command import CommandType
     # thread:
     # create button -> set callback -> add to view -> message(view=view)
 
-class ButtonFactory:
-    @staticmethod
-    def create_button(label, style=discord.ButtonStyle.secondary, custom_id=None, callback=None):
-        button = discord.ui.Button(
-            label = label, 
-            style = style, 
-            custom_id = custom_id
-        )
-
-        if callback:
-            button.callback = callback
-
-        return button
-
 class ButtonContainer:
     def __init__(self):
-        self.buttons = {}
-
-    def register(self):
-        command_buttons = {
-            CommandType.COMBAT: { 
-                "label": "戰鬥", 
-                "style": discord.ButtonStyle.primary, 
-                "callback": self.callback_combat
-            },
-            CommandType.HOME: {
-                "label": "返回",
-                "style": discord.ButtonStyle.secondary, 
-                "callback": self.callback_home
-            },
+        self.registry = {
+            CommandType.COMBAT: CombatButton,
+            CommandType.RETURN: ReturnButton,
         }
 
-        for command_type, button_content in command_buttons.items():
-            button = ButtonFactory.create_button(
-                label=button_content["label"], 
-                style=button_content["style"], 
-                custom_id=command_type.value, 
-                callback = button_content["callback"]
-            )
-            self.buttons[command_type] = button
-
     def get_button(self, command_type):
-        return self.buttons[command_type]
+        button = self.registry.get(command_type)
+        if not button:
+            print(f"[ButtonContainer] Unregistered button type: {command_type}")
+            return None
+
+        return button()
 
     def get_all(self):
-        return self.buttons
+        return [cls() for cls in self.registry.values()]
 
-    async def callback_combat(self, interaction: discord.Interaction):
+class CombatButton(discord.ui.Button):
+    def __init__(self):
+        super().__init__(label = "戰鬥", style = discord.ButtonStyle.primary, custom_id = CommandType.COMBAT)
+
+    async def callback(self, interaction: discord.Interaction):
         print("hello!")
 
         player = Context.get_manager("player").get_player(interaction)
-        combat = CombatState(interaction)
+        combat_state = state_machine.create("combat", interaction)
 
-        player.state = combat.state
-        await combat.start()
+        if self.view.target:
+            target = self.view.target
+        else:
+            print("[ButtonContainer] Target not found, Need to fix.")
+            return
 
-    async def callback_home(self, interaction: discord.Interaction):
-        print("hello?")
+        await combat_state.start(target)
+
+class DialogueButton(discord.ui.Button):
+    def __init__(self):
+        super().__init__(label = "對話", style = discord.ButtonStyle.primary, custom_id = CommandType.DIALOGUE)
+
+    async def callback(self, interaction: discord.Interaction):
+        print("this is dialogue button!")
+
+class TameButton(discord.ui.Button):
+    def __init__(self):
+        super().__init__(label = "馴服", style = discord.ButtonStyle.primary, custom_id = CommandType.TAME)
+
+    async def callback(self, interaction: discord.Interaction):
+        print("this is tame button!")
+
+class ReturnButton(discord.ui.Button):
+    def __init__(self):
+        super().__init__(label = "返回", style = discord.ButtonStyle.secondary, custom_id = CommandType.RETURN)
+
+    async def callback(self, interaction: discord.Interaction):
+        print("this is return button!")
         # player = Context.get_manager("player").get_player(interaction)
         # menu = MenuState()
         # player.state = menu.state
         # await menu.start()
-
-class CombatButton(discord.ui.Button):
-    def __init__(self):
-        super().__init__(label = "戰鬥", style = discord.ButtonStyle.primary, custom_id = "combat")

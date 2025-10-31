@@ -7,7 +7,7 @@ from context import Context
 
 from ui.view import View
 from ui.select import LookSelect
-from ui.embed import LookEmbed
+from ui.embed import EventEmbed
 
 class ExcavateState(State):
     def __init__(self, interaction: object):
@@ -27,7 +27,7 @@ class ExcavateState(State):
             skill = getattr(self.player.skill, entry["skill_id"])
             skill.experience += entry["experience"]
 
-        embed = LookEmbed(CommandType.EXCAVATE, self.player)
+        embed = EventEmbed(CommandType.EXCAVATE, self.player)
         embed.set_image(CommandType.EXCAVATE)
         embed.add_event_field(EventType.OBTAIN_ITEM, excavate_result)
         embed.add_event_field(EventType.OBTAIN_EXPERIENCE, experience_result)
