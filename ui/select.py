@@ -1,7 +1,9 @@
 import discord
 
+from state.state import State
+
 class LookSelect(discord.ui.Select):
-    def __init__(self, state: object, entries: list[dict]):
+    def __init__(self, state: State, entries: list[dict]):
         self.state = state
         self.entries = entries
 
@@ -27,8 +29,8 @@ class LookSelect(discord.ui.Select):
             if entry.get("uid") == choice:
                 await self.state.select_entry(interaction, entry)
 
-class CombatSelect(discord.ui.Select):
-    def __init__(self, state: object, entries: list[dict]):
+class ActionSelect(discord.ui.Select):
+    def __init__(self, state: State, entries: list[dict]):
         self.state = state
         self.entries = entries
 
@@ -49,6 +51,7 @@ class CombatSelect(discord.ui.Select):
         )
 
     async def callback(self, interaction: discord.Interaction):
-        choice = self.values[0]
-        if choice == "attack":
-            await self.state.attack(choice)
+        action = self.values[0]
+        if action == "attack":
+
+            await self.state.attack(interaction)

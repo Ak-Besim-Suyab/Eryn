@@ -1,6 +1,3 @@
-from state.look_state import LookState
-from state.combat_state import CombatState
-
 class StateMachine:
     def __init__(self):
         self.states = {}
@@ -17,7 +14,3 @@ class StateMachine:
         if state:
             return state(*args, **kwargs) # it will return implemented object State()
         raise ValueError(f"State '{state_name}' not registered.")
-
-state_machine = StateMachine()
-state_machine.register("look", LookState)
-state_machine.register("combat", CombatState)

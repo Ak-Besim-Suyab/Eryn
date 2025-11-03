@@ -7,6 +7,7 @@ class Context:
 
     bot = None
     loader = None
+    state_machine = None
 
     managers = {}
     handlers = {}
@@ -22,6 +23,16 @@ class Context:
     def register_bot(cls, bot):
         cls.bot = bot
         print(f"[Context] Bot registered.")
+
+    @classmethod
+    def register_loader(cls, loader):
+        cls.loader = loader
+        print(f"[Context] Loader registered: {loader}")
+
+    @classmethod
+    def register_state_machine(cls, state_machine):
+        cls.state_machine = state_machine
+        print(f"[Context] State Machine registered.")
 
     @classmethod
     def register_manager(cls, name: str, manager: object):
@@ -49,11 +60,6 @@ class Context:
     @classmethod
     def get_container(cls, name: str):
         return cls.containers.get(name)
-
-    @classmethod
-    def register_loader(cls, loader):
-        cls.loader = loader
-        print(f"[Context] Loader registered: {loader}")
 
     # in player.py, message_handler.py, data_mamanger.py
     @classmethod

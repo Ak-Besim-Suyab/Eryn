@@ -9,3 +9,5 @@ class CommandType(str, Enum):
     DIALOGUE = "dialogue"
     TAME = "tame"
     RETURN = "return"
+    ATTACK = "attack"
+    VICTORY = "victory"

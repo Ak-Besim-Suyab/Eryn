@@ -22,6 +22,7 @@ class LookState(State):
         
         look_handler = Context.get_handler("look")
         target_entries = look_handler.draw_target(self.player) # [entity.to_dict()]
+        print(target_entries)
 
         area = areas.get(self.player.location)
 
@@ -43,7 +44,7 @@ class LookState(State):
     async def select_entry(self, interaction, entry):
 
         content = {
-            "target_name": entry.get("entity_name")
+            "name": entry.get("name")
         }
 
         embed = EventEmbed(CommandType.TARGET, self.player)

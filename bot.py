@@ -16,6 +16,9 @@ from models.item import ItemContainer
 from models.area import AreaContainer
 from models.entity import EntityContainer
 
+from state.look_state import LookState
+from state.combat_state import CombatState
+
 import traceback
 import sys
 import os
@@ -29,18 +32,20 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 @bot.event
 async def on_ready():
     try:
-        await bot.load_extension("cogs.home")
-        await bot.load_extension("cogs.world")
+        #await bot.load_extension("cogs.home")
+        #await bot.load_extension("cogs.world")
         await bot.load_extension("cogs.look")
-        await bot.load_extension("cogs.play")
-        await bot.load_extension("cogs.hello")
-        await bot.load_extension("cogs.excavate")
+        #await bot.load_extension("cogs.play")
+        #await bot.load_extension("cogs.hello")
+        #await bot.load_extension("cogs.excavate")
 
         synced_haven = await bot.tree.sync(guild=Context.GUILD_TH_HAVEN)
         synced_besim = await bot.tree.sync(guild=Context.GUILD_AK_BESIM)
 
         Context.register_bot(bot)
         Context.register_loader(LootLoader())
+        Context.register_state_machine(StateMachine())
+
         Context.register_manager("player", PlayerManager())
         Context.register_manager("data", DataManager())
 
@@ -50,6 +55,9 @@ async def on_ready():
         Context.register_container("item", ItemContainer())
         Context.register_container("area", AreaContainer())
         Context.register_container("entity", EntityContainer())
+
+        Context.state_machine.register("look", LookState)
+        Context.state_machine.register("combat", CombatState)
 
         Context.get_manager("data").load_database()
 

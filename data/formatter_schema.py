@@ -33,11 +33,11 @@ EVENT_SCHEMAS = {
     },
     EventType.FIND_ENTITY: {
         "expected_keys": {
-            "entity_name": str,
+            "name": str,
             "level": int,
             "image": str
         },
-        "line_template": "{image} {entity_name} Lv.{level}",
+        "line_template": "{image} {name} Lv.{level}",
         "field_name": "附近有：",
         "inline": False,
     }
@@ -59,5 +59,13 @@ COMMAND_SCHEMAS = {
     CommandType.COMBAT: {
         "image": "https://cdn.discordapp.com/attachments/1193049715638538283/1430214100838781050/75781c45-a160-4e37-a448-8f49fa3df0bc.png",
         "description": "要對**{name}**採取什麼攻擊？"
-    }
+    },
+    CommandType.ATTACK: {
+        "image": "https://cdn.discordapp.com/attachments/1193049715638538283/1430214100838781050/75781c45-a160-4e37-a448-8f49fa3df0bc.png",
+        "description": "你對**{name}**造成{dealed_damage}傷害！\n{name}還剩下 {health}"
+    },
+    CommandType.VICTORY: {
+        "image": "https://cdn.discordapp.com/attachments/1193049715638538283/1430214100838781050/75781c45-a160-4e37-a448-8f49fa3df0bc.png",
+        "description": "擊倒{name}！"
+    },
 }

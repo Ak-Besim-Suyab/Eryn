@@ -2,8 +2,6 @@
 
 from context import Context
 
-from state.state_machine import state_machine
-
 from data.command import CommandType
 
     # label: button name on message.
@@ -14,7 +12,7 @@ from data.command import CommandType
     # thread:
     # create button -> set callback -> add to view -> message(view=view)
 
-class ButtonContainer:
+class ButtonManager:
     def __init__(self):
         self.registry = {
             CommandType.COMBAT: CombatButton,
@@ -34,21 +32,20 @@ class ButtonContainer:
 
 class CombatButton(discord.ui.Button):
     def __init__(self):
+        self.player_manager = Context.get_manager("player")
+        self.state_machine = Context.state_machine
         super().__init__(label = "戰鬥", style = discord.ButtonStyle.primary, custom_id = CommandType.COMBAT)
 
     async def callback(self, interaction: discord.Interaction):
-        print("hello!")
+        player = self.player_manager.get_player(interaction)
+        combat_state = self.state_machine.create("combat", interaction)
 
-        player = Context.get_manager("player").get_player(interaction)
-        combat_state = state_machine.create("combat", interaction)
-
+        getattr(self.view, "target", None)
         if self.view.target:
-            target = self.view.target
+            await combat_state.start(self.view.target)
         else:
             print("[ButtonContainer] Target not found, Need to fix.")
             return
-
-        await combat_state.start(target)
 
 class DialogueButton(discord.ui.Button):
     def __init__(self):
@@ -70,7 +67,3 @@ class ReturnButton(discord.ui.Button):
 
     async def callback(self, interaction: discord.Interaction):
         print("this is return button!")
-        # player = Context.get_manager("player").get_player(interaction)
-        # menu = MenuState()
-        # player.state = menu.state
-        # await menu.start()
