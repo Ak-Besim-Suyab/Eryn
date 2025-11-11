@@ -25,6 +25,8 @@ import os
 
 from dotenv import load_dotenv
 
+from utils.logger import logger
+
 intents = discord.Intents.default()
 intents.message_content = True  
 bot = commands.Bot(command_prefix="!", intents=intents)
@@ -65,16 +67,16 @@ async def on_ready():
         Context.get_container("area").register()
         Context.get_container("entity").register()
 
-        print(f'Synced {len(synced_haven)} commands to guild Ak Besim')
-        print(f'Synced {len(synced_besim)} commands to guild Th Haven')
-        print(f'The version of python is {sys.version}')
-
-        print(f'Discord Bot loaded, Enjoy!')
+        logger.info(f'Synced {len(synced_haven)} commands to guild Ak Besim')
+        logger.info(f'Synced {len(synced_besim)} commands to guild Th Haven')
+        logger.info(f'The version of python is {sys.version}')
+        logger.info(f'Discord Bot loaded, Enjoy!')
+        
     except Exception as e:
-        print(f'Error syncing commands:{e}')
+        logger.error(f'Error syncing commands:{e}')
         traceback.print_exc() 
         
-    print(f"✅ 已登入：{bot.user}")
+    logger.info(f"✅ 已登入：{bot.user}")
     
 load_dotenv()
 TOKEN = os.getenv("DISCORD_TOKEN")
