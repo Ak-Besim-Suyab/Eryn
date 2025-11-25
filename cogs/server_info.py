@@ -4,6 +4,8 @@ from discord.ext import commands
 import json
 import os
 
+from context import Context
+
 RULE_FILE = "data/server_rules.json"
 
 
@@ -23,6 +25,7 @@ class ServerInfo(commands.Cog):
     # -------------------------------------------------
     # /server_rules
     # -------------------------------------------------
+    @app_commands.guilds(Context.GUILD_TH_HAVEN, Context.GUILD_AK_BESIM)
     @app_commands.command(name="server_rules", description="顯示伺服器規則")
     async def server_rules(self, interaction: discord.Interaction):
 
@@ -48,6 +51,7 @@ class ServerInfo(commands.Cog):
     # -------------------------------------------------
     # /server_info
     # -------------------------------------------------
+    @app_commands.guilds(Context.GUILD_TH_HAVEN, Context.GUILD_AK_BESIM)
     @app_commands.command(name="server_info", description="顯示伺服器介紹/相關資訊")
     async def server_info(self, interaction: discord.Interaction):
 

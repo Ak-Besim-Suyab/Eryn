@@ -63,8 +63,6 @@ async def on_ready():
         Context.state_machine.register("look", LookState)
         Context.state_machine.register("combat", CombatState)
 
-        Context.get_manager("data").load_database()
-
         Context.get_container("item").register()
         Context.get_container("area").register()
         Context.get_container("entity").register()

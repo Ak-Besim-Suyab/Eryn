@@ -19,6 +19,8 @@ class ButtonManager:
             CommandType.RETURN: ReturnButton,
         }
 
+        self.registry["about_bot"] = AboutBotButton
+
     def get_button(self, command_type):
         button = self.registry.get(command_type)
         if not button:
@@ -67,3 +69,26 @@ class ReturnButton(discord.ui.Button):
 
     async def callback(self, interaction: discord.Interaction):
         print("this is return button!")
+
+#-----------------------------------
+# normal button
+#-----------------------------------
+
+class AboutBotButton(discord.ui.Button):
+    def __init__(self):
+        super().__init__(
+            label="關於 Eryn",
+            style=discord.ButtonStyle.secondary,
+            custom_id="about_bot"
+        )
+
+    async def callback(self, interaction: discord.Interaction):
+        # 如果你要自訂內容，這裡之後再改就好
+        text = (
+            "**Eryn Discord Bot**\n"
+            "由 Python + SQLite + Discord.py 構成的遊戲系統。\n\n"
+            "功能：挖礦、採集、馴養、技能、事件、背包 UI...\n"
+            "GitHub：<https://github.com/Ak-Besim-Suyab/Eryn>\n\n"
+            "本訊息僅你可見。"
+        )
+        await interaction.response.send_message(text, ephemeral=True)

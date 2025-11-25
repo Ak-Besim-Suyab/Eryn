@@ -34,6 +34,8 @@ class DataManager:
     def __init__(self):
         self.data = {}
 
+        self.load_database()
+
     def load_database(self):
         loader = Context.loader
 
