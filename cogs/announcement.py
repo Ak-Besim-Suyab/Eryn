@@ -11,7 +11,8 @@ class Announcement(commands.Cog):
 
     @app_commands.guilds(Context.GUILD_TH_HAVEN, Context.GUILD_AK_BESIM)
     @app_commands.command(name="announcement", description="發送公告（僅由管理員使用）")
-    async def announcement(self, interaction: discord.Interaction):
+    @app_commands.describe(channel="要發送公告的頻道")
+    async def announcement(self, interaction: discord.Interaction, channel: discord.TextChannel):
 
         if not interaction.user.guild_permissions.administrator:
             return await interaction.response.send_message("你沒有權限使用這個指令（需要管理員權限）", ephemeral=True)
@@ -25,8 +26,9 @@ class Announcement(commands.Cog):
         embed.set_footer(text="由 Eryn Bot 發送")
         embed.set_thumbnail(url=interaction.user.display_avatar.url)
 
-        await interaction.response.send_message(embed=embed)
+        await channel.send(embed=embed)
 
+        await interaction.response.send_message(f"公告已成功發送至 {channel.mention}。", ephemeral=True)
 
 async def setup(bot):
     await bot.add_cog(Announcement(bot))
