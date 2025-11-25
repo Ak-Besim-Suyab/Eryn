@@ -10,7 +10,9 @@ class PlayerManager:
         name = interaction.user.display_name
 
         if uid not in self.players:
-            self.players[uid] = Player(uid, name)
+            player = Player(uid, name)
+            player.restore_data()
+            self.players[uid] = player
             print(f"[PlayerManager] User data {name} not found, now registered.")
         else:
             print(f"[PlayerManager] User data {name} existed.")

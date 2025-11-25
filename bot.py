@@ -37,6 +37,8 @@ async def on_ready():
         #await bot.load_extension("cogs.home")
         #await bot.load_extension("cogs.world")
         await bot.load_extension("cogs.look")
+        await bot.load_extension("cogs.announcement")
+        await bot.load_extension("cogs.server_info")
         #await bot.load_extension("cogs.play")
         #await bot.load_extension("cogs.hello")
         #await bot.load_extension("cogs.excavate")

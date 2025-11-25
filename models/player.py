@@ -7,20 +7,16 @@ class Player:
 	def __init__(self, uid: int, name: str):
 		self.uid = uid
 		self.name = name
-
 		self.health = 10
 		self.damage = 5
-
 		self.gold = 0
 		self.turn = 0
 
 		self.location = 'forest'
-		self.state = 'home'
+		self.state = 'idle'
 
 		self.inventory = Inventory(uid)
 		self.skill = SkillContainer(uid)
-
-		self.restore_data()
 
 	def __repr__(self):
 		return f"<Player {self.name} {self.uid}>"
