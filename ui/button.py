@@ -6,14 +6,6 @@ from data.command import CommandType
 
 from ui.views.about_bot_view import AboutBotView
 
-    # label: button name on message.
-    # style: button color, see note for more info.
-    # custom_id: button keyword.
-    # callback: function to invoked.
-
-    # thread:
-    # create button -> set callback -> add to view -> message(view=view)
-
 class ButtonManager:
     def __init__(self):
         self.registry = {

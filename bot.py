@@ -1,5 +1,10 @@
+import os
+import sys
+import traceback
+
 import discord
 from discord.ext import commands
+from dotenv import load_dotenv
 
 from context import Context
 from state.state_machine import StateMachine
@@ -19,16 +24,10 @@ from models.entity import EntityContainer
 from state.look_state import LookState
 from state.combat_state import CombatState
 
-import traceback
-import sys
-import os
-
-from dotenv import load_dotenv
-
 from utils.logger import logger
 
 intents = discord.Intents.default()
-intents.message_content = True  
+intents.message_content = True
 bot = commands.Bot(command_prefix="!", intents=intents)
 
 @bot.event
@@ -37,14 +36,7 @@ async def on_ready():
         from ui.views.about_bot_view import AboutBotView
         bot.add_view(AboutBotView([]))
 
-        #await bot.load_extension("cogs.home")
-        #await bot.load_extension("cogs.world")
-        await bot.load_extension("cogs.look")
         await bot.load_extension("cogs.announcement")
-        await bot.load_extension("cogs.server_info")
-        #await bot.load_extension("cogs.play")
-        #await bot.load_extension("cogs.hello")
-        #await bot.load_extension("cogs.excavate")
 
         synced_haven = await bot.tree.sync(guild=Context.GUILD_TH_HAVEN)
         synced_besim = await bot.tree.sync(guild=Context.GUILD_AK_BESIM)
@@ -73,7 +65,7 @@ async def on_ready():
         logger.info(f'Synced {len(synced_haven)} commands to guild Ak Besim')
         logger.info(f'Synced {len(synced_besim)} commands to guild Th Haven')
         logger.info(f'The version of python is {sys.version}')
-        logger.info(f'Discord Bot loaded, Enjoy!')
+        logger.info('Discord Bot loaded, Enjoy!')
         
     except Exception as e:
         logger.error(f'Error syncing commands:{e}')
@@ -81,7 +73,10 @@ async def on_ready():
         
     logger.info(f"✅ 已登入：{bot.user}")
     
-load_dotenv()
-TOKEN = os.getenv("DISCORD_TOKEN")
+def main():
+    load_dotenv()
+    token = os.getenv("DISCORD_TOKEN")
+    bot.run(token)
 
-bot.run(TOKEN)
+if __name__ == "__main__":
+    main()
