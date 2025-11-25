@@ -34,6 +34,9 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 @bot.event
 async def on_ready():
     try:
+        from ui.views.about_bot_view import AboutBotView
+        bot.add_view(AboutBotView([]))
+
         #await bot.load_extension("cogs.home")
         #await bot.load_extension("cogs.world")
         await bot.load_extension("cogs.look")

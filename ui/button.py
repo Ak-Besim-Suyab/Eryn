@@ -4,6 +4,8 @@ from context import Context
 
 from data.command import CommandType
 
+from ui.views.about_bot_view import AboutBotView
+
     # label: button name on message.
     # style: button color, see note for more info.
     # custom_id: button keyword.
@@ -83,12 +85,35 @@ class AboutBotButton(discord.ui.Button):
         )
 
     async def callback(self, interaction: discord.Interaction):
-        # 如果你要自訂內容，這裡之後再改就好
-        text = (
-            "**Eryn Discord Bot**\n"
-            "由 Python + SQLite + Discord.py 構成的遊戲系統。\n\n"
-            "功能：挖礦、採集、馴養、技能、事件、背包 UI...\n"
-            "GitHub：<https://github.com/Ak-Besim-Suyab/Eryn>\n\n"
-            "本訊息僅你可見。"
+
+        page1 = discord.Embed(
+            title="Eryn Bot — 說明（1/2）",
+            description=(
+                "Eryn 是一個以採集、挖掘、技能、動物馴養為核心的 Discord RPG Bot。\n"
+                "本 Bot 使用 Python + SQLite + discord.py 製作，採用模組化架構與可擴充的 JSON / 資料庫系統。"
+            ),
+            color=discord.Color.teal()
         )
-        await interaction.response.send_message(text, ephemeral=True)
+        page1.set_footer(text="本訊息只有你能看見")
+        page1.set_thumbnail(url=interaction.user.display_avatar.url)
+
+        page2 = discord.Embed(
+            title="Eryn Bot — 專案資訊（2/2）",
+            description=(
+                "GitHub 專案：\n"
+                "<https://github.com/Ak-Besim-Suyab/Eryn>\n\n"
+                "你可以在那裡查看最新程式碼、架構、模組、遊戲資料。"
+            ),
+            color=discord.Color.teal()
+        )
+        page2.set_footer(text="本訊息只有你能看見")
+
+        pages = [page1, page2]
+
+        view = AboutBotView(pages)
+
+        await interaction.response.send_message(
+            embed=pages[0],
+            view=view,
+            ephemeral=True
+        )

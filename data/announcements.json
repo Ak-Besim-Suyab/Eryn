@@ -1,6 +1,6 @@
 {
   "maintenance_notice": {
-    "content": "【Eryn 系統公告】", 
+    "content": "系統公告", 
     "embed": {
       "title": "伺服器維護通知",
       "description": "伺服器將在下列時間進行維護，期間無法使用部分指令。\n\n請提前完成重要操作，感謝你的理解與配合。",
