@@ -17,14 +17,21 @@ class Announcement(commands.Cog):
         if not interaction.user.guild_permissions.administrator:
             return await interaction.response.send_message("你沒有權限使用這個指令（需要管理員權限）", ephemeral=True)
 
+        lines = [
+            "歡迎旅人來到避風港（Th Haven）遊玩與定居，這裡是綜合向社群！",
+            "旅人可以在這裡和大家玩遊戲、討論動漫電影，以及分享自己的生活！",
+            "",
+            "這裡是愛爾琳（Eryn）—— 社群的管理員",
+            "旅人對社群有任何問題或想知道的事情，都歡迎點選下方按鈕或輸入指令查看哦！",
+        ]
+
         embed = discord.Embed(
-            title="Eryn 系統公告",
-            description="這是一則示範用的公告訊息。",
+            title="旅居手冊",
+            description="\n".join(lines),
             color=discord.Color.blue()
         )
 
-        embed.set_footer(text="由 Eryn Bot 發送")
-        embed.set_thumbnail(url=interaction.user.display_avatar.url)
+        embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/1193049715638538283/1443018531741634703/image.png")
 
         await channel.send(embed=embed)
 
