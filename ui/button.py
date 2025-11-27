@@ -4,8 +4,6 @@ from context import Context
 
 from data.command import CommandType
 
-from ui.views.about_bot_view import AboutBotView
-
 class ButtonManager:
     def __init__(self):
         self.registry = {

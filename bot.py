@@ -24,6 +24,8 @@ from models.entity import EntityContainer
 from state.look_state import LookState
 from state.combat_state import CombatState
 
+from registry.button_registry import button_manager
+
 from utils.logger import logger
 
 intents = discord.Intents.default()
@@ -33,9 +35,6 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 @bot.event
 async def on_ready():
     try:
-        from ui.views.about_bot_view import AboutBotView
-        bot.add_view(AboutBotView([]))
-
         await bot.load_extension("cogs.announcement")
 
         synced_haven = await bot.tree.sync(guild=Context.GUILD_TH_HAVEN)
@@ -45,8 +44,9 @@ async def on_ready():
         Context.register_loader(LootLoader())
         Context.register_state_machine(StateMachine())
 
-        Context.register_manager("player", PlayerManager())
-        Context.register_manager("data", DataManager())
+        # Context.register_manager("player", PlayerManager())
+        # Context.register_manager("data", DataManager())
+        Context.register_manager("button", button_manager)
 
         Context.register_handler("excavate", ExcavateHandler())
         Context.register_handler("look", LookHandler())
