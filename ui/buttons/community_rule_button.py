@@ -16,7 +16,28 @@ class CommunityRuleButton(discord.ui.Button):
             "有任何事情發生時，請務必優先聯絡管理員，切勿私自解決；同時，管理員會對事件進行評估，並根據情節程度決定如何處理。",
         ]
 
+        embed = discord.Embed(
+            title = "# 📜 社群規範",
+            description = "\n".join(lines),
+            color = discord.Color.blue()
+        )
+
+        view = View()
+
         await interaction.response.send_message(
-            content = "\n".join(lines),
+            embed = embed,
+            view = view,
             ephemeral = True
         )
+
+class View(discord.ui.View):
+    def __init__(self):
+        super().__init__(timeout=None)
+        self.add_item(Button())
+
+class Button(discord.ui.Button):
+    def __init__(self):
+        super().__init__(label = "對話", style = discord.ButtonStyle.primary)
+
+    async def callback(self, interaction: discord.Interaction):
+        print("this is dialogue button!")

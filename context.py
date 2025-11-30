@@ -2,8 +2,8 @@ import discord
 
 class Context:
 
-    GUILD_TH_HAVEN = discord.Object(id=1193049715638538280)
-    GUILD_AK_BESIM = discord.Object(id=1190027756482859038)
+    # GUILD_TH_HAVEN = discord.Object(id=1190027756482859038)
+    GUILD_AK_BESIM = discord.Object(id=1193049715638538280)
 
     bot = None
     loader = None

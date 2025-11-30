@@ -30,14 +30,19 @@ from utils.logger import logger
 
 intents = discord.Intents.default()
 intents.message_content = True
+intents.members = True
 bot = commands.Bot(command_prefix="!", intents=intents)
 
 @bot.event
 async def on_ready():
     try:
-        await bot.load_extension("cogs.announcement")
+        # await bot.load_extension("cogs.announcement")
+        
+        await bot.load_extension("cogs.member_join_event")
 
-        synced_haven = await bot.tree.sync(guild=Context.GUILD_TH_HAVEN)
+        await bot.load_extension("cogs.test_embed")
+
+        # synced_haven = await bot.tree.sync(guild=Context.GUILD_TH_HAVEN)
         synced_besim = await bot.tree.sync(guild=Context.GUILD_AK_BESIM)
 
         Context.register_bot(bot)
@@ -62,7 +67,7 @@ async def on_ready():
         Context.get_container("area").register()
         Context.get_container("entity").register()
 
-        logger.info(f'Synced {len(synced_haven)} commands to guild Ak Besim')
+        # logger.info(f'Synced {len(synced_haven)} commands to guild Ak Besim')
         logger.info(f'Synced {len(synced_besim)} commands to guild Th Haven')
         logger.info(f'The version of python is {sys.version}')
         logger.info('Discord Bot loaded, Enjoy!')
