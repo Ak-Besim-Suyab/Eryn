@@ -1,75 +1,28 @@
 ﻿import discord
 from discord import app_commands
 from discord.ext import commands
-import json
-import os
 
 from context import Context
+from ui.views.community_view import CommunityView
 
-RULE_FILE = "data/server_rules.json"
-
-
-def load_rules():
-    if not os.path.exists(RULE_FILE):
-        return {}
-    with open(RULE_FILE, "r", encoding="utf-8") as f:
-        return json.load(f)
-
-
-class ServerInfo(commands.Cog):
-    """伺服器規則 / 伺服器資訊模塊"""
-
+class Announcement(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
+        print('Command loaded: announcement')
 
-    # -------------------------------------------------
-    # /server_rules
-    # -------------------------------------------------
     @app_commands.guilds(Context.GUILD_TH_HAVEN, Context.GUILD_AK_BESIM)
-    @app_commands.command(name="server_rules", description="顯示伺服器規則")
-    async def server_rules(self, interaction: discord.Interaction):
+    @app_commands.command(name="announcement", description="發送公告（僅由管理員使用）")
+    @app_commands.describe(channel="要發送公告的頻道", content="訊息內容")
+    async def announcement(self, interaction: discord.Interaction, channel: discord.TextChannel, content: str):
 
-        rules = load_rules()
+        if not interaction.user.guild_permissions.administrator:
+            return await interaction.response.send_message("你沒有權限使用這個指令（需要管理員權限）", ephemeral=True)
 
-        if not rules:
-            return await interaction.response.send_message("尚未設定伺服器規則。", ephemeral=True)
+        view = CommunityView()
 
-        embed = discord.Embed(
-            title="📘 伺服器規則",
-            color=discord.Color.blue()
-        )
+        await channel.send(content, view=view)
 
-        for number, text in rules.items():
-            embed.add_field(
-                name=f"規則 {number}",
-                value=text,
-                inline=False
-            )
-
-        await interaction.response.send_message(embed=embed)
-
-    # -------------------------------------------------
-    # /server_info
-    # -------------------------------------------------
-    @app_commands.guilds(Context.GUILD_TH_HAVEN, Context.GUILD_AK_BESIM)
-    @app_commands.command(name="server_info", description="顯示伺服器介紹/相關資訊")
-    async def server_info(self, interaction: discord.Interaction):
-
-        guild = interaction.guild
-        if guild is None:
-            return await interaction.response.send_message("只能在伺服器內使用。", ephemeral=True)
-
-        embed = discord.Embed(
-            title=f"{guild.name} 伺服器資訊",
-            color=discord.Color.green()
-        )
-
-        embed.add_field(name="成員數", value=str(guild.member_count))
-        embed.add_field(name="創立時間", value=guild.created_at.strftime("%Y-%m-%d"))
-        embed.set_thumbnail(url=guild.icon.url if guild.icon else None)
-
-        await interaction.response.send_message(embed=embed)
-
+        await interaction.response.send_message(f"公告已成功發送至 {channel.mention}。", ephemeral=True)
 
 async def setup(bot):
-    await bot.add_cog(ServerInfo(bot))
+    await bot.add_cog(Announcement(bot))

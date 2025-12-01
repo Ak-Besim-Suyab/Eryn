@@ -29,7 +29,7 @@ class EntityContainer:
 		self.entitites: dict[str, Entity] = {}
 
 	def register(self):
-		entity_data = Context.loader.load("data/entities")
+		entity_data = Context.file_loader.load("data/entities")
 
 		for uid, data in entity_data.items():
 			self.entitites[uid] = Entity(

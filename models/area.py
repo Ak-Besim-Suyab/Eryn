@@ -12,7 +12,7 @@ class AreaContainer:
         self.areas: dict[str, Area] = {}
 
     def register(self):
-        data_areas = Context.loader.load("data/areas")
+        data_areas = Context.file_loader.load("data/areas")
 
         for uid, data in data_areas.items():
             self.areas[uid] = Area(uid=uid, name=data.get("name"))

@@ -16,12 +16,12 @@ class ItemContainer:
         self.items: dict[str, Item] = {}
 
     def register(self):
-        loader = Context.loader
+        file_loader = Context.file_loader
         # item registry.
-        self.items["mudstone"] = Item(uid="mudstone", name="泥岩", image=loader.load("textures/mudstone").get("image"))
-        self.items["slate"] = Item(uid="slate", name="板岩", image=loader.load("textures/slate").get("image"))
-        self.items["metal_ore"] = Item(uid="metal_ore", name="金屬碎塊", image=loader.load("textures/metal_ore").get("image"))
-        self.items["antique_silver_coin"] = Item(uid="antique_silver_coin", name="舊銀幣", image=loader.load("textures/antique_silver_coin").get("image"))
+        self.items["mudstone"] = Item(uid="mudstone", name="泥岩", image=file_loader.load("textures/mudstone").get("image"))
+        self.items["slate"] = Item(uid="slate", name="板岩", image=file_loader.load("textures/slate").get("image"))
+        self.items["metal_ore"] = Item(uid="metal_ore", name="金屬碎塊", image=file_loader.load("textures/metal_ore").get("image"))
+        self.items["antique_silver_coin"] = Item(uid="antique_silver_coin", name="舊銀幣", image=file_loader.load("textures/antique_silver_coin").get("image"))
 
         print("[ItemContainer] Container loaded.")
 

@@ -1,0 +1,45 @@
+about_eryn_info:
+  - title: ""
+    description: |
+      「咪是社群的管家，管理員將大部分事務由咪託管，
+      旅人有任何問題或想知道的事情也都歡迎問咪。」
+    color: 10984191
+
+about_eryn_features:
+  - title: ""
+    description: |
+      「咪提供許多實用的小功能給旅人使用，希望旅人會喜歡。
+      旅人可以透過**輸入指令**或從輸入框左邊的**使用應用程式**來使用這些功能喵。」
+    color: 10984191
+
+  - title: ""
+    description: |
+      以下是目前已實裝，以及預計實裝的指令：
+    color: 10984191
+    portrait: null
+    field:
+      - name: ""
+        value: |
+          /資訊：可以查詢社群或機器人的相關資訊喵（未實裝）
+          /抽籤：查看今天的運勢喵（未實裝）
+          /摸：摸摸喵（未實裝）
+        inline: false
+
+about_community_rules:
+  - title: ""
+    description: |
+      「社群沒有什麼特別嚴格的規定，旅人只要遵守基本的網路禮儀與社會善良風俗即可。
+      旅人可以在 <#1360921668528373800> 查看社群詳細規範喵。」
+    color: 10984191
+
+about_community_features:
+  - title: ""
+    description: |
+      「旅人可以在這裡看到一些有用的說明。」
+    color: 10984191
+
+how_cat_say:
+  - title: ""
+    description: |
+      「喵。」
+    color: 10984191

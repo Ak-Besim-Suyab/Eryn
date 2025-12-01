@@ -2,11 +2,11 @@ import discord
 
 class Context:
 
-    # GUILD_TH_HAVEN = discord.Object(id=1190027756482859038)
+    GUILD_TH_HAVEN = discord.Object(id=1190027756482859038)
     GUILD_AK_BESIM = discord.Object(id=1193049715638538280)
 
     bot = None
-    loader = None
+    yaml_loader = None
     state_machine = None
 
     managers = {}
@@ -25,9 +25,9 @@ class Context:
         print(f"[Context] Bot registered.")
 
     @classmethod
-    def register_loader(cls, loader):
-        cls.loader = loader
-        print(f"[Context] Loader registered: {loader}")
+    def register_yaml_loader(cls, yaml_loader):
+        cls.yaml_loader = yaml_loader
+        print(f"[Context] Yaml Loader registered.")
 
     @classmethod
     def register_state_machine(cls, state_machine):

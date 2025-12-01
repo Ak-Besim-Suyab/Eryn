@@ -1,0 +1,21 @@
+{
+    "__note__": "註解用",
+
+    "about_eryn_info": {
+        "title": "",
+        "description": "「咪是社群的管家，管理員將大部分事務由咪託管，旅人有任何問題或想知道的事情也都歡迎問咪。」",
+        "color": 10984191,
+        "field": [
+            {
+                "name": "測試1",
+                "value": "值1",
+                "inline": false
+            },
+            {
+                "name": "測試2",
+                "value": "值2",
+                "inline": false
+            },       
+        ]
+    }
+}
