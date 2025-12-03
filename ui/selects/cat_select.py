@@ -31,12 +31,10 @@ class CatSelect(discord.ui.Select):
         bot = Context.bot
 
         embed_builder = EmbedBuilder()
-        embeds = embed_builder.create(choice, portrait=bot.user.display_avatar.url)
-        for e in embeds:
-            e.set_author(
-                name=bot.user.display_name,
-                icon_url=bot.user.display_avatar.url
-            )
+        embeds = embed_builder.create(choice, 
+            author = bot.user.display_name,
+            portrait = bot.user.display_avatar.url
+        )
 
         view = CatSelectView()
 

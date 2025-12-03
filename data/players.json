@@ -1,7 +1,0 @@
-{
-	"uid": "INTEGER PRIMARY KEY",
-	"name": "TEXT DEFAULT 'player'",
-	"gold": "INTEGER DEFAULT 0",
-	"turn": "INTEGER DEFAULT 0",
-	"location": "TEXT DEFAULT 'forest'"
-}

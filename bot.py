@@ -7,12 +7,10 @@ from discord.ext import commands
 from dotenv import load_dotenv
 
 from context import Context
+from context import GUILD_TH_HAVEN, GUILD_AK_BESIM
 from state.state_machine import StateMachine
 
 from file_loader import YamlLoader
-
-from managers.player_manager import PlayerManager
-from managers.data_manager import DataManager
 
 from handlers.excavate_handler import ExcavateHandler
 from handlers.look_handler import LookHandler
@@ -26,6 +24,9 @@ from state.combat_state import CombatState
 
 from registry.button_registry import button_manager
 
+from database.dummy import init_dummy_database
+from database.player import init_player_database
+
 from utils.logger import logger
 
 intents = discord.Intents.default()
@@ -36,21 +37,22 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 @bot.event
 async def on_ready():
     try:
-        # await bot.load_extension("cogs.announcement")
-        
+        init_dummy_database()
+        init_player_database()
+
         await bot.load_extension("cogs.member_join_event")
 
         await bot.load_extension("cogs.test_embed")
 
-        synced_haven = await bot.tree.sync(guild=Context.GUILD_TH_HAVEN)
-        synced_besim = await bot.tree.sync(guild=Context.GUILD_AK_BESIM)
+        await bot.load_extension("cogs.pet")
+
+        synced_haven = await bot.tree.sync(guild=GUILD_TH_HAVEN)
+        synced_besim = await bot.tree.sync(guild=GUILD_AK_BESIM)
 
         Context.register_bot(bot)
         Context.register_yaml_loader(YamlLoader())
         # Context.register_state_machine(StateMachine())
 
-        # Context.register_manager("player", PlayerManager())
-        # Context.register_manager("data", DataManager())
         Context.register_manager("button", button_manager)
 
         # Context.register_handler("excavate", ExcavateHandler())
@@ -69,6 +71,7 @@ async def on_ready():
 
         logger.info(f'Synced {len(synced_haven)} commands to guild Th Haven')
         logger.info(f'Synced {len(synced_besim)} commands to guild Ak Besim')
+
         logger.info(f'The version of python is {sys.version}')
         logger.info('Discord Bot loaded, Enjoy!')
         

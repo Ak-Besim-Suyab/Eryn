@@ -1,9 +1,13 @@
 import discord
 
+GUILD_TH_HAVEN = discord.Object(id=1190027756482859038)
+GUILD_AK_BESIM = discord.Object(id=1193049715638538280)
+
 class Context:
 
-    GUILD_TH_HAVEN = discord.Object(id=1190027756482859038)
-    GUILD_AK_BESIM = discord.Object(id=1193049715638538280)
+    DUMMY_ID_CYRA = 0
+    DUMMY_ID_ERYN = 1
+    DUMMY_ID_NYRE = 2
 
     bot = None
     yaml_loader = None
