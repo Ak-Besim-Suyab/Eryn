@@ -10,6 +10,8 @@ class Player(Model):
     id = IntegerField(primary_key = True)
     display_name = TextField(default = "default")
 
+    card = TextField(null=True)
+
     currency_yab = IntegerField(default = 0)
 
     class Meta:

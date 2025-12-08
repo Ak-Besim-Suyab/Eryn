@@ -5,10 +5,9 @@ from discord.ext import commands
 
 from ui.selects.cat_select import CatSelectView
 
-WELCOME_MESSAGES = [
-    "很高興你降落到此，希望你會喜歡這裡 🎉",
-    "很高興你的到來，希望你會喜歡這裡 🎉",
-]
+from utils.embed_builder import EmbedBuilder
+
+from context import Context
 
 class MemberJoinEvent(commands.Cog):
     def __init__(self, bot):
@@ -17,63 +16,81 @@ class MemberJoinEvent(commands.Cog):
     @commands.Cog.listener()
     async def on_member_join(self, member: discord.Member):
 
-        # ignore another discord bot.
+        # ignore discord bot member.
         if member.bot:
             return
 
-        messages = [
-            "歡迎你來到 Th Haven！",
-            "剛加入的成員都會收到我 —— 社群管家的歡迎訊息",
-            "如果有任何問題或想知道的事情，都可以問我！"
+        bot_name = self.bot.user.display_name
+        bot_image = self.bot.user.display_avatar.url
+
+        view = CatSelectView()
+
+        embed_builder = EmbedBuilder()
+
+        button_manager = Context.get_manager("button")
+
+        view.add_item(button_manager.create("base_button"))
+
+        #--------------------------------------------------------
+        # direct message part.
+        #--------------------------------------------------------
+
+        keys = [
+            "welcome_message_direct_1",
+            "welcome_message_direct_2",
+            "welcome_message_direct_3"
         ]
 
         try:
-            for msg in messages:
-                # delay = random.uniform(1.5, 3.0)
-
+            for key in keys:
+                embeds = embed_builder.create(
+                    key = key, 
+                    author = bot_name,
+                    portrait = bot_image
+                )
                 async with member.typing():
                     await asyncio.sleep(5.0)
 
-                await member.send(msg)
+                if key in keys[-1]:
+                    await member.send(embeds=embeds, view=view)
+                else:
+                    await member.send(embeds=embeds)
 
         except discord.Forbidden:
             print(f"嘗試私訊新成員 {member} 失敗，新成員可能已關閉私訊設定。")
 
-        ########################
-        # embeds = embed_builder.create("member_join", 
-        #     author = member.display_name,
-        #     portrait = member.display_avatar.url,
-        #     parameters = {
-        #     }
-        # )
+        #--------------------------------------------------------
+        # guild message part.
+        #--------------------------------------------------------
 
-        line = random.choice(WELCOME_MESSAGES)
+        # message pools
+        keys = [
+            "welcome_message_guild_1",
+            "welcome_message_guild_2"
+        ]
 
-        embed = discord.Embed(
-            title=f"{member.display_name}，歡迎來到 Th Haven！",
-            description=line,
-            color=discord.Color(0xA0C8FF)
+        key = random.choice(keys)
+
+        # this message is no author
+        embed_to_member = embed_builder.create(
+            key = key, 
+            portrait = member.display_avatar.url,
+            parameters = {
+                "member_name": member.display_name
+            },
+            timestamp = True
         )
-        embed.set_thumbnail(url=member.display_avatar.url)
-        embed.timestamp = discord.utils.utcnow()
 
-        embed_eryn = discord.Embed(
-            title=f"",
-            description="「咪也在這裡歡迎旅人的到來。如果旅人的私訊功能已關閉，也可以在這裡詢問咪任何問題或想知道的事情。如果旅人有玩特定遊戲，比如最終幻想時，社群有特別的規定需要先瞭解。」\n\n> *選擇對話可以進行互動*",
-            color=discord.Color(0xA0C8FF)
+        embed_from_eryn = embed_builder.create(
+            key = "welcome_message_guild_eryn", 
+            author = bot_name,
+            portrait = bot_image,
+            timestamp = True
         )
-        embed_eryn.set_thumbnail(url=self.bot.user.display_avatar.url)
-        embed_eryn.set_author(
-            name=self.bot.user.display_name,
-            icon_url=self.bot.user.display_avatar.url
-        )
-        embed_eryn.timestamp = discord.utils.utcnow()
-
-        view = CatSelectView()
 
         channel = member.guild.system_channel
         if channel:
-            await channel.send(embeds=[embed, embed_eryn], view=view)
+            await channel.send(embeds=embed_to_member + embed_from_eryn, view=view)
 
 async def setup(bot):
     await bot.add_cog(MemberJoinEvent(bot))

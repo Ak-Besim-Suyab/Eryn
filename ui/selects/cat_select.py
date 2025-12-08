@@ -9,9 +9,9 @@ class CatSelect(discord.ui.Select):
         option_lines = [
             ("你是誰？", "about_eryn_info"),
             ("你可以做什麼？", "about_eryn_features"),
-            ("關於社群規定", "about_community_rules"),
-            ("關於社群功能", "about_community_features"),
-            ("貓咪怎麼叫？", "how_cat_say"),
+            ("社群有什麼規範？", "about_community_rules"),
+            ("社群有什麼功能？", "about_community_features"),
+            ("咪怎麼叫？", "how_cat_say"),
         ]
 
         options = [
@@ -31,7 +31,8 @@ class CatSelect(discord.ui.Select):
         bot = Context.bot
 
         embed_builder = EmbedBuilder()
-        embeds = embed_builder.create(choice, 
+        embeds = embed_builder.create(
+            key = choice, 
             author = bot.user.display_name,
             portrait = bot.user.display_avatar.url
         )

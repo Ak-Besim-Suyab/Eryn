@@ -13,16 +13,18 @@ about_eryn_features:
   - title: ""
     description: |
           以下是目前已實裝，以及預計實裝的指令：
+
           /資訊：可以查詢社群或機器人的相關資訊喵（未實裝）
           /抽籤：查看今天的運勢喵（未實裝）
-          /摸：摸摸喵（未實裝）
+          /摸摸貓：可以摸摸咪，讓咪心情好！
     color: 10984191
-    portrait: null
+    author: ""
+    portrait: ""
 
 about_community_rules:
   - title: ""
     description: |
-      「社群沒有什麼特別嚴格的規定，旅人只要遵守基本的網路禮儀與社會善良風俗即可。旅人可以在 <#1360921668528373800> 查看社群詳細規範喵。」
+      「關於社群規範喵，只要遵守基本的網路禮儀與社會善良風俗就好喵！旅人可以在 <#1360921668528373800> 查看社群詳細規範喵。」
     color: 10984191
 
 about_community_features:
@@ -42,12 +44,52 @@ pet:
     description: |
       「喵喵？喵喵！」
 
-      > *咪被摸摸，咪覺得開心！咪總共被摸 {pet_count} 次！*
+      > *咪被摸摸，咪覺得開心！咪總共被摸 {pet_count} 次了！*
     color: 10984191
     portrait: "https://cdn.discordapp.com/attachments/1193049715638538283/1445748946923421728/ChatGPT_Image_2025123_08_04_57.png"
 
+welcome_message_direct_1:
+  - title: ""
+    description: |
+      「歡迎你來到 Th Haven！」
+    color: 10984191
+
+welcome_message_direct_2:
+  - title: ""
+    description: |
+      「剛加入的成員都會收到我 —— 社群管家的歡迎訊息」
+    color: 10984191
+
+welcome_message_direct_3:
+  - title: ""
+    description: |
+      「如果有任何問題或想知道的事情，都可以問我！」
 
 
+      > *機器人仍在測試階段，有任何提早發送的回應請見諒*
+    color: 10984191
+
+#--- welcome message in guild
+welcome_message_guild_1:
+  - title: "{member_name}，歡迎來到 Th Haven！"
+    description: |
+      很高興您降落到此！希望您能喜歡這個地方 🎉
+    color: 10984191
+
+welcome_message_guild_2:
+  - title: "{member_name}，歡迎來到 Th Haven！"
+    description: |
+      歡迎您的到來！希望您會喜歡這個地方 🎉
+    color: 10984191
+
+welcome_message_guild_eryn:
+  - title: ""
+    description: |
+      「咪也歡迎旅人到來！如果有任何問題或想知道的事情都可以問咪！如果旅人有玩特定遊戲，比如最終幻想時，社群有特別的規定需要先瞭解喵！」
+
+
+      > *選擇對話可以進行互動*
+    color: 10984191
 
 #-------
 sample:

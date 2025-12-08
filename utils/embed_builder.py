@@ -5,6 +5,9 @@ from context import Context
 
 from utils.logger import logger
 
+# --------------------------------------------------
+# this is a utility for creating embed message.
+# --------------------------------------------------
 class EmbedBuilder:
     def __init__(self):
         self.embed_datas = Context.yaml_loader.load("data/embed_texts.yaml")
@@ -13,7 +16,8 @@ class EmbedBuilder:
             key: str, 
             author: str = "",
             portrait: str = "", 
-            parameters: dict = None
+            parameters: dict = None,
+            timestamp = False
         ):
 
         # protect default mutable argument problem.
@@ -34,7 +38,7 @@ class EmbedBuilder:
 
         # read embeds
         for data in embed_list:
-            # ====== read titles ======
+            #--- set title ------------------------------------------
             title = data.get("title")
             description = data.get("description")
             color = data.get("color", 0xFFFFFF)
@@ -44,7 +48,7 @@ class EmbedBuilder:
                 description=formatted(description), 
                 color=color)
 
-            # ====== read fields ======
+            #--- set fields -----------------------------------------
             fields = data.get("field")
             if isinstance(fields, list):
                 for f in fields:
@@ -57,19 +61,24 @@ class EmbedBuilder:
                         value=formatted(value), 
                         inline=inline)
 
-            # set author
+            #--- set author -----------------------------------------
             embed.set_author(
                 name = data.get("author", author),
                 icon_url = data.get("portrait", portrait)
             )
 
-            # set thumbnail
+            #--- set thumbnail --------------------------------------
             embed.set_thumbnail(
                 url=data.get("portrait", portrait)
             )
 
-            # store embed
+            #--- show time stamp ------------------------------------
+            if timestamp:
+                embed.timestamp = discord.utils.utcnow()
+
+            #--- store embed ----------------------------------------
             embeds.append(embed)
+
 
         logger.info(f'Embed created successfully: {key}.')
         return embeds
