@@ -29,7 +29,7 @@ class MemberJoinEvent(commands.Cog):
 
         button_manager = Context.get_manager("button")
 
-        view.add_item(button_manager.create("base_button"))
+        view.add_item(button_manager.create("final_fantasy_dedicated_rule_button"))
 
         #--------------------------------------------------------
         # direct message part.
@@ -37,8 +37,7 @@ class MemberJoinEvent(commands.Cog):
 
         keys = [
             "welcome_message_direct_1",
-            "welcome_message_direct_2",
-            "welcome_message_direct_3"
+            "welcome_message_direct_2"
         ]
 
         try:

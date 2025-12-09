@@ -45,14 +45,14 @@ class CardGroup(app_commands.Group):
     # /名片 查看
     # ----------------------------------------------------
     @app_commands.command(name = "查看", description = "查看某位使用者的名片")
-    @app_commands.describe(target = "你想查看的對象")
-    async def card_view(self, interaction: discord.Interaction, target: discord.User):
-        target_player, _ = Player.get_or_create(id=target.id)
+    @app_commands.describe(member = "你想查看的對象")
+    async def card_view(self, interaction: discord.Interaction, member: discord.User):
+        target_player, _ = Player.get_or_create(id=member.id)
 
         card = target_player.card or "這位使用者尚未設定名片。"
 
         await interaction.response.send_message(
-            f"{target.display_name} 的名片：\n```{card}```",
+            f"{member.display_name} 的名片：\n```{card}```",
             ephemeral=False
         )
 

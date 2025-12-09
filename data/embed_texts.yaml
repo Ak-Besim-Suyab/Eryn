@@ -7,7 +7,7 @@ about_eryn_info:
 about_eryn_features:
   - title: ""
     description: |
-      「咪提供許多實用的小功能給旅人使用，希望旅人會喜歡。旅人可以透過**輸入指令**或從輸入框左邊的**使用應用程式**來使用這些功能喵。」
+      「咪提供許多實用的功能給旅人使用，旅人可以透過**輸入指令**或從輸入框兩側的**應用程式選單**使用功能喵。」
     color: 10984191
 
   - title: ""
@@ -51,22 +51,16 @@ pet:
 welcome_message_direct_1:
   - title: ""
     description: |
-      「歡迎你來到 Th Haven！」
+      「歡迎旅人加入避風港！剛加入的成員都會收到咪的歡迎訊息喵！」
     color: 10984191
 
 welcome_message_direct_2:
   - title: ""
     description: |
-      「剛加入的成員都會收到我 —— 社群管家的歡迎訊息」
-    color: 10984191
+      「咪是這個社群的專屬管家喵，有任何問題或想知道的事情，都可以問咪！」
 
-welcome_message_direct_3:
-  - title: ""
-    description: |
-      「如果有任何問題或想知道的事情，都可以問我！」
-
-
-      > *機器人仍在測試階段，有任何提早發送的回應請見諒*
+      > *艾琳仍在早期測試階段，有任何回應缺失請見諒*
+      > *如果對話無回應或顯示交互失敗，可以隨時輸入指令來和艾琳重新對話*
     color: 10984191
 
 #--- welcome message in guild
@@ -85,11 +79,40 @@ welcome_message_guild_2:
 welcome_message_guild_eryn:
   - title: ""
     description: |
-      「咪也歡迎旅人到來！如果有任何問題或想知道的事情都可以問咪！如果旅人有玩特定遊戲，比如最終幻想時，社群有特別的規定需要先瞭解喵！」
+      「歡迎旅人喵！有任何問題或想知道的事情都可以問咪！如果旅人有玩特定遊戲，比如最終幻想時，可以看看我們的獨立介紹喵！」
 
+      > *貓咪仍在早期測試階段，有任何回應缺失請見諒，如果對話無回應或顯示交互失敗，可以隨時輸入**呼叫**指令或使用應用程式來和貓咪重新對話*
+      > *選擇對話可以進行互動*
+      > *選擇按鈕可以切換對話內容*
+    color: 10984191
 
+call_response_eryn:
+  - title: ""
+    description: |
+      「喵～喵！」
+
+      > *貓咪仍在早期測試階段，有任何回應缺失請見諒，如果對話無回應或顯示交互失敗，可以隨時輸入**呼叫**指令或使用應用程式來和貓咪重新對話*
+      > 
       > *選擇對話可以進行互動*
     color: 10984191
+    author: "Eryn"
+    portrait: "https://cdn.discordapp.com/attachments/1193049715638538283/1445748946923421728/ChatGPT_Image_2025123_08_04_57.png"
+
+final_fantasy_dedicated_rule_1:
+  - title: ""
+    description: |
+      「社群會為活躍的遊戲設置特別獨立的頻道分類與相應的功能，最終幻想便是其中之一。」
+    color: 10984191
+    author: "Eryn"
+    portrait: "https://cdn.discordapp.com/attachments/1193049715638538283/1445748946923421728/ChatGPT_Image_2025123_08_04_57.png"
+
+final_fantasy_dedicated_rule_2:
+  - title: ""
+    description: |
+      「社群特別製作的名片指令，可以讓旅人在名片裡記錄自己的國際服與繁中服角色名稱，以及其他相關資訊，方便讓大家記得您。這項功能不會強制要求執行；同時，由於名片會保持公開，讓大家隨時都能查看，如果旅人有隱私需求可以不進行設定。」
+    color: 10984191
+    author: "Eryn"
+    portrait: "https://cdn.discordapp.com/attachments/1193049715638538283/1445748946923421728/ChatGPT_Image_2025123_08_04_57.png"
 
 #-------
 sample:

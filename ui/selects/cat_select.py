@@ -34,7 +34,8 @@ class CatSelect(discord.ui.Select):
         embeds = embed_builder.create(
             key = choice, 
             author = bot.user.display_name,
-            portrait = bot.user.display_avatar.url
+            portrait = bot.user.display_avatar.url,
+            timestamp = True
         )
 
         view = CatSelectView()

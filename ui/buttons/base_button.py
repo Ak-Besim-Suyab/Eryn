@@ -1,11 +1,16 @@
 ﻿import discord
 
+# button style -------------------------------
+# discord.ButtonStyle.primary
+# discord.ButtonStyle.secondary
+# --------------------------------------------
+
 class BaseButton(discord.ui.Button):
     def __init__(self):
         super().__init__(
-            label = "測試",
+            label = "關於最終幻想",
             emoji = "📜",
-            style = discord.ButtonStyle.primary,
+            style = discord.ButtonStyle.secondary,
             custom_id = "base_button"
         )
 

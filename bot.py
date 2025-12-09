@@ -46,6 +46,7 @@ async def on_ready():
 
         await bot.load_extension("cogs.pet")
         await bot.load_extension("cogs.card")
+        await bot.load_extension("cogs.call")
 
         synced_haven = await bot.tree.sync(guild=GUILD_TH_HAVEN)
         synced_besim = await bot.tree.sync(guild=GUILD_AK_BESIM)
