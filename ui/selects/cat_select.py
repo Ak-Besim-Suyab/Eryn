@@ -32,7 +32,7 @@ class CatSelect(discord.ui.Select):
 
         embed_builder = EmbedBuilder()
         embeds = embed_builder.create(
-            key = choice, 
+            dialogue = choice, 
             author = bot.user.display_name,
             portrait = bot.user.display_avatar.url,
             timestamp = True

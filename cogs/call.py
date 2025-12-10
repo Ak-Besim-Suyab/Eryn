@@ -23,10 +23,10 @@ class Call(commands.Cog):
 
     async def call(self, interaction: discord.Interaction, character: app_commands.Choice[str]):
 
-        key = "call_response_eryn"
+        dialogue = "call_response_eryn"
 
         embed_builder = EmbedBuilder()
-        embeds = embed_builder.create(key=key)
+        embeds = embed_builder.create(dialogue=dialogue)
 
         view = CallView()
 

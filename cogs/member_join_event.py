@@ -7,8 +7,6 @@ from ui.selects.cat_select import CatSelectView
 
 from utils.embed_builder import EmbedBuilder
 
-from context import Context
-
 class MemberJoinEvent(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
@@ -27,30 +25,29 @@ class MemberJoinEvent(commands.Cog):
 
         embed_builder = EmbedBuilder()
 
-        button_manager = Context.get_manager("button")
-
-        view.add_item(button_manager.create("final_fantasy_dedicated_rule_button"))
-
         #--------------------------------------------------------
         # direct message part.
         #--------------------------------------------------------
 
-        keys = [
+        dialogues = [
             "welcome_message_direct_1",
-            "welcome_message_direct_2"
+            "welcome_message_direct_2",
+            "welcome_message_direct_3",
+            "welcome_message_direct_4"
         ]
 
         try:
-            for key in keys:
+            for dialogue in dialogues:
                 embeds = embed_builder.create(
-                    key = key, 
+                    dialogue = dialogue, 
                     author = bot_name,
-                    portrait = bot_image
+                    portrait = bot_image,
+                    timestamp = True
                 )
                 async with member.typing():
                     await asyncio.sleep(5.0)
 
-                if key in keys[-1]:
+                if dialogue in dialogues[-1]:
                     await member.send(embeds=embeds, view=view)
                 else:
                     await member.send(embeds=embeds)
@@ -63,16 +60,16 @@ class MemberJoinEvent(commands.Cog):
         #--------------------------------------------------------
 
         # message pools
-        keys = [
+        dialogues = [
             "welcome_message_guild_1",
             "welcome_message_guild_2"
         ]
 
-        key = random.choice(keys)
+        dialogue = random.choice(dialogues)
 
         # this message is no author
         embed_to_member = embed_builder.create(
-            key = key, 
+            dialogue = dialogue, 
             portrait = member.display_avatar.url,
             parameters = {
                 "member_name": member.display_name
@@ -81,7 +78,7 @@ class MemberJoinEvent(commands.Cog):
         )
 
         embed_from_eryn = embed_builder.create(
-            key = "welcome_message_guild_eryn", 
+            dialogue = "welcome_message_guild_eryn", 
             author = bot_name,
             portrait = bot_image,
             timestamp = True

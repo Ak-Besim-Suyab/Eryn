@@ -48,32 +48,44 @@ pet:
     color: 10984191
     portrait: "https://cdn.discordapp.com/attachments/1193049715638538283/1445748946923421728/ChatGPT_Image_2025123_08_04_57.png"
 
+#--- welcome messages in direct message (DM).
 welcome_message_direct_1:
   - title: ""
     description: |
-      「歡迎旅人加入避風港！剛加入的成員都會收到咪的歡迎訊息喵！」
-    color: 10984191
+      「歡迎旅人加入避風港！🎉」
+    color: 3289650
 
 welcome_message_direct_2:
   - title: ""
     description: |
-      「咪是這個社群的專屬管家喵，有任何問題或想知道的事情，都可以問咪！」
+      「咪是社群的專屬管家！剛加入的旅人，咪會偷偷地發送歡迎訊息喵！」
+    color: 3289650
 
-      > *艾琳仍在早期測試階段，有任何回應缺失請見諒*
-      > *如果對話無回應或顯示交互失敗，可以隨時輸入指令來和艾琳重新對話*
-    color: 10984191
+welcome_message_direct_3:
+  - title: ""
+    description: |
+      「另外，咪剛剛也在 <#1190035391986794659> 發送了一則訊息給旅人，有重要的設定需要在社群裡才能啟用，請旅人務必去看看喵！」
+    color: 3289650
 
-#--- welcome message in guild
+welcome_message_direct_4:
+  - title: ""
+    description: |
+      「如果旅人有任何問題或想知道的事情，也歡迎問咪喵！」
+
+      > *選擇對話可以進行互動*
+    color: 3289650
+
+#--- welcome messages in guild.
 welcome_message_guild_1:
   - title: "{member_name}，歡迎來到 Th Haven！"
     description: |
-      很高興您降落到此！希望您能喜歡這個地方 🎉
+      很高興您降落到此！希望您會喜歡這裡 🎉
     color: 10984191
 
 welcome_message_guild_2:
-  - title: "{member_name}，歡迎來到 Th Haven！"
+  - title: "{member_name}，很高興您來到 Th Haven！"
     description: |
-      歡迎您的到來！希望您會喜歡這個地方 🎉
+      歡迎您的到來！希望您會喜歡這裡 🎉
     color: 10984191
 
 welcome_message_guild_eryn:
@@ -91,9 +103,7 @@ call_response_eryn:
     description: |
       「喵～喵！」
 
-      > *貓咪仍在早期測試階段，有任何回應缺失請見諒，如果對話無回應或顯示交互失敗，可以隨時輸入**呼叫**指令或使用應用程式來和貓咪重新對話*
-      > 
-      > *選擇對話可以進行互動*
+      > *選擇對話或按鈕可以進行互動*
     color: 10984191
     author: "Eryn"
     portrait: "https://cdn.discordapp.com/attachments/1193049715638538283/1445748946923421728/ChatGPT_Image_2025123_08_04_57.png"
@@ -101,18 +111,41 @@ call_response_eryn:
 final_fantasy_dedicated_rule_1:
   - title: ""
     description: |
-      「社群會為活躍的遊戲設置特別獨立的頻道分類與相應的功能，最終幻想便是其中之一。」
-    color: 10984191
-    author: "Eryn"
-    portrait: "https://cdn.discordapp.com/attachments/1193049715638538283/1445748946923421728/ChatGPT_Image_2025123_08_04_57.png"
+      「最終幻想是社群最活躍的主題，由於繁中服剛推出，有很多小豆芽來到這裡。」
 
 final_fantasy_dedicated_rule_2:
   - title: ""
     description: |
-      「社群特別製作的名片指令，可以讓旅人在名片裡記錄自己的國際服與繁中服角色名稱，以及其他相關資訊，方便讓大家記得您。這項功能不會強制要求執行；同時，由於名片會保持公開，讓大家隨時都能查看，如果旅人有隱私需求可以不進行設定。」
-    color: 10984191
-    author: "Eryn"
-    portrait: "https://cdn.discordapp.com/attachments/1193049715638538283/1445748946923421728/ChatGPT_Image_2025123_08_04_57.png"
+      「因此，咪將特別向大家介紹社群的相關小功能喵！」
+
+final_fantasy_dedicated_rule_3:
+  - title: ""
+    description: |
+      「首先，__社群的最終幻想頻道需要身分組才能檢視__。」
+
+final_fantasy_dedicated_rule_4:
+  - title: ""
+    description: |
+      「旅人可以在 <id:customize> 回答問題，或者選擇按鈕獲得對應身分組喵。」
+
+      > 身分組可以透過按鈕或回答問卷隨時新增或刪除
+
+final_fantasy_dedicated_rule_5:
+  - title: ""
+    description: |
+      「接著是暴雷預防，__不論任何頻道，社群全都默認禁止暴雷__。」
+
+final_fantasy_dedicated_rule_6:
+  - title: ""
+    description: |
+      「最終幻想是相當著重於劇情的遊戲，大部分人都希望能在體驗遊戲前保留最多的期待感。如果旅人想討論劇情，需要使用限制頻道，限制頻道同樣需要身分組才能檢視。」
+
+final_fantasy_dedicated_rule_7:
+  - title: ""
+    description: |
+      「旅人也同樣可以在 <id:customize> 回答問題或選擇按鈕獲得身分組喵。」
+
+      > 身分組可以透過按鈕或回答問卷隨時新增或刪除
 
 #-------
 sample:

@@ -10,12 +10,13 @@ from utils.logger import logger
 # --------------------------------------------------
 class EmbedBuilder:
     def __init__(self):
-        self.embed_datas = Context.yaml_loader.load("data/embed_texts.yaml")
+        self.embed_datas = Context.yaml_loader.load("data/dialogues.yaml")
 
     def create(self, 
-            key: str, 
+            dialogue: str, 
             author: str = "",
             portrait: str = "", 
+            color = 0xFFFFFF,
             parameters: dict = None,
             timestamp = False
         ):
@@ -24,9 +25,9 @@ class EmbedBuilder:
         if parameters is None:
             parameters = {}
 
-        embed_list = self.embed_datas.get(key)
+        embed_list = self.embed_datas.get(dialogue)
         if not embed_list:
-            raise ValueError(f"Embed key '{key}' not found in embed_texts")
+            raise ValueError(f"Dialogue name '{dialogue}' not found in dialogues")
 
         if isinstance(embed_list, dict):
             embed_list = [embed_list]
@@ -41,7 +42,7 @@ class EmbedBuilder:
             #--- set title ------------------------------------------
             title = data.get("title")
             description = data.get("description")
-            color = data.get("color", 0xFFFFFF)
+            color = data.get("color", color)
 
             embed = discord.Embed(
                 title=formatted(title), 
@@ -80,7 +81,7 @@ class EmbedBuilder:
             embeds.append(embed)
 
 
-        logger.info(f'Embed created successfully: {key}.')
+        logger.info(f'Embed created successfully: {dialogue}.')
         return embeds
 
 # 在其他地方直接導入 embed_builder = EmbedBuilder 
