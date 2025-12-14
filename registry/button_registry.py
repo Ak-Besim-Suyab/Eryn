@@ -2,8 +2,12 @@ from managers.button_manager import ButtonManager
 
 from ui.buttons.base_button import BaseButton
 from ui.buttons.final_fantasy_dedicated_rule_button import FinalFantasyDedicatedRuleButton
+
 from ui.buttons.ffxiv_global_role_button import FFXIVGlobalRoleButton
 from ui.buttons.ffxiv_chinese_role_button import FFXIVChineseRoleButton
+from ui.buttons.ffxiv_global_spoiler_role_button import FFXIVGlobalSpoilerRoleButton
+from ui.buttons.ffxiv_chinese_spoiler_role_button import FFXIVChineseSpoilerRoleButton
+
 from ui.buttons.community_rule_button import CommunityRuleButton
 
 button_manager = ButtonManager()
@@ -13,4 +17,6 @@ button_manager.register("base_button", BaseButton)
 button_manager.register("final_fantasy_dedicated_rule_button", FinalFantasyDedicatedRuleButton)
 button_manager.register("ffxiv_global_role_button", FFXIVGlobalRoleButton)
 button_manager.register("ffxiv_chinese_role_button", FFXIVChineseRoleButton)
+button_manager.register("ffxiv_global_spoiler_role_button", FFXIVGlobalSpoilerRoleButton)
+button_manager.register("ffxiv_chinese_spoiler_role_button", FFXIVChineseSpoilerRoleButton)
 button_manager.register("community_rule_button", CommunityRuleButton)

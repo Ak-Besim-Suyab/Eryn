@@ -22,6 +22,20 @@ class Player(Model):
         player, created_player = cls.get_or_create(id = id)
         return player
 
+    @classmethod
+    def increase_currency(cls, id: int, amount:int = 0):
+        with player_database.atomic():
+            player = cls.fetch(id)
+            player.currency_yab += amount
+            player.save()
+
+    @classmethod
+    def decrease_currency(cls, id: int, amount:int = 0):
+        with player_database.atomic():
+            player = cls.fetch(id)
+            player.currency_yab -= amount
+            player.save()
+
 def init_player_database():
     with player_database:
         player_database.create_tables([Player])

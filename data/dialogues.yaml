@@ -1,7 +1,7 @@
 about_eryn_info:
   - title: ""
     description: |
-      「咪是社群的管家，管理員將大部分事務由咪託管，旅人有任何問題或想知道的事情也都歡迎問咪。」
+      「咪是這個社群的管理員喵！想知道社群大小事都可以問咪，還可以和咪玩小遊戲喵！」
     color: 10984191
 
 about_eryn_features:
@@ -16,6 +16,8 @@ about_eryn_features:
 
           /資訊：可以查詢社群或機器人的相關資訊喵（未實裝）
           /抽籤：查看今天的運勢喵（未實裝）
+          /名片：旅人可以自製名片並保存（WIP）
+          /呼叫：可以呼叫貓咪，和牠們互動！
           /摸摸貓：可以摸摸咪，讓咪心情好！
     color: 10984191
     author: ""
@@ -36,17 +38,32 @@ about_community_features:
 how_cat_say:
   - title: ""
     description: |
-      「喵。」
+      「喵！」
     color: 10984191
 
-pet:
+pet_succeed:
   - title: ""
     description: |
-      「喵喵？喵喵！」
+      「喵喵？喵喵喵！💞」
 
-      > *咪被摸摸，咪覺得開心！咪總共被摸 {pet_count} 次了！*
+      > *咪被摸摸感到開心！咪總共被摸 {pet_count} 次了！*
+    portrait: "https://cdn.discordapp.com/attachments/1193049715638538283/1448679576833359924/d2cccbab47835a51d895f57ad863d4ab.jpg"
     color: 10984191
-    portrait: "https://cdn.discordapp.com/attachments/1193049715638538283/1445748946923421728/ChatGPT_Image_2025123_08_04_57.png"
+
+pet_fail:
+  - title: ""
+    description: |
+      「嗷嗷嗷... 嘶嘶！！」
+
+      > *你想摸貓咪，但失敗了*
+    portrait: "https://cdn.discordapp.com/attachments/1193049715638538283/1449021455835725916/ca904ec6a60e0d06e2543f84d7d906d0.jpg"
+    color: 10984191
+
+bonus_money_event:
+  - title: "你突然感到很幸運"
+    description: |
+      你獲得 {currency} 金幣！
+    color: 10984191
 
 #--- welcome messages in direct message (DM).
 welcome_message_direct_1:
@@ -64,7 +81,7 @@ welcome_message_direct_2:
 welcome_message_direct_3:
   - title: ""
     description: |
-      「另外，咪剛剛也在 <#1190035391986794659> 發送了一則訊息給旅人，有重要的設定需要在社群裡才能啟用，請旅人務必去看看喵！」
+      「咪剛剛也在<#1190035391986794659>發送了一則訊息給旅人，有重要的說明需要在社群裡啟用，請旅人務必去看看！」
     color: 3289650
 
 welcome_message_direct_4:
@@ -93,59 +110,38 @@ welcome_message_guild_eryn:
     description: |
       「歡迎旅人喵！有任何問題或想知道的事情都可以問咪！如果旅人有玩特定遊戲，比如最終幻想時，可以看看我們的獨立介紹喵！」
 
-      > *貓咪仍在早期測試階段，有任何回應缺失請見諒，如果對話無回應或顯示交互失敗，可以隨時輸入**呼叫**指令或使用應用程式來和貓咪重新對話*
-      > *選擇對話可以進行互動*
-      > *選擇按鈕可以切換對話內容*
+      > *選擇對話或按鈕可以進行互動*
     color: 10984191
 
 call_response_eryn:
   - title: ""
     description: |
-      「喵～喵！」
+      「喵喵～喵喵！」
 
       > *選擇對話或按鈕可以進行互動*
-    color: 10984191
-    author: "Eryn"
-    portrait: "https://cdn.discordapp.com/attachments/1193049715638538283/1445748946923421728/ChatGPT_Image_2025123_08_04_57.png"
 
 final_fantasy_dedicated_rule_1:
   - title: ""
     description: |
-      「最終幻想是社群最活躍的主題，由於繁中服剛推出，有很多小豆芽來到這裡。」
+      「最終幻想是社群目前最活躍的主題；為此，社群有許多特別設置的頻道與功能，咪將為旅人大致介紹喵！」
 
 final_fantasy_dedicated_rule_2:
   - title: ""
     description: |
-      「因此，咪將特別向大家介紹社群的相關小功能喵！」
+      「__所有與最終幻想有關的頻道皆需要身分組才能檢視__！」
+
+      「旅人可以在<id:customize>回答問題，或者選擇下方的按鈕獲得對應的身分組；獲得身分組後，就可以檢視這些頻道喵。」
+
+      「__大部分頻道與討論串默認禁止暴雷__，如果旅人想討論劇情的話，需要領取額外的身分組檢視暴雷頻道。」
+
+      「請注意，暴雷頻道身分組領取後，即代表旅人同意接收任何形式的暴雷內容。」
+
+      > *身分組可以透過按鈕或回答問卷隨時新增或刪除*
 
 final_fantasy_dedicated_rule_3:
   - title: ""
     description: |
-      「首先，__社群的最終幻想頻道需要身分組才能檢視__。」
-
-final_fantasy_dedicated_rule_4:
-  - title: ""
-    description: |
-      「旅人可以在 <id:customize> 回答問題，或者選擇按鈕獲得對應身分組喵。」
-
-      > 身分組可以透過按鈕或回答問卷隨時新增或刪除
-
-final_fantasy_dedicated_rule_5:
-  - title: ""
-    description: |
-      「接著是暴雷預防，__不論任何頻道，社群全都默認禁止暴雷__。」
-
-final_fantasy_dedicated_rule_6:
-  - title: ""
-    description: |
-      「最終幻想是相當著重於劇情的遊戲，大部分人都希望能在體驗遊戲前保留最多的期待感。如果旅人想討論劇情，需要使用限制頻道，限制頻道同樣需要身分組才能檢視。」
-
-final_fantasy_dedicated_rule_7:
-  - title: ""
-    description: |
-      「旅人也同樣可以在 <id:customize> 回答問題或選擇按鈕獲得身分組喵。」
-
-      > 身分組可以透過按鈕或回答問卷隨時新增或刪除
+      「另外，社群推薦旅人在<#1192574716242825267>時附上國際服和繁中服的遊戲名稱，以便讓大家認得您是誰喵！」
 
 #-------
 sample:

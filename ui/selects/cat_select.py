@@ -38,11 +38,19 @@ class CatSelect(discord.ui.Select):
             timestamp = True
         )
 
-        view = CatSelectView()
+        await interaction.response.send_message(embeds=embeds, ephemeral=True)
 
-        await interaction.response.send_message(embeds=embeds, view=view, ephemeral=True)
-
-class CatSelectView(discord.ui.View):
+class CatSelectDirectMessageView(discord.ui.View):
     def __init__(self):
         super().__init__(timeout=None)
+
+        self.add_item(CatSelect())
+
+class CatSelectGuildView(discord.ui.View):
+    def __init__(self):
+        super().__init__(timeout=None)
+
+        button_manager = Context.get_manager("button")
+        self.add_item(button_manager.create("final_fantasy_dedicated_rule_button"))
+
         self.add_item(CatSelect())

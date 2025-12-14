@@ -24,9 +24,11 @@ class Call(commands.Cog):
     async def call(self, interaction: discord.Interaction, character: app_commands.Choice[str]):
 
         dialogue = "call_response_eryn"
+        author = "Eryn"
+        portrait = "https://cdn.discordapp.com/attachments/1193049715638538283/1448679576833359924/d2cccbab47835a51d895f57ad863d4ab.jpg"
 
         embed_builder = EmbedBuilder()
-        embeds = embed_builder.create(dialogue=dialogue)
+        embeds = embed_builder.create(dialogue=dialogue, author=author, portrait=portrait)
 
         view = CallView()
 

@@ -3,7 +3,7 @@ import random
 import asyncio
 from discord.ext import commands
 
-from ui.selects.cat_select import CatSelectView
+from ui.selects.cat_select import CatSelectDirectMessageView, CatSelectGuildView
 
 from utils.embed_builder import EmbedBuilder
 
@@ -21,7 +21,7 @@ class MemberJoinEvent(commands.Cog):
         bot_name = self.bot.user.display_name
         bot_image = self.bot.user.display_avatar.url
 
-        view = CatSelectView()
+        view = CatSelectDirectMessageView()
 
         embed_builder = EmbedBuilder()
 
@@ -83,6 +83,8 @@ class MemberJoinEvent(commands.Cog):
             portrait = bot_image,
             timestamp = True
         )
+
+        view = CatSelectGuildView()
 
         channel = member.guild.system_channel
         if channel:
