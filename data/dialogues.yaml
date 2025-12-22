@@ -1,3 +1,8 @@
+# pink color: 16738740
+# gold color: 15712004
+# forest green color: 2263842
+# red color: 16711680
+
 about_eryn_info:
   - title: ""
     description: |
@@ -46,9 +51,18 @@ pet_succeed:
     description: |
       「喵喵？喵喵喵！💞」
 
-      > *咪被摸摸感到開心！咪總共被摸 {pet_count} 次了！*
+      > *咪被摸摸感到開心！咪總共被摸 {pets} 次了！*
     portrait: "https://cdn.discordapp.com/attachments/1193049715638538283/1448679576833359924/d2cccbab47835a51d895f57ad863d4ab.jpg"
-    color: 10984191
+    color: 2263842
+
+player_friendship_increased:
+  - title: ""
+    description: |
+      「喵喵？喵喵喵！💞」
+
+      > *咪被摸摸感到開心！咪總共被摸 {pets} 次了！*
+    portrait: "https://cdn.discordapp.com/attachments/1193049715638538283/1448679576833359924/d2cccbab47835a51d895f57ad863d4ab.jpg"
+    color: 2263842
 
 pet_fail:
   - title: ""
@@ -57,13 +71,13 @@ pet_fail:
 
       > *你想摸貓咪，但失敗了*
     portrait: "https://cdn.discordapp.com/attachments/1193049715638538283/1449021455835725916/ca904ec6a60e0d06e2543f84d7d906d0.jpg"
-    color: 10984191
+    color: 16711680
 
 bonus_money_event:
-  - title: "你突然感到很幸運"
+  - title: "你感到很幸運！"
     description: |
-      你獲得 {currency} 金幣！
-    color: 10984191
+      獲得 {currency} 金幣！
+    color: 15712004
 
 #--- welcome messages in direct message (DM).
 welcome_message_direct_1:
@@ -142,6 +156,20 @@ final_fantasy_dedicated_rule_3:
   - title: ""
     description: |
       「另外，社群推薦旅人在<#1192574716242825267>時附上國際服和繁中服的遊戲名稱，以便讓大家認得您是誰喵！」
+
+  - title: ""
+    description: |
+          以下是建議的自我介紹格式，以管理員為例 - 
+
+          大家好！這裡是 Suyab 可以叫我豆干就好，希望能在這裡和大家玩得開心！
+
+          這裡是我的 FF14 角色名稱！
+          國際服 ID：Suyab Violet
+          繁中服 ID：Suyab
+
+    color: 10984191
+    author: ""
+    portrait: ""
 
 #-------
 sample:

@@ -5,12 +5,14 @@ from context import Context
 
 from utils.logger import logger
 
+DIALOGUE_PATH = "data/dialogues.yaml"
+
 # --------------------------------------------------
 # this is a utility for creating embed message.
 # --------------------------------------------------
 class EmbedBuilder:
     def __init__(self):
-        self.embed_datas = Context.yaml_loader.load("data/dialogues.yaml")
+        self.embed_datas = Context.yaml_loader.load(DIALOGUE_PATH)
 
     def create(self, 
             dialogue: str, 
@@ -27,7 +29,7 @@ class EmbedBuilder:
 
         embed_list = self.embed_datas.get(dialogue)
         if not embed_list:
-            raise ValueError(f"Dialogue name '{dialogue}' not found in dialogues")
+            raise ValueError(f"Dialogue name '{dialogue}' not found in {DIALOGUE_PATH}")
 
         if isinstance(embed_list, dict):
             embed_list = [embed_list]

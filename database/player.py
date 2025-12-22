@@ -1,10 +1,5 @@
 from peewee import *
-import os
-
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DB_PATH  = os.path.join(BASE_DIR, "player.db")
-
-player_database = SqliteDatabase(DB_PATH)
+from database.generic import db
 
 class Player(Model):
     id = IntegerField(primary_key = True)
@@ -14,8 +9,10 @@ class Player(Model):
 
     currency_yab = IntegerField(default = 0)
 
+    use_pet = IntegerField(default = 0)
+
     class Meta:
-        database = player_database
+        database = db
 
     @classmethod
     def fetch(cls, id: int):
@@ -24,18 +21,26 @@ class Player(Model):
 
     @classmethod
     def increase_currency(cls, id: int, amount:int = 0):
-        with player_database.atomic():
+        with db.atomic():
             player = cls.fetch(id)
             player.currency_yab += amount
             player.save()
 
     @classmethod
     def decrease_currency(cls, id: int, amount:int = 0):
-        with player_database.atomic():
+        with db.atomic():
             player = cls.fetch(id)
             player.currency_yab -= amount
             player.save()
 
+    @classmethod
+    def increase_use_pet(cls, id: int, amount:int = 0):
+        with db.atomic():
+            player = cls.fetch(id)
+            player.use_pet += amount
+            player.save()
+        return player.use_pet
+
 def init_player_database():
-    with player_database:
-        player_database.create_tables([Player])
+    with db:
+        db.create_tables([Player])
