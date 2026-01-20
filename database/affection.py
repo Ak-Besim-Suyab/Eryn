@@ -27,3 +27,7 @@ class Affection(Model):
             affection.level += amount
             affection.save()
             return affection.level
+
+def init_affection_database():
+    with db:
+        db.create_tables([Affection])

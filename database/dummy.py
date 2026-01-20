@@ -11,14 +11,15 @@ class Dummy(Model):
         database = db
 
     @classmethod
-    def fetch(cls, id: int):
-        dummy, created_dummy = cls.get_or_create(id = id)
+    def get_or_create_dummy(cls, id: int):
+        """取得或創建虛擬角色記錄"""
+        dummy, created = cls.get_or_create(id=id)
         return dummy
 
     @classmethod
     def increase_pets(cls, dummy_id: int, amount:int = 1):
         with db.atomic():
-            dummy = cls.fetch(dummy_id)
+            dummy = cls.get_or_create_dummy(dummy_id)
             dummy.pets += amount
             dummy.save()
         return dummy.pets

@@ -5,6 +5,7 @@ import random
 
 from database.dummy import Dummy
 from database.player import Player
+from database.affection import Affection
 
 from utils.embed_builder import EmbedBuilder
 from utils.logger import logger
@@ -26,7 +27,10 @@ class PetCog(commands.Cog):
         embeds = embed_builder.create(
             dialogue=result["status"], 
             author="Eryn",
-            parameters = {"pets": result.get("pets")}
+            parameters = {
+                "pets": result.get("pets"),
+                "affection": result.get("bonus_affection")
+            }
         )
 
         if result.get("bonus"):
@@ -58,7 +62,10 @@ class PetAgainButton(discord.ui.Button):
         embeds = embed_builder.create(
             dialogue=result["status"], 
             author="Eryn",
-            parameters = {"pets": result.get("pets")}
+            parameters = {
+                "pets": result.get("pets"),
+                "affection": result.get("bonus_affection")
+            }
         )
 
         if result.get("bonus"):
@@ -86,8 +93,13 @@ async def pet(user_id: int, dummy_id: int = 0):
     pets = Dummy.increase_pets(dummy_id, 1)
     use_pet = Player.increase_use_pet(user_id, 1)
 
+    bonus_affection = random.randint(2, 5)
+
+    Affection.increase_affection(user_id, dummy_id, bonus_affection)
+
     result["status"] = "pet_succeed"
     result["pets"] = pets
+    result["bonus_affection"] = bonus_affection
 
     if random.random() > 1 - base_bonus_chance:
         bonus_currency = random.randint(3, 7)

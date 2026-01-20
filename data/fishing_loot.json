@@ -1,0 +1,28 @@
+{
+    "fish": [
+        {
+            "item_key": "salmon",
+            "name": "鮭魚",
+            "experience_min": 5,
+            "experience_max": 8,
+            "base_value": 5,
+            "weight": 30
+        },
+        {
+            "item_key": "bass",
+            "name": "鱸魚",
+            "experience_min": 2,
+            "experience_max": 4,
+            "base_value": 2,
+            "weight": 50
+        },
+        {
+            "item_key": "cod",
+            "name": "鱈魚",
+            "experience_min": 4,
+            "experience_max": 5,
+            "base_value": 3,
+            "weight": 20
+        }
+    ]
+}

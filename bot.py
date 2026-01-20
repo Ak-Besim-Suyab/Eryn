@@ -8,24 +8,12 @@ from dotenv import load_dotenv
 
 from context import Context
 from context import GUILD_TH_HAVEN, GUILD_AK_BESIM
-from state.state_machine import StateMachine
 
 from file_loader import YamlLoader
 
-from handlers.excavate_handler import ExcavateHandler
-from handlers.look_handler import LookHandler
-
-from models.item import ItemContainer
-from models.area import AreaContainer
-from models.entity import EntityContainer
-
-from state.look_state import LookState
-from state.combat_state import CombatState
-
 from registry.button_registry import button_manager
 
-from database.dummy import init_dummy_database
-from database.player import init_player_database
+from database import init_all_databases
 
 from utils.logger import logger
 
@@ -37,39 +25,28 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 @bot.event
 async def on_ready():
     try:
-        init_dummy_database()
-        init_player_database()
+        init_all_databases()
 
         await bot.load_extension("cogs.member_join_event")
 
-        await bot.load_extension("cogs.test_embed")
+        await bot.load_extension("cogs.record")
 
         await bot.load_extension("cogs.pet")
         await bot.load_extension("cogs.card")
         await bot.load_extension("cogs.call")
+        await bot.load_extension("cogs.leveling")
+        await bot.load_extension("cogs.fishing")
+        await bot.load_extension("cogs.sell")
+        await bot.load_extension("cogs.inventory")
+
+        await bot.load_extension("cogs.rank")
 
         synced_haven = await bot.tree.sync(guild=GUILD_TH_HAVEN)
         synced_besim = await bot.tree.sync(guild=GUILD_AK_BESIM)
 
         Context.register_bot(bot)
         Context.register_yaml_loader(YamlLoader())
-        # Context.register_state_machine(StateMachine())
-
         Context.register_manager("button", button_manager)
-
-        # Context.register_handler("excavate", ExcavateHandler())
-        # Context.register_handler("look", LookHandler())
-
-        # Context.register_container("item", ItemContainer())
-        # Context.register_container("area", AreaContainer())
-        # Context.register_container("entity", EntityContainer())
-
-        # Context.state_machine.register("look", LookState)
-        # Context.state_machine.register("combat", CombatState)
-
-        # Context.get_container("item").register()
-        # Context.get_container("area").register()
-        # Context.get_container("entity").register()
 
         logger.info(f'Synced {len(synced_haven)} commands to guild Th Haven')
         logger.info(f'Synced {len(synced_besim)} commands to guild Ak Besim')

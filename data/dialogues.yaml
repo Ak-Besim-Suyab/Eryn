@@ -52,15 +52,7 @@ pet_succeed:
       「喵喵？喵喵喵！💞」
 
       > *咪被摸摸感到開心！咪總共被摸 {pets} 次了！*
-    portrait: "https://cdn.discordapp.com/attachments/1193049715638538283/1448679576833359924/d2cccbab47835a51d895f57ad863d4ab.jpg"
-    color: 2263842
-
-player_friendship_increased:
-  - title: ""
-    description: |
-      「喵喵？喵喵喵！💞」
-
-      > *咪被摸摸感到開心！咪總共被摸 {pets} 次了！*
+      > *你和 Eryn 的好感度上升 {affection}！*
     portrait: "https://cdn.discordapp.com/attachments/1193049715638538283/1448679576833359924/d2cccbab47835a51d895f57ad863d4ab.jpg"
     color: 2263842
 
