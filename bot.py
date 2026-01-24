@@ -42,7 +42,9 @@ async def on_ready():
         Context.register_manager("loot_table", loot_table_manager)
 
         item_manager = ItemManager()
+
         Context.register_manager("item", item_manager)
+
         item_manager.register_all()
 
         await bot.load_extension("cogs.member_join_event")

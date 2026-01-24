@@ -80,7 +80,7 @@ class InventoryActionPromptView(discord.ui.View):
 
     @discord.ui.button(label="釣魚", style=discord.ButtonStyle.primary)
     async def go_fish(self, interaction: discord.Interaction, button: discord.ui.Button):
-        from cogs.engines.fishing_engine import FishingEngine
+        from engines.fishing_engine import FishingEngine
 
         engine = FishingEngine()
         payload = engine.cast(interaction)

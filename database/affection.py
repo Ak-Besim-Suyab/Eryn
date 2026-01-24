@@ -30,4 +30,4 @@ class Affection(Model):
 
 def init_affection_database():
     with db:
-        db.create_tables([Affection])
+        db.create_tables([Affection], safe=True)

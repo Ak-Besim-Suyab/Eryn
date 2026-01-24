@@ -26,4 +26,4 @@ class Dummy(Model):
 
 def init_dummy_database():
     with db:
-        db.create_tables([Dummy])
+        db.create_tables([Dummy], safe=True)

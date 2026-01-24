@@ -176,4 +176,4 @@ class Character(Model):
 
 def init_character_database():
     with db:
-        db.create_tables([Character])
+        db.create_tables([Character], safe=True)
