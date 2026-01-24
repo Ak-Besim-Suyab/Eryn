@@ -1,31 +1,33 @@
 import discord
 
 from engines.fishing_engine import FishingEngine
+from ui.views.fishing_view import FishingView
+
 from context import Context
 
-
-class FishingAgainButton(discord.ui.Button):
-    def __init__(self):
-        super().__init__(label="再釣一次", style=discord.ButtonStyle.primary)
+class FishingSession:
+    def __init__(self, interaction):
+        self.interaction = interaction
         self.engine = FishingEngine()
+        self.view = FishingView(self)
+    
+    async def start(self):
+        payload = self.engine.cast(self.interaction)
 
-    async def callback(self, interaction: discord.Interaction):
-        payload = self.engine.cast(interaction)
-
-        new_view = type(self.view)()
+        view = FishingView(self)
 
         if not payload:
             embed = discord.Embed(
-                title=interaction.user.display_name,
+                title=self.interaction.user.display_name,
                 description="你在附近的水域垂釣，但什麼都沒釣到...",
                 color=discord.Color.blue()
             )
-            await interaction.response.send_message(embed=embed, view=new_view)
+            await self.interaction.response.send_message(embed=embed, view=view)
             return
-
+        
         item_manager = Context.get_manager("item")
         lines = []
-        
+
         for item in payload:
             # 判斷是物品還是寶箱
             if "item_id" in item:
@@ -35,9 +37,9 @@ class FishingAgainButton(discord.ui.Button):
                 lines.append(f"**{item_name}** × {item['quantity']}")
 
         embed = discord.Embed(
-            title=interaction.user.display_name,
-            description="你在附近的水域垂釣，好像有魚上鉤...",
-            color=discord.Color.blue()
+            title = self.interaction.user.display_name, 
+            description = "你在附近的水域垂釣，好像有魚上鉤...", 
+            color = discord.Color.blue()
         )
         embed.add_field(name="你獲得：", value="\n".join(lines), inline=False)
 
@@ -49,5 +51,5 @@ class FishingAgainButton(discord.ui.Button):
                     value=f"獲得額外 {currency} 金幣",
                     inline=False
                 )
-
-        await interaction.response.send_message(embed=embed, view=new_view)
+ 
+        await self.interaction.response.send_message(embed=embed, view=view)
