@@ -9,5 +9,4 @@ class FishingView(discord.ui.View):
 
     @discord.ui.button(label="繼續釣", style=discord.ButtonStyle.primary)
     async def repeat(self, interaction: discord.Interaction, button: discord.ui.Button):
-        await self.session.start()
-        await interaction.response.send_message(view=self)
+        await self.session.start(interaction)

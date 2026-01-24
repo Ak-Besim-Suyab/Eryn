@@ -13,7 +13,7 @@ class Fishing(commands.Cog):
     @app_commands.guilds(GUILD_TH_HAVEN, GUILD_AK_BESIM)
     @app_commands.command(name="釣魚", description="在你所處的地點釣魚")
     async def fishing(self, interaction: discord.Interaction):
-        await FishingSession(interaction).start()
+        await FishingSession().start(interaction)
 
 async def setup(bot):
     await bot.add_cog(Fishing(bot))

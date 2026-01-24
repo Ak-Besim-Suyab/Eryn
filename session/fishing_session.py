@@ -6,42 +6,48 @@ from ui.views.fishing_view import FishingView
 from context import Context
 
 class FishingSession:
-    def __init__(self, interaction):
-        self.interaction = interaction
+    def __init__(self):
         self.engine = FishingEngine()
         self.view = FishingView(self)
     
-    async def start(self):
-        payload = self.engine.cast(self.interaction)
-
-        view = FishingView(self)
+    async def start(self, interaction: discord.Interaction):
+        payload = self.engine.cast(interaction)
 
         if not payload:
-            embed = discord.Embed(
-                title=self.interaction.user.display_name,
-                description="你在附近的水域垂釣，但什麼都沒釣到...",
-                color=discord.Color.blue()
-            )
-            await self.interaction.response.send_message(embed=embed, view=view)
-            return
-        
+            await self._broadcast_fish_missed(interaction)
+        else:
+            await self._broadcast_fish_successed(interaction, payload)
+
+
+    async def _broadcast_fish_missed(self, interaction: discord.Interaction):
+        embed = discord.Embed(
+            title=interaction.user.display_name, 
+            description="你在附近的水域垂釣，但什麼都沒釣到...", 
+            color=discord.Color.blue()
+        )
+        await interaction.response.send_message(embed=embed, view=self.view)
+    
+    async def _broadcast_fish_successed(self, interaction: discord.Interaction, payload):
         item_manager = Context.get_manager("item")
         lines = []
 
         for item in payload:
-            # 判斷是物品還是寶箱
             if "item_id" in item:
-                # 普通物品
                 item_obj = item_manager.get_item(item["item_id"])
                 item_name = item_obj.name if item_obj else item["item_id"]
-                lines.append(f"**{item_name}** × {item['quantity']}")
+                lines.append(f"**{item_name}**× {item['quantity']}")
 
         embed = discord.Embed(
-            title = self.interaction.user.display_name, 
+            title = interaction.user.display_name, 
             description = "你在附近的水域垂釣，好像有魚上鉤...", 
-            color = discord.Color.blue()
+            color=discord.Color.blue()
         )
-        embed.add_field(name="你獲得：", value="\n".join(lines), inline=False)
+
+        embed.add_field(
+            name="你獲得：", 
+            value="\n".join(lines), 
+            inline=False
+        )
 
         for item in payload:
             if item.get("event_type") == "treasure":
@@ -51,5 +57,5 @@ class FishingSession:
                     value=f"獲得額外 {currency} 金幣",
                     inline=False
                 )
- 
-        await self.interaction.response.send_message(embed=embed, view=view)
+                
+        await interaction.response.send_message(embed=embed, view=self.view)
