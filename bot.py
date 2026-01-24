@@ -9,9 +9,17 @@ from dotenv import load_dotenv
 from context import Context
 from context import GUILD_TH_HAVEN, GUILD_AK_BESIM
 
-from file_loader import YamlLoader
+from utils.file_loader import YamlLoader, JsonLoader
 
-from registry.button_registry import button_manager
+# 在導入 registry 之前先初始化 loaders
+Context.register_yaml_loader(YamlLoader())
+Context.register_json_loader(JsonLoader())
+
+from registry.discord_button_registry import discord_button_manager
+from registry.discord_view_registry import discord_view_manager
+from registry.loot_table_registry import loot_table_manager
+
+from models.item import ItemManager
 
 from database import init_all_databases
 
@@ -26,6 +34,16 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 async def on_ready():
     try:
         init_all_databases()
+        
+        Context.register_bot(bot)
+
+        Context.register_manager("button", discord_button_manager)
+        Context.register_manager("view", discord_view_manager)
+        Context.register_manager("loot_table", loot_table_manager)
+
+        item_manager = ItemManager()
+        Context.register_manager("item", item_manager)
+        item_manager.register_all()
 
         await bot.load_extension("cogs.member_join_event")
 
@@ -38,15 +56,13 @@ async def on_ready():
         await bot.load_extension("cogs.fishing")
         await bot.load_extension("cogs.sell")
         await bot.load_extension("cogs.inventory")
-
+        await bot.load_extension("cogs.shop")
+        await bot.load_extension('cogs.role')
+        
         await bot.load_extension("cogs.rank")
 
         synced_haven = await bot.tree.sync(guild=GUILD_TH_HAVEN)
         synced_besim = await bot.tree.sync(guild=GUILD_AK_BESIM)
-
-        Context.register_bot(bot)
-        Context.register_yaml_loader(YamlLoader())
-        Context.register_manager("button", button_manager)
 
         logger.info(f'Synced {len(synced_haven)} commands to guild Th Haven')
         logger.info(f'Synced {len(synced_besim)} commands to guild Ak Besim')

@@ -1,18 +1,17 @@
+import json
 import discord
 from discord import app_commands
 from discord.ext import commands
 
 from database.inventory import Inventory
 from database.player import Player
-from utils.fishing_loot import FishingLootTable
 from utils.logger import logger
-from context import GUILD_TH_HAVEN, GUILD_AK_BESIM
+from context import GUILD_TH_HAVEN, GUILD_AK_BESIM, Context
 
 
 class Sell(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-        self.loot_table = FishingLootTable()
 
     @app_commands.guilds(GUILD_TH_HAVEN, GUILD_AK_BESIM)
     @app_commands.command(name="出售", description="出售背包內所有物品")
@@ -25,17 +24,23 @@ class Sell(commands.Cog):
             await interaction.response.send_message("❌ 背包是空的，沒有物品可以出售", ephemeral=True)
             return
         
+        item_manager = Context.get_manager("item")
         total_value = 0
         sold_items = []
         
         for item in items:
-            fish_info = self.loot_table.get_fish_info(item.item_key)
-            if fish_info:
-                item_value = fish_info['base_value'] * item.quantity
-                total_value += item_value
-                sold_items.append(f"**{fish_info['name']}** × {item.quantity} → {item_value} 金幣")
-                
-                Inventory.remove_item(player_id, item.item_key, item.quantity)
+            item_obj = item_manager.get_item(item.item_id)
+            if not item_obj:
+                continue
+            base_value = item_obj.base_value
+            if base_value <= 0:
+                continue
+
+            item_value = base_value * item.quantity
+            total_value += item_value
+            sold_items.append(f"**{item_obj.name}** × {item.quantity} → {item_value} 金幣")
+
+            Inventory.remove_item(player_id, item.item_id, item.quantity)
         
         if total_value == 0:
             await interaction.response.send_message("❌ 沒有可出售的物品", ephemeral=True)

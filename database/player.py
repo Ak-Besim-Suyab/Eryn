@@ -2,12 +2,11 @@ from peewee import *
 from database.generic import db
 
 class Player(Model):
-    id = IntegerField(primary_key = True)
-    display_name = TextField(default = "default")
+    uid = IntegerField(primary_key = True)
+    name = TextField(default = "Unknown")
+    currency = IntegerField(default = 0)
 
     card = TextField(null=True)
-
-    currency_yab = IntegerField(default = 0)
 
     use_pet = IntegerField(default = 0)
 
@@ -15,22 +14,22 @@ class Player(Model):
         database = db
 
     @classmethod
-    def get_or_create_player(cls, id: int):
-        player, created = cls.get_or_create(id=id)
+    def get_or_create_player(cls, uid: int):
+        player, created = cls.get_or_create(uid=uid)
         return player
 
     @classmethod
     def increase_currency(cls, id: int, amount:int = 0):
         with db.atomic():
             player = cls.get_or_create_player(id)
-            player.currency_yab += amount
+            player.currency += amount
             player.save()
 
     @classmethod
     def decrease_currency(cls, id: int, amount:int = 0):
         with db.atomic():
             player = cls.get_or_create_player(id)
-            player.currency_yab -= amount
+            player.currency -= amount
             player.save()
 
     @classmethod

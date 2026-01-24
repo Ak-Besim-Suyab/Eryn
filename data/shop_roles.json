@@ -1,0 +1,31 @@
+{
+    "roles": [
+        {
+            "item_id": "vampire_role",
+            "name": "緋紅",
+            "tag": "role",
+            "description": "神秘的吸血鬼身分組",
+            "role_id": 1460042229425901682,
+            "price": 500,
+            "emoji": "🧛"
+        },
+        {
+            "item_id": "abyss_role",
+            "name": "深淵",
+            "tag": "role",
+            "description": "來自深淵的力量",
+            "role_id": 1460037724437483614,
+            "price": 500,
+            "emoji": "🌑"
+        },
+        {
+            "item_id": "ash_role",
+            "name": "灰燼",
+            "tag": "role",
+            "description": "浴火重生的灰燼",
+            "role_id": 1383850290456956998,
+            "price": 500,
+            "emoji": "🔥"
+        }
+    ]
+}

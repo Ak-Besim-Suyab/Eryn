@@ -3,6 +3,9 @@
 # button style -------------------------------
 # discord.ButtonStyle.primary
 # discord.ButtonStyle.secondary
+# discord.ButtonStyle.success
+# discord.ButtonStyle.danger
+# discord.ButtonStyle.link
 # --------------------------------------------
 
 class BaseButton(discord.ui.Button):

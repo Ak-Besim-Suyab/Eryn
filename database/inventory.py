@@ -6,23 +6,23 @@ from database.player import Player
 class Inventory(Model):
     """玩家背包系統 - 儲存物品數量"""
     player = ForeignKeyField(Player, backref='inventory', on_delete='CASCADE')
-    item_key = TextField()  # 物品唯一標識符，例如 "salmon", "bass"
+    item_id = TextField()  # 物品唯一標識符，例如 "salmon", "bass"
     quantity = IntegerField(default=0)
 
     class Meta:
         database = db
         indexes = (
-            (('player', 'item_key'), True),  # 複合唯一鍵：每個玩家每種物品只有一筆記錄
+            (('player', 'item_id'), True),  # 複合唯一鍵：每個玩家每種物品只有一筆記錄
         )
     
     @classmethod
-    def add_item(cls, player_id: int, item_key: str, quantity: int = 1) -> int:
+    def add_item(cls, player_id: int, item_id: str, quantity: int = 1) -> int:
         """
         增加物品數量
         
         參數：
             player_id: 玩家 ID
-            item_key: 物品鍵值（如 "salmon"）
+            item_id: 物品鍵值（如 "salmon"）
             quantity: 增加的數量
         
         返回：更新後的總數量
@@ -30,7 +30,7 @@ class Inventory(Model):
         with db.atomic():
             inventory, created = cls.get_or_create(
                 player_id=player_id,
-                item_key=item_key,
+                item_id=item_id,
                 defaults={'quantity': 0}
             )
             inventory.quantity += quantity
@@ -38,27 +38,12 @@ class Inventory(Model):
             return inventory.quantity
     
     @classmethod
-    def remove_item(cls, player_id: int, item_key: str, quantity: int = 1) -> dict:
-        """
-        扣除物品數量
-        
-        參數：
-            player_id: 玩家 ID
-            item_key: 物品鍵值
-            quantity: 扣除的數量
-        
-        返回：dict，包含：
-            {
-                'success': True/False,
-                'remaining': 剩餘數量,
-                'message': 訊息
-            }
-        """
+    def remove_item(cls, player_id: int, item_id: str, quantity: int = 1) -> dict:
         with db.atomic():
             try:
                 inventory = cls.get(
                     cls.player_id == player_id,
-                    cls.item_key == item_key
+                    cls.item_id == item_id
                 )
                 
                 if inventory.quantity < quantity:
@@ -85,7 +70,7 @@ class Inventory(Model):
                 }
     
     @classmethod
-    def get_quantity(cls, player_id: int, item_key: str) -> int:
+    def get_quantity(cls, player_id: int, item_id: str) -> int:
         """
         查詢物品數量
         
@@ -94,7 +79,7 @@ class Inventory(Model):
         try:
             inventory = cls.get(
                 cls.player_id == player_id,
-                cls.item_key == item_key
+                cls.item_id == item_id
             )
             return inventory.quantity
         except cls.DoesNotExist:
@@ -115,4 +100,4 @@ class Inventory(Model):
 def init_inventory_database():
     """初始化背包系統數據庫表"""
     with db:
-        db.create_tables([Inventory])
+        db.create_tables([Inventory], safe=True)

@@ -1,0 +1,30 @@
+from managers.discord_button_manager import DiscordButtonManager
+
+from ui.buttons.base_button import BaseButton
+from ui.buttons.final_fantasy_dedicated_rule_button import FinalFantasyDedicatedRuleButton
+
+from ui.buttons.ffxiv_global_role_button import FFXIVGlobalRoleButton
+from ui.buttons.ffxiv_chinese_role_button import FFXIVChineseRoleButton
+from ui.buttons.ffxiv_global_spoiler_role_button import FFXIVGlobalSpoilerRoleButton
+from ui.buttons.ffxiv_chinese_spoiler_role_button import FFXIVChineseSpoilerRoleButton
+
+from ui.buttons.community_rule_button import CommunityRuleButton
+
+from ui.buttons.back_to_inventory_button import BackToInventoryButton
+
+from ui.buttons.fishing_again_button import FishingAgainButton
+
+discord_button_manager = DiscordButtonManager()
+
+# 註冊所有按鈕
+discord_button_manager.register("base_button", BaseButton)
+discord_button_manager.register("final_fantasy_dedicated_rule_button", FinalFantasyDedicatedRuleButton)
+discord_button_manager.register("ffxiv_global_role_button", FFXIVGlobalRoleButton)
+discord_button_manager.register("ffxiv_chinese_role_button", FFXIVChineseRoleButton)
+discord_button_manager.register("ffxiv_global_spoiler_role_button", FFXIVGlobalSpoilerRoleButton)
+discord_button_manager.register("ffxiv_chinese_spoiler_role_button", FFXIVChineseSpoilerRoleButton)
+discord_button_manager.register("community_rule_button", CommunityRuleButton)
+
+discord_button_manager.register("back_to_inventory_button", BackToInventoryButton)
+
+discord_button_manager.register("fishing_again_button", FishingAgainButton)

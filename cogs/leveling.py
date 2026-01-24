@@ -5,7 +5,7 @@ from database.character import Character
 from database.skill import Skill
 from utils.logger import logger
 
-BROADCAST_CHANNEL_ID = 1463071977848701051
+BROADCAST_CHANNEL_ID = 1450110904912969800
 
 MESSAGE_EXP = 5  # 每條消息獲得的經驗值
 MESSAGE_COOLDOWN = 30  # 冷卻時間（秒），防止洗頻
@@ -30,21 +30,21 @@ class Leveling(commands.Cog):
     
     @commands.Cog.listener()
     async def on_message(self, message: discord.Message):
-        # 跳過 bot 的訊息
+        # 跳過 bot 訊息
         if message.author.bot:
             return
         
-        # 跳過私訊（只在伺服器內給經驗）
+        # 跳過私訊
         if not message.guild:
             return
         
         user_id = message.author.id
         now = datetime.now().timestamp()
         
-        # 檢查冷卻時間：確保每個玩家每 MESSAGE_COOLDOWN 秒最多獲得一次經驗
+        # 檢查冷卻時間
         if user_id in self.message_cooldowns:
             if now - self.message_cooldowns[user_id] < MESSAGE_COOLDOWN:
-                return  # 仍在冷卻時間內，跳過
+                return
         
         # 更新冷卻時間戳
         self.message_cooldowns[user_id] = now
@@ -173,66 +173,13 @@ class Leveling(commands.Cog):
                 description=f"{user.mention} 的{system_name}等級 {level_text}",
                 color=discord.Color.gold()
             )
-            embed.set_thumbnail(url=user.avatar.url if user.avatar else None)
+            embed.set_thumbnail(url=user.display_avatar.url)
             
             # 發送訊息
             await broadcast_channel.send(embed=embed)
             
         except Exception as e:
             logger.error(f"[錯誤] 發送升級通知時出錯：{e}")
-    
-    # ========================
-    # 查詢指令
-    # ========================
-    
-    @commands.command(name="等級")
-    async def level_command(self, ctx, member: discord.Member = None):
-        """
-        查詢玩家的等級和經驗進度
-        
-        用法：
-            !等級          - 查詢自己的等級
-            !等級 @玩家    - 查詢指定玩家的等級
-        """
-        if member is None:
-            member = ctx.author
-        
-        try:
-            # 獲取角色等級進度
-            progress = Character.get_progress(member.id)
-            
-            # 計算進度條
-            bar_length = 20
-            filled = int(progress['progress'] / 5)
-            progress_bar = '█' * filled + '░' * (bar_length - filled)
-            
-            # 構建嵌入訊息
-            embed = discord.Embed(
-                title=f"{member.display_name} 的角色等級",
-                color=discord.Color.gold()
-            )
-            embed.add_field(
-                name="等級",
-                value=f"**Lv. {progress['level']}**",
-                inline=True
-            )
-            embed.add_field(
-                name="經驗值",
-                value=f"{progress['current_exp']}/{progress['required_exp']}",
-                inline=True
-            )
-            embed.add_field(
-                name="進度",
-                value=f"{progress_bar} {progress['progress']:.1f}%",
-                inline=False
-            )
-            embed.set_thumbnail(url=member.avatar.url if member.avatar else None)
-            
-            await ctx.send(embed=embed)
-            
-        except Exception as e:
-            await ctx.send(f"❌ 查詢失敗：{e}")
-            logger.error(f"[錯誤] 查詢等級時出錯：{e}")
     
     # ========================
     # 管理員指令

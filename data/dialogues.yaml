@@ -71,6 +71,28 @@ bonus_money_event:
       獲得 {currency} 金幣！
     color: 15712004
 
+fishing_result:
+  - title: "🎣 釣魚結果"
+    description: |
+      {catches}
+    field:
+      - name: "獲得經驗"
+        value: "+{total_exp} EXP"
+        inline: false
+    color: 3447003
+
+fishing_chest_reward:
+  - title: "💰 額外獎勵"
+    description: |
+      寶箱獲得 {chest_coins} 金幣！
+    color: 15712004
+
+fishing_level_up:
+  - title: "🎉 釣魚等級提升"
+    description: |
+      升級到 Lv.{new_level}！
+    color: 16776960
+
 #--- welcome messages in direct message (DM).
 welcome_message_direct_1:
   - title: ""
@@ -163,8 +185,51 @@ final_fantasy_dedicated_rule_3:
     author: ""
     portrait: ""
 
+#--- shop related messages
+shop_main_page:
+  - title: "🏪 商店"
+    description: |
+      
+    color: 3447003
+    field:
+      - name: "你可購買以下內容："
+        value: "身分組：購買並解鎖的身分組使用"
+        inline: false
+
+shop_role_header:
+  - title: "🎭 身分組商店"
+    description: |
+      想要購買哪些獨特身分組？
+    color: 8388736
+
 #-------
 sample:
+  - title: "set 1 embed title here."
+    description: |
+      set 1 embed description here.
+    color: 12345678
+    portrait: null # set null to not show it, set url string to show portrait.
+    field:
+      - name: "set 1 field name here."
+        value: |
+          set 1 field value here.
+        inline: false
+
+      - name: "set 2 field name here."
+        value: |
+          set 2 field value here.
+        inline: false
+
+  - title: "set 2 embed title here."
+    description: |
+      set 2 embed description here.
+    color: 12345678
+    portrait: "set url here"
+    field:
+      - name: "set 3 field name here."
+        value: |
+          set 3 field value here.
+        inline: false
   - title: "set 1 embed title here."
     description: |
       set 1 embed description here.

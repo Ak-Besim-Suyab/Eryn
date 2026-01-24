@@ -1,8 +1,44 @@
 {
-	"uid": "INTEGER PRIMARY KEY",
-	"mudstone": "INTEGER DEFAULT 0",
-	"slate": "INTEGER DEFAULT 0",
-	"metal_ore": "INTEGER DEFAULT 0",
-	"antique_silver_coin": "INTEGER DEFAULT 0",
-	"gold": "INTEGER DEFAULT 0"
+	"salmon": {
+		"name": "鮭魚",
+		"tags": [
+			"item"
+		],
+		"base_value": 5
+	},
+	"bass": {
+		"name": "鱸魚",
+		"tags": [
+			"item"
+		],
+		"base_value": 2
+	},
+	"cod": {
+		"name": "鱈魚",
+		"tags": [
+			"item"
+		],
+		"base_value": 3
+	},
+	"vampire_role": {
+		"name": "緋紅",
+		"tags": [
+			"role"
+		],
+		"base_value": 500
+	},
+	"abyss_role": {
+		"name": "深淵",
+		"tags": [
+			"role"
+		],
+		"base_value": 500
+	},
+	"ash_role": {
+		"name": "灰燼",
+		"tags": [
+			"role"
+		],
+		"base_value": 500
+	}
 }
