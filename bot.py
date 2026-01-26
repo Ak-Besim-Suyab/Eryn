@@ -56,6 +56,7 @@ async def on_ready():
         await bot.load_extension("cogs.call")
         await bot.load_extension("cogs.leveling")
         await bot.load_extension("cogs.fishing")
+        await bot.load_extension("cogs.level_system")
         await bot.load_extension("cogs.sell")
         await bot.load_extension("cogs.inventory")
         await bot.load_extension("cogs.shop")

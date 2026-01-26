@@ -3,17 +3,17 @@
         {
             "item_id": "salmon",
             "chance": 0.65,
-            "experience": 5
+            "experience": 22
         },
         {
             "item_id": "bass",
             "chance": 0.8,
-            "experience": 2
+            "experience": 11
         },
         {
             "item_id": "cod",
             "chance": 0.8,
-            "experience": 4
+            "experience": 18
         }
     ]
 }

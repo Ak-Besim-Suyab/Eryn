@@ -9,7 +9,7 @@ class Skill(Model):
 
     name = TextField()
     level = IntegerField(default = 1)
-    exp = IntegerField(default = 0)
+    experience = IntegerField(default = 0)
 
     class Meta:
         database = db
@@ -25,33 +25,28 @@ class Skill(Model):
         )
         return skill
     
+    # this method can return a payload dict for level up info.
     @classmethod
-    def add_experience(cls, player_id: int, amount: int, skill_name: str) -> dict:
+    def add_experience(cls, player_id: int, skill_name: str, amount: int) -> dict:
         skill = cls.get_or_create_skill(player_id, skill_name)
         
-        skill.exp += amount
+        skill.experience += amount
         
         old_level = skill.level
-        new_levels = []
         
-        # 使用 while 循環處理連續升級的情況
-        while skill.exp >= cls._get_required_exp(skill.level):
-            # 扣除本級所需的經驗
-            skill.exp -= cls._get_required_exp(skill.level)
-            # 升級
+        while skill.experience >= cls._get_required_exp(skill.level):
+            skill.experience -= cls._get_required_exp(skill.level)
             skill.level += 1
-            new_levels.append(skill.level)
         
-        # 保存到數據庫
         skill.save()
-        
-        # 返回結果字典
-        return {
+
+        level_payload = {
             'level': skill.level,
-            'exp': skill.exp,
-            'leveled_up': skill.level > old_level,
-            'new_levels': new_levels
+            'experience': skill.experience,
+            'is_level_up': skill.level > old_level,
         }
+
+        return level_payload
     
     @staticmethod
     def _get_required_exp(level: int) -> int:
@@ -61,12 +56,12 @@ class Skill(Model):
     def get_progress(cls, player_id: int, skill_type: str) -> dict:
         skill = cls.get_or_create_skill(player_id, skill_type)
         required = cls._get_required_exp(skill.level)
-        progress = (skill.exp / required) * 100 if required > 0 else 0
+        progress = (skill.experience / required) * 100 if required > 0 else 0
         
         return {
             'level': skill.level,
-            'current_exp': skill.exp,
-            'required_exp': required,
+            'current_experience': skill.experience,
+            'required_experience': required,
             'progress': progress
         }
     
