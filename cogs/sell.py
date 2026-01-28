@@ -32,13 +32,13 @@ class Sell(commands.Cog):
             item_obj = item_manager.get_item(item.item_id)
             if not item_obj:
                 continue
-            base_value = item_obj.base_value
+            base_value = item_obj.get("base_value", 0)
             if base_value <= 0:
                 continue
 
             item_value = base_value * item.quantity
             total_value += item_value
-            sold_items.append(f"**{item_obj.name}** × {item.quantity} → {item_value} 金幣")
+            sold_items.append(f"**{item_obj.get('display_name', item.item_id)}** × {item.quantity} → {item_value} 金幣")
 
             Inventory.remove_item(player_id, item.item_id, item.quantity)
         
@@ -46,7 +46,8 @@ class Sell(commands.Cog):
             await interaction.response.send_message("❌ 沒有可出售的物品", ephemeral=True)
             return
         
-        Player.increase_currency(player_id, total_value)
+        player = Player.get_or_create_player(player_id)
+        player.add_currency(total_value)
         
         embed = discord.Embed(
             title="💰 全部出售成功",

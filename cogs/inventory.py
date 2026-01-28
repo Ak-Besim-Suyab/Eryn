@@ -26,7 +26,7 @@ def build_inventory_embed(user: discord.abc.User) -> discord.Embed:
         color=discord.Color.green()
     )
 
-    embed.add_field(name="💰 金幣", value=f"{player.currency_yab} 枚", inline=False)
+    embed.add_field(name="💰 金幣", value=f"{player.currency} 枚", inline=False)
     levels_value = [
         f"角色：Lv.{character_progress['level']} ({character_progress['current_exp']}/{character_progress['required_exp']} EXP)",
         f"釣魚：Lv.{fishing_progress['level']} ({fishing_progress['current_exp']}/{fishing_progress['required_exp']} EXP)"
@@ -37,8 +37,8 @@ def build_inventory_embed(user: discord.abc.User) -> discord.Embed:
         items_text = []
         for item in items:
             item_obj = item_manager.get_item(item.item_id)
-            if item_obj and 'item' in item_obj.tags:
-                text = f"**{item_obj.name}** × {item.quantity}"
+            if item_obj and 'item' in item_obj.get("tags", []):
+                text = f"**{item_obj.get('display_name', item.item_id)}** × {item.quantity}"
                 items_text.append(text)
 
         if items_text:
@@ -98,7 +98,7 @@ class InventoryActionPromptView(discord.ui.View):
         
         for item in payload:
             item_obj = item_manager.get_item(item["item_id"])
-            item_name = item_obj.name if item_obj else item["item_id"]
+            item_name = item_obj.get("display_name") if item_obj else item["item_id"]
             lines.append(f"**{item_name}**× {item['quantity']}")
 
         embed = discord.Embed(

@@ -2,14 +2,20 @@ from peewee import *
 from database.generic import db
 
 class Player(Model):
-    id = IntegerField(primary_key=True)  # Discord 用戶 ID
+    # discord user id
+    id = IntegerField(primary_key=True)  
+
     display_name = TextField(default="Unknown")
-    currency_yab = IntegerField(default=0)  # 貨幣
+    currency_yab = IntegerField(default=0)
+
+    location = TextField(default="Unknown")
+    
     card = TextField(null=True)
     use_pet = IntegerField(default=0)
 
     class Meta:
         database = db
+
 
     @classmethod
     def get_or_create_player(cls, user_id: int):
@@ -17,30 +23,35 @@ class Player(Model):
         player, created = cls.get_or_create(id=user_id)
         return player
 
-    @classmethod
-    def increase_currency(cls, user_id: int, amount: int = 0):
-        """增加貨幣"""
-        with db.atomic():
-            player = cls.get_or_create_player(user_id)
-            player.currency_yab += amount
-            player.save()
+    @property
+    def currency(self) -> int:
+        """獲取玩家貨幣數量"""
+        return self.currency_yab
+    
+    def add_currency(self, amount: int) -> int:
+        """增加貨幣數量"""
+        self.currency_yab += amount
+        self.save()
+    
+    def remove_currency(self, amount: int) -> int:
+        """減少貨幣數量"""
+        self.currency_yab -= amount
+        self.save()
 
-    @classmethod
-    def decrease_currency(cls, user_id: int, amount: int = 0):
-        """減少貨幣"""
-        with db.atomic():
-            player = cls.get_or_create_player(user_id)
-            player.currency_yab -= amount
-            player.save()
-
-    @classmethod
-    def increase_use_pet(cls, user_id: int, amount: int = 0):
-        """增加撫摸次數"""
-        with db.atomic():
-            player = cls.get_or_create_player(user_id)
-            player.use_pet += amount
-            player.save()
-        return player.use_pet
+    def add_item(self, item_id: str, quantity: int = 1) -> int:
+        """增加物品數量"""
+        from database.inventory import Inventory  # 避免循環導入
+        return Inventory.add_item(self.id, item_id, quantity)
+    
+    def remove_item(self, item_id: str, quantity: int = 1) -> dict:
+        """減少物品數量"""
+        from database.inventory import Inventory  # 避免循環導入
+        return Inventory.remove_item(self.id, item_id, quantity)
+    
+    def has_item(self, item_id: str, required_quantity: int = 1) -> bool:
+        """檢查是否擁有足夠物品數量"""
+        from database.inventory import Inventory  # 避免循環導入
+        return Inventory.has_item(self.id, item_id, required_quantity)
 
 def init_player_database():
     """初始化玩家數據庫表"""

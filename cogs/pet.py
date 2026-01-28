@@ -104,7 +104,8 @@ async def pet(user_id: int, dummy_id: int = 0):
     if random.random() > 1 - base_bonus_chance:
         bonus_currency = random.randint(3, 7)
 
-        Player.increase_currency(user_id, bonus_currency)
+        player = Player.get_or_create_player(user_id)
+        player.add_currency(bonus_currency)
 
         result["bonus"] = "bonus_money_event"
         result["bonus_currency"] = bonus_currency

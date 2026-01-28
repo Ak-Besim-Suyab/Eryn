@@ -19,7 +19,7 @@ from registry.discord_button_registry import discord_button_manager
 from registry.discord_view_registry import discord_view_manager
 from registry.loot_table_registry import loot_table_manager
 
-from models.item import ItemManager
+from managers.item_manager import ItemManager
 
 from database import init_all_databases
 
@@ -44,8 +44,6 @@ async def on_ready():
         item_manager = ItemManager()
 
         Context.register_manager("item", item_manager)
-
-        item_manager.register_all()
 
         await bot.load_extension("cogs.member_join_event")
 

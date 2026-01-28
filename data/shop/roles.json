@@ -1,0 +1,24 @@
+{
+    "data": [
+        {
+            "item_id": "crimson_role",
+            "display_name": "緋紅",
+            "price": 500
+        },
+        {
+            "item_id": "abyss_role",
+            "display_name": "深淵",
+            "price": 500
+        },
+        {
+            "item_id": "ash_role",
+            "display_name": "灰燼",
+            "price": 500
+        },
+        {
+            "item_id": "neon_role",
+            "display_name": "霓虹",
+            "price": 500
+        }
+    ]
+}

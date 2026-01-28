@@ -1,0 +1,196 @@
+{
+    "rose_role": {
+        "display_name": "玫瑰 Rose",
+        "tags": [
+            "role"
+        ],
+        "role_id": 1292759960945688670,
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "mume_role": {
+        "display_name": "梅花 Mume",
+        "tags": [
+            "role"
+        ],
+        "role_id": 1319872078643462176,
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "salvia_role": {
+        "display_name": "鼠尾草 Salvia",
+        "tags": [
+            "role"
+        ],
+        "role_id": 1363053387029024991,
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "prism_role": {
+        "display_name": "稜彩 Prism",
+        "tags": [
+            "role"
+        ],
+        "role_id": 1343537682206167040,
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "aurora_role": {
+        "display_name": "極光 Aurora",
+        "tags": [
+            "role"
+        ],
+        "role_id": 1381565838691405976,
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "tropic_role": {
+        "display_name": "熱帶 Tropic",
+        "tags": [
+            "role"
+        ],
+        "role_id": 1381565223458177075,
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "twilight_role": {
+        "display_name": "薄暮 Twilight",
+        "tags": [
+            "role"
+        ],
+        "role_id": 1383846482691624960,
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "summer_role": {
+        "display_name": "夏 Summer",
+        "tags": [
+            "role"
+        ],
+        "role_id": 1383761356414783498,
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "autumn_role": {
+        "display_name": "秋 Autumn",
+        "tags": [
+            "role"
+        ],
+        "role_id": 1381796347132248157,
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "winter_role": {
+        "display_name": "冬 Winter",
+        "tags": [
+            "role"
+        ],
+        "role_id": 1381797327010009150,
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "dawn_role": {
+        "display_name": "曉 Dawn",
+        "tags": [
+            "role"
+        ],
+        "role_id": 1381794996818153584,
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "mist_role": {
+        "display_name": "霧 Mist",
+        "tags": [
+            "role"
+        ],
+        "role_id": 1383842197677543494,
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "afterglow_role": {
+        "display_name": "餘暉 Afterglow",
+        "tags": [
+            "role"
+        ],
+        "role_id": 1381249541180755989,
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "ash_role": {
+        "display_name": "灰燼 Ash",
+        "tags": [
+            "role"
+        ],
+        "role_id": 1383850290456956998,
+        "flags": {
+            "is_sellable": false
+        }
+    },
+    "niello_role": {
+        "display_name": "鎏金 Niello",
+        "tags": [
+            "role"
+        ],
+        "role_id": 1381663931088506880,
+        "flags": {
+            "is_sellable": false
+        }
+    },
+    "crimson_role": {
+        "display_name": "緋紅 Crimson",
+        "tags": [
+            "role"
+        ],
+        "role_id": 1460042229425901682,
+        "flags": {
+            "is_sellable": false
+        }
+    },
+    "abyss_role": {
+        "display_name": "深淵 Abyss",
+        "tags": [
+            "role"
+        ],
+        "emoji_id": "<:abyss:1466042977515343905>",
+        "role_id": 1460037724437483614,
+        "flags": {
+            "is_sellable": false
+        }
+    },
+    "neon_role": {
+        "display_name": "霓虹 Neon",
+        "tags": [
+            "role"
+        ],
+        "role_id": 1460044446975660132,
+        "flags": {
+            "is_sellable": false
+        }
+    }
+}

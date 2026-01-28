@@ -1,0 +1,26 @@
+{
+	"salmon": {
+		"display_name": "鮭魚",
+		"tags": ["item"],
+		"flags": {
+			"is_sellable": true
+		},
+		"base_value": 5
+	},
+	"bass": {
+		"display_name": "鱸魚",
+		"tags": ["item"],
+		"flags": {
+			"is_sellable": true
+		},
+		"base_value": 2
+	},
+	"cod": {
+		"display_name": "鱈魚",
+		"tags": ["item"],
+		"flags": {
+			"is_sellable": true
+		},
+		"base_value": 3
+	}
+}

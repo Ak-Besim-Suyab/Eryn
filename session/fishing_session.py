@@ -73,12 +73,13 @@ class FishingSession:
                 total_experience += item['experience']
 
             elif item.get("event_type") == "treasure":
-                Player.increase_currency(player_id, item['currency'])
+                player = Player.get_or_create_player(player_id)
+                player.add_currency(item['currency'])
 
             # 紀錄顯示內容
             if "item_id" in item:
                 item_obj = self.manager.get_item(item["item_id"])
-                item_name = item_obj.name if item_obj else item["item_id"]
+                item_name = item_obj.get("display_name") if item_obj else item["item_id"]
                 lines.append(f"**{item_name}**× {item['quantity']}")
 
         embed = discord.Embed(

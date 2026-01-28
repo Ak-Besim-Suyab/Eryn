@@ -1,188 +1,160 @@
-import json
 import discord
-from discord import app_commands
 from discord.ext import commands
+from discord import app_commands
 
-from database.inventory import Inventory
+from context import GUILD_TH_HAVEN, GUILD_AK_BESIM, Context
+from database.player import Player
 from utils.logger import logger
-from utils.file_loader import JsonLoader
-from context import GUILD_TH_HAVEN, GUILD_AK_BESIM
-
-
-json_loader = JsonLoader()
-
-
-class ShopRoleData:
-    def __init__(self, json_path: str = "data/shop_roles.json"):
-        self.roles = []
-        self._load_from_json(json_path)
-
-    def _load_from_json(self, json_path: str):
-        data = json_loader.load(json_path)
-        if data:
-            self.roles = data.get('roles', [])
-            logger.info(f"[身分組] 載入 {len(self.roles)} 個身分組")
-        else:
-            logger.error(f"[身分組] 找不到檔案或讀取失敗：{json_path}")
-            self.roles = []
-
-    def get_all_roles(self) -> list:
-        return self.roles
-
-    def get_role_by_id(self, role_id: int) -> dict:
-        for role in self.roles:
-            if role['role_id'] == role_id:
-                return role
-        return None
-
-
-class RoleSelectView(discord.ui.View):
-    def __init__(self, roles: list, member: discord.Member):
-        super().__init__(timeout=180)
-        self.roles = roles
-        self.member = member
-        self._add_role_buttons()
-
-    def _add_role_buttons(self):
-        if not self.roles:
-            no_role_button = discord.ui.Button(
-                label="沒有已購買的身分組",
-                style=discord.ButtonStyle.secondary,
-                disabled=True
-            )
-            self.add_item(no_role_button)
-            return
-
-        for role_data in self.roles:
-            button = discord.ui.Button(
-                label=role_data['name'],
-                style=discord.ButtonStyle.primary,
-                custom_id=f"apply_role_{role_data['role_id']}"
-            )
-            button.callback = self._make_apply_callback(role_data)
-            self.add_item(button)
-
-    def _make_apply_callback(self, role_data: dict):
-        async def callback(interaction: discord.Interaction):
-            if interaction.user.id != self.member.id:
-                await interaction.response.send_message("❌ 只能由本人操作此選單", ephemeral=True)
-                return
-
-            qty = Inventory.get_quantity(self.member.id, role_data['item_id'])
-            if qty < 1:
-                await interaction.response.send_message("❌ 你尚未購買此身分組", ephemeral=True)
-                return
-
-            guild_role = interaction.guild.get_role(role_data['role_id']) if interaction.guild else None
-            if not guild_role:
-                await interaction.response.send_message("❌ 找不到該身分組，請聯繫管理員", ephemeral=True)
-                logger.error(f"[身分組] 找不到身分組 ID: {role_data['role_id']}")
-                return
-
-            if guild_role in interaction.user.roles:
-                await interaction.response.send_message(
-                    f"ℹ️ 你已套用 **{role_data['name']}**",
-                    ephemeral=True
-                )
-                return
-
-            try:
-                await interaction.user.add_roles(guild_role, reason="玩家選擇套用身分組")
-            except discord.Forbidden:
-                await interaction.response.send_message("❌ 機器人沒有權限授予身分組", ephemeral=True)
-                logger.error(f"[身分組] 機器人無權限授予身分組 {role_data['role_id']}")
-                return
-            except Exception as e:
-                await interaction.response.send_message(f"❌ 套用失敗：{e}", ephemeral=True)
-                logger.error(f"[身分組] 套用身分組失敗：{e}")
-                return
-
-            embed = self.build_owned_role_embed(interaction.user)
-            await interaction.response.edit_message(embed=embed, view=self)
-            # 額外顯示該身分組的詳細 embed 含顏色
-            detail_embed = self.build_role_detail_embed(role_data, interaction.user)
-            await interaction.followup.send(embed=detail_embed, ephemeral=True)
-
-        return callback
-
-    def build_owned_role_embed(self, member: discord.Member) -> discord.Embed:
-        embed = discord.Embed(
-            title="🎭 套用身分組",
-            description="選擇你已購買的身分組進行套用。",
-            color=discord.Color.purple()
-        )
-
-        added_field = False
-        for role_data in self.roles:
-            guild_role = member.guild.get_role(role_data['role_id']) if member.guild else None
-            if not guild_role:
-                continue
-            status = "✅ 已套用" if guild_role in member.roles else "未套用"
-            # 使用身分組的顏色來顯示
-            role_color = guild_role.color if guild_role.color != discord.Color.default() else discord.Color.purple()
-            embed.add_field(
-                name=f"{role_data['name']}",
-                value=f"{role_data['description']}\n**{status}**",
-                inline=False
-            )
-            added_field = True
-
-        if not added_field:
-            embed.description = "你尚未購買任何身分組，請先使用 /商店 購買。"
-
-        return embed
-
-    def build_role_detail_embed(self, role_data: dict, member: discord.Member) -> discord.Embed:
-        """為單一身分組建立詳細 embed，使用該身分組的顏色"""
-        guild_role = member.guild.get_role(role_data['role_id']) if member.guild else None
-        role_color = guild_role.color if guild_role and guild_role.color != discord.Color.default() else discord.Color.purple()
-        
-        embed = discord.Embed(
-            title=f"已套用身分組",
-            description=role_data['description'],
-            color=role_color
-        )
-        
-        # 用提及格式直接顯示身分組的顏色和名稱
-        embed.add_field(
-            name="身分組",
-            value=f"<@&{role_data['role_id']}>",
-            inline=False
-        )
-        
-        return embed
-
 
 class Role(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
+        self.role_data = Context.get_manager("item").get_items_by_tag("role")
 
     @app_commands.guilds(GUILD_TH_HAVEN, GUILD_AK_BESIM)
-    @app_commands.command(name="身分組", description="選擇已購買的身分組並套用")
-    async def role_select_command(self, interaction: discord.Interaction):
-        shop_data = ShopRoleData()
-        member = interaction.user
+    @app_commands.command(name="身分組", description="檢視你可以存取的身分組")
+    async def role(self, interaction: discord.Interaction):
+        # 這個 player 應該要貫穿整個流程，因此後面都會傳入
+        player = Player.get_or_create_player(interaction.user.id)
 
-        available_roles = []
-        for role_data in shop_data.get_all_roles():
-            if Inventory.get_quantity(member.id, role_data['item_id']) < 1:
-                continue
-            if not interaction.guild:
-                continue
-            guild_role = interaction.guild.get_role(role_data['role_id'])
-            if not guild_role:
-                logger.error(f"[身分組] 找不到身分組 ID: {role_data['role_id']}")
-                continue
-            available_roles.append(role_data)
+        embed = discord.Embed(
+            title=interaction.user.display_name,
+            description="請選擇以下類別檢視身分組。",
+            color=discord.Color.green()
+        )
 
-        if not available_roles:
-            await interaction.response.send_message("❌ 你尚未購買任何身分組，請先使用 /商店 購買。", ephemeral=True)
+        view = RoleView(player, self.role_data)
+
+        await interaction.response.send_message(embed=embed, view=view)
+
+class RoleView(discord.ui.View):
+    def __init__(self, player, role_data):
+        super().__init__(timeout=None)
+        self.player = player
+        self.role_data = role_data
+
+    @discord.ui.button(label="顏色身分組", style=discord.ButtonStyle.primary)
+    async def color_roles(self, interaction: discord.Interaction, button: discord.ui.Button):
+
+        role_lines = ["目前所有可使用的顏色身分組："]
+        for role_id, role_data in self.role_data.items():
+            if role_data["flags"].get("is_default") or self.player.has_item(role_id):
+                role_lines.append(f"- {role_data.get('emoji_id', '')} <@&{role_data['role_id']}> - *可套用*")
+            else:
+                role_lines.append(f"- <@&{role_data['role_id']}> - *未擁有*")
+
+        embed = discord.Embed(
+            title=interaction.user.display_name,
+            description="\n".join(role_lines),
+            color=discord.Color.green()
+        )
+
+        embed.add_field(
+            name="你可以從選單選擇你想要套用的顏色身分組",
+            value="備註：顏色身分組同時只能套用 1 個",
+            inline=False
+        )
+
+        view = RoleSelectView()
+        view.add_item(RoleSelector(self.player))
+        await interaction.response.edit_message(embed=embed, view=view)
+
+    @discord.ui.button(label="圖案身分組", style=discord.ButtonStyle.primary)
+    async def pattern_roles(self, interaction: discord.Interaction, button: discord.ui.Button):
+        pass
+
+class RoleSelectView(discord.ui.View):
+    # 這只是個空 view，用來放 select
+    def __init__(self):
+        super().__init__(timeout=None)
+
+class RoleSelector(discord.ui.Select):
+    def __init__(self, player):
+        self.player = player
+        self.item_manager = Context.get_manager("item")
+        self.roles = self.item_manager.get_items_by_tag("role")
+
+        options = []
+        for role_name, role_data in self.roles.items():
+            # 如果該身分組是預設，或者玩家背包有該身分組道具，則標記為可套用
+            if role_data["flags"].get("is_default") or self.player.has_item(role_name):
+                options.append(
+                    discord.SelectOption(
+                        label=f"{role_data['display_name']}",
+                        description=f"選擇後會套用身分組",
+                        value=role_name
+                    )
+                )
+            else:
+                # 如果都沒有，則標記為無法套用
+                options.append(
+                    discord.SelectOption(
+                        label=f"{role_data['display_name']}",
+                        description=f"你尚未擁有或解鎖該身分組，無法套用",
+                        value=role_name
+                    )
+                )
+
+        super().__init__(
+            placeholder="選擇你想要使用的身分組",
+            min_values=1,
+            max_values=1,
+            options=options
+        )
+
+    async def callback(self, interaction: discord.Interaction):
+        selected_role = self.values[0]
+        role = self.roles.get(selected_role)
+        role_id = role["role_id"]
+        guild_role = interaction.guild.get_role(role_id)
+
+        if not guild_role:
+            await interaction.response.send_message("❌ 伺服器內找不到該身分組，請聯絡管理員處理。", ephemeral=True)
             return
+        
+        if guild_role in interaction.user.roles:
+            await interaction.response.send_message(f"❌ 你已經套用該身分組。", ephemeral=True)
+            return
+        
+        try:
+            # 檢查玩家是否有權限套用此身分組
+            is_default = role["flags"].get("is_default", False)
+            has_item = self.player.has_item(selected_role)
+            
+            if not is_default and not has_item:
+                await interaction.response.send_message("❌ 你尚未擁有該身分組，無法套用。", ephemeral=True)
+                return
+            
+            # 先加入新身分組
+            await interaction.user.add_roles(guild_role, reason="使用者透過指令自行套用身分組。")
+            
+            # 移除同分類的其他身分組（不移除剛加入的）
+            for other_role_name, other_role_data in self.roles.items():
+                other_role_id = other_role_data["role_id"]
+                # 跳過剛加入的身分組
+                if other_role_id == role_id:
+                    continue
+                
+                other_guild_role = interaction.guild.get_role(other_role_id)
+                if other_guild_role and other_guild_role in interaction.user.roles:
+                    await interaction.user.remove_roles(other_guild_role, reason="機器人系統：顏色身分組同時只能套用 1 個。")
+            
+            content = f"✅ 成功套用身分組 <@&{role_id}>！"
+            await interaction.response.send_message(
+                content = content, 
+                allowed_mentions=discord.AllowedMentions(roles=False), 
+                ephemeral=True
+            )
 
-        view = RoleSelectView(available_roles, member)
-        embed = view.build_owned_role_embed(member)
-        await interaction.response.send_message(embed=embed, view=view, ephemeral=True)
-
+        except discord.Forbidden:
+            # 沒有權限時拋出回應
+            await interaction.response.send_message("❌ 機器人沒有權限套用該身分組，請聯絡管理員檢查。", ephemeral=True)
+            logger.error("機器人沒有權限套用身分組")
+            return
+        except Exception as e:
+            # 其他錯誤時拋出回應
+            await interaction.response.send_message("❌ 套用身分組時發生錯誤，請聯絡管理員檢查。", ephemeral=True)
+            logger.error(f"套用身分組時發生錯誤：{e}")
 
 async def setup(bot):
     await bot.add_cog(Role(bot))
