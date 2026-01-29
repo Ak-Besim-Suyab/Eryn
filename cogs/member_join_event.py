@@ -3,7 +3,7 @@ import random
 import asyncio
 from discord.ext import commands
 
-from ui.selects.cat_select import CatSelectDirectMessageView, CatSelectGuildView
+from ui.components.cat_select import CatSelectDirectMessageView, CatSelectGuildView
 
 from utils.embed_builder import EmbedBuilder
 

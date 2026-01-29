@@ -2,7 +2,8 @@
     "rose_role": {
         "display_name": "玫瑰 Rose",
         "tags": [
-            "role"
+            "role",
+            "color_role"
         ],
         "role_id": 1292759960945688670,
         "flags": {
@@ -13,7 +14,8 @@
     "mume_role": {
         "display_name": "梅花 Mume",
         "tags": [
-            "role"
+            "role",
+            "color_role"
         ],
         "role_id": 1319872078643462176,
         "flags": {
@@ -24,7 +26,8 @@
     "salvia_role": {
         "display_name": "鼠尾草 Salvia",
         "tags": [
-            "role"
+            "role",
+            "color_role"
         ],
         "role_id": 1363053387029024991,
         "flags": {
@@ -35,7 +38,8 @@
     "prism_role": {
         "display_name": "稜彩 Prism",
         "tags": [
-            "role"
+            "role",
+            "color_role"
         ],
         "role_id": 1343537682206167040,
         "flags": {
@@ -46,7 +50,8 @@
     "aurora_role": {
         "display_name": "極光 Aurora",
         "tags": [
-            "role"
+            "role",
+            "color_role"
         ],
         "role_id": 1381565838691405976,
         "flags": {
@@ -57,7 +62,8 @@
     "tropic_role": {
         "display_name": "熱帶 Tropic",
         "tags": [
-            "role"
+            "role",
+            "color_role"
         ],
         "role_id": 1381565223458177075,
         "flags": {
@@ -68,7 +74,8 @@
     "twilight_role": {
         "display_name": "薄暮 Twilight",
         "tags": [
-            "role"
+            "role",
+            "color_role"
         ],
         "role_id": 1383846482691624960,
         "flags": {
@@ -79,7 +86,8 @@
     "summer_role": {
         "display_name": "夏 Summer",
         "tags": [
-            "role"
+            "role",
+            "color_role"
         ],
         "role_id": 1383761356414783498,
         "flags": {
@@ -90,7 +98,8 @@
     "autumn_role": {
         "display_name": "秋 Autumn",
         "tags": [
-            "role"
+            "role",
+            "color_role"
         ],
         "role_id": 1381796347132248157,
         "flags": {
@@ -101,7 +110,8 @@
     "winter_role": {
         "display_name": "冬 Winter",
         "tags": [
-            "role"
+            "role",
+            "color_role"
         ],
         "role_id": 1381797327010009150,
         "flags": {
@@ -112,7 +122,8 @@
     "dawn_role": {
         "display_name": "曉 Dawn",
         "tags": [
-            "role"
+            "role",
+            "color_role"
         ],
         "role_id": 1381794996818153584,
         "flags": {
@@ -123,7 +134,8 @@
     "mist_role": {
         "display_name": "霧 Mist",
         "tags": [
-            "role"
+            "role",
+            "color_role"
         ],
         "role_id": 1383842197677543494,
         "flags": {
@@ -134,7 +146,8 @@
     "afterglow_role": {
         "display_name": "餘暉 Afterglow",
         "tags": [
-            "role"
+            "role",
+            "color_role"
         ],
         "role_id": 1381249541180755989,
         "flags": {
@@ -145,7 +158,8 @@
     "ash_role": {
         "display_name": "灰燼 Ash",
         "tags": [
-            "role"
+            "role",
+            "color_role"
         ],
         "role_id": 1383850290456956998,
         "flags": {
@@ -155,7 +169,8 @@
     "niello_role": {
         "display_name": "鎏金 Niello",
         "tags": [
-            "role"
+            "role",
+            "color_role"
         ],
         "role_id": 1381663931088506880,
         "flags": {
@@ -165,7 +180,8 @@
     "crimson_role": {
         "display_name": "緋紅 Crimson",
         "tags": [
-            "role"
+            "role",
+            "color_role"
         ],
         "role_id": 1460042229425901682,
         "flags": {
@@ -175,9 +191,9 @@
     "abyss_role": {
         "display_name": "深淵 Abyss",
         "tags": [
-            "role"
+            "role",
+            "color_role"
         ],
-        "emoji_id": "<:abyss:1466042977515343905>",
         "role_id": 1460037724437483614,
         "flags": {
             "is_sellable": false
@@ -186,7 +202,8 @@
     "neon_role": {
         "display_name": "霓虹 Neon",
         "tags": [
-            "role"
+            "role",
+            "color_role"
         ],
         "role_id": 1460044446975660132,
         "flags": {

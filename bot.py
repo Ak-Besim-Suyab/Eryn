@@ -16,7 +16,6 @@ Context.register_yaml_loader(YamlLoader())
 Context.register_json_loader(JsonLoader())
 
 from registry.discord_button_registry import discord_button_manager
-from registry.discord_view_registry import discord_view_manager
 from registry.loot_table_registry import loot_table_manager
 
 from managers.item_manager import ItemManager
@@ -38,7 +37,6 @@ async def on_ready():
         Context.register_bot(bot)
 
         Context.register_manager("button", discord_button_manager)
-        Context.register_manager("view", discord_view_manager)
         Context.register_manager("loot_table", loot_table_manager)
 
         item_manager = ItemManager()
