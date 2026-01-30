@@ -5,6 +5,6 @@ class RoleOptionView(discord.ui.View):
         super().__init__(timeout=None)
         self.session = session
 
-    @discord.ui.button(label="返回", style=discord.ButtonStyle.secondary)
+    @discord.ui.button(label="返回", style=discord.ButtonStyle.secondary, row=1)
     async def back(self, interaction: discord.Interaction, button: discord.ui.Button):
         await self.session.start(interaction)

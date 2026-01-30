@@ -1,0 +1,240 @@
+{
+    "potato_role": {
+        "display_name": "馬鈴薯",
+        "tags": [
+            "role",
+            "icon_role",
+            "minecraft"
+        ],
+        "role_id": 1343541811163041802,
+        "emoji_id": "<:minecraft_potato:1349621604744691763>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "baked_potato_role": {
+        "display_name": "烤馬鈴薯",
+        "tags": [
+            "role",
+            "icon_role",
+            "minecraft"
+        ],
+        "role_id": 1343544939136684042,
+        "emoji_id": "<:minecraft_baked_potato:1349621501002780672>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "poison_potato_role": {
+        "display_name": "毒馬鈴薯",
+        "tags": [
+            "role",
+            "icon_role",
+            "minecraft"
+        ],
+        "role_id": 1349628371855736845,
+        "emoji_id": "<:minecraft_poison_potato:1349621628106965035>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "sprout_role": {
+        "display_name": "豆芽",
+        "tags": [
+            "role",
+            "icon_role",
+            "ffxiv"
+        ],
+        "role_id": 1319873065080852490,
+        "emoji_id": "<:ffxiv_sprout:1319876892190572584>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "mentor_role": {
+        "display_name": "導師",
+        "tags": [
+            "role",
+            "icon_role",
+            "ffxiv"
+        ],
+        "role_id": 1319857508612964383,
+        "emoji_id": "<:ffxiv_mentor:1319876855398006804>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "online_role": {
+        "display_name": "在線",
+        "tags": [
+            "role",
+            "icon_role",
+            "ffxiv"
+        ],
+        "role_id": 1319857484692717668,
+        "emoji_id": "<:ffxiv_online:1319864547498000415>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "offline_role": {
+        "display_name": "離線",
+        "tags": [
+            "role",
+            "icon_role",
+            "ffxiv"
+        ],
+        "role_id": 1319740537288392885,
+        "emoji_id": "<:ffxiv_offline:1319864562853482506>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "afk_role": {
+        "display_name": "暫離",
+        "tags": [
+            "role",
+            "icon_role",
+            "ffxiv"
+        ],
+        "role_id": 1319857510798200864,
+        "emoji_id": "<:ffxiv_afk:1319864588124160010>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "brink_to_death_role": {
+        "display_name": "瀕死",
+        "tags": [
+            "role",
+            "icon_role",
+            "ffxiv"
+        ],
+        "role_id": 1345440788024393898,
+        "emoji_id": "<:ffxiv_brink_to_death:1466702854785073254>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "doom_role": {
+        "display_name": "死宣",
+        "tags": [
+            "role",
+            "icon_role",
+            "ffxiv"
+        ],
+        "role_id": 1260669346133442654,
+        "emoji_id": "<:ffxiv_doom:1466702753131921550>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "damage_down_role": {
+        "display_name": "降傷",
+        "tags": [
+            "role",
+            "icon_role",
+            "ffxiv"
+        ],
+        "role_id": 1345454749020852256,
+        "emoji_id": "<:ffxiv_damage_down:1466702907700281415>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "heave_role": {
+        "display_name": "加重",
+        "tags": [
+            "role",
+            "icon_role",
+            "ffxiv"
+        ],
+        "role_id": 1345441324597383189,
+        "emoji_id": "<:ffxiv_heave:1466702970723893320>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "vulnerability_up_role": {
+        "display_name": "易傷",
+        "tags": [
+            "role",
+            "icon_role",
+            "ffxiv"
+        ],
+        "role_id": 1319873027890090015,
+        "emoji_id": "<:ffxiv_vulnerability_up:1466699514793693184>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "squirrel_role": {
+        "display_name": "松鼠",
+        "tags": [
+            "role",
+            "icon_role",
+            "ffxiv"
+        ],
+        "role_id": 1345265136855810138,
+        "emoji_id": "<:ffxiv_squirrel_pet:1466703177486434365>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "inugami_role": {
+        "display_name": "犬神",
+        "tags": [
+            "role",
+            "icon_role",
+            "ffxiv"
+        ],
+        "role_id": 1345440783565721714,
+        "emoji_id": "<:ffxiv_inugami_pet:1466703242854662240>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "graha_tia_role": {
+        "display_name": "紅貓",
+        "tags": [
+            "role",
+            "icon_role",
+            "ffxiv"
+        ],
+        "role_id": 1252528747538681856,
+        "emoji_id": "<:ffxiv_tia_pet:1466690792075694163>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "greystone_role": {
+        "display_name": "灰石",
+        "tags": [
+            "role",
+            "icon_role",
+            "ffxiv"
+        ],
+        "role_id": 1273222792258785281,
+        "emoji_id": "<:ffxiv_greystone_drink:1466694488826319064>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    }
+}

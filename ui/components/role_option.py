@@ -3,9 +3,10 @@ import discord
 from utils.logger import logger
 
 class RoleOption(discord.ui.Select):
-    def __init__(self, session, player, role_data):
+    def __init__(self, session, player, role_tag, role_data):
         self.session = session
         self.player = player
+        self.role_tag = role_tag
         self.role_data = role_data
 
         options = []
@@ -13,25 +14,19 @@ class RoleOption(discord.ui.Select):
             flags = data.get("flags", {})
             display_name = data.get("display_name", role_id)
 
-            # 如果該身分組是預設，或者玩家背包有該身分組道具，則標記為可套用
+            # 如果該身分組是 default, 或玩家背包有該身分組道具, 則標記為可套用; 如果都沒有, 則標記為無法套用
             if flags.get("is_default") or self.player.has_item(role_id):
-                options.append(
-                    discord.SelectOption(
-                        label=f"{display_name}",
-                        description=f"選擇後會套用身分組",
-                        value=role_id
-                    )
-                )
+                description = "選擇後會套用身分組"
             else:
-                # 如果都沒有，則標記為無法套用
-                options.append(
-                    discord.SelectOption(
-                        label=f"{display_name}",
-                        description=f"你尚未擁有或解鎖該身分組，無法套用",
-                        value=role_id
-                    )
-                )
+                description = "你尚未擁有該身分組，無法套用"
 
+            options.append(
+                discord.SelectOption(
+                    label=f"{display_name}",
+                    description=description,
+                    value=role_id
+                )
+            )
         super().__init__(
             placeholder="選擇你想要套用的身分組",
             min_values=1,
@@ -77,15 +72,16 @@ class RoleOption(discord.ui.Select):
             await interaction.user.add_roles(guild_role, reason="使用者透過指令自行套用身分組。")
             
             # 移除同分類的其他身分組（不移除剛加入的）
-            for other_role_id, other_role_data in self.role_data.items():
-                other_role_id = other_role_data["role_id"]
+            removed_roles = self.session.manager.get_items_by_tag([self.role_tag])
+            for removed_role_id, removed_role_data in removed_roles.items():
+                removed_role_id = removed_role_data["role_id"]
                 # 跳過剛加入的身分組
-                if other_role_id == role_id:
+                if removed_role_id == role_id:
                     continue
                 
-                other_guild_role = interaction.guild.get_role(other_role_id)
+                other_guild_role = interaction.guild.get_role(removed_role_id)
                 if other_guild_role and other_guild_role in interaction.user.roles:
-                    await interaction.user.remove_roles(other_guild_role, reason="機器人系統：顏色身分組同時只能套用 1 個。")
+                    await interaction.user.remove_roles(other_guild_role, reason="機器人系統：相同分類的身分組同時只能套用 1 個。")
             
             content = f"✅ 成功套用身分組 <@&{role_id}>！"
             await interaction.response.send_message(

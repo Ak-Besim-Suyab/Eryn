@@ -52,10 +52,17 @@ class ItemManager:
         # 透過 item_id 取得物品資料
         return self._items.get(item_id)
     
-    def get_items_by_tag(self, tag: str) -> list:
+    def get_items_by_tag(self, tags: list[str] | str) -> dict:
         # 根據標籤取得物品列表
+        if isinstance(tags, str):
+            tags = [tags]
+
+        tags = set(tags)
+        
         items = {}
         for item_name, item_data in self._items.items():
-            if tag in item_data.get("tags", []):
+            item_tags = set(item_data.get("tags", []))
+            if tags.issubset(item_tags):
                 items[item_name] = item_data
+
         return items
