@@ -1,45 +1,10 @@
 {
-    "rose_role": {
-        "display_name": "玫瑰 Rose",
-        "tags": [
-            "role",
-            "color_role"
-        ],
-        "role_id": 1292759960945688670,
-        "flags": {
-            "is_sellable": false,
-            "is_default": true
-        }
-    },
-    "mume_role": {
-        "display_name": "梅花 Mume",
-        "tags": [
-            "role",
-            "color_role"
-        ],
-        "role_id": 1319872078643462176,
-        "flags": {
-            "is_sellable": false,
-            "is_default": true
-        }
-    },
-    "salvia_role": {
-        "display_name": "鼠尾草 Salvia",
-        "tags": [
-            "role",
-            "color_role"
-        ],
-        "role_id": 1363053387029024991,
-        "flags": {
-            "is_sellable": false,
-            "is_default": true
-        }
-    },
     "prism_role": {
         "display_name": "稜彩 Prism",
         "tags": [
             "role",
-            "color_role"
+            "color_role",
+            "gradient"
         ],
         "role_id": 1343537682206167040,
         "flags": {
@@ -51,7 +16,8 @@
         "display_name": "極光 Aurora",
         "tags": [
             "role",
-            "color_role"
+            "color_role",
+            "gradient"
         ],
         "role_id": 1381565838691405976,
         "flags": {
@@ -63,7 +29,8 @@
         "display_name": "熱帶 Tropic",
         "tags": [
             "role",
-            "color_role"
+            "color_role",
+            "gradient"
         ],
         "role_id": 1381565223458177075,
         "flags": {
@@ -75,7 +42,8 @@
         "display_name": "薄暮 Twilight",
         "tags": [
             "role",
-            "color_role"
+            "color_role",
+            "gradient"
         ],
         "role_id": 1383846482691624960,
         "flags": {
@@ -87,7 +55,8 @@
         "display_name": "夏 Summer",
         "tags": [
             "role",
-            "color_role"
+            "color_role",
+            "gradient"
         ],
         "role_id": 1383761356414783498,
         "flags": {
@@ -99,7 +68,8 @@
         "display_name": "秋 Autumn",
         "tags": [
             "role",
-            "color_role"
+            "color_role",
+            "gradient"
         ],
         "role_id": 1381796347132248157,
         "flags": {
@@ -111,7 +81,8 @@
         "display_name": "冬 Winter",
         "tags": [
             "role",
-            "color_role"
+            "color_role",
+            "gradient"
         ],
         "role_id": 1381797327010009150,
         "flags": {
@@ -123,7 +94,8 @@
         "display_name": "曉 Dawn",
         "tags": [
             "role",
-            "color_role"
+            "color_role",
+            "gradient"
         ],
         "role_id": 1381794996818153584,
         "flags": {
@@ -135,7 +107,8 @@
         "display_name": "霧 Mist",
         "tags": [
             "role",
-            "color_role"
+            "color_role",
+            "gradient"
         ],
         "role_id": 1383842197677543494,
         "flags": {
@@ -147,7 +120,8 @@
         "display_name": "餘暉 Afterglow",
         "tags": [
             "role",
-            "color_role"
+            "color_role",
+            "gradient"
         ],
         "role_id": 1381249541180755989,
         "flags": {
@@ -159,7 +133,8 @@
         "display_name": "灰燼 Ash",
         "tags": [
             "role",
-            "color_role"
+            "color_role",
+            "gradient"
         ],
         "role_id": 1383850290456956998,
         "flags": {
@@ -170,7 +145,8 @@
         "display_name": "鎏金 Niello",
         "tags": [
             "role",
-            "color_role"
+            "color_role",
+            "gradient"
         ],
         "role_id": 1381663931088506880,
         "flags": {
@@ -182,7 +158,8 @@
         "display_name": "緋紅 Crimson",
         "tags": [
             "role",
-            "color_role"
+            "color_role",
+            "gradient"
         ],
         "role_id": 1460042229425901682,
         "flags": {
@@ -193,7 +170,8 @@
         "display_name": "深淵 Abyss",
         "tags": [
             "role",
-            "color_role"
+            "color_role",
+            "gradient"
         ],
         "role_id": 1460037724437483614,
         "flags": {
@@ -204,7 +182,8 @@
         "display_name": "霓虹 Neon",
         "tags": [
             "role",
-            "color_role"
+            "color_role",
+            "gradient"
         ],
         "role_id": 1460044446975660132,
         "flags": {

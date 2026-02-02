@@ -1,46 +1,4 @@
 {
-    "potato_role": {
-        "display_name": "馬鈴薯",
-        "tags": [
-            "role",
-            "icon_role",
-            "minecraft"
-        ],
-        "role_id": 1343541811163041802,
-        "emoji_id": "<:minecraft_potato:1349621604744691763>",
-        "flags": {
-            "is_sellable": false,
-            "is_default": true
-        }
-    },
-    "baked_potato_role": {
-        "display_name": "烤馬鈴薯",
-        "tags": [
-            "role",
-            "icon_role",
-            "minecraft"
-        ],
-        "role_id": 1343544939136684042,
-        "emoji_id": "<:minecraft_baked_potato:1349621501002780672>",
-        "flags": {
-            "is_sellable": false,
-            "is_default": true
-        }
-    },
-    "poison_potato_role": {
-        "display_name": "毒馬鈴薯",
-        "tags": [
-            "role",
-            "icon_role",
-            "minecraft"
-        ],
-        "role_id": 1349628371855736845,
-        "emoji_id": "<:minecraft_poison_potato:1349621628106965035>",
-        "flags": {
-            "is_sellable": false,
-            "is_default": true
-        }
-    },
     "sprout_role": {
         "display_name": "豆芽",
         "tags": [

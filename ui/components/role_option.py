@@ -1,5 +1,7 @@
 import discord
 
+from context import Context
+
 from utils.logger import logger
 
 class RoleOption(discord.ui.Select):
@@ -36,7 +38,7 @@ class RoleOption(discord.ui.Select):
 
     async def callback(self, interaction: discord.Interaction):
         selected_role = self.values[0]
-        data = self.role_data.get(selected_role)
+        data = self.role_data.get(selected_role) # 這裡從得到的身分組使用 string id 取出資料
         if not data:
             await interaction.response.send_message("❌ 找不到該身分組資料，請聯絡管理員處理。", ephemeral=True)
             logger.error(f"找不到身分組資料：{selected_role}")
@@ -72,7 +74,7 @@ class RoleOption(discord.ui.Select):
             await interaction.user.add_roles(guild_role, reason="使用者透過指令自行套用身分組。")
             
             # 移除同分類的其他身分組（不移除剛加入的）
-            removed_roles = self.session.manager.get_items_by_tag([self.role_tag])
+            removed_roles = Context.get_manager("item").get_items_by_tag([self.role_tag])
             for removed_role_id, removed_role_data in removed_roles.items():
                 removed_role_id = removed_role_data["role_id"]
                 # 跳過剛加入的身分組
@@ -81,11 +83,10 @@ class RoleOption(discord.ui.Select):
                 
                 other_guild_role = interaction.guild.get_role(removed_role_id)
                 if other_guild_role and other_guild_role in interaction.user.roles:
-                    await interaction.user.remove_roles(other_guild_role, reason="機器人系統：相同分類的身分組同時只能套用 1 個。")
+                    await interaction.user.remove_roles(other_guild_role, reason="相同分類的身分組同時只能套用 1 個。")
             
-            content = f"✅ 成功套用身分組 <@&{role_id}>！"
             await interaction.response.send_message(
-                content = content, 
+                content = f"✅ 成功套用身分組 <@&{role_id}>！", 
                 allowed_mentions=discord.AllowedMentions(roles=False), 
                 ephemeral=True
             )

@@ -1,0 +1,128 @@
+{
+    "fox_role": {
+        "display_name": "狐寶",
+        "tags": [
+            "role",
+            "icon_role",
+            "plurk"
+        ],
+        "role_id": 1192692235976851577,
+        "emoji_id": "<:fox_1_baby_1:1267438830546583585>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "black_fox_role": {
+        "display_name": "茄子",
+        "tags": [
+            "role",
+            "icon_role",
+            "plurk"
+        ],
+        "role_id": 1211563612959670312,
+        "emoji_id": "<:fox_3_baby:1267438902738948096>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "white_fox_role": {
+        "display_name": "苦瓜",
+        "tags": [
+            "role",
+            "icon_role",
+            "plurk"
+        ],
+        "role_id": 1192691809021857792,
+        "emoji_id": "<:fox_2_baby_2:1267438882002178058>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "wolf_role": {
+        "display_name": "狼寶",
+        "tags": [
+            "role",
+            "icon_role",
+            "plurk"
+        ],
+        "role_id": 1260143901675880501,
+        "emoji_id": "<:fox_4_baby:1267438914692714517>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "leopard_role": {
+        "display_name": "卡豹",
+        "tags": [
+            "role",
+            "icon_role",
+            "plurk"
+        ],
+        "role_id": 1192756137796313218,
+        "emoji_id": "<:leopard_pray:1197744163664437249>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "shark_role": {
+        "display_name": "鯊鯊",
+        "tags": [
+            "role",
+            "icon_role",
+            "plurk"
+        ],
+        "role_id": 1197743128833167380,
+        "emoji_id": "<:shark_pet:1467438417406070948>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "pink_frog_role": {
+        "display_name": "粉蛙",
+        "tags": [
+            "role",
+            "icon_role",
+            "plurk"
+        ],
+        "role_id": 1197764559751090226,
+        "emoji_id": "<:pink_frog_hope:1467435693478248685>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "pome_role": {
+        "display_name": "狗勾",
+        "tags": [
+            "role",
+            "icon_role",
+            "plurk"
+        ],
+        "role_id": 1260144057859051540,
+        "emoji_id": "<:pome_angry:1267485736039612447>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "crocodile_role": {
+        "display_name": "鱷魚",
+        "tags": [
+            "role",
+            "icon_role",
+            "plurk"
+        ],
+        "role_id": 1223842611719045220,
+        "emoji_id": "<:crocdile_2:1260135154421338112>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    }
+}

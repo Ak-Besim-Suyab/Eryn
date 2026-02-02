@@ -1,0 +1,128 @@
+{
+    "rose_role": {
+        "display_name": "玫瑰 Rose",
+        "tags": [
+            "role",
+            "color_role",
+            "flower"
+        ],
+        "role_id": 1292759960945688670,
+        "emoji_id": "<:rose:1466951205522768119>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "mume_role": {
+        "display_name": "梅花 Mume",
+        "tags": [
+            "role",
+            "color_role",
+            "flower"
+        ],
+        "role_id": 1319872078643462176,
+        "emoji_id": "<:mume:1466951285516538064>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "sakura_role": {
+        "display_name": "櫻花 Sakura",
+        "tags": [
+            "role",
+            "color_role",
+            "flower"
+        ],
+        "role_id": 1292762502584729704,
+        "emoji_id": "<:sakura:1466961210984632501>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "hydrangea_role": {
+        "display_name": "繡球花 Hydrangea",
+        "tags": [
+            "role",
+            "color_role",
+            "flower"
+        ],
+        "role_id": 1292761520782180374,
+        "emoji_id": "<:hydrangea:1467100471788441681>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "lilac_role": {
+        "display_name": "紫丁香 Lilac",
+        "tags": [
+            "role",
+            "color_role",
+            "flower"
+        ],
+        "role_id": 1363066807895986186,
+        "emoji_id": "<:lilac:1466968233969188915>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "clary_sage_role": {
+        "display_name": "鼠尾草 Clary Sage",
+        "tags": [
+            "role",
+            "color_role",
+            "flower"
+        ],
+        "role_id": 1363053387029024991,
+        "emoji_id": "<:clary_sage:1466951955808129164>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "forget_me_not_role": {
+        "display_name": "勿忘草 Forget Me Not",
+        "tags": [
+            "role",
+            "color_role",
+            "flower"
+        ],
+        "role_id": 1292756933438083172,
+        "emoji_id": "<:forget_me_not:1466952365918654738>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "rudbeckia_role": {
+        "display_name": "金光菊 Rudbeckia",
+        "tags": [
+            "role",
+            "color_role",
+            "flower"
+        ],
+        "role_id": 1292764641138839643,
+        "emoji_id": "<:rudbeckia:1467093280071094333>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "clover_role": {
+        "display_name": "幸運草 Clover",
+        "tags": [
+            "role",
+            "color_role",
+            "flower"
+        ],
+        "role_id": 1260109218011283527,
+        "emoji_id": "<:clover:1467266508941168800>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    }
+}

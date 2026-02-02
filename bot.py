@@ -43,8 +43,6 @@ async def on_ready():
 
         Context.register_manager("item", item_manager)
 
-        await bot.load_extension("cogs.member_join_event")
-
         await bot.load_extension("cogs.record")
 
         await bot.load_extension("cogs.pet")
@@ -59,6 +57,9 @@ async def on_ready():
         await bot.load_extension('cogs.role')
         
         await bot.load_extension("cogs.rank")
+
+        await bot.load_extension("cogs.listeners.join")
+        await bot.load_extension("cogs.listeners.message")
 
         synced_haven = await bot.tree.sync(guild=GUILD_TH_HAVEN)
         synced_besim = await bot.tree.sync(guild=GUILD_AK_BESIM)

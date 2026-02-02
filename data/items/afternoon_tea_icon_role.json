@@ -1,0 +1,198 @@
+{
+    "fruit_tart_role": {
+        "display_name": "水果塔",
+        "tags": [
+            "role",
+            "icon_role",
+            "afternoon_tea"
+        ],
+        "role_id": 1361779266622324828,
+        "emoji_id": "<:fruit_tart:1362351545869406339>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "berry_pie_role": {
+        "display_name": "莓果派",
+        "tags": [
+            "role",
+            "icon_role",
+            "afternoon_tea"
+        ],
+        "role_id": 1362105810683035778,
+        "emoji_id": "<:berry_pie:1362351568229240985>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "lemon_pie_role": {
+        "display_name": "檸檬派",
+        "tags": [
+            "role",
+            "icon_role",
+            "afternoon_tea"
+        ],
+        "role_id": 1362700766824894484,
+        "emoji_id": "<:lemon_pie:1362700044993822933>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "buttered_toast_role": {
+        "display_name": "奶油吐司",
+        "tags": [
+            "role",
+            "icon_role",
+            "afternoon_tea"
+        ],
+        "role_id": 1362106414830719199,
+        "emoji_id": "<:buttered_toast:1362351586457681970>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "mont_blanc_role": {
+        "display_name": "蒙布朗",
+        "tags": [
+            "role",
+            "icon_role",
+            "afternoon_tea"
+        ],
+        "role_id": 1362349737767993445,
+        "emoji_id": "<:mont_blanc:1362700462406762639>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "cream_roll_role": {
+        "display_name": "生乳捲",
+        "tags": [
+            "role",
+            "icon_role",
+            "afternoon_tea"
+        ],
+        "role_id": 1362213854112907336,
+        "emoji_id": "<:cream_roll:1362351352847532173>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "matcha_cream_roll_role": {
+        "display_name": "抹茶生乳捲",
+        "tags": [
+            "role",
+            "icon_role",
+            "afternoon_tea"
+        ],
+        "role_id": 1362349497497288805,
+        "emoji_id": "<:matcha_cream_roll:1362351421005238402>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "strawberry_roll_role": {
+        "display_name": "草莓蛋糕捲",
+        "tags": [
+            "role",
+            "icon_role",
+            "afternoon_tea"
+        ],
+        "role_id": 1362480571850297514,
+        "emoji_id": "<:strawberry_roll:1362709808322445312>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "chocolate_cake_role": {
+        "display_name": "巧克力蛋糕",
+        "tags": [
+            "role",
+            "icon_role",
+            "afternoon_tea"
+        ],
+        "role_id": 1362345978518310912,
+        "emoji_id": "<:chocolate_cake:1362351451573321758>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "black_forest_cake_role": {
+        "display_name": "黑森林蛋糕",
+        "tags": [
+            "role",
+            "icon_role",
+            "afternoon_tea"
+        ],
+        "role_id": 1362349512974401659,
+        "emoji_id": "<:black_forest_cake:1362351497450618953>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "pancake_role": {
+        "display_name": "鬆餅",
+        "tags": [
+            "role",
+            "icon_role",
+            "afternoon_tea"
+        ],
+        "role_id": 1362213770436415498,
+        "emoji_id": "<:pancake:1362696572764295382>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "pudding_role": {
+        "display_name": "布丁",
+        "tags": [
+            "role",
+            "icon_role",
+            "afternoon_tea"
+        ],
+        "role_id": 1362707993875058758,
+        "emoji_id": "<:pudding:1362695310484181012>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "ice_cream_role": {
+        "display_name": "冰淇淋",
+        "tags": [
+            "role",
+            "icon_role",
+            "afternoon_tea"
+        ],
+        "role_id": 1362700720503128225,
+        "emoji_id": "<:ice_cream:1362700095350636604>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    },
+    "strawberry_donut_role": {
+        "display_name": "草莓甜甜圈",
+        "tags": [
+            "role",
+            "icon_role",
+            "afternoon_tea"
+        ],
+        "role_id": 1363204636097380650,
+        "emoji_id": "<:strawberry_donut:1363204097796472844>",
+        "flags": {
+            "is_sellable": false,
+            "is_default": true
+        }
+    }
+}
