@@ -112,4 +112,4 @@ class FishingSession:
         # leveling check
         level_payload = Skill.add_experience(player_id, "fishing", total_experience)
         if level_payload.get('is_level_up'):
-            interaction.client.dispatch("level_up", interaction, "釣魚", level_payload.get('level'))
+            interaction.client.dispatch("leveling", interaction.user, "釣魚", level_payload.get('level'))

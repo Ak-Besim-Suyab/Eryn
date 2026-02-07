@@ -21,7 +21,10 @@ class Message(commands.Cog):
 
         for keyword in keywords:
             if keyword in content:
-                await message.channel.send(f"喵！{message.author.display_name}叫咪嗎？")
+                await message.channel.send(f"喵！{message.author.display_name} 叫咪嗎？")
+            else:
+                # 未搜尋到關鍵字，不往下執行
+                return
 
         def check(m):
                 return m.author == message.author and m.channel == message.channel
@@ -35,12 +38,12 @@ class Message(commands.Cog):
                 async with message.channel.typing():
                     await asyncio.sleep(3.0)
 
-                await message.channel.send(f"咪！找找！")
+                await message.channel.send(f"咪！找找... 找找...")
 
                 async with message.channel.typing():
                     await asyncio.sleep(3.0)
 
-                await message.channel.send(f"咪找到好多設定按鈕... 喵喵喵通通都給你吧！", view=RoleSettingView())
+                await message.channel.send(f"咪找到好多設定按鈕... 嗷嚕嚕通通都給你喵！", view=RoleSettingView())
 
         except asyncio.TimeoutError:
             print("等待回覆超時，未收到使用者的回覆。")

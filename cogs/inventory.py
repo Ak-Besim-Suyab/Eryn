@@ -7,8 +7,6 @@ from database.inventory import Inventory
 from database.player import Player
 from database.skill import Skill
 from database.character import Character
-from utils.embed_builder import EmbedBuilder
-from utils.logger import logger
 from context import GUILD_TH_HAVEN, GUILD_AK_BESIM, Context
 
 
