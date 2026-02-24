@@ -16,9 +16,9 @@
 """
 
 from database.player import init_player_database
+from database.player_statistic import init_player_statistic_database
 from database.dummy import init_dummy_database
 from database.affection import init_affection_database
-from database.character import init_character_database
 from database.skill import init_skill_database
 from database.inventory import init_inventory_database
 
@@ -31,8 +31,7 @@ def init_all_databases():
     1. Player（核心表）
     2. Dummy（獨立表）
     3. Affection（依賴 Player 和 Dummy）
-    4. Character（依賴 Player - 角色等級）
-    5. Skill（依賴 Player - 技能等級）
+    4. Skill（依賴 Player - 技能等級，包含角色等級）
     
     這個函數確保了無論在哪裡調用，初始化流程都是一致的。
     """
@@ -41,6 +40,9 @@ def init_all_databases():
     # 1. 核心表 - Player 必須第一個創建
     init_player_database()
     print("[Database] ✅ Player 表已初始化")
+
+    init_player_statistic_database()
+    print("[Database] ✅ PlayerStatistic 表已初始化")
     
     # 2. 獨立表
     init_dummy_database()
@@ -50,11 +52,7 @@ def init_all_databases():
     init_affection_database()
     print("[Database] ✅ Affection 表已初始化")
     
-    # 4. 角色等級表（依賴 Player）
-    init_character_database()
-    print("[Database] ✅ Character 表已初始化")
-    
-    # 5. 技能等級表（依賴 Player）
+    # 4. 技能等級表（依賴 Player）
     init_skill_database()
     print("[Database] ✅ Skill 表已初始化")
     

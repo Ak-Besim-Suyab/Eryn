@@ -1,0 +1,10 @@
+{
+    "forest": {
+        "display_name": "森林",
+        "description": "一片茂密的森林"
+    },
+    "mountain": {
+        "display_name": "山脈",
+        "description": "高聳入雲的山脈"
+    }
+}

@@ -8,39 +8,53 @@ from ui.views.role_option_view import RoleOptionView
 from ui.components.role_option import RoleOption
 from ui.components.role_menu_option import RoleMenuOption
 
-from context import Context
+from systems.item_manager import ItemManager
 
 class RoleSession:
     def __init__(self):
         self.role_menu_view = RoleMenuView()
         self.role_option_view = RoleOptionView(self)
+        self.manager = ItemManager()
 
     async def start(self, interaction: discord.Interaction):
-
-        for child in self.role_menu_view.children[:]:
-            if isinstance(child, discord.ui.Select):
-                self.role_menu_view.remove_item(child)
-
+        await self.clear()
         embed = discord.Embed(
             title=interaction.user.display_name,
             description="請選擇以下類別檢視身分組。",
             color=discord.Color.gold()
         )
         self.role_menu_view.add_item(RoleMenuOption(self))
-        await interaction.response.send_message(embed=embed, view=self.role_menu_view)
+        await interaction.response.send_message(embed=embed, view=self.role_menu_view, ephemeral=True)
 
-    async def render_role_option(self, interaction: discord.Interaction, role_tag, category_tag = "default"):
+    async def back(self, interaction: discord.Interaction):
+        await self.clear()
+        embed = discord.Embed(
+            title=interaction.user.display_name,
+            description="請選擇以下類別檢視身分組。",
+            color=discord.Color.gold()
+        )
+        self.role_menu_view.add_item(RoleMenuOption(self))
+        await interaction.response.edit_message(embed=embed, view=self.role_menu_view)
 
-        player = Player.get_or_create_player(interaction.user.id)
+    async def clear(self):
+        # 由於 view會複用，因此需要清空舊的 option 避免殘留的選項被輸出
+        for child in self.role_menu_view.children[:]:
+            if isinstance(child, discord.ui.Select):
+                self.role_menu_view.remove_item(child)
 
-        # 由於 RoleOptionView 會複用，因此需要清空舊的 RoleOption 避免殘留的選項被輸出
         for child in self.role_option_view.children[:]:
             if isinstance(child, discord.ui.Select):
                 self.role_option_view.remove_item(child)
 
+    async def render_role_option(self, interaction: discord.Interaction, role_tag, category_tag = "default"):
+
+        player = Player.get_or_create_player(interaction.user.id, interaction.user.display_name)
+
+        await self.clear()
+
         # 將標籤轉為 list 並清除空值，接著調用 get_items_by_tag 獲取身分組資料
         tags = [tag for tag in [role_tag, category_tag] if tag != "default"]
-        role_data = Context.get_manager("item").get_items_by_tag(tags)
+        role_data = self.manager.get_items_by_tag(tags)
         
         if not role_data:
             embed = discord.Embed(

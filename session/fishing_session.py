@@ -1,7 +1,7 @@
 import discord
 from datetime import datetime
 
-from engines.fishing_engine import FishingEngine
+from systems.fishing_engine import FishingEngine
 from ui.views.fishing_view import FishingView
 
 from database.inventory import Inventory
@@ -10,35 +10,39 @@ from database.player import Player
 
 from context import Context
 
+FISHING_COOLTIME = 3.5 # seconds
+
 class FishingSession:
-    def __init__(self):
+    def __init__(self, bot):
+        self.bot = bot
         self.engine = FishingEngine()   
         self.view = FishingView(self)
         self.manager = Context.get_manager("item")
 
-        self._fishing_cooldown = 3.5 # seconds
-        self._player_cooldown = {}
+        self.player_cooldown = {}
     
     async def start(self, interaction: discord.Interaction):
+        
+        user_id = interaction.user.id
+        fishing_skill = Skill.get_or_create_skill(user_id, "fishing")
+        fishing_level = fishing_skill.level
+        fishing_cooldown = max(1.0, FISHING_COOLTIME - (fishing_level * 0.02))
 
-        # 取得釣魚技能等級
-        player_id = interaction.user.id
-        fishing_level = Skill.get_or_create_skill(player_id, "fishing").level
+        now = datetime.now().timestamp()
 
-        # 計算玩家冷卻時間
-        now = datetime.now()
-        fixed_cooldown = max(1.0, self._fishing_cooldown - (fishing_level * 0.02))  # 改用 max 更直觀
-
-        if player_id in self._player_cooldown:
-            last_time = self._player_cooldown[player_id]
-            elapsed = (now - last_time).total_seconds()
-            if elapsed < fixed_cooldown:
-                remain_cooldown = fixed_cooldown - elapsed
-                await self._post_fishing_not_ready(interaction, remain_cooldown, fixed_cooldown)
+        if user_id in self.player_cooldown:
+            elapsed_time = now - self.player_cooldown[user_id]
+            if elapsed_time < fishing_cooldown:
+                wait_time = fishing_cooldown - elapsed_time
+                content = [
+                    f"您還需要等待 {wait_time} 秒才能再次釣魚",
+                    f"目前您的釣魚冷卻時間為 {fishing_cooldown} 秒"
+                ]
+                await interaction.response.send_message(content="\n".join(content), ephemeral=True)
                 return
 
-        # 更新最後釣魚時間
-        self._player_cooldown[player_id] = now
+        # 更新釣魚時間
+        self.player_cooldown[user_id] = now
 
         # 進行釣魚與發送結果
         payload = self.engine.cast()
@@ -46,10 +50,6 @@ class FishingSession:
             await self._post_fish_successed(interaction, payload)
         else:
             await self._post_fish_missed(interaction)
-            
-    async def _post_fishing_not_ready(self, interaction: discord.Interaction, wait_time: float, cooldown: float):
-        content = f"釣魚技能還沒準備好，你還需要等待 {wait_time:.1f} 秒，目前你的釣魚技能冷卻時間為 {cooldown} 秒"
-        await interaction.response.send_message(content=content, ephemeral=True)
 
     async def _post_fish_missed(self, interaction: discord.Interaction):
         embed = discord.Embed(
@@ -59,6 +59,7 @@ class FishingSession:
         )
         await interaction.response.send_message(embed=embed, view=self.view)
     
+
     async def _post_fish_successed(self, interaction: discord.Interaction, payload):
         player_id = interaction.user.id
         lines = []

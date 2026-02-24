@@ -17,7 +17,6 @@ class Context:
     
     # 钓鱼系统相关（启动时加载一次）
     fishing_loot_table = None
-    items_map = None
 
     @classmethod
     def register_bot(cls, bot):

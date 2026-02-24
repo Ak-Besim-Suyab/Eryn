@@ -10,6 +10,7 @@ class Message(commands.Cog):
 
     @commands.Cog.listener()
     async def on_message(self, message: discord.Message):
+        # 忽略機器人訊息
         if message.author.bot:
             return
 

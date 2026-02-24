@@ -43,7 +43,7 @@ class Skill(Model):
         level_payload = {
             'level': skill.level,
             'experience': skill.experience,
-            'is_level_up': skill.level > old_level,
+            'is_level_up': skill.level > old_level
         }
 
         return level_payload

@@ -1,8 +1,6 @@
 import discord
 
-from context import Context
-
-from utils.logger import logger
+from cores.logger import logger
 
 class RoleOption(discord.ui.Select):
     def __init__(self, session, player, role_tag, role_data):
@@ -74,7 +72,7 @@ class RoleOption(discord.ui.Select):
             await interaction.user.add_roles(guild_role, reason="使用者透過指令自行套用身分組。")
             
             # 移除同分類的其他身分組（不移除剛加入的）
-            removed_roles = Context.get_manager("item").get_items_by_tag([self.role_tag])
+            removed_roles = self.session.manager.get_items_by_tag([self.role_tag])
             for removed_role_id, removed_role_data in removed_roles.items():
                 removed_role_id = removed_role_data["role_id"]
                 # 跳過剛加入的身分組

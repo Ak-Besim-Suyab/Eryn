@@ -7,4 +7,4 @@ class RoleOptionView(discord.ui.View):
 
     @discord.ui.button(label="返回", style=discord.ButtonStyle.secondary, row=1)
     async def back(self, interaction: discord.Interaction, button: discord.ui.Button):
-        await self.session.start(interaction)
+        await self.session.back(interaction)

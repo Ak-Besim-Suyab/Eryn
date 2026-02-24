@@ -8,7 +8,7 @@ class LevelSystem(commands.Cog):
         self.bot = bot
 
     @commands.Cog.listener()
-    async def on_leveling(self, user, skill_name: str, skill_level: int):
+    async def on_levelup(self, user_name, skill_name: str, skill_level: int):
         """
         等級提升監聽
         升級時，於指定頻道發送消息
@@ -31,10 +31,10 @@ class LevelSystem(commands.Cog):
         # 發送消息
         embed = discord.Embed(
             title="等級提升！",
-            description=f"{skill_name}等級提升至 {skill_level}！",
+            description=f"{user_name}的{skill_name}等級提升至 {skill_level}！",
             color=discord.Color.green()
         )
-        embed.set_thumbnail(url=user.display_avatar.url)
+        # embed.set_thumbnail(url=user.display_avatar.url) # 傳入的物件無法取得 display_avatar 暫時不使用
         await channel.send(embed=embed)
 
 async def setup(bot):

@@ -1,0 +1,46 @@
+import discord
+
+from systems.reward_service import RewardService
+from systems.stat_service import StatService
+
+class DailyRewardView(discord.ui.View):
+    def __init__(self, bot):
+        super().__init__(timeout=None)
+        self.bot = bot
+
+    @discord.ui.button(label="簽到", style=discord.ButtonStyle.primary, emoji="🎁",custom_id="claim")
+    async def claim(self, interaction: discord.Interaction, button: discord.ui.Button):
+        await RewardService().claim(interaction)
+
+    @discord.ui.button(label="狀態", style=discord.ButtonStyle.primary, emoji="📜", custom_id="stat")
+    async def stat(self, interaction: discord.Interaction, button: discord.ui.Button):
+        await StatService().view(interaction)
+
+    @discord.ui.button(label="這是什麼？", style=discord.ButtonStyle.secondary, custom_id="help")
+    async def help(self, interaction: discord.Interaction, button: discord.ui.Button):
+        lines = [
+            "咪，這裡是社群的每日簽到處！",
+            "以下是關於這個簽到處的常見 Q&A：",
+        ]
+
+        embed = discord.Embed(
+            title="Elin",
+            description="\n".join(lines),
+            color=discord.Color.blue()
+        )
+
+        embed.set_thumbnail(url=self.bot.user.avatar.url)
+
+        embed.add_field(
+            name="Q：簽到可以幹嘛？",
+            value="A：社群在 2026 年開始使用等級機制代表成員的活躍度，旅人可以透過發送訊息或待在語音頻道裡累積經驗值。為了照顧到不好在這裡意思活動，可能會經常潛水的旅人，簽到也能在某種程度上幫助旅人累積經驗值",
+            inline=False
+        )
+
+        embed.add_field(
+            name="Q：不簽到會怎麼樣嗎？",
+            value="A：基於上述提到的等級機制，現在社群清理不活躍的成員時將會以此為參考。由於條件很寬鬆，基本上旅人只要偶爾有發送訊息或待在語音頻道裡，不進行簽到也能輕鬆滿足活躍條件",
+            inline=False
+        )
+
+        await interaction.response.send_message(embed=embed, ephemeral=True)
