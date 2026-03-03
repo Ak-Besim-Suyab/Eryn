@@ -9,7 +9,7 @@ os.makedirs("logs", exist_ok=True)
 log_filename = f"logs/bot_{datetime.now().strftime('%Y-%m-%d')}.log"
 
 logger = logging.getLogger("Elin")
-logger.setLevel(logging.DEBUG)  
+logger.setLevel(logging.DEBUG)
 
 formatter = logging.Formatter(
     fmt="%(asctime)s [%(levelname)s] %(name)s: %(message)s",

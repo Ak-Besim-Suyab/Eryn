@@ -17,11 +17,14 @@ class Player(Model):
     # others.
     card = TextField(null=True)
     use_pet = IntegerField(default=0)
-    daily_reward = BooleanField(default=True) # 已棄用的變數，之後找時間移除
-    daily_reward_timestamp = FloatField(null=True)
+
+    timestamp_daily_reward = FloatField(null=True)
+    timestamp_voice = FloatField(null=True)
+
 
     class Meta:
         database = db
+        
 
     @classmethod
     def get_or_create_player(cls, user_id: int, display_name: str):
@@ -87,6 +90,16 @@ class Player(Model):
         """檢查是否擁有足夠物品數量"""
         from database.inventory import Inventory  # 避免循環導入
         return Inventory.has_item(self.id, item_id, required_quantity)
+    
+    def save_timestamp_voice(self, timestamp: float):
+        """保存語音時間戳記"""
+        self.timestamp_voice = timestamp
+        self.save()
+
+    def remove_timestamp_voice(self):
+        """清除語音時間戳記"""
+        self.timestamp_voice = None
+        self.save()
 
 def init_player_database():
     """初始化玩家數據庫表"""

@@ -8,12 +8,16 @@ from cores.logger import logger
 class LevelSession:
     def __init__(self, bot):
         self.bot = bot
+
         self.message_cooldown = 30
         self.message_exp = 5
         self.message_cooldowns = {}
-        self.timestamps = {} # 用於追蹤用戶的最後操作時間戳    
 
-    def settle_message_experience(self, message: discord.Message):
+        self.reaction_cooldown = 30
+        self.reaction_exp = 5
+        self.reaction_cooldowns = {}
+
+    def give_message_experience(self, message: discord.Message):
         # 忽略私人訊息
         if not message.guild:
             return
@@ -33,16 +37,18 @@ class LevelSession:
         player = Player.get_or_create_player(message.author.id, message.author.display_name)
         player.add_experience(self.message_exp)
 
-        logger.info(f"已為 {message.author} 結算自訊息獲得的角色經驗，總共獲得: {self.message_exp}")
+        logger.debug(f"給予 {message.author.display_name} 訊息經驗值: {self.message_exp} exp")
 
-    def settle_voice_experience(self, member: discord.Member):
+    def give_voice_experience(self, member: discord.Member):
+        player = Player.get_or_create_player(member.id, member.display_name)
         now = datetime.now().timestamp()
 
-        if member.id not in self.timestamps:
-            logger.warning(f"找不到 {member} 的時間戳記，無法進行結算。")
+        timestamp = player.timestamp_voice
+
+        if timestamp is None:
+            logger.warning(f"{member.display_name} 沒有語音時間戳記，無法進行結算。")
             return
         
-        timestamp = self.timestamps[member.id]
         elapsed_minutes = (now - timestamp) / 60
 
         # 獎勵機制抽取，根據待在語音的時間給予不同的經驗值，在 2 小時後有最大值
@@ -56,17 +62,24 @@ class LevelSession:
                 voice_experience = 2
 
         total_experience = int(elapsed_minutes * voice_experience)
-        player = Player.get_or_create_player(member.id, member.display_name)
         player.add_experience(total_experience)
 
-        logger.info(f"已為 {member} 結算自語音計時獲得的角色經驗，總共獲得: {total_experience}")
+        logger.info(f"給予 {member.display_name} 語音經驗值: {total_experience} exp, 累積時間: {elapsed_minutes:.2f} 分鐘")
 
+    def give_reaction_experience(self, member: discord.Member):
+        player = Player.get_or_create_player(member.id, member.display_name)
+        player.add_experience(self.reaction_exp)
+
+        logger.info(f"給予 {member.display_name} 反應經驗值： {self.reaction_exp} exp")
 
     def save_timestamp(self, member: discord.Member):
-        self.timestamps[member.id] = datetime.now().timestamp()
-        logger.debug(f"[LevelSession] 成功保存 {member} 的時間戳記")
+        now = datetime.now().timestamp()
+
+        player = Player.get_or_create_player(member.id, member.display_name)
+        player.save_timestamp_voice(now)
+        logger.info(f"[LevelSession] 成功保存 {member} 的時間戳記")
 
     def remove_timestamp(self, member: discord.Member):
-        if member.id in self.timestamps:
-            del self.timestamps[member.id]
-            logger.debug(f"[LevelSession] 成功移除 {member} 的時間戳記")
+        player = Player.get_or_create_player(member.id, member.display_name)
+        player.remove_timestamp_voice()
+        logger.info(f"[LevelSession] 成功移除 {member} 的時間戳記")

@@ -4,7 +4,7 @@ from discord.ext import commands
 
 from ui.views.role_setting_view import RoleSettingView
 
-class Message(commands.Cog):
+class MessageListener(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
@@ -50,4 +50,4 @@ class Message(commands.Cog):
             print("等待回覆超時，未收到使用者的回覆。")
 
 async def setup(bot):
-    await bot.add_cog(Message(bot))
+    await bot.add_cog(MessageListener(bot))

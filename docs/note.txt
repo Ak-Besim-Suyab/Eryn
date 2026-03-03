@@ -19,3 +19,5 @@ core
 cogs
 - commands
 - listeners
+
+raw_reaction_add / raw_reaction_remove 事件裡的 payload 傳入
