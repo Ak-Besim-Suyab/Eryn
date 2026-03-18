@@ -2,7 +2,7 @@ import discord
 from datetime import datetime
 
 from systems.fishing_engine import FishingEngine
-from ui.views.fishing_view import FishingView
+from ui.fishing_view import FishingView
 
 from database.inventory import Inventory
 from database.skill import Skill

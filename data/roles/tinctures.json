@@ -1,0 +1,146 @@
+[
+    {
+        "role_id": 1292759960945688670,
+        "role_name": "玫瑰 Rose",
+        "role_image": "<:rose:1466951205522768119>",
+        "group": "flower"
+    },
+    {
+        "role_id": 1319872078643462176,
+        "role_name": "梅花 Mume",
+        "role_image": "<:mume:1466951285516538064>",
+        "group": "flower"
+    },
+    {
+        "role_id": 1292762502584729704,
+        "role_name": "櫻花 Sakura",
+        "role_image": "<:sakura:1466961210984632501>",
+        "group": "flower"
+    },
+    {
+        "role_id": 1292761520782180374,
+        "role_name": "繡球花 Hydrangea",
+        "role_image": "<:hydrangea:1467100471788441681>",
+        "group": "flower"
+    },
+    {
+        "role_id": 1363066807895986186,
+        "role_name": "紫丁香 Lilac",
+        "role_image": "<:lilac:1466968233969188915>",
+        "group": "flower"
+    },
+    {
+        "role_id": 1363053387029024991,
+        "role_name": "鼠尾草 Clary Sage",
+        "role_image": "<:clary_sage:1466951955808129164>",
+        "group": "flower"
+    },
+    {
+        "role_id": 1292756933438083172,
+        "role_name": "勿忘草 Forget Me Not",
+        "role_image": "<:forget_me_not:1466952365918654738>",
+        "group": "flower"
+    },
+    {
+        "role_id": 1292764641138839643,
+        "role_name": "金光菊 Rudbeckia",
+        "role_image": "<:rudbeckia:1467093280071094333>",
+        "group": "flower"
+    },
+    {
+        "role_id": 1260109218011283527,
+        "role_name": "幸運草 Clover",
+        "role_image": "<:clover:1467266508941168800>",
+        "group": "flower"
+    },
+    {
+        "role_id": 1343537682206167040,
+        "role_name": "稜彩 Prism",
+        "role_image": "",
+        "group": "gradient"
+    },
+    {
+        "role_id": 1381565838691405976,
+        "role_name": "極光 Aurora",
+        "role_image": "",
+        "group": "gradient"
+    },
+    {
+        "role_id": 1381565223458177075,
+        "role_name": "熱帶 Tropic",
+        "role_image": "",
+        "group": "gradient"
+    },
+    {
+        "role_id": 1383846482691624960,
+        "role_name": "薄暮 Twilight",
+        "role_image": "",
+        "group": "gradient"
+    },
+    {
+        "role_id": 1383761356414783498,
+        "role_name": "夏 Summer",
+        "role_image": "",
+        "group": "gradient"
+    },
+    {
+        "role_id": 1381796347132248157,
+        "role_name": "秋 Autumn",
+        "role_image": "",
+        "group": "gradient"
+    },
+    {
+        "role_id": 1381797327010009150,
+        "role_name": "冬 Winter",
+        "role_image": "",
+        "group": "gradient"
+    },
+    {
+        "role_id": 1381794996818153584,
+        "role_name": "曉 Dawn",
+        "role_image": "",
+        "group": "gradient"
+    },
+    {
+        "role_id": 1383842197677543494,
+        "role_name": "霧 Mist",
+        "role_image": "",
+        "group": "gradient"
+    },
+    {
+        "role_id": 1381249541180755989,
+        "role_name": "餘暉 Afterglow",
+        "role_image": "",
+        "group": "gradient"
+    },
+    {
+        "role_id": 1383850290456956998,
+        "role_name": "灰燼 Ash",
+        "role_image": "",
+        "group": "gradient"
+    },
+    {
+        "role_id": 1381663931088506880,
+        "role_name": "鎏金 Niello",
+        "role_image": "",
+        "group": "gradient"
+    },
+    {
+        "role_id": 1460042229425901682,
+        "role_name": "緋紅 Crimson",
+        "role_image": "",
+        "group": "gradient"
+    },
+    {
+        "role_id": 1460037724437483614,
+        "role_name": "深淵 Abyss",
+        "role_image": "",
+        "group": "gradient"
+    },
+    {
+        "role_id": 1460044446975660132,
+        "role_name": "霓虹 Neon",
+        "role_image": "",
+        "group": "gradient"
+    }
+]

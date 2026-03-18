@@ -21,20 +21,14 @@ class Player(Model):
     timestamp_daily_reward = FloatField(null=True)
     timestamp_voice = FloatField(null=True)
 
-
     class Meta:
         database = db
-        
+
 
     @classmethod
-    def get_or_create_player(cls, user_id: int, display_name: str):
+    def get_or_create_player(cls, user_id: int):
         """獲取或創建玩家，並確保玩家統計資料存在"""
-        player, created = cls.get_or_create(id=user_id)
-
-        # 保存名稱，如果玩家已存在但名稱不同，則更新名稱
-        if player.display_name != display_name:
-            player.display_name = display_name 
-            player.save()
+        player, _ = cls.get_or_create(id=user_id)
 
         # 確保玩家統計資料存在
         # 避免循環調用，導入放在方法內部
@@ -42,64 +36,85 @@ class Player(Model):
         PlayerStatistic.get_or_create(player=player)
 
         return player
+    
+    @classmethod
+    def add_balance(cls, user_id: int, amount: int):
+        with db.atomic():
+            # get_or_create returns (instance, created)
+            player, _ = cls.get_or_create(id=user_id)
+            player.currency += amount
+            player.save()
+
+    @classmethod
+    def remove_balance(cls, user_id: int, amount: int):
+        with db.atomic():
+            player, _ = cls.get_or_create(id=user_id)
+            player.currency -= amount
+            player.save()
 
     @staticmethod
     def _get_required_exp(level: int) -> int:
         return int(100 * (level ** 1.5) + level * 20)
 
-    def add_experience(self, amount: int):
-        self.experience += amount
-        
-        is_levelup = False
-        while self.experience >= self._get_required_exp(self.level):
-            self.experience -= self._get_required_exp(self.level)
-            self.level += 1
-            is_levelup = True
+    @classmethod
+    def add_experience(cls, player_id: int, amount: int):
+        with db.atomic():
+            player, _ = cls.get_or_create(id=player_id)
+            player.experience += amount
 
-        if is_levelup:
-            Context.bot.dispatch("levelup", self.display_name, "活躍度", self.level)
+            while player.experience >= player._get_required_exp(player.level):
+                player.experience -= player._get_required_exp(player.level)
+                player.level += 1
 
-        self.save()
- 
-    def add_currency(self, amount: int):
-        """增加貨幣數量"""
-        self.currency += amount
-        self.save()
+            player.save()
     
-    def remove_currency(self, amount: int):
-        """減少貨幣數量"""
-        self.currency -= amount
-        self.save()
+    @classmethod
+    def save_timestamp_voice(self, player_id: int, timestamp: float):
+        with db.atomic():
+            player, _ = self.get_or_create(id=player_id)
+            player.timestamp_voice = timestamp
+            player.save()
 
-    def set_location(self, location: str):
-        """設置玩家當前所在位置"""
-        self.location = location
-        self.save()
+    @classmethod
+    def remove_timestamp_voice(self, player_id: int):
+        with db.atomic():
+            player, _ = self.get_or_create(id=player_id)
+            player.timestamp_voice = None
+            player.save()
 
-    def add_item(self, item_id: str, quantity: int = 1) -> int:
-        """增加物品數量"""
-        from database.inventory import Inventory  # 避免循環導入
-        return Inventory.add_item(self.id, item_id, quantity)
+    @classmethod
+    def get_timestamp_voice(self, player_id: int):
+        player, _ = self.get_or_create(id=player_id)
+        return player.timestamp_voice
     
-    def remove_item(self, item_id: str, quantity: int = 1) -> dict:
-        """減少物品數量"""
-        from database.inventory import Inventory  # 避免循環導入
-        return Inventory.remove_item(self.id, item_id, quantity)
+    @classmethod
+    def save_timestamp_daily_reward(self, player_id: int, timestamp: float):
+        with db.atomic():
+            player, _ = self.get_or_create(id=player_id)
+            player.timestamp_daily_reward = timestamp
+            player.save()
     
-    def has_item(self, item_id: str, required_quantity: int = 1) -> bool:
-        """檢查是否擁有足夠物品數量"""
-        from database.inventory import Inventory  # 避免循環導入
-        return Inventory.has_item(self.id, item_id, required_quantity)
-    
-    def save_timestamp_voice(self, timestamp: float):
-        """保存語音時間戳記"""
-        self.timestamp_voice = timestamp
-        self.save()
+    @classmethod
+    def remove_timestamp_daily_reward(self, player_id: int):
+        with db.atomic():
+            player, _ = self.get_or_create(id=player_id)
+            player.timestamp_daily_reward = None
+            player.save()
 
-    def remove_timestamp_voice(self):
-        """清除語音時間戳記"""
-        self.timestamp_voice = None
-        self.save()
+    @classmethod
+    def get_timestamp_daily_reward(self, player_id: int):
+        player, _ = self.get_or_create(id=player_id)
+        return player.timestamp_daily_reward
+    
+    @classmethod
+    def get_stat(self, player_id: int):
+        player, _ = self.get_or_create(id=player_id)
+
+        # 確保玩家統計資料存在，避免在沒有 PlayerStatistic 出現時拋出例外。
+        from database.player_statistic import PlayerStatistic
+        stat, _ = PlayerStatistic.get_or_create(player=player)
+
+        return stat
 
 def init_player_database():
     """初始化玩家數據庫表"""

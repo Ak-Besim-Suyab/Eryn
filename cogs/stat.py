@@ -6,7 +6,7 @@ from systems.stat_service import StatService
 
 from context import GUILD_TH_HAVEN, GUILD_AK_BESIM
 
-class Stat(commands.Cog):
+class StatCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
@@ -16,4 +16,4 @@ class Stat(commands.Cog):
         await StatService().view(interaction)
 
 async def setup(bot):
-    await bot.add_cog(Stat(bot))
+    await bot.add_cog(StatCog(bot))

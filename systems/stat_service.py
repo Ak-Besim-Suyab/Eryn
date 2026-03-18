@@ -3,37 +3,55 @@ import json
 from pathlib import Path
 
 from database.player import Player
+from database.inventory import Inventory
+
+from systems.item_manager import item_manager
 
 class StatService:
 
     async def view(self, interaction: discord.Interaction):
-        player = Player.get_or_create_player(interaction.user.id, interaction.user.display_name)
+        player = Player.get_or_create_player(interaction.user.id)
         stat = player.stats.get()
         houses = self.get_houses(interaction)
 
+        inventory = Inventory.get_inventory(interaction.user.id)
+
         lines = [
-            f"等級: {player.level}",
-            f"經驗值: {player.experience}",
+            f"等級：{player.level}",
+            f"經驗值：{player.experience}",
+            f"金幣：{player.currency}",
             f"",
-            f"累計簽到天數: {stat.total_daily_claims} 天",
+            f"累計簽到天數：{stat.total_daily_claims} 天",
             f""
         ]
 
-        house_lines = [
-            f"已擁有的小屋："
-        ]
+        # 房屋敘述
+        house_description = []
+
         if houses:
             for house_id in houses:
-                house_lines.append(f"- <#{house_id}>")
+                house_description.append(f"- <#{house_id}>")
         else:
-            house_lines.append("- *尚未擁有任何小屋*")
+            house_description.append("- *尚未擁有任何小屋*")
 
-        title = None
-        description = "\n".join(lines + house_lines)
-        color = discord.Color.dark_gold()
+        # 背包敘述
+        inventory_description = []
 
-        embed = discord.Embed(title = title, description = description, color = color)
+        for item_id, quantity in inventory.items():
+            item = item_manager.get_item(item_id)
+            item_name = item.get("item_name", item_id)
+
+            inventory_description.append(f"{item_name} x{quantity}")
+
+        # 印出訊息
+        embed = discord.Embed()
+        embed.description = "\n".join(lines)
+        embed.color = discord.Color.dark_gold()
+
         embed.set_author(name = interaction.user.display_name, icon_url = interaction.user.avatar.url)
+
+        embed.add_field(name = "已擁有的小屋：", value = "\n".join(house_description), inline = False)
+        embed.add_field(name = "背包：", value = "\n".join(inventory_description), inline = False)
 
         await interaction.response.send_message(embed = embed, ephemeral = True)
 

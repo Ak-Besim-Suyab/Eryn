@@ -34,16 +34,14 @@ class LevelSession:
         self.message_cooldowns[user_id] = now
 
         # 增加經驗值
-        player = Player.get_or_create_player(message.author.id, message.author.display_name)
-        player.add_experience(self.message_exp)
+        Player.add_experience(user_id, self.message_exp)
 
         logger.debug(f"給予 {message.author.display_name} 訊息經驗值: {self.message_exp} exp")
 
     def give_voice_experience(self, member: discord.Member):
-        player = Player.get_or_create_player(member.id, member.display_name)
         now = datetime.now().timestamp()
 
-        timestamp = player.timestamp_voice
+        timestamp = Player.get_timestamp_voice(member.id)
 
         if timestamp is None:
             logger.warning(f"{member.display_name} 沒有語音時間戳記，無法進行結算。")
@@ -62,24 +60,20 @@ class LevelSession:
                 voice_experience = 2
 
         total_experience = int(elapsed_minutes * voice_experience)
-        player.add_experience(total_experience)
+        Player.add_experience(member.id, total_experience)
 
         logger.info(f"給予 {member.display_name} 語音經驗值: {total_experience} exp, 累積時間: {elapsed_minutes:.2f} 分鐘")
 
     def give_reaction_experience(self, member: discord.Member):
-        player = Player.get_or_create_player(member.id, member.display_name)
-        player.add_experience(self.reaction_exp)
+        Player.add_experience(member.id, self.reaction_exp)
 
         logger.info(f"給予 {member.display_name} 反應經驗值： {self.reaction_exp} exp")
 
     def save_timestamp(self, member: discord.Member):
         now = datetime.now().timestamp()
-
-        player = Player.get_or_create_player(member.id, member.display_name)
-        player.save_timestamp_voice(now)
+        Player.save_timestamp_voice(member.id, now)
         logger.info(f"[LevelSession] 成功保存 {member} 的時間戳記")
 
     def remove_timestamp(self, member: discord.Member):
-        player = Player.get_or_create_player(member.id, member.display_name)
-        player.remove_timestamp_voice()
+        Player.remove_timestamp_voice(member.id)
         logger.info(f"[LevelSession] 成功移除 {member} 的時間戳記")

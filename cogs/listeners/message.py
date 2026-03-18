@@ -2,8 +2,6 @@ import asyncio
 import discord
 from discord.ext import commands
 
-from ui.views.role_setting_view import RoleSettingView
-
 class MessageListener(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
@@ -44,7 +42,7 @@ class MessageListener(commands.Cog):
                 async with message.channel.typing():
                     await asyncio.sleep(3.0)
 
-                await message.channel.send(f"咪找到好多設定按鈕... 嗷嚕嚕通通都給你喵！", view=RoleSettingView())
+                await message.channel.send(f"咪找到好多設定按鈕... 嗷嚕嚕通通都給你喵！（目前找不到了）")
 
         except asyncio.TimeoutError:
             print("等待回覆超時，未收到使用者的回覆。")

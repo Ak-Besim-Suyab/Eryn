@@ -4,7 +4,8 @@ from pathlib import Path
 
 # YAML 讀取器
 class YamlLoader:
-    def load(self, file_path: str):
+    @staticmethod
+    def load(file_path: str):
         resolved_path = resolve_file_path(file_path)
         try:
             with open(resolved_path, 'r', encoding='utf-8') as file:
@@ -21,7 +22,8 @@ class YamlLoader:
 
 # JSON 讀取器
 class JsonLoader:
-    def load(self, file_path: str):
+    @staticmethod
+    def load(file_path: str):
         resolved_path = resolve_file_path(file_path)
         try:
             with open(resolved_path, 'r', encoding='utf-8') as file:

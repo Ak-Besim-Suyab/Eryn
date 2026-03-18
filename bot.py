@@ -19,7 +19,8 @@ from database import init_all_databases
 
 from cores.logger import logger
 
-from ui.views.daily_reward import DailyRewardView
+from ui.daily import DailyView
+from ui.season_event import SeasonEventView
 
 intents = discord.Intents.default()
 intents.voice_states = True
@@ -31,7 +32,8 @@ class Elin(commands.Bot):
         super().__init__(command_prefix="!", intents=intents)
 
     async def setup_hook(self):
-        self.add_view(DailyRewardView(self))
+        self.add_view(DailyView())
+        self.add_view(SeasonEventView(self))
 
 
 bot = Elin()
@@ -50,11 +52,17 @@ async def on_ready():
         await bot.load_extension("cogs.leveling")
         await bot.load_extension("cogs.role")
         await bot.load_extension("cogs.stat")
+        await bot.load_extension("cogs.leaderboard")
+        await bot.load_extension("cogs.market")
+        await bot.load_extension("cogs.inventory")
 
         # listener registration
         await bot.load_extension("cogs.listeners.join")
         await bot.load_extension("cogs.listeners.message")
         await bot.load_extension("cogs.listeners.reaction")
+
+        await bot.load_extension("cogs.admins.member")
+        await bot.load_extension("cogs.admins.house")
 
         # guild command syncing
         synced_haven = await bot.tree.sync(guild=GUILD_TH_HAVEN)
