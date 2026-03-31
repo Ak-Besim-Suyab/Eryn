@@ -9,7 +9,7 @@ __pycache__/
 *.db
 
 # ignore file
-data/members/
+data/
 
 # System files
 .DS_Store

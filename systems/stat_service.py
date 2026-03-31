@@ -2,10 +2,9 @@ import discord
 import json
 from pathlib import Path
 
-from database.player import Player
-from database.inventory import Inventory
-
-from systems.item_manager import item_manager
+from models.player import Player
+from models.inventory import Inventory
+from models.item import item_manager
 
 class StatService:
 

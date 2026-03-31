@@ -3,7 +3,7 @@ import time
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
-from database.player import Player
+from models.player import Player
 
 from cores.logger import logger
 
@@ -31,7 +31,7 @@ class RewardService:
                 await interaction.response.send_message("咪！你今天已經領取過每日獎勵了！", ephemeral=True)
                 return
 
-        Player.save_timestamp_daily_reward(user_id, now_timestamp)
+        Player.save_timestamp_daily_reward(user_id)
         Player.add_experience(user_id, daily_experience)
 
         stat = Player.get_stat(user_id)

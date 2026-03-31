@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 from discord import app_commands
 
-from ui.market import MarketEmbed, MarketView
+from interface.market import MarketEmbed, MarketView
 
 from context import GUILD_TH_HAVEN, GUILD_AK_BESIM
 

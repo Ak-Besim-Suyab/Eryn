@@ -4,7 +4,7 @@ import json
 from discord.ext import commands
 from pathlib import Path
 
-from database.player import Player
+from models.player import Player
 
 from cores.logger import logger
 

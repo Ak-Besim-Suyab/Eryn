@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 from discord import app_commands
-from database.player import Player
+from models.player import Player
 
 from context import GUILD_AK_BESIM, GUILD_TH_HAVEN
 

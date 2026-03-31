@@ -4,7 +4,7 @@
 
 import discord
 import json
-from systems.item_manager import item_manager
+from models.item import item_manager
 
 class Shop:
     def __init__(self, shop_name: str):
@@ -26,8 +26,8 @@ class Shop:
         for item_id, data in self.items.items():
             option = discord.SelectOption(
                 value=item_id,
-                label=f"{data.get("item_name")}, 費用： {data.get('price')} 金幣", 
-                emoji=data.get("emoji"),
+                label=f"{data.get('item_name')}, 費用： {data.get('price')} 金幣", 
+                emoji=data.get('emoji'),
                 description=data.get("description"), 
                 )
             options.append(option)

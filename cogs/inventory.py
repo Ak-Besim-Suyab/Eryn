@@ -2,8 +2,8 @@ import discord
 from discord.ext import commands
 from discord import app_commands
 
-from systems.item_manager import item_manager
-from database.inventory import Inventory
+from models.item import item_manager
+from models.inventory import Inventory
 from context import GUILD_AK_BESIM, GUILD_TH_HAVEN
 
 inventory_img = "https://cdn.discordapp.com/attachments/1193049715638538283/1481102388021690530/inventory_img.png"

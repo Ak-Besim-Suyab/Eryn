@@ -1,15 +1,14 @@
 import discord
 from discord.ext import commands
-from pathlib import Path
 
 from cores.logger import logger
 
-from ui.daily import DailyEmbed, DailyView
-from ui.season_event import SeasonEventView
+from interface.daily import DailyEmbed, DailyView
+from interface.guide.menu import GuideEmbed, GuideView
+from interface.role.announcement import RoleAnnouncementEmbed, RoleAnnouncementView
+from interface.season_event import SeasonEventView
 
 VERIFY_CHANNEL = 1472379536187326464
-
-MEMBER_PATH = "data/members"
 
 class AdminCog(commands.Cog):
     def __init__(self, bot):
@@ -18,10 +17,19 @@ class AdminCog(commands.Cog):
     @commands.command()
     @commands.is_owner()
     async def test(self, ctx: commands.Context):
+
+        descriptions = [
+            "`測試測試測試測試`"
+        ]
+
         embed = discord.Embed()
+        embed.description = "\n".join(descriptions)
         embed.color = discord.Color.gold()
         embed.set_author(name=ctx.author.display_name, icon_url=ctx.author.avatar.url)
-        embed.add_field(name="test", value="test")
+        embed.add_field(name="普通文本", value="普通文本", inline=True)
+        embed.add_field(name="普通文本", value="普通文本", inline=True)
+        # embed.set_image(url="https://cdn.discordapp.com/attachments/1193049715638538283/1483857918532128808/college_of_arms_img.png")
+        embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/1193049715638538283/1479100041665839227/img_1.png")
 
         await ctx.send(embed=embed)
 
@@ -53,62 +61,23 @@ class AdminCog(commands.Cog):
         embed.description = description
         embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/1193049715638538283/1479100041665839227/img_1.png")
 
-        view = SeasonEventView(self.bot)
+        view = SeasonEventView()
 
         await ctx.send(embed=embed, view=view)
 
-# file group -----------------------------------------
-    @commands.group()
+    @commands.command()
     @commands.is_owner()
-    async def file(self, ctx: commands.Context):
-        if ctx.invoked_subcommand is None:
-            logger.info("請指定子指令，使用 `!file list` 列出所有成員的資料檔案狀態")
-
-
-    @file.command(name="list")
-    @commands.is_owner()
-    async def list(self, ctx: commands.Context):
-        guild = ctx.guild
-        for member in guild.members:
-            file = Path(f"{MEMBER_PATH}/{member.id}.json")
-            if file.exists():
-                logger.info(f"MEMBER - {member.display_name} | ID - {member.id} | FILE - Exists")
-            else:
-                logger.info(f"MEMBER - {member.display_name} | ID - {member.id} | FILE - Missing")
-
-    @file.command(name="exist")
-    @commands.is_owner()
-    async def exist(self, ctx: commands.Context):
-        guild = ctx.guild
-        for member in guild.members:
-            file = Path(f"{MEMBER_PATH}/{member.id}.json")
-            if file.exists():
-                logger.info(f"MEMBER - {member.display_name} | ID - {member.id} | FILE - Exists")
-
-    @file.command(name="missing")
-    @commands.is_owner()
-    async def missing(self, ctx: commands.Context):
-        total = 0
-        guild = ctx.guild
-
-        for member in guild.members:
-            file = Path(f"{MEMBER_PATH}/{member.id}.json")
-            if not file.exists():
-                logger.info(f"MEMBER - {member.display_name} | ID - {member.id} | FILE - Missing")
+    async def college_of_arms(self, ctx: commands.Context):
+        embed = RoleAnnouncementEmbed()
+        view = RoleAnnouncementView()
+        await ctx.send(embed=embed, view=view)
 
     @commands.command()
     @commands.is_owner()
-    async def leaved_member(self, ctx: commands.Context):
-        leaved_member_ids = set()
-        guild = ctx.guild
-
-        for member in guild.members:
-            leaved_member_ids.add(member.id)
-
-        for file in Path(MEMBER_PATH).glob("*.json"):
-            user_id = int(file.stem)
-            if user_id not in leaved_member_ids:
-                logger.info(f"LEAVED MEMBER - ID: {user_id} | FILE: {file.name}")
+    async def guide_book(self, ctx: commands.Context):
+        embed = GuideEmbed()
+        view = GuideView()
+        await ctx.send(embed=embed, view=view)  
 
 #----------------------------------------------------
 
@@ -164,7 +133,7 @@ class AdminCog(commands.Cog):
 
         guild = ctx.guild
 
-        from session.level_session import LevelSession
+        from systems.level_session import LevelSession
         level_session = LevelSession(self.bot)
         for member in guild.members:
             if member.voice and member.voice.channel:
