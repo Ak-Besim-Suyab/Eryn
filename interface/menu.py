@@ -6,7 +6,7 @@ from models.region import region_manager
 
 # 這裡導入按鈕，並在 MenuView 添加
 from interface.explore.button import ExploreButton
-
+from interface.action.button import GardenButton
 
 class MenuEmbed(discord.Embed):
     def __init__(self, interaction: discord.Interaction):
@@ -24,3 +24,4 @@ class MenuView(discord.ui.View):
         super().__init__(timeout=None)
 
         self.add_item(ExploreButton())
+        self.add_item(GardenButton())

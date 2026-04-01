@@ -1,0 +1,8 @@
+{
+    "id": "rose",
+    "entries": [
+        {"type":"item", "id": "rose_red", "weight": 50},
+        {"type":"item", "id": "rose_yellow", "weight": 50},
+        {"type":"item", "id": "rose_white", "weight": 50}
+    ]
+}

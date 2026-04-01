@@ -1,0 +1,7 @@
+{
+    "id": "meadow",
+    "name": "雜草叢",
+    "drops": [
+        {"id": "default_meadow", "weight": 100}
+    ]
+}

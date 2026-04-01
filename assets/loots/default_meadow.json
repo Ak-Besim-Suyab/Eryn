@@ -1,0 +1,7 @@
+{
+    "id": "default_meadow",
+    "entries": [
+        {"type":"item", "id": "weeds", "weight": 300, "min": 1, "max": 3},
+        {"type":"loot", "id": "rose", "weight": 100, "min": 1, "max": 3}
+    ]
+}

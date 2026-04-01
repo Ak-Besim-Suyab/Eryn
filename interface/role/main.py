@@ -55,5 +55,4 @@ class RoleOption(discord.ui.Select):
         embed = RoleCategoryEmbed(interaction, category)
         view = RoleCategoryView(interaction, category)
         
-
         await interaction.response.send_message(embeds=[image, embed], view=view, ephemeral=True)

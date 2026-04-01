@@ -1,4 +1,5 @@
 {
     "id": "falun",
-    "name": "法倫"
+    "name": "法倫",
+    "resources": ["meadow"]
 }
