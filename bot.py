@@ -21,7 +21,7 @@ class Elin(commands.Bot):
     async def setup_hook(self):
 
         init_all_databases()
-        
+
         extensions = [
             "cogs.admin",
             "cogs.daily",
@@ -37,6 +37,7 @@ class Elin(commands.Bot):
             "cogs.listeners.message",
             "cogs.admins.member",
             "cogs.admins.house",
+            "cogs.admins.test",
         ]
 
         for extension in extensions:

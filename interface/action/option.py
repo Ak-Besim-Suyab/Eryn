@@ -1,8 +1,6 @@
 import discord
 
-from models.player import Player
-from models.region import region_manager
-from models.resource import resource_manager
+from systems.skills.garden import GardenSkill
 
 class ActionOption(discord.ui.Select):
     def __init__(self):
@@ -13,7 +11,7 @@ class ActionOption(discord.ui.Select):
                 "description": "前往附近的地點採集資源",
                 "emoji": "🌿",
                 "value": "garden",
-                "function": self.garden
+                "function": GardenSkill.cast
             }
         ]
 
@@ -36,12 +34,11 @@ class ActionOption(discord.ui.Select):
         )
 
     async def callback(self, interaction: discord.Interaction):
-        selected_value = self.values[0]
+        
+        await interaction.response.edit_message(view=self.view) #重置選項
 
+        selected_value = self.values[0]
         for action in self.actions:
             if action["value"] == selected_value:
                 await action["function"](interaction)
                 break
-
-    async def garden(self, interaction: discord.Interaction):
-        pass
