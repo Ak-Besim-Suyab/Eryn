@@ -9,7 +9,7 @@ __pycache__/
 *.db
 
 # ignore file
-data/
+assets/
 
 # System files
 .DS_Store

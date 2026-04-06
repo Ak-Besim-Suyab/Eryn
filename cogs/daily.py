@@ -4,7 +4,7 @@ from discord import app_commands
 
 from systems.reward_service import RewardService
 
-from context import GUILD_TH_HAVEN, GUILD_AK_BESIM
+from configuration import GUILD_TH_HAVEN, GUILD_AK_BESIM
 
 class Daily(commands.Cog):
     def __init__(self, bot):

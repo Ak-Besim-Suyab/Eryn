@@ -6,7 +6,7 @@ from interface.season_event import SeasonEventView
 from interface.role.announcement import RoleAnnouncementView
 
 from models import init_all_databases
-from context import GUILD_TH_HAVEN, GUILD_AK_BESIM
+from configuration import GUILD_TH_HAVEN, GUILD_AK_BESIM
 from cores.logger import logger
 
 intents = discord.Intents.default()
@@ -38,6 +38,7 @@ class Elin(commands.Bot):
             "cogs.admins.member",
             "cogs.admins.house",
             "cogs.admins.test",
+            "cogs.skills.steal",
         ]
 
         for extension in extensions:

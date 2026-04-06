@@ -5,14 +5,12 @@
 資源會包含掉落表 (drops) 調用時請使用物品管理器 (ItemManager) 檢驗與發送掉落物
 """
 import random
+from collections import Counter
 from dataclasses import dataclass, field
-from cores.loader import JsonLoader
+from cores.manager import Manager
 from cores.logger import logger
 
 from models.loot import loot_manager
-
-resource_path = "assets/resources"
-
 
 # 這個物件定義掉落物列表
 @dataclass
@@ -20,11 +18,12 @@ class Drop:
     id: str
     weight: int
 
-
 @dataclass
 class Resource:
     id: str
     name: str
+    min: int = 1
+    max: int = 1
     drops: list[Drop] = field(default_factory=list)
 
     def __post_init__(self):
@@ -40,50 +39,21 @@ class Resource:
         if sum(weights) == 0:
             return {}
         
+        result = Counter()
         record = random.choices(self.drops, weights=weights, k=1)[0]
+        random_time = random.randint(self.min, self.max)
+        for count in range(random_time):
+            logger.debug(f"進入抽取, 掉落表: {self.name}, 戰利品表: {record.id}, 當前次數: {count + 1}")
+            result.update(loot_manager.roll(record.id))
 
-        return loot_manager.roll(record.id)
-        
+        return dict(result)
 
-class ResourceManager:
+class ResourceManager(Manager[Resource]):
     def __init__(self):
-        self._resources: dict[str, Resource] = {}
-        self._load()
-
-    def _load(self):
-        raw_data = JsonLoader.load(resource_path)
-
-        # 檢查資料是否有被讀取
-        if not raw_data:
-            logger.error(f"找不到資料夾: {resource_path}")
-            return
-        
-        total_files = 0
-        
-        for filename, data in raw_data.items():
-
-            # 檢查資料格式是否正確
-            if not isinstance(data, dict):
-                logger.error(f"{filename} 的 JSON 格式出現錯誤")
-                continue
-            
-            try:
-                resource = Resource(**data)
-                self._resources[resource.id] = resource
-                total_files += 1
-                logger.info(f"載入 {filename}.json 檔案成功")
-
-            except TypeError as e:
-                logger.error(f"{filename} 的 JSON 格式與 Resource 類別不相容: {e}")
-                continue
-        
-        logger.info(f"資料載入完畢，總共載入 {total_files} 個檔案")
-
-    def get_resource(self, resource_id: str) -> Resource | None:
-        return self._resources.get(resource_id)
-
-    def get_all_resources(self) -> list[Resource]:
-        return list(self._resources.values())
+        super().__init__(
+            model = Resource, 
+            path = "assets/resources"
+        )
 
 # 建立唯一實例
 resource_manager = ResourceManager()

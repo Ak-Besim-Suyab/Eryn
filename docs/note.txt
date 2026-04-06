@@ -1,0 +1,54 @@
+Note:
+關於 peewee
+被關聯的模型可以透過關聯模型呼叫, 比如: inventory 被 player 關聯
+
+player = Player.get_or_create(user_id)
+player.inventory <- 可以用這個寫法開始查詢
+
+apple = player.inventory.get(Inventory.item_id == "apple")
+print(f"{apple.quantity}") <- 回傳物品數量
+print(f"{apple.corrupt_time}") <- 回傳腐壞時間 (未在此實作)
+
+但這是因為 inventory 屬於一對多欄位，所以可以這樣呼叫循環 (專案裡的 status 也屬於此)
+for item in player.inventory:
+    print(f"{item.item_id}{item.quantity}")
+
+
+Note:
+關於指令
+
+右鍵使用的應用程式指令語法糖為 @app_commands.context_menu(name="指令名稱")
+
+
+Peewee 方法保留字，設計方法時不要使用以下名稱：
+create()
+save()
+delete()
+delete_instance()
+select()
+update()
+insert()
+get()
+get_by_id()
+get_or_create(**kwargs)
+get_or_none(**kwargs)
+
+目前專案有特別設計的單詞方法：
+add() # status.py
+remove() # status.py
+
+#---
+Peewee 有個物件取出的簡寫法，在已知主鍵 (Primary Key) 時，一般而言會寫：
+
+player = Player.get(Player.id == player_id)
+
+可以寫成：
+
+player = Player.get_by_id(player_id)
+
+cores
+- 定義通用屬性、方法的父類，通用工具
+models/data
+- 資料庫物件，包含資料管理器
+systems
+- 邏輯物件

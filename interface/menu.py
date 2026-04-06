@@ -12,7 +12,7 @@ class MenuEmbed(discord.Embed):
     def __init__(self, interaction: discord.Interaction):
         super().__init__()
 
-        region = region_manager.get_region(Player.get_region(interaction.user.id))
+        region = region_manager.get(Player.get_region(interaction.user.id))
 
         self.color = discord.Color.gold()
         self.add_field(name="你目前在：", value=f"- {region.name}", inline=False)
@@ -21,7 +21,7 @@ class MenuEmbed(discord.Embed):
         resource_table = []
         if resources is not None:
             for res in resources:
-                resource = resource_manager.get_resource(res)
+                resource = resource_manager.get(res)
                 resource_table.append(f"- {resource.name}")
             
             self.add_field(name="找到資源：", value="\n".join(resource_table), inline=False)

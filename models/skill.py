@@ -1,15 +1,8 @@
 from peewee import *
-from enum import Enum
 
 from models.player import Player
-from models.generic import db
-
-
-class SkillType(str, Enum):
-    MINING = "mining"
-    FISHING = "fishing"
-    GARDENING = "gardening"
-
+from models.type import SkillType
+from configuration import db
 
 class Skill(Model):
     player = ForeignKeyField(Player, backref='skills', on_delete='CASCADE')
@@ -24,13 +17,8 @@ class Skill(Model):
         )
     
     @classmethod
-    def get_or_create_skill(cls, player_id: int, name: SkillType):
-        skill, _ = cls.get_or_create(player_id = player_id, name = name)
-        return skill
-    
-    @classmethod
     def add_experience(cls, player_id: int, name: SkillType, amount: int) -> dict:
-        skill = cls.get_or_create_skill(player_id, name)
+        skill, _ = cls.get_or_create(player_id = player_id, name = name)
         
         skill.experience += amount
         

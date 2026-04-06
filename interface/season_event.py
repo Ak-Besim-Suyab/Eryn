@@ -1,74 +1,17 @@
 import discord
-import random
-import time
-
-from models.player import Player
-
-from cores.logger import logger
+from systems.events.season import season_event
 
 class SeasonEventView(discord.ui.View):
     def __init__(self):
-        self.cooldown = 1.9
-        self.player_timestamps = {}
-
         super().__init__(timeout=None)
 
     @discord.ui.button(label="緬懷", style=discord.ButtonStyle.primary, emoji="🕯️", custom_id="mourn")
     async def mourn(self, interaction: discord.Interaction, button: discord.ui.Button):
-
-        now = time.time()
-        if interaction.user.id in self.player_timestamps:
-            elapsed = now - self.player_timestamps[interaction.user.id]
-            if elapsed < self.cooldown:
-                remaining = self.cooldown - elapsed
-                await interaction.response.send_message(f"❌ 太頻繁地祭拜意義不大，請等待 {remaining:.1f} 秒後再試", ephemeral=True)
-                return
-            
-        self.player_timestamps[interaction.user.id] = now
-
-        experience = random.randint(1, 9)
-        currency = random.randint(1, 9)
-
-        Player.add_experience(interaction.user.id, experience)
-        Player.add_balance(interaction.user.id, currency)
-
-        loot_lines = [
-            f"+{experience} 經驗值",
-            f"+{currency} 金幣"
-        ]
-
-        embed = discord.Embed()
-        embed.description = "> *你緬懷逝去的靈魂，內心得到平靜*"
-        embed.color = discord.Color.dark_gold()
-
-        embed.set_author(name=interaction.user.display_name, icon_url=interaction.user.avatar.url)
-        embed.add_field(name="獲得獎勵：", value="\n".join(loot_lines), inline=False)
-
-        bonus_chance = 0.19
-        bonus_experience = 0
-
-        if random.random() < bonus_chance:
-            bonus_experience = random.randint(9, 90)
-            Player.add_experience(interaction.user.id, bonus_experience)
-
-            lines = [
-                "唔哦哦哦！",
-                "> *你感受到莊嚴且神聖的力量在內心深處溢流而出*",
-            ]
-
-            embed.add_field(name="", value="\n".join(lines), inline=False)
-            embed.add_field(name="獲得額外獎勵：", value=f"+{bonus_experience} Exp", inline=False)
-
-        await interaction.response.send_message(embed=embed, ephemeral=True)
-
-        logger.info(f"{interaction.user.display_name} 在緬懷活動中總共獲得 {experience + bonus_experience} 經驗值")
-
+        await season_event.mourn(interaction)
 
     @discord.ui.button(label="供奉", style=discord.ButtonStyle.primary, emoji="🕯️", custom_id="season_offer")
     async def season_offer(self, interaction: discord.Interaction, button: discord.ui.Button):
-        # 選擇要供奉的物品
-        pass
-
+        await season_event.pre_offer(interaction)
 
     @discord.ui.button(label="這是什麼？", style=discord.ButtonStyle.secondary, custom_id="season_event_help")
     async def help(self, interaction: discord.Interaction, button: discord.ui.Button):
@@ -83,3 +26,16 @@ class SeasonEventView(discord.ui.View):
         embed.color = discord.Color.gold()
         embed.set_thumbnail(url=interaction.client.user.avatar.url)
         await interaction.response.send_message(embed=embed, ephemeral=True)
+
+
+class PreOfferView(discord.ui.View):
+    def __init__(self):
+        super().__init__(timeout=None)
+    
+    @discord.ui.button(label="確定", style=discord.ButtonStyle.primary, custom_id="season_offer_confirm")
+    async def confirm(self, interaction: discord.Interaction, button: discord.ui.Button):
+        await season_event.offer(interaction)
+    
+    @discord.ui.button(label="取消", style=discord.ButtonStyle.secondary, custom_id="season_offer_cancel")
+    async def cancel(self, interaction: discord.Interaction, button: discord.ui.Button):
+        await interaction.response.send_message("❌ 你覺得不需要供奉了。", ephemeral=True)

@@ -1,6 +1,6 @@
 import discord
 
-from systems.skills.garden import GardenSkill
+from systems.skill.garden import garden_skill
 
 class ActionOption(discord.ui.Select):
     def __init__(self):
@@ -11,7 +11,7 @@ class ActionOption(discord.ui.Select):
                 "description": "前往附近的地點採集資源",
                 "emoji": "🌿",
                 "value": "garden",
-                "function": GardenSkill.cast
+                "function": garden_skill.cast
             }
         ]
 

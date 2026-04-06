@@ -1,5 +1,5 @@
 from peewee import *
-from models.generic import db
+from configuration import db
 
 from datetime import datetime
 
@@ -13,6 +13,8 @@ class Player(Model):
     experience = IntegerField(default=0)
     currency = IntegerField(default=0)
     region = TextField(default="falun")
+    luck = FloatField(default=1.0)
+    karma = IntegerField(default=100)
     
     # others.
     card = TextField(null=True)
@@ -32,8 +34,8 @@ class Player(Model):
 
         # 確保玩家統計資料存在
         # 避免循環調用，導入放在方法內部
-        from models.player_statistic import PlayerStatistic
-        PlayerStatistic.get_or_create(player=player)
+        from models.statistic import Statistic
+        Statistic.get_or_create(player=player)
 
         return player
     
@@ -134,8 +136,8 @@ class Player(Model):
         player, _ = self.get_or_create(id=player_id)
 
         # 確保玩家統計資料存在，避免在沒有 PlayerStatistic 出現時拋出例外。
-        from models.player_statistic import PlayerStatistic
-        stat, _ = PlayerStatistic.get_or_create(player=player)
+        from models.statistic import Statistic
+        stat, _ = Statistic.get_or_create(player=player)
 
         return stat
 

@@ -3,7 +3,7 @@ from discord.ext import commands
 from discord import app_commands
 from models.player import Player
 
-from context import GUILD_AK_BESIM, GUILD_TH_HAVEN
+from configuration import GUILD_AK_BESIM, GUILD_TH_HAVEN
 
 class Leaderboard(commands.Cog):
     def __init__(self, bot):

@@ -9,6 +9,11 @@ class TestCog(commands.Cog):
     @commands.is_owner()
     async def test_select(self, ctx: commands.Context):
         await ctx.send('test', view=TestView())
+    
+    @commands.command()
+    @commands.is_owner()
+    async def test_modal(self, ctx: commands.Context):
+        await ctx.send('test', view=TestModalView())
 
 class TestView(discord.ui.View):
     def __init__(self):
@@ -35,6 +40,14 @@ class TestView(discord.ui.View):
     async def select_callback(self, interaction: discord.Interaction, select: discord.ui.Select):
         await interaction.response.edit_message(view=self)
         await interaction.followup.send(f"You selected {select.values[0]}")
+
+class TestModalView(discord.ui.View):
+    def __init__(self):
+        super().__init__(timeout=None)
+
+class TestModal(discord.ui.Modal):
+    def __init__(self):
+        super().__init__(title="Test Modal")
 
 async def setup(bot):
     await bot.add_cog(TestCog(bot))

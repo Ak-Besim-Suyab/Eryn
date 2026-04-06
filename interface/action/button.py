@@ -1,15 +1,14 @@
 import discord
-from systems.skills.garden import GardenSkill
+from systems.skill.garden import garden_skill
 
 class GardenButton(discord.ui.Button):
     def __init__(self):
         super().__init__(
             style=discord.ButtonStyle.primary, 
-            label="再次採集", 
+            label="採集", 
             emoji="🌿", 
             custom_id="garden"
         )
     
     async def callback(self, interaction: discord.Interaction):
-        await interaction.response.defer()
-        await GardenSkill.cast(interaction)
+        await garden_skill.cast(interaction)

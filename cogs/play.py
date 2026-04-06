@@ -4,13 +4,13 @@ from discord import app_commands
 
 from interface.menu import MenuEmbed, MenuView
 
-from context import GUILD_TH_HAVEN, GUILD_AK_BESIM, ADMIN_BOOLEAN
+from configuration import GUILD_TH_HAVEN, GUILD_AK_BESIM, ADMIN_BOOLEAN
 
 class PlayCog(commands.Cog, name="玩"):
     def __init__(self, bot):
         self.bot = bot
 
-    @app_commands.default_permissions(administrator=ADMIN_BOOLEAN)
+    # @app_commands.default_permissions(administrator=ADMIN_BOOLEAN)
     @app_commands.guilds(GUILD_TH_HAVEN, GUILD_AK_BESIM)
     @app_commands.command(name="玩", description="開始遊玩艾琳的遊戲")
     async def play(self, interaction: discord.Interaction):

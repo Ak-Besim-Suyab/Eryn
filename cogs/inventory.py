@@ -2,9 +2,9 @@ import discord
 from discord.ext import commands
 from discord import app_commands
 
-from models.item import item_manager
+from models.data.item import item_manager
 from models.inventory import Inventory
-from context import GUILD_AK_BESIM, GUILD_TH_HAVEN
+from configuration import GUILD_AK_BESIM, GUILD_TH_HAVEN
 
 inventory_img = "https://cdn.discordapp.com/attachments/1193049715638538283/1481102388021690530/inventory_img.png"
 
@@ -22,10 +22,8 @@ class InventoryCog(commands.Cog):
 
         if inventory:
             for item_id, quantity in inventory.items():
-                item = item_manager.get_item(item_id)
-                item_name = item.get("item_name", item_id)
-
-                item_descriptions.append(f"{item_name} x{quantity}")
+                item = item_manager.get(item_id)
+                item_descriptions.append(f"{item.name} x{quantity}")
         else:
             item_descriptions.append("*尚未擁有任何物品*")
         

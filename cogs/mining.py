@@ -4,7 +4,7 @@ from discord import app_commands
 
 from interface.region.menu import RegionEmbed, RegionView
 
-from context import GUILD_TH_HAVEN, GUILD_AK_BESIM
+from configuration import GUILD_TH_HAVEN, GUILD_AK_BESIM
 
 class MiningCog(commands.Cog):
     def __init__(self, bot):

@@ -19,7 +19,7 @@ class RegionEmbed(discord.Embed):
         self.color = discord.Color.gold()
     
         current_region = Player.get_region(user_id)
-        region = region_manager.get_region(current_region)
+        region = region_manager.get(current_region)
 
         self.add_field(name="你目前在：", value=region.name, inline=False)
 
@@ -32,7 +32,7 @@ class RegionView(discord.ui.View):
 class RegionOption(discord.ui.Select):
     def __init__(self):
 
-        regions = region_manager.get_all_regions()
+        regions = region_manager.get_all()
 
         options = []
         for region in regions:
@@ -47,7 +47,7 @@ class RegionOption(discord.ui.Select):
         )
 
     async def callback(self, interaction: discord.Interaction):
-        region = region_manager.get_region(self.values[0])
+        region = region_manager.get(self.values[0])
         player_name = interaction.user.display_name
         region_name = region.name
 

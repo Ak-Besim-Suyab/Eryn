@@ -1,13 +1,13 @@
 """
 這個檔案負責定義戰利品表 (Loot) 以及戰利品管理器 (LootManager)
+這裡會對抽取的物品進行驗證，預防無效的物品被回傳
 """
 import random
 from dataclasses import dataclass, field
 from models.type import LootType
-from cores.loader import JsonLoader
+from models.data.item import item_manager
+from cores.manager import Manager
 from cores.logger import logger
-
-loot_path = "assets/loots"
 
 """
 這裡定義戰利品入口
@@ -16,6 +16,7 @@ item: 這裡會指示物品 ID, 調用管理器並傳入以獲得對應物件
 min: 掉落物最小值，預設為 1
 max: 掉落物最大值，預設為 1
 """
+
 @dataclass
 class Entry:
     type: str
@@ -36,56 +37,24 @@ class Loot:
             self.entries = [Entry(**entry) for entry in self.entries]
 
 
-class LootManager:
+class LootManager(Manager[Loot]):
     def __init__(self):
-        self._loots: dict[str, Loot] = {}
-        self._load()
-
-    def _load(self):
-        raw_data = JsonLoader.load(loot_path)
-
-        # 檢查資料是否有被讀取
-        if not raw_data:
-            logger.error(f"找不到資料夾: {loot_path}")
-            return
-        
-        total_files = 0
-        
-        for filename, data in raw_data.items():
-
-            # 檢查資料格式是否正確
-            if not isinstance(data, dict):
-                logger.error(f"{filename} 的 JSON 格式出現錯誤")
-                continue
-            
-            try:
-                loot = Loot(**data)
-                self._loots[loot.id] = loot
-                total_files += 1
-                logger.info(f"載入 {filename}.json 檔案成功")
-
-            except TypeError as e:
-                logger.error(f"{filename} 的 JSON 格式與 Loot 類別不相容: {e}")
-                continue
-        
-        logger.info(f"資料載入完畢，總共載入 {total_files} 個檔案")
-
-    def get_loot(self, loot_id: str) -> Loot | None:
-        return self._loots.get(loot_id)
-
-    def get_all_loots(self) -> list[Loot]:
-        return list(self._loots.values())
-
+        super().__init__(
+            model = Loot, 
+            path = "assets/loots"
+        )
+        self.max_depth = 5
 
     def roll(self, loot_id: str, depth: int = 0) -> dict[str, int]:
 
         result = {}
 
-        if depth > 5:
+        # 這裡是防呆機制，基於朝狀戰利品結構，如果意外讓戰利品陷入遞迴時，超過指定深度會停止執行並回報錯誤。
+        if depth > self.max_depth:
             logger.warning(f"掉落表 {loot_id} 的遞迴深度超過限制，可能存在循環引用，需要檢查掉落表，已停止繼續執行。")
             return result
 
-        loot = self.get_loot(loot_id)
+        loot = self.get(loot_id)
         if not loot or not loot.entries:
             return result
  
@@ -97,10 +66,17 @@ class LootManager:
 
         match record.type:
             case LootType.ITEM:
+                # 這裡對物品進行驗證，若出現無效的物品，回報錯誤並跳過處理
+                if item_manager.get(record.id) is None:
+                    logger.error(f"掉落表 {loot_id} 中的條目 {record.id} 有無效的物品 ID {record.id}, 已跳過。")
+                    return result
+                
                 amount = random.randint(record.min, record.max)
                 result[record.id] = result.get(record.id, 0) + amount
+                
             case LootType.LOOT:
                 nested_result = self.roll(record.id, depth + 1)
+
                 for item_id, amount in nested_result.items():
                     result[item_id] = result.get(item_id, 0) + amount
             case _:

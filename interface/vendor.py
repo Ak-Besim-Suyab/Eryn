@@ -1,8 +1,10 @@
 import discord
-from systems.shop import Shop
+from models.data.shop import Shop
 
 from models.player import Player
 from models.inventory import Inventory
+from models.data.item import item_manager
+from models.data.shop import shop_manager
 
 vendor_portrait = "https://cdn.discordapp.com/attachments/1193049715638538283/1480680097353826447/vendor_portrait.png"
 
@@ -31,9 +33,16 @@ class VendorView(discord.ui.View):
 
 class VendorOption(discord.ui.Select):
     def __init__(self):
-        self.shop = Shop("vendor")
+        shop  = shop_manager.get("vendor")
 
-        options = self.shop.get_options()
+        options = []
+        for item in shop.item_list:
+            item_ = item_manager.get(item)
+            option = discord.SelectOption(
+                label=item_.name,
+                value=item_.id,
+            )
+            options.append(option)
 
         super().__init__(
             placeholder="選擇要購買的物品", 
@@ -60,18 +69,16 @@ class VendorOption(discord.ui.Select):
 
         # 這裡要補上如果金幣不足時的判斷
         
-        for item_id in self.values:
-            item = self.shop.get_item(item_id)
-            item_name = item.get("item_name")
-            item_price = item.get("price")
+        for item in self.values:
+            item_ = item_manager.get(item)
 
-            description = f"{item_name}"
+            description = f"{item_.image}{item_.name} x1"
             descriptions.append(description)
 
-            price += item_price
+            price += item_.price
 
-            Inventory.add_item(interaction.user.id, item_id)
-            Player.remove_balance(interaction.user.id, item_price)
+            Inventory.add_item(interaction.user.id, item_.id, 1)
+            Player.remove_balance(interaction.user.id, item_.price)
 
         player_embed.add_field(name="獲得物品：", value="\n".join(descriptions), inline=False)
         player_embed.add_field(name="費用：", value=f"-{price} 金幣", inline=False)

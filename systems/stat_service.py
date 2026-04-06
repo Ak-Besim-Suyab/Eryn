@@ -3,8 +3,6 @@ import json
 from pathlib import Path
 
 from models.player import Player
-from models.inventory import Inventory
-from models.item import item_manager
 
 class StatService:
 
@@ -12,8 +10,6 @@ class StatService:
         player = Player.get_or_create_player(interaction.user.id)
         stat = player.stats.get()
         houses = self.get_houses(interaction)
-
-        inventory = Inventory.get_inventory(interaction.user.id)
 
         lines = [
             f"等級：{player.level}",
@@ -33,15 +29,6 @@ class StatService:
         else:
             house_description.append("- *尚未擁有任何小屋*")
 
-        # 背包敘述
-        inventory_description = []
-
-        for item_id, quantity in inventory.items():
-            item = item_manager.get_item(item_id)
-            item_name = item.get("item_name", item_id)
-
-            inventory_description.append(f"{item_name} x{quantity}")
-
         # 印出訊息
         embed = discord.Embed()
         embed.description = "\n".join(lines)
@@ -50,7 +37,6 @@ class StatService:
         embed.set_author(name = interaction.user.display_name, icon_url = interaction.user.avatar.url)
 
         embed.add_field(name = "已擁有的小屋：", value = "\n".join(house_description), inline = False)
-        embed.add_field(name = "背包：", value = "\n".join(inventory_description), inline = False)
 
         await interaction.response.send_message(embed = embed, ephemeral = True)
 

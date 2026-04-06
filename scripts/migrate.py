@@ -2,7 +2,7 @@
 這是個簡單的遷移腳本，用於修改特定的欄位名稱與值
 """
 from playhouse.migrate import *
-from models.generic import db
+from configuration import db
 from models.player import Player
 
 # 這裡假設你底層使用的是 SQLite

@@ -2,7 +2,7 @@ import os, sys, traceback
 
 from dotenv import load_dotenv
 
-from context import TH_HAVEN
+from configuration import TH_HAVEN
 
 from bot import Elin
 from cores.logger import logger
