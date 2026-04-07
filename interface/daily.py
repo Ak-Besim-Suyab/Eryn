@@ -3,22 +3,6 @@ import discord
 from systems.reward_service import RewardService
 from systems.stat_service import StatService
 
-class DailyEmbed(discord.Embed):
-    def __init__(self):
-        super().__init__()
-
-        description = [
-            "咪！旅人可以在每天 12 點過後，點擊下方的按鈕進行簽到！",
-            "",
-            "> 點擊「狀態」可以查看個人狀態",
-            "> 點擊「排名」可以查看等級與經驗值排名",
-        ]
-
-        self.title = "每日簽到"
-        self.description = "\n".join(description)
-        self.color = discord.Color.gold()
-
-
 class DailyView(discord.ui.View):
     def __init__(self):
         super().__init__(timeout=None)

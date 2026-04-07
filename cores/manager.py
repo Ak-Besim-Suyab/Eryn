@@ -1,5 +1,5 @@
 from typing import TypeVar, Generic, Type
-from cores.loader import JsonLoader
+from cores.loader import AssetLoader
 from cores.logger import logger
 
 T = TypeVar('T')
@@ -16,7 +16,7 @@ class Manager(Generic[T]):
         self._load()
     
     def _load(self):
-        raw_data = JsonLoader.load(self._path)
+        raw_data = AssetLoader.load(self._path)
         if not raw_data:
             logger.error(f"找不到資料夾: {self._path}")
             return

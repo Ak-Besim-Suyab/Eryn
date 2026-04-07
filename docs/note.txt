@@ -52,3 +52,21 @@ models/data
 - 資料庫物件，包含資料管理器
 systems
 - 邏輯物件
+
+Template Rendering 模板渲染
+Data Binding 資料綁定
+Edge Case Testing 邊界測試
+Explicit Design 顯式設計
+
+embed 格式
+
+add_field
+set_author
+set_image
+
+{
+    "author": {
+        "name": name
+        "icon_url": icon_url
+    }
+}

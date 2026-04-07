@@ -37,8 +37,8 @@ class Status(Model):
                 logger.warning(f"找不到狀態 {status_id}")
                 return
 
-            if status.stack + quantity > status_data.max_stack:
-                status.stack = status_data.max_stack
+            if status.stack + quantity > status_data.stack.max:
+                status.stack = status_data.stack.max
             else:
                 status.stack += quantity
             status.save()

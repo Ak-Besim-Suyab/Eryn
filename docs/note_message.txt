@@ -1,0 +1,86 @@
+關於輸出訊息的框架
+
+訊息資料保存於 assets/messages
+訊息格式為 .yaml .yml
+
+yaml 撰寫格式:
+
+title: title
+description: |
+  this is message.
+  this is another message"
+color: gold
+
+備註 -
+title 可以不寫, 預設為空字串
+description 可以不寫, 預設為空字串
+color 可以不寫, 預設為 gold, 對應 discord.Color.gold()
+color 目前實作以下類別:
+ - gold (default)
+ - dark_gold
+
+冒號 (:) 和連字號 (-) 後需要加 1 個半形空格
+縮排需要加 2 個半形空格
+縮排只能用空格，不能使用 tab 鍵
+字串可以加上管線符號 (|) 表達換行
+
+# -----------------------------------------------------------------------------
+yaml 最終輸出結果是 dict, 因此基礎格式為 dict{str: Any}
+yaml 基礎格式:
+
+字典格式:
+name: apple
+price: 10
+
+result: {"name": "apple", price: 10}
+
+串列格式:
+items:
+  - sword
+  - shield
+  - helmet
+
+result: {"list": ["sword", "shield", "helmet"]}
+
+字串省略換行:
+message: |
+  this is message.
+  this is another message.
+# -----------------------------------------------------------------------------
+yaml 會自動判斷資料型態, 通常不需要加雙引號, 如果需要指名型態, 參考以下:
+
+string_example: 任何文字都不用加引號  # 字串 (String)
+force_string: "12345"               # 如果你想把數字強制當成字串，可以加上雙引號
+integer_example: 99                 # 整數 (Int)
+float_example: 3.14                 # 浮點數 (Float)
+boolean_true: true                  # 布林值 (Bool) - 也可以寫 True, TRUE
+boolean_false: false                # 布林值 (Bool)
+null_example: ~                     # 空值 (None/Null) - 寫 ~ 或是 null 都可以
+# -----------------------------------------------------------------------------
+
+設計思路：
+
+使用方式
+from models.data.message import message_manager
+message_manager.create(MessageType.DAILY_REWARD, interaction, payload)
+
+MessageType 是從資料拿出指定訊息結構, 以建構對應訊息
+interaction 需要思考是否為必要傳入參數, 或者併入 payload
+payload 需要接收的參數, 到時候會跟著訊息結構內需要接收的參數一起做資料檢查
+
+預想的檢查:
+message 需要至少 {experience: 10, level: 1}, 那 payload 也必須有這些參數傳入，否則報錯且不往下處理
+
+分支：
+
+title 
+目前標題可能會有以下幾種
+- 頭像簽名, 代表個人訊息 (目前仍然在考慮是否要繼續使用這個模式, 如果會使建構非常困難的話需要考慮放棄)
+- 字串, 僅傳入設定好的字串資料, 但尚未實作傳入參數的情況
+
+color 
+內建的方法或許已足夠應付所有訊息類別, 因此目前僅需要製作簡單的 get_color 即可
+
+author
+可能有以下幾種情況
+- 玩家 (應該也只會有玩家)

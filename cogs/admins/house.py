@@ -3,7 +3,7 @@ import json
 from discord.ext import commands
 from pathlib import Path
 
-from cores.loader import JsonLoader
+from cores.loader import AssetLoader
 from cores.logger import logger
 
 class AdminHouseCog(commands.Cog):
@@ -38,7 +38,7 @@ class AdminHouseCog(commands.Cog):
                 for member in guild.members:
                     path = Path(f"data/members/{member.id}.json")
                     if path.exists():
-                        data = JsonLoader.load(f"data/members/{member.id}.json")
+                        data = AssetLoader.load(f"data/members/{member.id}.json")
                         house = data.get("house")
                         if house and channel.id in house:
                             channel_leaved.remove(channel.id)
@@ -67,7 +67,7 @@ class AdminHouseCog(commands.Cog):
 
             if path.exists():
 
-                data = JsonLoader.load(f"data/members/{member.id}.json")
+                data = AssetLoader.load(f"data/members/{member.id}.json")
                 house = data.get("house")
 
                 if house:

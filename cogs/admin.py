@@ -3,10 +3,11 @@ from discord.ext import commands
 
 from cores.logger import logger
 
-from interface.daily import DailyEmbed, DailyView
-from interface.guide.menu import GuideEmbed, GuideView
+from interface.daily import DailyView
 from interface.role.announcement import RoleAnnouncementEmbed, RoleAnnouncementView
 from interface.season_event import SeasonEventView
+
+from models.message import message_manager
 
 VERIFY_CHANNEL = 1472379536187326464
 
@@ -14,31 +15,12 @@ class AdminCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command()
-    @commands.is_owner()
-    async def test(self, ctx: commands.Context):
-
-        descriptions = [
-            "`測試測試測試測試`"
-        ]
-
-        embed = discord.Embed()
-        embed.description = "\n".join(descriptions)
-        embed.color = discord.Color.gold()
-        embed.set_author(name=ctx.author.display_name, icon_url=ctx.author.avatar.url)
-        embed.add_field(name="普通文本", value="普通文本", inline=True)
-        embed.add_field(name="普通文本", value="普通文本", inline=True)
-        # embed.set_image(url="https://cdn.discordapp.com/attachments/1193049715638538283/1483857918532128808/college_of_arms_img.png")
-        embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/1193049715638538283/1479100041665839227/img_1.png")
-
-        await ctx.send(embed=embed)
-
 # daily message --------------------------------------------------------------
     @commands.command()
     @commands.is_owner()
     async def daily(self, ctx: commands.Context):
         
-        embed = DailyEmbed()
+        embed = message_manager.create("daily")
         view = DailyView()
 
         announcement_channel = self.bot.get_channel(VERIFY_CHANNEL)  # 替換為公告頻道的ID
@@ -71,13 +53,6 @@ class AdminCog(commands.Cog):
         embed = RoleAnnouncementEmbed()
         view = RoleAnnouncementView()
         await ctx.send(embed=embed, view=view)
-
-    @commands.command()
-    @commands.is_owner()
-    async def guide_book(self, ctx: commands.Context):
-        embed = GuideEmbed()
-        view = GuideView()
-        await ctx.send(embed=embed, view=view)  
 
 #----------------------------------------------------
 

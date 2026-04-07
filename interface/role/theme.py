@@ -1,6 +1,5 @@
 import discord
 
-from cores.loader import JsonLoader
 from cores.logger import logger
 
 from interface.role.image import RoleImage

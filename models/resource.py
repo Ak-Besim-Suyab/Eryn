@@ -24,7 +24,7 @@ class Resource:
     name: str
     min: int = 1
     max: int = 1
-    drops: list[Drop] = field(default_factory=list)
+    drops: list[Drop] = field(default_factory = list)
 
     def __post_init__(self):
         # 這裡是後處理，把宣告後的物件裡的掉落表 (loots) 轉換成 Loots 類別的實例，然後再放回去

@@ -2,25 +2,6 @@ import discord
 
 from interface.trade import TradeEmbed, TradeView
 
-market_img = "https://cdn.discordapp.com/attachments/1193049715638538283/1480695774491967539/market_img.png"
-
-class MarketEmbed(discord.Embed):
-    def __init__(self):
-        super().__init__()
-
-        description = [
-            "> 這裡是海岸旁最喧囂的港口集市。",
-            "> 商品、攤販與人群盡收眼底，香料與海洋的味道飄散著。",
-            "> 有價值的事物可能就在某個不被照耀的角落。"
-        ]
-
-        self.title = "市集"
-        self.description = "\n".join(description)
-        self.color = discord.Color.gold()
-        self.add_field(name="", value="要做什麼？")
-        self.set_image(url=market_img)
-
-
 class MarketView(discord.ui.View):
     def __init__(self):
         super().__init__(timeout=300)
