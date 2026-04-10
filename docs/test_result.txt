@@ -1,0 +1,26 @@
+2026/4/8
+
+檢測 -
+對 "models/message.py" in create 以下段落進行測試:
+
+    # 防止同時產生 title 和 author, 加上對 has_author 的判斷.
+    if message.title and not message.has_author:
+        match message.title_type:
+            case TitleType.DEFAULT:
+                embed.title = message.title.format(**payload)
+            case TitleType.PLAYER:
+                    embed.title = interaction.user.display_name
+            case TitleType.BOT:
+                    embed.title = interaction.client.user.display_name
+
+測試 - 
+使用 assets/messages/test_no_intercation.yaml, 將 title_type = player 但在故意不傳入 intercation 的情況執行
+
+測試結果 -
+attributeError: 'NoneType' object has no attribute 'user'
+
+分析 - 
+NoneType 導致系統無法取得 user 物件, 導致訊息沒有發送出去
+
+修正 - 
+在 create() 中, 傳入 interaction 的段落加上 try except 或 if 來避免訊息發送失敗

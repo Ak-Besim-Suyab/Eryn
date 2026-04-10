@@ -6,7 +6,7 @@
 現在的設計思路為：為 status data 新增一個屬性，用來判定滿層數後會更換或新增、移除什麼狀態
 """
 from peewee import *
-from configuration import db
+from config import db
 from models.player import Player
 from models.type import StatusType
 from cores.logger import logger
@@ -68,11 +68,6 @@ class Status(Model):
                 status.save()
                 logger.debug(f"成功為 {player_id} 移除 {quantity} 層 {status_id} 狀態")
                 return True
-    
-    @classmethod
-    def update(cls):
-        # 這裡會實作狀態效果
-        pass
 
 def init_status_database():
     with db:

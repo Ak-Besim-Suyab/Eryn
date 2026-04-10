@@ -47,20 +47,25 @@ player = Player.get(Player.id == player_id)
 player = Player.get_by_id(player_id)
 
 cores
-- 定義通用屬性、方法的父類，通用工具
-models/data
-- 資料庫物件，包含資料管理器
+- 放底層邏輯
+models
+- 放資料庫物件
 systems
-- 邏輯物件
+- 放業務邏輯
 
 Template Rendering 模板渲染
 Data Binding 資料綁定
 Edge Case Testing 邊界測試
 Explicit Design 顯式設計
+MVC（Model-View-Controller）架構
+ECS（Entity-Component-System）架構
+Decoupling 解耦
+Separation of Concerns 關注點分離
+
 
 embed 格式
 
-add_field
+add_field   
 set_author
 set_image
 

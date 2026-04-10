@@ -1,6 +1,8 @@
 import discord
 from systems.events.season import season_event
 
+from models.message import message_manager
+
 class SeasonEventView(discord.ui.View):
     def __init__(self):
         super().__init__(timeout=None)
@@ -15,16 +17,7 @@ class SeasonEventView(discord.ui.View):
 
     @discord.ui.button(label="這是什麼？", style=discord.ButtonStyle.secondary, custom_id="season_event_help")
     async def help(self, interaction: discord.Interaction, button: discord.ui.Button):
-        lines = [
-            "咪，這是個糟糕版的限時活動！",
-            "你可以簡單地按按鈕來獲得獎勵，並藉此緬懷我們的勇士；按鈕可以重複使用，但有短暫的冷卻時間",
-        ]
-
-        embed = discord.Embed()
-        embed.title = "Elin"
-        embed.description = "\n".join(lines)
-        embed.color = discord.Color.gold()
-        embed.set_thumbnail(url=interaction.client.user.avatar.url)
+        embed = message_manager.create("season_event_intro", interaction=interaction)
         await interaction.response.send_message(embed=embed, ephemeral=True)
 
 

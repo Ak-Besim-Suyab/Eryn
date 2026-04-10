@@ -12,3 +12,12 @@ class SkillType(str, Enum):
 class StatusType(str, Enum):
     UNLUCKY = "unlucky"
     TWIST_OF_FATE = "twist_of_fate"
+
+class TitleType(str, Enum):
+    DEFAULT = "default"
+    PLAYER = "player"
+    BOT = "bot"
+
+class ColorType(str, Enum):
+    GOLD = "gold"
+    DARK_GOLD = "dark_gold"

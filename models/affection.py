@@ -1,7 +1,7 @@
 from peewee import *
 from models.player import Player
 from models.dummy import Dummy
-from configuration import db 
+from config import db 
 
 class Affection(Model):
     # affection in Player.affections:

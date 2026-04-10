@@ -1,5 +1,5 @@
 from peewee import *
-from configuration import db
+from config import db
 
 from datetime import datetime
 

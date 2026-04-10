@@ -1,5 +1,5 @@
 from peewee import *
-from configuration import db
+from config import db
 from models.player import Player
 
 from cores.logger import logger

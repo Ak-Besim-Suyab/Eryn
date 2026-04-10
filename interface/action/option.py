@@ -1,6 +1,6 @@
 import discord
 
-from systems.skill.garden import garden_skill
+from systems.commands.garden import garden_skill
 
 class ActionOption(discord.ui.Select):
     def __init__(self):

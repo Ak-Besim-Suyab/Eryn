@@ -4,7 +4,7 @@ from discord import app_commands
 
 from interface.menu import MenuEmbed, MenuView
 
-from configuration import GUILD_TH_HAVEN, GUILD_AK_BESIM, ADMIN_BOOLEAN
+from config import GUILD_TH_HAVEN, GUILD_AK_BESIM, ADMIN_BOOLEAN
 
 class PlayCog(commands.Cog, name="玩"):
     def __init__(self, bot):

@@ -84,3 +84,21 @@ color
 author
 可能有以下幾種情況
 - 玩家 (應該也只會有玩家)
+
+title 有四種情況:
+空標題 - None
+普通標題 - title: str
+玩家標題 - title = interaction.user.display_name
+機器人標題 - title = interaction.client.user.display_name
+
+set_author 一定要有 name 傳入, 實測沒有的話完全不會顯示出來
+
+thumbnail 也可能有一些情況:
+- 沒有運行
+- 有指定的圖片 url, set_thumbnail(url=url)
+- 不指定圖片，使用玩家圖片, set_thumbnail(url=interaction.user.display_avatar.url)
+- 不指定圖片，使用機器人圖片, set_thumbnail(url=interaction.client.user.display_avatar.url)
+
+thumbnail:
+  type: str = None
+  url: url

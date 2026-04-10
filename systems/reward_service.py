@@ -4,7 +4,7 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 
 from models.player import Player
-
+from models.message import message_manager
 from cores.logger import logger
 
 taiwan_timezone = ZoneInfo("Asia/Taipei")
@@ -38,15 +38,12 @@ class RewardService:
         stat.total_daily_claims +=1
         stat.save()
         
-        embed = discord.Embed()
-        embed.description = "簽到成功，獲得每日獎勵！"
-        embed.color = discord.Color.gold()
-        
-        embed.set_author(name=interaction.user.display_name, icon_url=interaction.user.display_avatar.url)
-        embed.add_field(name="每日獎勵", value="50 經驗值", inline=False)
-        embed.add_field(name="累計簽到", value=f"{stat.total_daily_claims} 天", inline=False)
-        embed.set_footer(text="咪很開心！每天都要記得來領取獎勵喵！")
+        payload = {
+            "experience": daily_experience,
+            "total_daily_claims": stat.total_daily_claims
+        }
+
+        embed = message_manager.create("daily_claim", payload=payload, interaction=interaction)
+        await interaction.response.send_message(embed=embed, ephemeral=True)
 
         logger.info(f"{interaction.user.display_name} 已進行簽到，總天數：{stat.total_daily_claims}")
-
-        await interaction.response.send_message(embed=embed, ephemeral=True)

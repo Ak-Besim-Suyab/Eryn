@@ -6,7 +6,7 @@ from interface.season_event import SeasonEventView
 from interface.role.announcement import RoleAnnouncementView
 
 from models import init_all_databases
-from configuration import GUILD_TH_HAVEN, GUILD_AK_BESIM
+from config import GUILD_TH_HAVEN, GUILD_AK_BESIM
 from cores.logger import logger
 
 intents = discord.Intents.default()
@@ -33,6 +33,7 @@ class Elin(commands.Bot):
             "cogs.inventory",
             "cogs.region",
             "cogs.play",
+            "cogs.setting",
             "cogs.listeners.join",
             "cogs.listeners.message",
             "cogs.admins.member",
@@ -50,6 +51,8 @@ class Elin(commands.Bot):
 
         synced_haven = await self.tree.sync(guild=GUILD_TH_HAVEN)
         synced_besim = await self.tree.sync(guild=GUILD_AK_BESIM)
+        synced_global = await self.tree.sync()
 
         logger.info(f'Synced {len(synced_haven)} commands to guild Th Haven')
         logger.info(f'Synced {len(synced_besim)} commands to guild Ak Besim')
+        logger.info(f'Synced {len(synced_global)} commands to Global')

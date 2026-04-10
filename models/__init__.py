@@ -1,10 +1,12 @@
-from .player import init_player_database
-from .statistic import init_statistic_database
-from .dummy import init_dummy_database
-from .affection import init_affection_database
-from .skill import init_skill_database
-from .inventory import init_inventory_database
-from .status import init_status_database
+from .player import *
+from .statistic import *
+from .dummy import *
+from .affection import *
+from .skill import *
+from .inventory import *
+from .message import *
+from .status import *
+from .guild import *
 
 
 def init_all_databases():
@@ -38,6 +40,9 @@ def init_all_databases():
     # 6. 背包系統表（依賴 Player）
     init_inventory_database()
     print("[Database] ✅ Inventory 表已初始化")
+
+    init_guild_database()
+    print("[Database] ✅ Guild 表已初始化")
     
     print("[Database] ✅ 所有表初始化完成！")
 

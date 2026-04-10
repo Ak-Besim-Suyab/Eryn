@@ -4,7 +4,7 @@ from discord import app_commands
 
 from interface.region.menu import RegionEmbed, RegionView
 
-from configuration import GUILD_TH_HAVEN, GUILD_AK_BESIM
+from config import GUILD_TH_HAVEN, GUILD_AK_BESIM
 
 class RegionCog(commands.Cog):
     def __init__(self, bot):

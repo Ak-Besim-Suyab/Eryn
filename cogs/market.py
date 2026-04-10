@@ -6,7 +6,7 @@ from interface.market import MarketView
 
 from models.message import message_manager
 
-from configuration import GUILD_TH_HAVEN, GUILD_AK_BESIM
+from config import GUILD_TH_HAVEN, GUILD_AK_BESIM
 
 class MarketCog(commands.Cog):
     def __init__(self, bot):

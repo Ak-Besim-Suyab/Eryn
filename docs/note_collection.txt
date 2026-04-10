@@ -1,0 +1,11 @@
+from collections import Counter
+
+Counter 是更強大的資料處理物件
+它會自動將 dict 的鍵值合併
+
+比如
+{"weeds": 1, "red_rose": 1}
+{"weeds": 2, "yellow_rose": 1}
+
+會合併成
+{"weeds" 3, "red_rose": 1, "yellow_rose": 1}

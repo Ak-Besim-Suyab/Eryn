@@ -1,5 +1,5 @@
 from peewee import *
-from configuration import db
+from config import db
 
 class Dummy(Model):
     id = IntegerField(primary_key = True)

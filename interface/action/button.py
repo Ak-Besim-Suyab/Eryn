@@ -1,5 +1,5 @@
 import discord
-from systems.skill.garden import garden_skill
+from systems.commands.garden import garden_skill
 
 class GardenButton(discord.ui.Button):
     def __init__(self):

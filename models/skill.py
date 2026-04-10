@@ -2,7 +2,7 @@ from peewee import *
 
 from models.player import Player
 from models.type import SkillType
-from configuration import db
+from config import db
 
 class Skill(Model):
     player = ForeignKeyField(Player, backref='skills', on_delete='CASCADE')

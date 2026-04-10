@@ -4,7 +4,7 @@ from discord import app_commands
 
 from interface.role.main import RoleImage, RoleEmbed, RoleView
 
-from configuration import GUILD_TH_HAVEN, GUILD_AK_BESIM
+from config import GUILD_TH_HAVEN, GUILD_AK_BESIM
 
 class Role(commands.Cog):
     def __init__(self, bot):

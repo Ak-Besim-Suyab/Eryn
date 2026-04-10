@@ -4,7 +4,7 @@ from discord import app_commands
 
 from systems.stat_service import StatService
 
-from configuration import GUILD_TH_HAVEN, GUILD_AK_BESIM
+from config import GUILD_TH_HAVEN, GUILD_AK_BESIM
 
 class StatCog(commands.Cog):
     def __init__(self, bot):
