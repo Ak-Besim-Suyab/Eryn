@@ -5,7 +5,11 @@ from pathlib import Path
 from models.player import Player
 from models.message import message_manager 
 
+from utils import Embed
+
 class StatService:
+
+    @Embed.emit("stat", ephemeral=True)
     async def view(self, interaction: discord.Interaction):
         player = Player.get_or_create_player(interaction.user.id)
         stat = player.stats.get()
@@ -28,10 +32,7 @@ class StatService:
             "house_value": "\n".join(house_value)
         }
 
-        # 印出訊息
-        embed = message_manager.create("stat", payload=payload, interaction=interaction)
-
-        await interaction.response.send_message(embed=embed, ephemeral=True)
+        return payload
 
     def get_houses(self, interaction: discord.Interaction):
         file = Path(f"data/members/{interaction.user.id}.json")

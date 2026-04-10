@@ -21,7 +21,7 @@ from cores.logger import logger
 class Embed:
 
     @classmethod
-    def emit(cls, message_id: str):
+    def emit(cls, message_id: str, ephemeral: bool = False):
         def decorator(func):
             @wraps(func)
             async def wrapper(command, interaction: discord.Interaction, *args, **kwargs):
@@ -31,7 +31,7 @@ class Embed:
                     return
 
                 embed = cls.create(message_id, payload, interaction)
-                await interaction.response.send_message(embed=embed)
+                await interaction.response.send_message(embed=embed, ephemeral=ephemeral)
                 
                 return payload
             
