@@ -1,7 +1,7 @@
 from peewee import *
 
 from models.player import Player
-from models.type import SkillType
+from data.type import ActionType
 from config import db
 
 class Skill(Model):
@@ -17,7 +17,7 @@ class Skill(Model):
         )
     
     @classmethod
-    def add_experience(cls, player_id: int, name: SkillType, amount: int) -> dict:
+    def add_experience(cls, player_id: int, name: ActionType, amount: int) -> dict:
         skill, _ = cls.get_or_create(player_id = player_id, name = name)
         
         skill.experience += amount

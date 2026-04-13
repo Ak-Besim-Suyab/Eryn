@@ -1,54 +1,71 @@
 """
-這個類別用於推送最後需要印出 Embed 訊息的方法
+這個裝飾器用於推送最後需要印出 Embed 訊息的方法
 被賦予裝飾器的方法若訊息類別有對應的參數, 則需要回傳 payload, 將參數傳回訊息結構
 這裡不參與任何邏輯處理
-
-範例: 
-from utils import embed
-
-@embed.emit("daily")
-async def daily(interaction: discord.Interaction):
-    ...
-    return payload
 """
 import discord
-from functools import wraps
+
 from models import message_manager
-from models.type import TitleType, ColorType
+from data.type import TitleType, ColorType
 from cores.logger import logger
+from utils.managers import view_manager
+from data.event import Event
+from data.payload import Payload
 
-
-class Embed:
-
+class Messenger:
     @classmethod
-    def emit(cls, message_id: str, ephemeral: bool = False):
-        def decorator(func):
-            @wraps(func)
-            async def wrapper(command, interaction: discord.Interaction, *args, **kwargs):
+    async def send(cls, event: Event, interaction: discord.Interaction, ephemeral: bool = False):
 
-                payload = await func(command, interaction, *args, **kwargs)
-                if not payload:
-                    return
+        if not isinstance(event, Event):
+            logger.error(f"event 類別錯誤, event: {event}")
+            return
 
-                embed = cls.create(message_id, payload, interaction)
-                await interaction.response.send_message(embed=embed, ephemeral=ephemeral)
+        embed, view = cls.create(event.payload.message.title, event.payload, interaction)
+
+        await interaction.response.send_message(
+            embed = embed,
+            view = view,
+            ephemeral = ephemeral
+        )
+
+    # @classmethod
+    # def send(cls, message_id: str, ephemeral: bool = False):
+    #     def decorator(func):
+    #         @wraps(func)
+    #         async def wrapper(command, interaction: discord.Interaction, *args, **kwargs):
+
+    #             payload = await func(command, interaction, *args, **kwargs)
+    #             if payload is False:
+    #                 return
+    #             if payload is None:
+    #                 payload = {}
+
+    #             embed, view = cls.create(message_id, payload, interaction)
+
+    #             await interaction.response.send_message(
+    #                 embed = embed,
+    #                 view = view,
+    #                 ephemeral = ephemeral
+    #             )
                 
-                return payload
+    #             return payload
             
-            return wrapper
+    #         return wrapper
         
-        return decorator
+    #     return decorator
     
     @classmethod
-    def create(cls, message_id: str, payload: dict = None, interaction: discord.Interaction = None) -> discord.Embed:
+    def create(cls, message_id: str, payload: Payload = None, interaction: discord.Interaction = None) -> discord.Embed:
 
         message = message_manager.get(message_id)
         if not message:
             logger.error(f"message 找不到格式內容, message id: {message_id}")
             return
 
-        if not payload:
+        if payload is None:
             payload = {}
+        else:
+            payload = payload.to_dict()
 
         embed = discord.Embed()
 
@@ -105,7 +122,15 @@ class Embed:
         if message.footer:
             embed.set_footer(text=message.footer.format(**payload))
 
-        return embed
+        # view --
+        view = discord.utils.MISSING
+        if message.view:
+            view_object = view_manager.get(message.view)
+
+            if view_object:
+                view = view_object()
+
+        return embed, view
 
     @classmethod
     def get_color(cls, color: str) -> discord.Color:
@@ -115,3 +140,13 @@ class Embed:
                 return discord.Color.gold()
             case ColorType.DARK_GOLD:
                 return discord.Color.dark_gold()
+    
+    @classmethod
+    def get_style(cls, style: str) -> discord.ButtonStyle:
+        """這個方法會根據字串獲取對應 discord.ButtonStyle"""
+        match style:
+            case "primary":
+                return discord.ButtonStyle.primary
+
+_instance = Messenger()
+send = _instance.send

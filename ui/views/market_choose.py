@@ -2,34 +2,16 @@ import discord
 
 from interface.vendor import VendorEmbed, VendorView
 
-class TradeEmbed(discord.Embed):
-    def __init__(self, interaction: discord.Interaction):
-        super().__init__()
+class MarketChooseView(discord.ui.View):
+    id = "market_choose"
 
-        description = [
-            "> 你在街道上漫步行進，奶酪與蜂蜜陳列、布袍與獸皮成堆。",
-            "> 數個攤販正在出售的物品讓你很感興趣，你試著湊近點並開始他們詢問。"
-        ]
-
-        value = [
-            "- 雜貨商",
-            "- 紋章官（身分組）",
-        ]
-
-        self.title = interaction.user.display_name
-        self.description = "\n".join(description)
-        self.color = discord.Color.gold()
-        self.add_field(name="選擇以下對象開始進行交易：", value="\n".join(value))
-
-
-class TradeView(discord.ui.View):
     def __init__(self):
         super().__init__(timeout=300)
 
-        self.add_item(TradeOption())
+        self.add_item(MarketChooseOption())
 
 
-class TradeOption(discord.ui.Select):
+class MarketChooseOption(discord.ui.Select):
     def __init__(self):
         options = [
             discord.SelectOption(label="雜貨商", description="在集市中購買雜物"),

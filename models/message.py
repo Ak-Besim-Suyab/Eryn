@@ -1,6 +1,9 @@
+"""
+這個模塊
+"""
 from dataclasses import dataclass, field
 
-from models.type import TitleType, ColorType
+from data.type import TitleType, ColorType
 
 from cores.manager import Manager
 from cores.logger import logger
@@ -31,6 +34,8 @@ class Message:
 
     fields: list[Field] = field(default_factory = list)
     thumbnail: Thumbnail | dict = None
+
+    view: str = None
 
     has_author: bool = False
 

@@ -61,7 +61,9 @@ MVC（Model-View-Controller）架構
 ECS（Entity-Component-System）架構
 Decoupling 解耦
 Separation of Concerns 關注點分離
-
+中介編程 (Metaprogramming)
+內省 (Introspection)
+Response Schema (回應結構)
 
 embed 格式
 
@@ -75,3 +77,31 @@ set_image
         "icon_url": icon_url
     }
 }
+
+
+button = discord.ui.Button()
+
+有幾個方向要解決:
+宣告時要傳入什麼 label, style, emoji.. etc. 參數
+最重要的 button.callback
+
+構思:
+- 如何在 message.yaml 裡標註 view 物件內容並取用？
+
+解決方案:
+- 獨立宣告 view 物件, 並使用 view_manager 於 bot.py 初始化時註冊
+- 保存訊息格式的 message.yaml 標註要存取的 view 物件 id, 在 boardcast.create() 從 view_manager 取出
+
+優勢:
+- button 直接在 view 物件裡寫好, 不需要額外在 message.yaml 裡標註
+
+
+構思:
+- 如何統一輸出的 payload？
+
+方案:
+- 讓單元運算回傳結果再打包, 如 result = Player.add_experience(player_id, experience)
+
+
+職責劃分:
+action.execute 本身只計算執行這個動作的邏輯，不會包含結算與輸出訊息 (這兩個計算派出去給別的邏輯處理)

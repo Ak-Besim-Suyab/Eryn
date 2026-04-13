@@ -8,7 +8,7 @@
 from peewee import *
 from config import db
 from models.player import Player
-from models.type import StatusType
+from data.type import StatusType
 from cores.logger import logger
 
 from .data.status import status_manager

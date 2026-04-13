@@ -7,6 +7,7 @@ from models.player import Player
 from models.message import message_manager
 from cores.logger import logger
 
+
 taiwan_timezone = ZoneInfo("Asia/Taipei")
 
 class RewardService:
@@ -43,7 +44,6 @@ class RewardService:
             "total_daily_claims": stat.total_daily_claims
         }
 
-        embed = message_manager.create("daily_claim", payload=payload, interaction=interaction)
-        await interaction.response.send_message(embed=embed, ephemeral=True)
-
         logger.info(f"{interaction.user.display_name} 已進行簽到，總天數：{stat.total_daily_claims}")
+
+        return payload

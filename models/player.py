@@ -42,10 +42,10 @@ class Player(Model):
     @classmethod
     def add_balance(cls, user_id: int, amount: int):
         with db.atomic():
-            # get_or_create returns (instance, created)
             player, _ = cls.get_or_create(id=user_id)
             player.currency += amount
             player.save()
+        
 
     @classmethod
     def remove_balance(cls, user_id: int, amount: int):

@@ -1,68 +1,24 @@
 import discord
 from discord.ext import commands
+from discord import app_commands
 
 from cores.logger import logger
 
-from interface.daily import DailyView
-from interface.role.announcement import RoleAnnouncementEmbed, RoleAnnouncementView
-from interface.season_event import SeasonEventView
+# from interface.role.announcement import RoleAnnouncementEmbed, RoleAnnouncementView
+# from interface.season_event import SeasonEventView
 
-from models.message import message_manager
-
-VERIFY_CHANNEL = 1472379536187326464
+# from utils import Broadcast
 
 class AdminCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-# daily message --------------------------------------------------------------
-    @commands.command()
-    @commands.is_owner()
-    async def daily(self, ctx: commands.Context):
-        
-        embed = message_manager.create("daily")
-        view = DailyView()
-
-        announcement_channel = self.bot.get_channel(VERIFY_CHANNEL)  # 替換為公告頻道的ID
-        await announcement_channel.send(embed=embed, view=view)
-# ----------------------------------------------------------------------------
-
-    @commands.command()
-    @commands.is_owner()
-    async def season_event(self, ctx: commands.Context):
-        description = "\n".join([
-            "*「你們怎麼都打那麼久，我兩場就過了欸」-2026/3/5 14:30*",
-            "",
-            "　　　　　 🕯️紀念偉大的勇士 <@600603497330901004>🕯️",
-            "",
-            "> 點擊「緬懷」可以為勇士的英勇犧牲默哀，有機率功德爆發",
-        ])
-
-        embed = discord.Embed(color=discord.Color.gold())
-        embed.title = "限時活動"
-        embed.description = description
-        embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/1193049715638538283/1479100041665839227/img_1.png")
-
-        view = SeasonEventView()
-
-        await ctx.send(embed=embed, view=view)
-
-    @commands.command()
-    @commands.is_owner()
-    async def college_of_arms(self, ctx: commands.Context):
-        embed = RoleAnnouncementEmbed()
-        view = RoleAnnouncementView()
-        await ctx.send(embed=embed, view=view)
-
-#----------------------------------------------------
-
-    @commands.command()
-    @commands.is_owner()
-    async def show_voice_channel(self, ctx: commands.Context):
-        guild = ctx.guild
-        for channel in guild.channels:
-            if isinstance(channel, discord.VoiceChannel):
-                logger.info(f"印出語音頻道: {channel.name}")
+    # @commands.command()
+    # @commands.is_owner()
+    # async def college_of_arms(self, ctx: commands.Context):
+    #     embed = RoleAnnouncementEmbed()
+    #     view = RoleAnnouncementView()
+    #     await ctx.send(embed=embed, view=view)
 
 #----------------------------------------------------
 

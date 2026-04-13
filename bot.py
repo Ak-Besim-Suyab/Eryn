@@ -1,13 +1,19 @@
 import discord
 from discord.ext import commands
 
-from interface.daily import DailyView
-from interface.season_event import SeasonEventView
-from interface.role.announcement import RoleAnnouncementView
+# from interface.season_event import SeasonEventView
+# from interface.role.announcement import RoleAnnouncementView
+
+from ui.views import (
+    MarketView,
+    MarketChooseView,
+    DailyView
+    )
 
 from models import init_all_databases
-from config import GUILD_TH_HAVEN, GUILD_AK_BESIM
 from cores.logger import logger
+
+from utils.managers import view_manager
 
 intents = discord.Intents.default()
 intents.voice_states = True
@@ -39,20 +45,20 @@ class Elin(commands.Bot):
             "cogs.admins.member",
             "cogs.admins.house",
             "cogs.admins.test",
-            "cogs.skills.steal",
+            "cogs.admins.notice",
+            "cogs.actions.steal",
         ]
 
         for extension in extensions:
             await self.load_extension(extension)
 
         self.add_view(DailyView())
-        self.add_view(SeasonEventView())
-        self.add_view(RoleAnnouncementView())
+        # self.add_view(SeasonEventView())
+        # self.add_view(RoleAnnouncementView())
 
-        synced_haven = await self.tree.sync(guild=GUILD_TH_HAVEN)
-        synced_besim = await self.tree.sync(guild=GUILD_AK_BESIM)
+        view_manager.add(MarketView.id, MarketView)
+        view_manager.add(MarketChooseView.id, MarketChooseView)
+        view_manager.add(DailyView.id, DailyView)
+
         synced_global = await self.tree.sync()
-
-        logger.info(f'Synced {len(synced_haven)} commands to guild Th Haven')
-        logger.info(f'Synced {len(synced_besim)} commands to guild Ak Besim')
         logger.info(f'Synced {len(synced_global)} commands to Global')
