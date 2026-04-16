@@ -41,6 +41,7 @@ class DialogueView(discord.ui.View):
                 button.callback = self.get_callback(component.callback, button)
                 self.add_item(button)
 
+        # 保存設計
         if self.page == 1 or page.is_newtab:
             if interaction.response.is_done():
                 await interaction.followup.send(embed=embed, view=self)
