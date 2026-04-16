@@ -1,5 +1,5 @@
 from peewee import *
-from models.player import Player
+from models.player.model import Player
 from models.dummy import Dummy
 from config import db 
 

@@ -1,6 +1,6 @@
 import discord
 
-from models.player import Player
+from models.player.model import Player
 from models.region import region_manager
 from models.resource import resource_manager
 

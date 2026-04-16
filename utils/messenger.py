@@ -1,65 +1,41 @@
 """
-這個裝飾器用於推送最後需要印出 Embed 訊息的方法
-被賦予裝飾器的方法若訊息類別有對應的參數, 則需要回傳 payload, 將參數傳回訊息結構
-這裡不參與任何邏輯處理
+這個工具用於集中推送最後需要印出的 Embed, View 訊息
+通常該工具只會存在於 Cogs 內，將 interaction 留在邏輯外圍，盡可能不傳入更深層的邏輯處理
 """
 import discord
 
 from models import message_manager
-from data.type import TitleType, ColorType
 from cores.logger import logger
-from utils.managers import view_manager
+from ui.views import view_registry
+
+from data.type import TitleType, ColorType
 from data.event import Event
 from data.payload import Payload
 
 class Messenger:
+    """
+    印出訊息的主要入口
+    """
     @classmethod
     async def send(cls, event: Event, interaction: discord.Interaction, ephemeral: bool = False):
 
+    #sender: str # 訊息發送的主體，必須填入否則報錯，同時也用於判斷 player 與 non-player
         if not isinstance(event, Event):
             logger.error(f"event 類別錯誤, event: {event}")
             return
 
-        embed, view = cls.create(event.payload.message.title, event.payload, interaction)
+        embed, view = cls.create(event.payload, interaction)
 
-        await interaction.response.send_message(
-            embed = embed,
-            view = view,
-            ephemeral = ephemeral
-        )
+        await interaction.response.send_message(embed = embed, view = view, ephemeral = ephemeral)
 
-    # @classmethod
-    # def send(cls, message_id: str, ephemeral: bool = False):
-    #     def decorator(func):
-    #         @wraps(func)
-    #         async def wrapper(command, interaction: discord.Interaction, *args, **kwargs):
-
-    #             payload = await func(command, interaction, *args, **kwargs)
-    #             if payload is False:
-    #                 return
-    #             if payload is None:
-    #                 payload = {}
-
-    #             embed, view = cls.create(message_id, payload, interaction)
-
-    #             await interaction.response.send_message(
-    #                 embed = embed,
-    #                 view = view,
-    #                 ephemeral = ephemeral
-    #             )
-                
-    #             return payload
-            
-    #         return wrapper
-        
-    #     return decorator
-    
     @classmethod
-    def create(cls, message_id: str, payload: Payload = None, interaction: discord.Interaction = None) -> discord.Embed:
+    def create(cls, payload: Payload = None, interaction: discord.Interaction = None) -> discord.Embed:
 
-        message = message_manager.get(message_id)
+        message_name = payload.message.title
+        message = message_manager.get(message_name)
+
         if not message:
-            logger.error(f"message 找不到格式內容, message id: {message_id}")
+            logger.error(f"message 找不到格式內容, message id: {message_name}")
             return
 
         if payload is None:
@@ -125,7 +101,7 @@ class Messenger:
         # view --
         view = discord.utils.MISSING
         if message.view:
-            view_object = view_manager.get(message.view)
+            view_object = view_registry.get(message.view)
 
             if view_object:
                 view = view_object()
@@ -140,6 +116,12 @@ class Messenger:
                 return discord.Color.gold()
             case ColorType.DARK_GOLD:
                 return discord.Color.dark_gold()
+            case ColorType.LIGHT_GREY:
+                return discord.Color.light_grey()
+            case ColorType.DARK_GREY:
+                return discord.Color.dark_grey()
+            case ColorType.DARK_THEME:
+                return discord.Color.dark_theme()
     
     @classmethod
     def get_style(cls, style: str) -> discord.ButtonStyle:
@@ -150,3 +132,4 @@ class Messenger:
 
 _instance = Messenger()
 send = _instance.send
+

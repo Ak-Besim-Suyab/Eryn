@@ -5,8 +5,8 @@
 import random
 from dataclasses import dataclass, field
 from data.type import LootType
-from models.data.item import item_manager
-from cores.manager import Manager
+from models.item import item_registry
+from cores.registry import Registry
 from cores.logger import logger
 
 """
@@ -37,7 +37,7 @@ class Loot:
             self.entries = [Entry(**entry) for entry in self.entries]
 
 
-class LootManager(Manager[Loot]):
+class LootManager(Registry[Loot]):
     def __init__(self):
         super().__init__(
             model = Loot, 
@@ -67,7 +67,7 @@ class LootManager(Manager[Loot]):
         match record.type:
             case LootType.ITEM:
                 # 這裡對物品進行驗證，若出現無效的物品，回報錯誤並跳過處理
-                if item_manager.get(record.id) is None:
+                if item_registry.get(record.id) is None:
                     logger.error(f"掉落表 {loot_id} 中的條目 {record.id} 有無效的物品 ID {record.id}, 已跳過。")
                     return result
                 

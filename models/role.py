@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from cores.manager import Manager
+from cores.registry import Registry
 
 @dataclass
 class Role:
@@ -9,7 +9,7 @@ class Role:
     category: str
     tag: str
 
-class RoleManager(Manager[Role]):
+class RoleManager(Registry[Role]):
     def __init__(self):
         super().__init__(
             model = Role, 

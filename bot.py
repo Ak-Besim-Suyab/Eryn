@@ -1,19 +1,8 @@
 import discord
 from discord.ext import commands
 
-# from interface.season_event import SeasonEventView
-# from interface.role.announcement import RoleAnnouncementView
-
-from ui.views import (
-    MarketView,
-    MarketChooseView,
-    DailyView
-    )
-
 from models import init_all_databases
 from cores.logger import logger
-
-from utils.managers import view_manager
 
 intents = discord.Intents.default()
 intents.voice_states = True
@@ -29,36 +18,32 @@ class Elin(commands.Bot):
         init_all_databases()
 
         extensions = [
-            "cogs.admin",
-            "cogs.daily",
+            "cogs.attendance",
             "cogs.leveling",
             "cogs.role",
-            "cogs.stat",
-            "cogs.leaderboard",
             "cogs.market",
-            "cogs.inventory",
             "cogs.region",
             "cogs.play",
             "cogs.setting",
+
             "cogs.listeners.join",
             "cogs.listeners.message",
+
+            "cogs.admins.boot",
             "cogs.admins.member",
             "cogs.admins.house",
             "cogs.admins.test",
-            "cogs.admins.notice",
+            "cogs.admins.announce",
+
             "cogs.actions.steal",
+
+            "cogs.menus.stat",
+            "cogs.menus.inventory",
+            "cogs.menus.leaderboard",
         ]
 
         for extension in extensions:
             await self.load_extension(extension)
-
-        self.add_view(DailyView())
-        # self.add_view(SeasonEventView())
-        # self.add_view(RoleAnnouncementView())
-
-        view_manager.add(MarketView.id, MarketView)
-        view_manager.add(MarketChooseView.id, MarketChooseView)
-        view_manager.add(DailyView.id, DailyView)
 
         synced_global = await self.tree.sync()
         logger.info(f'Synced {len(synced_global)} commands to Global')

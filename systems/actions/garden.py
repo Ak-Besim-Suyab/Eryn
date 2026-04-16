@@ -7,7 +7,7 @@ from models import Player, Inventory, Skill
 from models.region import region_manager
 from models.resource import resource_manager
 from models.message import message_manager
-from models.data.item import item_manager
+from models.item.registry import item_manager
 
 from cores.logger import logger
 from utils import cooldown

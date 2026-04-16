@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from cores.manager import Manager
+from cores.registry import Registry
 
 @dataclass
 class Region:
@@ -11,7 +11,7 @@ class Region:
     resources: list[str] = None
 
 
-class RegionManager(Manager[Region]):
+class RegionManager(Registry[Region]):
     """
     這個是地圖的資料類別管理器，有唯一實例。
     """

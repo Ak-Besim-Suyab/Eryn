@@ -5,8 +5,23 @@ from dataclasses import dataclass, field
 
 from data.type import TitleType, ColorType
 
-from cores.manager import Manager
+from cores.registry import Registry
 from cores.logger import logger
+
+@dataclass
+class Button:
+    custom_id: str
+    label: str
+    style: str = "primary"
+
+@dataclass
+class View:
+    timeout: int = None
+    buttons: list[Button] = field(default_factory = list)
+
+    def __post_init__(self):
+        if self.buttons and isinstance(self.buttons, list) and isinstance(self.buttons[0], dict):
+            self.buttons = [Button(**button) for button in self.buttons]
 
 @dataclass
 class Thumbnail:
@@ -35,7 +50,7 @@ class Message:
     fields: list[Field] = field(default_factory = list)
     thumbnail: Thumbnail | dict = None
 
-    view: str = None
+    view: View | dict = None
 
     has_author: bool = False
 
@@ -68,8 +83,11 @@ class Message:
                 except ValueError:
                     logger.error(f"出現不支援的 thumbnail.type: {self.thumbnail.type}, 出現的 id: {self.id}")
                     self.thumbnail.type = TitleType.DEFAULT
+        
+        if isinstance(self.view, dict):
+            self.view = View(**self.view)
 
-class MessageManager(Manager[Message]):
+class MessageManager(Registry[Message]):
     def __init__(self):
         super().__init__(
             model = Message,

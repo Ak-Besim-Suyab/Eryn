@@ -2,7 +2,7 @@ import random
 from cores import Action
 from utils import cooldown
 
-from cores import listener
+from cores import event_bus
 from data import *
 
 class MournAction(Action):
@@ -20,8 +20,6 @@ class MournAction(Action):
         payload.message = Message(title = "mourn_success")
         event.payload = payload
 
-        listener.publish(event)
-
-        # logger.info(f"{interaction.user.display_name} 在緬懷活動中總共獲得 {experience + bonus_experience} 經驗值")
+        event_bus.publish(event)
 
         return event

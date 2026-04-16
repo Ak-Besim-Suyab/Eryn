@@ -1,4 +1,2 @@
-from .market import *
-from .market_choose import *
-
-from .daily import *
+from .attendance import *
+from .registry import *

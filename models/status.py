@@ -7,11 +7,9 @@
 """
 from peewee import *
 from config import db
-from models.player import Player
+from models.player.model import Player
 from data.type import StatusType
 from cores.logger import logger
-
-from .data.status import status_manager
 
 class Status(Model):
     """

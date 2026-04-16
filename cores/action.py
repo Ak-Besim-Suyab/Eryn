@@ -4,5 +4,4 @@
 
 class Action:
     def __init__(self):
-        self.name: str
         self.timestamps: dict = {}

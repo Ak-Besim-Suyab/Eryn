@@ -1,7 +1,7 @@
 import discord
 
 # 這裡導入需要的 Model
-from models.player import Player
+from models.player.model import Player
 from models.region import region_manager
 from models.resource import resource_manager
 
