@@ -1,6 +1,6 @@
 from peewee import *
 from config import db
-from models.player.model import Player
+from game.model import Player
 
 class Statistic(Model):
     """

@@ -1,10 +1,10 @@
 import discord
 import random
 
-from cores import Action, event_bus
+from cores import Action, event
 
 from data.event import RewardEvent
-from data.payload import RewardPayload
+from data.payloads.response import RewardPayload
 from data.type import RewardType
 
 from utils import cooldown
@@ -40,7 +40,7 @@ class StealAction(Action):
         reward_payload.currency = random.randint(1, 5)
 
         reward_event = RewardEvent(type=RewardType.LOOT, payload=reward_payload)
-        await event_bus.publish(reward_event)
+        await event.publish(reward_event)
 
         newline = "\n"
         description = [

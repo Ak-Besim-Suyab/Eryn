@@ -3,7 +3,7 @@
 """
 from playhouse.migrate import *
 from config import db
-from models.player.model import Player
+from systems.models.player import Player
 
 # 這裡假設你底層使用的是 SQLite
 migrator = SqliteMigrator(db)

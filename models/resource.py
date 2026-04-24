@@ -7,7 +7,7 @@
 import random
 from collections import Counter
 from dataclasses import dataclass, field
-from cores.registry import Registry
+from cores.registry import AssetRegistry
 from cores.logger import logger
 
 from models.loot import loot_manager
@@ -48,7 +48,7 @@ class Resource:
 
         return dict(result)
 
-class ResourceManager(Registry[Resource]):
+class ResourceManager(AssetRegistry[Resource]):
     def __init__(self):
         super().__init__(
             model = Resource, 

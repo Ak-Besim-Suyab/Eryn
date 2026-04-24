@@ -1,5 +1,5 @@
 import discord
-from models.player import Player
+from game.model import Player
 
 class StatMenu:
     @staticmethod

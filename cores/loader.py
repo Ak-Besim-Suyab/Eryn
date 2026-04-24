@@ -45,13 +45,13 @@ class AssetLoader:
                         continue
 
                     if not isinstance(data, dict):
-                        logger.debug(f"檔案內容格式錯誤: {file.name}, 已跳過, 請確認是否為允許的檔案內容.")
+                        logger.exception(f"檔案內容格式錯誤: {file.name}, 已跳過, 請確認是否為允許的檔案內容.")
                         continue
 
                     try:
                         obj = model(**data)
                     except TypeError as e:
-                        logger.error(f"{file.name} 的 JSON 格式與 {model.__name__} 類別不相容: {e}")
+                        logger.exception(f"{file.name} 的 JSON 格式與 {model.__name__} 類別不相容: {e}")
                         continue
                     
                     # 如果資料有 id 欄位, 使用 id 欄位作為 key, 若沒有則以檔案名稱作為字典的 key

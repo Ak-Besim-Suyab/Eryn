@@ -5,9 +5,9 @@
 from zoneinfo import ZoneInfo
 
 from data.event import RewardEvent
-from models import Player
+from game.model import Player
 
-from cores import event_bus
+from cores import event
 from cores.logger import logger
 
 taiwan_timezone = ZoneInfo("Asia/Taipei")
@@ -24,4 +24,4 @@ class EventRewardHandler:
 
         logger.debug(f"事件 {event.type} 成功推送，獎勵已發放，獎勵: {event.payload.experience} 經驗值, {event.payload.currency} 貨幣")
 
-event_bus.subscribe(RewardEvent, EventRewardHandler.provide)
+event.subscribe(RewardEvent, EventRewardHandler.provide)

@@ -50,13 +50,12 @@ class BootCog(commands.Cog):
 
         guild = ctx.guild
 
-        from systems.level_session import LevelSession
-        level_session = LevelSession(self.bot)
+        from game.systems import LevelSystem
         for member in guild.members:
             if member.voice and member.voice.channel:
                 if member.bot:
                     continue
-                level_session.give_voice_experience(member)
+                LevelSystem.give_voice_experience(member)
 
         logger.info("機器人已關閉。")
 

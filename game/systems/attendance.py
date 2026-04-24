@@ -7,7 +7,7 @@ import time
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
-from models import Player
+from game.model import Player
 
 from cores.logger import logger
 

@@ -1,6 +1,6 @@
 from peewee import *
 
-from models.player.model import Player
+from systems.models.player import Player
 from data.type import ActionType
 from config import db
 

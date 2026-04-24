@@ -1,0 +1,3061 @@
+2026-04-19 00:00:49 [DEBUG] Elin: 給予 小灰 訊息經驗值: 5 exp
+2026-04-19 00:02:53 [DEBUG] Elin: 給予 小灰 訊息經驗值: 5 exp
+2026-04-19 00:03:24 [DEBUG] Elin: 給予 小灰 訊息經驗值: 5 exp
+2026-04-19 00:03:54 [DEBUG] Elin: 給予 小灰 訊息經驗值: 5 exp
+2026-04-19 00:04:57 [DEBUG] Elin: 給予 小灰 訊息經驗值: 5 exp
+2026-04-19 00:05:50 [DEBUG] Elin: 給予 小灰 訊息經驗值: 5 exp
+2026-04-19 00:06:23 [DEBUG] Elin: 給予 小灰 訊息經驗值: 5 exp
+2026-04-19 00:07:00 [DEBUG] Elin: 給予 小灰 訊息經驗值: 5 exp
+2026-04-19 00:07:16 [INFO] Elin: 給予 AiRoad 語音經驗值: 11 exp, 累積時間: 11.09 分鐘
+2026-04-19 00:07:16 [INFO] Elin: [LevelSession] 成功移除 airoad 的時間戳記
+2026-04-19 00:07:16 [DEBUG] Elin: [語音] AiRoad 離開語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 00:09:40 [DEBUG] Elin: 給予 Vergil / S.D 反應經驗值: 5 exp
+2026-04-19 00:09:49 [DEBUG] Elin: 給予 MIROO (:зꇤ )ﾆ 訊息經驗值: 5 exp
+2026-04-19 00:14:28 [INFO] Elin: 給予 小鳥 語音經驗值: 14 exp, 累積時間: 14.83 分鐘
+2026-04-19 00:14:28 [INFO] Elin: [LevelSession] 成功移除 jeras130 的時間戳記
+2026-04-19 00:14:28 [DEBUG] Elin: [語音] 小鳥 離開語音頻道：🍻冒險者酒館
+2026-04-19 00:19:32 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-04-19 00:19:33 [INFO] Elin: 給予 Suyab 語音經驗值: 23 exp, 累積時間: 23.38 分鐘
+2026-04-19 00:19:33 [INFO] Elin: 給予 宇文化 語音經驗值: 23 exp, 累積時間: 23.38 分鐘
+2026-04-19 00:19:33 [INFO] Elin: 給予 哩賀哇係魚←← 語音經驗值: 23 exp, 累積時間: 23.38 分鐘
+2026-04-19 00:19:33 [INFO] Elin: 給予 雙B 語音經驗值: 23 exp, 累積時間: 23.38 分鐘
+2026-04-19 00:19:33 [INFO] Elin: 給予 (*T_T*) 語音經驗值: 23 exp, 累積時間: 23.38 分鐘
+2026-04-19 00:19:33 [INFO] Elin: 給予 Mao 語音經驗值: 23 exp, 累積時間: 23.38 分鐘
+2026-04-19 00:19:33 [INFO] Elin: 給予 Mochi 語音經驗值: 23 exp, 累積時間: 23.38 分鐘
+2026-04-19 00:19:33 [INFO] Elin: 給予 九条 カレン 語音經驗值: 23 exp, 累積時間: 23.38 分鐘
+2026-04-19 00:19:33 [INFO] Elin: 給予 KIWI 語音經驗值: 23 exp, 累積時間: 23.38 分鐘
+2026-04-19 00:19:33 [INFO] Elin: 給予 ? 語音經驗值: 23 exp, 累積時間: 23.38 分鐘
+2026-04-19 00:19:33 [INFO] Elin: 給予 哈姆/Mumu 語音經驗值: 23 exp, 累積時間: 23.38 分鐘
+2026-04-19 00:19:33 [INFO] Elin: 給予 阿銘 語音經驗值: 23 exp, 累積時間: 23.38 分鐘
+2026-04-19 00:19:33 [INFO] Elin: 給予 Snowdrift 語音經驗值: 23 exp, 累積時間: 23.38 分鐘
+2026-04-19 00:19:33 [INFO] Elin: 給予 J A 語音經驗值: 23 exp, 累積時間: 23.38 分鐘
+2026-04-19 00:19:33 [INFO] Elin: 給予 Maes Pso(水鬼鳳梨酥 由MIROO賜名) 語音經驗值: 23 exp, 累積時間: 23.38 分鐘
+2026-04-19 00:19:33 [INFO] Elin: 給予 海德格 語音經驗值: 23 exp, 累積時間: 23.38 分鐘
+2026-04-19 00:19:33 [INFO] Elin: 給予 小灰 語音經驗值: 23 exp, 累積時間: 23.38 分鐘
+2026-04-19 00:19:33 [INFO] Elin: 給予 Vergil / S.D 語音經驗值: 23 exp, 累積時間: 23.38 分鐘
+2026-04-19 00:19:33 [INFO] Elin: 給予 MIROO (:зꇤ )ﾆ 語音經驗值: 23 exp, 累積時間: 23.38 分鐘
+2026-04-19 00:19:33 [INFO] Elin: 機器人已關閉。
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: attendance.yaml
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: attendance_help.yaml
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: commemorate.yaml
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: commemorate_help.yaml
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: commemorate_success.yaml
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: market.yaml
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: market_help.yaml
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: merchandise.yaml
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: sample.yaml
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: test_dialog.yaml
+2026-04-19 00:19:36 [INFO] Elin: 資料載入完畢，總共載入 10 個檔案
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: vendor.json
+2026-04-19 00:19:36 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 00:19:36 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: boundary_forest.json
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: falun.json
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: falun_mine.json
+2026-04-19 00:19:36 [INFO] Elin: 資料載入完畢，總共載入 3 個檔案
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 00:19:36 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: default_meadow.json
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: rose.json
+2026-04-19 00:19:36 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: meadow.json
+2026-04-19 00:19:36 [INFO] Elin: 載入檔案成功: white_birch.json
+2026-04-19 00:19:36 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 00:19:37 [INFO] Elin: Synced 11 commands to Global
+2026-04-19 00:19:39 [INFO] Elin: [LevelSession] 成功保存 suyab_ 的時間戳記
+2026-04-19 00:19:39 [INFO] Elin: [LevelSession] 成功保存 playsese 的時間戳記
+2026-04-19 00:19:39 [INFO] Elin: [LevelSession] 成功保存 cheyi35 的時間戳記
+2026-04-19 00:19:39 [INFO] Elin: [LevelSession] 成功保存 blackwidowstar 的時間戳記
+2026-04-19 00:19:39 [INFO] Elin: [LevelSession] 成功保存 1zzzz1 的時間戳記
+2026-04-19 00:19:39 [INFO] Elin: [LevelSession] 成功保存 maobibibi 的時間戳記
+2026-04-19 00:19:39 [INFO] Elin: [LevelSession] 成功保存 sy2043 的時間戳記
+2026-04-19 00:19:39 [INFO] Elin: [LevelSession] 成功保存 panzer1018 的時間戳記
+2026-04-19 00:19:39 [INFO] Elin: [LevelSession] 成功保存 bigpig1703 的時間戳記
+2026-04-19 00:19:39 [INFO] Elin: [LevelSession] 成功保存 doll_0000 的時間戳記
+2026-04-19 00:19:39 [INFO] Elin: [LevelSession] 成功保存 mgbbuhu 的時間戳記
+2026-04-19 00:19:39 [INFO] Elin: [LevelSession] 成功保存 a_ming1649 的時間戳記
+2026-04-19 00:19:39 [INFO] Elin: [LevelSession] 成功保存 snowdrift3818 的時間戳記
+2026-04-19 00:19:39 [INFO] Elin: [LevelSession] 成功保存 95_jasa 的時間戳記
+2026-04-19 00:19:40 [INFO] Elin: [LevelSession] 成功保存 abaikaishuigui 的時間戳記
+2026-04-19 00:19:40 [INFO] Elin: [LevelSession] 成功保存 edgarwu 的時間戳記
+2026-04-19 00:19:40 [INFO] Elin: [LevelSession] 成功保存 littlegreyknight 的時間戳記
+2026-04-19 00:19:40 [INFO] Elin: [LevelSession] 成功保存 vergilxdmc 的時間戳記
+2026-04-19 00:19:40 [INFO] Elin: [LevelSession] 成功保存 miroo_ 的時間戳記
+2026-04-19 00:19:40 [INFO] Elin: The Version of Python is 3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]
+2026-04-19 00:19:40 [INFO] Elin: Meow, Discord Bot loaded!
+2026-04-19 00:19:40 [INFO] Elin: ✅ Logged in as: Elin#6095
+2026-04-19 00:22:21 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-04-19 00:22:21 [INFO] Elin: 給予 Suyab 語音經驗值: 2 exp, 累積時間: 2.70 分鐘
+2026-04-19 00:22:21 [INFO] Elin: 給予 宇文化 語音經驗值: 2 exp, 累積時間: 2.70 分鐘
+2026-04-19 00:22:21 [INFO] Elin: 給予 哩賀哇係魚←← 語音經驗值: 2 exp, 累積時間: 2.70 分鐘
+2026-04-19 00:22:22 [INFO] Elin: 給予 雙B 語音經驗值: 2 exp, 累積時間: 2.70 分鐘
+2026-04-19 00:22:22 [INFO] Elin: 給予 (*T_T*) 語音經驗值: 2 exp, 累積時間: 2.70 分鐘
+2026-04-19 00:22:22 [INFO] Elin: 給予 Mao 語音經驗值: 2 exp, 累積時間: 2.70 分鐘
+2026-04-19 00:22:22 [INFO] Elin: 給予 Mochi 語音經驗值: 2 exp, 累積時間: 2.70 分鐘
+2026-04-19 00:22:22 [INFO] Elin: 給予 九条 カレン 語音經驗值: 2 exp, 累積時間: 2.70 分鐘
+2026-04-19 00:22:22 [INFO] Elin: 給予 KIWI 語音經驗值: 2 exp, 累積時間: 2.70 分鐘
+2026-04-19 00:22:22 [INFO] Elin: 給予 ? 語音經驗值: 2 exp, 累積時間: 2.70 分鐘
+2026-04-19 00:22:22 [INFO] Elin: 給予 哈姆/Mumu 語音經驗值: 2 exp, 累積時間: 2.70 分鐘
+2026-04-19 00:22:22 [INFO] Elin: 給予 阿銘 語音經驗值: 2 exp, 累積時間: 2.70 分鐘
+2026-04-19 00:22:22 [INFO] Elin: 給予 Snowdrift 語音經驗值: 2 exp, 累積時間: 2.70 分鐘
+2026-04-19 00:22:22 [INFO] Elin: 給予 J A 語音經驗值: 2 exp, 累積時間: 2.70 分鐘
+2026-04-19 00:22:22 [INFO] Elin: 給予 Maes Pso(水鬼鳳梨酥 由MIROO賜名) 語音經驗值: 2 exp, 累積時間: 2.70 分鐘
+2026-04-19 00:22:22 [INFO] Elin: 給予 海德格 語音經驗值: 2 exp, 累積時間: 2.70 分鐘
+2026-04-19 00:22:22 [INFO] Elin: 給予 小灰 語音經驗值: 2 exp, 累積時間: 2.70 分鐘
+2026-04-19 00:22:22 [INFO] Elin: 給予 Vergil / S.D 語音經驗值: 2 exp, 累積時間: 2.70 分鐘
+2026-04-19 00:22:22 [INFO] Elin: 給予 MIROO (:зꇤ )ﾆ 語音經驗值: 2 exp, 累積時間: 2.70 分鐘
+2026-04-19 00:22:22 [INFO] Elin: 機器人已關閉。
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: attendance.yaml
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: attendance_help.yaml
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: commemorate.yaml
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: commemorate_help.yaml
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: commemorate_success.yaml
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: market.yaml
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: market_help.yaml
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: merchandise.yaml
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: sample.yaml
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: test_dialog.yaml
+2026-04-19 00:22:27 [INFO] Elin: 資料載入完畢，總共載入 10 個檔案
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: vendor.json
+2026-04-19 00:22:27 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 00:22:27 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: boundary_forest.json
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: falun.json
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: falun_mine.json
+2026-04-19 00:22:27 [INFO] Elin: 資料載入完畢，總共載入 3 個檔案
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 00:22:27 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: default_meadow.json
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: rose.json
+2026-04-19 00:22:27 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: meadow.json
+2026-04-19 00:22:27 [INFO] Elin: 載入檔案成功: white_birch.json
+2026-04-19 00:22:27 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 00:22:27 [INFO] Elin: Synced 11 commands to Global
+2026-04-19 00:22:30 [INFO] Elin: [LevelSession] 成功保存 suyab_ 的時間戳記
+2026-04-19 00:22:30 [INFO] Elin: [LevelSession] 成功保存 playsese 的時間戳記
+2026-04-19 00:22:30 [INFO] Elin: [LevelSession] 成功保存 cheyi35 的時間戳記
+2026-04-19 00:22:30 [INFO] Elin: [LevelSession] 成功保存 blackwidowstar 的時間戳記
+2026-04-19 00:22:30 [INFO] Elin: [LevelSession] 成功保存 1zzzz1 的時間戳記
+2026-04-19 00:22:30 [INFO] Elin: [LevelSession] 成功保存 maobibibi 的時間戳記
+2026-04-19 00:22:30 [INFO] Elin: [LevelSession] 成功保存 sy2043 的時間戳記
+2026-04-19 00:22:30 [INFO] Elin: [LevelSession] 成功保存 panzer1018 的時間戳記
+2026-04-19 00:22:30 [INFO] Elin: [LevelSession] 成功保存 bigpig1703 的時間戳記
+2026-04-19 00:22:30 [INFO] Elin: [LevelSession] 成功保存 doll_0000 的時間戳記
+2026-04-19 00:22:30 [INFO] Elin: [LevelSession] 成功保存 mgbbuhu 的時間戳記
+2026-04-19 00:22:30 [INFO] Elin: [LevelSession] 成功保存 a_ming1649 的時間戳記
+2026-04-19 00:22:30 [INFO] Elin: [LevelSession] 成功保存 snowdrift3818 的時間戳記
+2026-04-19 00:22:30 [INFO] Elin: [LevelSession] 成功保存 95_jasa 的時間戳記
+2026-04-19 00:22:30 [INFO] Elin: [LevelSession] 成功保存 abaikaishuigui 的時間戳記
+2026-04-19 00:22:30 [INFO] Elin: [LevelSession] 成功保存 edgarwu 的時間戳記
+2026-04-19 00:22:30 [INFO] Elin: [LevelSession] 成功保存 littlegreyknight 的時間戳記
+2026-04-19 00:22:30 [INFO] Elin: [LevelSession] 成功保存 vergilxdmc 的時間戳記
+2026-04-19 00:22:30 [INFO] Elin: [LevelSession] 成功保存 miroo_ 的時間戳記
+2026-04-19 00:22:30 [INFO] Elin: The Version of Python is 3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]
+2026-04-19 00:22:30 [INFO] Elin: Meow, Discord Bot loaded!
+2026-04-19 00:22:30 [INFO] Elin: ✅ Logged in as: Elin#6095
+2026-04-19 00:23:35 [DEBUG] Elin: 給予 小灰 訊息經驗值: 5 exp
+2026-04-19 00:24:13 [DEBUG] Elin: 給予 小灰 訊息經驗值: 5 exp
+2026-04-19 00:24:19 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-04-19 00:24:19 [INFO] Elin: 給予 Suyab 語音經驗值: 1 exp, 累積時間: 1.82 分鐘
+2026-04-19 00:24:19 [INFO] Elin: 給予 宇文化 語音經驗值: 1 exp, 累積時間: 1.82 分鐘
+2026-04-19 00:24:19 [INFO] Elin: 給予 哩賀哇係魚←← 語音經驗值: 1 exp, 累積時間: 1.82 分鐘
+2026-04-19 00:24:19 [INFO] Elin: 給予 雙B 語音經驗值: 1 exp, 累積時間: 1.82 分鐘
+2026-04-19 00:24:19 [INFO] Elin: 給予 (*T_T*) 語音經驗值: 1 exp, 累積時間: 1.82 分鐘
+2026-04-19 00:24:19 [INFO] Elin: 給予 Mao 語音經驗值: 1 exp, 累積時間: 1.82 分鐘
+2026-04-19 00:24:19 [INFO] Elin: 給予 Mochi 語音經驗值: 1 exp, 累積時間: 1.82 分鐘
+2026-04-19 00:24:19 [INFO] Elin: 給予 九条 カレン 語音經驗值: 1 exp, 累積時間: 1.82 分鐘
+2026-04-19 00:24:20 [INFO] Elin: 給予 KIWI 語音經驗值: 1 exp, 累積時間: 1.82 分鐘
+2026-04-19 00:24:20 [INFO] Elin: 給予 ? 語音經驗值: 1 exp, 累積時間: 1.82 分鐘
+2026-04-19 00:24:20 [INFO] Elin: 給予 哈姆/Mumu 語音經驗值: 1 exp, 累積時間: 1.82 分鐘
+2026-04-19 00:24:20 [INFO] Elin: 給予 阿銘 語音經驗值: 1 exp, 累積時間: 1.82 分鐘
+2026-04-19 00:24:20 [INFO] Elin: 給予 Snowdrift 語音經驗值: 1 exp, 累積時間: 1.82 分鐘
+2026-04-19 00:24:20 [INFO] Elin: 給予 J A 語音經驗值: 1 exp, 累積時間: 1.82 分鐘
+2026-04-19 00:24:20 [INFO] Elin: 給予 Maes Pso(水鬼鳳梨酥 由MIROO賜名) 語音經驗值: 1 exp, 累積時間: 1.82 分鐘
+2026-04-19 00:24:20 [INFO] Elin: 給予 海德格 語音經驗值: 1 exp, 累積時間: 1.82 分鐘
+2026-04-19 00:24:20 [INFO] Elin: 給予 小灰 語音經驗值: 1 exp, 累積時間: 1.82 分鐘
+2026-04-19 00:24:20 [INFO] Elin: 給予 Vergil / S.D 語音經驗值: 1 exp, 累積時間: 1.82 分鐘
+2026-04-19 00:24:20 [INFO] Elin: 給予 MIROO (:зꇤ )ﾆ 語音經驗值: 1 exp, 累積時間: 1.82 分鐘
+2026-04-19 00:24:20 [INFO] Elin: 機器人已關閉。
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: attendance.yaml
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: attendance_help.yaml
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: commemorate.yaml
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: commemorate_help.yaml
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: commemorate_success.yaml
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: market.yaml
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: market_help.yaml
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: merchandise.yaml
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: sample.yaml
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: test_dialog.yaml
+2026-04-19 00:24:26 [INFO] Elin: 資料載入完畢，總共載入 10 個檔案
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: vendor.json
+2026-04-19 00:24:26 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 00:24:26 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: boundary_forest.json
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: falun.json
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: falun_mine.json
+2026-04-19 00:24:26 [INFO] Elin: 資料載入完畢，總共載入 3 個檔案
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 00:24:26 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: default_meadow.json
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: rose.json
+2026-04-19 00:24:26 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: meadow.json
+2026-04-19 00:24:26 [INFO] Elin: 載入檔案成功: white_birch.json
+2026-04-19 00:24:26 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 00:24:27 [INFO] Elin: Synced 11 commands to Global
+2026-04-19 00:24:30 [INFO] Elin: [LevelSession] 成功保存 suyab_ 的時間戳記
+2026-04-19 00:24:30 [INFO] Elin: [LevelSession] 成功保存 playsese 的時間戳記
+2026-04-19 00:24:30 [INFO] Elin: [LevelSession] 成功保存 cheyi35 的時間戳記
+2026-04-19 00:24:30 [INFO] Elin: [LevelSession] 成功保存 blackwidowstar 的時間戳記
+2026-04-19 00:24:30 [INFO] Elin: [LevelSession] 成功保存 1zzzz1 的時間戳記
+2026-04-19 00:24:30 [INFO] Elin: [LevelSession] 成功保存 maobibibi 的時間戳記
+2026-04-19 00:24:30 [INFO] Elin: [LevelSession] 成功保存 sy2043 的時間戳記
+2026-04-19 00:24:30 [INFO] Elin: [LevelSession] 成功保存 panzer1018 的時間戳記
+2026-04-19 00:24:30 [INFO] Elin: [LevelSession] 成功保存 bigpig1703 的時間戳記
+2026-04-19 00:24:30 [INFO] Elin: [LevelSession] 成功保存 doll_0000 的時間戳記
+2026-04-19 00:24:30 [INFO] Elin: [LevelSession] 成功保存 mgbbuhu 的時間戳記
+2026-04-19 00:24:30 [INFO] Elin: [LevelSession] 成功保存 a_ming1649 的時間戳記
+2026-04-19 00:24:30 [INFO] Elin: [LevelSession] 成功保存 snowdrift3818 的時間戳記
+2026-04-19 00:24:30 [INFO] Elin: [LevelSession] 成功保存 95_jasa 的時間戳記
+2026-04-19 00:24:30 [INFO] Elin: [LevelSession] 成功保存 abaikaishuigui 的時間戳記
+2026-04-19 00:24:30 [INFO] Elin: [LevelSession] 成功保存 edgarwu 的時間戳記
+2026-04-19 00:24:30 [INFO] Elin: [LevelSession] 成功保存 littlegreyknight 的時間戳記
+2026-04-19 00:24:30 [INFO] Elin: [LevelSession] 成功保存 vergilxdmc 的時間戳記
+2026-04-19 00:24:30 [INFO] Elin: [LevelSession] 成功保存 miroo_ 的時間戳記
+2026-04-19 00:24:30 [INFO] Elin: The Version of Python is 3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]
+2026-04-19 00:24:30 [INFO] Elin: Meow, Discord Bot loaded!
+2026-04-19 00:24:30 [INFO] Elin: ✅ Logged in as: Elin#6095
+2026-04-19 00:26:03 [DEBUG] Elin: 給予 小灰 訊息經驗值: 5 exp
+2026-04-19 00:28:53 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-04-19 00:28:53 [INFO] Elin: 給予 Suyab 語音經驗值: 4 exp, 累積時間: 4.39 分鐘
+2026-04-19 00:28:53 [INFO] Elin: 給予 宇文化 語音經驗值: 4 exp, 累積時間: 4.39 分鐘
+2026-04-19 00:28:53 [INFO] Elin: 給予 哩賀哇係魚←← 語音經驗值: 4 exp, 累積時間: 4.39 分鐘
+2026-04-19 00:28:53 [INFO] Elin: 給予 雙B 語音經驗值: 4 exp, 累積時間: 4.39 分鐘
+2026-04-19 00:28:53 [INFO] Elin: 給予 (*T_T*) 語音經驗值: 4 exp, 累積時間: 4.39 分鐘
+2026-04-19 00:28:53 [INFO] Elin: 給予 Mao 語音經驗值: 4 exp, 累積時間: 4.39 分鐘
+2026-04-19 00:28:53 [INFO] Elin: 給予 Mochi 語音經驗值: 4 exp, 累積時間: 4.39 分鐘
+2026-04-19 00:28:53 [INFO] Elin: 給予 九条 カレン 語音經驗值: 4 exp, 累積時間: 4.39 分鐘
+2026-04-19 00:28:53 [INFO] Elin: 給予 KIWI 語音經驗值: 4 exp, 累積時間: 4.40 分鐘
+2026-04-19 00:28:53 [INFO] Elin: 給予 ? 語音經驗值: 4 exp, 累積時間: 4.40 分鐘
+2026-04-19 00:28:53 [INFO] Elin: 給予 哈姆/Mumu 語音經驗值: 4 exp, 累積時間: 4.40 分鐘
+2026-04-19 00:28:53 [INFO] Elin: 給予 阿銘 語音經驗值: 4 exp, 累積時間: 4.40 分鐘
+2026-04-19 00:28:53 [INFO] Elin: 給予 Snowdrift 語音經驗值: 4 exp, 累積時間: 4.40 分鐘
+2026-04-19 00:28:53 [INFO] Elin: 給予 J A 語音經驗值: 4 exp, 累積時間: 4.40 分鐘
+2026-04-19 00:28:53 [INFO] Elin: 給予 Maes Pso(水鬼鳳梨酥 由MIROO賜名) 語音經驗值: 4 exp, 累積時間: 4.40 分鐘
+2026-04-19 00:28:53 [INFO] Elin: 給予 海德格 語音經驗值: 4 exp, 累積時間: 4.40 分鐘
+2026-04-19 00:28:53 [INFO] Elin: 給予 小灰 語音經驗值: 4 exp, 累積時間: 4.40 分鐘
+2026-04-19 00:28:53 [INFO] Elin: 給予 Vergil / S.D 語音經驗值: 4 exp, 累積時間: 4.40 分鐘
+2026-04-19 00:28:53 [INFO] Elin: 給予 MIROO (:зꇤ )ﾆ 語音經驗值: 4 exp, 累積時間: 4.40 分鐘
+2026-04-19 00:28:53 [INFO] Elin: 機器人已關閉。
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: attendance.yaml
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: attendance_help.yaml
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: commemorate.yaml
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: commemorate_help.yaml
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: commemorate_success.yaml
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: market.yaml
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: market_help.yaml
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: merchandise.yaml
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: sample.yaml
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: test_dialog.yaml
+2026-04-19 00:28:56 [INFO] Elin: 資料載入完畢，總共載入 10 個檔案
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: vendor.json
+2026-04-19 00:28:56 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 00:28:56 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: boundary_forest.json
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: falun.json
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: falun_mine.json
+2026-04-19 00:28:56 [INFO] Elin: 資料載入完畢，總共載入 3 個檔案
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 00:28:56 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: default_meadow.json
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: rose.json
+2026-04-19 00:28:56 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: meadow.json
+2026-04-19 00:28:56 [INFO] Elin: 載入檔案成功: white_birch.json
+2026-04-19 00:28:56 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 00:28:57 [INFO] Elin: Synced 11 commands to Global
+2026-04-19 00:29:00 [INFO] Elin: [LevelSession] 成功保存 suyab_ 的時間戳記
+2026-04-19 00:29:00 [INFO] Elin: [LevelSession] 成功保存 playsese 的時間戳記
+2026-04-19 00:29:00 [INFO] Elin: [LevelSession] 成功保存 cheyi35 的時間戳記
+2026-04-19 00:29:00 [INFO] Elin: [LevelSession] 成功保存 blackwidowstar 的時間戳記
+2026-04-19 00:29:00 [INFO] Elin: [LevelSession] 成功保存 1zzzz1 的時間戳記
+2026-04-19 00:29:00 [INFO] Elin: [LevelSession] 成功保存 maobibibi 的時間戳記
+2026-04-19 00:29:00 [INFO] Elin: [LevelSession] 成功保存 sy2043 的時間戳記
+2026-04-19 00:29:00 [INFO] Elin: [LevelSession] 成功保存 panzer1018 的時間戳記
+2026-04-19 00:29:00 [INFO] Elin: [LevelSession] 成功保存 bigpig1703 的時間戳記
+2026-04-19 00:29:00 [INFO] Elin: [LevelSession] 成功保存 doll_0000 的時間戳記
+2026-04-19 00:29:00 [INFO] Elin: [LevelSession] 成功保存 mgbbuhu 的時間戳記
+2026-04-19 00:29:00 [INFO] Elin: [LevelSession] 成功保存 a_ming1649 的時間戳記
+2026-04-19 00:29:00 [INFO] Elin: [LevelSession] 成功保存 snowdrift3818 的時間戳記
+2026-04-19 00:29:00 [INFO] Elin: [LevelSession] 成功保存 95_jasa 的時間戳記
+2026-04-19 00:29:00 [INFO] Elin: [LevelSession] 成功保存 abaikaishuigui 的時間戳記
+2026-04-19 00:29:00 [INFO] Elin: [LevelSession] 成功保存 edgarwu 的時間戳記
+2026-04-19 00:29:00 [INFO] Elin: [LevelSession] 成功保存 littlegreyknight 的時間戳記
+2026-04-19 00:29:00 [INFO] Elin: [LevelSession] 成功保存 vergilxdmc 的時間戳記
+2026-04-19 00:29:00 [INFO] Elin: [LevelSession] 成功保存 miroo_ 的時間戳記
+2026-04-19 00:29:00 [INFO] Elin: The Version of Python is 3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]
+2026-04-19 00:29:00 [INFO] Elin: Meow, Discord Bot loaded!
+2026-04-19 00:29:00 [INFO] Elin: ✅ Logged in as: Elin#6095
+2026-04-19 00:29:35 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-04-19 00:29:35 [INFO] Elin: 給予 Suyab 語音經驗值: 0 exp, 累積時間: 0.59 分鐘
+2026-04-19 00:29:35 [INFO] Elin: 給予 宇文化 語音經驗值: 0 exp, 累積時間: 0.59 分鐘
+2026-04-19 00:29:35 [INFO] Elin: 給予 哩賀哇係魚←← 語音經驗值: 0 exp, 累積時間: 0.59 分鐘
+2026-04-19 00:29:35 [INFO] Elin: 給予 雙B 語音經驗值: 0 exp, 累積時間: 0.59 分鐘
+2026-04-19 00:29:35 [INFO] Elin: 給予 (*T_T*) 語音經驗值: 0 exp, 累積時間: 0.59 分鐘
+2026-04-19 00:29:35 [INFO] Elin: 給予 Mao 語音經驗值: 0 exp, 累積時間: 0.59 分鐘
+2026-04-19 00:29:35 [INFO] Elin: 給予 Mochi 語音經驗值: 0 exp, 累積時間: 0.59 分鐘
+2026-04-19 00:29:35 [INFO] Elin: 給予 九条 カレン 語音經驗值: 0 exp, 累積時間: 0.59 分鐘
+2026-04-19 00:29:35 [INFO] Elin: 給予 KIWI 語音經驗值: 0 exp, 累積時間: 0.59 分鐘
+2026-04-19 00:29:35 [INFO] Elin: 給予 ? 語音經驗值: 0 exp, 累積時間: 0.59 分鐘
+2026-04-19 00:29:35 [INFO] Elin: 給予 哈姆/Mumu 語音經驗值: 0 exp, 累積時間: 0.59 分鐘
+2026-04-19 00:29:35 [INFO] Elin: 給予 阿銘 語音經驗值: 0 exp, 累積時間: 0.59 分鐘
+2026-04-19 00:29:35 [INFO] Elin: 給予 Snowdrift 語音經驗值: 0 exp, 累積時間: 0.59 分鐘
+2026-04-19 00:29:35 [INFO] Elin: 給予 J A 語音經驗值: 0 exp, 累積時間: 0.59 分鐘
+2026-04-19 00:29:35 [INFO] Elin: 給予 Maes Pso(水鬼鳳梨酥 由MIROO賜名) 語音經驗值: 0 exp, 累積時間: 0.59 分鐘
+2026-04-19 00:29:35 [INFO] Elin: 給予 海德格 語音經驗值: 0 exp, 累積時間: 0.59 分鐘
+2026-04-19 00:29:35 [INFO] Elin: 給予 小灰 語音經驗值: 0 exp, 累積時間: 0.59 分鐘
+2026-04-19 00:29:35 [INFO] Elin: 給予 Vergil / S.D 語音經驗值: 0 exp, 累積時間: 0.59 分鐘
+2026-04-19 00:29:35 [INFO] Elin: 給予 MIROO (:зꇤ )ﾆ 語音經驗值: 0 exp, 累積時間: 0.59 分鐘
+2026-04-19 00:29:35 [INFO] Elin: 機器人已關閉。
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: attendance.yaml
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: attendance_help.yaml
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: commemorate.yaml
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: commemorate_help.yaml
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: commemorate_success.yaml
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: market.yaml
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: market_help.yaml
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: merchandise.yaml
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: sample.yaml
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: test_dialog.yaml
+2026-04-19 00:29:38 [INFO] Elin: 資料載入完畢，總共載入 10 個檔案
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: vendor.json
+2026-04-19 00:29:38 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 00:29:38 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: boundary_forest.json
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: falun.json
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: falun_mine.json
+2026-04-19 00:29:38 [INFO] Elin: 資料載入完畢，總共載入 3 個檔案
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 00:29:38 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: default_meadow.json
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: rose.json
+2026-04-19 00:29:38 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: meadow.json
+2026-04-19 00:29:38 [INFO] Elin: 載入檔案成功: white_birch.json
+2026-04-19 00:29:38 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 00:29:39 [INFO] Elin: Synced 11 commands to Global
+2026-04-19 00:29:42 [INFO] Elin: [LevelSession] 成功保存 suyab_ 的時間戳記
+2026-04-19 00:29:42 [INFO] Elin: [LevelSession] 成功保存 playsese 的時間戳記
+2026-04-19 00:29:42 [INFO] Elin: [LevelSession] 成功保存 cheyi35 的時間戳記
+2026-04-19 00:29:42 [INFO] Elin: [LevelSession] 成功保存 blackwidowstar 的時間戳記
+2026-04-19 00:29:42 [INFO] Elin: [LevelSession] 成功保存 1zzzz1 的時間戳記
+2026-04-19 00:29:42 [INFO] Elin: [LevelSession] 成功保存 maobibibi 的時間戳記
+2026-04-19 00:29:42 [INFO] Elin: [LevelSession] 成功保存 sy2043 的時間戳記
+2026-04-19 00:29:42 [INFO] Elin: [LevelSession] 成功保存 panzer1018 的時間戳記
+2026-04-19 00:29:42 [INFO] Elin: [LevelSession] 成功保存 bigpig1703 的時間戳記
+2026-04-19 00:29:42 [INFO] Elin: [LevelSession] 成功保存 doll_0000 的時間戳記
+2026-04-19 00:29:42 [INFO] Elin: [LevelSession] 成功保存 mgbbuhu 的時間戳記
+2026-04-19 00:29:42 [INFO] Elin: [LevelSession] 成功保存 a_ming1649 的時間戳記
+2026-04-19 00:29:42 [INFO] Elin: [LevelSession] 成功保存 snowdrift3818 的時間戳記
+2026-04-19 00:29:42 [INFO] Elin: [LevelSession] 成功保存 95_jasa 的時間戳記
+2026-04-19 00:29:42 [INFO] Elin: [LevelSession] 成功保存 abaikaishuigui 的時間戳記
+2026-04-19 00:29:42 [INFO] Elin: [LevelSession] 成功保存 edgarwu 的時間戳記
+2026-04-19 00:29:42 [INFO] Elin: [LevelSession] 成功保存 littlegreyknight 的時間戳記
+2026-04-19 00:29:42 [INFO] Elin: [LevelSession] 成功保存 vergilxdmc 的時間戳記
+2026-04-19 00:29:42 [INFO] Elin: [LevelSession] 成功保存 miroo_ 的時間戳記
+2026-04-19 00:29:42 [INFO] Elin: The Version of Python is 3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]
+2026-04-19 00:29:42 [INFO] Elin: Meow, Discord Bot loaded!
+2026-04-19 00:29:42 [INFO] Elin: ✅ Logged in as: Elin#6095
+2026-04-19 00:30:09 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-04-19 00:31:15 [DEBUG] Elin: 給予 小灰 訊息經驗值: 5 exp
+2026-04-19 00:32:11 [DEBUG] Elin: 給予 小灰 訊息經驗值: 5 exp
+2026-04-19 00:32:49 [DEBUG] Elin: 給予 小灰 訊息經驗值: 5 exp
+2026-04-19 00:34:41 [DEBUG] Elin: 給予 小灰 訊息經驗值: 5 exp
+2026-04-19 00:35:34 [DEBUG] Elin: 給予 小灰 訊息經驗值: 5 exp
+2026-04-19 00:36:07 [DEBUG] Elin: 給予 小灰 訊息經驗值: 5 exp
+2026-04-19 00:42:02 [DEBUG] Elin: 給予 小灰 訊息經驗值: 5 exp
+2026-04-19 00:42:41 [DEBUG] Elin: 給予 小灰 訊息經驗值: 5 exp
+2026-04-19 00:44:23 [DEBUG] Elin: 給予 雙B 訊息經驗值: 5 exp
+2026-04-19 00:51:02 [INFO] Elin: 給予 宇文化 語音經驗值: 21 exp, 累積時間: 21.34 分鐘
+2026-04-19 00:51:02 [INFO] Elin: [LevelSession] 成功移除 playsese 的時間戳記
+2026-04-19 00:51:02 [DEBUG] Elin: [語音] 宇文化 離開語音頻道：🍻冒險者酒館
+2026-04-19 00:55:22 [INFO] Elin: 給予 阿銘 語音經驗值: 25 exp, 累積時間: 25.66 分鐘
+2026-04-19 00:55:22 [INFO] Elin: [LevelSession] 成功移除 a_ming1649 的時間戳記
+2026-04-19 00:55:22 [DEBUG] Elin: [語音] 阿銘 離開語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 00:58:03 [DEBUG] Elin: 給予 哩賀哇係魚←← 反應經驗值: 5 exp
+2026-04-19 00:59:20 [DEBUG] Elin: 給予 雙B 訊息經驗值: 5 exp
+2026-04-19 01:00:58 [DEBUG] Elin: 給予 小灰 訊息經驗值: 5 exp
+2026-04-19 01:02:09 [DEBUG] Elin: 給予 小灰 訊息經驗值: 5 exp
+2026-04-19 01:02:29 [INFO] Elin: 給予 哩賀哇係魚←← 語音經驗值: 32 exp, 累積時間: 32.79 分鐘
+2026-04-19 01:02:29 [INFO] Elin: [LevelSession] 成功移除 cheyi35 的時間戳記
+2026-04-19 01:02:29 [DEBUG] Elin: [語音] 哩賀哇係魚←← 離開語音頻道：🦈不賣魚的魚販
+2026-04-19 01:02:31 [INFO] Elin: 給予 海德格 語音經驗值: 32 exp, 累積時間: 32.82 分鐘
+2026-04-19 01:02:31 [INFO] Elin: [LevelSession] 成功移除 edgarwu 的時間戳記
+2026-04-19 01:02:31 [DEBUG] Elin: [語音] 海德格 離開語音頻道：🦈不賣魚的魚販
+2026-04-19 01:02:32 [INFO] Elin: 給予 小灰 語音經驗值: 32 exp, 累積時間: 32.83 分鐘
+2026-04-19 01:02:32 [INFO] Elin: [LevelSession] 成功移除 littlegreyknight 的時間戳記
+2026-04-19 01:02:32 [DEBUG] Elin: [語音] 小灰 離開語音頻道：🦈不賣魚的魚販
+2026-04-19 01:07:18 [DEBUG] Elin: 給予 🌱鳳梨加班加到往生酥 訊息經驗值: 5 exp
+2026-04-19 01:08:56 [DEBUG] Elin: 給予 🌱鳳梨加班加到往生酥 訊息經驗值: 5 exp
+2026-04-19 01:09:30 [INFO] Elin: [LevelSession] 成功保存 negative_95 的時間戳記
+2026-04-19 01:09:30 [DEBUG] Elin: [語音] 🌱鳳梨加班加到往生酥 加入語音頻道：🍻冒險者酒館
+2026-04-19 01:14:12 [DEBUG] Elin: 給予 MIROO (:зꇤ )ﾆ 反應經驗值: 5 exp
+2026-04-19 01:16:06 [DEBUG] Elin: 給予 Vergil / S.D 訊息經驗值: 5 exp
+2026-04-19 01:17:48 [DEBUG] Elin: 給予 Yuri脾氣暴躁中 訊息經驗值: 5 exp
+2026-04-19 01:18:15 [DEBUG] Elin: 給予 盾｜繁中推薦碼：ALE8276 反應經驗值: 5 exp
+2026-04-19 01:19:48 [DEBUG] Elin: 給予 Maes Pso(水鬼鳳梨酥 由MIROO賜名) 訊息經驗值: 5 exp
+2026-04-19 01:21:49 [DEBUG] Elin: 給予 MIROO (:зꇤ )ﾆ 訊息經驗值: 5 exp
+2026-04-19 01:23:33 [INFO] Elin: 給予 Mochi 語音經驗值: 53 exp, 累積時間: 53.86 分鐘
+2026-04-19 01:23:33 [INFO] Elin: [LevelSession] 成功移除 sy2043 的時間戳記
+2026-04-19 01:23:33 [DEBUG] Elin: [語音] Mochi 離開語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 01:30:10 [DEBUG] Elin: 給予 Yuri脾氣暴躁中 訊息經驗值: 5 exp
+2026-04-19 01:30:48 [DEBUG] Elin: 給予 Maes Pso(水鬼鳳梨酥 由MIROO賜名) 訊息經驗值: 5 exp
+2026-04-19 01:32:26 [DEBUG] Elin: 給予 Yuri脾氣暴躁中 訊息經驗值: 5 exp
+2026-04-19 01:34:00 [DEBUG] Elin: 給予 Suyab 反應經驗值: 5 exp
+2026-04-19 01:43:05 [DEBUG] Elin: 給予 雙B 訊息經驗值: 5 exp
+2026-04-19 01:43:36 [DEBUG] Elin: 給予 雙B 訊息經驗值: 5 exp
+2026-04-19 01:51:24 [DEBUG] Elin: 給予 白耀狼 反應經驗值: 5 exp
+2026-04-19 01:51:56 [DEBUG] Elin: 給予 白耀狼 反應經驗值: 5 exp
+2026-04-19 01:52:42 [DEBUG] Elin: 給予 Mao 訊息經驗值: 5 exp
+2026-04-19 01:54:03 [DEBUG] Elin: 給予 雙B 訊息經驗值: 5 exp
+2026-04-19 01:58:09 [DEBUG] Elin: 給予 MIROO (:зꇤ )ﾆ 訊息經驗值: 5 exp
+2026-04-19 02:01:07 [DEBUG] Elin: 給予 Yuri脾氣暴躁中 訊息經驗值: 5 exp
+2026-04-19 02:02:19 [INFO] Elin: [LevelSession] 成功保存 osmani_pien 的時間戳記
+2026-04-19 02:02:19 [DEBUG] Elin: [語音] 豆麻 加入語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 02:04:12 [INFO] Elin: 給予 豆麻 語音經驗值: 1 exp, 累積時間: 1.89 分鐘
+2026-04-19 02:04:12 [INFO] Elin: [LevelSession] 成功移除 osmani_pien 的時間戳記
+2026-04-19 02:04:12 [DEBUG] Elin: [語音] 豆麻 離開語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 02:05:22 [DEBUG] Elin: 給予 阿芙 反應經驗值: 5 exp
+2026-04-19 02:06:23 [DEBUG] Elin: 給予 (*T_T*) 訊息經驗值: 5 exp
+2026-04-19 02:11:34 [DEBUG] Elin: 給予 (*T_T*) 反應經驗值: 5 exp
+2026-04-19 02:13:54 [INFO] Elin: 給予 (*T_T*) 語音經驗值: 156 exp, 累積時間: 104.20 分鐘
+2026-04-19 02:13:54 [INFO] Elin: [LevelSession] 成功移除 1zzzz1 的時間戳記
+2026-04-19 02:13:54 [DEBUG] Elin: [語音] (*T_T*) 離開語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 02:14:33 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-04-19 02:14:33 [INFO] Elin: 給予 Suyab 語音經驗值: 157 exp, 累積時間: 104.85 分鐘
+2026-04-19 02:14:33 [INFO] Elin: 給予 雙B 語音經驗值: 157 exp, 累積時間: 104.85 分鐘
+2026-04-19 02:14:33 [INFO] Elin: 給予 Mao 語音經驗值: 157 exp, 累積時間: 104.85 分鐘
+2026-04-19 02:14:33 [INFO] Elin: 給予 九条 カレン 語音經驗值: 157 exp, 累積時間: 104.85 分鐘
+2026-04-19 02:14:33 [INFO] Elin: 給予 KIWI 語音經驗值: 157 exp, 累積時間: 104.85 分鐘
+2026-04-19 02:14:33 [INFO] Elin: 給予 ? 語音經驗值: 157 exp, 累積時間: 104.85 分鐘
+2026-04-19 02:14:33 [INFO] Elin: 給予 哈姆/Mumu 語音經驗值: 157 exp, 累積時間: 104.85 分鐘
+2026-04-19 02:14:33 [INFO] Elin: 給予 Snowdrift 語音經驗值: 157 exp, 累積時間: 104.85 分鐘
+2026-04-19 02:14:33 [INFO] Elin: 給予 J A 語音經驗值: 157 exp, 累積時間: 104.85 分鐘
+2026-04-19 02:14:33 [INFO] Elin: 給予 Maes Pso(水鬼鳳梨酥 由MIROO賜名) 語音經驗值: 157 exp, 累積時間: 104.85 分鐘
+2026-04-19 02:14:33 [INFO] Elin: 給予 Vergil / S.D 語音經驗值: 157 exp, 累積時間: 104.85 分鐘
+2026-04-19 02:14:33 [INFO] Elin: 給予 MIROO (:зꇤ )ﾆ 語音經驗值: 157 exp, 累積時間: 104.85 分鐘
+2026-04-19 02:14:33 [INFO] Elin: 給予 🌱鳳梨加班加到往生酥 語音經驗值: 97 exp, 累積時間: 65.05 分鐘
+2026-04-19 02:14:33 [INFO] Elin: 機器人已關閉。
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: attendance.yaml
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: attendance_help.yaml
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: commemorate.yaml
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: commemorate_help.yaml
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: commemorate_success.yaml
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: market.yaml
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: market_help.yaml
+2026-04-19 02:14:36 [ERROR] Elin: merchandise.yaml 的 JSON 格式與 Dialogue 類別不相容: Select.__init__() got an unexpected keyword argument 'options'
+2026-04-19 02:14:36 [ERROR] Elin: sample.yaml 的 JSON 格式與 Dialogue 類別不相容: Select.__init__() got an unexpected keyword argument 'options'
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: test_dialog.yaml
+2026-04-19 02:14:36 [INFO] Elin: 資料載入完畢，總共載入 8 個檔案
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: vendor.json
+2026-04-19 02:14:36 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 02:14:36 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: boundary_forest.json
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: falun.json
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: falun_mine.json
+2026-04-19 02:14:36 [INFO] Elin: 資料載入完畢，總共載入 3 個檔案
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 02:14:36 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: default_meadow.json
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: rose.json
+2026-04-19 02:14:36 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: meadow.json
+2026-04-19 02:14:36 [INFO] Elin: 載入檔案成功: white_birch.json
+2026-04-19 02:14:36 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 02:14:37 [INFO] Elin: Synced 11 commands to Global
+2026-04-19 02:14:40 [INFO] Elin: [LevelSession] 成功保存 suyab_ 的時間戳記
+2026-04-19 02:14:40 [INFO] Elin: [LevelSession] 成功保存 blackwidowstar 的時間戳記
+2026-04-19 02:14:40 [INFO] Elin: [LevelSession] 成功保存 maobibibi 的時間戳記
+2026-04-19 02:14:40 [INFO] Elin: [LevelSession] 成功保存 panzer1018 的時間戳記
+2026-04-19 02:14:40 [INFO] Elin: [LevelSession] 成功保存 bigpig1703 的時間戳記
+2026-04-19 02:14:40 [INFO] Elin: [LevelSession] 成功保存 doll_0000 的時間戳記
+2026-04-19 02:14:40 [INFO] Elin: [LevelSession] 成功保存 mgbbuhu 的時間戳記
+2026-04-19 02:14:40 [INFO] Elin: [LevelSession] 成功保存 snowdrift3818 的時間戳記
+2026-04-19 02:14:40 [INFO] Elin: [LevelSession] 成功保存 95_jasa 的時間戳記
+2026-04-19 02:14:40 [INFO] Elin: [LevelSession] 成功保存 abaikaishuigui 的時間戳記
+2026-04-19 02:14:40 [INFO] Elin: [LevelSession] 成功保存 negative_95 的時間戳記
+2026-04-19 02:14:40 [INFO] Elin: [LevelSession] 成功保存 vergilxdmc 的時間戳記
+2026-04-19 02:14:40 [INFO] Elin: [LevelSession] 成功保存 miroo_ 的時間戳記
+2026-04-19 02:14:40 [INFO] Elin: The Version of Python is 3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]
+2026-04-19 02:14:40 [INFO] Elin: Meow, Discord Bot loaded!
+2026-04-19 02:14:40 [INFO] Elin: ✅ Logged in as: Elin#6095
+2026-04-19 02:15:09 [INFO] Elin: [LevelSession] 成功保存 1zzzz1 的時間戳記
+2026-04-19 02:15:09 [DEBUG] Elin: [語音] (*T_T*) 加入語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 02:17:06 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-04-19 02:17:07 [INFO] Elin: 給予 Suyab 語音經驗值: 2 exp, 累積時間: 2.45 分鐘
+2026-04-19 02:17:07 [INFO] Elin: 給予 雙B 語音經驗值: 2 exp, 累積時間: 2.45 分鐘
+2026-04-19 02:17:07 [INFO] Elin: 給予 Mao 語音經驗值: 2 exp, 累積時間: 2.45 分鐘
+2026-04-19 02:17:07 [INFO] Elin: 給予 九条 カレン 語音經驗值: 2 exp, 累積時間: 2.45 分鐘
+2026-04-19 02:17:07 [INFO] Elin: 給予 KIWI 語音經驗值: 2 exp, 累積時間: 2.45 分鐘
+2026-04-19 02:17:07 [INFO] Elin: 給予 ? 語音經驗值: 2 exp, 累積時間: 2.45 分鐘
+2026-04-19 02:17:07 [INFO] Elin: 給予 哈姆/Mumu 語音經驗值: 2 exp, 累積時間: 2.45 分鐘
+2026-04-19 02:17:07 [INFO] Elin: 給予 Snowdrift 語音經驗值: 2 exp, 累積時間: 2.45 分鐘
+2026-04-19 02:17:07 [INFO] Elin: 給予 J A 語音經驗值: 2 exp, 累積時間: 2.45 分鐘
+2026-04-19 02:17:07 [INFO] Elin: 給予 Maes Pso(水鬼鳳梨酥 由MIROO賜名) 語音經驗值: 2 exp, 累積時間: 2.45 分鐘
+2026-04-19 02:17:07 [INFO] Elin: 給予 🌱鳳梨加班加到往生酥 語音經驗值: 2 exp, 累積時間: 2.45 分鐘
+2026-04-19 02:17:07 [INFO] Elin: 給予 Vergil / S.D 語音經驗值: 2 exp, 累積時間: 2.45 分鐘
+2026-04-19 02:17:07 [INFO] Elin: 給予 MIROO (:зꇤ )ﾆ 語音經驗值: 2 exp, 累積時間: 2.45 分鐘
+2026-04-19 02:17:07 [INFO] Elin: 給予 (*T_T*) 語音經驗值: 1 exp, 累積時間: 1.96 分鐘
+2026-04-19 02:17:07 [INFO] Elin: 機器人已關閉。
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: attendance.yaml
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: attendance_help.yaml
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: commemorate.yaml
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: commemorate_help.yaml
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: commemorate_success.yaml
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: market.yaml
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: market_help.yaml
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: merchandise.yaml
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: sample.yaml
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: test_dialog.yaml
+2026-04-19 02:17:43 [INFO] Elin: 資料載入完畢，總共載入 10 個檔案
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: vendor.json
+2026-04-19 02:17:43 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 02:17:43 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: boundary_forest.json
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: falun.json
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: falun_mine.json
+2026-04-19 02:17:43 [INFO] Elin: 資料載入完畢，總共載入 3 個檔案
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 02:17:43 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: default_meadow.json
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: rose.json
+2026-04-19 02:17:43 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: meadow.json
+2026-04-19 02:17:43 [INFO] Elin: 載入檔案成功: white_birch.json
+2026-04-19 02:17:43 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 02:17:44 [INFO] Elin: Synced 11 commands to Global
+2026-04-19 02:17:46 [INFO] Elin: [LevelSession] 成功保存 suyab_ 的時間戳記
+2026-04-19 02:17:46 [INFO] Elin: [LevelSession] 成功保存 blackwidowstar 的時間戳記
+2026-04-19 02:17:46 [INFO] Elin: [LevelSession] 成功保存 1zzzz1 的時間戳記
+2026-04-19 02:17:46 [INFO] Elin: [LevelSession] 成功保存 maobibibi 的時間戳記
+2026-04-19 02:17:46 [INFO] Elin: [LevelSession] 成功保存 panzer1018 的時間戳記
+2026-04-19 02:17:46 [INFO] Elin: [LevelSession] 成功保存 bigpig1703 的時間戳記
+2026-04-19 02:17:46 [INFO] Elin: [LevelSession] 成功保存 doll_0000 的時間戳記
+2026-04-19 02:17:46 [INFO] Elin: [LevelSession] 成功保存 mgbbuhu 的時間戳記
+2026-04-19 02:17:46 [INFO] Elin: [LevelSession] 成功保存 snowdrift3818 的時間戳記
+2026-04-19 02:17:46 [INFO] Elin: [LevelSession] 成功保存 95_jasa 的時間戳記
+2026-04-19 02:17:46 [INFO] Elin: [LevelSession] 成功保存 abaikaishuigui 的時間戳記
+2026-04-19 02:17:46 [INFO] Elin: [LevelSession] 成功保存 negative_95 的時間戳記
+2026-04-19 02:17:46 [INFO] Elin: [LevelSession] 成功保存 vergilxdmc 的時間戳記
+2026-04-19 02:17:46 [INFO] Elin: [LevelSession] 成功保存 miroo_ 的時間戳記
+2026-04-19 02:17:46 [INFO] Elin: The Version of Python is 3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]
+2026-04-19 02:17:46 [INFO] Elin: Meow, Discord Bot loaded!
+2026-04-19 02:17:46 [INFO] Elin: ✅ Logged in as: Elin#6095
+2026-04-19 02:19:05 [DEBUG] Elin: 給予 Vergil / S.D 反應經驗值: 5 exp
+2026-04-19 02:19:40 [INFO] Elin: 給予 九条 カレン 語音經驗值: 1 exp, 累積時間: 1.89 分鐘
+2026-04-19 02:19:40 [INFO] Elin: [LevelSession] 成功移除 panzer1018 的時間戳記
+2026-04-19 02:19:40 [DEBUG] Elin: [語音] 九条 カレン 離開語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 02:20:07 [INFO] Elin: 給予 (*T_T*) 語音經驗值: 2 exp, 累積時間: 2.35 分鐘
+2026-04-19 02:20:07 [INFO] Elin: [LevelSession] 成功移除 1zzzz1 的時間戳記
+2026-04-19 02:20:07 [DEBUG] Elin: [語音] (*T_T*) 離開語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 02:20:21 [DEBUG] Elin: 給予 🌱鳳梨加班加到往生酥 反應經驗值: 5 exp
+2026-04-19 02:20:24 [DEBUG] Elin: 給予 Maes Pso(水鬼鳳梨酥 由MIROO賜名) 訊息經驗值: 5 exp
+2026-04-19 02:20:28 [WARNING] Elin: Cannot find OptionConverter type: shop.
+2026-04-19 02:20:28 [WARNING] Elin: Cannot find OptionConverter type: quantity.
+2026-04-19 02:21:00 [INFO] Elin: 給予 🌱鳳梨加班加到往生酥 語音經驗值: 3 exp, 累積時間: 3.23 分鐘
+2026-04-19 02:21:00 [INFO] Elin: [LevelSession] 成功移除 negative_95 的時間戳記
+2026-04-19 02:21:00 [DEBUG] Elin: [語音] 🌱鳳梨加班加到往生酥 離開語音頻道：🍻冒險者酒館
+2026-04-19 02:22:59 [DEBUG] Elin: 給予 (*T_T*) 訊息經驗值: 5 exp
+2026-04-19 02:23:35 [DEBUG] Elin: 給予 雙B 訊息經驗值: 5 exp
+2026-04-19 02:23:58 [DEBUG] Elin: 給予 (*T_T*) 訊息經驗值: 5 exp
+2026-04-19 02:24:18 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-04-19 02:24:19 [INFO] Elin: 給予 Suyab 語音經驗值: 6 exp, 累積時間: 6.54 分鐘
+2026-04-19 02:24:19 [INFO] Elin: 給予 雙B 語音經驗值: 6 exp, 累積時間: 6.54 分鐘
+2026-04-19 02:24:19 [INFO] Elin: 給予 Mao 語音經驗值: 6 exp, 累積時間: 6.54 分鐘
+2026-04-19 02:24:19 [INFO] Elin: 給予 KIWI 語音經驗值: 6 exp, 累積時間: 6.54 分鐘
+2026-04-19 02:24:19 [INFO] Elin: 給予 ? 語音經驗值: 6 exp, 累積時間: 6.54 分鐘
+2026-04-19 02:24:19 [INFO] Elin: 給予 哈姆/Mumu 語音經驗值: 6 exp, 累積時間: 6.54 分鐘
+2026-04-19 02:24:19 [INFO] Elin: 給予 Snowdrift 語音經驗值: 6 exp, 累積時間: 6.54 分鐘
+2026-04-19 02:24:19 [INFO] Elin: 給予 J A 語音經驗值: 6 exp, 累積時間: 6.54 分鐘
+2026-04-19 02:24:19 [INFO] Elin: 給予 Maes Pso(水鬼鳳梨酥 由MIROO賜名) 語音經驗值: 6 exp, 累積時間: 6.54 分鐘
+2026-04-19 02:24:19 [INFO] Elin: 給予 Vergil / S.D 語音經驗值: 6 exp, 累積時間: 6.54 分鐘
+2026-04-19 02:24:19 [INFO] Elin: 給予 MIROO (:зꇤ )ﾆ 語音經驗值: 6 exp, 累積時間: 6.54 分鐘
+2026-04-19 02:24:19 [INFO] Elin: 機器人已關閉。
+2026-04-19 02:24:22 [INFO] Elin: 載入檔案成功: attendance.yaml
+2026-04-19 02:24:22 [INFO] Elin: 載入檔案成功: attendance_help.yaml
+2026-04-19 02:24:22 [INFO] Elin: 載入檔案成功: commemorate.yaml
+2026-04-19 02:24:22 [INFO] Elin: 載入檔案成功: commemorate_help.yaml
+2026-04-19 02:24:22 [INFO] Elin: 載入檔案成功: commemorate_success.yaml
+2026-04-19 02:24:22 [INFO] Elin: 載入檔案成功: market.yaml
+2026-04-19 02:24:22 [INFO] Elin: 載入檔案成功: market_help.yaml
+2026-04-19 02:24:22 [INFO] Elin: 載入檔案成功: merchandise.yaml
+2026-04-19 02:24:22 [INFO] Elin: 載入檔案成功: sample.yaml
+2026-04-19 02:24:22 [INFO] Elin: 載入檔案成功: test_dialog.yaml
+2026-04-19 02:24:22 [INFO] Elin: 資料載入完畢，總共載入 10 個檔案
+2026-04-19 02:24:22 [INFO] Elin: 載入檔案成功: vendor.json
+2026-04-19 02:24:22 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-04-19 02:24:22 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 02:24:22 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 02:24:22 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 02:24:22 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 02:24:22 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 02:24:22 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 02:24:22 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 02:24:22 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 02:24:22 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 02:24:22 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 02:24:22 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 02:24:22 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 02:24:22 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 02:24:22 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 02:24:22 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 02:24:22 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 02:24:22 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 02:25:56 [INFO] Elin: 載入檔案成功: attendance.yaml
+2026-04-19 02:25:56 [INFO] Elin: 載入檔案成功: attendance_help.yaml
+2026-04-19 02:25:56 [INFO] Elin: 載入檔案成功: commemorate.yaml
+2026-04-19 02:25:56 [INFO] Elin: 載入檔案成功: commemorate_help.yaml
+2026-04-19 02:25:56 [INFO] Elin: 載入檔案成功: commemorate_success.yaml
+2026-04-19 02:25:56 [INFO] Elin: 載入檔案成功: market.yaml
+2026-04-19 02:25:56 [INFO] Elin: 載入檔案成功: market_help.yaml
+2026-04-19 02:25:56 [INFO] Elin: 載入檔案成功: merchandise.yaml
+2026-04-19 02:25:56 [INFO] Elin: 載入檔案成功: sample.yaml
+2026-04-19 02:25:56 [INFO] Elin: 載入檔案成功: test_dialog.yaml
+2026-04-19 02:25:56 [INFO] Elin: 資料載入完畢，總共載入 10 個檔案
+2026-04-19 02:25:56 [INFO] Elin: 載入檔案成功: vendor.json
+2026-04-19 02:25:56 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-04-19 02:25:56 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 02:25:56 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 02:25:56 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 02:25:56 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 02:25:56 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 02:25:56 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 02:25:56 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 02:25:56 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 02:25:56 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 02:25:56 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 02:25:56 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 02:25:56 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 02:25:56 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 02:25:56 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 02:25:56 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 02:25:56 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 02:25:56 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 02:27:11 [INFO] Elin: 載入檔案成功: attendance.yaml
+2026-04-19 02:27:11 [INFO] Elin: 載入檔案成功: attendance_help.yaml
+2026-04-19 02:27:11 [INFO] Elin: 載入檔案成功: commemorate.yaml
+2026-04-19 02:27:11 [INFO] Elin: 載入檔案成功: commemorate_help.yaml
+2026-04-19 02:27:11 [INFO] Elin: 載入檔案成功: commemorate_success.yaml
+2026-04-19 02:27:11 [INFO] Elin: 載入檔案成功: market.yaml
+2026-04-19 02:27:11 [INFO] Elin: 載入檔案成功: market_help.yaml
+2026-04-19 02:27:11 [INFO] Elin: 載入檔案成功: merchandise.yaml
+2026-04-19 02:27:11 [INFO] Elin: 載入檔案成功: sample.yaml
+2026-04-19 02:27:11 [INFO] Elin: 載入檔案成功: test_dialog.yaml
+2026-04-19 02:27:11 [INFO] Elin: 資料載入完畢，總共載入 10 個檔案
+2026-04-19 02:27:11 [INFO] Elin: 載入檔案成功: vendor.json
+2026-04-19 02:27:11 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-04-19 02:27:11 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 02:27:11 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 02:27:11 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 02:27:11 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 02:27:11 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 02:27:11 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 02:27:11 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 02:27:11 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 02:27:11 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 02:27:11 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 02:27:11 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 02:27:11 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 02:27:11 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 02:27:11 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 02:27:11 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 02:27:11 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 02:27:11 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 02:27:28 [INFO] Elin: 載入檔案成功: attendance.yaml
+2026-04-19 02:27:28 [INFO] Elin: 載入檔案成功: attendance_help.yaml
+2026-04-19 02:27:28 [INFO] Elin: 載入檔案成功: commemorate.yaml
+2026-04-19 02:27:28 [INFO] Elin: 載入檔案成功: commemorate_help.yaml
+2026-04-19 02:27:28 [INFO] Elin: 載入檔案成功: commemorate_success.yaml
+2026-04-19 02:27:28 [INFO] Elin: 載入檔案成功: market.yaml
+2026-04-19 02:27:28 [INFO] Elin: 載入檔案成功: market_help.yaml
+2026-04-19 02:27:28 [INFO] Elin: 載入檔案成功: merchandise.yaml
+2026-04-19 02:27:28 [INFO] Elin: 載入檔案成功: sample.yaml
+2026-04-19 02:27:28 [INFO] Elin: 載入檔案成功: test_dialog.yaml
+2026-04-19 02:27:28 [INFO] Elin: 資料載入完畢，總共載入 10 個檔案
+2026-04-19 02:27:28 [INFO] Elin: 載入檔案成功: vendor.json
+2026-04-19 02:27:28 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-04-19 02:27:28 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 02:27:28 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 02:27:28 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 02:27:28 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 02:27:28 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 02:27:28 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 02:27:28 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 02:27:28 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 02:27:28 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 02:27:28 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 02:27:28 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 02:27:28 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 02:27:28 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 02:27:28 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 02:27:28 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 02:27:28 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 02:27:28 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 02:27:53 [INFO] Elin: 載入檔案成功: attendance.yaml
+2026-04-19 02:27:53 [INFO] Elin: 載入檔案成功: attendance_help.yaml
+2026-04-19 02:27:53 [INFO] Elin: 載入檔案成功: commemorate.yaml
+2026-04-19 02:27:53 [INFO] Elin: 載入檔案成功: commemorate_help.yaml
+2026-04-19 02:27:53 [INFO] Elin: 載入檔案成功: commemorate_success.yaml
+2026-04-19 02:27:53 [INFO] Elin: 載入檔案成功: market.yaml
+2026-04-19 02:27:53 [INFO] Elin: 載入檔案成功: market_help.yaml
+2026-04-19 02:27:53 [INFO] Elin: 載入檔案成功: merchandise.yaml
+2026-04-19 02:27:53 [INFO] Elin: 載入檔案成功: sample.yaml
+2026-04-19 02:27:53 [INFO] Elin: 載入檔案成功: test_dialog.yaml
+2026-04-19 02:27:53 [INFO] Elin: 資料載入完畢，總共載入 10 個檔案
+2026-04-19 02:27:53 [INFO] Elin: 載入檔案成功: vendor.json
+2026-04-19 02:27:53 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-04-19 02:27:53 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 02:27:53 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 02:27:53 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 02:27:53 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 02:27:53 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 02:27:53 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 02:27:53 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 02:27:53 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 02:27:53 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 02:27:53 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 02:27:53 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 02:27:53 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 02:27:53 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 02:27:53 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 02:27:53 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 02:27:53 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 02:27:53 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: attendance.yaml
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: attendance_help.yaml
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: commemorate.yaml
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: commemorate_help.yaml
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: commemorate_success.yaml
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: market.yaml
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: market_help.yaml
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: merchandise.yaml
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: sample.yaml
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: test_dialog.yaml
+2026-04-19 02:28:04 [INFO] Elin: 資料載入完畢，總共載入 10 個檔案
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: vendor.json
+2026-04-19 02:28:04 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 02:28:04 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: boundary_forest.json
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: falun.json
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: falun_mine.json
+2026-04-19 02:28:04 [INFO] Elin: 資料載入完畢，總共載入 3 個檔案
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 02:28:04 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: default_meadow.json
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: rose.json
+2026-04-19 02:28:04 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: meadow.json
+2026-04-19 02:28:04 [INFO] Elin: 載入檔案成功: white_birch.json
+2026-04-19 02:28:04 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 02:28:04 [INFO] Elin: Synced 11 commands to Global
+2026-04-19 02:28:07 [INFO] Elin: [LevelSession] 成功保存 suyab_ 的時間戳記
+2026-04-19 02:28:07 [INFO] Elin: [LevelSession] 成功保存 blackwidowstar 的時間戳記
+2026-04-19 02:28:07 [INFO] Elin: [LevelSession] 成功保存 maobibibi 的時間戳記
+2026-04-19 02:28:07 [INFO] Elin: [LevelSession] 成功保存 bigpig1703 的時間戳記
+2026-04-19 02:28:07 [INFO] Elin: [LevelSession] 成功保存 doll_0000 的時間戳記
+2026-04-19 02:28:07 [INFO] Elin: [LevelSession] 成功保存 mgbbuhu 的時間戳記
+2026-04-19 02:28:07 [INFO] Elin: [LevelSession] 成功保存 snowdrift3818 的時間戳記
+2026-04-19 02:28:07 [INFO] Elin: [LevelSession] 成功保存 95_jasa 的時間戳記
+2026-04-19 02:28:07 [INFO] Elin: [LevelSession] 成功保存 abaikaishuigui 的時間戳記
+2026-04-19 02:28:07 [INFO] Elin: [LevelSession] 成功保存 vergilxdmc 的時間戳記
+2026-04-19 02:28:07 [INFO] Elin: [LevelSession] 成功保存 miroo_ 的時間戳記
+2026-04-19 02:28:07 [INFO] Elin: The Version of Python is 3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]
+2026-04-19 02:28:07 [INFO] Elin: Meow, Discord Bot loaded!
+2026-04-19 02:28:07 [INFO] Elin: ✅ Logged in as: Elin#6095
+2026-04-19 02:28:17 [INFO] Elin: 給予 J A 語音經驗值: 0 exp, 累積時間: 0.16 分鐘
+2026-04-19 02:28:17 [INFO] Elin: [LevelSession] 成功移除 95_jasa 的時間戳記
+2026-04-19 02:28:17 [DEBUG] Elin: [語音] J A 離開語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 02:28:47 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-04-19 02:28:48 [INFO] Elin: 給予 Suyab 語音經驗值: 0 exp, 累積時間: 0.67 分鐘
+2026-04-19 02:28:48 [INFO] Elin: 給予 雙B 語音經驗值: 0 exp, 累積時間: 0.67 分鐘
+2026-04-19 02:28:48 [INFO] Elin: 給予 Mao 語音經驗值: 0 exp, 累積時間: 0.67 分鐘
+2026-04-19 02:28:48 [INFO] Elin: 給予 KIWI 語音經驗值: 0 exp, 累積時間: 0.67 分鐘
+2026-04-19 02:28:48 [INFO] Elin: 給予 ? 語音經驗值: 0 exp, 累積時間: 0.67 分鐘
+2026-04-19 02:28:48 [INFO] Elin: 給予 哈姆/Mumu 語音經驗值: 0 exp, 累積時間: 0.67 分鐘
+2026-04-19 02:28:48 [INFO] Elin: 給予 Snowdrift 語音經驗值: 0 exp, 累積時間: 0.67 分鐘
+2026-04-19 02:28:48 [INFO] Elin: 給予 Maes Pso(水鬼鳳梨酥 由MIROO賜名) 語音經驗值: 0 exp, 累積時間: 0.67 分鐘
+2026-04-19 02:28:48 [INFO] Elin: 給予 Vergil / S.D 語音經驗值: 0 exp, 累積時間: 0.67 分鐘
+2026-04-19 02:28:48 [INFO] Elin: 給予 MIROO (:зꇤ )ﾆ 語音經驗值: 0 exp, 累積時間: 0.67 分鐘
+2026-04-19 02:28:48 [INFO] Elin: 機器人已關閉。
+2026-04-19 02:28:50 [INFO] Elin: 載入檔案成功: attendance.yaml
+2026-04-19 02:28:50 [INFO] Elin: 載入檔案成功: attendance_help.yaml
+2026-04-19 02:28:50 [INFO] Elin: 載入檔案成功: commemorate.yaml
+2026-04-19 02:28:50 [INFO] Elin: 載入檔案成功: commemorate_help.yaml
+2026-04-19 02:28:50 [INFO] Elin: 載入檔案成功: commemorate_success.yaml
+2026-04-19 02:28:50 [INFO] Elin: 載入檔案成功: market.yaml
+2026-04-19 02:28:50 [INFO] Elin: 載入檔案成功: market_help.yaml
+2026-04-19 02:28:50 [INFO] Elin: 載入檔案成功: merchandise.yaml
+2026-04-19 02:28:50 [INFO] Elin: 載入檔案成功: sample.yaml
+2026-04-19 02:28:50 [INFO] Elin: 載入檔案成功: test_dialog.yaml
+2026-04-19 02:28:50 [INFO] Elin: 資料載入完畢，總共載入 10 個檔案
+2026-04-19 02:28:50 [INFO] Elin: 載入檔案成功: vendor.json
+2026-04-19 02:28:50 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-04-19 02:28:50 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 02:28:50 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 02:28:50 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 02:28:50 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 02:28:50 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 02:28:50 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 02:28:50 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 02:28:50 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 02:28:50 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 02:28:50 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 02:28:50 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 02:28:50 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 02:28:50 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 02:28:50 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 02:28:50 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 02:28:50 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 02:28:50 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 02:31:18 [INFO] Elin: 載入檔案成功: attendance.yaml
+2026-04-19 02:31:18 [INFO] Elin: 載入檔案成功: attendance_help.yaml
+2026-04-19 02:31:18 [INFO] Elin: 載入檔案成功: commemorate.yaml
+2026-04-19 02:31:18 [INFO] Elin: 載入檔案成功: commemorate_help.yaml
+2026-04-19 02:31:18 [INFO] Elin: 載入檔案成功: commemorate_success.yaml
+2026-04-19 02:31:18 [INFO] Elin: 載入檔案成功: market.yaml
+2026-04-19 02:31:18 [INFO] Elin: 載入檔案成功: market_help.yaml
+2026-04-19 02:31:18 [INFO] Elin: 載入檔案成功: merchandise.yaml
+2026-04-19 02:31:18 [INFO] Elin: 載入檔案成功: sample.yaml
+2026-04-19 02:31:18 [INFO] Elin: 載入檔案成功: test_dialog.yaml
+2026-04-19 02:31:18 [INFO] Elin: 資料載入完畢，總共載入 10 個檔案
+2026-04-19 02:31:18 [INFO] Elin: 載入檔案成功: vendor.json
+2026-04-19 02:31:18 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-04-19 02:31:18 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 02:31:18 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 02:31:18 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 02:31:18 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 02:31:18 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 02:31:18 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 02:31:18 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 02:31:18 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 02:31:18 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 02:31:18 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 02:31:18 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 02:31:18 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 02:31:18 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 02:31:18 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 02:31:18 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 02:31:18 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 02:31:18 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 02:31:58 [INFO] Elin: 載入檔案成功: attendance.yaml
+2026-04-19 02:31:58 [INFO] Elin: 載入檔案成功: attendance_help.yaml
+2026-04-19 02:31:58 [INFO] Elin: 載入檔案成功: commemorate.yaml
+2026-04-19 02:31:58 [INFO] Elin: 載入檔案成功: commemorate_help.yaml
+2026-04-19 02:31:58 [INFO] Elin: 載入檔案成功: commemorate_success.yaml
+2026-04-19 02:31:58 [INFO] Elin: 載入檔案成功: market.yaml
+2026-04-19 02:31:58 [INFO] Elin: 載入檔案成功: market_help.yaml
+2026-04-19 02:31:58 [INFO] Elin: 載入檔案成功: merchandise.yaml
+2026-04-19 02:31:58 [INFO] Elin: 載入檔案成功: sample.yaml
+2026-04-19 02:31:58 [INFO] Elin: 載入檔案成功: test_dialog.yaml
+2026-04-19 02:31:58 [INFO] Elin: 資料載入完畢，總共載入 10 個檔案
+2026-04-19 02:31:58 [INFO] Elin: 載入檔案成功: vendor.json
+2026-04-19 02:31:58 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-04-19 02:31:58 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 02:31:58 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 02:31:58 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 02:31:58 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 02:31:58 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 02:31:58 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 02:31:58 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 02:31:58 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 02:31:58 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 02:31:58 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 02:31:58 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 02:31:58 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 02:31:58 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 02:31:58 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 02:31:58 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 02:31:58 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 02:31:58 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 02:32:10 [INFO] Elin: 載入檔案成功: attendance.yaml
+2026-04-19 02:32:10 [INFO] Elin: 載入檔案成功: attendance_help.yaml
+2026-04-19 02:32:10 [INFO] Elin: 載入檔案成功: commemorate.yaml
+2026-04-19 02:32:10 [INFO] Elin: 載入檔案成功: commemorate_help.yaml
+2026-04-19 02:32:10 [INFO] Elin: 載入檔案成功: commemorate_success.yaml
+2026-04-19 02:32:10 [INFO] Elin: 載入檔案成功: market.yaml
+2026-04-19 02:32:10 [INFO] Elin: 載入檔案成功: market_help.yaml
+2026-04-19 02:32:10 [INFO] Elin: 載入檔案成功: merchandise.yaml
+2026-04-19 02:32:10 [INFO] Elin: 載入檔案成功: sample.yaml
+2026-04-19 02:32:10 [INFO] Elin: 載入檔案成功: test_dialog.yaml
+2026-04-19 02:32:10 [INFO] Elin: 資料載入完畢，總共載入 10 個檔案
+2026-04-19 02:32:10 [INFO] Elin: 載入檔案成功: vendor.json
+2026-04-19 02:32:10 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-04-19 02:32:10 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 02:32:10 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 02:32:10 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 02:32:10 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 02:32:10 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 02:32:10 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 02:32:10 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 02:32:10 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 02:32:10 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 02:32:10 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 02:32:10 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 02:32:10 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 02:32:10 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 02:32:10 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 02:32:10 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 02:32:10 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 02:32:10 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 02:32:33 [INFO] Elin: 載入檔案成功: attendance.yaml
+2026-04-19 02:32:33 [INFO] Elin: 載入檔案成功: attendance_help.yaml
+2026-04-19 02:32:33 [INFO] Elin: 載入檔案成功: commemorate.yaml
+2026-04-19 02:32:33 [INFO] Elin: 載入檔案成功: commemorate_help.yaml
+2026-04-19 02:32:33 [INFO] Elin: 載入檔案成功: commemorate_success.yaml
+2026-04-19 02:32:33 [INFO] Elin: 載入檔案成功: market.yaml
+2026-04-19 02:32:33 [INFO] Elin: 載入檔案成功: market_help.yaml
+2026-04-19 02:32:33 [INFO] Elin: 載入檔案成功: merchandise.yaml
+2026-04-19 02:32:33 [INFO] Elin: 載入檔案成功: sample.yaml
+2026-04-19 02:32:33 [INFO] Elin: 載入檔案成功: test_dialog.yaml
+2026-04-19 02:32:33 [INFO] Elin: 資料載入完畢，總共載入 10 個檔案
+2026-04-19 02:32:33 [INFO] Elin: 載入檔案成功: vendor.json
+2026-04-19 02:32:33 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-04-19 02:32:33 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 02:32:33 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 02:32:33 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 02:32:33 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 02:32:33 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 02:32:33 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 02:32:33 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 02:32:33 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 02:32:33 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 02:32:33 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 02:32:33 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 02:32:33 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 02:32:33 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 02:32:33 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 02:32:33 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 02:32:33 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 02:32:33 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 02:34:22 [INFO] Elin: 載入檔案成功: attendance.yaml
+2026-04-19 02:34:22 [INFO] Elin: 載入檔案成功: attendance_help.yaml
+2026-04-19 02:34:22 [INFO] Elin: 載入檔案成功: commemorate.yaml
+2026-04-19 02:34:22 [INFO] Elin: 載入檔案成功: commemorate_help.yaml
+2026-04-19 02:34:22 [INFO] Elin: 載入檔案成功: commemorate_success.yaml
+2026-04-19 02:34:22 [INFO] Elin: 載入檔案成功: market.yaml
+2026-04-19 02:34:22 [INFO] Elin: 載入檔案成功: market_help.yaml
+2026-04-19 02:34:22 [INFO] Elin: 載入檔案成功: merchandise.yaml
+2026-04-19 02:34:22 [INFO] Elin: 載入檔案成功: sample.yaml
+2026-04-19 02:34:22 [INFO] Elin: 載入檔案成功: test_dialog.yaml
+2026-04-19 02:34:22 [INFO] Elin: 資料載入完畢，總共載入 10 個檔案
+2026-04-19 02:34:22 [INFO] Elin: 載入檔案成功: vendor.json
+2026-04-19 02:34:22 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-04-19 02:34:22 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 02:34:22 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 02:34:22 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 02:34:22 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 02:34:22 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 02:34:22 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 02:34:22 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 02:34:22 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 02:34:22 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 02:34:22 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 02:34:22 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 02:34:22 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 02:34:22 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 02:34:22 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 02:34:22 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 02:34:22 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 02:34:22 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 02:38:32 [INFO] Elin: 載入檔案成功: attendance.yaml
+2026-04-19 02:38:32 [INFO] Elin: 載入檔案成功: attendance_help.yaml
+2026-04-19 02:38:32 [INFO] Elin: 載入檔案成功: commemorate.yaml
+2026-04-19 02:38:32 [INFO] Elin: 載入檔案成功: commemorate_help.yaml
+2026-04-19 02:38:32 [INFO] Elin: 載入檔案成功: commemorate_success.yaml
+2026-04-19 02:38:32 [INFO] Elin: 載入檔案成功: market.yaml
+2026-04-19 02:38:32 [INFO] Elin: 載入檔案成功: market_help.yaml
+2026-04-19 02:38:32 [INFO] Elin: 載入檔案成功: merchandise.yaml
+2026-04-19 02:38:32 [INFO] Elin: 載入檔案成功: sample.yaml
+2026-04-19 02:38:32 [INFO] Elin: 載入檔案成功: test_dialog.yaml
+2026-04-19 02:38:32 [INFO] Elin: 資料載入完畢，總共載入 10 個檔案
+2026-04-19 02:38:32 [INFO] Elin: 載入檔案成功: vendor.json
+2026-04-19 02:38:32 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-04-19 02:38:32 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 02:38:32 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 02:38:32 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 02:38:32 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 02:38:32 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 02:38:32 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 02:38:32 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 02:38:32 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 02:38:32 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 02:38:32 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 02:38:32 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 02:38:32 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 02:38:32 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 02:38:32 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 02:38:32 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 02:38:32 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 02:38:32 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 02:39:27 [INFO] Elin: 載入檔案成功: attendance.yaml
+2026-04-19 02:39:27 [INFO] Elin: 載入檔案成功: attendance_help.yaml
+2026-04-19 02:39:27 [INFO] Elin: 載入檔案成功: commemorate.yaml
+2026-04-19 02:39:27 [INFO] Elin: 載入檔案成功: commemorate_help.yaml
+2026-04-19 02:39:27 [INFO] Elin: 載入檔案成功: commemorate_success.yaml
+2026-04-19 02:39:27 [INFO] Elin: 載入檔案成功: market.yaml
+2026-04-19 02:39:27 [INFO] Elin: 載入檔案成功: market_help.yaml
+2026-04-19 02:39:27 [INFO] Elin: 載入檔案成功: merchandise.yaml
+2026-04-19 02:39:27 [INFO] Elin: 載入檔案成功: sample.yaml
+2026-04-19 02:39:27 [INFO] Elin: 載入檔案成功: test_dialog.yaml
+2026-04-19 02:39:27 [INFO] Elin: 資料載入完畢，總共載入 10 個檔案
+2026-04-19 02:39:27 [INFO] Elin: 載入檔案成功: vendor.json
+2026-04-19 02:39:27 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-04-19 02:39:27 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 02:39:27 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 02:39:27 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 02:39:27 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 02:39:27 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 02:39:27 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 02:39:27 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 02:39:27 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 02:39:27 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 02:39:27 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 02:39:27 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 02:39:27 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 02:39:27 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 02:39:27 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 02:39:27 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 02:39:27 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 02:39:27 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: attendance.yaml
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: attendance_help.yaml
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: commemorate.yaml
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: commemorate_help.yaml
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: commemorate_success.yaml
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: market.yaml
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: market_help.yaml
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: merchandise.yaml
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: sample.yaml
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: test_dialog.yaml
+2026-04-19 02:39:51 [INFO] Elin: 資料載入完畢，總共載入 10 個檔案
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: vendor.json
+2026-04-19 02:39:51 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 02:39:51 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: boundary_forest.json
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: falun.json
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: falun_mine.json
+2026-04-19 02:39:51 [INFO] Elin: 資料載入完畢，總共載入 3 個檔案
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 02:39:51 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: default_meadow.json
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: rose.json
+2026-04-19 02:39:51 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: meadow.json
+2026-04-19 02:39:51 [INFO] Elin: 載入檔案成功: white_birch.json
+2026-04-19 02:39:51 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 02:39:51 [INFO] Elin: Synced 11 commands to Global
+2026-04-19 02:39:54 [INFO] Elin: [LevelSession] 成功保存 suyab_ 的時間戳記
+2026-04-19 02:39:54 [INFO] Elin: [LevelSession] 成功保存 blackwidowstar 的時間戳記
+2026-04-19 02:39:54 [INFO] Elin: [LevelSession] 成功保存 maobibibi 的時間戳記
+2026-04-19 02:39:54 [INFO] Elin: [LevelSession] 成功保存 bigpig1703 的時間戳記
+2026-04-19 02:39:54 [INFO] Elin: [LevelSession] 成功保存 doll_0000 的時間戳記
+2026-04-19 02:39:54 [INFO] Elin: [LevelSession] 成功保存 ne820005 的時間戳記
+2026-04-19 02:39:54 [INFO] Elin: [LevelSession] 成功保存 mgbbuhu 的時間戳記
+2026-04-19 02:39:54 [INFO] Elin: [LevelSession] 成功保存 snowdrift3818 的時間戳記
+2026-04-19 02:39:54 [INFO] Elin: [LevelSession] 成功保存 abaikaishuigui 的時間戳記
+2026-04-19 02:39:54 [INFO] Elin: [LevelSession] 成功保存 miroo_ 的時間戳記
+2026-04-19 02:39:54 [INFO] Elin: The Version of Python is 3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]
+2026-04-19 02:39:54 [INFO] Elin: Meow, Discord Bot loaded!
+2026-04-19 02:39:54 [INFO] Elin: ✅ Logged in as: Elin#6095
+2026-04-19 02:40:15 [DEBUG] Elin: 給予 雙B 訊息經驗值: 5 exp
+2026-04-19 02:40:20 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-04-19 02:40:20 [INFO] Elin: 給予 Suyab 語音經驗值: 0 exp, 累積時間: 0.43 分鐘
+2026-04-19 02:40:20 [INFO] Elin: 給予 雙B 語音經驗值: 0 exp, 累積時間: 0.43 分鐘
+2026-04-19 02:40:20 [INFO] Elin: 給予 Mao 語音經驗值: 0 exp, 累積時間: 0.43 分鐘
+2026-04-19 02:40:20 [INFO] Elin: 給予 KIWI 語音經驗值: 0 exp, 累積時間: 0.43 分鐘
+2026-04-19 02:40:20 [INFO] Elin: 給予 ? 語音經驗值: 0 exp, 累積時間: 0.43 分鐘
+2026-04-19 02:40:20 [INFO] Elin: 給予 好睏的內 語音經驗值: 0 exp, 累積時間: 0.43 分鐘
+2026-04-19 02:40:20 [INFO] Elin: 給予 哈姆/Mumu 語音經驗值: 0 exp, 累積時間: 0.43 分鐘
+2026-04-19 02:40:20 [INFO] Elin: 給予 Snowdrift 語音經驗值: 0 exp, 累積時間: 0.43 分鐘
+2026-04-19 02:40:20 [INFO] Elin: 給予 Maes Pso(水鬼鳳梨酥 由MIROO賜名) 語音經驗值: 0 exp, 累積時間: 0.43 分鐘
+2026-04-19 02:40:20 [INFO] Elin: 給予 MIROO (:зꇤ )ﾆ 語音經驗值: 0 exp, 累積時間: 0.43 分鐘
+2026-04-19 02:40:20 [INFO] Elin: 機器人已關閉。
+2026-04-19 02:40:23 [INFO] Elin: 載入檔案成功: attendance.yaml
+2026-04-19 02:40:23 [INFO] Elin: 載入檔案成功: attendance_help.yaml
+2026-04-19 02:40:23 [INFO] Elin: 載入檔案成功: commemorate.yaml
+2026-04-19 02:40:23 [INFO] Elin: 載入檔案成功: commemorate_help.yaml
+2026-04-19 02:40:23 [INFO] Elin: 載入檔案成功: commemorate_success.yaml
+2026-04-19 02:40:23 [INFO] Elin: 載入檔案成功: market.yaml
+2026-04-19 02:40:23 [INFO] Elin: 載入檔案成功: market_help.yaml
+2026-04-19 02:40:23 [INFO] Elin: 載入檔案成功: merchandise.yaml
+2026-04-19 02:40:23 [INFO] Elin: 載入檔案成功: sample.yaml
+2026-04-19 02:40:23 [INFO] Elin: 載入檔案成功: test_dialog.yaml
+2026-04-19 02:40:23 [INFO] Elin: 資料載入完畢，總共載入 10 個檔案
+2026-04-19 02:40:23 [INFO] Elin: 載入檔案成功: vendor.json
+2026-04-19 02:40:23 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-04-19 02:40:23 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 02:40:23 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 02:40:23 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 02:40:23 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 02:40:23 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 02:40:23 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 02:40:23 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 02:40:23 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 02:40:23 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 02:40:23 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 02:40:23 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 02:40:23 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 02:40:23 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 02:40:23 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 02:40:23 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 02:40:23 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 02:40:23 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 02:40:31 [INFO] Elin: 載入檔案成功: attendance.yaml
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: attendance_help.yaml
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: commemorate.yaml
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: commemorate_help.yaml
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: commemorate_success.yaml
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: market.yaml
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: market_help.yaml
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: merchandise.yaml
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: sample.yaml
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: test_dialog.yaml
+2026-04-19 02:40:32 [INFO] Elin: 資料載入完畢，總共載入 10 個檔案
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: vendor.json
+2026-04-19 02:40:32 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 02:40:32 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: boundary_forest.json
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: falun.json
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: falun_mine.json
+2026-04-19 02:40:32 [INFO] Elin: 資料載入完畢，總共載入 3 個檔案
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 02:40:32 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: default_meadow.json
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: rose.json
+2026-04-19 02:40:32 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: meadow.json
+2026-04-19 02:40:32 [INFO] Elin: 載入檔案成功: white_birch.json
+2026-04-19 02:40:32 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 02:40:32 [INFO] Elin: Synced 11 commands to Global
+2026-04-19 02:40:35 [INFO] Elin: [LevelSession] 成功保存 suyab_ 的時間戳記
+2026-04-19 02:40:35 [INFO] Elin: [LevelSession] 成功保存 blackwidowstar 的時間戳記
+2026-04-19 02:40:35 [INFO] Elin: [LevelSession] 成功保存 maobibibi 的時間戳記
+2026-04-19 02:40:35 [INFO] Elin: [LevelSession] 成功保存 bigpig1703 的時間戳記
+2026-04-19 02:40:35 [INFO] Elin: [LevelSession] 成功保存 doll_0000 的時間戳記
+2026-04-19 02:40:35 [INFO] Elin: [LevelSession] 成功保存 ne820005 的時間戳記
+2026-04-19 02:40:35 [INFO] Elin: [LevelSession] 成功保存 mgbbuhu 的時間戳記
+2026-04-19 02:40:35 [INFO] Elin: [LevelSession] 成功保存 snowdrift3818 的時間戳記
+2026-04-19 02:40:35 [INFO] Elin: [LevelSession] 成功保存 abaikaishuigui 的時間戳記
+2026-04-19 02:40:35 [INFO] Elin: [LevelSession] 成功保存 miroo_ 的時間戳記
+2026-04-19 02:40:35 [INFO] Elin: The Version of Python is 3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]
+2026-04-19 02:40:35 [INFO] Elin: Meow, Discord Bot loaded!
+2026-04-19 02:40:35 [INFO] Elin: ✅ Logged in as: Elin#6095
+2026-04-19 02:41:01 [DEBUG] Elin: 給予 (*T_T*) 訊息經驗值: 5 exp
+2026-04-19 02:41:37 [DEBUG] Elin: 給予 雙B 訊息經驗值: 5 exp
+2026-04-19 02:41:49 [DEBUG] Elin: 給予 (*T_T*) 訊息經驗值: 5 exp
+2026-04-19 02:42:24 [DEBUG] Elin: 給予 (*T_T*) 訊息經驗值: 5 exp
+2026-04-19 02:53:19 [INFO] Elin: [LevelSession] 成功保存 negative_95 的時間戳記
+2026-04-19 02:53:19 [DEBUG] Elin: [語音] 🌱鳳梨加班加到往生酥 加入語音頻道：🍻冒險者酒館
+2026-04-19 02:58:49 [DEBUG] Elin: 給予 🌱鳳梨加班加到往生酥 訊息經驗值: 5 exp
+2026-04-19 03:14:06 [INFO] Elin: 給予 Mao 語音經驗值: 33 exp, 累積時間: 33.52 分鐘
+2026-04-19 03:14:06 [INFO] Elin: [LevelSession] 成功移除 maobibibi 的時間戳記
+2026-04-19 03:14:06 [DEBUG] Elin: [語音] Mao 離開語音頻道：🍻冒險者酒館
+2026-04-19 03:37:21 [INFO] Elin: [LevelSession] 成功保存 vergilxdmc 的時間戳記
+2026-04-19 03:37:21 [DEBUG] Elin: [語音] Vergil / S.D 加入語音頻道：🍻冒險者酒館
+2026-04-19 03:49:06 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 03:49:31 [INFO] Elin: 給予 雙B 語音經驗值: 103 exp, 累積時間: 68.94 分鐘
+2026-04-19 03:49:31 [INFO] Elin: [LevelSession] 成功移除 blackwidowstar 的時間戳記
+2026-04-19 03:49:31 [DEBUG] Elin: [語音] 雙B 離開語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 03:51:42 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 03:54:46 [DEBUG] Elin: 給予 🌱鳳梨加班加到往生酥 反應經驗值: 5 exp
+2026-04-19 03:55:11 [DEBUG] Elin: 給予 MIROO (:зꇤ )ﾆ 訊息經驗值: 5 exp
+2026-04-19 03:57:18 [DEBUG] Elin: 給予 MIROO (:зꇤ )ﾆ 訊息經驗值: 5 exp
+2026-04-19 03:58:19 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 03:58:21 [DEBUG] Elin: 給予 MIROO (:зꇤ )ﾆ 訊息經驗值: 5 exp
+2026-04-19 04:00:14 [INFO] Elin: [LevelSession] 成功保存 jeras130 的時間戳記
+2026-04-19 04:00:14 [DEBUG] Elin: [語音] 小鳥 加入語音頻道：🍻冒險者酒館
+2026-04-19 04:00:34 [DEBUG] Elin: 給予 小鳥 訊息經驗值: 5 exp
+2026-04-19 04:02:32 [DEBUG] Elin: 給予 🌱鳳梨加班加到往生酥 反應經驗值: 5 exp
+2026-04-19 04:02:33 [DEBUG] Elin: 給予 MIROO (:зꇤ )ﾆ 訊息經驗值: 5 exp
+2026-04-19 04:03:05 [DEBUG] Elin: 給予 MIROO (:зꇤ )ﾆ 訊息經驗值: 5 exp
+2026-04-19 04:05:57 [INFO] Elin: 給予 🌱鳳梨加班加到往生酥 語音經驗值: 108 exp, 累積時間: 72.63 分鐘
+2026-04-19 04:05:57 [INFO] Elin: [LevelSession] 成功移除 negative_95 的時間戳記
+2026-04-19 04:05:57 [DEBUG] Elin: [語音] 🌱鳳梨加班加到往生酥 離開語音頻道：🍻冒險者酒館
+2026-04-19 04:07:44 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 04:09:22 [DEBUG] Elin: 給予 MIROO (:зꇤ )ﾆ 訊息經驗值: 5 exp
+2026-04-19 04:11:15 [DEBUG] Elin: 給予 MIROO (:зꇤ )ﾆ 訊息經驗值: 5 exp
+2026-04-19 04:12:57 [INFO] Elin: 給予 小鳥 語音經驗值: 12 exp, 累積時間: 12.70 分鐘
+2026-04-19 04:12:57 [INFO] Elin: [LevelSession] 成功移除 jeras130 的時間戳記
+2026-04-19 04:12:57 [DEBUG] Elin: [語音] 小鳥 離開語音頻道：🍻冒險者酒館
+2026-04-19 05:07:24 [INFO] Elin: 給予 MIROO (:зꇤ )ﾆ 語音經驗值: 293 exp, 累積時間: 146.82 分鐘
+2026-04-19 05:07:24 [INFO] Elin: [LevelSession] 成功移除 miroo_ 的時間戳記
+2026-04-19 05:07:24 [DEBUG] Elin: [語音] MIROO (:зꇤ )ﾆ 離開語音頻道：🍻冒險者酒館
+2026-04-19 05:08:24 [INFO] Elin: 給予 Vergil / S.D 語音經驗值: 136 exp, 累積時間: 91.05 分鐘
+2026-04-19 05:08:24 [INFO] Elin: [LevelSession] 成功移除 vergilxdmc 的時間戳記
+2026-04-19 05:08:24 [DEBUG] Elin: [語音] Vergil / S.D 離開語音頻道：🍻冒險者酒館
+2026-04-19 05:16:25 [INFO] Elin: 41 已進行簽到，總天數：6
+2026-04-19 05:20:18 [INFO] Elin: 給予 Snowdrift 語音經驗值: 319 exp, 累積時間: 159.73 分鐘
+2026-04-19 05:20:18 [INFO] Elin: [LevelSession] 成功移除 snowdrift3818 的時間戳記
+2026-04-19 05:20:18 [DEBUG] Elin: [語音] Snowdrift 離開語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 05:34:01 [INFO] Elin: 給予 Maes Pso(水鬼鳳梨酥 由MIROO賜名) 語音經驗值: 346 exp, 累積時間: 173.44 分鐘
+2026-04-19 05:34:01 [INFO] Elin: [LevelSession] 成功移除 abaikaishuigui 的時間戳記
+2026-04-19 05:34:01 [DEBUG] Elin: [語音] Maes Pso(水鬼鳳梨酥 由MIROO賜名) 離開語音頻道：🍻冒險者酒館
+2026-04-19 05:39:27 [INFO] Elin: Maes Pso(水鬼鳳梨酥 由MIROO賜名) 已進行簽到，總天數：13
+2026-04-19 07:48:39 [DEBUG] Elin: 給予 Vergil / S.D 訊息經驗值: 5 exp
+2026-04-19 07:58:28 [DEBUG] Elin: 給予 Vergil / S.D 反應經驗值: 5 exp
+2026-04-19 08:02:45 [DEBUG] Elin: 給予 玖歌 訊息經驗值: 5 exp
+2026-04-19 08:27:41 [INFO] Elin: [LevelSession] 成功保存 jeras130 的時間戳記
+2026-04-19 08:27:41 [DEBUG] Elin: [語音] 小鳥 加入語音頻道：🍵小鳥的隱世茶室
+2026-04-19 08:35:48 [INFO] Elin: 給予 Suyab 語音經驗值: 710 exp, 累積時間: 355.21 分鐘
+2026-04-19 08:35:48 [INFO] Elin: [LevelSession] 成功移除 suyab_ 的時間戳記
+2026-04-19 08:35:48 [DEBUG] Elin: [語音] Suyab 離開語音頻道：🎑風獅的白銀鄉
+2026-04-19 08:36:35 [DEBUG] Elin: 給予 哩賀哇係魚←← 訊息經驗值: 5 exp
+2026-04-19 08:46:59 [DEBUG] Elin: 給予 Vergil / S.D 訊息經驗值: 5 exp
+2026-04-19 08:54:15 [DEBUG] Elin: 給予 Vergil / S.D 訊息經驗值: 5 exp
+2026-04-19 08:54:37 [INFO] Elin: [LevelSession] 成功保存 cheyi35 的時間戳記
+2026-04-19 08:54:37 [DEBUG] Elin: [語音] 哩賀哇係魚←← 加入語音頻道：🦈不賣魚的魚販
+2026-04-19 08:58:03 [INFO] Elin: [LevelSession] 成功保存 edgarwu 的時間戳記
+2026-04-19 08:58:03 [DEBUG] Elin: [語音] 海德格 加入語音頻道：🦈不賣魚的魚販
+2026-04-19 09:27:28 [INFO] Elin: [LevelSession] 成功保存 suyab_ 的時間戳記
+2026-04-19 09:27:28 [DEBUG] Elin: [語音] Suyab 加入語音頻道：🎑風獅的白銀鄉
+2026-04-19 09:34:53 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-04-19 09:34:54 [INFO] Elin: 給予 Suyab 語音經驗值: 7 exp, 累積時間: 7.42 分鐘
+2026-04-19 09:34:54 [INFO] Elin: 給予 KIWI 語音經驗值: 828 exp, 累積時間: 414.32 分鐘
+2026-04-19 09:34:54 [INFO] Elin: 給予 ? 語音經驗值: 828 exp, 累積時間: 414.32 分鐘
+2026-04-19 09:34:54 [INFO] Elin: 給予 好睏的內 語音經驗值: 828 exp, 累積時間: 414.32 分鐘
+2026-04-19 09:34:54 [INFO] Elin: 給予 哈姆/Mumu 語音經驗值: 828 exp, 累積時間: 414.32 分鐘
+2026-04-19 09:34:54 [INFO] Elin: 給予 海德格 語音經驗值: 36 exp, 累積時間: 36.85 分鐘
+2026-04-19 09:34:54 [INFO] Elin: 給予 小鳥 語音經驗值: 100 exp, 累積時間: 67.21 分鐘
+2026-04-19 09:34:54 [INFO] Elin: 給予 哩賀哇係魚←← 語音經驗值: 40 exp, 累積時間: 40.29 分鐘
+2026-04-19 09:34:54 [INFO] Elin: 機器人已關閉。
+2026-04-19 09:34:59 [INFO] Elin: 載入檔案成功: attendance.yaml
+2026-04-19 09:34:59 [INFO] Elin: 載入檔案成功: attendance_help.yaml
+2026-04-19 09:34:59 [INFO] Elin: 載入檔案成功: commemorate.yaml
+2026-04-19 09:34:59 [INFO] Elin: 載入檔案成功: commemorate_help.yaml
+2026-04-19 09:34:59 [INFO] Elin: 載入檔案成功: commemorate_success.yaml
+2026-04-19 09:34:59 [INFO] Elin: 載入檔案成功: market.yaml
+2026-04-19 09:34:59 [INFO] Elin: 載入檔案成功: market_help.yaml
+2026-04-19 09:34:59 [INFO] Elin: 載入檔案成功: merchandise.yaml
+2026-04-19 09:34:59 [INFO] Elin: 載入檔案成功: sample.yaml
+2026-04-19 09:34:59 [INFO] Elin: 載入檔案成功: test_dialog.yaml
+2026-04-19 09:34:59 [INFO] Elin: 資料載入完畢，總共載入 10 個檔案
+2026-04-19 09:34:59 [INFO] Elin: 載入檔案成功: vendor.json
+2026-04-19 09:34:59 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-04-19 09:34:59 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 09:34:59 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 09:34:59 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 09:34:59 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 09:34:59 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 09:34:59 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 09:34:59 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 09:34:59 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 09:34:59 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 09:34:59 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 09:34:59 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 09:34:59 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 09:34:59 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 09:34:59 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 09:34:59 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 09:34:59 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 09:34:59 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 09:35:52 [INFO] Elin: 載入檔案成功: attendance.yaml
+2026-04-19 09:35:52 [INFO] Elin: 載入檔案成功: attendance_help.yaml
+2026-04-19 09:35:52 [INFO] Elin: 載入檔案成功: commemorate.yaml
+2026-04-19 09:35:52 [INFO] Elin: 載入檔案成功: commemorate_help.yaml
+2026-04-19 09:35:52 [INFO] Elin: 載入檔案成功: commemorate_success.yaml
+2026-04-19 09:35:52 [INFO] Elin: 載入檔案成功: market.yaml
+2026-04-19 09:35:52 [INFO] Elin: 載入檔案成功: market_help.yaml
+2026-04-19 09:35:52 [INFO] Elin: 載入檔案成功: merchandise.yaml
+2026-04-19 09:35:52 [INFO] Elin: 載入檔案成功: sample.yaml
+2026-04-19 09:35:52 [INFO] Elin: 載入檔案成功: test_dialog.yaml
+2026-04-19 09:35:52 [INFO] Elin: 資料載入完畢，總共載入 10 個檔案
+2026-04-19 09:35:52 [INFO] Elin: 載入檔案成功: vendor.json
+2026-04-19 09:35:52 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-04-19 09:35:52 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 09:35:52 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 09:35:52 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 09:35:52 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 09:35:52 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 09:35:52 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 09:35:52 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 09:35:52 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 09:35:52 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 09:35:52 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 09:35:52 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 09:35:52 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 09:35:52 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 09:35:52 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 09:35:52 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 09:35:52 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 09:35:52 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 09:37:16 [INFO] Elin: 載入檔案成功: attendance.yaml
+2026-04-19 09:37:16 [INFO] Elin: 載入檔案成功: attendance_help.yaml
+2026-04-19 09:37:16 [INFO] Elin: 載入檔案成功: commemorate.yaml
+2026-04-19 09:37:16 [INFO] Elin: 載入檔案成功: commemorate_help.yaml
+2026-04-19 09:37:16 [INFO] Elin: 載入檔案成功: commemorate_success.yaml
+2026-04-19 09:37:16 [INFO] Elin: 載入檔案成功: market.yaml
+2026-04-19 09:37:16 [INFO] Elin: 載入檔案成功: market_help.yaml
+2026-04-19 09:37:16 [INFO] Elin: 載入檔案成功: merchandise.yaml
+2026-04-19 09:37:16 [INFO] Elin: 載入檔案成功: sample.yaml
+2026-04-19 09:37:16 [INFO] Elin: 載入檔案成功: test_dialog.yaml
+2026-04-19 09:37:16 [INFO] Elin: 資料載入完畢，總共載入 10 個檔案
+2026-04-19 09:37:16 [INFO] Elin: 載入檔案成功: vendor.json
+2026-04-19 09:37:16 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-04-19 09:37:16 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 09:37:16 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 09:37:16 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 09:37:16 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 09:37:16 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 09:37:16 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 09:37:16 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 09:37:16 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 09:37:16 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 09:37:16 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 09:37:16 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 09:37:16 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 09:37:16 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 09:37:16 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 09:37:16 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 09:37:16 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 09:37:16 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: attendance.yaml
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: attendance_help.yaml
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: commemorate.yaml
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: commemorate_help.yaml
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: commemorate_success.yaml
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: market.yaml
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: market_help.yaml
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: merchandise.yaml
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: sample.yaml
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: test_dialog.yaml
+2026-04-19 09:38:15 [INFO] Elin: 資料載入完畢，總共載入 10 個檔案
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: vendor.json
+2026-04-19 09:38:15 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 09:38:15 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: boundary_forest.json
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: falun.json
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: falun_mine.json
+2026-04-19 09:38:15 [INFO] Elin: 資料載入完畢，總共載入 3 個檔案
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 09:38:15 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: default_meadow.json
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: rose.json
+2026-04-19 09:38:15 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: meadow.json
+2026-04-19 09:38:15 [INFO] Elin: 載入檔案成功: white_birch.json
+2026-04-19 09:38:15 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 09:38:16 [INFO] Elin: Synced 11 commands to Global
+2026-04-19 09:38:20 [INFO] Elin: [LevelSession] 成功保存 suyab_ 的時間戳記
+2026-04-19 09:38:20 [INFO] Elin: [LevelSession] 成功保存 cheyi35 的時間戳記
+2026-04-19 09:38:20 [INFO] Elin: [LevelSession] 成功保存 bigpig1703 的時間戳記
+2026-04-19 09:38:20 [INFO] Elin: [LevelSession] 成功保存 doll_0000 的時間戳記
+2026-04-19 09:38:20 [INFO] Elin: [LevelSession] 成功保存 ne820005 的時間戳記
+2026-04-19 09:38:20 [INFO] Elin: [LevelSession] 成功保存 mgbbuhu 的時間戳記
+2026-04-19 09:38:20 [INFO] Elin: [LevelSession] 成功保存 jeras130 的時間戳記
+2026-04-19 09:38:20 [INFO] Elin: [LevelSession] 成功保存 edgarwu 的時間戳記
+2026-04-19 09:38:20 [INFO] Elin: The Version of Python is 3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]
+2026-04-19 09:38:20 [INFO] Elin: Meow, Discord Bot loaded!
+2026-04-19 09:38:20 [INFO] Elin: ✅ Logged in as: Elin#6095
+2026-04-19 09:39:35 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-04-19 09:39:35 [INFO] Elin: 給予 Suyab 語音經驗值: 1 exp, 累積時間: 1.26 分鐘
+2026-04-19 09:39:35 [INFO] Elin: 給予 哩賀哇係魚←← 語音經驗值: 1 exp, 累積時間: 1.26 分鐘
+2026-04-19 09:39:35 [INFO] Elin: 給予 KIWI 語音經驗值: 1 exp, 累積時間: 1.26 分鐘
+2026-04-19 09:39:35 [INFO] Elin: 給予 ? 語音經驗值: 1 exp, 累積時間: 1.26 分鐘
+2026-04-19 09:39:35 [INFO] Elin: 給予 好睏的內 語音經驗值: 1 exp, 累積時間: 1.26 分鐘
+2026-04-19 09:39:35 [INFO] Elin: 給予 哈姆/Mumu 語音經驗值: 1 exp, 累積時間: 1.26 分鐘
+2026-04-19 09:39:35 [INFO] Elin: 給予 小鳥 語音經驗值: 1 exp, 累積時間: 1.26 分鐘
+2026-04-19 09:39:35 [INFO] Elin: 給予 海德格 語音經驗值: 1 exp, 累積時間: 1.26 分鐘
+2026-04-19 09:39:35 [INFO] Elin: 機器人已關閉。
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: attendance.yaml
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: attendance_help.yaml
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: commemorate.yaml
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: commemorate_help.yaml
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: commemorate_success.yaml
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: market.yaml
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: market_help.yaml
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: merchandise.yaml
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: sample.yaml
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: test_dialog.yaml
+2026-04-19 09:40:53 [INFO] Elin: 資料載入完畢，總共載入 10 個檔案
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: vendor.json
+2026-04-19 09:40:53 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 09:40:53 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: boundary_forest.json
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: falun.json
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: falun_mine.json
+2026-04-19 09:40:53 [INFO] Elin: 資料載入完畢，總共載入 3 個檔案
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 09:40:53 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: default_meadow.json
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: rose.json
+2026-04-19 09:40:53 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: meadow.json
+2026-04-19 09:40:53 [INFO] Elin: 載入檔案成功: white_birch.json
+2026-04-19 09:40:53 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 09:40:53 [INFO] Elin: Synced 11 commands to Global
+2026-04-19 09:40:56 [INFO] Elin: [LevelSession] 成功保存 suyab_ 的時間戳記
+2026-04-19 09:40:56 [INFO] Elin: [LevelSession] 成功保存 cheyi35 的時間戳記
+2026-04-19 09:40:56 [INFO] Elin: [LevelSession] 成功保存 bigpig1703 的時間戳記
+2026-04-19 09:40:56 [INFO] Elin: [LevelSession] 成功保存 doll_0000 的時間戳記
+2026-04-19 09:40:56 [INFO] Elin: [LevelSession] 成功保存 ne820005 的時間戳記
+2026-04-19 09:40:56 [INFO] Elin: [LevelSession] 成功保存 mgbbuhu 的時間戳記
+2026-04-19 09:40:56 [INFO] Elin: [LevelSession] 成功保存 jeras130 的時間戳記
+2026-04-19 09:40:56 [INFO] Elin: [LevelSession] 成功保存 edgarwu 的時間戳記
+2026-04-19 09:40:56 [INFO] Elin: The Version of Python is 3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]
+2026-04-19 09:40:56 [INFO] Elin: Meow, Discord Bot loaded!
+2026-04-19 09:40:56 [INFO] Elin: ✅ Logged in as: Elin#6095
+2026-04-19 09:41:31 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-04-19 09:41:32 [INFO] Elin: 給予 Suyab 語音經驗值: 0 exp, 累積時間: 0.60 分鐘
+2026-04-19 09:41:32 [INFO] Elin: 給予 哩賀哇係魚←← 語音經驗值: 0 exp, 累積時間: 0.60 分鐘
+2026-04-19 09:41:32 [INFO] Elin: 給予 KIWI 語音經驗值: 0 exp, 累積時間: 0.60 分鐘
+2026-04-19 09:41:32 [INFO] Elin: 給予 ? 語音經驗值: 0 exp, 累積時間: 0.60 分鐘
+2026-04-19 09:41:32 [INFO] Elin: 給予 好睏的內 語音經驗值: 0 exp, 累積時間: 0.60 分鐘
+2026-04-19 09:41:32 [INFO] Elin: 給予 哈姆/Mumu 語音經驗值: 0 exp, 累積時間: 0.60 分鐘
+2026-04-19 09:41:32 [INFO] Elin: 給予 小鳥 語音經驗值: 0 exp, 累積時間: 0.60 分鐘
+2026-04-19 09:41:32 [INFO] Elin: 給予 海德格 語音經驗值: 0 exp, 累積時間: 0.60 分鐘
+2026-04-19 09:41:32 [INFO] Elin: 機器人已關閉。
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: attendance.yaml
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: attendance_help.yaml
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: commemorate.yaml
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: commemorate_help.yaml
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: commemorate_success.yaml
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: market.yaml
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: market_help.yaml
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: merchandise.yaml
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: sample.yaml
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: test_dialog.yaml
+2026-04-19 09:41:35 [INFO] Elin: 資料載入完畢，總共載入 10 個檔案
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: vendor.json
+2026-04-19 09:41:35 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 09:41:35 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: boundary_forest.json
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: falun.json
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: falun_mine.json
+2026-04-19 09:41:35 [INFO] Elin: 資料載入完畢，總共載入 3 個檔案
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 09:41:35 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: default_meadow.json
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: rose.json
+2026-04-19 09:41:35 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: meadow.json
+2026-04-19 09:41:35 [INFO] Elin: 載入檔案成功: white_birch.json
+2026-04-19 09:41:35 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 09:41:35 [INFO] Elin: Synced 11 commands to Global
+2026-04-19 09:41:38 [INFO] Elin: [LevelSession] 成功保存 suyab_ 的時間戳記
+2026-04-19 09:41:38 [INFO] Elin: [LevelSession] 成功保存 cheyi35 的時間戳記
+2026-04-19 09:41:38 [INFO] Elin: [LevelSession] 成功保存 bigpig1703 的時間戳記
+2026-04-19 09:41:38 [INFO] Elin: [LevelSession] 成功保存 doll_0000 的時間戳記
+2026-04-19 09:41:38 [INFO] Elin: [LevelSession] 成功保存 ne820005 的時間戳記
+2026-04-19 09:41:38 [INFO] Elin: [LevelSession] 成功保存 mgbbuhu 的時間戳記
+2026-04-19 09:41:38 [INFO] Elin: [LevelSession] 成功保存 jeras130 的時間戳記
+2026-04-19 09:41:38 [INFO] Elin: [LevelSession] 成功保存 edgarwu 的時間戳記
+2026-04-19 09:41:38 [INFO] Elin: The Version of Python is 3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]
+2026-04-19 09:41:38 [INFO] Elin: Meow, Discord Bot loaded!
+2026-04-19 09:41:38 [INFO] Elin: ✅ Logged in as: Elin#6095
+2026-04-19 09:43:19 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-04-19 09:43:19 [INFO] Elin: 給予 Suyab 語音經驗值: 1 exp, 累積時間: 1.69 分鐘
+2026-04-19 09:43:19 [INFO] Elin: 給予 哩賀哇係魚←← 語音經驗值: 1 exp, 累積時間: 1.69 分鐘
+2026-04-19 09:43:19 [INFO] Elin: 給予 KIWI 語音經驗值: 1 exp, 累積時間: 1.69 分鐘
+2026-04-19 09:43:19 [INFO] Elin: 給予 ? 語音經驗值: 1 exp, 累積時間: 1.69 分鐘
+2026-04-19 09:43:19 [INFO] Elin: 給予 好睏的內 語音經驗值: 1 exp, 累積時間: 1.69 分鐘
+2026-04-19 09:43:19 [INFO] Elin: 給予 哈姆/Mumu 語音經驗值: 1 exp, 累積時間: 1.69 分鐘
+2026-04-19 09:43:19 [INFO] Elin: 給予 小鳥 語音經驗值: 1 exp, 累積時間: 1.69 分鐘
+2026-04-19 09:43:19 [INFO] Elin: 給予 海德格 語音經驗值: 1 exp, 累積時間: 1.69 分鐘
+2026-04-19 09:43:19 [INFO] Elin: 機器人已關閉。
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: attendance.yaml
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: attendance_help.yaml
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: commemorate.yaml
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: commemorate_help.yaml
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: commemorate_success.yaml
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: market.yaml
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: market_help.yaml
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: merchandise.yaml
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: sample.yaml
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: test_dialog.yaml
+2026-04-19 09:43:22 [INFO] Elin: 資料載入完畢，總共載入 10 個檔案
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: vendor.json
+2026-04-19 09:43:22 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 09:43:22 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: boundary_forest.json
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: falun.json
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: falun_mine.json
+2026-04-19 09:43:22 [INFO] Elin: 資料載入完畢，總共載入 3 個檔案
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 09:43:22 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: default_meadow.json
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: rose.json
+2026-04-19 09:43:22 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: meadow.json
+2026-04-19 09:43:22 [INFO] Elin: 載入檔案成功: white_birch.json
+2026-04-19 09:43:22 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 09:43:23 [INFO] Elin: Synced 11 commands to Global
+2026-04-19 09:43:27 [INFO] Elin: [LevelSession] 成功保存 suyab_ 的時間戳記
+2026-04-19 09:43:27 [INFO] Elin: [LevelSession] 成功保存 cheyi35 的時間戳記
+2026-04-19 09:43:27 [INFO] Elin: [LevelSession] 成功保存 bigpig1703 的時間戳記
+2026-04-19 09:43:27 [INFO] Elin: [LevelSession] 成功保存 doll_0000 的時間戳記
+2026-04-19 09:43:27 [INFO] Elin: [LevelSession] 成功保存 ne820005 的時間戳記
+2026-04-19 09:43:27 [INFO] Elin: [LevelSession] 成功保存 mgbbuhu 的時間戳記
+2026-04-19 09:43:27 [INFO] Elin: [LevelSession] 成功保存 jeras130 的時間戳記
+2026-04-19 09:43:27 [INFO] Elin: [LevelSession] 成功保存 edgarwu 的時間戳記
+2026-04-19 09:43:27 [INFO] Elin: The Version of Python is 3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]
+2026-04-19 09:43:27 [INFO] Elin: Meow, Discord Bot loaded!
+2026-04-19 09:43:27 [INFO] Elin: ✅ Logged in as: Elin#6095
+2026-04-19 10:07:19 [INFO] Elin: [LevelSession] 成功保存 95_jasa 的時間戳記
+2026-04-19 10:07:19 [DEBUG] Elin: [語音] J A 加入語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 10:46:01 [DEBUG] Elin: 給予 凌澄Lusa 反應經驗值: 5 exp
+2026-04-19 10:52:16 [INFO] Elin: [LevelSession] 成功保存 1zzzz1 的時間戳記
+2026-04-19 10:52:16 [DEBUG] Elin: [語音] (*T_T*) 加入語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 10:59:01 [INFO] Elin: [LevelSession] 成功保存 a_ming1649 的時間戳記
+2026-04-19 10:59:01 [DEBUG] Elin: [語音] 阿銘 加入語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 11:00:39 [DEBUG] Elin: 給予 阿銘 訊息經驗值: 5 exp
+2026-04-19 11:16:05 [INFO] Elin: [LevelSession] 成功保存 owo019058 的時間戳記
+2026-04-19 11:16:05 [DEBUG] Elin: [語音] 米（OWO） 加入語音頻道：🦈不賣魚的魚販
+2026-04-19 11:17:49 [INFO] Elin: [LevelSession] 成功保存 panzer1018 的時間戳記
+2026-04-19 11:17:49 [DEBUG] Elin: [語音] 九条 カレン 加入語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 11:24:43 [DEBUG] Elin: 給予 13號星期五 反應經驗值: 5 exp
+2026-04-19 11:41:14 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-04-19 11:42:10 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-04-19 11:43:06 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-04-19 11:55:02 [INFO] Elin: [LevelSession] 成功保存 kyu_accel 的時間戳記
+2026-04-19 11:55:02 [DEBUG] Elin: [語音] 玖歌 加入語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 12:01:16 [DEBUG] Elin: 給予 小灰 反應經驗值: 5 exp
+2026-04-19 12:04:23 [DEBUG] Elin: 給予 小灰 訊息經驗值: 5 exp
+2026-04-19 12:05:47 [DEBUG] Elin: 給予 哩賀哇係魚←← 反應經驗值: 5 exp
+2026-04-19 12:05:56 [DEBUG] Elin: 給予 哩賀哇係魚←← 訊息經驗值: 5 exp
+2026-04-19 12:19:20 [INFO] Elin: [LevelSession] 成功保存 playsese 的時間戳記
+2026-04-19 12:19:20 [DEBUG] Elin: [語音] 宇文化 加入語音頻道：🍻冒險者酒館
+2026-04-19 12:19:44 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-04-19 12:19:44 [INFO] Elin: 給予 Suyab 語音經驗值: 312 exp, 累積時間: 156.29 分鐘
+2026-04-19 12:19:44 [INFO] Elin: 給予 哩賀哇係魚←← 語音經驗值: 312 exp, 累積時間: 156.29 分鐘
+2026-04-19 12:19:44 [INFO] Elin: 給予 KIWI 語音經驗值: 312 exp, 累積時間: 156.29 分鐘
+2026-04-19 12:19:44 [INFO] Elin: 給予 ? 語音經驗值: 312 exp, 累積時間: 156.29 分鐘
+2026-04-19 12:19:44 [INFO] Elin: 給予 好睏的內 語音經驗值: 312 exp, 累積時間: 156.29 分鐘
+2026-04-19 12:19:44 [INFO] Elin: 給予 哈姆/Mumu 語音經驗值: 312 exp, 累積時間: 156.29 分鐘
+2026-04-19 12:19:44 [INFO] Elin: 給予 小鳥 語音經驗值: 312 exp, 累積時間: 156.29 分鐘
+2026-04-19 12:19:44 [INFO] Elin: 給予 海德格 語音經驗值: 312 exp, 累積時間: 156.29 分鐘
+2026-04-19 12:19:44 [INFO] Elin: 給予 (*T_T*) 語音經驗值: 131 exp, 累積時間: 87.47 分鐘
+2026-04-19 12:19:44 [INFO] Elin: 給予 米（OWO） 語音經驗值: 95 exp, 累積時間: 63.66 分鐘
+2026-04-19 12:19:44 [INFO] Elin: 給予 宇文化 語音經驗值: 0 exp, 累積時間: 0.40 分鐘
+2026-04-19 12:19:44 [INFO] Elin: 給予 九条 カレン 語音經驗值: 92 exp, 累積時間: 61.93 分鐘
+2026-04-19 12:19:44 [INFO] Elin: 給予 阿銘 語音經驗值: 121 exp, 累積時間: 80.72 分鐘
+2026-04-19 12:19:44 [INFO] Elin: 給予 J A 語音經驗值: 264 exp, 累積時間: 132.43 分鐘
+2026-04-19 12:19:44 [INFO] Elin: 給予 玖歌 語音經驗值: 24 exp, 累積時間: 24.70 分鐘
+2026-04-19 12:19:44 [INFO] Elin: 機器人已關閉。
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: attendance.yaml
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: attendance_help.yaml
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: commemorate.yaml
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: commemorate_help.yaml
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: commemorate_success.yaml
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: market.yaml
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: market_help.yaml
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: merchandise.yaml
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: sample.yaml
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: test_dialog.yaml
+2026-04-19 12:20:24 [INFO] Elin: 資料載入完畢，總共載入 10 個檔案
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: vendor.json
+2026-04-19 12:20:24 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 12:20:24 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: boundary_forest.json
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: falun.json
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: falun_mine.json
+2026-04-19 12:20:24 [INFO] Elin: 資料載入完畢，總共載入 3 個檔案
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 12:20:24 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: default_meadow.json
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: rose.json
+2026-04-19 12:20:24 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: meadow.json
+2026-04-19 12:20:24 [INFO] Elin: 載入檔案成功: white_birch.json
+2026-04-19 12:20:24 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 12:20:25 [INFO] Elin: Synced 11 commands to Global
+2026-04-19 12:20:28 [INFO] Elin: [LevelSession] 成功保存 suyab_ 的時間戳記
+2026-04-19 12:20:28 [INFO] Elin: [LevelSession] 成功保存 playsese 的時間戳記
+2026-04-19 12:20:28 [INFO] Elin: [LevelSession] 成功保存 cheyi35 的時間戳記
+2026-04-19 12:20:28 [INFO] Elin: [LevelSession] 成功保存 owo019058 的時間戳記
+2026-04-19 12:20:28 [INFO] Elin: [LevelSession] 成功保存 1zzzz1 的時間戳記
+2026-04-19 12:20:28 [INFO] Elin: [LevelSession] 成功保存 panzer1018 的時間戳記
+2026-04-19 12:20:28 [INFO] Elin: [LevelSession] 成功保存 bigpig1703 的時間戳記
+2026-04-19 12:20:28 [INFO] Elin: [LevelSession] 成功保存 doll_0000 的時間戳記
+2026-04-19 12:20:28 [INFO] Elin: [LevelSession] 成功保存 kyu_accel 的時間戳記
+2026-04-19 12:20:28 [INFO] Elin: [LevelSession] 成功保存 ne820005 的時間戳記
+2026-04-19 12:20:28 [INFO] Elin: [LevelSession] 成功保存 mgbbuhu 的時間戳記
+2026-04-19 12:20:28 [INFO] Elin: [LevelSession] 成功保存 a_ming1649 的時間戳記
+2026-04-19 12:20:28 [INFO] Elin: [LevelSession] 成功保存 jeras130 的時間戳記
+2026-04-19 12:20:28 [INFO] Elin: [LevelSession] 成功保存 95_jasa 的時間戳記
+2026-04-19 12:20:28 [INFO] Elin: [LevelSession] 成功保存 edgarwu 的時間戳記
+2026-04-19 12:20:28 [INFO] Elin: The Version of Python is 3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]
+2026-04-19 12:20:28 [INFO] Elin: Meow, Discord Bot loaded!
+2026-04-19 12:20:28 [INFO] Elin: ✅ Logged in as: Elin#6095
+2026-04-19 12:20:32 [DEBUG] Elin: 給予 J A 訊息經驗值: 5 exp
+2026-04-19 12:21:36 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-04-19 12:21:37 [INFO] Elin: 給予 Suyab 語音經驗值: 1 exp, 累積時間: 1.14 分鐘
+2026-04-19 12:21:37 [INFO] Elin: 給予 宇文化 語音經驗值: 1 exp, 累積時間: 1.14 分鐘
+2026-04-19 12:21:37 [INFO] Elin: 給予 哩賀哇係魚←← 語音經驗值: 1 exp, 累積時間: 1.14 分鐘
+2026-04-19 12:21:37 [INFO] Elin: 給予 米（OWO） 語音經驗值: 1 exp, 累積時間: 1.14 分鐘
+2026-04-19 12:21:37 [INFO] Elin: 給予 (*T_T*) 語音經驗值: 1 exp, 累積時間: 1.14 分鐘
+2026-04-19 12:21:37 [INFO] Elin: 給予 九条 カレン 語音經驗值: 1 exp, 累積時間: 1.14 分鐘
+2026-04-19 12:21:37 [INFO] Elin: 給予 KIWI 語音經驗值: 1 exp, 累積時間: 1.14 分鐘
+2026-04-19 12:21:37 [INFO] Elin: 給予 ? 語音經驗值: 1 exp, 累積時間: 1.14 分鐘
+2026-04-19 12:21:37 [INFO] Elin: 給予 玖歌 語音經驗值: 1 exp, 累積時間: 1.14 分鐘
+2026-04-19 12:21:37 [INFO] Elin: 給予 好睏的內 語音經驗值: 1 exp, 累積時間: 1.14 分鐘
+2026-04-19 12:21:37 [INFO] Elin: 給予 哈姆/Mumu 語音經驗值: 1 exp, 累積時間: 1.14 分鐘
+2026-04-19 12:21:37 [INFO] Elin: 給予 阿銘 語音經驗值: 1 exp, 累積時間: 1.14 分鐘
+2026-04-19 12:21:37 [INFO] Elin: 給予 小鳥 語音經驗值: 1 exp, 累積時間: 1.14 分鐘
+2026-04-19 12:21:37 [INFO] Elin: 給予 J A 語音經驗值: 1 exp, 累積時間: 1.14 分鐘
+2026-04-19 12:21:37 [INFO] Elin: 給予 海德格 語音經驗值: 1 exp, 累積時間: 1.14 分鐘
+2026-04-19 12:21:37 [INFO] Elin: 機器人已關閉。
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: attendance.yaml
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: attendance_help.yaml
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: commemorate.yaml
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: commemorate_help.yaml
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: commemorate_success.yaml
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: market.yaml
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: market_help.yaml
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: merchandise.yaml
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: sample.yaml
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: test_dialog.yaml
+2026-04-19 12:21:39 [INFO] Elin: 資料載入完畢，總共載入 10 個檔案
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: vendor.json
+2026-04-19 12:21:39 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 12:21:39 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: boundary_forest.json
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: falun.json
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: falun_mine.json
+2026-04-19 12:21:39 [INFO] Elin: 資料載入完畢，總共載入 3 個檔案
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 12:21:39 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: default_meadow.json
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: rose.json
+2026-04-19 12:21:39 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: meadow.json
+2026-04-19 12:21:39 [INFO] Elin: 載入檔案成功: white_birch.json
+2026-04-19 12:21:39 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 12:21:40 [INFO] Elin: Synced 11 commands to Global
+2026-04-19 12:21:43 [INFO] Elin: [LevelSession] 成功保存 suyab_ 的時間戳記
+2026-04-19 12:21:43 [INFO] Elin: [LevelSession] 成功保存 playsese 的時間戳記
+2026-04-19 12:21:43 [INFO] Elin: [LevelSession] 成功保存 cheyi35 的時間戳記
+2026-04-19 12:21:43 [INFO] Elin: [LevelSession] 成功保存 owo019058 的時間戳記
+2026-04-19 12:21:43 [INFO] Elin: [LevelSession] 成功保存 1zzzz1 的時間戳記
+2026-04-19 12:21:43 [INFO] Elin: [LevelSession] 成功保存 panzer1018 的時間戳記
+2026-04-19 12:21:43 [INFO] Elin: [LevelSession] 成功保存 bigpig1703 的時間戳記
+2026-04-19 12:21:43 [INFO] Elin: [LevelSession] 成功保存 doll_0000 的時間戳記
+2026-04-19 12:21:43 [INFO] Elin: [LevelSession] 成功保存 kyu_accel 的時間戳記
+2026-04-19 12:21:43 [INFO] Elin: [LevelSession] 成功保存 ne820005 的時間戳記
+2026-04-19 12:21:43 [INFO] Elin: [LevelSession] 成功保存 mgbbuhu 的時間戳記
+2026-04-19 12:21:43 [INFO] Elin: [LevelSession] 成功保存 a_ming1649 的時間戳記
+2026-04-19 12:21:43 [INFO] Elin: [LevelSession] 成功保存 jeras130 的時間戳記
+2026-04-19 12:21:43 [INFO] Elin: [LevelSession] 成功保存 95_jasa 的時間戳記
+2026-04-19 12:21:43 [INFO] Elin: [LevelSession] 成功保存 edgarwu 的時間戳記
+2026-04-19 12:21:43 [INFO] Elin: The Version of Python is 3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]
+2026-04-19 12:21:43 [INFO] Elin: Meow, Discord Bot loaded!
+2026-04-19 12:21:43 [INFO] Elin: ✅ Logged in as: Elin#6095
+2026-04-19 12:22:16 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-04-19 12:22:17 [INFO] Elin: 給予 Suyab 語音經驗值: 0 exp, 累積時間: 0.57 分鐘
+2026-04-19 12:22:17 [INFO] Elin: 給予 宇文化 語音經驗值: 0 exp, 累積時間: 0.57 分鐘
+2026-04-19 12:22:17 [INFO] Elin: 給予 哩賀哇係魚←← 語音經驗值: 0 exp, 累積時間: 0.57 分鐘
+2026-04-19 12:22:17 [INFO] Elin: 給予 米（OWO） 語音經驗值: 0 exp, 累積時間: 0.57 分鐘
+2026-04-19 12:22:17 [INFO] Elin: 給予 (*T_T*) 語音經驗值: 0 exp, 累積時間: 0.57 分鐘
+2026-04-19 12:22:17 [INFO] Elin: 給予 九条 カレン 語音經驗值: 0 exp, 累積時間: 0.57 分鐘
+2026-04-19 12:22:17 [INFO] Elin: 給予 KIWI 語音經驗值: 0 exp, 累積時間: 0.57 分鐘
+2026-04-19 12:22:17 [INFO] Elin: 給予 ? 語音經驗值: 0 exp, 累積時間: 0.57 分鐘
+2026-04-19 12:22:17 [INFO] Elin: 給予 玖歌 語音經驗值: 0 exp, 累積時間: 0.57 分鐘
+2026-04-19 12:22:17 [INFO] Elin: 給予 好睏的內 語音經驗值: 0 exp, 累積時間: 0.57 分鐘
+2026-04-19 12:22:17 [INFO] Elin: 給予 哈姆/Mumu 語音經驗值: 0 exp, 累積時間: 0.57 分鐘
+2026-04-19 12:22:17 [INFO] Elin: 給予 阿銘 語音經驗值: 0 exp, 累積時間: 0.57 分鐘
+2026-04-19 12:22:17 [INFO] Elin: 給予 小鳥 語音經驗值: 0 exp, 累積時間: 0.57 分鐘
+2026-04-19 12:22:17 [INFO] Elin: 給予 J A 語音經驗值: 0 exp, 累積時間: 0.57 分鐘
+2026-04-19 12:22:17 [INFO] Elin: 給予 海德格 語音經驗值: 0 exp, 累積時間: 0.57 分鐘
+2026-04-19 12:22:17 [INFO] Elin: 機器人已關閉。
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: attendance.yaml
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: attendance_help.yaml
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: commemorate.yaml
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: commemorate_help.yaml
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: commemorate_success.yaml
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: market.yaml
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: market_help.yaml
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: merchandise.yaml
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: sample.yaml
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: test_dialog.yaml
+2026-04-19 12:22:19 [INFO] Elin: 資料載入完畢，總共載入 10 個檔案
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: vendor.json
+2026-04-19 12:22:19 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 12:22:19 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: boundary_forest.json
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: falun.json
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: falun_mine.json
+2026-04-19 12:22:19 [INFO] Elin: 資料載入完畢，總共載入 3 個檔案
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 12:22:19 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: default_meadow.json
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: rose.json
+2026-04-19 12:22:19 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: meadow.json
+2026-04-19 12:22:19 [INFO] Elin: 載入檔案成功: white_birch.json
+2026-04-19 12:22:19 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 12:22:20 [INFO] Elin: Synced 11 commands to Global
+2026-04-19 12:22:24 [INFO] Elin: [LevelSession] 成功保存 suyab_ 的時間戳記
+2026-04-19 12:22:24 [INFO] Elin: [LevelSession] 成功保存 playsese 的時間戳記
+2026-04-19 12:22:24 [INFO] Elin: [LevelSession] 成功保存 cheyi35 的時間戳記
+2026-04-19 12:22:24 [INFO] Elin: [LevelSession] 成功保存 owo019058 的時間戳記
+2026-04-19 12:22:24 [INFO] Elin: [LevelSession] 成功保存 1zzzz1 的時間戳記
+2026-04-19 12:22:24 [INFO] Elin: [LevelSession] 成功保存 panzer1018 的時間戳記
+2026-04-19 12:22:24 [INFO] Elin: [LevelSession] 成功保存 bigpig1703 的時間戳記
+2026-04-19 12:22:24 [INFO] Elin: [LevelSession] 成功保存 doll_0000 的時間戳記
+2026-04-19 12:22:24 [INFO] Elin: [LevelSession] 成功保存 kyu_accel 的時間戳記
+2026-04-19 12:22:24 [INFO] Elin: [LevelSession] 成功保存 ne820005 的時間戳記
+2026-04-19 12:22:24 [INFO] Elin: [LevelSession] 成功保存 mgbbuhu 的時間戳記
+2026-04-19 12:22:24 [INFO] Elin: [LevelSession] 成功保存 a_ming1649 的時間戳記
+2026-04-19 12:22:24 [INFO] Elin: [LevelSession] 成功保存 jeras130 的時間戳記
+2026-04-19 12:22:24 [INFO] Elin: [LevelSession] 成功保存 95_jasa 的時間戳記
+2026-04-19 12:22:24 [INFO] Elin: [LevelSession] 成功保存 edgarwu 的時間戳記
+2026-04-19 12:22:24 [INFO] Elin: The Version of Python is 3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]
+2026-04-19 12:22:24 [INFO] Elin: Meow, Discord Bot loaded!
+2026-04-19 12:22:24 [INFO] Elin: ✅ Logged in as: Elin#6095
+2026-04-19 12:22:53 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-04-19 12:22:54 [INFO] Elin: 給予 Suyab 語音經驗值: 0 exp, 累積時間: 0.50 分鐘
+2026-04-19 12:22:54 [INFO] Elin: 給予 宇文化 語音經驗值: 0 exp, 累積時間: 0.50 分鐘
+2026-04-19 12:22:54 [INFO] Elin: 給予 哩賀哇係魚←← 語音經驗值: 0 exp, 累積時間: 0.50 分鐘
+2026-04-19 12:22:54 [INFO] Elin: 給予 米（OWO） 語音經驗值: 0 exp, 累積時間: 0.50 分鐘
+2026-04-19 12:22:54 [INFO] Elin: 給予 (*T_T*) 語音經驗值: 0 exp, 累積時間: 0.50 分鐘
+2026-04-19 12:22:54 [INFO] Elin: 給予 九条 カレン 語音經驗值: 0 exp, 累積時間: 0.50 分鐘
+2026-04-19 12:22:54 [INFO] Elin: 給予 KIWI 語音經驗值: 0 exp, 累積時間: 0.49 分鐘
+2026-04-19 12:22:54 [INFO] Elin: 給予 ? 語音經驗值: 0 exp, 累積時間: 0.49 分鐘
+2026-04-19 12:22:54 [INFO] Elin: 給予 玖歌 語音經驗值: 0 exp, 累積時間: 0.49 分鐘
+2026-04-19 12:22:54 [INFO] Elin: 給予 好睏的內 語音經驗值: 0 exp, 累積時間: 0.49 分鐘
+2026-04-19 12:22:54 [INFO] Elin: 給予 哈姆/Mumu 語音經驗值: 0 exp, 累積時間: 0.49 分鐘
+2026-04-19 12:22:54 [INFO] Elin: 給予 阿銘 語音經驗值: 0 exp, 累積時間: 0.49 分鐘
+2026-04-19 12:22:54 [INFO] Elin: 給予 小鳥 語音經驗值: 0 exp, 累積時間: 0.49 分鐘
+2026-04-19 12:22:54 [INFO] Elin: 給予 J A 語音經驗值: 0 exp, 累積時間: 0.49 分鐘
+2026-04-19 12:22:54 [INFO] Elin: 給予 海德格 語音經驗值: 0 exp, 累積時間: 0.49 分鐘
+2026-04-19 12:22:54 [INFO] Elin: 機器人已關閉。
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: attendance.yaml
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: attendance_help.yaml
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: commemorate.yaml
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: commemorate_help.yaml
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: commemorate_success.yaml
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: market.yaml
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: market_help.yaml
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: merchandise.yaml
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: sample.yaml
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: test_dialog.yaml
+2026-04-19 12:22:57 [INFO] Elin: 資料載入完畢，總共載入 10 個檔案
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: vendor.json
+2026-04-19 12:22:57 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 12:22:57 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: boundary_forest.json
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: falun.json
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: falun_mine.json
+2026-04-19 12:22:57 [INFO] Elin: 資料載入完畢，總共載入 3 個檔案
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 12:22:57 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: default_meadow.json
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: rose.json
+2026-04-19 12:22:57 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: meadow.json
+2026-04-19 12:22:57 [INFO] Elin: 載入檔案成功: white_birch.json
+2026-04-19 12:22:57 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 12:22:58 [INFO] Elin: Synced 11 commands to Global
+2026-04-19 12:23:01 [INFO] Elin: [LevelSession] 成功保存 suyab_ 的時間戳記
+2026-04-19 12:23:01 [INFO] Elin: [LevelSession] 成功保存 playsese 的時間戳記
+2026-04-19 12:23:01 [INFO] Elin: [LevelSession] 成功保存 cheyi35 的時間戳記
+2026-04-19 12:23:01 [INFO] Elin: [LevelSession] 成功保存 owo019058 的時間戳記
+2026-04-19 12:23:01 [INFO] Elin: [LevelSession] 成功保存 1zzzz1 的時間戳記
+2026-04-19 12:23:01 [INFO] Elin: [LevelSession] 成功保存 panzer1018 的時間戳記
+2026-04-19 12:23:01 [INFO] Elin: [LevelSession] 成功保存 bigpig1703 的時間戳記
+2026-04-19 12:23:01 [INFO] Elin: [LevelSession] 成功保存 doll_0000 的時間戳記
+2026-04-19 12:23:01 [INFO] Elin: [LevelSession] 成功保存 kyu_accel 的時間戳記
+2026-04-19 12:23:01 [INFO] Elin: [LevelSession] 成功保存 ne820005 的時間戳記
+2026-04-19 12:23:01 [INFO] Elin: [LevelSession] 成功保存 mgbbuhu 的時間戳記
+2026-04-19 12:23:01 [INFO] Elin: [LevelSession] 成功保存 a_ming1649 的時間戳記
+2026-04-19 12:23:01 [INFO] Elin: [LevelSession] 成功保存 jeras130 的時間戳記
+2026-04-19 12:23:01 [INFO] Elin: [LevelSession] 成功保存 95_jasa 的時間戳記
+2026-04-19 12:23:01 [INFO] Elin: [LevelSession] 成功保存 edgarwu 的時間戳記
+2026-04-19 12:23:01 [INFO] Elin: The Version of Python is 3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]
+2026-04-19 12:23:01 [INFO] Elin: Meow, Discord Bot loaded!
+2026-04-19 12:23:01 [INFO] Elin: ✅ Logged in as: Elin#6095
+2026-04-19 12:30:17 [INFO] Elin: 給予 好睏的內 語音經驗值: 7 exp, 累積時間: 7.27 分鐘
+2026-04-19 12:30:17 [INFO] Elin: [LevelSession] 成功移除 ne820005 的時間戳記
+2026-04-19 12:30:17 [DEBUG] Elin: [語音] 好睏的內 離開語音頻道：🏥內內的停屍間
+2026-04-19 12:36:57 [INFO] Elin: [LevelSession] 成功保存 nimaluma 的時間戳記
+2026-04-19 12:36:57 [DEBUG] Elin: [語音] 騼騼 加入語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 12:42:08 [DEBUG] Elin: 給予 騼騼 訊息經驗值: 5 exp
+2026-04-19 12:56:07 [DEBUG] Elin: 給予 騼騼 訊息經驗值: 5 exp
+2026-04-19 12:57:26 [INFO] Elin: [LevelSession] 成功保存 maobibibi 的時間戳記
+2026-04-19 12:57:26 [DEBUG] Elin: [語音] Mao 加入語音頻道：🍻冒險者酒館
+2026-04-19 13:34:32 [DEBUG] Elin: 給予 小鳥 訊息經驗值: 5 exp
+2026-04-19 13:37:27 [DEBUG] Elin: 給予 小鳥 訊息經驗值: 5 exp
+2026-04-19 13:38:35 [DEBUG] Elin: 給予 小鳥 訊息經驗值: 5 exp
+2026-04-19 13:41:28 [DEBUG] Elin: 給予 小鳥 訊息經驗值: 5 exp
+2026-04-19 13:44:41 [INFO] Elin: [LevelSession] 成功保存 snowdrift3818 的時間戳記
+2026-04-19 13:44:41 [DEBUG] Elin: [語音] Snowdrift 加入語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 13:44:59 [DEBUG] Elin: 給予 Snowdrift 訊息經驗值: 5 exp
+2026-04-19 13:46:31 [DEBUG] Elin: 給予 雙B 訊息經驗值: 5 exp
+2026-04-19 13:50:40 [INFO] Elin: 給予 Snowdrift 語音經驗值: 5 exp, 累積時間: 6.00 分鐘
+2026-04-19 13:50:40 [INFO] Elin: [LevelSession] 成功移除 snowdrift3818 的時間戳記
+2026-04-19 13:50:40 [DEBUG] Elin: [語音] Snowdrift 離開語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 13:55:21 [INFO] Elin: 給予 米（OWO） 語音經驗值: 138 exp, 累積時間: 92.34 分鐘
+2026-04-19 13:55:21 [INFO] Elin: [LevelSession] 成功移除 owo019058 的時間戳記
+2026-04-19 13:55:21 [DEBUG] Elin: [語音] 米（OWO） 離開語音頻道：🦈不賣魚的魚販
+2026-04-19 14:04:34 [INFO] Elin: 給予 小鳥 語音經驗值: 152 exp, 累積時間: 101.56 分鐘
+2026-04-19 14:04:34 [INFO] Elin: [LevelSession] 成功移除 jeras130 的時間戳記
+2026-04-19 14:04:34 [DEBUG] Elin: [語音] 小鳥 離開語音頻道：🍵小鳥的隱世茶室
+2026-04-19 14:08:32 [INFO] Elin: 給予 哈姆/Mumu 語音經驗值: 158 exp, 累積時間: 105.51 分鐘
+2026-04-19 14:08:32 [INFO] Elin: [LevelSession] 成功移除 mgbbuhu 的時間戳記
+2026-04-19 14:08:32 [DEBUG] Elin: [語音] 哈姆/Mumu 離開語音頻道：🍻冒險者酒館
+2026-04-19 14:29:00 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-04-19 14:29:16 [INFO] Elin: [LevelSession] 成功保存 jeras130 的時間戳記
+2026-04-19 14:29:16 [DEBUG] Elin: [語音] 小鳥 加入語音頻道：🦈不賣魚的魚販
+2026-04-19 14:29:30 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-04-19 14:30:34 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-04-19 14:36:52 [INFO] Elin: 給予 玖歌 語音經驗值: 267 exp, 累積時間: 133.86 分鐘
+2026-04-19 14:36:52 [INFO] Elin: [LevelSession] 成功移除 kyu_accel 的時間戳記
+2026-04-19 14:36:52 [DEBUG] Elin: [語音] 玖歌 離開語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 14:37:21 [INFO] Elin: [LevelSession] 成功保存 kyu_accel 的時間戳記
+2026-04-19 14:37:21 [DEBUG] Elin: [語音] 玖歌 加入語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 14:40:53 [INFO] Elin: [LevelSession] 成功保存 miroo_ 的時間戳記
+2026-04-19 14:40:53 [DEBUG] Elin: [語音] MIROO (:зꇤ )ﾆ 加入語音頻道：🍻冒險者酒館
+2026-04-19 14:41:46 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-04-19 14:41:46 [INFO] Elin: 給予 Suyab 語音經驗值: 277 exp, 累積時間: 138.76 分鐘
+2026-04-19 14:41:46 [INFO] Elin: 給予 宇文化 語音經驗值: 277 exp, 累積時間: 138.76 分鐘
+2026-04-19 14:41:46 [INFO] Elin: 給予 哩賀哇係魚←← 語音經驗值: 277 exp, 累積時間: 138.76 分鐘
+2026-04-19 14:41:46 [INFO] Elin: 給予 (*T_T*) 語音經驗值: 277 exp, 累積時間: 138.76 分鐘
+2026-04-19 14:41:46 [INFO] Elin: 給予 九条 カレン 語音經驗值: 277 exp, 累積時間: 138.76 分鐘
+2026-04-19 14:41:46 [INFO] Elin: 給予 KIWI 語音經驗值: 277 exp, 累積時間: 138.76 分鐘
+2026-04-19 14:41:46 [INFO] Elin: 給予 ? 語音經驗值: 277 exp, 累積時間: 138.76 分鐘
+2026-04-19 14:41:46 [INFO] Elin: 給予 玖歌 語音經驗值: 4 exp, 累積時間: 4.43 分鐘
+2026-04-19 14:41:46 [INFO] Elin: 給予 阿銘 語音經驗值: 277 exp, 累積時間: 138.76 分鐘
+2026-04-19 14:41:46 [INFO] Elin: 給予 小鳥 語音經驗值: 12 exp, 累積時間: 12.50 分鐘
+2026-04-19 14:41:46 [INFO] Elin: 給予 J A 語音經驗值: 277 exp, 累積時間: 138.76 分鐘
+2026-04-19 14:41:46 [INFO] Elin: 給予 海德格 語音經驗值: 277 exp, 累積時間: 138.76 分鐘
+2026-04-19 14:41:46 [INFO] Elin: 給予 Mao 語音經驗值: 156 exp, 累積時間: 104.33 分鐘
+2026-04-19 14:41:46 [INFO] Elin: 給予 騼騼 語音經驗值: 249 exp, 累積時間: 124.83 分鐘
+2026-04-19 14:41:46 [INFO] Elin: 給予 MIROO (:зꇤ )ﾆ 語音經驗值: 0 exp, 累積時間: 0.89 分鐘
+2026-04-19 14:41:46 [INFO] Elin: 機器人已關閉。
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: attendance.yaml
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: attendance_help.yaml
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: commemorate.yaml
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: commemorate_help.yaml
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: commemorate_success.yaml
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: market.yaml
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: market_help.yaml
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: merchandise.yaml
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: sample.yaml
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: test_dialog.yaml
+2026-04-19 14:41:50 [INFO] Elin: 資料載入完畢，總共載入 10 個檔案
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: vendor.json
+2026-04-19 14:41:50 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 14:41:50 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: boundary_forest.json
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: falun.json
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: falun_mine.json
+2026-04-19 14:41:50 [INFO] Elin: 資料載入完畢，總共載入 3 個檔案
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 14:41:50 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: default_meadow.json
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: rose.json
+2026-04-19 14:41:50 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: meadow.json
+2026-04-19 14:41:50 [INFO] Elin: 載入檔案成功: white_birch.json
+2026-04-19 14:41:50 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 14:41:50 [INFO] Elin: Synced 11 commands to Global
+2026-04-19 14:41:53 [INFO] Elin: [LevelSession] 成功保存 suyab_ 的時間戳記
+2026-04-19 14:41:53 [INFO] Elin: [LevelSession] 成功保存 playsese 的時間戳記
+2026-04-19 14:41:53 [INFO] Elin: [LevelSession] 成功保存 cheyi35 的時間戳記
+2026-04-19 14:41:53 [INFO] Elin: [LevelSession] 成功保存 1zzzz1 的時間戳記
+2026-04-19 14:41:53 [INFO] Elin: [LevelSession] 成功保存 maobibibi 的時間戳記
+2026-04-19 14:41:53 [INFO] Elin: [LevelSession] 成功保存 panzer1018 的時間戳記
+2026-04-19 14:41:53 [INFO] Elin: [LevelSession] 成功保存 bigpig1703 的時間戳記
+2026-04-19 14:41:53 [INFO] Elin: [LevelSession] 成功保存 doll_0000 的時間戳記
+2026-04-19 14:41:53 [INFO] Elin: [LevelSession] 成功保存 kyu_accel 的時間戳記
+2026-04-19 14:41:53 [INFO] Elin: [LevelSession] 成功保存 nimaluma 的時間戳記
+2026-04-19 14:41:53 [INFO] Elin: [LevelSession] 成功保存 a_ming1649 的時間戳記
+2026-04-19 14:41:53 [INFO] Elin: [LevelSession] 成功保存 jeras130 的時間戳記
+2026-04-19 14:41:53 [INFO] Elin: [LevelSession] 成功保存 95_jasa 的時間戳記
+2026-04-19 14:41:53 [INFO] Elin: [LevelSession] 成功保存 edgarwu 的時間戳記
+2026-04-19 14:41:53 [INFO] Elin: [LevelSession] 成功保存 miroo_ 的時間戳記
+2026-04-19 14:41:53 [INFO] Elin: The Version of Python is 3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]
+2026-04-19 14:41:53 [INFO] Elin: Meow, Discord Bot loaded!
+2026-04-19 14:41:53 [INFO] Elin: ✅ Logged in as: Elin#6095
+2026-04-19 14:45:05 [INFO] Elin: Suyab 已進行簽到，總天數：57
+2026-04-19 14:45:08 [DEBUG] Elin: 給予 小鳥 反應經驗值: 5 exp
+2026-04-19 14:47:56 [DEBUG] Elin: 給予 小鳥 訊息經驗值: 5 exp
+2026-04-19 14:50:04 [DEBUG] Elin: 給予 小鳥 訊息經驗值: 5 exp
+2026-04-19 14:50:22 [DEBUG] Elin: 給予 哩賀哇係魚←← 反應經驗值: 5 exp
+2026-04-19 14:51:04 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-04-19 14:51:04 [INFO] Elin: 給予 Suyab 語音經驗值: 9 exp, 累積時間: 9.18 分鐘
+2026-04-19 14:51:04 [INFO] Elin: 給予 宇文化 語音經驗值: 9 exp, 累積時間: 9.18 分鐘
+2026-04-19 14:51:04 [INFO] Elin: 給予 哩賀哇係魚←← 語音經驗值: 9 exp, 累積時間: 9.18 分鐘
+2026-04-19 14:51:04 [INFO] Elin: 給予 (*T_T*) 語音經驗值: 9 exp, 累積時間: 9.18 分鐘
+2026-04-19 14:51:04 [INFO] Elin: 給予 Mao 語音經驗值: 9 exp, 累積時間: 9.18 分鐘
+2026-04-19 14:51:04 [INFO] Elin: 給予 九条 カレン 語音經驗值: 9 exp, 累積時間: 9.18 分鐘
+2026-04-19 14:51:04 [INFO] Elin: 給予 KIWI 語音經驗值: 9 exp, 累積時間: 9.18 分鐘
+2026-04-19 14:51:05 [INFO] Elin: 給予 ? 語音經驗值: 9 exp, 累積時間: 9.18 分鐘
+2026-04-19 14:51:05 [INFO] Elin: 給予 玖歌 語音經驗值: 9 exp, 累積時間: 9.18 分鐘
+2026-04-19 14:51:05 [INFO] Elin: 給予 騼騼 語音經驗值: 9 exp, 累積時間: 9.18 分鐘
+2026-04-19 14:51:05 [INFO] Elin: 給予 阿銘 語音經驗值: 9 exp, 累積時間: 9.18 分鐘
+2026-04-19 14:51:05 [INFO] Elin: 給予 小鳥 語音經驗值: 9 exp, 累積時間: 9.18 分鐘
+2026-04-19 14:51:05 [INFO] Elin: 給予 J A 語音經驗值: 9 exp, 累積時間: 9.18 分鐘
+2026-04-19 14:51:05 [INFO] Elin: 給予 海德格 語音經驗值: 9 exp, 累積時間: 9.18 分鐘
+2026-04-19 14:51:05 [INFO] Elin: 給予 MIROO (:зꇤ )ﾆ 語音經驗值: 9 exp, 累積時間: 9.18 分鐘
+2026-04-19 14:51:05 [INFO] Elin: 機器人已關閉。
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: attendance.yaml
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: attendance_help.yaml
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: commemorate.yaml
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: commemorate_help.yaml
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: commemorate_success.yaml
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: market.yaml
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: market_help.yaml
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: merchandise.yaml
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: sample.yaml
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: test_dialog.yaml
+2026-04-19 14:51:09 [INFO] Elin: 資料載入完畢，總共載入 10 個檔案
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: vendor.json
+2026-04-19 14:51:09 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 14:51:09 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: boundary_forest.json
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: falun.json
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: falun_mine.json
+2026-04-19 14:51:09 [INFO] Elin: 資料載入完畢，總共載入 3 個檔案
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 14:51:09 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: default_meadow.json
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: rose.json
+2026-04-19 14:51:09 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: meadow.json
+2026-04-19 14:51:09 [INFO] Elin: 載入檔案成功: white_birch.json
+2026-04-19 14:51:09 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 14:51:10 [INFO] Elin: Synced 11 commands to Global
+2026-04-19 14:51:12 [INFO] Elin: [LevelSession] 成功保存 suyab_ 的時間戳記
+2026-04-19 14:51:12 [INFO] Elin: [LevelSession] 成功保存 playsese 的時間戳記
+2026-04-19 14:51:12 [INFO] Elin: [LevelSession] 成功保存 cheyi35 的時間戳記
+2026-04-19 14:51:12 [INFO] Elin: [LevelSession] 成功保存 1zzzz1 的時間戳記
+2026-04-19 14:51:13 [INFO] Elin: [LevelSession] 成功保存 maobibibi 的時間戳記
+2026-04-19 14:51:13 [INFO] Elin: [LevelSession] 成功保存 panzer1018 的時間戳記
+2026-04-19 14:51:13 [INFO] Elin: [LevelSession] 成功保存 bigpig1703 的時間戳記
+2026-04-19 14:51:13 [INFO] Elin: [LevelSession] 成功保存 doll_0000 的時間戳記
+2026-04-19 14:51:13 [INFO] Elin: [LevelSession] 成功保存 kyu_accel 的時間戳記
+2026-04-19 14:51:13 [INFO] Elin: [LevelSession] 成功保存 nimaluma 的時間戳記
+2026-04-19 14:51:13 [INFO] Elin: [LevelSession] 成功保存 a_ming1649 的時間戳記
+2026-04-19 14:51:13 [INFO] Elin: [LevelSession] 成功保存 jeras130 的時間戳記
+2026-04-19 14:51:13 [INFO] Elin: [LevelSession] 成功保存 95_jasa 的時間戳記
+2026-04-19 14:51:13 [INFO] Elin: [LevelSession] 成功保存 edgarwu 的時間戳記
+2026-04-19 14:51:13 [INFO] Elin: [LevelSession] 成功保存 miroo_ 的時間戳記
+2026-04-19 14:51:13 [INFO] Elin: The Version of Python is 3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]
+2026-04-19 14:51:13 [INFO] Elin: Meow, Discord Bot loaded!
+2026-04-19 14:51:13 [INFO] Elin: ✅ Logged in as: Elin#6095
+2026-04-19 14:53:34 [INFO] Elin: 給予 J A 語音經驗值: 2 exp, 累積時間: 2.36 分鐘
+2026-04-19 14:53:34 [INFO] Elin: [LevelSession] 成功移除 95_jasa 的時間戳記
+2026-04-19 14:53:34 [DEBUG] Elin: [語音] J A 離開語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 15:00:27 [DEBUG] Elin: 給予 小鳥 訊息經驗值: 5 exp
+2026-04-19 15:00:59 [INFO] Elin: 您好，把筷子收回去 已進行簽到，總天數：20
+2026-04-19 15:02:48 [INFO] Elin: [LevelSession] 成功保存 nauthus345 的時間戳記
+2026-04-19 15:02:48 [DEBUG] Elin: [語音] nauthus345 加入語音頻道：🍻冒險者酒館
+2026-04-19 15:02:51 [INFO] Elin: 給予 nauthus345 語音經驗值: 0 exp, 累積時間: 0.06 分鐘
+2026-04-19 15:02:51 [INFO] Elin: [LevelSession] 成功移除 nauthus345 的時間戳記
+2026-04-19 15:02:51 [DEBUG] Elin: [語音] nauthus345 離開語音頻道：🍻冒險者酒館
+2026-04-19 15:12:08 [DEBUG] Elin: 給予 Mochi 訊息經驗值: 5 exp
+2026-04-19 15:14:02 [INFO] Elin: 給予 KIWI 語音經驗值: 22 exp, 累積時間: 22.82 分鐘
+2026-04-19 15:14:02 [INFO] Elin: [LevelSession] 成功移除 bigpig1703 的時間戳記
+2026-04-19 15:14:02 [DEBUG] Elin: [語音] KIWI 離開語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 15:14:37 [INFO] Elin: 給予 (*T_T*) 語音經驗值: 23 exp, 累積時間: 23.41 分鐘
+2026-04-19 15:14:37 [INFO] Elin: [LevelSession] 成功移除 1zzzz1 的時間戳記
+2026-04-19 15:14:37 [DEBUG] Elin: [語音] (*T_T*) 離開語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 15:14:58 [INFO] Elin: [LevelSession] 成功保存 bigpig1703 的時間戳記
+2026-04-19 15:14:58 [DEBUG] Elin: [語音] KIWI 加入語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 15:20:06 [DEBUG] Elin: 給予 🌱鳳梨加班加到往生酥 反應經驗值: 5 exp
+2026-04-19 15:27:49 [DEBUG] Elin: 給予 KIWI 訊息經驗值: 5 exp
+2026-04-19 15:57:13 [INFO] Elin: L.A 已進行簽到，總天數：31
+2026-04-19 16:26:45 [DEBUG] Elin: 給予 Yuri脾氣暴躁中 反應經驗值: 5 exp
+2026-04-19 16:26:58 [DEBUG] Elin: 給予 Yuri脾氣暴躁中 訊息經驗值: 5 exp
+2026-04-19 16:28:48 [DEBUG] Elin: 給予 小嶺 反應經驗值: 5 exp
+2026-04-19 16:30:33 [INFO] Elin: 給予 宇文化 語音經驗值: 149 exp, 累積時間: 99.34 分鐘
+2026-04-19 16:30:33 [INFO] Elin: [LevelSession] 成功移除 playsese 的時間戳記
+2026-04-19 16:30:33 [DEBUG] Elin: [語音] 宇文化 離開語音頻道：🍻冒險者酒館
+2026-04-19 16:35:08 [INFO] Elin: 給予 海德格 語音經驗值: 155 exp, 累積時間: 103.93 分鐘
+2026-04-19 16:35:08 [INFO] Elin: [LevelSession] 成功移除 edgarwu 的時間戳記
+2026-04-19 16:35:08 [DEBUG] Elin: [語音] 海德格 離開語音頻道：🦈不賣魚的魚販
+2026-04-19 16:36:05 [DEBUG] Elin: 給予 Yuri脾氣暴躁中 訊息經驗值: 5 exp
+2026-04-19 16:37:11 [INFO] Elin: [LevelSession] 成功保存 95_jasa 的時間戳記
+2026-04-19 16:37:11 [DEBUG] Elin: [語音] J A 加入語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 16:37:27 [INFO] Elin: [LevelSession] 成功保存 snowdrift3818 的時間戳記
+2026-04-19 16:37:27 [DEBUG] Elin: [語音] Snowdrift 加入語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 16:43:30 [INFO] Elin: [LevelSession] 成功保存 mgbbuhu 的時間戳記
+2026-04-19 16:43:30 [DEBUG] Elin: [語音] 哈姆/Mumu 加入語音頻道：🍻冒險者酒館
+2026-04-19 16:44:03 [INFO] Elin: 給予 J A 語音經驗值: 6 exp, 累積時間: 6.87 分鐘
+2026-04-19 16:44:03 [INFO] Elin: [LevelSession] 成功移除 95_jasa 的時間戳記
+2026-04-19 16:44:03 [DEBUG] Elin: [語音] J A 離開語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 16:44:08 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 16:44:40 [INFO] Elin: [LevelSession] 成功保存 95_jasa 的時間戳記
+2026-04-19 16:44:40 [DEBUG] Elin: [語音] J A 加入語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 16:46:48 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 16:53:29 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 16:54:03 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 16:57:08 [DEBUG] Elin: 給予 MIROO (:зꇤ )ﾆ 訊息經驗值: 5 exp
+2026-04-19 16:57:15 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 16:57:43 [DEBUG] Elin: 給予 MIROO (:зꇤ )ﾆ 訊息經驗值: 5 exp
+2026-04-19 16:57:48 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 16:58:48 [DEBUG] Elin: 給予 MIROO (:зꇤ )ﾆ 訊息經驗值: 5 exp
+2026-04-19 16:59:09 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 16:59:40 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 16:59:41 [DEBUG] Elin: 給予 Mochi 訊息經驗值: 5 exp
+2026-04-19 17:00:13 [DEBUG] Elin: 給予 Mochi 訊息經驗值: 5 exp
+2026-04-19 17:07:18 [DEBUG] Elin: 給予 MIROO (:зꇤ )ﾆ 訊息經驗值: 5 exp
+2026-04-19 17:11:07 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 17:11:34 [DEBUG] Elin: 給予 MIROO (:зꇤ )ﾆ 訊息經驗值: 5 exp
+2026-04-19 17:11:54 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 17:12:27 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 17:13:07 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 17:14:08 [DEBUG] Elin: 給予 MIROO (:зꇤ )ﾆ 訊息經驗值: 5 exp
+2026-04-19 17:14:13 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 17:14:52 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 17:15:30 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 17:16:04 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 17:18:38 [DEBUG] Elin: 給予 03(大失敗) 反應經驗值: 5 exp
+2026-04-19 17:21:30 [DEBUG] Elin: 給予 小鳥 訊息經驗值: 5 exp
+2026-04-19 17:26:59 [DEBUG] Elin: 給予 MIROO (:зꇤ )ﾆ 訊息經驗值: 5 exp
+2026-04-19 17:28:15 [DEBUG] Elin: 給予 Mao 訊息經驗值: 5 exp
+2026-04-19 17:28:55 [DEBUG] Elin: 給予 Mao 訊息經驗值: 5 exp
+2026-04-19 17:29:13 [DEBUG] Elin: 給予 J A 訊息經驗值: 5 exp
+2026-04-19 17:29:38 [DEBUG] Elin: 給予 Mao 訊息經驗值: 5 exp
+2026-04-19 17:29:50 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 17:30:59 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 17:31:41 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 17:32:19 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 17:34:20 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 17:35:08 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 17:36:36 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 17:37:13 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 17:38:42 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 17:53:16 [DEBUG] Elin: 給予 Yuri脾氣暴躁中 訊息經驗值: 5 exp
+2026-04-19 17:54:50 [DEBUG] Elin: 給予 ? 訊息經驗值: 5 exp
+2026-04-19 17:57:00 [DEBUG] Elin: 給予 ? 訊息經驗值: 5 exp
+2026-04-19 17:57:49 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 17:59:44 [DEBUG] Elin: 給予 (*T_T*) 訊息經驗值: 5 exp
+2026-04-19 17:59:48 [DEBUG] Elin: 給予 Snowdrift 訊息經驗值: 5 exp
+2026-04-19 18:02:02 [DEBUG] Elin: 給予 Yuri脾氣暴躁中 訊息經驗值: 5 exp
+2026-04-19 18:02:53 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 18:03:15 [DEBUG] Elin: 給予 Yuri脾氣暴躁中 訊息經驗值: 5 exp
+2026-04-19 18:04:16 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 18:04:51 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 18:05:22 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 18:05:57 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 18:06:49 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 18:07:39 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 18:08:47 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 18:09:30 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 18:10:22 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 18:10:54 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 18:11:03 [DEBUG] Elin: 給予 MIROO (:зꇤ )ﾆ 訊息經驗值: 5 exp
+2026-04-19 18:12:55 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 18:13:41 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 18:14:24 [DEBUG] Elin: 給予 阿銘 訊息經驗值: 5 exp
+2026-04-19 18:15:27 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 18:15:58 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 18:16:36 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 18:16:37 [DEBUG] Elin: 給予 Yuri脾氣暴躁中 訊息經驗值: 5 exp
+2026-04-19 18:17:50 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 18:20:07 [DEBUG] Elin: 給予 Snowdrift 訊息經驗值: 5 exp
+2026-04-19 18:20:54 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 18:21:03 [DEBUG] Elin: 給予 MIROO (:зꇤ )ﾆ 訊息經驗值: 5 exp
+2026-04-19 18:22:12 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 18:22:52 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 18:27:37 [DEBUG] Elin: 給予 Snowdrift 訊息經驗值: 5 exp
+2026-04-19 18:29:29 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 18:31:42 [INFO] Elin: [LevelSession] 成功保存 negative_95 的時間戳記
+2026-04-19 18:31:42 [DEBUG] Elin: [語音] 🌱鳳梨加班加到往生酥 加入語音頻道：🍻冒險者酒館
+2026-04-19 18:31:57 [DEBUG] Elin: 給予 MIROO (:зꇤ )ﾆ 訊息經驗值: 5 exp
+2026-04-19 18:32:41 [INFO] Elin: 給予 小鳥 語音經驗值: 442 exp, 累積時間: 221.48 分鐘
+2026-04-19 18:32:41 [INFO] Elin: [LevelSession] 成功移除 jeras130 的時間戳記
+2026-04-19 18:32:41 [DEBUG] Elin: [語音] 小鳥 離開語音頻道：🍻冒險者酒館
+2026-04-19 18:34:40 [DEBUG] Elin: 給予 玖歌 反應經驗值: 5 exp
+2026-04-19 18:36:46 [INFO] Elin: 給予 騼騼 語音經驗值: 451 exp, 累積時間: 225.55 分鐘
+2026-04-19 18:36:46 [INFO] Elin: [LevelSession] 成功移除 nimaluma 的時間戳記
+2026-04-19 18:36:46 [DEBUG] Elin: [語音] 騼騼 離開語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 18:37:31 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 18:37:32 [DEBUG] Elin: 給予 Snowdrift 訊息經驗值: 5 exp
+2026-04-19 18:38:04 [DEBUG] Elin: 給予 🌱鳳梨加班加到往生酥 反應經驗值: 5 exp
+2026-04-19 18:38:15 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 18:38:45 [DEBUG] Elin: 給予 Snowdrift 訊息經驗值: 5 exp
+2026-04-19 18:38:47 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 18:39:06 [DEBUG] Elin: 給予 Mochi 反應經驗值: 5 exp
+2026-04-19 18:39:23 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-04-19 18:39:23 [INFO] Elin: 給予 Suyab 語音經驗值: 456 exp, 累積時間: 228.18 分鐘
+2026-04-19 18:39:23 [INFO] Elin: 給予 哩賀哇係魚←← 語音經驗值: 456 exp, 累積時間: 228.18 分鐘
+2026-04-19 18:39:23 [INFO] Elin: 給予 Mao 語音經驗值: 456 exp, 累積時間: 228.18 分鐘
+2026-04-19 18:39:23 [INFO] Elin: 給予 九条 カレン 語音經驗值: 456 exp, 累積時間: 228.18 分鐘
+2026-04-19 18:39:23 [INFO] Elin: 給予 KIWI 語音經驗值: 408 exp, 累積時間: 204.42 分鐘
+2026-04-19 18:39:23 [INFO] Elin: 給予 ? 語音經驗值: 456 exp, 累積時間: 228.17 分鐘
+2026-04-19 18:39:23 [INFO] Elin: 給予 玖歌 語音經驗值: 456 exp, 累積時間: 228.18 分鐘
+2026-04-19 18:39:23 [INFO] Elin: 給予 阿銘 語音經驗值: 456 exp, 累積時間: 228.17 分鐘
+2026-04-19 18:39:23 [INFO] Elin: 給予 J A 語音經驗值: 172 exp, 累積時間: 114.71 分鐘
+2026-04-19 18:39:23 [INFO] Elin: 給予 MIROO (:зꇤ )ﾆ 語音經驗值: 456 exp, 累積時間: 228.17 分鐘
+2026-04-19 18:39:23 [INFO] Elin: 給予 哈姆/Mumu 語音經驗值: 173 exp, 累積時間: 115.89 分鐘
+2026-04-19 18:39:23 [INFO] Elin: 給予 Snowdrift 語音經驗值: 243 exp, 累積時間: 121.93 分鐘
+2026-04-19 18:39:23 [INFO] Elin: 給予 🌱鳳梨加班加到往生酥 語音經驗值: 7 exp, 累積時間: 7.68 分鐘
+2026-04-19 18:39:23 [INFO] Elin: 機器人已關閉。
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: attendance.yaml
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: attendance_help.yaml
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: commemorate.yaml
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: commemorate_help.yaml
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: commemorate_success.yaml
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: market.yaml
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: market_help.yaml
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: merchandise.yaml
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: sample.yaml
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: test_dialog.yaml
+2026-04-19 18:47:58 [INFO] Elin: 資料載入完畢，總共載入 10 個檔案
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: vendor.json
+2026-04-19 18:47:58 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 18:47:58 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: boundary_forest.json
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: falun.json
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: falun_mine.json
+2026-04-19 18:47:58 [INFO] Elin: 資料載入完畢，總共載入 3 個檔案
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 18:47:58 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: default_meadow.json
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: rose.json
+2026-04-19 18:47:58 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: meadow.json
+2026-04-19 18:47:58 [INFO] Elin: 載入檔案成功: white_birch.json
+2026-04-19 18:47:58 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 18:47:59 [INFO] Elin: Synced 11 commands to Global
+2026-04-19 18:48:30 [INFO] Elin: [LevelSession] 成功保存 suyab_ 的時間戳記
+2026-04-19 18:48:30 [INFO] Elin: [LevelSession] 成功保存 cheyi35 的時間戳記
+2026-04-19 18:48:30 [INFO] Elin: [LevelSession] 成功保存 maobibibi 的時間戳記
+2026-04-19 18:48:30 [INFO] Elin: [LevelSession] 成功保存 panzer1018 的時間戳記
+2026-04-19 18:48:30 [INFO] Elin: [LevelSession] 成功保存 bigpig1703 的時間戳記
+2026-04-19 18:48:30 [INFO] Elin: [LevelSession] 成功保存 doll_0000 的時間戳記
+2026-04-19 18:48:30 [INFO] Elin: [LevelSession] 成功保存 kyu_accel 的時間戳記
+2026-04-19 18:48:30 [INFO] Elin: [LevelSession] 成功保存 mgbbuhu 的時間戳記
+2026-04-19 18:48:30 [INFO] Elin: [LevelSession] 成功保存 a_ming1649 的時間戳記
+2026-04-19 18:48:30 [INFO] Elin: [LevelSession] 成功保存 snowdrift3818 的時間戳記
+2026-04-19 18:48:30 [INFO] Elin: [LevelSession] 成功保存 95_jasa 的時間戳記
+2026-04-19 18:48:30 [INFO] Elin: [LevelSession] 成功保存 negative_95 的時間戳記
+2026-04-19 18:48:30 [INFO] Elin: [LevelSession] 成功保存 miroo_ 的時間戳記
+2026-04-19 18:48:30 [INFO] Elin: The Version of Python is 3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]
+2026-04-19 18:48:30 [INFO] Elin: Meow, Discord Bot loaded!
+2026-04-19 18:48:30 [INFO] Elin: ✅ Logged in as: Elin#6095
+2026-04-19 18:51:50 [DEBUG] Elin: 給予 (*T_T*) 訊息經驗值: 5 exp
+2026-04-19 18:57:37 [DEBUG] Elin: 給予 阿銘 訊息經驗值: 5 exp
+2026-04-19 18:58:23 [DEBUG] Elin: 給予 阿銘 訊息經驗值: 5 exp
+2026-04-19 18:59:05 [DEBUG] Elin: 給予 阿銘 訊息經驗值: 5 exp
+2026-04-19 19:10:14 [DEBUG] Elin: 給予 MIROO (:зꇤ )ﾆ 訊息經驗值: 5 exp
+2026-04-19 19:24:09 [DEBUG] Elin: 給予 哩賀哇係魚←← 訊息經驗值: 5 exp
+2026-04-19 19:28:43 [DEBUG] Elin: 給予 九条 カレン 訊息經驗值: 5 exp
+2026-04-19 19:30:39 [DEBUG] Elin: 給予 玖歌 反應經驗值: 5 exp
+2026-04-19 19:44:14 [INFO] Elin: [LevelSession] 成功保存 liga_ouob 的時間戳記
+2026-04-19 19:44:14 [DEBUG] Elin: [語音] 垂死病中驚坐起 加入語音頻道：🍁𝐕𝐚'𝐬 小木屋
+2026-04-19 19:46:04 [DEBUG] Elin: 給予 哩賀哇係魚←← 反應經驗值: 5 exp
+2026-04-19 19:48:16 [INFO] Elin: [LevelSession] 成功保存 littlegreyknight 的時間戳記
+2026-04-19 19:48:16 [DEBUG] Elin: [語音] 小灰 加入語音頻道：🍻冒險者酒館
+2026-04-19 19:48:27 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 19:48:31 [DEBUG] Elin: 給予 MIROO (:зꇤ )ﾆ 訊息經驗值: 5 exp
+2026-04-19 19:49:11 [INFO] Elin: 給予 MIROO (:зꇤ )ﾆ 語音經驗值: 91 exp, 累積時間: 60.68 分鐘
+2026-04-19 19:49:11 [INFO] Elin: [LevelSession] 成功移除 miroo_ 的時間戳記
+2026-04-19 19:49:11 [DEBUG] Elin: [語音] MIROO (:зꇤ )ﾆ 離開語音頻道：🍻冒險者酒館
+2026-04-19 19:49:17 [DEBUG] Elin: 給予 Yuri脾氣暴躁中 訊息經驗值: 5 exp
+2026-04-19 19:50:19 [DEBUG] Elin: 給予 MIROO (:зꇤ )ﾆ 訊息經驗值: 5 exp
+2026-04-19 19:53:42 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 19:54:12 [DEBUG] Elin: 給予 小灰 訊息經驗值: 5 exp
+2026-04-19 19:54:14 [INFO] Elin: 給予 小灰 語音經驗值: 5 exp, 累積時間: 5.97 分鐘
+2026-04-19 19:54:14 [INFO] Elin: [LevelSession] 成功移除 littlegreyknight 的時間戳記
+2026-04-19 19:54:14 [DEBUG] Elin: [語音] 小灰 離開語音頻道：🍻冒險者酒館
+2026-04-19 19:54:18 [INFO] Elin: [LevelSession] 成功保存 littlegreyknight 的時間戳記
+2026-04-19 19:54:18 [DEBUG] Elin: [語音] 小灰 加入語音頻道：🍹小灰的碧海屋
+2026-04-19 19:54:19 [DEBUG] Elin: 給予 哈姆/Mumu 反應經驗值: 5 exp
+2026-04-19 19:55:35 [INFO] Elin: [LevelSession] 成功保存 dog_surfing 的時間戳記
+2026-04-19 19:55:35 [DEBUG] Elin: [語音] 您好，把筷子收回去 加入語音頻道：🍻 -汐- 居酒屋
+2026-04-19 20:02:04 [INFO] Elin: [LevelSession] 成功保存 edgarwu 的時間戳記
+2026-04-19 20:02:04 [DEBUG] Elin: [語音] 海德格 加入語音頻道：🦈不賣魚的魚販
+2026-04-19 20:07:40 [DEBUG] Elin: 給予 Snowdrift 訊息經驗值: 5 exp
+2026-04-19 20:13:23 [DEBUG] Elin: 給予 Maes Pso(水鬼鳳梨酥 由MIROO賜名) 反應經驗值: 5 exp
+2026-04-19 20:19:20 [INFO] Elin: [LevelSession] 成功保存 playsese 的時間戳記
+2026-04-19 20:19:20 [DEBUG] Elin: [語音] 宇文化 加入語音頻道：🍻冒險者酒館
+2026-04-19 20:19:48 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 20:20:22 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 20:20:48 [DEBUG] Elin: 給予 Yuri脾氣暴躁中 訊息經驗值: 5 exp
+2026-04-19 20:20:58 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 20:21:34 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 20:22:11 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 20:23:06 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 20:23:43 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 20:24:52 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 20:27:07 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 20:27:19 [INFO] Elin: [LevelSession] 成功保存 jeras130 的時間戳記
+2026-04-19 20:27:19 [DEBUG] Elin: [語音] 小鳥 加入語音頻道：🦈不賣魚的魚販
+2026-04-19 20:27:50 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 20:28:41 [DEBUG] Elin: 給予 宇文化 訊息經驗值: 5 exp
+2026-04-19 20:28:42 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 20:29:13 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 20:30:10 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 20:32:46 [DEBUG] Elin: 給予 小鳥 訊息經驗值: 5 exp
+2026-04-19 20:32:57 [DEBUG] Elin: 給予 Snowdrift 訊息經驗值: 5 exp
+2026-04-19 20:34:37 [DEBUG] Elin: 給予 九条 カレン 訊息經驗值: 5 exp
+2026-04-19 20:34:46 [DEBUG] Elin: 給予 玖歌 反應經驗值: 5 exp
+2026-04-19 20:35:11 [DEBUG] Elin: 給予 Snowdrift 訊息經驗值: 5 exp
+2026-04-19 20:40:36 [DEBUG] Elin: 給予 Mochi 反應經驗值: 5 exp
+2026-04-19 20:43:44 [INFO] Elin: 給予 J A 語音經驗值: 172 exp, 累積時間: 115.23 分鐘
+2026-04-19 20:43:44 [INFO] Elin: [LevelSession] 成功移除 95_jasa 的時間戳記
+2026-04-19 20:43:44 [DEBUG] Elin: [語音] J A 離開語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 20:44:50 [INFO] Elin: [LevelSession] 成功保存 95_jasa 的時間戳記
+2026-04-19 20:44:50 [DEBUG] Elin: [語音] J A 加入語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 20:46:41 [DEBUG] Elin: 給予 九条 カレン 訊息經驗值: 5 exp
+2026-04-19 20:48:09 [DEBUG] Elin: 給予 哩賀哇係魚←← 訊息經驗值: 5 exp
+2026-04-19 20:51:11 [DEBUG] Elin: 給予 盾｜繁中推薦碼：ALE8276 反應經驗值: 5 exp
+2026-04-19 20:55:36 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 20:55:41 [INFO] Elin: [LevelSession] 成功保存 airoad 的時間戳記
+2026-04-19 20:55:41 [DEBUG] Elin: [語音] AiRoad 加入語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 20:55:47 [INFO] Elin: [LevelSession] 成功保存 blackwidowstar 的時間戳記
+2026-04-19 20:55:47 [DEBUG] Elin: [語音] 雙B 加入語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 20:58:22 [INFO] Elin: [LevelSession] 成功保存 sy2043 的時間戳記
+2026-04-19 20:58:22 [DEBUG] Elin: [語音] Mochi 加入語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 20:59:19 [DEBUG] Elin: 給予 宇文化 訊息經驗值: 5 exp
+2026-04-19 20:59:40 [DEBUG] Elin: 給予 哈姆/Mumu 訊息經驗值: 5 exp
+2026-04-19 21:08:05 [INFO] Elin: 給予 哈姆/Mumu 語音經驗值: 279 exp, 累積時間: 139.58 分鐘
+2026-04-19 21:08:05 [INFO] Elin: [LevelSession] 成功移除 mgbbuhu 的時間戳記
+2026-04-19 21:08:05 [DEBUG] Elin: [語音] 哈姆/Mumu 離開語音頻道：🍻冒險者酒館
+2026-04-19 21:08:07 [INFO] Elin: [LevelSession] 成功保存 mgbbuhu 的時間戳記
+2026-04-19 21:08:07 [DEBUG] Elin: [語音] 哈姆/Mumu 加入語音頻道：🍻冒險者酒館
+2026-04-19 21:09:35 [INFO] Elin: 給予 哈姆/Mumu 語音經驗值: 1 exp, 累積時間: 1.46 分鐘
+2026-04-19 21:09:35 [INFO] Elin: [LevelSession] 成功移除 mgbbuhu 的時間戳記
+2026-04-19 21:09:35 [DEBUG] Elin: [語音] 哈姆/Mumu 離開語音頻道：🍻冒險者酒館
+2026-04-19 21:17:15 [DEBUG] Elin: 給予 Suyab 反應經驗值: 5 exp
+2026-04-19 21:21:15 [DEBUG] Elin: 給予 哩賀哇係魚←← 訊息經驗值: 5 exp
+2026-04-19 21:27:08 [INFO] Elin: 給予 宇文化 語音經驗值: 101 exp, 累積時間: 67.81 分鐘
+2026-04-19 21:27:08 [INFO] Elin: [LevelSession] 成功移除 playsese 的時間戳記
+2026-04-19 21:27:08 [DEBUG] Elin: [語音] 宇文化 離開語音頻道：🍻冒險者酒館
+2026-04-19 21:35:09 [DEBUG] Elin: 給予 Yuri脾氣暴躁中 訊息經驗值: 5 exp
+2026-04-19 21:35:15 [DEBUG] Elin: 給予 小鳥 訊息經驗值: 5 exp
+2026-04-19 21:54:45 [DEBUG] Elin: 給予 哩賀哇係魚←← 訊息經驗值: 5 exp
+2026-04-19 21:55:19 [DEBUG] Elin: 給予 Yuri脾氣暴躁中 訊息經驗值: 5 exp
+2026-04-19 21:57:52 [INFO] Elin: [LevelSession] 成功保存 nimaluma 的時間戳記
+2026-04-19 21:57:52 [DEBUG] Elin: [語音] 騼騼 加入語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 22:08:35 [INFO] Elin: 給予 騼騼 語音經驗值: 10 exp, 累積時間: 10.71 分鐘
+2026-04-19 22:08:35 [INFO] Elin: [LevelSession] 成功移除 nimaluma 的時間戳記
+2026-04-19 22:08:35 [DEBUG] Elin: [語音] 騼騼 離開語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 22:11:03 [DEBUG] Elin: 給予 AiRoad 訊息經驗值: 5 exp
+2026-04-19 22:14:23 [DEBUG] Elin: 給予 阿芙 反應經驗值: 5 exp
+2026-04-19 22:15:53 [DEBUG] Elin: 給予 阿芙 反應經驗值: 5 exp
+2026-04-19 22:16:06 [DEBUG] Elin: 給予 阿芙 訊息經驗值: 5 exp
+2026-04-19 22:26:03 [DEBUG] Elin: 給予 小鳥 訊息經驗值: 5 exp
+2026-04-19 22:26:12 [DEBUG] Elin: 給予 哩賀哇係魚←← 反應經驗值: 5 exp
+2026-04-19 22:29:13 [DEBUG] Elin: 給予 Yuri脾氣暴躁中 訊息經驗值: 5 exp
+2026-04-19 22:29:56 [DEBUG] Elin: 給予 Yuri脾氣暴躁中 訊息經驗值: 5 exp
+2026-04-19 22:34:35 [DEBUG] Elin: 給予 哩賀哇係魚←← 訊息經驗值: 5 exp
+2026-04-19 22:39:26 [DEBUG] Elin: 給予 玖歌 訊息經驗值: 5 exp
+2026-04-19 22:44:24 [DEBUG] Elin: 給予 阿芙 反應經驗值: 5 exp
+2026-04-19 22:47:04 [DEBUG] Elin: 給予 Yuri脾氣暴躁中 訊息經驗值: 5 exp
+2026-04-19 22:58:22 [DEBUG] Elin: 給予 Yuri脾氣暴躁中 訊息經驗值: 5 exp
+2026-04-19 22:59:37 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-04-19 22:59:37 [INFO] Elin: 給予 Suyab 語音經驗值: 502 exp, 累積時間: 251.12 分鐘
+2026-04-19 22:59:37 [INFO] Elin: 給予 哩賀哇係魚←← 語音經驗值: 502 exp, 累積時間: 251.12 分鐘
+2026-04-19 22:59:37 [INFO] Elin: 給予 Mao 語音經驗值: 502 exp, 累積時間: 251.12 分鐘
+2026-04-19 22:59:37 [INFO] Elin: 給予 九条 カレン 語音經驗值: 502 exp, 累積時間: 251.12 分鐘
+2026-04-19 22:59:37 [INFO] Elin: 給予 KIWI 語音經驗值: 502 exp, 累積時間: 251.12 分鐘
+2026-04-19 22:59:37 [INFO] Elin: 給予 ? 語音經驗值: 502 exp, 累積時間: 251.12 分鐘
+2026-04-19 22:59:37 [INFO] Elin: 給予 玖歌 語音經驗值: 502 exp, 累積時間: 251.12 分鐘
+2026-04-19 22:59:37 [INFO] Elin: 給予 阿銘 語音經驗值: 502 exp, 累積時間: 251.12 分鐘
+2026-04-19 22:59:37 [INFO] Elin: 給予 Snowdrift 語音經驗值: 502 exp, 累積時間: 251.12 分鐘
+2026-04-19 22:59:37 [INFO] Elin: 給予 J A 語音經驗值: 269 exp, 累積時間: 134.78 分鐘
+2026-04-19 22:59:37 [INFO] Elin: 給予 🌱鳳梨加班加到往生酥 語音經驗值: 502 exp, 累積時間: 251.12 分鐘
+2026-04-19 22:59:37 [INFO] Elin: 給予 海德格 語音經驗值: 355 exp, 累積時間: 177.56 分鐘
+2026-04-19 22:59:37 [INFO] Elin: 給予 AiRoad 語音經驗值: 247 exp, 累積時間: 123.93 分鐘
+2026-04-19 22:59:37 [INFO] Elin: 給予 您好，把筷子收回去 語音經驗值: 368 exp, 累積時間: 184.03 分鐘
+2026-04-19 22:59:37 [INFO] Elin: 給予 小鳥 語音經驗值: 304 exp, 累積時間: 152.30 分鐘
+2026-04-19 22:59:37 [INFO] Elin: 給予 垂死病中驚坐起 語音經驗值: 390 exp, 累積時間: 195.38 分鐘
+2026-04-19 22:59:37 [INFO] Elin: 給予 小灰 語音經驗值: 370 exp, 累積時間: 185.32 分鐘
+2026-04-19 22:59:37 [INFO] Elin: 給予 雙B 語音經驗值: 247 exp, 累積時間: 123.83 分鐘
+2026-04-19 22:59:37 [INFO] Elin: 給予 Mochi 語音經驗值: 242 exp, 累積時間: 121.25 分鐘
+2026-04-19 22:59:37 [INFO] Elin: 機器人已關閉。
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: attendance.yaml
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: attendance_help.yaml
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: commemorate.yaml
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: commemorate_help.yaml
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: commemorate_success.yaml
+2026-04-19 22:59:41 [ERROR] Elin: market.yaml 的 JSON 格式與 Dialogue 類別不相容: Page.__init__() got an unexpected keyword argument 'image'
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: market_help.yaml
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: merchandise.yaml
+2026-04-19 22:59:41 [ERROR] Elin: sample.yaml 的 JSON 格式與 Dialogue 類別不相容: Page.__init__() got an unexpected keyword argument 'title'
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: test_turning_page.yaml
+2026-04-19 22:59:41 [INFO] Elin: 資料載入完畢，總共載入 8 個檔案
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: vendor.json
+2026-04-19 22:59:41 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 22:59:41 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: boundary_forest.json
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: falun.json
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: falun_mine.json
+2026-04-19 22:59:41 [INFO] Elin: 資料載入完畢，總共載入 3 個檔案
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: apple.json
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: banana.json
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: bass.json
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: cod.json
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: copper.json
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: grape.json
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: gravel.json
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: salmon.json
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: weeds.json
+2026-04-19 22:59:41 [INFO] Elin: 資料載入完畢，總共載入 16 個檔案
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: default_meadow.json
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: rose.json
+2026-04-19 22:59:41 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: meadow.json
+2026-04-19 22:59:41 [INFO] Elin: 載入檔案成功: white_birch.json
+2026-04-19 22:59:41 [INFO] Elin: 資料載入完畢，總共載入 2 個檔案
+2026-04-19 22:59:41 [INFO] Elin: Synced 12 commands to Global
+2026-04-19 22:59:45 [INFO] Elin: [LevelSession] 成功保存 dog_surfing 的時間戳記
+2026-04-19 22:59:45 [INFO] Elin: [LevelSession] 成功保存 suyab_ 的時間戳記
+2026-04-19 22:59:45 [INFO] Elin: [LevelSession] 成功保存 cheyi35 的時間戳記
+2026-04-19 22:59:45 [INFO] Elin: [LevelSession] 成功保存 blackwidowstar 的時間戳記
+2026-04-19 22:59:45 [INFO] Elin: [LevelSession] 成功保存 liga_ouob 的時間戳記
+2026-04-19 22:59:45 [INFO] Elin: [LevelSession] 成功保存 maobibibi 的時間戳記
+2026-04-19 22:59:45 [INFO] Elin: [LevelSession] 成功保存 sy2043 的時間戳記
+2026-04-19 22:59:45 [INFO] Elin: [LevelSession] 成功保存 panzer1018 的時間戳記
+2026-04-19 22:59:45 [INFO] Elin: [LevelSession] 成功保存 bigpig1703 的時間戳記
+2026-04-19 22:59:45 [INFO] Elin: [LevelSession] 成功保存 doll_0000 的時間戳記
+2026-04-19 22:59:45 [INFO] Elin: [LevelSession] 成功保存 airoad 的時間戳記
+2026-04-19 22:59:45 [INFO] Elin: [LevelSession] 成功保存 kyu_accel 的時間戳記
+2026-04-19 22:59:45 [INFO] Elin: [LevelSession] 成功保存 a_ming1649 的時間戳記
+2026-04-19 22:59:45 [INFO] Elin: [LevelSession] 成功保存 jeras130 的時間戳記
+2026-04-19 22:59:45 [INFO] Elin: [LevelSession] 成功保存 snowdrift3818 的時間戳記
+2026-04-19 22:59:45 [INFO] Elin: [LevelSession] 成功保存 95_jasa 的時間戳記
+2026-04-19 22:59:45 [INFO] Elin: [LevelSession] 成功保存 edgarwu 的時間戳記
+2026-04-19 22:59:45 [INFO] Elin: [LevelSession] 成功保存 negative_95 的時間戳記
+2026-04-19 22:59:45 [INFO] Elin: [LevelSession] 成功保存 littlegreyknight 的時間戳記
+2026-04-19 22:59:45 [INFO] Elin: The Version of Python is 3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]
+2026-04-19 22:59:45 [INFO] Elin: Meow, Discord Bot loaded!
+2026-04-19 22:59:45 [INFO] Elin: ✅ Logged in as: Elin#6095
+2026-04-19 23:00:57 [INFO] Elin: 給予 Suyab 語音經驗值: 1 exp, 累積時間: 1.20 分鐘
+2026-04-19 23:00:57 [INFO] Elin: [LevelSession] 成功移除 suyab_ 的時間戳記
+2026-04-19 23:00:57 [DEBUG] Elin: [語音] Suyab 離開語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 23:01:01 [INFO] Elin: [LevelSession] 成功保存 suyab_ 的時間戳記
+2026-04-19 23:01:01 [DEBUG] Elin: [語音] Suyab 加入語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 23:03:07 [DEBUG] Elin: 給予 Mochi 反應經驗值: 5 exp
+2026-04-19 23:03:08 [DEBUG] Elin: 給予 AiRoad 訊息經驗值: 5 exp
+2026-04-19 23:05:24 [DEBUG] Elin: 給予 AiRoad 訊息經驗值: 5 exp
+2026-04-19 23:14:32 [INFO] Elin: 給予 玖歌 語音經驗值: 14 exp, 累積時間: 14.79 分鐘
+2026-04-19 23:14:32 [INFO] Elin: [LevelSession] 成功移除 kyu_accel 的時間戳記
+2026-04-19 23:14:32 [DEBUG] Elin: [語音] 玖歌 離開語音頻道：🦈不賣魚的魚販
+2026-04-19 23:17:51 [DEBUG] Elin: 給予 J A 訊息經驗值: 5 exp
+2026-04-19 23:18:09 [DEBUG] Elin: 給予 (*T_T*) 訊息經驗值: 5 exp
+2026-04-19 23:18:24 [DEBUG] Elin: 給予 J A 訊息經驗值: 5 exp
+2026-04-19 23:18:53 [DEBUG] Elin: 給予 阿銘 訊息經驗值: 5 exp
+2026-04-19 23:20:44 [DEBUG] Elin: 給予 阿銘 訊息經驗值: 5 exp
+2026-04-19 23:23:09 [INFO] Elin: 給予 您好，把筷子收回去 語音經驗值: 23 exp, 累積時間: 23.41 分鐘
+2026-04-19 23:23:09 [INFO] Elin: [LevelSession] 成功移除 dog_surfing 的時間戳記
+2026-04-19 23:23:09 [DEBUG] Elin: [語音] 您好，把筷子收回去 離開語音頻道：🍻 -汐- 居酒屋
+2026-04-19 23:24:29 [DEBUG] Elin: 給予 雙B 訊息經驗值: 5 exp
+2026-04-19 23:25:12 [DEBUG] Elin: 給予 AiRoad 訊息經驗值: 5 exp
+2026-04-19 23:25:14 [DEBUG] Elin: 給予 雙B 訊息經驗值: 5 exp
+2026-04-19 23:26:44 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-04-19 23:28:22 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-04-19 23:29:36 [DEBUG] Elin: 給予 Snowdrift 訊息經驗值: 5 exp
+2026-04-19 23:29:57 [DEBUG] Elin: 給予 ? 訊息經驗值: 5 exp
+2026-04-19 23:30:08 [DEBUG] Elin: 給予 阿銘 訊息經驗值: 5 exp
+2026-04-19 23:30:44 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-04-19 23:30:48 [DEBUG] Elin: 給予 阿銘 訊息經驗值: 5 exp
+2026-04-19 23:32:23 [INFO] Elin: 給予 Mochi 語音經驗值: 32 exp, 累積時間: 32.63 分鐘
+2026-04-19 23:32:23 [INFO] Elin: [LevelSession] 成功移除 sy2043 的時間戳記
+2026-04-19 23:32:23 [DEBUG] Elin: [語音] Mochi 離開語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 23:39:48 [DEBUG] Elin: 給予 阿銘 訊息經驗值: 5 exp
+2026-04-19 23:44:04 [INFO] Elin: 給予 AiRoad 語音經驗值: 44 exp, 累積時間: 44.32 分鐘
+2026-04-19 23:44:04 [INFO] Elin: [LevelSession] 成功移除 airoad 的時間戳記
+2026-04-19 23:44:04 [DEBUG] Elin: [語音] AiRoad 離開語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 23:44:37 [DEBUG] Elin: 給予 阿銘 訊息經驗值: 5 exp
+2026-04-19 23:45:01 [INFO] Elin: 給予 垂死病中驚坐起 語音經驗值: 45 exp, 累積時間: 45.28 分鐘
+2026-04-19 23:45:01 [INFO] Elin: [LevelSession] 成功移除 liga_ouob 的時間戳記
+2026-04-19 23:45:01 [DEBUG] Elin: [語音] 垂死病中驚坐起 離開語音頻道：🍁𝐕𝐚'𝐬 小木屋
+2026-04-19 23:45:22 [DEBUG] Elin: 給予 阿銘 訊息經驗值: 5 exp
+2026-04-19 23:46:30 [INFO] Elin: [LevelSession] 成功保存 ne820005 的時間戳記
+2026-04-19 23:46:30 [DEBUG] Elin: [語音] 好睏的內 加入語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 23:47:03 [DEBUG] Elin: 給予 好睏的內 訊息經驗值: 5 exp
+2026-04-19 23:50:16 [DEBUG] Elin: 給予 哩賀哇係魚←← 反應經驗值: 5 exp
+2026-04-19 23:50:20 [DEBUG] Elin: 給予 阿銘 訊息經驗值: 5 exp
+2026-04-19 23:52:12 [INFO] Elin: 給予 海德格 語音經驗值: 52 exp, 累積時間: 52.45 分鐘
+2026-04-19 23:52:12 [INFO] Elin: [LevelSession] 成功移除 edgarwu 的時間戳記
+2026-04-19 23:52:12 [DEBUG] Elin: [語音] 海德格 離開語音頻道：🦈不賣魚的魚販
+2026-04-19 23:52:36 [INFO] Elin: 給予 ? 語音經驗值: 52 exp, 累積時間: 52.86 分鐘
+2026-04-19 23:52:36 [INFO] Elin: [LevelSession] 成功移除 doll_0000 的時間戳記
+2026-04-19 23:52:36 [DEBUG] Elin: [語音] ? 離開語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 23:54:44 [INFO] Elin: [LevelSession] 成功保存 doll_0000 的時間戳記
+2026-04-19 23:54:44 [DEBUG] Elin: [語音] ? 加入語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-04-19 23:56:31 [DEBUG] Elin: 給予 好睏的內 訊息經驗值: 5 exp
+2026-04-19 23:56:52 [DEBUG] Elin: 給予 阿銘 訊息經驗值: 5 exp
+2026-04-19 23:57:25 [DEBUG] Elin: 給予 阿銘 訊息經驗值: 5 exp
+2026-04-19 23:58:14 [DEBUG] Elin: 給予 小鳥 訊息經驗值: 5 exp
+2026-04-19 23:59:46 [DEBUG] Elin: 給予 🌱鳳梨加班加到往生酥 反應經驗值: 5 exp

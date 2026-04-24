@@ -1,7 +1,7 @@
 import discord
-from models.player import Player
-from models.inventory import Inventory
-from models.item import item_registry
+from game.model import Player
+from game.model import Inventory
+from system.registry import item_registry
 
 class InventoryMenu:
     @staticmethod

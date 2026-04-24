@@ -7,7 +7,7 @@
 """
 from peewee import *
 from config import db
-from models.player.model import Player
+from systems.models.player import Player
 from data.type import StatusType
 from cores.logger import logger
 

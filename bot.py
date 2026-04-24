@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 
-from models import init_all_databases
+from game.model import init_all_databases
 from cores.logger import logger
 
 intents = discord.Intents.default()
@@ -19,27 +19,28 @@ class Elin(commands.Bot):
 
         extensions = [
             "cogs.attendance",
-            "cogs.leveling",
             "cogs.role",
             "cogs.market",
-            "cogs.region",
-            "cogs.play",
             "cogs.setting",
 
+            "cogs.listeners.interaction",
             "cogs.listeners.join",
             "cogs.listeners.message",
+            "cogs.listeners.reaction",
+            "cogs.listeners.voice",
 
-            "cogs.admins.boot",
-            "cogs.admins.member",
-            "cogs.admins.house",
-            "cogs.admins.test",
             "cogs.admins.announce",
+            "cogs.admins.boot",
+            "cogs.admins.house",
+            "cogs.admins.member",
+            "cogs.admins.test_message",
+            "cogs.admins.test_multiple_select",
 
             "cogs.actions.steal",
 
-            "cogs.menus.stat",
             "cogs.menus.inventory",
             "cogs.menus.leaderboard",
+            "cogs.menus.stat",
         ]
 
         for extension in extensions:

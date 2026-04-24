@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 
 from data.type import *
-from data.payload import *
+from data.payloads.response import *
 
 @dataclass
 class Event:

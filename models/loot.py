@@ -6,7 +6,7 @@ import random
 from dataclasses import dataclass, field
 from data.type import LootType
 from models.item import item_registry
-from cores.registry import Registry
+from cores.registry import AssetRegistry
 from cores.logger import logger
 
 """
@@ -37,7 +37,7 @@ class Loot:
             self.entries = [Entry(**entry) for entry in self.entries]
 
 
-class LootManager(Registry[Loot]):
+class LootManager(AssetRegistry[Loot]):
     def __init__(self):
         super().__init__(
             model = Loot, 
