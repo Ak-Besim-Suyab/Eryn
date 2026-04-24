@@ -3,9 +3,9 @@ import random
 
 from cores import Action, event
 
-from data.event import RewardEvent
-from data.payloads.response import RewardPayload
-from data.type import RewardType
+from scripts.data.event import RewardEvent
+from scripts.data.payloads.response import RewardPayload
+from scripts.data.type import RewardType
 
 from utils import cooldown
 

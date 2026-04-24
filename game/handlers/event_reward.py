@@ -4,7 +4,7 @@
 """
 from zoneinfo import ZoneInfo
 
-from data.event import RewardEvent
+from scripts.data.event import RewardEvent
 from game.model import Player
 
 from cores import event

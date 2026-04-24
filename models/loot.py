@@ -4,7 +4,7 @@
 """
 import random
 from dataclasses import dataclass, field
-from data.type import LootType
+from scripts.data.type import LootType
 from models.item import item_registry
 from cores.registry import AssetRegistry
 from cores.logger import logger

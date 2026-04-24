@@ -10,7 +10,6 @@ import discord
 
 from datetime import datetime
 
-
 from game.model import Player
 
 from cores.logger import logger

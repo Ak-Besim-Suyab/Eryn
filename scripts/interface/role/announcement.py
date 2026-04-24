@@ -1,8 +1,8 @@
 import discord
 import asyncio
 
-from interface.role.image import RoleImage, image_college_of_arms
-from interface.role.main import RoleEmbed, RoleView
+from scripts.interface.role.image import RoleImage, image_college_of_arms
+from scripts.interface.role.main import RoleEmbed, RoleView
 
 class RoleAnnouncementEmbed(discord.Embed):
     def __init__(self):

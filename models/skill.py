@@ -1,7 +1,7 @@
 from peewee import *
 
 from systems.models.player import Player
-from data.type import ActionType
+from scripts.data.type import ActionType
 from config import db
 
 class Skill(Model):

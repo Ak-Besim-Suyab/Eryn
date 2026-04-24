@@ -1,7 +1,7 @@
 import discord
 
-from interface.role.image import RoleImage
-from interface.role.category import RoleCategoryEmbed, RoleCategoryView
+from scripts.interface.role.image import RoleImage
+from scripts.interface.role.category import RoleCategoryEmbed, RoleCategoryView
 
 class RoleEmbed(discord.Embed):
     def __init__(self):

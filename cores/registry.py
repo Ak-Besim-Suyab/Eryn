@@ -1,6 +1,6 @@
 from typing import TypeVar, Generic, Type
 from abc import ABC, abstractmethod
-from cores.loader import AssetLoader
+from cores.asset import AssetLoader
 from cores.logger import logger
 
 T = TypeVar('T')

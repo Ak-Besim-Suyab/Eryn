@@ -2,8 +2,8 @@ import discord
 
 from cores.logger import logger
 
-from interface.role.image import RoleImage
-from interface.role.success import RoleSuccessEmbed
+from scripts.interface.role.image import RoleImage
+from scripts.interface.role.success import RoleSuccessEmbed
 
 from models.role import role_manager
 

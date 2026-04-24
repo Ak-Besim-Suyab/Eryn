@@ -4,7 +4,7 @@ from cores import Action
 from utils import cooldown
 
 from cores import event
-from data import *
+from scripts.data import *
 
 class CommemorateAction(Action):
     def __init__(self):

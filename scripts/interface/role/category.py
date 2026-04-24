@@ -1,6 +1,6 @@
 import discord
 
-from interface.role.theme import RoleThemeEmbed, RoleThemeView, RoleInfo
+from scripts.interface.role.theme import RoleThemeEmbed, RoleThemeView, RoleInfo
 
 class RoleCategoryEmbed(discord.Embed):
     def __init__(self, interaction: discord.Interaction, category: str):

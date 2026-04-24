@@ -3,7 +3,7 @@ import json
 from discord.ext import commands
 from pathlib import Path
 
-from cores.loader import AssetLoader
+from cores.asset import AssetLoader
 from cores.logger import logger
 
 class AdminHouseCog(commands.Cog):

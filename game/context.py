@@ -38,3 +38,37 @@ class Context:
             _embed = ui.Embed(embed)
             _embeds.append(_embed)
         return _embeds
+
+    #     if self.page == 1 or page.is_newtab:
+    #         if interaction.response.is_done():
+    #             # 更新舊訊息狀態時, 訊息會被標記為 is_done, 需要改用 followup
+    #             await interaction.followup.send(embeds=embeds, view=self, ephemeral=ephemeral)
+    #         else:
+    #             await interaction.response.send_message(embeds=embeds, view=self, ephemeral=ephemeral)
+    #     else:
+    #         if interaction.response.is_done():
+    #             await interaction.edit_original_response(embeds=embeds, view=self, ephemeral=ephemeral)
+    #         else:
+    #             await interaction.response.edit_message(embeds=embeds, view=self, ephemeral=ephemeral)
+        
+    #     if page.auto:
+    #         self.page = self.page + 1
+    #         if self.dialogues.get_page(self.page) is None:
+    #             return
+            
+    #         async with interaction.channel.typing():
+    #             await asyncio.sleep(page.auto_delay)
+
+    #         await self.send(interaction=interaction, ephemeral=ephemeral)
+
+    # def get_callback(self, callback: str, component: discord.ui.Button | discord.ui.Select) -> callable:
+    #     async def callback_function(interaction: discord.Interaction):
+    #         match callback:
+    #             case "turn":
+    #                 component.disabled = True
+    #                 await interaction.response.edit_message(view=self) # 將按鈕取消時, 需要更新舊訊息狀態
+
+    #                 self.page = self.page + 1
+    #                 await self.send(interaction)
+
+    #     return callback_function
