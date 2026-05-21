@@ -25,7 +25,7 @@ async def purchase(interaction: discord.Interaction, selected_options: dict[str,
             case "purchase:quantity":
                 quantity = int(values[0])
 
-    player: Player = Player.get_or_create_player(interaction.user.id)
+    player = Player.get_or_create_player(interaction.user.id)
 
     # 計算加總
     total_unit_price = sum(item.price for item in items)

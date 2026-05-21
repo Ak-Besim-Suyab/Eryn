@@ -1,8 +1,9 @@
 """
-這個物件用於讀取整個目標資料夾下的所有 json, yaml 檔案
-調用方法後會回傳 resources 字典, key 為檔案名, value 為檔案內容
+這個模組用於讀取整個 assets 資料夾下的所有目標 json, yaml 資料
+調用方法後會回傳字典, key 為檔案名, value 為檔案內容
 
-移除對資料的型別檢查, 直接將檔案內容以 dict 或 list 的形式回傳, 由註冊器處理資料結構
+.. note::
+    移除對資料的型別檢查, 直接將檔案內容以 dict 或 list 的形式回傳, 由註冊器處理資料結構
 """
 
 import json
@@ -37,11 +38,6 @@ def load(path: str) -> dict[str, dict | list]:
                 if not d: 
                     logger.debug(f"檔案內容為空, 已略過: {file.name}")
                     continue
-
-                # if not isinstance(d, dict): 
-                #     logger.exception(f"檔案格式不為字典, 已略過: {file.name}")
-                #     continue
-
                 if file.stem in d: 
                     logger.debug(f"檔名重複, 已略過: {file.name}")
                     continue

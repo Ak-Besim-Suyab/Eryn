@@ -16,7 +16,10 @@ class AnnounceCog(commands.Cog):
     @announce_group.command(name="attendance", description="發布每日簽到公告")
     @app_commands.default_permissions(administrator=True)
     async def attendance(self, interaction: discord.Interaction):
-        await context.Context("attendance").send(interaction)
+
+        text_name = "attendance"
+        
+        await context.Context(text_name).send(interaction)
     
     @announce_group.command(name="season", description="發布限時活動公告")
     @app_commands.default_permissions(administrator=True)

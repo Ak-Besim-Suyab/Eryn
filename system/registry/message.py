@@ -1,11 +1,8 @@
 from cores import AssetRegistry
 
-from game import model
-
-class MessageRegistry(AssetRegistry[model.Message]):
+class MessageRegistry(AssetRegistry):
     def __init__(self):
         super().__init__(
-            model=model.Message, 
             path = "assets/messages"
         )
 
