@@ -1,7 +1,8 @@
 {
-    "id": 1383846482691624960,
+    "id": "twilight",
+    "discord_id": 1383846482691624960,
     "name": "薄暮 Twilight",
-    "icon": "",
+    "icon": "<:twilight:1508384118399045773>",
     "category": "tinctures",
     "tag": "gradient"
 }

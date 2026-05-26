@@ -28,6 +28,10 @@ class InteractionListener(commands.Cog):
         # 以下實作邏輯
         custom_id = interaction.data.get("custom_id", "")
 
+        # if custom_id == "test":
+        #     await interaction.response.send_message("測試成功！", ephemeral=True)
+        #     return
+
         if custom_id.startswith("market:"):
             data = custom_id.split(":")
             match data[1]:
@@ -74,20 +78,22 @@ class InteractionListener(commands.Cog):
                 case "help":
                     # await DialogueView(dialog_name="commemorate_help").send(interaction=interaction, ephemeral=True)
                     return
-
-        match custom_id:
-            case "attendance_claim":
-                await attendance.claim(interaction)
-
-            case "attendance_stat":
-                await StatMenu.show(interaction)
-            
-            case "attendance_leaderboard":
-                await LeaderboardMenu.show(interaction)
-
-            case "attendance_help":
-                return
-                # await DialogueView(dialog_name="attendance_help").send(interaction=interaction, ephemeral=True)
+        
+        if custom_id.startswith("attendance:"):
+            data = custom_id.split(":")
+            match data[1]:
+                case "claim":
+                    await attendance.claim(interaction)
+                    return
+                case "stat":
+                    await StatMenu.show(interaction)
+                    return
+                case "leaderboard":
+                    await LeaderboardMenu.show(interaction)
+                    return
+                case "help":
+                    # await DialogueView(dialog_name="attendance_help").send(interaction=interaction, ephemeral=True)
+                    return
                 
 async def setup(bot):
     await bot.add_cog(InteractionListener(bot))

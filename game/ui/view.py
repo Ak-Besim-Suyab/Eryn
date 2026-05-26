@@ -1,12 +1,19 @@
 import discord
-import game
 from game import model
 from game import ui
+from systems import sessions
 
 class View(discord.ui.View):
-    def __init__(self, model: model.View, context: game.Context):
+    """
+    Note: 
+        視圖物件 (View) 應當只作為資料載體。
+        在整個對話生命週期，只有該視圖可以向下傳遞，目前最好的做法應是將週期內需要使用的會話物件 (Session) 保存在該視圖裡。
+        週期內的資料與邏輯皆由會話管理，視圖僅負責保存、輸出與傳遞。
+    """
+    def __init__(self, model: model.View, session: sessions.DialogueSession):
 
         self.model = model
+        self.session = session
 
         super().__init__(timeout=model.timeout)
 

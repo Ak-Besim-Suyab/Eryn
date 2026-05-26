@@ -1,9 +1,8 @@
 import discord
-
-from game import model
+import models
 
 class Button(discord.ui.Button):
-    def __init__(self, button: model.Button):
+    def __init__(self, button: models.Button):
 
         self.button = button
 

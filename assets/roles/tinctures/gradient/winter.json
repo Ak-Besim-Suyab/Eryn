@@ -1,7 +1,8 @@
 {
-    "id": 1381797327010009150,
+    "id": "winter",
+    "discord_id": 1381797327010009150,
     "name": "冬 Winter",
-    "icon": "",
+    "icon": "<:winter:1508666398086533260>",
     "category": "tinctures",
     "tag": "gradient"
 }

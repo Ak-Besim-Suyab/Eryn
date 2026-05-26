@@ -1,13 +1,7 @@
-from .button import *
-from .embed import *
 from .inventory import *
 from .item import *
-from .message import *
 from .player import *
-from .query import *
-from .select import *
 from .shop import *
-from .view import *
 
 def init_all_databases():
     """

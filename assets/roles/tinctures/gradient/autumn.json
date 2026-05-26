@@ -1,7 +1,8 @@
 {
-    "id": 1381796347132248157,
+    "id": "autumn",
+    "discord_id": 1381796347132248157,
     "name": "秋 Autumn",
-    "icon": "",
+    "icon": "<:autumn:1508666378796929044>",
     "category": "tinctures",
     "tag": "gradient"
 }

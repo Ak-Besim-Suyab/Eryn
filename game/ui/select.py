@@ -1,16 +1,14 @@
 import discord
+import models
 
 from cores import query
 
-from game import model
-
-
 class Select(discord.ui.Select):
-    def __init__(self, select: model.Select):
+    def __init__(self, select: models.Select):
 
         self.select = select
 
-        options = query.ask(model.SelectOptionQuery(select.custom_id))
+        options = query.ask(models.SelectOptionQuery(select.custom_id))
         
         if options is None:
             options = []

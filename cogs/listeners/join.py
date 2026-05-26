@@ -7,7 +7,7 @@ class JoinListener(commands.Cog):
         self.bot = bot
         self.welcome_message = [
             "咪，很高興旅人來到避風港 🎉",
-            "這裡是個溫暖、可愛的小地方，希望您會喜歡喵！"
+            "這裡是個溫暖、可愛的小地方，希望您會喜歡！"
         ]
 
     @commands.Cog.listener()

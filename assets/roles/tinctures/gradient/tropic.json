@@ -1,7 +1,8 @@
 {
-    "id": 1381565223458177075,
+    "id": "tropic",
+    "discord_id": 1381565223458177075,
     "name": "熱帶 Tropic",
-    "icon": "",
+    "icon": "<:tropic:1508397718362394655>",
     "category": "tinctures",
     "tag": "gradient"
 }

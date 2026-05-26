@@ -1,7 +1,8 @@
 {
-    "id": 1381794996818153584,
+    "id": "dawn",
+    "discord_id": 1381794996818153584,
     "name": "曉 Dawn",
-    "icon": "",
+    "icon": "<:dawn:1508666662734266418>",
     "category": "tinctures",
     "tag": "gradient"
 }

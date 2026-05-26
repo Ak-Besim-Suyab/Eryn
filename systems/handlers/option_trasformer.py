@@ -3,15 +3,14 @@
 主要入口由事件總線請求 `SelectOptionQuery` 開始, 由 `to_options` 函式接收該請求並根據 Select 物件攜帶的 custom_id 變數進行資料檢查與轉換
 """
 import discord 
-
-from game import model
+import models
 
 from cores import query
 
-from system.registry import shop_registry
-from system.registry import item_registry
+from systems.registry import shop_registry
+from systems.registry import item_registry
 
-def to_options(query: model.SelectOptionQuery) -> list[discord.SelectOption]:
+def to_options(query: models.SelectOptionQuery) -> list[discord.SelectOption]:
     """
     .. `option_params` 接收來自 Query 攜帶的 custom_id, 並將其拆解為參數串列, 理應要有雙參數傳入
     首要參數理應是資料種類, 如 shop, inventory
@@ -49,4 +48,4 @@ def to_shop_options(shop_name: str) -> list[discord.SelectOption]:
 
         return options
 
-query.register(model.SelectOptionQuery, to_options)
+query.register(models.SelectOptionQuery, to_options)

@@ -1,7 +1,8 @@
 {
-    "id": 1381663931088506880,
+    "id": "niello",
+    "discord_id": 1381663931088506880,
     "name": "鎏金 Niello",
-    "icon": "",
+    "icon": "<:niello:1508666958600732722>",
     "category": "tinctures",
     "tag": "gradient"
 }

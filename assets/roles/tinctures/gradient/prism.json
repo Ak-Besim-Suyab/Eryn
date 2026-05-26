@@ -1,7 +1,8 @@
 {
-    "id": 1343537682206167040,
+    "id": "prism",
+    "discord_id": 1343537682206167040,
     "name": "稜彩 Prism",
-    "icon": "",
+    "icon": "<:prism:1508384924628025374>",
     "category": "tinctures",
     "tag": "gradient"
 }

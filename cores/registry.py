@@ -4,12 +4,9 @@
 .. note::
     目前將讀取檔案的錯誤拋出都移至 asset 模組, 註冊器則專注於處理資料結構的錯誤
 """
-from typing import TypeVar
 from abc import ABC
 from cores import asset
 from cores.logger import logger
-
-T = TypeVar("T")
 
 class Registry(ABC):
     def __init__(self):

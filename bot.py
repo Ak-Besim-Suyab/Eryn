@@ -4,6 +4,8 @@ from discord.ext import commands
 from game.model import init_all_databases
 from cores.logger import logger
 
+from cogs.admins import AnnounceRoleView
+
 intents = discord.Intents.default()
 intents.voice_states = True
 intents.message_content = True
@@ -22,6 +24,7 @@ class Elin(commands.Bot):
             "cogs.role",
             "cogs.market",
             "cogs.setting",
+            "cogs.test",
 
             "cogs.listeners.interaction",
             "cogs.listeners.join",
@@ -29,6 +32,7 @@ class Elin(commands.Bot):
             "cogs.listeners.reaction",
             "cogs.listeners.voice",
 
+            "cogs.admins.announce_role",
             "cogs.admins.announce",
             "cogs.admins.boot",
             "cogs.admins.house",
@@ -45,6 +49,8 @@ class Elin(commands.Bot):
 
         for extension in extensions:
             await self.load_extension(extension)
+
+        self.add_view(AnnounceRoleView())
 
         synced_global = await self.tree.sync()
         logger.info(f'Synced {len(synced_global)} commands to Global')

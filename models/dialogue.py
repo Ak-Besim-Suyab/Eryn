@@ -29,7 +29,7 @@ class Page:
             self.view = View(**self.view)
 
 @dataclass
-class Message:
+class Dialogue:
     """
     外部資料設計時，傳入的資料屬於串列，但在這裡會轉換成字典，以便找查與讀取
     """

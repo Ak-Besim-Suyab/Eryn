@@ -1,7 +1,8 @@
 {
-    "id": 1460037724437483614,
+    "id": "abyss",
+    "discord_id": 1460037724437483614,
     "name": "深淵 Abyss",
-    "icon": "",
+    "icon": "<:abyss:1508666987172335686>",
     "category": "tinctures",
     "tag": "gradient"
 }

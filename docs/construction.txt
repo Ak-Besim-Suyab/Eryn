@@ -1,0 +1,6 @@
+assets -- 資料 (包含用於 data-driven 的資料)
+cogs -- discord 的 commands.Cog 物件集
+cores -- 底層邏輯、抽象類物件
+models -- 物件模型
+scripts -- 業務邏輯
+systems -- 註冊表

@@ -1,8 +1,8 @@
 import discord
-from game import model
+import models
 
 class Embed(discord.Embed):
-    def __init__(self, embed: model.Embed, **kwargs):
+    def __init__(self, embed: models.Embed, **kwargs):
 
         self.embed = embed
 

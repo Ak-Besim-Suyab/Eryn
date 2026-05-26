@@ -1,9 +1,9 @@
 import discord
 
-from system.registry import Item ,item_registry
+from systems.registry import Item ,item_registry
 
-from system.models import Player
-from system.models import Inventory
+from systems.models import Player
+from systems.models import Inventory
 
 from game.dialogues import DialogueView
 

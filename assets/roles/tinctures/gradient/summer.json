@@ -1,7 +1,8 @@
 {
-    "id": 1383761356414783498,
+    "id": "summer",
+    "discord_id": 1383761356414783498,
     "name": "夏 Summer",
-    "icon": "",
+    "icon": "<:summer:1508666362388549632>",
     "category": "tinctures",
     "tag": "gradient"
 }

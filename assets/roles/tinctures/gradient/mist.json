@@ -1,7 +1,8 @@
 {
-    "id": 1383842197677543494,
+    "id": "mist",
+    "discord_id": 1383842197677543494,
     "name": "霧 Mist",
-    "icon": "",
+    "icon": "<:mist:1508666674486841484>",
     "category": "tinctures",
     "tag": "gradient"
 }
