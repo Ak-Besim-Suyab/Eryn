@@ -103,37 +103,37 @@ class AnnounceRoleView(ui.LayoutView):
         super().__init__(timeout=None)
 
         minecraft_select = RoleSelect(
-            placeholder="麥塊主題身分組（Minecraft Roles）",
+            placeholder="麥塊主題身分組",
             option_values=minecraft_options,
             custom_id="role_select:minecraft",
         )
 
         final_fantasy_select = RoleSelect(
-            placeholder="最終幻想主題身分組（Final Fantasy Roles）",
+            placeholder="最終幻想主題身分組",
             option_values=final_fantasy_options,
             custom_id="role_select:final_fantasy",
         )
 
         afternoon_tea_select = RoleSelect(
-            placeholder="下午茶主題身分組（Afternoon Tea Roles）",
+            placeholder="下午茶主題身分組",
             option_values=afternoon_tea_options,
             custom_id="role_select:afternoon_tea",
         )
 
         plurk_select = RoleSelect(
-            placeholder="噗浪主題身分組（Plurk Roles）",
+            placeholder="噗浪主題身分組",
             option_values=plurk_options,
             custom_id="role_select:plurk",
         )
 
         flower_select = RoleSelect(
-            placeholder="花主題身分組（Flower Roles）",
+            placeholder="花主題身分組",
             option_values=flower_options,
             custom_id="role_select:flower",
         )
 
         gradient_select = RoleSelect(
-            placeholder="漸層主題身分組（Gradient Roles）",
+            placeholder="漸層主題身分組",
             option_values=gradient_options,
             custom_id="role_select:gradient",
         )
