@@ -89,6 +89,7 @@ gradient_options = [
     "crimson",
 ]
 
+
 class AnnounceRoleCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
@@ -98,42 +99,43 @@ class AnnounceRoleCog(commands.Cog):
         view = AnnounceRoleView()
         await ctx.send(view=view)
 
+
 class AnnounceRoleView(ui.LayoutView):
     def __init__(self):
         super().__init__(timeout=None)
 
         minecraft_select = RoleSelect(
-            placeholder="麥塊主題身分組",
+            placeholder="主題：麥塊 Minecraft",
             option_values=minecraft_options,
             custom_id="role_select:minecraft",
         )
 
         final_fantasy_select = RoleSelect(
-            placeholder="最終幻想主題身分組",
+            placeholder="主題：最終幻想 Final Fantasy",
             option_values=final_fantasy_options,
             custom_id="role_select:final_fantasy",
         )
 
         afternoon_tea_select = RoleSelect(
-            placeholder="下午茶主題身分組",
+            placeholder="主題：下午茶 Afternoon Tea",
             option_values=afternoon_tea_options,
             custom_id="role_select:afternoon_tea",
         )
 
         plurk_select = RoleSelect(
-            placeholder="噗浪主題身分組",
+            placeholder="主題：噗浪 Plurk",
             option_values=plurk_options,
             custom_id="role_select:plurk",
         )
 
         flower_select = RoleSelect(
-            placeholder="花主題身分組",
+            placeholder="主題：花朵 Flower",
             option_values=flower_options,
             custom_id="role_select:flower",
         )
 
         gradient_select = RoleSelect(
-            placeholder="漸層主題身分組",
+            placeholder="主題：漸層 Gradient",
             option_values=gradient_options,
             custom_id="role_select:gradient",
         )
@@ -142,7 +144,7 @@ class AnnounceRoleView(ui.LayoutView):
         description_charges = ui.TextDisplay(content="### <:berry_pie:1484226514336612472> 請選擇想套用的圖案身分組\n> 請注意：同類型的身分組同時只會套用 1 個。")
         description_tinctures = ui.TextDisplay(content="### <:rudbeckia:1467093280071094333> 請選擇想套用的顏色身分組\n> 請注意：同類型的身分組同時只會套用 1 個。")
         
-        charges_preview_button = ui.Button(label="預覽全部", style=discord.ButtonStyle.secondary)
+        charges_preview_button = ui.Button(label="預覽全部", style=discord.ButtonStyle.secondary, emoji="")
         charges_preview_button.callback = self.preview_charges
         charges_description_section = ui.Section(description_charges, accessory=charges_preview_button)
 
@@ -206,10 +208,10 @@ class AnnounceRoleView(ui.LayoutView):
         embed.color = discord.Color.gold()
 
         role_options = {
-            "最終幻想主題": final_fantasy_options,
-            "下午茶主題": afternoon_tea_options,
-            "Plurk主題": plurk_options,
-            "麥塊主題": minecraft_options
+            "最終幻想": final_fantasy_options,
+            "下午茶": afternoon_tea_options,
+            "噗浪": plurk_options,
+            "麥塊": minecraft_options
         }
 
         for name, role_option in role_options.items():
@@ -231,8 +233,8 @@ class AnnounceRoleView(ui.LayoutView):
         embed.color = discord.Color.gold()
 
         role_options = {
-            "花主題": flower_options,
-            "漸層主題": gradient_options,
+            "花": flower_options,
+            "漸層": gradient_options,
         }
 
         for name, role_option in role_options.items():
@@ -287,7 +289,7 @@ class RoleSelect(ui.Select):
             return
         
         if role in interaction.user.roles:
-            await interaction.response.send_message("❌ 你已套用該身分組！", ephemeral=True)
+            await interaction.response.send_message("❌ 咪，你已套用該身分組！", ephemeral=True)
             return
 
         try:
@@ -304,7 +306,7 @@ class RoleSelect(ui.Select):
             await interaction.user.add_roles(role)
 
             await interaction.response.edit_message(view=self.view)
-            await interaction.followup.send("✅ 成功套用身分組", ephemeral=True)
+            await interaction.followup.send("✅ 身分組套用成功，在社群頻道裡查看您的外觀吧！", ephemeral=True)
         except discord.errors.Forbidden:
             await interaction.response.send_message("❌ 出現預期外的錯誤，咪沒有權限套用該身分組... 請管理員檢查權限！", ephemeral=True)
         except Exception as e:

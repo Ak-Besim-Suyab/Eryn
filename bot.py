@@ -21,8 +21,6 @@ class Elin(commands.Bot):
 
         extensions = [
             "cogs.attendance",
-            "cogs.role",
-            "cogs.market",
             "cogs.setting",
             "cogs.test",
 
