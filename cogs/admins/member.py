@@ -25,11 +25,12 @@ class AdminMemberCog(commands.Cog):
     @profile.command(name="create_all")
     @commands.is_owner()
     async def create_all(self, ctx: commands.Context):
-        folder_path = "data/members"
+        folder_path = "assets/members"
         guild = ctx.guild
 
         if not os.path.exists(folder_path):
-            os.makedirs(folder_path)
+            logger.error("資料夾不存在或存在錯誤，請檢查資料夾路徑是否正確。")
+            return
 
         for member in guild.members:
             profile_path = f"{folder_path}/{member.id}.json"
@@ -59,7 +60,7 @@ class AdminMemberCog(commands.Cog):
     @profile.command(name="refresh_all")
     @commands.is_owner()
     async def refresh_all(self, ctx: commands.Context):
-        folder_path = "data/members"
+        folder_path = "assets/members"
         guild = ctx.guild
 
         if not os.path.exists(folder_path):
@@ -111,6 +112,47 @@ class AdminMemberCog(commands.Cog):
             for member in profile_unestablished:
                 logger.info(f"成員 {member} 的檔案不存在，無法更新。")
 
+    @profile.command(name="check_all")
+    @commands.is_owner()
+    async def check_all(self, ctx: commands.Context):
+        """反查成員狀態：找出已退出和新成員"""
+        folder_path = "assets/members"
+        guild = ctx.guild
+        
+        if not os.path.exists(folder_path):
+            logger.error("資料夾不存在，無法進行反查。")
+            return
+        
+        # 獲取所有檔案中的成員 ID
+        file_member_ids = set()
+        for filename in os.listdir(folder_path):
+            if filename.endswith(".json"):
+                member_id = filename.replace(".json", "")
+                file_member_ids.add(member_id)
+        
+        # 獲取所有 guild 成員的 ID
+        guild_member_ids = {str(member.id) for member in guild.members}
+        
+        # 找出已退出的成員（在檔案中但不在 guild.members）
+        departed_members = file_member_ids - guild_member_ids
+        logger.info(f"已退出的成員數量：{len(departed_members)}")
+        for member_id in sorted(departed_members):
+            profile_path = f"{folder_path}/{member_id}.json"
+            try:
+                with open(profile_path, "r", encoding='utf-8') as file:
+                    data = json.load(file)
+                    user_name = data.get("user_name", "未知")
+                    logger.info(f"  [已退出] {user_name} (ID: {member_id})")
+            except (json.JSONDecodeError, FileNotFoundError):
+                logger.info(f"  [已退出] ID: {member_id}")
+        
+        # 找出新成員（在 guild.members 但沒有檔案）
+        new_members = guild_member_ids - file_member_ids
+        logger.info(f"新成員數量：{len(new_members)}")
+        for member_id in sorted(new_members):
+            member = guild.get_member(int(member_id))
+            if member:
+                logger.info(f"  [新成員] {member.display_name} (ID: {member_id})")
     # --------------------------------------------------------
     # --------------------------------------------------------
 

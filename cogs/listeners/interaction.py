@@ -20,7 +20,7 @@ class InteractionListener(commands.Cog):
 
     @commands.Cog.listener()
     async def on_interaction(self, interaction: discord.Interaction):
-        print("interaction triggered...")
+        # print("interaction triggered...")
 
         if interaction.type != discord.InteractionType.component:
             return

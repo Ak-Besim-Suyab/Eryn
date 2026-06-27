@@ -92,9 +92,9 @@ class LevelSystem:
     @classmethod
     def save_timestamp(cls, member: discord.Member):
         Player.save_timestamp_voice(member.id)
-        logger.info(f"[LevelSession] 成功保存 {member} 的時間戳記")
+        logger.info(f"成功保存 {member} 的時間戳記")
 
     @classmethod
     def remove_timestamp(cls, member: discord.Member):
         Player.remove_timestamp_voice(member.id)
-        logger.info(f"[LevelSession] 成功移除 {member} 的時間戳記")
+        logger.info(f"成功移除 {member} 的時間戳記")

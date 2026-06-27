@@ -144,11 +144,11 @@ class AnnounceRoleView(ui.LayoutView):
         description_charges = ui.TextDisplay(content="### <:berry_pie:1484226514336612472> 請選擇想套用的圖案身分組\n> 請注意：同類型的身分組同時只會套用 1 個。")
         description_tinctures = ui.TextDisplay(content="### <:rudbeckia:1467093280071094333> 請選擇想套用的顏色身分組\n> 請注意：同類型的身分組同時只會套用 1 個。")
         
-        charges_preview_button = ui.Button(label="預覽全部", style=discord.ButtonStyle.secondary, emoji="")
+        charges_preview_button = ui.Button(label="預覽全部", style=discord.ButtonStyle.secondary, custom_id="preview_charges")
         charges_preview_button.callback = self.preview_charges
         charges_description_section = ui.Section(description_charges, accessory=charges_preview_button)
 
-        tinctures_preview_button = ui.Button(label="預覽全部", style=discord.ButtonStyle.secondary)
+        tinctures_preview_button = ui.Button(label="預覽全部", style=discord.ButtonStyle.secondary, custom_id="preview_tinctures")
         tinctures_preview_button.callback = self.preview_tinctures
         tinctures_description_section = ui.Section(description_tinctures, accessory=tinctures_preview_button)
 
