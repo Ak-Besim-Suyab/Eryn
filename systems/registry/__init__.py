@@ -1,6 +1,6 @@
 from .item import *
 from .dialogue_registry import *
-from .image_registry import *
+from ...assets.image import *
 from .role_registry import *
 from .shop import *
 

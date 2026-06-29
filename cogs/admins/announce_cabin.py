@@ -2,9 +2,7 @@ from discord.ext import commands
 from discord import ui
 from discord import SeparatorSpacing
 
-from systems.registry import image
-
-from pathlib import Path
+from assets import image
 
 class AnnounceCabinCog(commands.Cog):
     def __init__(self, bot: commands.Bot):
@@ -18,14 +16,10 @@ class AnnounceCabinView(ui.LayoutView):
     def __init__(self):
         super().__init__(timeout=None)
 
-        # path = Path("assets/announce_cabin.dialog")
-        
-        # image = []
-
-        img_1 = ui.Thumbnail(media=image.get("kiki_family").url)
-        img_2 = ui.Thumbnail(media=image.get("kiki_cup").url)
-        img_3 = ui.Thumbnail(media=image.get("kiki_light").url)
-        img_4 = ui.Thumbnail(media=image.get("kiki_sweat").url)
+        img_kiki_family = ui.Thumbnail(media=image.get("kiki_family").url)
+        img_kiki_help = ui.Thumbnail(media=image.get("kiki_help").url)
+        img_kiki_light = ui.Thumbnail(media=image.get("kiki_light").url)
+        img_kiki_sweat = ui.Thumbnail(media=image.get("kiki_sweat").url)
 
         title = ui.TextDisplay(content="## 個人小屋 🏕️")
 
@@ -67,13 +61,13 @@ class AnnounceCabinView(ui.LayoutView):
         container = ui.Container()
         container.add_item(title)
         container.add_item(separator)
-        container.add_item(ui.Section("\n".join(content_about), accessory=img_1))
+        container.add_item(ui.Section("\n".join(content_about), accessory=img_kiki_family))
         container.add_item(separator)
-        container.add_item(ui.Section("\n".join(content_how_to_get), accessory=img_2))
+        container.add_item(ui.Section("\n".join(content_how_to_get), accessory=img_kiki_help))
         container.add_item(separator)
-        container.add_item(ui.Section("\n".join(content_right), accessory=img_3))
+        container.add_item(ui.Section("\n".join(content_right), accessory=img_kiki_light))
         container.add_item(separator)
-        container.add_item(ui.Section("\n".join(content_duty), accessory=img_4))
+        container.add_item(ui.Section("\n".join(content_duty), accessory=img_kiki_sweat))
 
         self.add_item(container)
 

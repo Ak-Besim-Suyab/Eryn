@@ -41,7 +41,8 @@ def load(path: str) -> dict[str, dict | list]:
                 if file.stem in d: 
                     logger.debug(f"檔名重複, 已略過: {file.name}")
                     continue
-
+                
+                # file.stem 是不包含副檔名的檔案名稱
                 data[file.stem] = d
                 data_total += 1
                 logger.info(f"載入檔案成功: {file.name}")
