@@ -4,15 +4,16 @@ from discord import SeparatorSpacing
 
 from assets import image, text
 
-class AnnounceCabinCog(commands.Cog):
+class AttendanceCog(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
 
+    # 使用傳統指令，避免只用指令時顯示的訊息標註指令使用者
     @commands.command()
-    async def announce_cabin(self, ctx: commands.Context):
-        await ctx.send(view=AnnounceCabinView())
+    async def attendance(self, ctx: commands.Context):
+        await ctx.send(view=AttendanceView())
 
-class AnnounceCabinView(ui.LayoutView):
+class AttendanceView(ui.LayoutView):
 
     """由於該視圖 (View) 需要做持久性 (Persistent) 處理, 因此不會將其縮限至工廠函式"""
 
@@ -43,4 +44,4 @@ class AnnounceCabinView(ui.LayoutView):
         self.add_item(container)
 
 async def setup(bot: commands.Bot):
-    await bot.add_cog(AnnounceCabinCog(bot))
+    await bot.add_cog(AttendanceCog(bot))

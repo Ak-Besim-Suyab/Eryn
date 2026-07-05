@@ -32,5 +32,5 @@ class AnnounceCog(commands.Cog):
         session = sessions.DialogueSession("character_setting")
         await session.send(ctx)
 
-async def setup(bot):
+async def setup(bot: commands.Bot):
     await bot.add_cog(AnnounceCog(bot))
