@@ -1,3 +1,4 @@
+import discord
 from discord.ext import commands
 from discord import ui
 from discord import SeparatorSpacing
@@ -20,26 +21,33 @@ class AttendanceView(ui.LayoutView):
     def __init__(self):
         super().__init__(timeout=None)
 
-        section_keys = [
-            ("cabin_overview", "kiki_family"),
-            ("cabin_acquisition", "kiki_help"),
-            ("cabin_right", "kiki_light"),
-            ("cabin_duty", "kiki_sweat"),
-        ]
-
         container = ui.Container()
 
-        # set title.
-        title = ui.TextDisplay(content=text.get("cabin_title"))
+        # 標題
+        title = ui.TextDisplay(content="## 每日簽到")
         container.add_item(title)
 
-        # set content.
+        # 文本
+        text.reload()
+        overview = ui.Section(text.get("attendance_overview"), accessory=ui.Thumbnail(media=image.get("kiki_with_gf")))
+        container.add_item(overview)
+
         separator = ui.Separator(spacing=SeparatorSpacing.large)
-        for text_key, image_key in section_keys:
-            section = ui.Section(text.get(text_key), accessory=ui.Thumbnail(media=image.get(image_key)))
-            container.add_item(separator)
-            container.add_item(section)
-        
+        container.add_item(separator)
+
+        buttons = [
+            ("簽到", discord.ButtonStyle.primary, "🎁", "attendance:claim"),
+            ("狀態", discord.ButtonStyle.secondary, "▫️", "attendance:stat"),
+            ("排名", discord.ButtonStyle.secondary, "▫️", "attendance:leaderboard"),
+            ("說明", discord.ButtonStyle.secondary, "❓", "guide:attendance"),
+        ]
+
+        row = ui.ActionRow()
+        for label, style, emoji, custom_id in buttons:
+            button = ui.Button(label=label, style=style, emoji=emoji, custom_id=custom_id)
+            row.add_item(button)
+        container.add_item(row)
+
         # set container to view.
         self.add_item(container)
 

@@ -7,6 +7,8 @@ from systems import registry
 
 from cores import logger
 
+from assets import text
+
 minecraft_options = [
     "potato",
     "baked_potato",
@@ -95,20 +97,16 @@ class AnnounceRoleCog(commands.Cog):
         self.bot = bot
 
     @commands.command()
-    async def announce_role(self, ctx: commands.Context):
-        view = AnnounceRoleView()
+    async def role_setting(self, ctx: commands.Context):
+        view = RoleSettingView()
         await ctx.send(view=view)
 
 
-class AnnounceRoleView(ui.LayoutView):
+class RoleSettingView(ui.LayoutView):
     def __init__(self):
         super().__init__(timeout=None)
 
-        minecraft_select = RoleSelect(
-            placeholder="主題：麥塊 Minecraft",
-            option_values=minecraft_options,
-            custom_id="role_select:minecraft",
-        )
+        minecraft_select = RoleSelect(placeholder="主題：麥塊 Minecraft", option_values=minecraft_options, custom_id="role_select:minecraft")
 
         final_fantasy_select = RoleSelect(
             placeholder="主題：最終幻想 Final Fantasy",
@@ -140,27 +138,19 @@ class AnnounceRoleView(ui.LayoutView):
             custom_id="role_select:gradient",
         )
 
-        title = ui.TextDisplay(content="## 🏷️身分組設定")
-        description_charges = ui.TextDisplay(content="### <:berry_pie:1484226514336612472> 請選擇想套用的圖案身分組\n> 請注意：同類型的身分組同時只會套用 1 個。")
-        description_tinctures = ui.TextDisplay(content="### <:rudbeckia:1467093280071094333> 請選擇想套用的顏色身分組\n> 請注意：同類型的身分組同時只會套用 1 個。")
+        title = ui.TextDisplay(content="## 裝飾身分組設定")
         
         charges_preview_button = ui.Button(label="預覽全部", style=discord.ButtonStyle.secondary, custom_id="preview_charges")
         charges_preview_button.callback = self.preview_charges
-        charges_description_section = ui.Section(description_charges, accessory=charges_preview_button)
+        charges_description_section = ui.Section(ui.TextDisplay(content=text.get("setting_charge_description")), accessory=charges_preview_button)
 
         tinctures_preview_button = ui.Button(label="預覽全部", style=discord.ButtonStyle.secondary, custom_id="preview_tinctures")
         tinctures_preview_button.callback = self.preview_tinctures
-        tinctures_description_section = ui.Section(description_tinctures, accessory=tinctures_preview_button)
-
+        tinctures_description_section = ui.Section(ui.TextDisplay(content=text.get("setting_tincture_description")), accessory=tinctures_preview_button)
 
         container = ui.Container(title)
-        container.accent_color = discord.Color.gold()
 
-        descriptions = [
-            "這裡有許多特別的外觀身分組提供選擇，旅人可以自由搭配屬於自己的獨特暱稱！",
-        ]
-
-        description = ui.TextDisplay(content="\n".join(descriptions))
+        description = ui.TextDisplay(content=text.get("setting_overview"))
 
         row = ui.ActionRow()
         row.add_item(minecraft_select)

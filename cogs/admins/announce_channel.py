@@ -21,7 +21,7 @@ class AnnounceChannelView(ui.LayoutView):
 
         container = ui.Container()
 
-        title = ui.TextDisplay(content=text.get("channel_title"))
+        title = ui.TextDisplay(content="## 頻道索引 💡")
         overview = ui.TextDisplay(content=text.get("channel_overview"))
 
         container.add_item(title)

@@ -9,10 +9,9 @@ import discord
 from discord.ext import commands
 
 from game.systems import attendance
-from game.systems import commemorate
 from game.menus import StatMenu, LeaderboardMenu
+from game import guide
 
-from utils.ansi import ANSI,wrap_ansi
 
 class InteractionListener(commands.Cog):
     def __init__(self, bot):
@@ -20,64 +19,11 @@ class InteractionListener(commands.Cog):
 
     @commands.Cog.listener()
     async def on_interaction(self, interaction: discord.Interaction):
-        # print("interaction triggered...")
 
         if interaction.type != discord.InteractionType.component:
             return
         
-        # 以下實作邏輯
         custom_id = interaction.data.get("custom_id", "")
-
-        # if custom_id == "test":
-        #     await interaction.response.send_message("測試成功！", ephemeral=True)
-        #     return
-
-        if custom_id.startswith("market:"):
-            data = custom_id.split(":")
-            match data[1]:
-                case "buy":
-                    return
-                #     shop_name = "vendor"
-                #     shop_data = shop_registry.get(shop_name)
-
-                #     # error-proofing
-                #     if not shop_data:
-                #         await interaction.response.send_message("商店不存在", ephemeral=True)
-                #         return
-                    
-                #     shop_list = []
-                #     for item in shop_data.item_list:
-                #         item_ = item_registry.get(item)
-                #         ansi_item_name = ANSI(item_.name).white()
-                #         ansi_item_description = ANSI(item_.description).green()
-                #         ansi_item_price = ANSI(f"{item_.price}g").gold()
-
-                #         line = f"{item_.emoji}{ansi_item_name} {ansi_item_price} - {ansi_item_description}"
-
-                #         shop_list.append(str(line))
-                    
-                #     payload = {
-                #         "shop_list": wrap_ansi("\n".join(shop_list))
-                #     }
-
-                #     await DialogueView(dialog_name="merchandise").send(interaction=interaction, payloads=payload)
-                #     return
-                # case "help":
-                #     await DialogueView(dialog_name="market_help").send(interaction=interaction, ephemeral=True)
-                #     return
-
-        if custom_id.startswith("season:"):
-            # 這裡預期會有 2 節資料
-            data = custom_id.split(":")
-            match data[1]:
-                case "commemorate":
-                    await commemorate.execute(interaction)
-                    return
-                case "offering":
-                    pass
-                case "help":
-                    # await DialogueView(dialog_name="commemorate_help").send(interaction=interaction, ephemeral=True)
-                    return
         
         if custom_id.startswith("attendance:"):
             data = custom_id.split(":")
@@ -91,9 +37,14 @@ class InteractionListener(commands.Cog):
                 case "leaderboard":
                     await LeaderboardMenu.show(interaction)
                     return
-                case "help":
-                    # await DialogueView(dialog_name="attendance_help").send(interaction=interaction, ephemeral=True)
+        
+        if custom_id.startswith("guide:"):
+            data = custom_id.split(":")
+            match data[1]:
+                case "attendance":
+                    await guide.attendance(interaction)
                     return
+
                 
 async def setup(bot):
     await bot.add_cog(InteractionListener(bot))

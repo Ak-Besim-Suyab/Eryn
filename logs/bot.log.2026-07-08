@@ -1,0 +1,883 @@
+2026-07-08 00:00:26 [DEBUG] Elin: 給予 努力釣魚的內 訊息經驗值: 5 exp
+2026-07-08 00:01:38 [DEBUG] Elin: 給予 Snowdrift 訊息經驗值: 5 exp
+2026-07-08 00:01:59 [DEBUG] Elin: 給予 ? 訊息經驗值: 5 exp
+2026-07-08 00:02:21 [DEBUG] Elin: 給予 Snowdrift 訊息經驗值: 5 exp
+2026-07-08 00:08:41 [DEBUG] Elin: 給予 Snowdrift 訊息經驗值: 5 exp
+2026-07-08 00:09:25 [DEBUG] Elin: 給予 ? 訊息經驗值: 5 exp
+2026-07-08 00:12:16 [DEBUG] Elin: 給予 ? 訊息經驗值: 5 exp
+2026-07-08 00:13:54 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 00:14:20 [DEBUG] Elin: 給予 小嶺 反應經驗值: 5 exp
+2026-07-08 00:14:41 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 00:16:41 [DEBUG] Elin: 給予 九条 カレン 訊息經驗值: 5 exp
+2026-07-08 00:18:57 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 00:22:18 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 00:23:08 [DEBUG] Elin: 給予 Vergil / S.D 反應經驗值: 5 exp
+2026-07-08 00:33:15 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 訊息經驗值: 5 exp
+2026-07-08 00:34:33 [INFO] Elin: 小嶺 (156453536735952906) 離開了語音頻道：🍻 -汐- 居酒屋
+2026-07-08 00:34:36 [INFO] Elin: 給予 小嶺 語音經驗值: 413 exp, 累積時間: 206.74 分鐘
+2026-07-08 00:34:36 [INFO] Elin: 成功移除 yumino_mine 的時間戳記
+2026-07-08 00:36:04 [INFO] Elin: 小嶺 (156453536735952906) 加入了語音頻道：🍻 -汐- 居酒屋
+2026-07-08 00:36:05 [INFO] Elin: 成功保存 yumino_mine 的時間戳記
+2026-07-08 00:36:16 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 00:37:42 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 00:41:22 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 00:41:28 [DEBUG] Elin: 給予 哩賀哇係魚←← 反應經驗值: 5 exp
+2026-07-08 00:41:35 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 反應經驗值: 5 exp
+2026-07-08 00:41:51 [DEBUG] Elin: 給予 哩賀哇係魚←← 訊息經驗值: 5 exp
+2026-07-08 00:41:53 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 00:42:39 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 00:46:41 [INFO] Elin: 阿銘 (449586891105370122) 離開了語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-07-08 00:46:42 [INFO] Elin: 給予 阿銘 語音經驗值: 331 exp, 累積時間: 165.81 分鐘
+2026-07-08 00:46:42 [INFO] Elin: 成功移除 a_ming1649 的時間戳記
+2026-07-08 01:01:05 [DEBUG] Elin: 給予 小灰 反應經驗值: 5 exp
+2026-07-08 01:02:25 [DEBUG] Elin: 給予 哩賀哇係魚←← 反應經驗值: 5 exp
+2026-07-08 01:02:28 [INFO] Elin: 哩賀哇係魚←← (861629834593173564) 離開了語音頻道：🦈不賣魚的魚販
+2026-07-08 01:02:29 [INFO] Elin: 給予 哩賀哇係魚←← 語音經驗值: 285 exp, 累積時間: 142.50 分鐘
+2026-07-08 01:02:29 [INFO] Elin: 成功移除 cheyi35 的時間戳記
+2026-07-08 01:02:31 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 01:03:25 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 01:03:37 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 反應經驗值: 5 exp
+2026-07-08 01:03:41 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 01:05:52 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 01:06:36 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 01:07:16 [DEBUG] Elin: 給予 黎明卿_波多爾多 訊息經驗值: 5 exp
+2026-07-08 01:07:52 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 01:09:35 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 01:09:38 [DEBUG] Elin: 給予 黎明卿_波多爾多 訊息經驗值: 5 exp
+2026-07-08 01:09:48 [DEBUG] Elin: 給予 小嶺 反應經驗值: 5 exp
+2026-07-08 01:10:22 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 訊息經驗值: 5 exp
+2026-07-08 01:10:37 [DEBUG] Elin: 給予 Snowdrift 訊息經驗值: 5 exp
+2026-07-08 01:11:20 [DEBUG] Elin: 給予 阿芙 反應經驗值: 5 exp
+2026-07-08 01:12:14 [INFO] Elin: Snowdrift (323511018225532928) 加入了語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-07-08 01:12:15 [INFO] Elin: 成功保存 snowdrift3818 的時間戳記
+2026-07-08 01:12:31 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 01:13:38 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 01:13:53 [DEBUG] Elin: 給予 黎明卿_波多爾多 反應經驗值: 5 exp
+2026-07-08 01:14:10 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 01:14:31 [DEBUG] Elin: 給予 黎明卿_波多爾多 訊息經驗值: 5 exp
+2026-07-08 01:14:51 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 01:15:28 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 01:16:07 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 01:17:00 [DEBUG] Elin: 給予 Snowdrift 訊息經驗值: 5 exp
+2026-07-08 01:17:14 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 01:19:22 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 01:19:41 [DEBUG] Elin: 給予 黎明卿_波多爾多 訊息經驗值: 5 exp
+2026-07-08 01:20:06 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 01:20:25 [DEBUG] Elin: 給予 黎明卿_波多爾多 訊息經驗值: 5 exp
+2026-07-08 01:20:53 [DEBUG] Elin: 給予 小嶺 反應經驗值: 5 exp
+2026-07-08 01:22:41 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 01:23:18 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 01:24:31 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 01:25:41 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 01:28:10 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 01:29:34 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 01:30:06 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 01:31:00 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 01:31:32 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 01:31:54 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 01:33:20 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 01:35:12 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 01:35:46 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 01:36:56 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 01:37:00 [DEBUG] Elin: 給予 98 (大猫没了） 訊息經驗值: 5 exp
+2026-07-08 01:37:10 [DEBUG] Elin: 給予 小嶺 反應經驗值: 5 exp
+2026-07-08 01:38:27 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 01:38:35 [INFO] Elin: 九条 カレン (600603497330901004) 離開了語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-07-08 01:38:36 [INFO] Elin: 給予 九条 カレン 語音經驗值: 1655 exp, 累積時間: 827.87 分鐘
+2026-07-08 01:38:36 [INFO] Elin: 成功移除 panzer1018 的時間戳記
+2026-07-08 01:39:30 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 01:39:58 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-07-08 01:40:47 [DEBUG] Elin: 給予 98 (大猫没了） 訊息經驗值: 5 exp
+2026-07-08 01:45:52 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 01:46:36 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 01:52:28 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 01:53:08 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 01:53:30 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 01:54:07 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 01:59:06 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 01:59:25 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 01:59:35 [INFO] Elin: 小嶺 (156453536735952906) 離開了語音頻道：🍻 -汐- 居酒屋
+2026-07-08 01:59:35 [INFO] Elin: 給予 小嶺 語音經驗值: 125 exp, 累積時間: 83.51 分鐘
+2026-07-08 01:59:35 [INFO] Elin: 成功移除 yumino_mine 的時間戳記
+2026-07-08 02:05:03 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 02:05:17 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 反應經驗值: 5 exp
+2026-07-08 02:11:13 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 02:13:56 [DEBUG] Elin: 給予 ? 訊息經驗值: 5 exp
+2026-07-08 02:15:54 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 02:16:16 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 反應經驗值: 5 exp
+2026-07-08 02:17:06 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 訊息經驗值: 5 exp
+2026-07-08 02:17:32 [INFO] Elin: Yuri (797458958520287262) 離開了語音頻道：🦈不賣魚的魚販
+2026-07-08 02:17:32 [INFO] Elin: 給予 Yuri 語音經驗值: 399 exp, 累積時間: 199.96 分鐘
+2026-07-08 02:17:32 [INFO] Elin: 成功移除 _acco_ 的時間戳記
+2026-07-08 02:17:39 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 02:18:20 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 02:18:45 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 反應經驗值: 5 exp
+2026-07-08 02:20:24 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 02:20:30 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 反應經驗值: 5 exp
+2026-07-08 02:30:34 [INFO] Elin: 小灰 (179091149045104641) 離開了語音頻道：🦈不賣魚的魚販
+2026-07-08 02:30:35 [INFO] Elin: 給予 小灰 語音經驗值: 1749 exp, 累積時間: 874.83 分鐘
+2026-07-08 02:30:35 [INFO] Elin: 成功移除 littlegreyknight 的時間戳記
+2026-07-08 02:30:42 [DEBUG] Elin: 給予 小灰 訊息經驗值: 5 exp
+2026-07-08 02:30:52 [DEBUG] Elin: 給予 小灰 反應經驗值: 5 exp
+2026-07-08 02:30:55 [INFO] Elin: 小灰 (179091149045104641) 加入了語音頻道：🍹小灰的碧海屋
+2026-07-08 02:30:56 [INFO] Elin: 成功保存 littlegreyknight 的時間戳記
+2026-07-08 02:36:30 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 02:37:04 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 訊息經驗值: 5 exp
+2026-07-08 02:37:53 [DEBUG] Elin: 給予 95 訊息經驗值: 5 exp
+2026-07-08 02:41:12 [INFO] Elin: 辰 已進行簽到，總天數：20
+2026-07-08 02:43:40 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 02:44:36 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 02:44:48 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 反應經驗值: 5 exp
+2026-07-08 02:45:03 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 訊息經驗值: 5 exp
+2026-07-08 02:59:53 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 訊息經驗值: 5 exp
+2026-07-08 03:00:55 [INFO] Elin: 雙B (825343815094370375) 離開了語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-07-08 03:00:56 [INFO] Elin: 給予 雙B 語音經驗值: 749 exp, 累積時間: 374.75 分鐘
+2026-07-08 03:00:56 [INFO] Elin: 成功移除 blackwidowstar 的時間戳記
+2026-07-08 03:01:28 [INFO] Elin: Snowdrift (323511018225532928) 離開了語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-07-08 03:01:29 [INFO] Elin: 給予 Snowdrift 語音經驗值: 163 exp, 累積時間: 109.24 分鐘
+2026-07-08 03:01:29 [INFO] Elin: 成功移除 snowdrift3818 的時間戳記
+2026-07-08 03:17:44 [INFO] Elin: 🌱鳳梨酥酥酥酥酥 (246852739747938306) 離開了語音頻道：🦈不賣魚的魚販
+2026-07-08 03:17:45 [INFO] Elin: 給予 🌱鳳梨酥酥酥酥酥 語音經驗值: 770 exp, 累積時間: 385.05 分鐘
+2026-07-08 03:17:45 [INFO] Elin: 成功移除 negative_95 的時間戳記
+2026-07-08 03:59:39 [INFO] Elin: 95 (280719757634699285) 離開了語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-07-08 03:59:39 [INFO] Elin: 給予 95 語音經驗值: 3662 exp, 累積時間: 1831.36 分鐘
+2026-07-08 03:59:39 [INFO] Elin: 成功移除 95_jasa 的時間戳記
+2026-07-08 03:59:51 [INFO] Elin: 95 (280719757634699285) 加入了語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-07-08 03:59:52 [INFO] Elin: 成功保存 95_jasa 的時間戳記
+2026-07-08 06:16:29 [INFO] Elin: 彈藥包_普魯修卡 (524712480686080002) 離開了語音頻道：🍝狗勾的米其林餐廳
+2026-07-08 06:16:29 [INFO] Elin: 給予 彈藥包_普魯修卡 語音經驗值: 1091 exp, 累積時間: 545.88 分鐘
+2026-07-08 06:16:29 [INFO] Elin: 成功移除 cat_listening 的時間戳記
+2026-07-08 07:16:19 [INFO] Elin: 黎明卿_波多爾多 (1192851545021222993) 離開了語音頻道：🍝狗勾的米其林餐廳
+2026-07-08 07:16:19 [INFO] Elin: 給予 黎明卿_波多爾多 語音經驗值: 943 exp, 累積時間: 471.86 分鐘
+2026-07-08 07:16:19 [INFO] Elin: 成功移除 dog_surfing 的時間戳記
+2026-07-08 07:54:36 [INFO] Elin: 鹿仔 (451009152555417620) 離開了語音頻道：🍻 -汐- 居酒屋
+2026-07-08 07:54:36 [INFO] Elin: 給予 鹿仔 語音經驗值: 2225 exp, 累積時間: 1112.60 分鐘
+2026-07-08 07:54:36 [INFO] Elin: 成功移除 nimaluma 的時間戳記
+2026-07-08 08:11:31 [INFO] Elin: ? (518672748109758480) 離開了語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-07-08 08:11:31 [INFO] Elin: 給予 ? 語音經驗值: 4166 exp, 累積時間: 2083.23 分鐘
+2026-07-08 08:11:31 [INFO] Elin: 成功移除 doll_0000 的時間戳記
+2026-07-08 08:43:03 [INFO] Elin: Suyab (1184440057596235817) 離開了語音頻道：🍻 -汐- 居酒屋
+2026-07-08 08:43:03 [INFO] Elin: 給予 Suyab 語音經驗值: 2343 exp, 累積時間: 1171.72 分鐘
+2026-07-08 08:43:03 [INFO] Elin: 成功移除 suyab_ 的時間戳記
+2026-07-08 08:57:29 [INFO] Elin: 小灰 (179091149045104641) 離開了語音頻道：🍹小灰的碧海屋
+2026-07-08 08:57:29 [INFO] Elin: 給予 小灰 語音經驗值: 773 exp, 累積時間: 386.56 分鐘
+2026-07-08 08:57:29 [INFO] Elin: 成功移除 littlegreyknight 的時間戳記
+2026-07-08 08:59:07 [INFO] Elin: 小灰 (179091149045104641) 加入了語音頻道：🍹小灰的碧海屋
+2026-07-08 08:59:08 [INFO] Elin: 成功保存 littlegreyknight 的時間戳記
+2026-07-08 09:28:28 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 09:35:13 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 10:24:18 [INFO] Elin: 黎明卿_波多爾多 (1192851545021222993) 加入了語音頻道：🍝狗勾的米其林餐廳
+2026-07-08 10:24:19 [INFO] Elin: 成功保存 dog_surfing 的時間戳記
+2026-07-08 10:24:36 [INFO] Elin: 彈藥包_普魯修卡 (524712480686080002) 加入了語音頻道：🍝狗勾的米其林餐廳
+2026-07-08 10:24:37 [INFO] Elin: 成功保存 cat_listening 的時間戳記
+2026-07-08 11:08:34 [INFO] Elin: 彈藥包_普魯修卡 (524712480686080002) 離開了語音頻道：🍝狗勾的米其林餐廳
+2026-07-08 11:08:35 [INFO] Elin: 給予 彈藥包_普魯修卡 語音經驗值: 43 exp, 累積時間: 43.97 分鐘
+2026-07-08 11:08:35 [INFO] Elin: 成功移除 cat_listening 的時間戳記
+2026-07-08 11:17:01 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 11:34:48 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 11:35:23 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 11:35:55 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 11:37:48 [INFO] Elin: 黎明卿_波多爾多 (1192851545021222993) 離開了語音頻道：🍝狗勾的米其林餐廳
+2026-07-08 11:37:49 [INFO] Elin: 給予 黎明卿_波多爾多 語音經驗值: 110 exp, 累積時間: 73.50 分鐘
+2026-07-08 11:37:49 [INFO] Elin: 成功移除 dog_surfing 的時間戳記
+2026-07-08 11:46:15 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 11:46:50 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 11:48:35 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 11:56:18 [DEBUG] Elin: 給予 玖歌 訊息經驗值: 5 exp
+2026-07-08 11:57:43 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 11:58:41 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 12:00:34 [DEBUG] Elin: 給予 玖歌 訊息經驗值: 5 exp
+2026-07-08 12:11:12 [DEBUG] Elin: 給予 玖歌 反應經驗值: 5 exp
+2026-07-08 12:22:30 [DEBUG] Elin: 給予 小灰 反應經驗值: 5 exp
+2026-07-08 12:25:23 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 反應經驗值: 5 exp
+2026-07-08 12:26:14 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 反應經驗值: 5 exp
+2026-07-08 12:27:07 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 訊息經驗值: 5 exp
+2026-07-08 12:29:43 [INFO] Elin: Suyab (1184440057596235817) 加入了語音頻道：🍻 -汐- 居酒屋
+2026-07-08 12:29:44 [INFO] Elin: 成功保存 suyab_ 的時間戳記
+2026-07-08 12:30:05 [DEBUG] Elin: 給予 Suyab 反應經驗值: 5 exp
+2026-07-08 12:35:31 [INFO] Elin: 九条 カレン (600603497330901004) 加入了語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-07-08 12:35:32 [INFO] Elin: 成功保存 panzer1018 的時間戳記
+2026-07-08 13:00:25 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-07-08 13:01:46 [DEBUG] Elin: 給予 玖歌 訊息經驗值: 5 exp
+2026-07-08 13:09:48 [DEBUG] Elin: 給予 小灰 訊息經驗值: 5 exp
+2026-07-08 13:11:18 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-07-08 13:11:18 [INFO] Elin: 給予 Suyab 語音經驗值: 41 exp, 累積時間: 41.58 分鐘
+2026-07-08 13:11:18 [INFO] Elin: 給予 九条 カレン 語音經驗值: 35 exp, 累積時間: 35.77 分鐘
+2026-07-08 13:11:18 [INFO] Elin: 給予 .KIWI 語音經驗值: 1986 exp, 累積時間: 993.48 分鐘
+2026-07-08 13:11:18 [INFO] Elin: 給予 95 語音經驗值: 1102 exp, 累積時間: 551.44 分鐘
+2026-07-08 13:11:18 [INFO] Elin: 給予 小灰 語音經驗值: 504 exp, 累積時間: 252.17 分鐘
+2026-07-08 13:11:18 [INFO] Elin: 給予 努力釣魚的內 語音經驗值: 2228 exp, 累積時間: 1114.02 分鐘
+2026-07-08 13:11:18 [INFO] Elin: 機器人已關閉。
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: apple.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: banana.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: bass.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: cod.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: copper.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: grape.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: gravel.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: salmon.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: weeds.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: short_sword.json
+2026-07-08 13:11:22 [INFO] Elin: 資料載入完畢，總共載入 17 個檔案
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: vendor.json
+2026-07-08 13:11:22 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: clary_sage.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: clover.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: forget_me_not.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: hydrangea.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: lilac.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: mume.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: rose.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: rudbeckia.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: sakura.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: abyss.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: afterglow.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: ash.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: aurora.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: autumn.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: crimson.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: dawn.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: mist.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: neon.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: niello.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: prism.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: summer.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: tropic.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: twilight.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: winter.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: berry_pie.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: black_forest.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: buttered_toast.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: chocolate_cake.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: fruit_tart.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: ice_cream.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: lemon_pie.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: matcha_roll.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: mont_blanc.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: pancake.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: pudding.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: strawberry_donut.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: strawberry_roll.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: vanilla_roll.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: afk.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: brink_to_death.json
+2026-07-08 13:11:22 [INFO] Elin: 載入檔案成功: damage_down.json
+2026-07-08 13:11:23 [INFO] Elin: 載入檔案成功: doom.json
+2026-07-08 13:11:23 [INFO] Elin: 載入檔案成功: graha_tia.json
+2026-07-08 13:11:23 [INFO] Elin: 載入檔案成功: greystone.json
+2026-07-08 13:11:23 [INFO] Elin: 載入檔案成功: heavy.json
+2026-07-08 13:11:23 [INFO] Elin: 載入檔案成功: inugami_favor.json
+2026-07-08 13:11:23 [INFO] Elin: 載入檔案成功: mentor.json
+2026-07-08 13:11:23 [INFO] Elin: 載入檔案成功: offline.json
+2026-07-08 13:11:23 [INFO] Elin: 載入檔案成功: online.json
+2026-07-08 13:11:23 [INFO] Elin: 載入檔案成功: sprout.json
+2026-07-08 13:11:23 [INFO] Elin: 載入檔案成功: squirrel_prayer.json
+2026-07-08 13:11:23 [INFO] Elin: 載入檔案成功: vulnerability_up.json
+2026-07-08 13:11:23 [INFO] Elin: 載入檔案成功: baked_potato.json
+2026-07-08 13:11:23 [INFO] Elin: 載入檔案成功: poison_potato.json
+2026-07-08 13:11:23 [INFO] Elin: 載入檔案成功: potato.json
+2026-07-08 13:11:23 [INFO] Elin: 載入檔案成功: pufferfish.json
+2026-07-08 13:11:23 [INFO] Elin: 載入檔案成功: baby_black_fox.json
+2026-07-08 13:11:23 [INFO] Elin: 載入檔案成功: baby_fox.json
+2026-07-08 13:11:23 [INFO] Elin: 載入檔案成功: baby_white_fox.json
+2026-07-08 13:11:23 [INFO] Elin: 載入檔案成功: baby_wolf.json
+2026-07-08 13:11:23 [INFO] Elin: 載入檔案成功: crocodile.json
+2026-07-08 13:11:23 [INFO] Elin: 載入檔案成功: leopard.json
+2026-07-08 13:11:23 [INFO] Elin: 載入檔案成功: pink_frog.json
+2026-07-08 13:11:23 [INFO] Elin: 載入檔案成功: pome.json
+2026-07-08 13:11:23 [INFO] Elin: 載入檔案成功: shark.json
+2026-07-08 13:11:23 [INFO] Elin: 資料載入完畢，總共載入 65 個檔案
+2026-07-08 13:11:24 [INFO] Elin: Synced 10 commands to Global
+2026-07-08 13:11:27 [INFO] Elin: 成功保存 suyab_ 的時間戳記
+2026-07-08 13:11:27 [INFO] Elin: 成功保存 panzer1018 的時間戳記
+2026-07-08 13:11:27 [INFO] Elin: 成功保存 bigpig1703 的時間戳記
+2026-07-08 13:11:27 [INFO] Elin: 成功保存 ne820005 的時間戳記
+2026-07-08 13:11:27 [INFO] Elin: 成功保存 95_jasa 的時間戳記
+2026-07-08 13:11:27 [INFO] Elin: 成功保存 littlegreyknight 的時間戳記
+2026-07-08 13:11:27 [INFO] Elin: The Version of Python is 3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]
+2026-07-08 13:11:27 [INFO] Elin: Meow, Discord Bot loaded!
+2026-07-08 13:11:27 [INFO] Elin: ✅ Logged in as: Elin#6095
+2026-07-08 13:21:12 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-07-08 13:21:13 [INFO] Elin: 給予 Suyab 語音經驗值: 9 exp, 累積時間: 9.76 分鐘
+2026-07-08 13:21:13 [INFO] Elin: 給予 九条 カレン 語音經驗值: 9 exp, 累積時間: 9.76 分鐘
+2026-07-08 13:21:13 [INFO] Elin: 給予 .KIWI 語音經驗值: 9 exp, 累積時間: 9.76 分鐘
+2026-07-08 13:21:13 [INFO] Elin: 給予 努力釣魚的內 語音經驗值: 9 exp, 累積時間: 9.76 分鐘
+2026-07-08 13:21:13 [INFO] Elin: 給予 95 語音經驗值: 9 exp, 累積時間: 9.76 分鐘
+2026-07-08 13:21:13 [INFO] Elin: 給予 小灰 語音經驗值: 9 exp, 累積時間: 9.76 分鐘
+2026-07-08 13:21:13 [INFO] Elin: 機器人已關閉。
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: apple.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: banana.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: bass.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: cod.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: copper.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: grape.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: gravel.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: salmon.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: weeds.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: short_sword.json
+2026-07-08 13:21:15 [INFO] Elin: 資料載入完畢，總共載入 17 個檔案
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: vendor.json
+2026-07-08 13:21:15 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: clary_sage.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: clover.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: forget_me_not.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: hydrangea.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: lilac.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: mume.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: rose.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: rudbeckia.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: sakura.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: abyss.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: afterglow.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: ash.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: aurora.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: autumn.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: crimson.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: dawn.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: mist.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: neon.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: niello.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: prism.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: summer.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: tropic.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: twilight.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: winter.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: berry_pie.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: black_forest.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: buttered_toast.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: chocolate_cake.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: fruit_tart.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: ice_cream.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: lemon_pie.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: matcha_roll.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: mont_blanc.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: pancake.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: pudding.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: strawberry_donut.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: strawberry_roll.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: vanilla_roll.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: afk.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: brink_to_death.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: damage_down.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: doom.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: graha_tia.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: greystone.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: heavy.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: inugami_favor.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: mentor.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: offline.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: online.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: sprout.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: squirrel_prayer.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: vulnerability_up.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: baked_potato.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: poison_potato.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: potato.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: pufferfish.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: baby_black_fox.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: baby_fox.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: baby_white_fox.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: baby_wolf.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: crocodile.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: leopard.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: pink_frog.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: pome.json
+2026-07-08 13:21:15 [INFO] Elin: 載入檔案成功: shark.json
+2026-07-08 13:21:15 [INFO] Elin: 資料載入完畢，總共載入 65 個檔案
+2026-07-08 13:21:17 [INFO] Elin: Synced 10 commands to Global
+2026-07-08 13:21:20 [INFO] Elin: 成功保存 suyab_ 的時間戳記
+2026-07-08 13:21:20 [INFO] Elin: 成功保存 panzer1018 的時間戳記
+2026-07-08 13:21:20 [INFO] Elin: 成功保存 bigpig1703 的時間戳記
+2026-07-08 13:21:20 [INFO] Elin: 成功保存 ne820005 的時間戳記
+2026-07-08 13:21:20 [INFO] Elin: 成功保存 95_jasa 的時間戳記
+2026-07-08 13:21:20 [INFO] Elin: 成功保存 littlegreyknight 的時間戳記
+2026-07-08 13:21:20 [INFO] Elin: The Version of Python is 3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]
+2026-07-08 13:21:20 [INFO] Elin: Meow, Discord Bot loaded!
+2026-07-08 13:21:20 [INFO] Elin: ✅ Logged in as: Elin#6095
+2026-07-08 13:23:21 [INFO] Elin: .KIWI (529698091511840778) 離開了語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-07-08 13:23:22 [INFO] Elin: 給予 .KIWI 語音經驗值: 2 exp, 累積時間: 2.03 分鐘
+2026-07-08 13:23:22 [INFO] Elin: 成功移除 bigpig1703 的時間戳記
+2026-07-08 13:23:25 [INFO] Elin: .KIWI (529698091511840778) 加入了語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-07-08 13:23:25 [INFO] Elin: 成功保存 bigpig1703 的時間戳記
+2026-07-08 13:24:12 [DEBUG] Elin: 給予 Yuri 反應經驗值: 5 exp
+2026-07-08 13:24:29 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 反應經驗值: 5 exp
+2026-07-08 13:24:30 [INFO] Elin: Suyab 已進行簽到，總天數：70
+2026-07-08 13:24:39 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 13:25:53 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-07-08 13:25:53 [INFO] Elin: 給予 Suyab 語音經驗值: 4 exp, 累積時間: 4.55 分鐘
+2026-07-08 13:25:53 [INFO] Elin: 給予 九条 カレン 語音經驗值: 4 exp, 累積時間: 4.55 分鐘
+2026-07-08 13:25:53 [INFO] Elin: 給予 .KIWI 語音經驗值: 2 exp, 累積時間: 2.46 分鐘
+2026-07-08 13:25:53 [INFO] Elin: 給予 努力釣魚的內 語音經驗值: 4 exp, 累積時間: 4.55 分鐘
+2026-07-08 13:25:53 [INFO] Elin: 給予 95 語音經驗值: 4 exp, 累積時間: 4.55 分鐘
+2026-07-08 13:25:53 [INFO] Elin: 給予 小灰 語音經驗值: 4 exp, 累積時間: 4.55 分鐘
+2026-07-08 13:25:53 [INFO] Elin: 機器人已關閉。
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: apple.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: banana.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: bass.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: chalcopyrite.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: charcoal.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: cod.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: copper.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: grape.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: gravel.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: log_white_birch.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: rose_red.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: rose_white.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: rose_yellow.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: salmon.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: sap_white_birch.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: weeds.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: short_sword.json
+2026-07-08 13:25:57 [INFO] Elin: 資料載入完畢，總共載入 17 個檔案
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: vendor.json
+2026-07-08 13:25:57 [INFO] Elin: 資料載入完畢，總共載入 1 個檔案
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: clary_sage.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: clover.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: forget_me_not.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: hydrangea.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: lilac.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: mume.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: rose.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: rudbeckia.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: sakura.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: abyss.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: afterglow.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: ash.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: aurora.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: autumn.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: crimson.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: dawn.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: mist.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: neon.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: niello.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: prism.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: summer.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: tropic.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: twilight.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: winter.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: berry_pie.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: black_forest.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: buttered_toast.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: chocolate_cake.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: fruit_tart.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: ice_cream.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: lemon_pie.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: matcha_roll.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: mont_blanc.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: pancake.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: pudding.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: strawberry_donut.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: strawberry_roll.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: vanilla_roll.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: afk.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: brink_to_death.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: damage_down.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: doom.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: graha_tia.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: greystone.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: heavy.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: inugami_favor.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: mentor.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: offline.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: online.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: sprout.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: squirrel_prayer.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: vulnerability_up.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: baked_potato.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: poison_potato.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: potato.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: pufferfish.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: baby_black_fox.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: baby_fox.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: baby_white_fox.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: baby_wolf.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: crocodile.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: leopard.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: pink_frog.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: pome.json
+2026-07-08 13:25:57 [INFO] Elin: 載入檔案成功: shark.json
+2026-07-08 13:25:57 [INFO] Elin: 資料載入完畢，總共載入 65 個檔案
+2026-07-08 13:25:58 [INFO] Elin: Synced 10 commands to Global
+2026-07-08 13:26:01 [INFO] Elin: 成功保存 suyab_ 的時間戳記
+2026-07-08 13:26:01 [INFO] Elin: 成功保存 panzer1018 的時間戳記
+2026-07-08 13:26:01 [INFO] Elin: 成功保存 bigpig1703 的時間戳記
+2026-07-08 13:26:01 [INFO] Elin: 成功保存 ne820005 的時間戳記
+2026-07-08 13:26:01 [INFO] Elin: 成功保存 95_jasa 的時間戳記
+2026-07-08 13:26:01 [INFO] Elin: 成功保存 littlegreyknight 的時間戳記
+2026-07-08 13:26:01 [INFO] Elin: The Version of Python is 3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]
+2026-07-08 13:26:01 [INFO] Elin: Meow, Discord Bot loaded!
+2026-07-08 13:26:01 [INFO] Elin: ✅ Logged in as: Elin#6095
+2026-07-08 13:27:02 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-07-08 13:28:12 [INFO] Elin: 黎明卿_波多爾多 已進行簽到，總天數：22
+2026-07-08 13:30:57 [INFO] Elin: 過期的牛奶曼陀珠中 已進行簽到，總天數：12
+2026-07-08 13:33:14 [INFO] Elin: 努力釣魚的內 已進行簽到，總天數：80
+2026-07-08 13:34:01 [INFO] Elin: .KIWI (529698091511840778) 離開了語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-07-08 13:34:02 [INFO] Elin: 給予 .KIWI 語音經驗值: 8 exp, 累積時間: 8.01 分鐘
+2026-07-08 13:34:02 [INFO] Elin: 成功移除 bigpig1703 的時間戳記
+2026-07-08 13:34:11 [INFO] Elin: .KIWI (529698091511840778) 加入了語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-07-08 13:34:12 [INFO] Elin: 成功保存 bigpig1703 的時間戳記
+2026-07-08 13:34:17 [INFO] Elin: Yuri 已進行簽到，總天數：32
+2026-07-08 13:37:45 [INFO] Elin: 玖歌 已進行簽到，總天數：25
+2026-07-08 13:40:36 [INFO] Elin: 雙B 已進行簽到，總天數：19
+2026-07-08 13:41:51 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 13:43:35 [DEBUG] Elin: 給予 小灰 反應經驗值: 5 exp
+2026-07-08 13:43:56 [INFO] Elin: 小灰 已進行簽到，總天數：59
+2026-07-08 13:45:01 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 13:46:57 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 13:54:07 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 13:55:15 [DEBUG] Elin: 給予 玖歌 反應經驗值: 5 exp
+2026-07-08 14:09:45 [INFO] Elin: 阿芙 已進行簽到，總天數：9
+2026-07-08 14:10:24 [DEBUG] Elin: 給予 阿芙 訊息經驗值: 5 exp
+2026-07-08 14:11:01 [DEBUG] Elin: 給予 阿芙 訊息經驗值: 5 exp
+2026-07-08 14:16:31 [DEBUG] Elin: 給予 Suyab 反應經驗值: 5 exp
+2026-07-08 14:16:40 [DEBUG] Elin: 給予 Yuri 反應經驗值: 5 exp
+2026-07-08 14:16:48 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 14:29:48 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 反應經驗值: 5 exp
+2026-07-08 14:31:41 [INFO] Elin: 🌱鳳梨酥酥酥酥酥 已進行簽到，總天數：43
+2026-07-08 14:41:56 [INFO] Elin: 九条 カレン (600603497330901004) 離開了語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-07-08 14:41:56 [INFO] Elin: 給予 九条 カレン 語音經驗值: 113 exp, 累積時間: 75.92 分鐘
+2026-07-08 14:41:56 [INFO] Elin: 成功移除 panzer1018 的時間戳記
+2026-07-08 14:45:00 [INFO] Elin: ❥Ruby 已進行簽到，總天數：4
+2026-07-08 14:59:07 [INFO] Elin: (*T_T*) 已進行簽到，總天數：21
+2026-07-08 15:02:07 [DEBUG] Elin: 給予 .KIWI 訊息經驗值: 5 exp
+2026-07-08 15:03:45 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 訊息經驗值: 5 exp
+2026-07-08 15:05:47 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 15:06:11 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 反應經驗值: 5 exp
+2026-07-08 15:18:37 [INFO] Elin: 蓁(Jennie) 已進行簽到，總天數：7
+2026-07-08 15:20:30 [DEBUG] Elin: 給予 ? 訊息經驗值: 5 exp
+2026-07-08 15:23:24 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 15:24:03 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 15:24:26 [INFO] Elin: 鹿仔 (451009152555417620) 加入了語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-07-08 15:24:26 [INFO] Elin: 成功保存 nimaluma 的時間戳記
+2026-07-08 15:24:35 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 15:24:42 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 反應經驗值: 5 exp
+2026-07-08 15:25:11 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 訊息經驗值: 5 exp
+2026-07-08 15:25:18 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 15:26:26 [DEBUG] Elin: 給予 小灰 反應經驗值: 5 exp
+2026-07-08 15:27:53 [DEBUG] Elin: 給予 Yuri 反應經驗值: 5 exp
+2026-07-08 15:28:20 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 15:36:50 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 15:38:55 [DEBUG] Elin: 給予 玖歌 反應經驗值: 5 exp
+2026-07-08 15:47:50 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 15:48:54 [INFO] Elin: 安在哉 已進行簽到，總天數：17
+2026-07-08 15:55:38 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 16:04:48 [INFO] Elin: 璃笙 已進行簽到，總天數：6
+2026-07-08 16:17:58 [INFO] Elin: SＡDＯN (439633193780510740) 加入了語音頻道：🦈不賣魚的魚販
+2026-07-08 16:17:59 [INFO] Elin: 成功保存 sadon999 的時間戳記
+2026-07-08 16:18:00 [INFO] Elin: SＡDＯN (439633193780510740) 離開了語音頻道：🦈不賣魚的魚販
+2026-07-08 16:18:01 [INFO] Elin: 給予 SＡDＯN 語音經驗值: 0 exp, 累積時間: 0.04 分鐘
+2026-07-08 16:18:01 [INFO] Elin: 成功移除 sadon999 的時間戳記
+2026-07-08 16:38:27 [INFO] Elin: 努力釣魚的內 (479333500710027288) 離開了語音頻道：🏥內內的停屍間
+2026-07-08 16:38:27 [INFO] Elin: 給予 努力釣魚的內 語音經驗值: 384 exp, 累積時間: 192.44 分鐘
+2026-07-08 16:38:27 [INFO] Elin: 成功移除 ne820005 的時間戳記
+2026-07-08 16:46:03 [DEBUG] Elin: 給予 Snowdrift 訊息經驗值: 5 exp
+2026-07-08 16:52:47 [DEBUG] Elin: 給予 墨麻 反應經驗值: 5 exp
+2026-07-08 16:53:13 [DEBUG] Elin: 給予 墨麻 訊息經驗值: 5 exp
+2026-07-08 16:53:37 [DEBUG] Elin: 給予 阿芙 反應經驗值: 5 exp
+2026-07-08 16:53:56 [DEBUG] Elin: 給予 墨麻 訊息經驗值: 5 exp
+2026-07-08 16:54:01 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 16:54:42 [DEBUG] Elin: 給予 Suyab 反應經驗值: 5 exp
+2026-07-08 16:56:37 [DEBUG] Elin: 給予 Holaxd 反應經驗值: 5 exp
+2026-07-08 16:58:19 [DEBUG] Elin: 給予 小嶺 反應經驗值: 5 exp
+2026-07-08 17:05:26 [INFO] Elin: Suyab (1184440057596235817) 離開了語音頻道：🍻 -汐- 居酒屋
+2026-07-08 17:05:27 [INFO] Elin: 給予 Suyab 語音經驗值: 438 exp, 累積時間: 219.43 分鐘
+2026-07-08 17:05:27 [INFO] Elin: 成功移除 suyab_ 的時間戳記
+2026-07-08 17:07:38 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 反應經驗值: 5 exp
+2026-07-08 17:14:07 [DEBUG] Elin: 給予 球羊 Ball Sheep 反應經驗值: 5 exp
+2026-07-08 17:26:44 [INFO] Elin: 琴貓 (371234685025517579) 加入了語音頻道：🪻琴貓的繁花屋
+2026-07-08 17:26:45 [INFO] Elin: 成功保存 piano_k87 的時間戳記
+2026-07-08 17:41:43 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 17:44:43 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 17:44:59 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 反應經驗值: 5 exp
+2026-07-08 17:47:09 [INFO] Elin: Snowdrift (323511018225532928) 加入了語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-07-08 17:47:09 [INFO] Elin: 成功保存 snowdrift3818 的時間戳記
+2026-07-08 17:47:11 [INFO] Elin: Snowdrift (323511018225532928) 離開了語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-07-08 17:47:11 [INFO] Elin: 給予 Snowdrift 語音經驗值: 0 exp, 累積時間: 0.03 分鐘
+2026-07-08 17:47:11 [INFO] Elin: 成功移除 snowdrift3818 的時間戳記
+2026-07-08 17:48:29 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 17:50:09 [INFO] Elin: 95 已進行簽到，總天數：19
+2026-07-08 17:51:37 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 17:52:18 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 反應經驗值: 5 exp
+2026-07-08 17:57:58 [INFO] Elin: Suyab (1184440057596235817) 加入了語音頻道：🍻 -汐- 居酒屋
+2026-07-08 17:57:59 [INFO] Elin: 成功保存 suyab_ 的時間戳記
+2026-07-08 17:58:20 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 17:58:20 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 訊息經驗值: 5 exp
+2026-07-08 17:58:45 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 反應經驗值: 5 exp
+2026-07-08 17:58:47 [DEBUG] Elin: 給予 Yuri 反應經驗值: 5 exp
+2026-07-08 17:59:21 [DEBUG] Elin: 給予 阿銘 訊息經驗值: 5 exp
+2026-07-08 17:59:31 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-07-08 18:06:23 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 18:07:08 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 18:09:25 [DEBUG] Elin: 給予 琴貓 訊息經驗值: 5 exp
+2026-07-08 18:20:00 [DEBUG] Elin: 給予 阿銘 訊息經驗值: 5 exp
+2026-07-08 18:24:19 [DEBUG] Elin: 給予 九条 カレン 訊息經驗值: 5 exp
+2026-07-08 18:30:50 [DEBUG] Elin: 給予 白耀狼 反應經驗值: 5 exp
+2026-07-08 18:32:38 [INFO] Elin: L.A 已進行簽到，總天數：65
+2026-07-08 18:44:07 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 18:44:56 [INFO] Elin: 努力釣魚的內 (479333500710027288) 加入了語音頻道：🏥內內的停屍間
+2026-07-08 18:44:57 [INFO] Elin: 成功保存 ne820005 的時間戳記
+2026-07-08 18:45:01 [INFO] Elin: 努力釣魚的內 (479333500710027288) 離開了語音頻道：🏥內內的停屍間
+2026-07-08 18:45:02 [INFO] Elin: 給予 努力釣魚的內 語音經驗值: 0 exp, 累積時間: 0.08 分鐘
+2026-07-08 18:45:02 [INFO] Elin: 成功移除 ne820005 的時間戳記
+2026-07-08 18:46:49 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 18:46:49 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 訊息經驗值: 5 exp
+2026-07-08 18:47:43 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 18:55:17 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 反應經驗值: 5 exp
+2026-07-08 18:58:51 [DEBUG] Elin: 給予 玖歌 訊息經驗值: 5 exp
+2026-07-08 19:01:47 [DEBUG] Elin: 給予 玖歌 訊息經驗值: 5 exp
+2026-07-08 19:03:01 [DEBUG] Elin: 給予 玖歌 訊息經驗值: 5 exp
+2026-07-08 19:03:38 [DEBUG] Elin: 給予 玖歌 反應經驗值: 5 exp
+2026-07-08 19:07:21 [DEBUG] Elin: 給予 琴貓 訊息經驗值: 5 exp
+2026-07-08 19:07:29 [INFO] Elin: 琴貓 (371234685025517579) 離開了語音頻道：🪻琴貓的繁花屋
+2026-07-08 19:07:30 [INFO] Elin: 給予 琴貓 語音經驗值: 151 exp, 累積時間: 100.75 分鐘
+2026-07-08 19:07:30 [INFO] Elin: 成功移除 piano_k87 的時間戳記
+2026-07-08 19:12:58 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-07-08 19:25:59 [DEBUG] Elin: 給予 白耀狼 訊息經驗值: 5 exp
+2026-07-08 19:29:34 [INFO] Elin: Snowdrift (323511018225532928) 加入了語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-07-08 19:29:34 [INFO] Elin: 成功保存 snowdrift3818 的時間戳記
+2026-07-08 19:30:31 [DEBUG] Elin: 給予 Suyab 反應經驗值: 5 exp
+2026-07-08 19:30:37 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 反應經驗值: 5 exp
+2026-07-08 19:32:23 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 訊息經驗值: 5 exp
+2026-07-08 19:32:36 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 反應經驗值: 5 exp
+2026-07-08 19:34:34 [INFO] Elin: ? (518672748109758480) 加入了語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-07-08 19:34:34 [INFO] Elin: 成功保存 doll_0000 的時間戳記
+2026-07-08 19:38:56 [DEBUG] Elin: 給予 Suyab 反應經驗值: 5 exp
+2026-07-08 19:41:35 [DEBUG] Elin: 給予 Yuri 反應經驗值: 5 exp
+2026-07-08 19:41:48 [DEBUG] Elin: 給予 .KIWI 訊息經驗值: 5 exp
+2026-07-08 19:42:35 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-07-08 19:43:52 [DEBUG] Elin: 給予 黎明卿_波多爾多 反應經驗值: 5 exp
+2026-07-08 19:45:19 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 訊息經驗值: 5 exp
+2026-07-08 19:46:17 [DEBUG] Elin: 給予 Yuri 反應經驗值: 5 exp
+2026-07-08 19:48:03 [DEBUG] Elin: 給予 Mochi 反應經驗值: 5 exp
+2026-07-08 19:54:33 [DEBUG] Elin: 給予 凌澄Lusa 反應經驗值: 5 exp
+2026-07-08 20:01:00 [INFO] Elin: 努力釣魚的內 (479333500710027288) 加入了語音頻道：🏥內內的停屍間
+2026-07-08 20:01:01 [INFO] Elin: 成功保存 ne820005 的時間戳記
+2026-07-08 20:01:39 [DEBUG] Elin: 給予 (*T_T*) 訊息經驗值: 5 exp
+2026-07-08 20:02:27 [INFO] Elin: 🌱鳳梨酥酥酥酥酥 (246852739747938306) 加入了語音頻道：🚬鳳梨酥的吸菸區
+2026-07-08 20:02:28 [INFO] Elin: 成功保存 negative_95 的時間戳記
+2026-07-08 20:04:36 [INFO] Elin: Snowdrift (323511018225532928) 離開了語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-07-08 20:04:36 [INFO] Elin: 給予 Snowdrift 語音經驗值: 35 exp, 累積時間: 35.04 分鐘
+2026-07-08 20:04:37 [INFO] Elin: 成功移除 snowdrift3818 的時間戳記
+2026-07-08 20:12:51 [DEBUG] Elin: 給予 阿銘 訊息經驗值: 5 exp
+2026-07-08 20:15:53 [DEBUG] Elin: 給予 阿銘 訊息經驗值: 5 exp
+2026-07-08 20:16:49 [DEBUG] Elin: 給予 阿銘 訊息經驗值: 5 exp
+2026-07-08 20:20:20 [INFO] Elin: 阿銘 (449586891105370122) 加入了語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-07-08 20:20:21 [INFO] Elin: 成功保存 a_ming1649 的時間戳記
+2026-07-08 20:20:31 [DEBUG] Elin: 給予 阿銘 訊息經驗值: 5 exp
+2026-07-08 20:21:43 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 20:22:40 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 20:23:08 [DEBUG] Elin: 給予 玖歌 訊息經驗值: 5 exp
+2026-07-08 20:23:18 [INFO] Elin: 雙B (825343815094370375) 加入了語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-07-08 20:23:18 [INFO] Elin: 成功保存 blackwidowstar 的時間戳記
+2026-07-08 20:23:51 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 20:24:47 [DEBUG] Elin: 給予 玖歌 反應經驗值: 5 exp
+2026-07-08 20:25:00 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 20:25:38 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 20:29:09 [INFO] Elin: 九条 カレン (600603497330901004) 加入了語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-07-08 20:29:09 [INFO] Elin: 成功保存 panzer1018 的時間戳記
+2026-07-08 20:29:12 [INFO] Elin: Mochi (658223526217646118) 加入了語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-07-08 20:29:13 [INFO] Elin: 成功保存 sy2043 的時間戳記
+2026-07-08 20:29:20 [INFO] Elin: (*T_T*) (686123440423305228) 加入了語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-07-08 20:29:20 [INFO] Elin: 成功保存 1zzzz1 的時間戳記
+2026-07-08 20:29:40 [INFO] Elin: 小嶺 (156453536735952906) 加入了語音頻道：🍻 -汐- 居酒屋
+2026-07-08 20:29:41 [INFO] Elin: 成功保存 yumino_mine 的時間戳記
+2026-07-08 20:29:50 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 20:30:50 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 反應經驗值: 5 exp
+2026-07-08 20:31:41 [DEBUG] Elin: 給予 白耀狼 反應經驗值: 5 exp
+2026-07-08 20:31:45 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 訊息經驗值: 5 exp
+2026-07-08 20:32:27 [DEBUG] Elin: 給予 白耀狼 反應經驗值: 5 exp
+2026-07-08 20:33:09 [DEBUG] Elin: 給予 玖歌 反應經驗值: 5 exp
+2026-07-08 20:55:43 [DEBUG] Elin: 給予 水鬼(maes Pso) 反應經驗值: 5 exp
+2026-07-08 21:06:40 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-07-08 21:06:47 [DEBUG] Elin: 給予 小嶺 反應經驗值: 5 exp
+2026-07-08 21:12:07 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-07-08 21:13:41 [INFO] Elin: 墨麻 (827879796625244182) 加入了語音頻道：🍻 -汐- 居酒屋
+2026-07-08 21:13:41 [INFO] Elin: 成功保存 osmani_pien 的時間戳記
+2026-07-08 21:14:00 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 21:17:36 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 訊息經驗值: 5 exp
+2026-07-08 21:20:32 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 21:22:49 [DEBUG] Elin: 給予 玖歌 訊息經驗值: 5 exp
+2026-07-08 21:25:55 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-07-08 21:26:56 [INFO] Elin: 米（OWO） (851843408368631828) 加入了語音頻道：🦈不賣魚的魚販
+2026-07-08 21:26:56 [INFO] Elin: 成功保存 owo019058 的時間戳記
+2026-07-08 21:27:04 [INFO] Elin: 米（OWO） (851843408368631828) 離開了語音頻道：🦈不賣魚的魚販
+2026-07-08 21:27:04 [INFO] Elin: 給予 米（OWO） 語音經驗值: 0 exp, 累積時間: 0.13 分鐘
+2026-07-08 21:27:04 [INFO] Elin: 成功移除 owo019058 的時間戳記
+2026-07-08 21:27:12 [INFO] Elin: Yuri (797458958520287262) 加入了語音頻道：🚬鳳梨酥的吸菸區
+2026-07-08 21:27:13 [INFO] Elin: 成功保存 _acco_ 的時間戳記
+2026-07-08 21:29:05 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 21:29:38 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 21:34:26 [DEBUG] Elin: 給予 籤籤 訊息經驗值: 5 exp
+2026-07-08 21:35:25 [DEBUG] Elin: 給予 鴉 訊息經驗值: 5 exp
+2026-07-08 21:37:27 [DEBUG] Elin: 給予 L.A 反應經驗值: 5 exp
+2026-07-08 21:37:48 [DEBUG] Elin: 給予 籤籤 訊息經驗值: 5 exp
+2026-07-08 21:38:03 [DEBUG] Elin: 給予 鴉 訊息經驗值: 5 exp
+2026-07-08 21:38:25 [DEBUG] Elin: 給予 PA-這樣會有漸層嗎 訊息經驗值: 5 exp
+2026-07-08 21:39:03 [DEBUG] Elin: 給予 PA-這樣會有漸層嗎 訊息經驗值: 5 exp
+2026-07-08 21:39:29 [DEBUG] Elin: 給予 鴉 訊息經驗值: 5 exp
+2026-07-08 21:43:12 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 21:43:15 [INFO] Elin: 墨麻 (827879796625244182) 離開了語音頻道：🍻 -汐- 居酒屋
+2026-07-08 21:43:15 [INFO] Elin: 給予 墨麻 語音經驗值: 29 exp, 累積時間: 29.56 分鐘
+2026-07-08 21:43:15 [INFO] Elin: 成功移除 osmani_pien 的時間戳記
+2026-07-08 21:43:15 [INFO] Elin: 彈藥包_普魯修卡 (524712480686080002) 加入了語音頻道：🍻 -汐- 居酒屋
+2026-07-08 21:43:16 [INFO] Elin: 成功保存 cat_listening 的時間戳記
+2026-07-08 21:43:27 [INFO] Elin: 黎明卿_波多爾多 (1192851545021222993) 加入了語音頻道：🍻 -汐- 居酒屋
+2026-07-08 21:43:28 [INFO] Elin: 成功保存 dog_surfing 的時間戳記
+2026-07-08 21:47:04 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 21:48:24 [INFO] Elin: 玖歌 (480396709286117376) 加入了語音頻道：🍻 -汐- 居酒屋
+2026-07-08 21:48:24 [INFO] Elin: 成功保存 kyu_accel 的時間戳記
+2026-07-08 21:49:18 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 21:49:50 [DEBUG] Elin: 給予 帕子👉喝水吃飯 反應經驗值: 5 exp
+2026-07-08 21:50:15 [DEBUG] Elin: 給予 玖歌 訊息經驗值: 5 exp
+2026-07-08 21:50:57 [INFO] Elin: 墨麻 (827879796625244182) 加入了語音頻道：🍻 -汐- 居酒屋
+2026-07-08 21:50:57 [INFO] Elin: 成功保存 osmani_pien 的時間戳記
+2026-07-08 21:52:37 [DEBUG] Elin: 給予 玖歌 訊息經驗值: 5 exp
+2026-07-08 21:55:05 [DEBUG] Elin: 給予 小嶺 訊息經驗值: 5 exp
+2026-07-08 21:55:36 [DEBUG] Elin: 給予 玖歌 訊息經驗值: 5 exp
+2026-07-08 21:56:26 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 訊息經驗值: 5 exp
+2026-07-08 21:56:40 [DEBUG] Elin: 給予 阿芙 反應經驗值: 5 exp
+2026-07-08 22:00:38 [DEBUG] Elin: 給予 玖歌 訊息經驗值: 5 exp
+2026-07-08 22:02:36 [INFO] Elin: 帕子👉喝水吃飯 已進行簽到，總天數：29
+2026-07-08 22:05:08 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 訊息經驗值: 5 exp
+2026-07-08 22:11:54 [DEBUG] Elin: 給予 小灰 反應經驗值: 5 exp
+2026-07-08 22:13:09 [DEBUG] Elin: 給予 小灰 反應經驗值: 5 exp
+2026-07-08 22:13:37 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 22:13:59 [DEBUG] Elin: 給予 小灰 反應經驗值: 5 exp
+2026-07-08 22:14:48 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 反應經驗值: 5 exp
+2026-07-08 22:15:38 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 訊息經驗值: 5 exp
+2026-07-08 22:17:01 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 22:19:22 [INFO] Elin: 彈藥包_普魯修卡 (524712480686080002) 離開了語音頻道：🍻 -汐- 居酒屋
+2026-07-08 22:19:22 [INFO] Elin: 給予 彈藥包_普魯修卡 語音經驗值: 36 exp, 累積時間: 36.11 分鐘
+2026-07-08 22:19:22 [INFO] Elin: 成功移除 cat_listening 的時間戳記
+2026-07-08 22:20:45 [INFO] Elin: Yuri (797458958520287262) 離開了語音頻道：🚬鳳梨酥的吸菸區
+2026-07-08 22:20:46 [INFO] Elin: 給予 Yuri 語音經驗值: 53 exp, 累積時間: 53.55 分鐘
+2026-07-08 22:20:46 [INFO] Elin: 成功移除 _acco_ 的時間戳記
+2026-07-08 22:21:20 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 22:21:31 [DEBUG] Elin: 給予 PA-這樣會有漸層嗎 訊息經驗值: 5 exp
+2026-07-08 22:22:02 [DEBUG] Elin: 給予 玖歌 訊息經驗值: 5 exp
+2026-07-08 22:23:02 [DEBUG] Elin: 給予 玖歌 訊息經驗值: 5 exp
+2026-07-08 22:24:27 [DEBUG] Elin: 給予 玖歌 訊息經驗值: 5 exp
+2026-07-08 22:26:00 [DEBUG] Elin: 給予 玖歌 訊息經驗值: 5 exp
+2026-07-08 22:26:42 [DEBUG] Elin: 給予 玖歌 訊息經驗值: 5 exp
+2026-07-08 22:28:11 [DEBUG] Elin: 給予 玖歌 訊息經驗值: 5 exp
+2026-07-08 22:29:59 [DEBUG] Elin: 給予 玖歌 訊息經驗值: 5 exp
+2026-07-08 22:31:34 [DEBUG] Elin: 給予 玖歌 訊息經驗值: 5 exp
+2026-07-08 22:33:59 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 22:34:20 [DEBUG] Elin: 給予 黎明卿_波多爾多 訊息經驗值: 5 exp
+2026-07-08 22:34:21 [DEBUG] Elin: 給予 玖歌 訊息經驗值: 5 exp
+2026-07-08 22:37:39 [DEBUG] Elin: 給予 玖歌 訊息經驗值: 5 exp
+2026-07-08 22:38:01 [DEBUG] Elin: 給予 鴉 訊息經驗值: 5 exp
+2026-07-08 22:38:14 [DEBUG] Elin: 給予 玖歌 訊息經驗值: 5 exp
+2026-07-08 22:38:35 [DEBUG] Elin: 給予 黎明卿_波多爾多 反應經驗值: 5 exp
+2026-07-08 22:39:18 [DEBUG] Elin: 給予 玖歌 訊息經驗值: 5 exp
+2026-07-08 22:41:02 [DEBUG] Elin: 給予 玖歌 訊息經驗值: 5 exp
+2026-07-08 22:45:52 [DEBUG] Elin: 給予 (*T_T*) 訊息經驗值: 5 exp
+2026-07-08 22:47:02 [INFO] Elin: 團團 (267674378144055296) 加入了語音頻道：🍻 -汐- 居酒屋
+2026-07-08 22:47:02 [INFO] Elin: 成功保存 run_29742134 的時間戳記
+2026-07-08 22:47:41 [DEBUG] Elin: 給予 團團 訊息經驗值: 5 exp
+2026-07-08 22:48:12 [DEBUG] Elin: 給予 團團 訊息經驗值: 5 exp
+2026-07-08 22:49:28 [DEBUG] Elin: 給予 團團 訊息經驗值: 5 exp
+2026-07-08 22:50:51 [DEBUG] Elin: 給予 團團 訊息經驗值: 5 exp
+2026-07-08 22:51:30 [INFO] Elin: 墨麻 (827879796625244182) 離開了語音頻道：🍻 -汐- 居酒屋
+2026-07-08 22:51:30 [INFO] Elin: 給予 墨麻 語音經驗值: 90 exp, 累積時間: 60.55 分鐘
+2026-07-08 22:51:30 [INFO] Elin: 成功移除 osmani_pien 的時間戳記
+2026-07-08 22:51:32 [DEBUG] Elin: 給予 團團 訊息經驗值: 5 exp
+2026-07-08 22:53:22 [DEBUG] Elin: 給予 玖歌 訊息經驗值: 5 exp
+2026-07-08 22:54:35 [DEBUG] Elin: 給予 團團 訊息經驗值: 5 exp
+2026-07-08 22:56:07 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 22:56:15 [DEBUG] Elin: 給予 玖歌 訊息經驗值: 5 exp
+2026-07-08 22:56:23 [DEBUG] Elin: 給予 團團 訊息經驗值: 5 exp
+2026-07-08 22:56:27 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-07-08 22:58:33 [DEBUG] Elin: 給予 團團 訊息經驗值: 5 exp
+2026-07-08 23:00:14 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-07-08 23:00:15 [DEBUG] Elin: 給予 團團 訊息經驗值: 5 exp
+2026-07-08 23:00:54 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 23:00:59 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 訊息經驗值: 5 exp
+2026-07-08 23:01:46 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 23:04:23 [DEBUG] Elin: 給予 98 (大猫没了） 訊息經驗值: 5 exp
+2026-07-08 23:08:26 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 訊息經驗值: 5 exp
+2026-07-08 23:12:01 [DEBUG] Elin: 給予 阿銘 訊息經驗值: 5 exp
+2026-07-08 23:12:01 [DEBUG] Elin: 給予 團團 訊息經驗值: 5 exp
+2026-07-08 23:12:42 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 23:12:53 [INFO] Elin: 團團 (267674378144055296) 離開了語音頻道：🍻 -汐- 居酒屋
+2026-07-08 23:12:54 [INFO] Elin: 給予 團團 語音經驗值: 25 exp, 累積時間: 25.86 分鐘
+2026-07-08 23:12:54 [INFO] Elin: 成功移除 run_29742134 的時間戳記
+2026-07-08 23:13:40 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 訊息經驗值: 5 exp
+2026-07-08 23:13:47 [DEBUG] Elin: 給予 (*T_T*) 訊息經驗值: 5 exp
+2026-07-08 23:15:58 [DEBUG] Elin: 給予 若曦喜歡萬家箱 反應經驗值: 5 exp
+2026-07-08 23:16:09 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 訊息經驗值: 5 exp
+2026-07-08 23:16:20 [DEBUG] Elin: 給予 若曦喜歡萬家箱 訊息經驗值: 5 exp
+2026-07-08 23:19:25 [INFO] Elin: 若曦喜歡萬家箱 已進行簽到，總天數：3
+2026-07-08 23:22:52 [INFO] Elin: 蘇 已進行簽到，總天數：23
+2026-07-08 23:23:44 [DEBUG] Elin: 給予 Yuri 反應經驗值: 5 exp
+2026-07-08 23:24:09 [INFO] Elin: 彈藥包_普魯修卡 (524712480686080002) 加入了語音頻道：🍻 -汐- 居酒屋
+2026-07-08 23:24:10 [INFO] Elin: 成功保存 cat_listening 的時間戳記
+2026-07-08 23:26:43 [DEBUG] Elin: 給予 Suyab 反應經驗值: 5 exp
+2026-07-08 23:30:14 [DEBUG] Elin: 給予 九条 カレン 訊息經驗值: 5 exp
+2026-07-08 23:30:21 [DEBUG] Elin: 給予 (*T_T*) 訊息經驗值: 5 exp
+2026-07-08 23:30:21 [DEBUG] Elin: 給予 阿銘 訊息經驗值: 5 exp
+2026-07-08 23:30:27 [INFO] Elin: (*T_T*) (686123440423305228) 離開了語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-07-08 23:30:28 [INFO] Elin: 給予 (*T_T*) 語音經驗值: 362 exp, 累積時間: 181.13 分鐘
+2026-07-08 23:30:28 [INFO] Elin: 成功移除 1zzzz1 的時間戳記
+2026-07-08 23:31:13 [DEBUG] Elin: 給予 阿銘 訊息經驗值: 5 exp
+2026-07-08 23:32:32 [DEBUG] Elin: 給予 九条 カレン 訊息經驗值: 5 exp
+2026-07-08 23:32:36 [INFO] Elin: Snowdrift (323511018225532928) 加入了語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-07-08 23:32:37 [INFO] Elin: 成功保存 snowdrift3818 的時間戳記
+2026-07-08 23:34:15 [INFO] Elin: 努力釣魚的內 (479333500710027288) 離開了語音頻道：🏥內內的停屍間
+2026-07-08 23:34:16 [INFO] Elin: 給予 努力釣魚的內 語音經驗值: 426 exp, 累積時間: 213.24 分鐘
+2026-07-08 23:34:16 [INFO] Elin: 成功移除 ne820005 的時間戳記
+2026-07-08 23:35:16 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 23:35:42 [DEBUG] Elin: 給予 阿銘 訊息經驗值: 5 exp
+2026-07-08 23:36:13 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 23:36:32 [DEBUG] Elin: 給予 阿芙 反應經驗值: 5 exp
+2026-07-08 23:36:47 [DEBUG] Elin: 給予 阿銘 訊息經驗值: 5 exp
+2026-07-08 23:36:49 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 反應經驗值: 5 exp
+2026-07-08 23:36:54 [DEBUG] Elin: 給予 阿芙 訊息經驗值: 5 exp
+2026-07-08 23:36:56 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 23:37:26 [DEBUG] Elin: 給予 阿銘 訊息經驗值: 5 exp
+2026-07-08 23:38:13 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 23:38:56 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 23:40:04 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 訊息經驗值: 5 exp
+2026-07-08 23:40:22 [DEBUG] Elin: 給予 Yuri 反應經驗值: 5 exp
+2026-07-08 23:40:45 [DEBUG] Elin: 給予 阿芙 反應經驗值: 5 exp
+2026-07-08 23:41:07 [INFO] Elin: 🌱鳳梨酥酥酥酥酥 (246852739747938306) 離開了語音頻道：🍻 -汐- 居酒屋
+2026-07-08 23:41:08 [INFO] Elin: 給予 🌱鳳梨酥酥酥酥酥 語音經驗值: 437 exp, 累積時間: 218.66 分鐘
+2026-07-08 23:41:08 [INFO] Elin: 成功移除 negative_95 的時間戳記
+2026-07-08 23:41:12 [INFO] Elin: 🌱鳳梨酥酥酥酥酥 (246852739747938306) 加入了語音頻道：🚬鳳梨酥的吸菸區
+2026-07-08 23:41:13 [INFO] Elin: 成功保存 negative_95 的時間戳記
+2026-07-08 23:44:16 [DEBUG] Elin: 給予 阿芙 訊息經驗值: 5 exp
+2026-07-08 23:44:47 [DEBUG] Elin: 給予 阿芙 訊息經驗值: 5 exp
+2026-07-08 23:45:16 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 23:46:22 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 23:48:06 [DEBUG] Elin: 給予 95 訊息經驗值: 5 exp
+2026-07-08 23:48:19 [DEBUG] Elin: 給予 阿銘 訊息經驗值: 5 exp
+2026-07-08 23:48:25 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-07-08 23:49:05 [DEBUG] Elin: 給予 Suyab 訊息經驗值: 5 exp
+2026-07-08 23:49:44 [DEBUG] Elin: 給予 九条 カレン 訊息經驗值: 5 exp
+2026-07-08 23:50:31 [DEBUG] Elin: 給予 九条 カレン 訊息經驗值: 5 exp
+2026-07-08 23:51:31 [INFO] Elin: Mochi (658223526217646118) 離開了語音頻道：☣9⃣5⃣☣ 大通鋪
+2026-07-08 23:51:32 [INFO] Elin: 給予 Mochi 語音經驗值: 404 exp, 累積時間: 202.32 分鐘
+2026-07-08 23:51:32 [INFO] Elin: 成功移除 sy2043 的時間戳記
+2026-07-08 23:52:38 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp
+2026-07-08 23:52:54 [DEBUG] Elin: 給予 🌱鳳梨酥酥酥酥酥 反應經驗值: 5 exp
+2026-07-08 23:53:21 [INFO] Elin: 玖歌 (480396709286117376) 離開了語音頻道：🍻 -汐- 居酒屋
+2026-07-08 23:53:22 [INFO] Elin: 給予 玖歌 語音經驗值: 249 exp, 累積時間: 124.95 分鐘
+2026-07-08 23:53:22 [INFO] Elin: 成功移除 kyu_accel 的時間戳記
+2026-07-08 23:55:41 [DEBUG] Elin: 給予 阿銘 訊息經驗值: 5 exp
+2026-07-08 23:56:28 [DEBUG] Elin: 給予 .KIWI 訊息經驗值: 5 exp
+2026-07-08 23:56:41 [DEBUG] Elin: 給予 阿銘 訊息經驗值: 5 exp
+2026-07-08 23:57:58 [DEBUG] Elin: 給予 Yuri 訊息經驗值: 5 exp

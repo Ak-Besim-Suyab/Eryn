@@ -1,7 +1,7 @@
 from peewee import *
 from config import db
 
-from .player import Player
+from models.player import Player
 
 from cores.logger import logger
 

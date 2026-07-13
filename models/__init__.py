@@ -6,3 +6,7 @@ from .query import *
 from .role import *
 from .select import *
 from .view import *
+from .player import *
+
+def init_database():
+    player.init()

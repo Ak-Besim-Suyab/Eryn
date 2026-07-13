@@ -29,7 +29,7 @@ class AnnounceCabinView(ui.LayoutView):
         container = ui.Container()
 
         # set title.
-        title = ui.TextDisplay(content=text.get("cabin_title"))
+        title = ui.TextDisplay(content="## 個人小屋 🏕️")
         container.add_item(title)
 
         # set content.

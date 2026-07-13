@@ -7,7 +7,7 @@ from cores.logger import logger
 from cogs.admins import AnnounceCabinView
 from cogs.admins import AnnounceChannelView
 from cogs.admins import AnnounceManualView
-from cogs.admins import AnnounceRoleView
+from cogs.admins import RoleSettingView
 from cogs.admins import AnnounceRuleView
 
 intents = discord.Intents.default()
@@ -31,19 +31,20 @@ class Elin(commands.Bot):
             "cogs.listeners.interaction",
             "cogs.listeners.message",
             "cogs.listeners.reaction",
+            "cogs.listeners.thread_fixing",
             "cogs.listeners.voice",
             "cogs.listeners.member_event",
 
             "cogs.admins.announce_cabin",
             "cogs.admins.announce_channel",
             "cogs.admins.announce_manual",
-            "cogs.admins.announce_role",
             "cogs.admins.announce_rule",
             "cogs.admins.announce",
+            "cogs.admins.attendance",
             "cogs.admins.boot",
             "cogs.admins.house",
             "cogs.admins.member",
-            "cogs.admins.test_message",
+            "cogs.admins.role_setting",
             "cogs.admins.test_multiple_select",
 
             "cogs.actions.steal",
@@ -59,7 +60,7 @@ class Elin(commands.Bot):
         self.add_view(AnnounceCabinView())
         self.add_view(AnnounceChannelView())
         self.add_view(AnnounceManualView())
-        self.add_view(AnnounceRoleView())
+        self.add_view(RoleSettingView())
         self.add_view(AnnounceRuleView())
 
         synced_global = await self.tree.sync()

@@ -1,6 +1,6 @@
 from .inventory import *
 from .item import *
-from .player import *
+from models import player
 from .shop import *
 
 def init_all_databases():
@@ -10,7 +10,7 @@ def init_all_databases():
     print("[Database] 正在初始化數據庫...")
     
     # 1. 核心表 - Player 必須第一個創建
-    init_player_database()
+    player.init()
     print("[Database] ✅ Player 表已初始化")
     
     # 6. 背包系統表（依賴 Player）

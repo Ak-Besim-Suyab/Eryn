@@ -159,7 +159,7 @@ class Player(Model):
             player.region = region
             player.save()
 
-def init_player_database():
+def init():
     """初始化玩家數據庫表"""
     with db:
         db.create_tables([Player], safe=True)
