@@ -1,18 +1,23 @@
 import discord
-from game.model import Player
+from models import Player
+from models import Statistic
 
 class StatMenu:
     @staticmethod
     async def show(interaction: discord.Interaction):
 
-        player = Player.get_or_create_player(interaction.user.id)
-        stat = player.stats.get()
+        user_id = interaction.user.id
+
+        player = Player.get_or_create_player(user_id)
+        stat = Statistic.get_or_create_stat(user_id)
 
         descriptions = [
+            f"玩家名稱: {stat.display_name}",
             f"等級: {player.level}",
             f"經驗值: {player.experience}",
             f"",
-            f"累計簽到天數: {stat.total_daily_claims} 天"
+            f"累計簽到天數: {stat.total_daily_claims} 天",
+            f"累計訊息數: {stat.total_message_send} 條"
         ]
 
         embed = discord.Embed()

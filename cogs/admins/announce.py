@@ -18,7 +18,7 @@ class AnnounceCog(commands.Cog):
     @commands.is_owner()
     async def tavern(self, ctx: commands.Context):
         """這個指令用於發布在小酒館的置頂公告"""
-        pass
+        await guide.tavern(ctx)
 
 async def setup(bot: commands.Bot):
     await bot.add_cog(AnnounceCog(bot))

@@ -1,8 +1,11 @@
 import discord
 from discord import ui
 from discord import SeparatorSpacing
+from discord.ext import commands
 
-from assets import text
+from assets import text, image
+
+separator = ui.Separator(spacing=SeparatorSpacing.large)
 
 async def attendance(interaction: discord.Interaction):
 
@@ -11,7 +14,6 @@ async def attendance(interaction: discord.Interaction):
     title = ui.TextDisplay(content=f"## 每日簽到指南")
     container.add_item(title)
 
-    separator = ui.Separator(spacing=SeparatorSpacing.large)
     container.add_item(separator)
 
     text.reload()
@@ -23,14 +25,68 @@ async def attendance(interaction: discord.Interaction):
 
     await interaction.response.send_message(view=view, ephemeral=True)
 
-async def tavern(interaction: discord.Interaction):
+async def tavern(ctx: commands.Context):
 
+    text.reload()
+    texts = text.get("guide_tavern")
+    if not isinstance(texts, dict):
+        raise TypeError("Error: guide_tavern.yaml is not a dict format.")
+
+    # 標題區塊
     container = ui.Container()
+    container.add_item(ui.TextDisplay(content=texts.get("title")))
+    container.add_item(ui.Section(texts.get("overview"), accessory=ui.Thumbnail(image.get("did_feast_1"))))
+    container.add_item(separator)
 
-    title = ui.TextDisplay(content=f"## 酒館指南")
-    container.add_item(title)
+    option = ui.ActionRow()
+    option.add_item(Select())
+    container.add_item(option)
 
     view = ui.LayoutView()
     view.add_item(container)
 
+    await ctx.send(view=view, ephemeral=True)
+
+async def tavern_rule(interaction: discord.Interaction):
+
+    text.reload()
+    texts = text.get("guide_tavern")
+    if not isinstance(texts, dict):
+        raise TypeError("Error: guide_tavern.yaml is not a dict format.")
+
+    container = ui.Container()
+    container.add_item(ui.TextDisplay(content=texts.get("rule_title")))
+    container.add_item(ui.Section(texts.get("rule_description"), accessory=ui.Thumbnail(image.get("did_feast_2"))))
+    
+    view = ui.LayoutView()
+    view.add_item(container)
+
     await interaction.response.send_message(view=view, ephemeral=True)
+
+class Select(ui.Select):
+    def __init__(self):
+
+        pools = [
+            ("貼文須知", "option_1"),
+            ("關於如何將貼文顯示在列表上", "option_2"),
+        ]
+
+        options = []
+        for label, value in pools:
+            option = discord.SelectOption(label=label, value=value)
+            options.append(option)
+
+        super().__init__(
+            placeholder="請選擇想閱讀的指南", 
+            min_values=1, 
+            max_values=1, 
+            options=options
+        )
+    
+    async def callback(self, interaction: discord.Interaction):
+        match self.values[0]:
+            case "option_1":
+                return await tavern_rule(interaction)
+            case "option_2":
+                return await interaction.response.send_message("關於如何將貼文顯示在列表上", ephemeral=True)
+        pass

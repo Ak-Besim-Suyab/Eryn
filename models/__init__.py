@@ -7,6 +7,8 @@ from .role import *
 from .select import *
 from .view import *
 from .player import *
+from .statistic import *
 
 def init_database():
     player.init()
+    init_statistic_database()

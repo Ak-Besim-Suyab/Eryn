@@ -36,7 +36,10 @@ class Player(Model):
         # 確保玩家統計資料存在
         # 避免循環調用，導入放在方法內部
         from models.statistic import Statistic
-        Statistic.get_or_create(player=player)
+        stat, created = Statistic.get_or_create_stat(id=player.id, defaults={'display_name': player.display_name})
+        if not created and stat.display_name != player.display_name:
+            stat.display_name = player.display_name
+            stat.save()
 
         return player
     
@@ -138,7 +141,10 @@ class Player(Model):
 
         # 確保玩家統計資料存在，避免在沒有 PlayerStatistic 出現時拋出例外。
         from models.statistic import Statistic
-        stat, _ = Statistic.get_or_create(player=player)
+        stat, created = Statistic.get_or_create_stat(id=player.id, defaults={'display_name': player.display_name})
+        if not created and stat.display_name != player.display_name:
+            stat.display_name = player.display_name
+            stat.save()
 
         return stat
 
