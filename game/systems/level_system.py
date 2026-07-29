@@ -10,7 +10,8 @@ import discord
 
 from datetime import datetime
 
-from game.model import Player
+from models import Player
+from models import Statistic
 
 from cores.logger import logger
 
@@ -74,7 +75,10 @@ class LevelSystem:
         
         elapsed_minutes = (now - timestamp) / 60
 
-        # 獎勵機制抽取，根據待在語音的時間給予不同的經驗值，在 2 小時後有最大值
+        # ===========================================
+        # 獎勵機制區塊
+        # 根據待在語音的時間給予不同的經驗值，在 2 小時後有最大值
+        # ===========================================
         voice_experience = 0
         match elapsed_minutes:
             case minutes if minutes > 0 and minutes <= 60:
@@ -86,6 +90,10 @@ class LevelSystem:
 
         total_experience = int(elapsed_minutes * voice_experience)
         Player.add_experience(member.id, total_experience)
+
+        stats = Statistic.get_or_create_stat(member.id)
+        stats.total_voice_time += elapsed_minutes
+        stats.save()
 
         logger.info(f"給予 {member.display_name} 語音經驗值: {total_experience} exp, 累積時間: {elapsed_minutes:.2f} 分鐘")
 

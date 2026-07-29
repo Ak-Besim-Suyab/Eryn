@@ -17,8 +17,9 @@ class Statistic(Model):
         database = db
 
     @classmethod
-    def get_or_create_stat(cls, user_id: int):
-        return cls.get_or_create(id=user_id)
+    def get_or_create_stat(cls, user_id: int) -> Statistic:
+        stat, _ = cls.get_or_create(id=user_id)
+        return stat
 
 
 def init_statistic_database():

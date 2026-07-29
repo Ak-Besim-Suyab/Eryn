@@ -7,7 +7,8 @@ import time
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
-from game.model import Player
+from models import Player
+from models import Statistic
 
 from cores.logger import logger
 
@@ -40,7 +41,7 @@ class AttendanceSystem:
         Player.add_experience(user_id, self.daily_experience)
         Player.save_timestamp_daily_reward(user_id)
 
-        stat = Player.get_stat(user_id)
+        stat = Statistic.get_or_create_stat(user_id)
         stat.total_daily_claims +=1
         stat.save()
 

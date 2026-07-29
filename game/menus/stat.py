@@ -12,12 +12,12 @@ class StatMenu:
         stat = Statistic.get_or_create_stat(user_id)
 
         descriptions = [
-            f"玩家名稱: {stat.display_name}",
             f"等級: {player.level}",
             f"經驗值: {player.experience}",
             f"",
-            f"累計簽到天數: {stat.total_daily_claims} 天",
-            f"累計訊息數: {stat.total_message_send} 條"
+            f"累計簽到的天數: {stat.total_daily_claims} 天",
+            f"累計發送的訊息數: {stat.total_message_send} 次",
+            f"累計語音時間: {stat.total_voice_time} 分鐘",
         ]
 
         embed = discord.Embed()

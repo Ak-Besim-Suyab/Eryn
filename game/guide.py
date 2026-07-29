@@ -56,8 +56,13 @@ async def tavern_rule(interaction: discord.Interaction):
 
     container = ui.Container()
     container.add_item(ui.TextDisplay(content=texts.get("rule_title")))
-    container.add_item(ui.Section(texts.get("rule_description"), accessory=ui.Thumbnail(image.get("did_feast_2"))))
-    
+    container.add_item(separator)
+    container.add_item(ui.Section(texts.get("rule_overview"), accessory=ui.Thumbnail(image.get("did_feast_2"))))
+    container.add_item(separator)
+    container.add_item(ui.TextDisplay(content=texts.get("rule_1")))
+    container.add_item(separator)
+    container.add_item(ui.TextDisplay(content=texts.get("rule_2")))
+
     view = ui.LayoutView()
     view.add_item(container)
 
@@ -67,8 +72,8 @@ class Select(ui.Select):
     def __init__(self):
 
         pools = [
-            ("貼文須知", "option_1"),
-            ("關於如何將貼文顯示在列表上", "option_2"),
+            ("🍷小酒館發文與討論須知", "option_1"),
+            ("🍷如何將貼文顯示在列表？", "option_2")
         ]
 
         options = []

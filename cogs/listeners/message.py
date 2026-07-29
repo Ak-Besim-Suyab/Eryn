@@ -16,9 +16,10 @@ class MessageListener(commands.Cog):
         if message.author.bot or not message.guild:
             return
 
-        player_statistic = Statistic.get(message.author.id)
-        if player_statistic is None:
-            return
+        player_stat = Statistic.get_or_create_stat(message.author.id)
+
+        player_stat.total_message_send += 1
+        player_stat.save()
         
         LevelSystem.give_message_experience(message.author)
 

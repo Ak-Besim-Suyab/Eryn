@@ -47,8 +47,6 @@ class Elin(commands.Bot):
             "cogs.admins.role_setting",
             "cogs.admins.test_multiple_select",
 
-            "cogs.actions.steal",
-
             "cogs.menus.inventory",
             "cogs.menus.leaderboard",
             "cogs.menus.stat",
