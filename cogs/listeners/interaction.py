@@ -24,6 +24,23 @@ class InteractionListener(commands.Cog):
             return
         
         custom_id = interaction.data.get("custom_id", "")
+        component_type = interaction.data.get("component_type", 0)
+
+        # 攔截下拉式選單發送的事件請求
+        if component_type == 3:
+            values = interaction.data.get("values", [])
+            if not values:
+                return
+
+            match values[0]:
+                case "tavern_post":
+                    return await guide.tavern_post(interaction)
+                case "tavern_discussion":
+                    return await guide.tavern_discussion(interaction)
+                case "tavern_channel":
+                    return await guide.tavern_channel(interaction)
+                case _:
+                    pass
         
         if custom_id.startswith("attendance:"):
             data = custom_id.split(":")

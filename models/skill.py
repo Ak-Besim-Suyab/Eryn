@@ -1,8 +1,8 @@
 from peewee import *
 
-from systems.models.player import Player
+from models import Player
 from scripts.data.type import ActionType
-from config import db
+from database import db
 
 class Skill(Model):
     player = ForeignKeyField(Player, backref='skills', on_delete='CASCADE')

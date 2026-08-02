@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 
-from game.model import init_all_databases
+from models import init_databases
 from cores.logger import logger
 
 from cogs.admins import AnnounceCabinView
@@ -21,7 +21,7 @@ class Elin(commands.Bot):
 
     async def setup_hook(self):
 
-        init_all_databases()
+        init_databases()
 
         extensions = [
             "cogs.attendance",

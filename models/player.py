@@ -1,9 +1,9 @@
 from peewee import *
-from config import db
+from database import BaseModel, db
 
 from datetime import datetime
 
-class Player(Model):
+class Player(BaseModel):
 
     # discord fields.
     id = IntegerField(primary_key=True)
@@ -24,10 +24,6 @@ class Player(Model):
     timestamp_daily_reward = FloatField(null=True)
     timestamp_voice = FloatField(null=True)
 
-    class Meta:
-        database = db
-
-
     @classmethod
     def get_or_create_player(cls, user_id: int) -> Player:
         """獲取或創建玩家，並確保玩家統計資料存在"""
@@ -37,7 +33,7 @@ class Player(Model):
     @classmethod
     def add_balance(cls, user_id: int, amount: int):
         with db.atomic():
-            player, _ = cls.get_or_create(id=user_id)
+            player = cls.get_or_create_player(id=user_id)
             player.currency += amount
             player.save()
         
@@ -155,8 +151,3 @@ class Player(Model):
             player, _ = self.get_or_create(id=player_id)
             player.region = region
             player.save()
-
-def init():
-    """初始化玩家數據庫表"""
-    with db:
-        db.create_tables([Player], safe=True)

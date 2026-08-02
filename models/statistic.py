@@ -1,11 +1,13 @@
 from peewee import *
-from config import db
+from database import BaseModel, db
 
-class Statistic(Model):
-    """
-    這個模塊用於定義與管理玩家的統計數據。
-    id 代表玩家 ID，這樣可以獨立保存統計資料而不依賴外鍵。
-    """
+"""
+這個模塊用於定義與管理玩家的統計數據
+id 代表玩家 ID, 這樣可以獨立保存統計資料而不依賴外鍵
+"""
+
+class Statistic(BaseModel):
+
     id = IntegerField(primary_key=True)
     display_name = TextField(default="無名的旅人")
 
@@ -20,8 +22,3 @@ class Statistic(Model):
     def get_or_create_stat(cls, user_id: int) -> Statistic:
         stat, _ = cls.get_or_create(id=user_id)
         return stat
-
-
-def init_statistic_database():
-    with db:
-        db.create_tables([Statistic], safe=True)

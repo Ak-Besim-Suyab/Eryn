@@ -1,17 +1,10 @@
-import os
 import discord
-from peewee import SqliteDatabase
 
 from dataclasses import dataclass
 
 @dataclass(frozen=True)
 class Config:
     pass
-
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DB_PATH = os.path.join(BASE_DIR, "generic.db")
-
-db = SqliteDatabase(DB_PATH)
 
 TH_HAVEN = 1190027756482859038
 AK_BESIM = 1193049715638538280

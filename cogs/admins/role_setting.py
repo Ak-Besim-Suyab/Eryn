@@ -9,6 +9,10 @@ from cores import logger
 
 from assets import text
 
+# ====================================================
+# 列表選項登記，此處字串對應 assets/roles 下的檔案名稱
+# ====================================================
+
 minecraft_options = [
     "potato",
     "baked_potato",
@@ -31,6 +35,17 @@ final_fantasy_options = [
     "inugami_favor",
     "graha_tia",
     "greystone",
+]
+
+pikmin_options = [
+    "red_pikmin",
+    "blue_pikmin",
+    "yellow_pikmin",
+    "purple_pikmin",
+    "white_pikmin",
+    "rock_pikmin",
+    "winged_pikmin",
+    "ice_pikmin",
 ]
 
 afternoon_tea_options = [
@@ -106,12 +121,23 @@ class RoleSettingView(ui.LayoutView):
     def __init__(self):
         super().__init__(timeout=None)
 
-        minecraft_select = RoleSelect(placeholder="主題：麥塊 Minecraft", option_values=minecraft_options, custom_id="role_select:minecraft")
+        # 建立選項
+        minecraft_select = RoleSelect(
+            placeholder="主題：麥塊 Minecraft", 
+            option_values=minecraft_options, 
+            custom_id="role_select:minecraft",
+        )
 
         final_fantasy_select = RoleSelect(
             placeholder="主題：最終幻想 Final Fantasy",
             option_values=final_fantasy_options,
             custom_id="role_select:final_fantasy",
+        )
+
+        pikmin_select = RoleSelect(
+            placeholder="主題：皮克敏 Pikmin",
+            option_values=pikmin_options,
+            custom_id="role_select:pikmin",
         )
 
         afternoon_tea_select = RoleSelect(
@@ -159,16 +185,19 @@ class RoleSettingView(ui.LayoutView):
         row_2.add_item(final_fantasy_select)
 
         row_3 = ui.ActionRow()
-        row_3.add_item(afternoon_tea_select)
+        row_3.add_item(pikmin_select)
 
         row_4 = ui.ActionRow()
-        row_4.add_item(plurk_select)
+        row_4.add_item(afternoon_tea_select)
 
         row_5 = ui.ActionRow()
-        row_5.add_item(flower_select)
+        row_5.add_item(plurk_select)
 
         row_6 = ui.ActionRow()
-        row_6.add_item(gradient_select)
+        row_6.add_item(flower_select)
+
+        row_7 = ui.ActionRow()
+        row_7.add_item(gradient_select)
 
         seperator = ui.Separator(spacing=SeparatorSpacing.large)
 
@@ -180,10 +209,11 @@ class RoleSettingView(ui.LayoutView):
             row_2,
             row_3,
             row_4,
+            row_5,
             seperator,
             tinctures_description_section,
-            row_5,
             row_6,
+            row_7,
         ]
 
         for comp in components:
@@ -201,6 +231,7 @@ class RoleSettingView(ui.LayoutView):
             "最終幻想": final_fantasy_options,
             "下午茶": afternoon_tea_options,
             "噗浪": plurk_options,
+            "皮克敏": pikmin_options,
             "麥塊": minecraft_options
         }
 
