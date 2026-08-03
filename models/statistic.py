@@ -3,7 +3,6 @@ from database import BaseModel, db
 
 """
 這個模塊用於定義與管理玩家的統計數據
-id 代表玩家 ID, 這樣可以獨立保存統計資料而不依賴外鍵
 """
 
 class Statistic(BaseModel):

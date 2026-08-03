@@ -3,7 +3,7 @@ from discord.ext import commands
 from discord import ui
 from discord import SeparatorSpacing
 
-from systems import registry
+from systems.registry import role as role_registry
 
 from cores import logger
 
@@ -239,7 +239,7 @@ class RoleSettingView(ui.LayoutView):
 
             descriptions = []
             for option in role_option:
-                role = registry.role.get(option)
+                role = role_registry.get(option)
                 if role is not None:
                     descriptions.append(f"- {role.icon}<@&{role.discord_id}>") 
                     
@@ -262,7 +262,7 @@ class RoleSettingView(ui.LayoutView):
 
             descriptions = []
             for option in role_option:
-                role = registry.role.get(option)
+                role = role_registry.get(option)
                 if role is not None:
                     descriptions.append(f"- {role.icon}<@&{role.discord_id}>") 
                     
@@ -276,7 +276,7 @@ class RoleSelect(ui.Select):
         options = []
 
         for value in option_values:
-            role = registry.role.get(value)
+            role = role_registry.get(value)
             if role is None:
                 raise ValueError(f"Role with tag '{value}' not found in registry.")
 
@@ -296,7 +296,7 @@ class RoleSelect(ui.Select):
     
     async def callback(self, interaction: discord.Interaction):
 
-        selected_role = registry.role.get(self.values[0])
+        selected_role = role_registry.get(self.values[0])
 
         guild_roles = interaction.guild.roles
 
@@ -315,7 +315,7 @@ class RoleSelect(ui.Select):
 
         try:
             # 移除所有同分類的身分組，確保只有一個相同分類的身分組被套用
-            all_roles = registry.role.get_all()
+            all_roles = role_registry.get_all()
 
             for user_role in interaction.user.roles:
                 for all_role in all_roles:

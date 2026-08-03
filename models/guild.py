@@ -1,12 +1,9 @@
 from peewee import *
-from config import db
+from database import BaseModel, db
 
-class Guild(Model):
+class Guild(BaseModel):
     id = IntegerField(primary_key=True)
     announcement_channel = IntegerField(null=True)
-
-    class Meta:
-        database = db
     
     @classmethod
     def set_announcement_channel(cls, guild_id: int, channel_id: int) -> None:

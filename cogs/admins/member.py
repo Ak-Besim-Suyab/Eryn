@@ -12,17 +12,17 @@ class AdminMemberCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    # --------------------------------------------------------
-    # Profile Command Group ----------------------------------
-    # --------------------------------------------------------
+    # ========================================================
+    # 宣告指令群組
+    # ========================================================
+
     @commands.group()
     @commands.is_owner()
-    async def profile(self, ctx: commands.Context):
+    async def member(self, ctx: commands.Context):
         if ctx.invoked_subcommand is None:
-            logger.info("使用 !profile + 子指令呼叫對應方法")
+            logger.info("使用 !member + 子指令呼叫對應方法")
 
-
-    @profile.command(name="create_all")
+    @member.command(name="create_all")
     @commands.is_owner()
     async def create_all(self, ctx: commands.Context):
         folder_path = "assets/members"
@@ -57,7 +57,7 @@ class AdminMemberCog(commands.Cog):
                 logger.info(f"成員 {member.display_name} 的檔案尚未存在，已建立新檔。")
 
 
-    @profile.command(name="refresh_all")
+    @member.command(name="refresh_all")
     @commands.is_owner()
     async def refresh_all(self, ctx: commands.Context):
         folder_path = "assets/members"
@@ -112,7 +112,7 @@ class AdminMemberCog(commands.Cog):
             for member in profile_unestablished:
                 logger.info(f"成員 {member} 的檔案不存在，無法更新。")
 
-    @profile.command(name="check_all")
+    @member.command(name="check_all")
     @commands.is_owner()
     async def check_all(self, ctx: commands.Context):
         """反查成員狀態：找出已退出和新成員"""

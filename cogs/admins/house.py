@@ -1,90 +1,45 @@
 import discord
-import json
 from discord.ext import commands
 from pathlib import Path
 
 from cores import asset
 from cores.logger import logger
 
+from systems import house
+
 class AdminHouseCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
+    # =========================
+    # 宣告指令群組 house
+    # =========================
     @commands.group()
     @commands.is_owner()
     async def house(self, ctx: commands.Context):
         if ctx.invoked_subcommand is None:
             logger.info("使用 !house + 子指令呼叫對應方法")
 
-    
-    @house.command(name="check")
+
+    @house.command(name="register")
     @commands.is_owner()
-    async def check(self, ctx: commands.Context):
-        """
-        驗證頻道是否有主人，主人指的是該頻道的擁有者
-        資料會手動註冊頻道擁有者，這裡負責驗證哪些頻道屬於誰
-        """
-        # 獲取伺服器
-        guild = ctx.guild
+    async def register(self, ctx: commands.Context, channel: discord.VoiceChannel, member: discord.Member):
 
-        # 逐個頻道檢查，如果該頻道已登記在資料中，印出匹配成功
-        # 
-        channel_leaved = []
-        for channel in guild.channels:
+        """這是社群專用指令，為頻道登記持有者，使用時須要提供「頻道」與「成員」相關參數"""
 
-            if isinstance(channel, (discord.TextChannel, discord.VoiceChannel)):
-                channel_leaved.append(channel.id)
+        if not isinstance(channel, discord.VoiceChannel):
+            await ctx.send("提供的頻道似乎不是小屋，請確認頻道類型是否正確")
+            return 
 
-                for member in guild.members:
-                    path = Path(f"data/members/{member.id}.json")
-                    if path.exists():
-                        data = asset.load(f"data/members/{member.id}.json")
-                        house = data.get("house")
-                        if house and channel.id in house:
-                            channel_leaved.remove(channel.id)
-                            logger.info(f"找到匹配：成員 - {member.display_name} | 頻道 - {channel.name}")
+        registered_house, created = house.register(channel.id, member.id)
 
-        for channel in channel_leaved:
-            logger.info(f"未找到匹配：頻道 - {guild.get_channel(channel).name}")
-    
-    @commands.command()
-    @commands.is_owner()
-    async def member_check(self, ctx: commands.Context):
-        """
-        驗證成員是否持有頻道
-        """
-        guild = ctx.guild
+        if not created:
+            fail_message = f"⚠️ {channel.name} 已登記在 {registered_house.owner.display_name} 名下，無法再次登記。"
+            await ctx.send(fail_message), logger.info(fail_message)
+            return
 
-        member_leaved = []
+        success_message = f"✅ 成功將 {channel.name} 登記在 {member.display_name} 名下。"
+        await ctx.send(success_message), logger.info(success_message)
 
-        for member in guild.members:
-
-            # 忽略機器人
-            if member.bot:
-                continue
-
-            path = Path(f"data/members/{member.id}.json")
-
-            if path.exists():
-
-                data = asset.load(f"data/members/{member.id}.json")
-                house = data.get("house")
-
-                if house:
-                    for channel in guild.channels:
-                        if isinstance(channel, (discord.TextChannel, discord.VoiceChannel)):
-                            if channel.id in house:
-                                logger.info(f"找到小屋資料，成員 - {member.display_name} | 頻道 - {channel.name}")
-                else:
-                    member_leaved.append(member)
-
-            else:
-                logger.info(f"未找到成員資料，不進行小屋資料尋找，成員 - {member.display_name}")
-
-        logger.info(f"以下成員未找到任何小屋資料：")
-        for member in member_leaved:
-            logger.info(f"成員 - {member.display_name} | 使用者名稱 - {member.name} | ID - {member.id}")
-
-
-async def setup(bot):
+async def setup(bot: commands.Bot):
     await bot.add_cog(AdminHouseCog(bot))

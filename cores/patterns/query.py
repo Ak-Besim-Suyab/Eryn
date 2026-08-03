@@ -1,6 +1,5 @@
 from typing import Callable
-
-from game import model
+import models
 
 class Query:
     """
@@ -15,7 +14,7 @@ class Query:
     def __init__(self):
         self._handlers: dict[str, Callable] = {}
 
-    def register(self, query: model.Query, handler: Callable):
+    def register(self, query: models.Query, handler: Callable):
         """
         .. Description::
             `query`
@@ -27,7 +26,7 @@ class Query:
             raise ValueError(f"已存在名為 {query} 的查詢，無法重複註冊")
         self._handlers[query] = handler
 
-    def ask(self, query: model.Query, *args, **kwargs):
+    def ask(self, query: models.Query, *args, **kwargs):
         query_type = type(query)
         handler = self._handlers.get(query_type)
         if not handler:

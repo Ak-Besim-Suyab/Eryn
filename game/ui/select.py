@@ -1,7 +1,7 @@
 import discord
 import models
 
-from cores import query
+from cores.patterns import query
 
 class Select(discord.ui.Select):
     def __init__(self, select: models.Select):
