@@ -55,6 +55,25 @@ class AdminHouseCog(commands.Cog):
         success_message = f"✅ 成功刪除 {channel.name}({channel.id}) 的登記資訊。"
         await ctx.send(success_message), logger.info(success_message)
 
+    @house.command(name="list")
+    @commands.is_owner()
+    async def list(self, ctx: commands.Context):
+
+        """列出所有已登記的小屋頻道與持有者資訊"""
+
+        owners = house.get_owners()
+
+        if len(owners) == 0:
+            await ctx.send("目前尚未登記任何小屋頻道")
+            return
+
+        members = [member for member in ctx.guild.members if not member.bot and member.id in owners]
+
+        logger.info(f"目前已擁有小屋的成員總共： {len(members)} 位。")
+        logger.info("以下為已擁有小屋的成員：")
+        for member in members:
+            logger.info(member.display_name)
+
 
 async def setup(bot: commands.Bot):
     await bot.add_cog(AdminHouseCog(bot))
