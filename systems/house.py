@@ -1,4 +1,5 @@
-from models import Player, House
+from models import Player
+from models import House
 from database import db
 
 class HouseSystem:
@@ -17,8 +18,14 @@ class HouseSystem:
 
     @staticmethod
     def delete(channel_id: int):
-        pass
 
+        with db.atomic():
+            house = House.get_or_none(id=channel_id)
+            if house is None:
+                return False
+
+            house.delete_instance()
+            return True
 
 # -----------------------------------------------------------
 # 創建單例
@@ -26,3 +33,4 @@ class HouseSystem:
 _instance = HouseSystem()
 
 register = _instance.register
+delete = _instance.delete
