@@ -1,2 +1,2 @@
 # Eryn
-discord bot for learning python
+discord bot for exclusive community

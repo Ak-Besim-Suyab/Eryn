@@ -18,7 +18,15 @@ class StatMenu:
             f"累計簽到的天數: {stat.total_daily_claims} 天",
             f"累計發送的訊息數: {stat.total_message_send} 次",
             f"累計語音時間: {stat.total_voice_time} 分鐘",
+            f"",
+            f"目前擁有的小屋:",
         ]
+
+        if not player.houses:
+            descriptions.append("*尚未擁有任何小屋*")
+        else:
+            for house in player.houses:
+                descriptions.append(f"- <#{house.id}>")
 
         embed = discord.Embed()
         embed.description = "\n".join(descriptions)

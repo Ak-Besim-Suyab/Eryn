@@ -24,9 +24,7 @@ class Elin(commands.Bot):
         init_databases()
 
         extensions = [
-            "cogs.attendance",
             "cogs.setting",
-            "cogs.test",
 
             "cogs.listeners.interaction",
             "cogs.listeners.message",
@@ -43,9 +41,7 @@ class Elin(commands.Bot):
             "cogs.admins.attendance",
             "cogs.admins.boot",
             "cogs.admins.house",
-            "cogs.admins.member",
             "cogs.admins.role_setting",
-            "cogs.admins.test_multiple_select",
 
             "cogs.menus.inventory",
             "cogs.menus.leaderboard",
