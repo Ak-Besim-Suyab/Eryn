@@ -23,7 +23,7 @@ class StatMenu:
         ]
 
         if not player.houses:
-            descriptions.append("*尚未擁有任何小屋*")
+            descriptions.append("> *尚未擁有任何小屋*")
         else:
             for house in player.houses:
                 descriptions.append(f"- <#{house.id}>")

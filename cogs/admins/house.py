@@ -35,11 +35,11 @@ class AdminHouseCog(commands.Cog):
         success_message = f"✅ 成功將 {channel.name}({channel.id}) 登記在 {member.display_name}({member.id}) 名下。"
         await interaction.response.send_message(success_message), logger.info(success_message)
 
-    @house.command(name="刪除")
-    @app_commands.describe(channel="要刪除登記的頻道")
+    @house.command(name="移除")
+    @app_commands.describe(channel="要移除登記的頻道")
     async def delete(self, interaction: discord.Interaction, channel: discord.VoiceChannel):
 
-        """刪除頻道登記資訊，須要提供頻道參數"""
+        """移除頻道登記資訊，須要提供頻道參數"""
 
         if not isinstance(channel, discord.VoiceChannel):
             await interaction.response.send_message("提供的頻道似乎不是小屋，請確認頻道類型是否正確", ephemeral=True)
@@ -48,11 +48,11 @@ class AdminHouseCog(commands.Cog):
         success = house.delete(channel.id)
 
         if not success:
-            fail_message = f"⚠️ {channel.name}({channel.id}) 尚未登記在任何成員名下，無法刪除。"
+            fail_message = f"⚠️ {channel.name}({channel.id}) 尚未登記在任何成員名下，無法移除。"
             await interaction.response.send_message(fail_message), logger.info(fail_message)
             return
 
-        success_message = f"✅ 成功刪除 {channel.name}({channel.id}) 的登記資訊。"
+        success_message = f"✅ 成功移除 {channel.name}({channel.id}) 的登記資訊。"
         await interaction.response.send_message(success_message), logger.info(success_message)
 
     @house.command(name="列表")

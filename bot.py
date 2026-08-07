@@ -25,6 +25,7 @@ class Elin(commands.Bot):
 
         extensions = [
             "cogs.setting",
+            "cogs.stat",
 
             "cogs.listeners.interaction",
             "cogs.listeners.message",
@@ -45,7 +46,6 @@ class Elin(commands.Bot):
 
             "cogs.menus.inventory",
             "cogs.menus.leaderboard",
-            "cogs.menus.stat",
         ]
 
         for extension in extensions:

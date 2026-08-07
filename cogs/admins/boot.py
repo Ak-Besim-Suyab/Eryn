@@ -5,7 +5,7 @@ from discord.ext import commands
 from cores.logger import logger
 
 class BootCog(commands.Cog):
-    def __init__(self, bot):
+    def __init__(self, bot: commands.Bot):
         self.bot = bot
 
     @commands.command()
@@ -62,5 +62,5 @@ class BootCog(commands.Cog):
         await self.bot.close()
 
 
-async def setup(bot):
+async def setup(bot: commands.Bot):
     await bot.add_cog(BootCog(bot))
