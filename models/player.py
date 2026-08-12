@@ -46,7 +46,7 @@ class Player(BaseModel):
             player.save()
 
     @staticmethod
-    def _get_required_exp(level: int) -> int:
+    def get_required_exp(level: int) -> int:
         return int(100 * (level ** 1.5) + level * 20)
 
     @classmethod
@@ -55,8 +55,8 @@ class Player(BaseModel):
             player, _ = cls.get_or_create(id=player_id)
             player.experience += amount
 
-            while player.experience >= player._get_required_exp(player.level):
-                player.experience -= player._get_required_exp(player.level)
+            while player.experience >= player.get_required_exp(player.level):
+                player.experience -= player.get_required_exp(player.level)
                 player.level += 1
 
             player.save()

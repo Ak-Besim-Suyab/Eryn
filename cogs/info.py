@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 from discord import app_commands
 
-from game.menus import StatMenu
+from views import information
 
 class InfoCog(commands.Cog):
     def __init__(self, bot):
@@ -10,7 +10,7 @@ class InfoCog(commands.Cog):
 
     @app_commands.command(name="資訊", description="查看旅人的社群資訊")
     async def info_command(self, interaction: discord.Interaction):
-        await StatMenu.show(interaction)
+        await information.show(interaction)
 
 async def setup(bot: commands.Bot):
     await bot.add_cog(InfoCog(bot))
