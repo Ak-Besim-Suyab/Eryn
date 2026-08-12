@@ -39,12 +39,10 @@ class HouseSystem:
 
     @staticmethod
     def get_owners() -> set[int]:
-        """返回 House 資料內的 owner_id 欄位"""
         return {house.owner.id for house in House.select(House.owner)}
 
     @staticmethod
     def get_houses() -> set[int]:
-        """返回 House 資料內的 id 欄位"""
         return {house.id for house in House.select(House.id)}
 
 # -----------------------------------------------------------

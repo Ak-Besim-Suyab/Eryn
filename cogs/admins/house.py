@@ -1,10 +1,12 @@
 import discord
 from discord.ext import commands
 from discord import app_commands
-from cores.logger import logger
+
+from cores import logger
+
 from systems import house
 
-class AdminHouseCog(commands.Cog):
+class HouseCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
@@ -76,4 +78,4 @@ class AdminHouseCog(commands.Cog):
 
 
 async def setup(bot: commands.Bot):
-    await bot.add_cog(AdminHouseCog(bot))
+    await bot.add_cog(HouseCog(bot))

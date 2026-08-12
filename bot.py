@@ -25,7 +25,7 @@ class Elin(commands.Bot):
 
         extensions = [
             "cogs.setting",
-            "cogs.stat",
+            "cogs.info",
 
             "cogs.listeners.interaction",
             "cogs.listeners.message",
