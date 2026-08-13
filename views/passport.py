@@ -1,18 +1,18 @@
 import discord
 from discord import ui
-from discord import SeparatorSpacing
 
 from datetime import datetime, timezone
 
 from models import Player
 from models import Statistic
 
-class Information:
+class Passport:
 
     @staticmethod
-    async def show(interaction: discord.Interaction):
+    async def show(interaction: discord.Interaction, member: discord.Member = None):
 
-        member = interaction.user
+        member = interaction.user if member is None else member
+
         player = Player.get_or_create_player(member.id)
         statistic = Statistic.get_or_create_stat(member.id)
 
@@ -29,14 +29,14 @@ class Information:
         # 請留意這裡的日期轉換佔位符，大小寫會顯示不同的時間格式
         description = [
             f"## {member.display_name} 的護照",
-            f"> - **等級 {player.level}**",
-            f"> - **經驗值 {player.experience} / {player.get_required_exp(player.level)}**",
+            f"> - **活躍等級 {player.level}**",
+            f"> - **活躍經驗值 {player.experience} / {player.get_required_exp(player.level)}**",
         ]
 
         # 處理加入時間資訊
         time_line = [
             f"### 加入時間",
-            f"> - **{member.joined_at.strftime(f"於 %Y 年 %m 月 %d 日加入，總共經過 {join_days} 天**")}",
+            f"> - **{member.joined_at.strftime(f"於 %Y 年 %m 月 %d 日加入這裡，總共經過 {join_days} 天**")}",
         ]
 
         # 處理小屋持有資訊
@@ -74,6 +74,6 @@ class Information:
 
 # singletons declaration ---------------------------------------
 
-_instance = Information()
+_instance = Passport()
 
 show = _instance.show

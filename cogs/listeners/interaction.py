@@ -9,8 +9,10 @@ import discord
 from discord.ext import commands
 
 from game.systems import attendance
-from game.menus import StatMenu, LeaderboardMenu
+from game.menus import LeaderboardMenu
 from game import guide
+
+from views import passport 
 
 
 class InteractionListener(commands.Cog):
@@ -49,7 +51,7 @@ class InteractionListener(commands.Cog):
                     await attendance.claim(interaction)
                     return
                 case "stat":
-                    await StatMenu.show(interaction)
+                    await passport.show(interaction)
                     return
                 case "leaderboard":
                     await LeaderboardMenu.show(interaction)
