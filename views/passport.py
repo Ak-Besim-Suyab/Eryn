@@ -12,15 +12,13 @@ class Passport:
 
         member = interaction.user if member is None else member
 
-        player = Player.get_player(member.id)
+        player, _ = Player.get_or_create(id = member.id)
         statistic = Statistic.get_or_create_stat(member.id)
 
         if not isinstance(member, discord.Member):
             return
 
-        container = ui.Container()
-        separator = ui.Separator()
-
+        # 取得加入時間與經過天數
         now = datetime.now(timezone.utc)
         join_times = now - member.joined_at
         join_days = join_times.days
@@ -45,15 +43,21 @@ class Passport:
             for house in player.houses:
                 description.append(f"> - <#{house.id}>")
 
-        title = ui.Section("\n".join(description), accessory=ui.Thumbnail(media=member.display_avatar.url))
-        container.add_item(title)
+        # 宣告元件
+        content = ui.Section("\n".join(description), accessory=ui.Thumbnail(media=member.display_avatar.url))
 
-        view = ui.LayoutView(timeout=None)
+        # 宣告元件容器
+        container = ui.Container()
+        container.accent_color = discord.Color.light_theme()
+        container.add_item(content)
+
+        # 宣告視圖
+        view = ui.LayoutView()
         view.add_item(container)
 
         await interaction.response.send_message(view=view, ephemeral=True)
 
-# singletons declaration ---------------------------------------
+# 宣告單例 -------------
 
 _instance = Passport()
 
