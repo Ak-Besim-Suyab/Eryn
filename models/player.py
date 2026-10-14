@@ -5,11 +5,9 @@ from datetime import datetime
 
 class Player(BaseModel):
 
-    # discord fields.
     id = IntegerField(primary_key=True)
     display_name = TextField(default="無名的旅人")
 
-    # game-related fields.
     level = IntegerField(default=1)
     experience = IntegerField(default=0)
     currency = IntegerField(default=0)
@@ -17,7 +15,6 @@ class Player(BaseModel):
     luck = FloatField(default=1.0)
     karma = IntegerField(default=100)
     
-    # others.
     card = TextField(null=True)
     use_pet = IntegerField(default=0)
 
@@ -25,8 +22,7 @@ class Player(BaseModel):
     timestamp_voice = FloatField(null=True)
 
     @classmethod
-    def get_or_create_player(cls, user_id: int) -> Player:
-        """獲取或創建玩家，並確保玩家統計資料存在"""
+    def get_player(cls, user_id: int) -> Player:
         player, _ = cls.get_or_create(id=user_id)
         return player
     
@@ -36,7 +32,6 @@ class Player(BaseModel):
             player = cls.get_or_create_player(id=user_id)
             player.currency += amount
             player.save()
-        
 
     @classmethod
     def remove_balance(cls, user_id: int, amount: int):

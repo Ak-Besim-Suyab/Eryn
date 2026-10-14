@@ -10,12 +10,18 @@ class HouseCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    house = app_commands.Group(
+    house_group = app_commands.Group(
         name="小屋", 
-        description="小屋系統頻道管理指令",
+        description="小屋頻道管理的指令叢",
         default_permissions=discord.Permissions(administrator=True))
 
-    @house.command(name="登記")
+    list_group = app_commands.Group(
+        name="查詢", 
+        description="查詢小屋頻道與持有者相關資訊的指令叢",
+        parent=house_group
+    )
+
+    @house_group.command(name="登記")
     @app_commands.describe(channel="要登記的頻道", member="要登記的成員")
     async def register(self, interaction: discord.Interaction, channel: discord.VoiceChannel, member: discord.Member):
 
@@ -37,7 +43,7 @@ class HouseCog(commands.Cog):
         success_message = f"✅ 成功將 {channel.name}({channel.id}) 登記在 {member.display_name}({member.id}) 名下。"
         await interaction.response.send_message(success_message), logger.info(success_message)
 
-    @house.command(name="移除")
+    @house_group.command(name="移除")
     @app_commands.describe(channel="要移除登記的頻道")
     async def delete(self, interaction: discord.Interaction, channel: discord.VoiceChannel):
 
@@ -57,25 +63,29 @@ class HouseCog(commands.Cog):
         success_message = f"✅ 成功移除 {channel.name}({channel.id}) 的登記資訊。"
         await interaction.response.send_message(success_message), logger.info(success_message)
 
-    @house.command(name="列表")
+    @list_group.command(name="已登記成員")
     @app_commands.describe()
     async def list(self, interaction: discord.Interaction):
 
-        """列出所有已登記的小屋頻道與持有者資訊"""
+        """列出所有已登記小屋頻道的持有者"""
 
         owners = house.get_owners()
 
         if len(owners) == 0:
-            await interaction.response.send_message("目前尚未登記任何小屋頻道", ephemeral=True)
+            await interaction.response.send_message("目前尚未有任何人登記小屋頻道", ephemeral=True)
             return
 
         members = [member for member in interaction.guild.members if not member.bot and member.id in owners]
 
-        logger.info(f"目前已擁有小屋的成員總共： {len(members)} 位。")
-        logger.info("以下為已擁有小屋的成員：")
-        for member in members:
-            logger.info(member.display_name)
+        text = [
+            f"已擁有小屋的成員總共： {len(members)} 位。",
+            f"已擁有小屋的成員：",
+        ]
 
+        for member in members:
+            text.append(f"{member.display_name}({member.id})")
+
+        await interaction.response.send_message("已成功列出表單，請查看控制台日誌。", ephemeral=True), logger.info("\n".join(text))
 
 async def setup(bot: commands.Bot):
     await bot.add_cog(HouseCog(bot))

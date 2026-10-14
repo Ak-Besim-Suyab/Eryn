@@ -1,9 +1,10 @@
 from models import Player
 from models import House
+
 from database import db
 
 """
-    這個模塊用於實作 house model 的業務邏輯, 僅負責運行與輸出結果, 訊息輸出由 cogs 或更外層的邏輯負責
+    這個模塊用於實作 house model 的業務邏輯, 負責運行與輸出結果, 訊息輸出由 cogs, view 或其他外層邏輯負責
 
     :: register
         這個方法用於將小屋頻道紀錄至資料庫, 並綁定玩家, 返回 tuple[House, bool], 這裡的布林值表示是否為新建

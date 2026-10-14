@@ -17,6 +17,7 @@ minecraft_options = [
     "potato",
     "baked_potato",
     "poison_potato",
+    "tropical_fish",
     "pufferfish",
 ]
 
@@ -89,6 +90,11 @@ flower_options = [
     "clover",
 ]
 
+food_options = [
+    "latte",
+    "watermelon",
+]
+
 gradient_options = [
     "prism",
     "aurora",
@@ -102,8 +108,13 @@ gradient_options = [
     "afterglow",
     "ash",
     "niello",
+    "sulphur",
     "abyss",
     "crimson",
+    "neon",
+    "cyberpunk",
+    "shimmer",
+    "retro",
 ]
 
 
@@ -158,6 +169,12 @@ class RoleSettingView(ui.LayoutView):
             custom_id="role_select:flower",
         )
 
+        food_select = RoleSelect(
+            placeholder="主題：食物 Food",
+            option_values=food_options,
+            custom_id="role_select:food",
+        )
+
         gradient_select = RoleSelect(
             placeholder="主題：漸層 Gradient",
             option_values=gradient_options,
@@ -197,7 +214,10 @@ class RoleSettingView(ui.LayoutView):
         row_6.add_item(flower_select)
 
         row_7 = ui.ActionRow()
-        row_7.add_item(gradient_select)
+        row_7.add_item(food_select)
+
+        row_8 = ui.ActionRow()
+        row_8.add_item(gradient_select)
 
         seperator = ui.Separator(spacing=SeparatorSpacing.large)
 
@@ -214,6 +234,7 @@ class RoleSettingView(ui.LayoutView):
             tinctures_description_section,
             row_6,
             row_7,
+            row_8,
         ]
 
         for comp in components:
@@ -255,6 +276,7 @@ class RoleSettingView(ui.LayoutView):
 
         role_options = {
             "花": flower_options,
+            "食物": food_options,
             "漸層": gradient_options,
         }
 

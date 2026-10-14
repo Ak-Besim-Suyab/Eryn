@@ -7,13 +7,12 @@ from models import Player
 from models import Statistic
 
 class Passport:
-
     @staticmethod
     async def show(interaction: discord.Interaction, member: discord.Member = None):
 
         member = interaction.user if member is None else member
 
-        player = Player.get_or_create_player(member.id)
+        player = Player.get_player(member.id)
         statistic = Statistic.get_or_create_stat(member.id)
 
         if not isinstance(member, discord.Member):
@@ -31,6 +30,12 @@ class Passport:
             f"## {member.display_name} 的護照",
             f"> - **活躍等級 {player.level}**",
             f"> - **活躍經驗值 {player.experience} / {player.get_required_exp(player.level)}**",
+            f"### 加入時間",
+            f"> - **{member.joined_at.strftime(f"於 %Y 年 %m 月 %d 日加入這裡，總共經過 {join_days} 天**")}",
+            f"### 統計",
+            f"> - **累計簽到：{statistic.total_daily_claims} 天**",
+            f"> - **累計發送訊息：{statistic.total_message_send} 則**",
+            f"> - **累計語音時間：{statistic.total_voice_time} 分**",
         ]
 
         # 處理加入時間資訊

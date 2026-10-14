@@ -2,7 +2,16 @@
 該類別的單例宣告於 registries/__init__.py 中, 以避免循環引用問題
 """
 from cores import registry
-import models
+from dataclasses import dataclass
+
+@dataclass
+class Role:
+    id: str
+    discord_id: int
+    name: str
+    icon: str
+    category: str
+    tag: str
 
 class RoleRegistry(registry.AssetRegistry):
     def __init__(self):
@@ -13,7 +22,7 @@ class RoleRegistry(registry.AssetRegistry):
         if not data:
             return None
         
-        return models.Role(**data)
+        return Role(**data)
     
     def get_all(self):
-        return [models.Role(**data) for data in self._data.values()]
+        return [Role(**data) for data in self._data.values()]
