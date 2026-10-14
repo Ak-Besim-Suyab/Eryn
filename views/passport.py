@@ -36,41 +36,17 @@ class Passport:
             f"> - **累計簽到：{statistic.total_daily_claims} 天**",
             f"> - **累計發送訊息：{statistic.total_message_send} 則**",
             f"> - **累計語音時間：{statistic.total_voice_time} 分**",
-        ]
-
-        # 處理加入時間資訊
-        time_line = [
-            f"### 加入時間",
-            f"> - **{member.joined_at.strftime(f"於 %Y 年 %m 月 %d 日加入這裡，總共經過 {join_days} 天**")}",
-        ]
-
-        # 處理小屋持有資訊
-        house_line = [
             f"### 持有小屋",
         ]
 
         if not player.houses:
-            house_line.append("> *尚未擁有任何小屋*")
+            description.append("> *尚未擁有任何小屋*")
         else:
             for house in player.houses:
-                house_line.append(f"> - <#{house.id}>")
-
-        # 處理成員統計資訊
-        stat_line = [
-            f"### 統計",
-            f"> - **累計簽到：{statistic.total_daily_claims} 天**",
-            f"> - **累計發送訊息：{statistic.total_message_send} 則**",
-            f"> - **累計語音時間：{statistic.total_voice_time} 分**",
-        ]
+                description.append(f"> - <#{house.id}>")
 
         title = ui.Section("\n".join(description), accessory=ui.Thumbnail(media=member.display_avatar.url))
         container.add_item(title)
-        container.add_item(separator)
-        container.add_item(ui.TextDisplay(content="\n".join(time_line)))
-        container.add_item(separator)
-        container.add_item(ui.TextDisplay(content="\n".join(house_line)))
-        container.add_item(separator)
-        container.add_item(ui.TextDisplay(content="\n".join(stat_line)))
 
         view = ui.LayoutView(timeout=None)
         view.add_item(container)
