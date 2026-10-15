@@ -20,16 +20,11 @@ class Player(BaseModel):
 
     timestamp_daily_reward = FloatField(null=True)
     timestamp_voice = FloatField(null=True)
-
-    @classmethod
-    def get_player(cls, user_id: int) -> Player:
-        player, _ = cls.get_or_create(id=user_id)
-        return player
     
     @classmethod
     def add_balance(cls, user_id: int, amount: int):
         with db.atomic():
-            player = cls.get_or_create_player(id=user_id)
+            player, _ = cls.get_or_create(id=user_id)
             player.currency += amount
             player.save()
 

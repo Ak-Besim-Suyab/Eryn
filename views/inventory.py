@@ -7,7 +7,7 @@ class InventoryMenu:
     @staticmethod
     async def show(interaction: discord.Interaction):
 
-        player = Player.get_or_create_player(interaction.user.id)
+        player, _ = Player.get_or_create(id = interaction.user.id)
         inventory = Inventory.get_inventory(interaction.user.id)
 
         currency_text = []
