@@ -1,0 +1,10 @@
+accent_color: 0
+items:
+  - type: text
+    content: |
+      # test 1
+      test test test.
+  - type: text
+    content: |
+      # test 2
+      test test test.

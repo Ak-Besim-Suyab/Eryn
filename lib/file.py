@@ -1,30 +1,25 @@
 """
-這個模組用於讀取整個 assets 資料夾下的所有目標 json, yaml 資料
-調用方法後會回傳字典, key 為檔案名, value 為檔案內容
-
-.. note::
-    移除對資料的型別檢查, 直接將檔案內容以 dict 或 list 的形式回傳, 由註冊器處理資料結構
+本函式庫用於讀取目標 directory 所有 json, yaml, yml 檔案, 讀取後會回傳 dict, key 為檔案名, value 為檔案內容
 """
 
 import json
 import yaml
 from pathlib import Path
-
 from cores.logger import logger
 
-filename_extension = {".json", ".yaml", ".yml"}
+filenames = {".json", ".yaml", ".yml"}
 
-def load(path: str) -> dict[str, dict | list]:
+def load_dir(path: str) -> dict[str, dict]:
 
     folder = Path(path)
     if not folder.exists(): 
         raise FileNotFoundError(f"錯誤，找不到資料夾: {path}")
 
     data = {}
-    data_total = 0
+    data_total = 0 # 統計成功載入的檔案數量
     
     for file in folder.rglob("*"):
-        if file.suffix.lower() not in filename_extension:
+        if file.suffix.lower() not in filenames:
             continue
 
         try:
@@ -39,10 +34,9 @@ def load(path: str) -> dict[str, dict | list]:
                     logger.debug(f"檔案內容為空, 已略過: {file.name}")
                     continue
                 if file.stem in d: 
-                    logger.debug(f"檔名重複, 已略過: {file.name}")
+                    logger.debug(f"檔案名稱重複, 已略過: {file.name}")
                     continue
                 
-                # file.stem 是不包含副檔名的檔案名稱
                 data[file.stem] = d
                 data_total += 1
                 logger.info(f"載入檔案成功: {file.name}")

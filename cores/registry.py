@@ -5,12 +5,18 @@
     目前將讀取檔案的錯誤拋出都移至 asset 模組, 註冊器則專注於處理資料結構的錯誤
 """
 from abc import ABC
-from cores import asset
+from lib import file
 from cores.logger import logger
 
 class Registry(ABC):
-    def __init__(self):
+    def __init__(self, path: str = None):
+        self._path = path
         self._data = {}
+
+    def load(self):
+        self._data = file.load_dir(self._path)
+        if not self._data:
+            logger.warning(f"路徑所取得的資料為空: {self._path}")
 
     def get(self, name: str):
         return self._data.get(name)
@@ -20,11 +26,11 @@ class Registry(ABC):
 
 class AssetRegistry(Registry):
     def __init__(self, path: str):
-        super().__init__()
-        self._path = path
+        super().__init__(path)
         self._load()
     
     def _load(self):
-        self._data = asset.load(self._path)
+        self._data = file.load_dir(self._path)
         if not self._data:
             logger.warning(f"路徑所取得的資料為空: {self._path}")
+
