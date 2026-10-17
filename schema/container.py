@@ -1,5 +1,8 @@
 from dataclasses import dataclass, field
 
+from schema.button import Button
+from schema.action_row import ActionRow
+
 @dataclass
 class Text:
     type: str = "text"
@@ -10,6 +13,28 @@ class Separator:
     type: str = "separator"
     size: str = "large"
     visible: bool = True
+
+@dataclass
+class Thumbnail:
+    type: str = "thumbnail"
+    media: str = ""
+
+@dataclass
+class Section:
+    type: str = "section"
+    content: str = ""
+    accessory: Button | Thumbnail | dict = None
+
+    def __post_init__(self):
+        if self.accessory and isinstance(self.accessory, dict):
+            type_name = self.accessory.get("type")
+            match type_name:
+                case "button":
+                    self.accessory = Button(**self.accessory)
+                case "thumbnail":
+                    self.accessory = Thumbnail(**self.accessory)
+                case _:
+                    raise ValueError(f"accessory 的資料格式必須為 button 或 thumbnail, 收到錯誤類型: {type_name}")
 
 @dataclass
 class Container:
@@ -31,5 +56,9 @@ class Container:
                         self.items[index] = Text(**item)
                     case "separator":
                         self.items[index] = Separator(**item)
+                    case "section":
+                        self.items[index] = Section(**item)
+                    case "action_row":
+                        self.items[index] = ActionRow(**item)
                     case _:
                         raise ValueError(f"items[{index}] 收到不支援的元件類型: '{type_name}'")

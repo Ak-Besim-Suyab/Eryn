@@ -17,13 +17,20 @@ class AnnounceCog(commands.Cog):
     @announce.command(name="template")
     @commands.is_owner()
     async def template(self, ctx: commands.Context):
-        view = ui.LayoutView().add_item(builder.build_container(container_data.get("template")))
+        view = ui.LayoutView(timeout = None).add_item(builder.build_container(container_data.get("template")))
         await ctx.send(view = view)
 
     @announce.command(name="travel_guide")
     @commands.is_owner()
     async def travel_guide(self, ctx: commands.Context):
-        pass
+        view = ui.LayoutView(timeout = None).add_item(builder.build_container(container_data.get("travel_guide")))
+        await ctx.send(view = view)
+
+    @announce.command(name="explore_guide")
+    @commands.is_owner()
+    async def explore_guide(self, ctx: commands.Context):
+        view = ui.LayoutView(timeout = None).add_item(builder.build_container(container_data.get("explore_guide")))
+        await ctx.send(view = view)
 
 async def setup(bot: commands.Bot):
     await bot.add_cog(AnnounceCog(bot))

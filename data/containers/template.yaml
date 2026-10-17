@@ -7,15 +7,35 @@
 #     清內的 `type` 屬性用於判斷元件類別
 #   
 #   ::: type: text - 對應 ui.TextDisplay 元件, content 為文本內容 (預設為空)
-#   ::: type: separator - 對應 ui.Separator 元件, size 為分隔線的大小 (選填), visible 為是否顯示分隔線 (預設為 True)     
+#   ::: type: separator - 對應 ui.Separator 元件, size 為分隔線的大小 (選填), visible 為是否顯示分隔線 (預設為 True)    
+#   ::: type: section - 對應 ui.Section 元件, content 為文本內容 (預設為空), accessory 為附件 (必須填寫, 否則會報錯, 且只有 button 與 thumbnail 兩種)
+#       
+#   ::: accessory type: button - 對應 ui.Button 元件, label 為按鈕標題 (預設為空), url 為按鈕連結 (預設為空), emoji 為按鈕表情符號 (預設為空)
+#   ::: accessory type: thumbnail - 對應 ui.Thumbnail 元件, media 為縮圖連結 (必須填寫) 
 #
 
 accent_color: 0
 items: 
-  - type: text
+  - type: section
     content: |
-      # test 1
-      test test test.
+      # Section test
+      this is a section test with a thumbnail.
+    accessory:
+      type: thumbnail
+      media: https://cdn.discordapp.com/attachments/1491046495812718672/1509438153444819145/coffee_cropped.png
+
+  - type: separator
+    size: large
+    visible: true
+
+  - type: section
+    content: |
+      # Section test
+      this is a section test with a button, and also a duplicated section test.
+    accessory:
+      type: button
+      label: Google
+      url: https://google.com
 
   - type: separator
     size: large
@@ -23,5 +43,24 @@ items:
 
   - type: text
     content: |
-      # test 2
-      test test test.
+      # Plain test
+      test nothing.
+
+  - type: separator
+    size: large
+    visible: true
+
+  - type: text
+    content: |
+      # Button test
+      there is an action row below.
+
+  - type: action_row
+    components:
+      - type: button
+        label: Google
+        url: https://google.com
+
+      - type: button
+        label: Discord
+        url: https://discord.com

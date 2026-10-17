@@ -1,4 +1,4 @@
-from .button import *
+from schema.button import *
 from .dialogue import *
 from .embed import *
 from .query import *

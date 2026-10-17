@@ -1,0 +1,69 @@
+accent_color: 0
+items:
+  - type: text
+    content: "## 準備好開始探索 🚀"
+  
+  - type: separator
+
+  - type: section
+    content: |
+      ### 💬 從文字開始
+      旅人剛開始會感到不好意思也沒關係，大家其實都相對慢熟，您可以先從文字聊天開始，尋找或等待感興趣的遊戲與話題並嘗試加入。此外，社群也推薦旅人隨時加入公開的語音頻道，即使不說話也沒關係，聽聽大家在聊什麼，慢慢增加熟悉感。
+
+      
+    accessory:
+      type: thumbnail
+      media: https://cdn.discordapp.com/attachments/1491046495812718672/1522680802528333934/over_the_garden_wall.jpg
+
+  - type: action_row
+    components:
+      - type: button
+        label: 小火堆
+        emoji: 🍂
+        url: https://discord.com/channels/1190027756482859038/1190043435009331230
+      - type: button
+        label: 小酒館
+        emoji: 🍺
+        url: https://discord.com/channels/1190027756482859038/1226069418170257503
+  
+  - type: separator
+
+  - type: section
+    content: |
+      ### 🔥 保持活躍
+      社群有獨特的經驗系統用於保持整體活躍，旅人可以通過發送訊息、按表情、在語音掛網等伺服器活動，或進行簽到、玩遊戲累積經驗。社群對活躍度的要求非常寬鬆，旅人無須為此感到壓力；社群很鼓勵大家低能量社交，偶爾露臉也沒問題！
+    accessory:
+      type: thumbnail
+      media: https://cdn.discordapp.com/attachments/1491046495812718672/1508877794401189959/black_cat_onfire.jpg
+
+  - type: action_row
+    components:
+      - type: button
+        label: 每日簽到
+        emoji: 🎁
+        url: https://discord.com/channels/1190027756482859038/1472379536187326464
+
+  - type: separator
+
+  - type: section
+    content: |
+      ### 👻 介紹自己
+      旅人可以從身分組問卷選擇自己感興趣的遊戲與話題，讓大家在舉辦或參加活動時能即時提及您；您還可以套用外觀身分組來裝扮自己，讓自己擁有獨特風格。社群也推薦旅人到自我介紹寫下更多關於自己的事情，讓大家能更好地認識您！
+    accessory:
+      type: thumbnail
+      media: https://cdn.discordapp.com/attachments/1491046495812718672/1509037731475357866/cat_disguise.jpg
+
+  - type: action_row
+    components:
+      - type: button
+        label: 自我介紹
+        emoji: 📋
+        url: https://discord.com/channels/1190027756482859038/1192574716242825267
+      - type: button
+        label: 身分組問卷
+        emoji: 📝
+        url: https://discord.com/channels/1190027756482859038/customize-community
+      - type: button
+        label: 外觀設定
+        emoji: 🎨
+        url: https://discord.com/channels/1190027756482859038/1524700789778677821

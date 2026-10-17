@@ -6,7 +6,6 @@ from cores.logger import logger
 
 from cogs.admins import AnnounceCabinView
 from cogs.admins import AnnounceChannelView
-from cogs.admins import AnnounceManualView
 from cogs.admins import RoleSettingView
 from cogs.admins import AnnounceRuleView
 
@@ -36,7 +35,6 @@ class Elin(commands.Bot):
 
             "cogs.admins.announce_cabin",
             "cogs.admins.announce_channel",
-            "cogs.admins.announce_manual",
             "cogs.admins.announce_rule",
             "cogs.admins.announce",
             "cogs.admins.attendance",
@@ -53,7 +51,6 @@ class Elin(commands.Bot):
 
         self.add_view(AnnounceCabinView())
         self.add_view(AnnounceChannelView())
-        self.add_view(AnnounceManualView())
         self.add_view(RoleSettingView())
         self.add_view(AnnounceRuleView())
 

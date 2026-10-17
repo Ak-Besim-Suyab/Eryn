@@ -4,9 +4,20 @@
 from discord.ext import commands
 from cores.logger import logger
 
+from data.registry import container_data
+
 class BootCog(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
+
+    @commands.command()
+    @commands.is_owner()
+    async def reload_data(self, ctx: commands.Context):
+        try:
+            container_data.load()
+            await ctx.send('✅ 咪！成功重新載入資料')
+        except Exception as e:
+            await ctx.send(f'❌ 咪... 無法重新載入資料：{e}')
 
     @commands.command()
     @commands.is_owner()
@@ -18,7 +29,6 @@ class BootCog(commands.Cog):
             await ctx.send(f'❌ 找不到 cogs.{cog}')
         except Exception as e:
             await ctx.send(f'❌ 咪... 無法重新載入 cogs.{cog}：{e}')
-
 
     @commands.command()
     @commands.is_owner()

@@ -1,6 +1,7 @@
 from discord import ui, SeparatorSpacing
 
-from schema.container import Container, Text, Separator
+from schema.container import Text, Separator, Section
+from schema import Container, ActionRow
 
 def text(item: Text) -> ui.TextDisplay:
     return ui.TextDisplay(content = item.content)
@@ -9,9 +10,30 @@ def seperator(item: Separator) -> ui.Separator:
     spacing = SeparatorSpacing.small if item.size == "small" else SeparatorSpacing.large
     return ui.Separator(spacing = spacing, visible = item.visible)
 
+def section(item: Section) -> ui.Section:
+    match item.accessory.type:
+        case "button":
+            accessory = ui.Button(label = item.accessory.label, url = item.accessory.url, emoji = item.accessory.emoji)
+        case "thumbnail":
+            accessory = ui.Thumbnail(media = item.accessory.media)
+    return ui.Section(item.content, accessory = accessory)
+
+def action_row(item: ActionRow):
+
+    row = ui.ActionRow()
+
+    for component in item.components:
+        match component.type:
+            case "button":
+                row.add_item(ui.Button(label = component.label, url = component.url, emoji = component.emoji))
+
+    return row
+
 builders = {
     "text": text,
-    "separator": seperator
+    "separator": seperator,
+    "section": section,
+    "action_row": action_row,
 }
 
 def build_container(data: Container) -> ui.Container:
