@@ -1,9 +1,26 @@
+#
+# :: accent_color
+#   - 視圖左邊邊框的顏色, 預設為 0 (不顯示)
+#
+# :: items
+#   - 元件清單, 所有 Discord 的 ui.Item 物件都將以清單內的字典格式傳入, 並透過資料物件將其轉換為對應的元件資訊
+#     清內的 `type` 屬性用於判斷元件類別
+#   
+#   ::: type: text - 對應 ui.TextDisplay 元件, content 為文本內容 (預設為空)
+#   ::: type: separator - 對應 ui.Separator 元件, size 為分隔線的大小 (選填), visible 為是否顯示分隔線 (預設為 True)     
+#
+
 accent_color: 0
-items:
+items: 
   - type: text
     content: |
       # test 1
       test test test.
+
+  - type: separator
+    size: large
+    visible: true
+
   - type: text
     content: |
       # test 2
