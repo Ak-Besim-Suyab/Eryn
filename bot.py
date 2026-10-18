@@ -4,10 +4,7 @@ from discord.ext import commands
 from models import init_databases
 from cores.logger import logger
 
-from cogs.admins import AnnounceCabinView
-from cogs.admins import AnnounceChannelView
 from cogs.admins import RoleSettingView
-from cogs.admins import AnnounceRuleView
 
 intents = discord.Intents.default()
 intents.voice_states = True
@@ -33,9 +30,6 @@ class Elin(commands.Bot):
             "cogs.listeners.voice",
             "cogs.listeners.member_event",
 
-            "cogs.admins.announce_cabin",
-            "cogs.admins.announce_channel",
-            "cogs.admins.announce_rule",
             "cogs.admins.announce",
             "cogs.admins.attendance",
             "cogs.admins.boot",
@@ -49,10 +43,7 @@ class Elin(commands.Bot):
         for extension in extensions:
             await self.load_extension(extension)
 
-        self.add_view(AnnounceCabinView())
-        self.add_view(AnnounceChannelView())
         self.add_view(RoleSettingView())
-        self.add_view(AnnounceRuleView())
 
         synced_global = await self.tree.sync()
         logger.info(f'Synced {len(synced_global)} commands to Global')

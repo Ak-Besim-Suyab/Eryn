@@ -1,4 +1,7 @@
+from copy import deepcopy
+
 from lib import file
+
 from cores.logger import logger
 
 from schema.container import Container
@@ -27,4 +30,4 @@ class ContainerData(Data):
         if not data:
             return None
         
-        return Container(**data)
+        return Container(**deepcopy(data))
