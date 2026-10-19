@@ -3,7 +3,7 @@ import random
 from cores import Action
 from utils import cooldown
 
-from cores import event
+from cores import event_bus
 from scripts.data import *
 
 class CommemorateAction(Action):
@@ -23,7 +23,7 @@ class CommemorateAction(Action):
         reward_payload.currency = currency
 
         reward_event = RewardEvent(type=RewardType.LOOT, payload=reward_payload)
-        await event.publish(reward_event)
+        await event_bus.publish(reward_event)
 
         payloads = {
             "experience": experience,

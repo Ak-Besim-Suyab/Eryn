@@ -1,6 +1,8 @@
 import discord
 from discord.ext import commands
 
+import lib # 僅載入
+
 from models import init_databases
 from cores.logger import logger
 

@@ -14,6 +14,8 @@ from game import guide
 
 from views import passport 
 
+from cores import event_bus
+from schema.event import SelectEvent
 
 class InteractionListener(commands.Cog):
     def __init__(self, bot):
@@ -33,6 +35,9 @@ class InteractionListener(commands.Cog):
             values = interaction.data.get("values", [])
             if not values:
                 return
+
+            event = SelectEvent(interaction, values, custom_id)
+            await event_bus.publish(event)
 
             match values[0]:
                 case "tavern_post":

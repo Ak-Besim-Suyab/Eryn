@@ -6,8 +6,7 @@
 #   - 元件清單, 所有 Discord 的 ui.Item 物件都將以清單內的字典格式傳入, 並透過資料物件將其轉換為對應的元件資訊
 #     清內的 `type` 屬性用於判斷元件類別
 #   
-#   ::: type: text - 對應 ui.TextDisplay 元件, content 為文本內容 (預設為空)
-#   ::: type: separator - 對應 ui.Separator 元件, size 為分隔線的大小 (選填), visible 為是否顯示分隔線 (預設為 True)    
+#   ::: type: text - 對應 ui.TextDisplay 元件, content 為文本內容 (預設為空)  
 #   ::: type: section - 對應 ui.Section 元件, content 為文本內容 (預設為空), accessory 為附件 (必須填寫, 否則會報錯, 且只有 button 與 thumbnail 兩種)
 #       
 #   ::: accessory type: button - 對應 ui.Button 元件, label 為按鈕標題 (預設為空), url 為按鈕連結 (預設為空), emoji 為按鈕表情符號 (預設為空)
@@ -16,17 +15,21 @@
 
 accent_color: 0
 items: 
-  - type: section
-    content: |
+    # 該類型對應 ui.Section 元件
+  - type: section  
+    # 文本內容 (預設為空字串)
+    content: | 
       # Section test
       this is a section test with a thumbnail.
+    # 元件附件, 由於 section 為必定附帶附件的元件, 必須填寫任一附件否則該元件將會報錯, 只有單純的文本請改用 text
     accessory:
+    # 附件種類, 僅支持 button 和 thumbnail, 且只能擇一項目填寫無法同時存在
       type: thumbnail
       media: https://cdn.discordapp.com/attachments/1491046495812718672/1509438153444819145/coffee_cropped.png
 
-  - type: separator
-    size: large
-    visible: true
+  - type: separator # 對應 ui.Separator 元件
+    size: large # 分隔線的大小 (預設為 large, 可以設定為 small, 選填)
+    visible: true # 是否顯示分隔線 (預設為 true, 可以設定為 false, 選填)
 
   - type: section
     content: |
@@ -38,17 +41,13 @@ items:
       url: https://google.com
 
   - type: separator
-    size: large
-    visible: true
 
-  - type: text
-    content: |
+  - type: text # 對應 ui.TextDisplay 元件
+    content: | # 文本內容
       # Plain test
       test nothing.
 
   - type: separator
-    size: large
-    visible: true
 
   - type: text
     content: |
@@ -64,3 +63,25 @@ items:
       - type: button
         label: Discord
         url: https://discord.com
+
+  - type: separator
+
+  - type: text
+    content: |
+      # Select test
+      there is an select in action row below.
+
+  - type: select
+    placeholder: Please select an option!
+    min_values: 1
+    max_values: 1
+    custom_id: select_unique_role
+    options:
+      - label: Option 1
+        description: This is Option 1
+        emoji: 🎉
+        value: baked_potato
+      - label: Option 2
+        description: This is Option 2
+        emoji: 🎉
+        value: 2

@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 
-from .select import Select
+from schema.select import Select
 from schema.button import Button
 
 @dataclass

@@ -2,6 +2,7 @@ from dataclasses import dataclass, field
 
 from schema.button import Button
 from schema.action_row import ActionRow
+from schema.select import Select
 
 @dataclass
 class Text:
@@ -60,5 +61,7 @@ class Container:
                         self.items[index] = Section(**item)
                     case "action_row":
                         self.items[index] = ActionRow(**item)
+                    case "select":
+                        self.items[index] = Select(**item)
                     case _:
                         raise ValueError(f"items[{index}] 收到不支援的元件類型: '{type_name}'")
