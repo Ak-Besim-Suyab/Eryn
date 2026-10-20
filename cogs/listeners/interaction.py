@@ -36,8 +36,8 @@ class InteractionListener(commands.Cog):
             if not values:
                 return
 
-            event = SelectEvent(interaction, values, custom_id)
-            await event_bus.publish(event)
+            event = SelectEvent(id = custom_id, interaction = interaction, values = values, custom_id = custom_id)
+            await event_bus.publish(event = event, event_name = custom_id)
 
             match values[0]:
                 case "tavern_post":

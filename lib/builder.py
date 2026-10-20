@@ -12,21 +12,22 @@ def seperator(item: Separator) -> ui.Separator:
     return ui.Separator(spacing = spacing, visible = item.visible)
 
 def section(item: Section) -> ui.Section:
+
     match item.accessory.type:
         case "button":
-            accessory = ui.Button(label = item.accessory.label, url = item.accessory.url, emoji = item.accessory.emoji)
+            accessory = ui.Button(label=item.accessory.label, url=item.accessory.url, emoji=item.accessory.emoji)
         case "thumbnail":
-            accessory = ui.Thumbnail(media = item.accessory.media)
+            accessory = ui.Thumbnail(media=item.accessory.media)
+
     return ui.Section(item.content, accessory = accessory)
 
 def action_row(item: ActionRow) -> ui.ActionRow:
 
     row = ui.ActionRow()
-
     for component in item.components:
         match component.type:
             case "button":
-                row.add_item(ui.Button(label = component.label, url = component.url, emoji = component.emoji))
+                row.add_item(ui.Button(label=component.label, url=component.url, emoji=component.emoji))
 
     return row
 
@@ -35,7 +36,6 @@ def select(item: Select) -> ui.ActionRow:
     row = ui.ActionRow()
 
     options = []
-
     for option in item.options:
         o = discord.SelectOption(
             label = option.label,

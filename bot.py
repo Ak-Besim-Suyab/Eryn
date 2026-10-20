@@ -1,12 +1,10 @@
 import discord
 from discord.ext import commands
 
-import lib # 僅載入
+from lib import select as select_handler
 
 from models import init_databases
 from cores.logger import logger
-
-from cogs.admins import RoleSettingView
 
 intents = discord.Intents.default()
 intents.voice_states = True
@@ -25,6 +23,7 @@ class Elin(commands.Bot):
             "cogs.setting",
             "cogs.passport",
 
+            "cogs.listeners.emoji_dice",
             "cogs.listeners.interaction",
             "cogs.listeners.message",
             "cogs.listeners.reaction",
@@ -36,7 +35,6 @@ class Elin(commands.Bot):
             "cogs.admins.attendance",
             "cogs.admins.boot",
             "cogs.admins.house",
-            "cogs.admins.role_setting",
 
             "cogs.menus.inventory",
             "cogs.menus.leaderboard",
@@ -45,7 +43,8 @@ class Elin(commands.Bot):
         for extension in extensions:
             await self.load_extension(extension)
 
-        self.add_view(RoleSettingView())
+        # register event
+        select_handler.register() 
 
         synced_global = await self.tree.sync()
         logger.info(f'Synced {len(synced_global)} commands to Global')

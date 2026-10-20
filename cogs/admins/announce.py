@@ -54,5 +54,11 @@ class AnnounceCog(commands.Cog):
         view = ui.LayoutView(timeout = None).add_item(builder.build_container(container_data.get("community_rule")))
         await ctx.send(view = view)
 
+    @announce.command(name="role_book")
+    @commands.is_owner()
+    async def role_book(self, ctx: commands.Context):
+        view = ui.LayoutView(timeout = None).add_item(builder.build_container(container_data.get("role_book")))
+        await ctx.send(view = view)
+
 async def setup(bot: commands.Bot):
     await bot.add_cog(AnnounceCog(bot))

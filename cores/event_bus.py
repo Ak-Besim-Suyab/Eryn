@@ -9,16 +9,13 @@ __all__ = ["subscribe", "publish"]
 
 class EventBus:
     def __init__(self):
-        self._listeners: dict[type, list[Callable]] = {}
+        self._listeners: dict[tuple[type, str], list[Callable]] = {}
 
-    def subscribe(self, event_type: type, listener: Callable):
-        if event_type not in self._listeners:
-            self._listeners[event_type] = []
-        self._listeners[event_type].append(listener)
+    def subscribe(self, event_type: type, event_name: str, listener: Callable):
+        self._listeners.setdefault((event_type, event_name), []).append(listener)
 
-    async def publish(self, event: Any):
-        event_type = type(event)
-        for listener in self._listeners.get(event_type, []):
+    async def publish(self, event: Any, event_name: str = ""):
+        for listener in self._listeners.get((type(event), event_name), []):
             if inspect.iscoroutinefunction(listener):
                 await listener(event)
             else:

@@ -22,6 +22,9 @@ class Data:
     def get(self, name: str):
         pass
 
+    def find(self, **filters):
+        pass
+
 class ContainerData(Data):
     def __init__(self, path: str = "data/containers"):
         super().__init__(path)
@@ -46,3 +49,6 @@ class RoleData(Data):
 
     def get_all(self):
         return [Role(**deepcopy(data)) for data in self._data.values()]
+
+    def find(self, **filters) -> list[Role]:
+        return [Role(**deepcopy(data)) for data in self._data.values() if all(data.get(key) == value for key, value in filters.items())]

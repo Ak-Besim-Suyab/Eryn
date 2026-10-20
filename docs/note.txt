@@ -105,3 +105,23 @@ button = discord.ui.Button()
 
 職責劃分:
 action.execute 本身只計算執行這個動作的邏輯，不會包含結算與輸出訊息 (這兩個計算派出去給別的邏輯處理)
+
+
+"""
+筆記:
+    ui.TextDisplay:: 容器元件，用於印出文本。
+        content:: 要印出的文本。
+
+    ui.Separator:: 容器元件，用於分隔不同區塊的內容。
+        visible:: 設定分隔線是否可見。
+        spacing:: 設定分隔線與其他元件之間的距離。
+
+    ui.Section:: 容器元件，用於插入其他容器元件以及 Button, Thumbnail 元件。
+        accessory:: 設定 Section 右側的 Button, Thumbnail 元件。
+
+    ui.ActionRow:: 用於水平排列 Button 元件的容器。
+
+    ui.Container:: 用於容納其他元件的容器，可以用來組織和排列內部的元件。
+        Container.accent_color:: 設定容器左邊邊框的顏色。
+        Container.spoiler:: 設定容器內文本是否為暴雷內容。
+"""

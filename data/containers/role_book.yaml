@@ -1,0 +1,452 @@
+accent_color: 0
+items:
+  - type: text
+    content: |
+      ## 裝飾身分組設定
+      這裡有許多特別的裝飾身分組提供選擇，旅人可以自由搭配屬於自己的獨特暱稱！
+
+  - type: separator
+
+  - type: text
+    content: |
+      ### <:berry_pie:1484226514336612472> 請選擇想套用的圖案身分組
+      > 請注意：同類型的身分組同時只會套用 1 個。
+
+  - type: select
+    placeholder: 主題：麥塊 Minecraft
+    custom_id: select_minecraft_role
+    options:
+      - label: 馬鈴薯
+        description: 選擇後會套用身分組
+        emoji: <:minecraft_potato:1484222538606313473>
+        value: potato
+
+      - label: 烤馬鈴薯
+        description: 選擇後會套用身分組
+        emoji: <:minecraft_baked_potato:1484222559997132920>
+        value: baked_potato
+
+      - label: 毒馬鈴薯
+        description: 選擇後會套用身分組
+        emoji: <:minecraft_poison_potato:1484222575910322316>
+        value: poisoned_potato
+
+      - label: 熱帶魚
+        description: 選擇後會套用身分組
+        emoji: <:tropical_fish:1538838009821134858>
+        value: tropical_fish
+
+      - label: 河豚
+        description: 選擇後會套用身分組
+        emoji: <:minecraft_pufferfish:1484222619439071363>
+        value: pufferfish
+
+  - type: select
+    placeholder: 主題：最終幻想 Final Fantasy
+    custom_id: select_finalfantasy_role
+    options:
+      - label: 在線
+        description: 選擇後會套用身分組
+        emoji: <:ffxiv_online:1484220614284673024>
+        value: online
+
+      - label: 離線
+        description: 選擇後會套用身分組
+        emoji: <:ffxiv_offline:1484220631548563526>
+        value: offline
+
+      - label: 掛機
+        description: 選擇後會套用身分組
+        emoji: <:ffxiv_afk:1484220653589758022>
+        value: afk
+
+      - label: 導師
+        description: 選擇後會套用身分組
+        emoji: <:ffxiv_mentor:1484220305617715300>
+        value: mentor
+
+      - label: 豆芽
+        description: 選擇後會套用身分組
+        emoji: <:ffxiv_sprout:1484192636351938621>
+        value: sprout
+
+      - label: 易傷
+        description: 選擇後會套用身分組
+        emoji: <:ffxiv_vulnerability_up:1484221754665734154>
+        value: vulnerability_up
+
+      - label: 瀕死
+        description: 選擇後會套用身分組
+        emoji: <:ffxiv_brink_to_death:1484221453485215774>
+        value: brink_to_death
+
+      - label: 降傷
+        description: 選擇後會套用身分組
+        emoji: <:ffxiv_damage_down:1484221509957320704>
+        value: damage_down
+
+      - label: 加重
+        description: 選擇後會套用身分組
+        emoji: <:ffxiv_heavy:1484221526617358498>
+        value: heavy
+
+      - label: 死宣
+        description: 選擇後會套用身分組
+        emoji: <:ffxiv_doom:1484221495801548963>
+        value: doom
+
+      - label: 松鼠
+        description: 選擇後會套用身分組
+        emoji: <:ffxiv_squirrel:1484221777000398868>
+        value: squirrel_prayer
+
+      - label: 犬神
+        description: 選擇後會套用身分組
+        emoji: <:ffxiv_inugami:1484221799192465610>
+        value: inugami_favor
+
+      - label: 紅貓
+        description: 選擇後會套用身分組
+        emoji: <:ffxiv_tia:1484222000070266951>
+        value: graha_tia
+
+      - label: 灰石
+        description: 選擇後會套用身分組
+        emoji: <:ffxiv_greystone:1484222083906011229>
+        value: greystone
+
+  - type: select
+    placeholder: 主題：皮克敏 Pikmin
+    custom_id: select_pikmin_role
+    options:
+      - label: 紅色皮克敏
+        description: 選擇後會套用身分組
+        emoji: <:red_pikmin:1532614703367454742>
+        value: red_pikmin
+
+      - label: 藍色皮克敏
+        description: 選擇後會套用身分組
+        emoji: <:blue_pikmin:1532618030301843466>
+        value: blue_pikmin
+
+      - label: 黃色皮克敏
+        description: 選擇後會套用身分組
+        emoji: <:yellow_pikmin:1532618044616999092>
+        value: yellow_pikmin
+
+      - label: 紫色皮克敏
+        description: 選擇後會套用身分組
+        emoji: <:purple_pikmin:1532621094240911360>
+        value: purple_pikmin
+
+      - label: 白色皮克敏
+        description: 選擇後會套用身分組
+        emoji: <:white_pikmin:1532621051370934432>
+        value: white_pikmin
+
+      - label: 岩石皮克敏
+        description: 選擇後會套用身分組
+        emoji: <:rock_pikmin:1532621128487403631>
+        value: rock_pikmin
+
+      - label: 羽翅皮克敏
+        description: 選擇後會套用身分組
+        emoji: <:winged_pikmin:1532621174524215377>
+        value: winged_pikmin
+
+      - label: 冰凍皮克敏
+        description: 選擇後會套用身分組
+        emoji: <:ice_pikmin:1532621199450837002>
+        value: ice_pikmin
+
+  - type: select
+    placeholder: 主題：下午茶 Afternoon Tea
+    custom_id: select_afternoon_tea_role
+    options:
+      - label: 水果塔
+        description: 選擇後會套用身分組
+        emoji: <:fruit_tart:1484226495827284121>
+        value: fruit_tart
+
+      - label: 檸檬派
+        description: 選擇後會套用身分組
+        emoji: <:lemon_pie:1484226540572114994>
+        value: lemon_pie
+
+      - label: 莓果派
+        description: 選擇後會套用身分組
+        emoji: <:berry_pie:1484226514336612472>
+        value: berry_pie
+
+      - label: 生乳捲
+        description: 選擇後會套用身分組
+        emoji: <:vanilla_roll:1484226684440809524>
+        value: vanilla_roll
+
+      - label: 草莓蛋糕捲
+        description: 選擇後會套用身分組
+        emoji: <:strawberry_roll:1484226760429146293>
+        value: strawberry_roll
+
+      - label: 抹茶生乳捲
+        description: 選擇後會套用身分組
+        emoji: <:matcha_roll:1484226711129292901>
+        value: matcha_roll
+
+      - label: 蒙布朗
+        description: 選擇後會套用身分組
+        emoji: <:mont_blanc:1484226628279341226>
+        value: mont_blanc
+
+      - label: 黑森林蛋糕
+        description: 選擇後會套用身分組
+        emoji: <:black_forest:1484226829530431569>
+        value: black_forest
+
+      - label: 巧克力蛋糕
+        description: 選擇後會套用身分組
+        emoji: <:chocolate_cake:1484226816313921546>
+        value: chocolate_cake
+
+      - label: 奶油吐司
+        description: 選擇後會套用身分組
+        emoji: <:buttered_toast:1484226575816855714>
+        value: buttered_toast
+
+      - label: 鬆餅
+        description: 選擇後會套用身分組
+        emoji: <:pancake:1484226874933645362>
+        value: pancake
+
+      - label: 布丁
+        description: 選擇後會套用身分組
+        emoji: <:pudding:1484226888296824852>
+        value: pudding
+
+      - label: 冰淇淋
+        description: 選擇後會套用身分組
+        emoji: <:ice_cream:1484226946224226374>
+        value: ice_cream
+
+      - label: 草莓甜甜圈
+        description: 選擇後會套用身分組
+        emoji: <:strawberry_donut:1484227008274763776>
+        value: strawberry_donut
+
+  - type: select
+    placeholder: 主題：噗浪 Plurk
+    custom_id: select_plurk_role
+    options:
+      - label: 狐寶
+        description: 選擇後會套用身分組
+        emoji: <:fox_1_baby_1:1267438830546583585>
+        value: baby_fox
+
+      - label: 苦瓜
+        description: 選擇後會套用身分組
+        emoji: <:fox_2_baby_2:1267438882002178058>
+        value: baby_white_fox
+
+      - label: 茄子
+        description: 選擇後會套用身分組
+        emoji: <:fox_3_baby:1267438902738948096>
+        value: baby_black_fox
+
+      - label: 狼寶
+        description: 選擇後會套用身分組
+        emoji: <:fox_4_baby:1267438914692714517>
+        value: baby_wolf
+
+      - label: 卡豹
+        description: 選擇後會套用身分組
+        emoji: <:leopard:1484304818725191942>
+        value: leopard
+
+      - label: 鱷魚
+        description: 選擇後會套用身分組
+        emoji: <:crocdile_2:1260135154421338112>
+        value: crocodile
+
+      - label: 粉蛙
+        description: 選擇後會套用身分組
+        emoji: <:pink_frog_hope:1467435693478248685>
+        value: pink_frog
+
+      - label: 狗勾
+        description: 選擇後會套用身分組
+        emoji: <:pome_angry:1267485736039612447>
+        value: pome
+
+      - label: 鯊鯊
+        description: 選擇後會套用身分組
+        emoji: <:shark_pet:1467438417406070948>
+        value: shark
+
+  - type: separator
+
+  - type: text
+    content: |
+      ### <:rudbeckia:1467093280071094333> 請選擇想套用的顏色身分組
+      > 請注意：同類型的身分組同時只會套用 1 個。
+
+  - type: select
+    placeholder: 主題：花朵 Flower
+    custom_id: select_flower_role
+    options:
+      - label: 玫瑰 Rose
+        description: 選擇後會套用身分組
+        emoji: <:rose:1466951205522768119>
+        value: rose
+
+      - label: 梅花 Mume
+        description: 選擇後會套用身分組
+        emoji: <:mume:1466951285516538064>
+        value: mume
+
+      - label: 櫻花 Sakura
+        description: 選擇後會套用身分組
+        emoji: <:sakura:1466961210984632501>
+        value: sakura
+
+      - label: 繡球花 Hydrangea
+        description: 選擇後會套用身分組
+        emoji: <:hydrangea:1467100471788441681>
+        value: hydrangea
+
+      - label: 紫丁香 Lilac
+        description: 選擇後會套用身分組
+        emoji: <:lilac:1466968233969188915>
+        value: lilac
+
+      - label: 鼠尾草 Clary Sage
+        description: 選擇後會套用身分組
+        emoji: <:clary_sage:1466951955808129164>
+        value: clary_sage
+
+      - label: 勿忘草 Forget Me Not
+        description: 選擇後會套用身分組
+        emoji: <:forget_me_not:1466952365918654738>
+        value: forget_me_not
+
+      - label: 金光菊 Rudbeckia
+        description: 選擇後會套用身分組
+        emoji: <:rudbeckia:1467093280071094333>
+        value: rudbeckia
+
+      - label: 幸運草 Clover
+        description: 選擇後會套用身分組
+        emoji: <:clover:1467266508941168800>
+        value: clover
+
+  - type: select
+    placeholder: 主題：食物 Food
+    custom_id: select_food_role
+    options:
+      - label: 拿鐵 Latte
+        description: 選擇後會套用身分組
+        emoji: <:latte:1538825725971533924>
+        value: latte
+
+      - label: 西瓜 Watermelon
+        description: 選擇後會套用身分組
+        emoji: <:watermelon:1539354918098444328>
+        value: watermelon
+
+  - type: select
+    placeholder: 主題：漸層 Gradient
+    custom_id: select_gradient_role
+    options:
+      - label: 稜彩 Prism
+        description: 選擇後會套用身分組
+        emoji: <:prism:1508384924628025374>
+        value: prism
+
+      - label: 極光 Aurora
+        description: 選擇後會套用身分組
+        emoji: <:aurora:1508397924030222357>
+        value: aurora
+
+      - label: 熱帶 Tropic
+        description: 選擇後會套用身分組
+        emoji: <:tropic:1508397718362394655>
+        value: tropic
+
+      - label: 薄暮 Twilight
+        description: 選擇後會套用身分組
+        emoji: <:twilight:1508384118399045773>
+        value: twilight
+
+      - label: 夏 Summer
+        description: 選擇後會套用身分組
+        emoji: <:summer:1508666362388549632>
+        value: summer
+
+      - label: 秋 Autumn
+        description: 選擇後會套用身分組
+        emoji: <:autumn:1508666378796929044>
+        value: autumn
+
+      - label: 冬 Winter
+        description: 選擇後會套用身分組
+        emoji: <:winter:1508666398086533260>
+        value: winter
+
+      - label: 曉 Dawn
+        description: 選擇後會套用身分組
+        emoji: <:dawn:1508666662734266418>
+        value: dawn
+
+      - label: 霧 Mist
+        description: 選擇後會套用身分組
+        emoji: <:mist:1508666674486841484>
+        value: mist
+
+      - label: 餘暉 Afterglow
+        description: 選擇後會套用身分組
+        emoji: <:afterglow:1508666685723377744>
+        value: afterglow
+
+      - label: 灰燼 Ash
+        description: 選擇後會套用身分組
+        emoji: <:ash:1508666949045981325>
+        value: ash
+
+      - label: 鎏金 Niello
+        description: 選擇後會套用身分組
+        emoji: <:niello:1508666958600732722>
+        value: niello
+
+      - label: 硫磺 Sulphur
+        description: 選擇後會套用身分組
+        emoji: <:sulphur:1538824980719079594>
+        value: sulphur
+
+      - label: 深淵 Abyss
+        description: 選擇後會套用身分組
+        emoji: <:abyss:1508666987172335686>
+        value: abyss
+
+      - label: 緋紅 Crimson
+        description: 選擇後會套用身分組
+        emoji: <:crimson:1508666976283918366>
+        value: crimson
+
+      - label: 霓虹 Neon
+        description: 選擇後會套用身分組
+        emoji: <:neon:1538825698280603699>
+        value: neon
+
+      - label: 賽博龐克 Cyberpunk
+        description: 選擇後會套用身分組
+        emoji: <:cyberpunk:1538821560314372186>
+        value: cyberpunk
+
+      - label: 微光 Shimmer
+        description: 選擇後會套用身分組
+        emoji: <:shimmer:1538825668933062727>
+        value: shimmer
+
+      - label: 復古 Retro
+        description: 選擇後會套用身分組
+        emoji: <:retro:1538825680941355038>
+        value: retro
