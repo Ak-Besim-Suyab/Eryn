@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 
 from cores import logger
-from utils import time
+from lib import time
 
 notice_channel_id = 1198867692497674241
 

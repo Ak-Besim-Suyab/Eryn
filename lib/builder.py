@@ -1,17 +1,18 @@
 import discord
 from discord import ui, SeparatorSpacing
 
-from schema.container import Text, Separator, Section
-from schema import Container, ActionRow, Select
+from schema import Text, Separator, Section, Container, ActionRow, Select
+from lib.utils import SafeDict
 
-def text(item: Text) -> ui.TextDisplay:
-    return ui.TextDisplay(content = item.content)
+# 建構生產器元件
+def text(item: Text, **kwargs) -> ui.TextDisplay:
+    return ui.TextDisplay(content = item.content.format_map(SafeDict(kwargs)))
 
-def seperator(item: Separator) -> ui.Separator:
+def seperator(item: Separator, **kwargs) -> ui.Separator:
     spacing = SeparatorSpacing.small if item.size == "small" else SeparatorSpacing.large
     return ui.Separator(spacing = spacing, visible = item.visible)
 
-def section(item: Section) -> ui.Section:
+def section(item: Section, **kwargs) -> ui.Section:
 
     match item.accessory.type:
         case "button":
@@ -19,9 +20,9 @@ def section(item: Section) -> ui.Section:
         case "thumbnail":
             accessory = ui.Thumbnail(media=item.accessory.media)
 
-    return ui.Section(item.content, accessory = accessory)
+    return ui.Section(item.content.format_map(SafeDict(kwargs)), accessory = accessory)
 
-def action_row(item: ActionRow) -> ui.ActionRow:
+def action_row(item: ActionRow, **kwargs) -> ui.ActionRow:
 
     row = ui.ActionRow()
     for component in item.components:
@@ -31,7 +32,7 @@ def action_row(item: ActionRow) -> ui.ActionRow:
 
     return row
 
-def select(item: Select) -> ui.ActionRow:
+def select(item: Select, **kwargs) -> ui.ActionRow:
 
     row = ui.ActionRow()
 
@@ -56,6 +57,7 @@ def select(item: Select) -> ui.ActionRow:
 
     return row
 
+# 建構生產器元件字典
 builders = {
     "text": text,
     "separator": seperator,
@@ -64,7 +66,8 @@ builders = {
     "select": select,
 }
 
-def build_container(data: Container) -> ui.Container:
+# 建構生產器
+def build_container(data: Container, **kwargs) -> ui.Container:
     container = ui.Container()
     container.accent_color = data.accent_color
 
@@ -77,7 +80,7 @@ def build_container(data: Container) -> ui.Container:
             raise ValueError(f"items[{index}] 有未知的元件類型: {type_name}")
 
         try:
-            container.add_item(builder(item_object))
+            container.add_item(builder(item_object, **kwargs))
         except KeyError as e:
             raise ValueError(f"items[{index}] ({type_name}) 缺少必要的屬性: {e}")
         

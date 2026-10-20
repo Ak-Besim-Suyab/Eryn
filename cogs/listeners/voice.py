@@ -8,7 +8,7 @@ from discord.ext import commands
 from game.systems import LevelSystem
 
 from cores import logger
-from utils import time
+from lib import time
 
 notice_channel_id = 1198867692497674241
 
