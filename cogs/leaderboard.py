@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 from discord import app_commands
 
-from game.menus import LeaderboardMenu
+from lib.leaderboard import LeaderboardMenu
 
 class Leaderboard(commands.Cog):
     def __init__(self, bot):

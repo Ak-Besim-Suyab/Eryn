@@ -1,5 +1,5 @@
 import discord
-from game.model import Player
+from models import Player
 
 class LeaderboardMenu:
     @staticmethod

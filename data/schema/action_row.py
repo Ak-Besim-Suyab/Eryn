@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from schema.button import Button
+from data.schema.button import Button
 
 @dataclass
 class ActionRow:

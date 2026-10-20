@@ -1,7 +1,5 @@
+""" 這個函式庫用於讀取指定位置的單筆或所有資料檔案.
 """
-本函式庫用於讀取目標 directory 所有 json, yaml, yml 檔案, 讀取後會回傳 dict, key 為檔案名, value 為檔案內容
-"""
-
 import json
 import yaml
 from pathlib import Path
@@ -10,7 +8,8 @@ from cores.logger import logger
 filenames = {".json", ".yaml", ".yml"}
 
 def load_dir(path: str) -> dict[str, dict]:
-
+    """ 讀取目標資料夾底下的所有檔案, 支援 `json, yaml, yml` 格式, 讀取完畢後回傳字典, `key` 為檔案名稱, `value` 為檔案內容.
+    """
     folder = Path(path)
     if not folder.exists(): 
         raise FileNotFoundError(f"錯誤，找不到資料夾: {path}")

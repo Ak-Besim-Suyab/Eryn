@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 from discord import app_commands
 
-from views import passport
+from lib import information
 
 class PassportCog(commands.Cog):
     def __init__(self, bot):
@@ -16,7 +16,9 @@ class PassportCog(commands.Cog):
             await interaction.response.send_message("只有管理員才能查看別人的護照喔！", ephemeral=True)
             return
 
-        await passport.show(interaction, member)
+        view = await information.get_information_view(interaction, member)
+
+        await interaction.response.send_message(view = view, ephemeral = True)
 
 async def setup(bot: commands.Bot):
     await bot.add_cog(PassportCog(bot))

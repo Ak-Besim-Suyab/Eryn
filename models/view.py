@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 
-from schema.select import Select
-from schema.button import Button
+from data.schema.select import Select
+from data.schema.button import Button
 
 @dataclass
 class View:

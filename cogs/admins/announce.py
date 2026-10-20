@@ -18,11 +18,28 @@ class AnnounceCog(commands.Cog):
         if ctx.invoked_subcommand is None:
             await ctx.send("請使用 !announce + 子指令呼叫方法", ephemeral=True)
 
+    # 測試項目 -------------------------------------
+
     @announce.command(name="template")
     @commands.is_owner()
     async def template(self, ctx: commands.Context):
         view = ui.LayoutView(timeout = None).add_item(builder.build_container(container_data.get("template")))
         await ctx.send(view = view)
+
+    @announce.command(name="template_param")
+    @commands.is_owner()
+    async def template_param(self, ctx: commands.Context):
+        
+        param = {
+            "name": "Elin",
+            "level": 1,
+            "experience": 100
+        }
+
+        view = ui.LayoutView(timeout = None).add_item(builder.build_container(container_data.get("template_param"), **param))
+        await ctx.send(view = view)
+
+    # ---------------------------------------------
 
     @announce.command(name="travel_guide")
     @commands.is_owner()

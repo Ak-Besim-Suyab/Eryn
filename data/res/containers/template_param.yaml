@@ -1,0 +1,18 @@
+
+# Container Builder 參數傳入測試
+#
+# 本測試目的在於確認參數傳入是否正確, 以及未傳入或傳入錯誤的參數時訊息是否仍能正常顯示, 以揭示與找查未正確傳入的參數為除錯方向
+
+accent_color: 0
+items:
+  - type: text
+    content: "## Hello, {name} !"
+  
+  - type: separator
+    size: small
+
+  - type: text
+    content: |
+      Test 1: Your level is {level}, and your experience is {experience}.
+
+      Test 2: There is a {random_param} we do not have, but it should be correctly displayed anyway instead of raising an error.

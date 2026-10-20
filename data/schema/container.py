@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 
-from schema.button import Button
-from schema.action_row import ActionRow
-from schema.select import Select
+from data.schema.button import Button
+from data.schema.action_row import ActionRow
+from data.schema.select import Select
 
 @dataclass
 class Text:

@@ -3,7 +3,7 @@ import discord
 from cores import event_bus
 from cores import logger
 
-from schema.event import SelectEvent
+from data.schema.event import SelectEvent
 
 from data.registry import role_data
 

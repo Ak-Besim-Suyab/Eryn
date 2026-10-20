@@ -22,6 +22,8 @@ class Elin(commands.Bot):
         extensions = [
             "cogs.setting",
             "cogs.passport",
+            "cogs.inventory",
+            "cogs.leaderboard",
 
             "cogs.listeners.emoji_dice",
             "cogs.listeners.interaction",
@@ -35,9 +37,6 @@ class Elin(commands.Bot):
             "cogs.admins.attendance",
             "cogs.admins.boot",
             "cogs.admins.house",
-
-            "cogs.menus.inventory",
-            "cogs.menus.leaderboard",
         ]
 
         for extension in extensions:

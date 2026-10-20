@@ -1,7 +1,7 @@
-from schema.button import *
+from data.schema.button import *
 from .embed import *
 from .query import *
-from schema.select import *
+from data.schema.select import *
 from .view import *
 
 # -----------------------------------------------------------

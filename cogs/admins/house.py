@@ -4,7 +4,7 @@ from discord import app_commands
 
 from cores import logger
 
-from systems import house
+from lib import house
 
 class HouseCog(commands.Cog):
     def __init__(self, bot):

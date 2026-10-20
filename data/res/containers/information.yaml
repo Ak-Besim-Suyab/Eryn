@@ -1,0 +1,18 @@
+accent_color: 0
+items:
+  - type: section
+    content: |
+      ## {display_name} 的護照
+      > - **活躍等級 {level}**
+      > - **活躍經驗值 {experience} / {required_experience}**
+      ### 加入時間
+      > - **{join_time}**
+      ### 統計
+      > - **累計簽到：{total_daily} 天**
+      > - **累計發送訊息：{total_message} 則**
+      > - **累計語音時間：{total_voice} 分**
+      ### 持有小屋
+      {houses}
+    accessory:
+      type: thumbnail
+      media: "{display_avator}"

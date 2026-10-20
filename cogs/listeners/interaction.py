@@ -8,14 +8,8 @@
 import discord
 from discord.ext import commands
 
-from game.systems import attendance
-from game.menus import LeaderboardMenu
-from game import guide
-
-from views import passport 
-
 from cores import event_bus
-from schema.event import SelectEvent
+from data.schema.event import SelectEvent
 
 class InteractionListener(commands.Cog):
     def __init__(self, bot):
@@ -38,37 +32,6 @@ class InteractionListener(commands.Cog):
 
             event = SelectEvent(id = custom_id, interaction = interaction, values = values, custom_id = custom_id)
             await event_bus.publish(event = event, event_name = custom_id)
-
-            match values[0]:
-                case "tavern_post":
-                    return await guide.tavern_post(interaction)
-                case "tavern_discussion":
-                    return await guide.tavern_discussion(interaction)
-                case "tavern_channel":
-                    return await guide.tavern_channel(interaction)
-                case _:
-                    pass
-        
-        if custom_id.startswith("attendance:"):
-            data = custom_id.split(":")
-            match data[1]:
-                case "claim":
-                    await attendance.claim(interaction)
-                    return
-                case "stat":
-                    await passport.show(interaction)
-                    return
-                case "leaderboard":
-                    await LeaderboardMenu.show(interaction)
-                    return
-        
-        if custom_id.startswith("guide:"):
-            data = custom_id.split(":")
-            match data[1]:
-                case "attendance":
-                    await guide.attendance(interaction)
-                    return
-
                 
-async def setup(bot):
+async def setup(bot: commands.Bot):
     await bot.add_cog(InteractionListener(bot))

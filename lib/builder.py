@@ -1,7 +1,8 @@
 import discord
 from discord import ui, SeparatorSpacing
 
-from schema import Text, Separator, Section, Container, ActionRow, Select
+from data.schema import Text, Separator, Section, Container, ActionRow, Select
+
 from lib.utils import SafeDict
 
 # 建構生產器元件
@@ -18,7 +19,7 @@ def section(item: Section, **kwargs) -> ui.Section:
         case "button":
             accessory = ui.Button(label=item.accessory.label, url=item.accessory.url, emoji=item.accessory.emoji)
         case "thumbnail":
-            accessory = ui.Thumbnail(media=item.accessory.media)
+            accessory = ui.Thumbnail(media=item.accessory.media.format_map(SafeDict(kwargs)))
 
     return ui.Section(item.content.format_map(SafeDict(kwargs)), accessory = accessory)
 
