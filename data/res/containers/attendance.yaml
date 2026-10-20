@@ -1,0 +1,40 @@
+accent_color: 0
+items:
+  - type: text
+    content: "## 每日簽到"
+  
+  - type: section
+    content: |
+      歡迎使用簽到簿，旅人可以在每天 12 點過後來這裡簽到喔！
+      咪祝你有美好的一天！
+
+      > 點擊「狀態」可以查看旅人的角色資訊
+      > 點擊「排名」可以查看等級與經驗值排行榜
+    accessory:
+      type: thumbnail
+      media: https://cdn.discordapp.com/attachments/1491046495812718672/1523602728490766446/kiki_with_gf.png
+
+  - type: separator
+
+  - type: action_row
+    components:
+      - type: button
+        style: primary
+        label: 簽到
+        emoji: 🎁
+        custom_id: attendance_claim
+
+      - type: button
+        style: secondary
+        label: 狀態
+        custom_id: attendance_status
+      
+      - type: button
+        style: secondary
+        label: 排名
+        custom_id: attendance_rank
+      
+      - type: button
+        style: secondary
+        label: 說明
+        custom_id: attendance_guide

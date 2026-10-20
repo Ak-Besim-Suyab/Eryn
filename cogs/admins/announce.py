@@ -5,7 +5,7 @@ from data import container_data
 from lib import builder
 
 """
-此元件用於管理公告訊息
+此元件用於管理所有公告訊息
 """
 
 class AnnounceCog(commands.Cog):
@@ -75,6 +75,12 @@ class AnnounceCog(commands.Cog):
     @commands.is_owner()
     async def role_book(self, ctx: commands.Context):
         view = ui.LayoutView(timeout = None).add_item(builder.build_container(container_data.get("role_book")))
+        await ctx.send(view = view)
+
+    @announce.command(name="attendance")
+    @commands.is_owner()
+    async def attendance(self, ctx: commands.Context):
+        view = ui.LayoutView(timeout = None).add_item(builder.build_container(container_data.get("attendance")))
         await ctx.send(view = view)
 
 async def setup(bot: commands.Bot):

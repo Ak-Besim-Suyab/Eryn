@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 
 from lib import select as select_handler
+from lib import button as button_handler
 
 from models import init_databases
 from cores.logger import logger
@@ -34,7 +35,6 @@ class Elin(commands.Bot):
             "cogs.listeners.member_event",
 
             "cogs.admins.announce",
-            "cogs.admins.attendance",
             "cogs.admins.boot",
             "cogs.admins.house",
         ]
@@ -44,6 +44,7 @@ class Elin(commands.Bot):
 
         # register event
         select_handler.register() 
+        button_handler.register()
 
         synced_global = await self.tree.sync()
         logger.info(f'Synced {len(synced_global)} commands to Global')

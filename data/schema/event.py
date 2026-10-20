@@ -26,6 +26,11 @@ class Event:
     id: str
 
 @dataclass
+class ButtonEvent(Event):
+    interaction: discord.Interaction
+    custom_id: str
+
+@dataclass
 class SelectEvent(Event):
     interaction: discord.Interaction
     values: list

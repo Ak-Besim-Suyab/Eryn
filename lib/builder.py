@@ -5,6 +5,13 @@ from data.schema import Text, Separator, Section, Container, ActionRow, Select
 
 from lib.utils import SafeDict
 
+BUTTON_STYLE = {
+    "primary"   : discord.ButtonStyle.primary,
+    "secondary" : discord.ButtonStyle.secondary,
+    "danger"    : discord.ButtonStyle.danger,
+    "link"      : discord.ButtonStyle.link,
+}
+
 # 建構生產器元件
 def text(item: Text, **kwargs) -> ui.TextDisplay:
     return ui.TextDisplay(content = item.content.format_map(SafeDict(kwargs)))
@@ -29,7 +36,15 @@ def action_row(item: ActionRow, **kwargs) -> ui.ActionRow:
     for component in item.components:
         match component.type:
             case "button":
-                row.add_item(ui.Button(label=component.label, url=component.url, emoji=component.emoji))
+                row.add_item(
+                    ui.Button(
+                        style=BUTTON_STYLE.get(component.style, discord.ButtonStyle.secondary), 
+                        label=component.label, 
+                        url=component.url, 
+                        emoji=component.emoji,
+                        custom_id=component.custom_id
+                    )
+                )
 
     return row
 

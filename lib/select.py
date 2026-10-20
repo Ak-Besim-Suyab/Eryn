@@ -45,16 +45,15 @@ async def select_test(event: SelectEvent):
 
 def register():
     
-    event_bus.subscribe(SelectEvent, "select_minecraft_role", select_unique_role)
-    event_bus.subscribe(SelectEvent, "select_finalfantasy_role", select_unique_role)
-    event_bus.subscribe(SelectEvent, "select_pikmin_role", select_unique_role)
+    event_bus.subscribe(SelectEvent, "select_minecraft_role",     select_unique_role)
+    event_bus.subscribe(SelectEvent, "select_finalfantasy_role",  select_unique_role)
+    event_bus.subscribe(SelectEvent, "select_pikmin_role",        select_unique_role)
     event_bus.subscribe(SelectEvent, "select_afternoon_tea_role", select_unique_role)
-    event_bus.subscribe(SelectEvent, "select_plurk_role", select_unique_role)
-
-    event_bus.subscribe(SelectEvent, "select_flower_role", select_unique_role)
-    event_bus.subscribe(SelectEvent, "select_food_role", select_unique_role)
-    event_bus.subscribe(SelectEvent, "select_gradient_role", select_unique_role)
+    event_bus.subscribe(SelectEvent, "select_plurk_role",         select_unique_role)
+    event_bus.subscribe(SelectEvent, "select_flower_role",        select_unique_role)
+    event_bus.subscribe(SelectEvent, "select_food_role",          select_unique_role)
+    event_bus.subscribe(SelectEvent, "select_gradient_role",      select_unique_role)
 
     event_bus.subscribe(SelectEvent, "select_test", select_test)
     
-    logger.info("✅ Select Event Registered.")
+    logger.info("✅ Select Event Successfully Registered.")

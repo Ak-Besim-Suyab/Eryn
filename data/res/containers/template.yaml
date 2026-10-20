@@ -61,12 +61,19 @@ items: # 元件清單
   - type: action_row
     components:
       - type: button
+        style: primary
         label: Google
         url: https://google.com
 
       - type: button
+        style: secondary
         label: Discord
         url: https://discord.com
+
+      - type: button
+        style: secondary
+        label: Test Button
+        custom_id: button_test
 
   - type: separator
 

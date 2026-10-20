@@ -10,6 +10,7 @@ __pycache__/
 
 # ignore file
 /assets
+/data/res/members
 
 # System files
 .DS_Store

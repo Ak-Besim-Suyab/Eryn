@@ -9,7 +9,7 @@ import discord
 from discord.ext import commands
 
 from cores import event_bus
-from data.schema.event import SelectEvent
+from data.schema.event import SelectEvent, ButtonEvent
 
 class InteractionListener(commands.Cog):
     def __init__(self, bot):
@@ -24,14 +24,21 @@ class InteractionListener(commands.Cog):
         custom_id = interaction.data.get("custom_id", "")
         component_type = interaction.data.get("component_type", 0)
 
-        # 攔截下拉式選單發送的事件請求
-        if component_type == 3:
-            values = interaction.data.get("values", [])
-            if not values:
-                return
+        # 攔截事件請求
+        match component_type:
+            # 按鈕事件
+            case 2: 
+                event = ButtonEvent(id = custom_id, interaction = interaction, custom_id = custom_id)
+                await event_bus.publish(event = event, event_name = custom_id)
 
-            event = SelectEvent(id = custom_id, interaction = interaction, values = values, custom_id = custom_id)
-            await event_bus.publish(event = event, event_name = custom_id)
+            # 下拉式選單事件
+            case 3:
+                values = interaction.data.get("values", [])
+                if not values:
+                    return
+
+                event = SelectEvent(id = custom_id, interaction = interaction, values = values, custom_id = custom_id)
+                await event_bus.publish(event = event, event_name = custom_id)
                 
 async def setup(bot: commands.Bot):
     await bot.add_cog(InteractionListener(bot))
