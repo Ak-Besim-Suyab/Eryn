@@ -1,0 +1,12 @@
+accent_color: 0
+items:
+  - type: text
+    content: "### 🍹如何將貼文顯示在列表？"
+
+  - type: separator
+
+  - type: text
+    content: 旅人可以對任何您想要追蹤的貼文發送任何留言，系統就會自動將貼文顯示在您的頻道列表上；除此之外，旅人也可以透過對貼文右鍵並選擇追蹤貼文來實現此功能（見下圖）
+
+  - type: gallery
+    media: https://cdn.discordapp.com/attachments/1491046495812718672/1532454816087933059/2026-07-31_022221.png

@@ -15,12 +15,12 @@ async def on_ready():
 
         # 啟動時先歷遍成員是否在頻道內，如果在頻道內就存儲當前時間戳
         guild = bot.get_guild(TH_HAVEN)
-        from game.systems import LevelSystem
+        from lib import level_system
         for member in guild.members:
             if member.voice and member.voice.channel:
                 if member.bot:
                     continue
-                LevelSystem.save_timestamp(member)
+                level_system.save_timestamp(member)
 
         logger.info(f'The Version of Python is {sys.version}')
         logger.info(f'Meow, Discord Bot loaded!')

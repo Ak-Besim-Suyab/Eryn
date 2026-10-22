@@ -12,5 +12,5 @@ class Leaderboard(commands.Cog):
     async def execute(self, interaction: discord.Interaction):
         await LeaderboardMenu.show(interaction)
 
-async def setup(bot):
+async def setup(bot: commands.Bot):
     await bot.add_cog(Leaderboard(bot))

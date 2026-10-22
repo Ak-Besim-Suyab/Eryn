@@ -1,0 +1,38 @@
+accent_color: 0
+items:
+  - type: text
+    content: "## 🍻 小酒館指南"
+  
+  - type: separator
+
+  - type: section
+    content: |
+      歡迎旅人來到小酒館，這裡是讓大家自由發布貼文、討論與分享遊戲資訊的小地方，開始活動前還請務必詳讀本篇指南，以幫助您快速瞭解小酒館的功能與規則！
+
+      置頂貼文僅作為公告使用，請勿在此回覆訊息，感謝旅人配合。
+
+      > 本篇指南使用 Q&A 模板維護與擴充內容，請選擇想瞭解的問題開始閱讀
+    accessory:
+      type: thumbnail
+      media: https://cdn.discordapp.com/attachments/1491046495812718672/1526453530649559120/did_roast.jfif
+  
+  - type: select
+    placeholder: 選擇想閱讀的指南
+    min_values: 1
+    max_values: 1
+    custom_id: tavern_guide
+    options:
+      - label: 🍹發布貼文時需要注意什麼？
+        description: 選擇後貓咪將會貼出指南頁面
+        emoji: 🎉
+        value: post_guide
+
+      - label: 🍹討論時需要注意什麼？
+        description: 選擇後貓咪將會貼出指南頁面
+        emoji: 🎉
+        value: discussion_guide
+
+      - label: 🍹如何將貼文顯示在列表？
+        description: 選擇後貓咪將會貼出指南頁面
+        emoji: 🎉
+        value: use_tutorial

@@ -5,10 +5,8 @@
 import discord
 from discord.ext import commands
 
-from game.systems import LevelSystem
-
 from cores import logger
-from lib import time
+from lib import time, level_system
 
 notice_channel_id = 1198867692497674241
 
@@ -25,17 +23,13 @@ class VoiceListener(commands.Cog):
         
         # 語音狀態檢查
         if after.channel and not before.channel:
-
             await self.send("enter_voice", member, after.channel)
-
-            LevelSystem.save_timestamp(member)
+            level_system.save_timestamp(member)
             
         elif before.channel and not after.channel:
-
             await self.send("leave_voice", member, before.channel)
-
-            LevelSystem.give_voice_experience(member)
-            LevelSystem.remove_timestamp(member)
+            level_system.give_voice_experience(member)
+            level_system.remove_timestamp(member)
 
 
     async def send(self, type: str, member: discord.Member, channel: discord.VoiceChannel):
@@ -73,5 +67,5 @@ class VoiceListener(commands.Cog):
 
         return embed
 
-async def setup(bot):
+async def setup(bot: commands.Bot):
     await bot.add_cog(VoiceListener(bot))

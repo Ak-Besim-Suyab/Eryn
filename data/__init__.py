@@ -1,3 +1,10 @@
-from .registry import container_data
+from .registry import (
+    container, 
+    role
+)
 
-__all__ = ["container_data"]
+# 告訴所有導入此模組的函式庫該模組包含哪些函式庫
+__all__ = [
+    "container",
+    "role"
+]

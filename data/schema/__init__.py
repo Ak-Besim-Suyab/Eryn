@@ -1,4 +1,4 @@
-""" 此模組包含所有 Dataclass 定義
+""" 此模組包含所有對資料結構的定義
 """
 
 from .container import *

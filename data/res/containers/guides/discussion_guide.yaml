@@ -1,0 +1,22 @@
+accent_color: 0
+items:
+  - type: text
+    content: "### 🍹討論時需要注意什麼？"
+
+  - type: separator
+
+  - type: text
+    content: |
+      小酒館沒有特別規定，請旅人保持愉快的心情參與討論即可；發表言論時還請遵循社群守則，以保障自己與他人的權益與言論自由。
+      
+      請特別留意敏感話題，儘管小酒館允許發布限制級遊戲的貼文，但仍切勿以影射、暗示等言論模式對他人構成騷擾；遊戲主題包含劇透、恐怖、色情等敏感元素時，也請務必附上相關標籤。
+
+      > 想瞭解「社群守則」的內容可以點擊下方按鈕查閱
+  
+  - type: action_row
+    components:
+      - type: button
+        style: secondary
+        label: Discord
+        url: https://discord.com
+        

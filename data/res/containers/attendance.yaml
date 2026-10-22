@@ -27,7 +27,7 @@ items:
       - type: button
         style: secondary
         label: 狀態
-        custom_id: attendance_status
+        custom_id: attendance_information
       
       - type: button
         style: secondary

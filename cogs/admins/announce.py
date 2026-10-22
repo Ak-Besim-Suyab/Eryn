@@ -1,7 +1,7 @@
 from discord.ext import commands
 from discord import ui
 
-from data import container_data
+import data
 from lib import builder
 
 """
@@ -23,7 +23,7 @@ class AnnounceCog(commands.Cog):
     @announce.command(name="template")
     @commands.is_owner()
     async def template(self, ctx: commands.Context):
-        view = ui.LayoutView(timeout = None).add_item(builder.build_container(container_data.get("template")))
+        view = ui.LayoutView(timeout = None).add_item(builder.build_container(data.container.get("template")))
         await ctx.send(view = view)
 
     @announce.command(name="template_param")
@@ -36,7 +36,7 @@ class AnnounceCog(commands.Cog):
             "experience": 100
         }
 
-        view = ui.LayoutView(timeout = None).add_item(builder.build_container(container_data.get("template_param"), **param))
+        view = ui.LayoutView(timeout = None).add_item(builder.build_container(data.container.get("template_param"), **param))
         await ctx.send(view = view)
 
     # ---------------------------------------------
@@ -44,43 +44,49 @@ class AnnounceCog(commands.Cog):
     @announce.command(name="travel_guide")
     @commands.is_owner()
     async def travel_guide(self, ctx: commands.Context):
-        view = ui.LayoutView(timeout = None).add_item(builder.build_container(container_data.get("travel_guide")))
+        view = ui.LayoutView(timeout = None).add_item(builder.build_container(data.container.get("guide_travel")))
         await ctx.send(view = view)
 
     @announce.command(name="explore_guide")
     @commands.is_owner()
     async def explore_guide(self, ctx: commands.Context):
-        view = ui.LayoutView(timeout = None).add_item(builder.build_container(container_data.get("explore_guide")))
+        view = ui.LayoutView(timeout = None).add_item(builder.build_container(data.container.get("guide_explore")))
         await ctx.send(view = view)
 
     @announce.command(name="channel_guide")
     @commands.is_owner()
     async def channel_guide(self, ctx: commands.Context):
-        view = ui.LayoutView(timeout = None).add_item(builder.build_container(container_data.get("channel_guide")))
+        view = ui.LayoutView(timeout = None).add_item(builder.build_container(data.container.get("guide_channel")))
         await ctx.send(view = view)
 
     @announce.command(name="cabin_guide")
     @commands.is_owner()
     async def cabin_guide(self, ctx: commands.Context):
-        view = ui.LayoutView(timeout = None).add_item(builder.build_container(container_data.get("cabin_guide")))
+        view = ui.LayoutView(timeout = None).add_item(builder.build_container(data.container.get("guide_cabin")))
+        await ctx.send(view = view)
+        
+    @announce.command(name="tavern_guide")
+    @commands.is_owner()
+    async def tavern_guide(self, ctx: commands.Context):
+        view = ui.LayoutView(timeout = None).add_item(builder.build_container(data.container.get("tavern_guide")))
         await ctx.send(view = view)
 
     @announce.command(name="community_rule")
     @commands.is_owner()
     async def community_rule(self, ctx: commands.Context):
-        view = ui.LayoutView(timeout = None).add_item(builder.build_container(container_data.get("community_rule")))
+        view = ui.LayoutView(timeout = None).add_item(builder.build_container(data.container.get("community_rule")))
         await ctx.send(view = view)
 
     @announce.command(name="role_book")
     @commands.is_owner()
     async def role_book(self, ctx: commands.Context):
-        view = ui.LayoutView(timeout = None).add_item(builder.build_container(container_data.get("role_book")))
+        view = ui.LayoutView(timeout = None).add_item(builder.build_container(data.container.get("role_book")))
         await ctx.send(view = view)
 
     @announce.command(name="attendance")
     @commands.is_owner()
     async def attendance(self, ctx: commands.Context):
-        view = ui.LayoutView(timeout = None).add_item(builder.build_container(container_data.get("attendance")))
+        view = ui.LayoutView(timeout = None).add_item(builder.build_container(data.container.get("attendance")))
         await ctx.send(view = view)
 
 async def setup(bot: commands.Bot):

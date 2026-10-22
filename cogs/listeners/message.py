@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 
-from game.systems import LevelSystem
+from lib import level_system
 
 from models import Statistic
 
@@ -21,7 +21,7 @@ class MessageListener(commands.Cog):
         player_stat.total_message_send += 1
         player_stat.save()
         
-        LevelSystem.give_message_experience(message.author)
+        level_system.give_message_experience(message.author)
 
 async def setup(bot):
     await bot.add_cog(MessageListener(bot))

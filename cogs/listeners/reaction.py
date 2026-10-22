@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 
-from game.systems import LevelSystem
+from lib import level_system
 
 class ReactionListener(commands.Cog):
     def __init__(self, bot):
@@ -14,7 +14,7 @@ class ReactionListener(commands.Cog):
         if reaction.member and reaction.member.bot:
             return
         
-        LevelSystem.give_reaction_experience(reaction.member)
+        level_system.give_reaction_experience(reaction.member)
 
 async def setup(bot):
     await bot.add_cog(ReactionListener(bot))

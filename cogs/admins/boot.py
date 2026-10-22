@@ -4,7 +4,7 @@
 from discord.ext import commands
 from cores.logger import logger
 
-from data.registry import container_data
+import data
 
 class BootCog(commands.Cog):
     def __init__(self, bot: commands.Bot):
@@ -14,7 +14,7 @@ class BootCog(commands.Cog):
     @commands.is_owner()
     async def reload_data(self, ctx: commands.Context):
         try:
-            container_data.load()
+            data.container.load()
             await ctx.send('✅ 咪！成功重新載入資料')
         except Exception as e:
             await ctx.send(f'❌ 咪... 無法重新載入資料：{e}')
@@ -60,12 +60,12 @@ class BootCog(commands.Cog):
 
         guild = ctx.guild
 
-        from game.systems import LevelSystem
+        from lib import level_system
         for member in guild.members:
             if member.voice and member.voice.channel:
                 if member.bot:
                     continue
-                LevelSystem.give_voice_experience(member)
+                level_system.give_voice_experience(member)
 
         logger.info("機器人已關閉。")
 

@@ -1,11 +1,8 @@
-""" 此函示庫用於定義資料結構
+""" 此函式庫用於定義資料註冊物件
 """
 from copy import deepcopy
-
 from lib import file
-
-from cores.logger import logger
-
+from cores import logger
 from data.schema import Container, Role
 
 class Data:

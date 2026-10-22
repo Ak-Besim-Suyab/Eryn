@@ -33,6 +33,7 @@ def section(item: Section, **kwargs) -> ui.Section:
 def action_row(item: ActionRow, **kwargs) -> ui.ActionRow:
 
     row = ui.ActionRow()
+
     for component in item.components:
         match component.type:
             case "button":
@@ -45,6 +46,8 @@ def action_row(item: ActionRow, **kwargs) -> ui.ActionRow:
                         custom_id=component.custom_id
                     )
                 )
+            case "select":
+                pass
 
     return row
 
