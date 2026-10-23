@@ -1,6 +1,9 @@
 from cores import logger
 from models import Player
 
+def give_item(player_id: int, item_id: str, amount: int = 1):
+    pass
+
 def get_timestamp_daily(player_id: int):
     player: Player
     player, _ = Player.get_or_create(id=player_id)

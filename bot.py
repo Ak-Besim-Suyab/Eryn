@@ -21,7 +21,6 @@ class Elin(commands.Bot):
         init_databases()
 
         extensions = [
-            "cogs.setting",
             "cogs.passport",
             "cogs.inventory",
             "cogs.leaderboard",

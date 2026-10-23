@@ -1,7 +1,6 @@
 """
 該類別主要用來監聽語音事件，當成員加入或離開語音頻道時，會在指定的頻道發送通知訊息，並且記錄成員的語音經驗值。
 """
-
 import discord
 from discord.ext import commands
 

@@ -1,12 +1,13 @@
 from peewee import *
 from cores.database import BaseModel
 
-from . import Player
+from models import Player
 
-"""該模組為裝備欄位，與道具欄位區分"""
+"""該模組為裝備欄位，與道具欄位區分
+"""
 
-class Inventory(BaseModel):
+class Armoury(BaseModel):
 
-    player = ForeignKeyField(Player, backref='houses', on_delete='CASCADE')
+    player = ForeignKeyField(Player, backref='armoury', on_delete='CASCADE')
 
     item_id = TextField()

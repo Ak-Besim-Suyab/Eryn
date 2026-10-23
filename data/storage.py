@@ -3,18 +3,18 @@
 from copy import deepcopy
 from lib import file
 from cores import logger
-from data.schema import Container, Role
+from data.schema import Container, Role, Item
 
-class Data:
+class Storage:
     def __init__(self, path: str):
         self._path = path
-        self._data = {}
+        self._storage = {}
 
         self.load()
 
     def load(self):
-        self._data = file.load_dir(self._path)
-        if not self._data:
+        self._storage = file.load_dir(self._path)
+        if not self._storage:
             logger.warning(f"路徑所取得的資料為空: {self._path}")
 
     # 取得單筆資料
@@ -25,31 +25,42 @@ class Data:
     def find(self, **filters):
         pass
 
-class ContainerData(Data):
+class ItemStorage(Storage):
+    def __init__(self, path: str = "data/res/items"):
+        super().__init__(path)
+
+    def get(self, name: str):
+        data = self._storage.get(name)
+        if not data:
+            return None
+        
+        return Item(**deepcopy(data))
+
+class ContainerStorage(Storage):
     def __init__(self, path: str = "data/res/containers"):
         super().__init__(path)
 
     def get(self, name: str):
-        data = self._data.get(name)
+        data = self._storage.get(name)
         if not data:
             return None
         
         return Container(**deepcopy(data))
 
-class RoleData(Data):
+class RoleStorage(Storage):
     def __init__(self, path: str = "data/res/roles"):
         super().__init__(path)
 
     def get(self, name: str):
-        data = self._data.get(name)
+        data = self._storage.get(name)
         if not data:
             return None
         
         return Role(**deepcopy(data))
     
     def get_all(self):
-        return [Role(**deepcopy(data)) for data in self._data.values()]
+        return [Role(**deepcopy(data)) for data in self._storage.values()]
     
     # 例如: 找查特定分類時, 填入 (category = "specific_category"), 找查特定標籤時, 填入 (tag = "specific_tag")
     def find(self, **filters) -> list[Role]:
-        return [Role(**deepcopy(data)) for data in self._data.values() if all(data.get(key) == value for key, value in filters.items())]
+        return [Role(**deepcopy(data)) for data in self._storage.values() if all(data.get(key) == value for key, value in filters.items())]
