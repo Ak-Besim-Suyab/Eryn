@@ -1,5 +1,5 @@
 from peewee import *
-from database import BaseModel, db
+from cores.database import BaseModel, db
 
 from datetime import datetime
 
@@ -18,22 +18,8 @@ class Player(BaseModel):
     card = TextField(null=True)
     use_pet = IntegerField(default=0)
 
-    timestamp_daily_reward = FloatField(null=True)
+    timestamp_daily = FloatField(null=True)
     timestamp_voice = FloatField(null=True)
-    
-    @classmethod
-    def add_balance(cls, user_id: int, amount: int):
-        with db.atomic():
-            player, _ = cls.get_or_create(id=user_id)
-            player.currency += amount
-            player.save()
-
-    @classmethod
-    def remove_balance(cls, user_id: int, amount: int):
-        with db.atomic():
-            player, _ = cls.get_or_create(id=user_id)
-            player.currency -= amount
-            player.save()
 
     @staticmethod
     def get_required_exp(level: int) -> int:
@@ -79,36 +65,6 @@ class Player(BaseModel):
     def get_timestamp_voice(self, player_id: int):
         player, _ = self.get_or_create(id=player_id)
         return player.timestamp_voice
-
-# --------------------------------------------------------------------------
-# timestamp_daily_reward methods -------------------------------------------
-
-    @classmethod
-    def save_timestamp_daily_reward(self, player_id: int):
-        """
-        保存玩家取得每日獎勵的時間戳記
-        這個方法會保存實作時的時間戳記
-        """
-        with db.atomic():
-            player, _ = self.get_or_create(id=player_id)
-            player.timestamp_daily_reward = datetime.now().timestamp()
-            player.save()
-    
-    @classmethod
-    def remove_timestamp_daily_reward(self, player_id: int):
-        """
-        移除玩家的每日獎勵時間戳記
-        這個方法會直接將時間戳記設為 None
-        """
-        with db.atomic():
-            player, _ = self.get_or_create(id=player_id)
-            player.timestamp_daily_reward = None
-            player.save()
-
-    @classmethod
-    def get_timestamp_daily_reward(self, player_id: int):
-        player, _ = self.get_or_create(id=player_id)
-        return player.timestamp_daily_reward
 
 # --------------------------------------------------------------------------
 

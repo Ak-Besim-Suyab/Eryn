@@ -1,7 +1,7 @@
 from models import Player
 from models import House
 
-from database import db
+from cores.database import db
 
 """
     這個模塊用於實作 house model 的業務邏輯, 負責運行與輸出結果, 訊息輸出由 cogs, view 或其他外層邏輯負責

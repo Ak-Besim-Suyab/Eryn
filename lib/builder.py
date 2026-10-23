@@ -1,7 +1,7 @@
 import discord
 from discord import ui, SeparatorSpacing
 
-from data.schema import Text, Separator, Section, Container, ActionRow, Select
+from data.schema import Text, Separator, Section, Container, ActionRow, Select, MediaGallery
 
 from lib.utils import SafeDict
 
@@ -29,6 +29,19 @@ def section(item: Section, **kwargs) -> ui.Section:
             accessory = ui.Thumbnail(media=item.accessory.media.format_map(SafeDict(kwargs)))
 
     return ui.Section(item.content.format_map(SafeDict(kwargs)), accessory = accessory)
+
+def media_gallery(item: MediaGallery, **kwargs) -> ui.MediaGallery:
+
+    gallery = ui.MediaGallery()
+
+    for i in item.items:
+        gallery.add_item(
+            media=i.media,
+            description=i.description,
+            spoiler=i.spoiler
+        )
+
+    return gallery
 
 def action_row(item: ActionRow, **kwargs) -> ui.ActionRow:
 
@@ -81,6 +94,7 @@ builders = {
     "text": text,
     "separator": seperator,
     "section": section,
+    "media_gallery": media_gallery,
     "action_row": action_row,
     "select": select,
 }

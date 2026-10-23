@@ -1,5 +1,5 @@
 from peewee import *
-from database import BaseModel
+from cores.database import BaseModel
 
 from . import Player
 

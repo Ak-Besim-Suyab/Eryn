@@ -1,0 +1,26 @@
+#
+# Container Builder 圖片元件測試 1
+#
+
+accent_color: 0
+items:
+  - type: text
+    content: |
+      ## Image Test
+      This is an image test.
+
+  - type: separator
+
+  - type: media_gallery 
+    items:
+      - media: https://cdn.discordapp.com/attachments/1491046495812718672/1526601223187333210/did_delicious.png
+        description: "This is an image."
+        spoiler: false
+
+#
+# 該類型對應 ui.MediaGallery 元件
+#
+# items: 要顯示的圖片清單
+#   - media: 圖片連結 (必須填寫)
+#     description: 圖片描述 (預設為空字串)
+#     spoiler: 是否為橫幅 (預設為 false, 可以設定為 true, 選填)

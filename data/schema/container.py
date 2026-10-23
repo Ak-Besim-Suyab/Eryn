@@ -3,6 +3,7 @@ from dataclasses import dataclass, field
 from data.schema.button import Button
 from data.schema.action_row import ActionRow
 from data.schema.select import Select
+from data.schema.media_gallery import MediaGallery
 
 @dataclass
 class Text:
@@ -63,5 +64,7 @@ class Container:
                         self.items[index] = ActionRow(**item)
                     case "select":
                         self.items[index] = Select(**item)
+                    case "media_gallery":
+                        self.items[index] = MediaGallery(**item)
                     case _:
                         raise ValueError(f"items[{index}] 收到不支援的元件類型: '{type_name}'")

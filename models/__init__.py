@@ -1,11 +1,8 @@
 from data.schema.button import *
-from .embed import *
-from .query import *
 from data.schema.select import *
-from .view import *
 
 # -----------------------------------------------------------
-from database import db
+from cores.database import db
 
 from .player import *
 from .house import *

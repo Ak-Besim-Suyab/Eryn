@@ -22,8 +22,9 @@ class AnnounceCog(commands.Cog):
 
     @announce.command(name="template")
     @commands.is_owner()
-    async def template(self, ctx: commands.Context):
-        view = ui.LayoutView(timeout = None).add_item(builder.build_container(data.container.get("template")))
+    async def template(self, ctx: commands.Context, template_name: str = None):
+        if template_name:
+            view = ui.LayoutView(timeout = None).add_item(builder.build_container(data.container.get(template_name)))
         await ctx.send(view = view)
 
     @announce.command(name="template_param")

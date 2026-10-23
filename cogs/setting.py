@@ -46,5 +46,5 @@ class SettingCog(commands.Cog):
         Guild.set_announcement_channel(interaction.guild.id, None)
         await interaction.response.send_message(f"已移除公告頻道。", ephemeral=True)
 
-async def setup(bot):
+async def setup(bot: commands.Bot):
     await bot.add_cog(SettingCog(bot))

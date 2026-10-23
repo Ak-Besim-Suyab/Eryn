@@ -8,6 +8,7 @@
 
 import discord
 import config
+import player
 
 from datetime import datetime
 

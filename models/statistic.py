@@ -1,5 +1,5 @@
 from peewee import *
-from database import BaseModel, db
+from cores.database import BaseModel, db
 
 """
 這個模塊用於定義與管理玩家的統計數據

@@ -1,5 +1,5 @@
 from peewee import *
-from database import BaseModel, db
+from cores.database import BaseModel, db
 
 class Guild(BaseModel):
     id = IntegerField(primary_key=True)

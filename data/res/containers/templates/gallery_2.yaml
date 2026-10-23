@@ -1,0 +1,26 @@
+#
+# Container Builder 圖片元件測試 2
+#
+
+accent_color: 0
+items:
+  - type: text
+    content: |
+      ## 圖片測試
+      測試不同解析度的訊息框大小
+
+  - type: separator
+
+  - type: media_gallery 
+    items:
+      - media: https://cdn.discordapp.com/attachments/1491046495812718672/1562936311810359296/template_2.jpg
+
+#
+# 測試用圖片網址
+#
+# 1200 x 675
+# https://cdn.discordapp.com/attachments/1491046495812718672/1562929523505233971/template_1.jpg
+#
+# 1200 x 330 
+# https://cdn.discordapp.com/attachments/1491046495812718672/1562936311810359296/template_2.jpg
+#

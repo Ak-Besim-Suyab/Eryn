@@ -1,9 +1,12 @@
+import os
 import discord
 
 from zoneinfo import ZoneInfo
 
-TH_HAVEN = 1190027756482859038
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATABASE_PATH = os.path.join(BASE_DIR, "generic.db")
 
+TH_HAVEN = 1190027756482859038
 GUILD_TH_HAVEN = discord.Object(id=TH_HAVEN)
 
 timezone = ZoneInfo("Asia/Taipei")

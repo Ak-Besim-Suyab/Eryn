@@ -14,7 +14,7 @@ from cores import logger
 from data.schema.event import ButtonEvent
 
 import data
-from lib import builder, information
+from lib import builder, information, player
 
 from config import daily_experience
 from config import timezone
@@ -24,7 +24,7 @@ async def button_attendance_claim(event: ButtonEvent):
     user_id = event.interaction.user.id
     user_name = event.interaction.user.display_name
 
-    last_timestamp = Player.get_timestamp_daily_reward(user_id)
+    last_timestamp = player.get_timestamp_daily(user_id)
     now_timestamp = time.time()
 
     if last_timestamp:
@@ -40,7 +40,7 @@ async def button_attendance_claim(event: ButtonEvent):
             return
     
     Player.add_experience(user_id, daily_experience)
-    Player.save_timestamp_daily_reward(user_id)
+    player.set_timestamp_daily(user_id, datetime.now().timestamp())
 
     stat = Statistic.get_or_create_stat(user_id)
     stat.total_daily_claims +=1
