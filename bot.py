@@ -24,6 +24,11 @@ class Elin(commands.Bot):
             "cogs.passport",
             "cogs.inventory",
             "cogs.leaderboard",
+            "cogs.loop",
+
+            # 隨機抽取表符系統
+            "cogs.rock_paper_scissors",
+            "cogs.fortune_stick",
 
             "cogs.listeners.emoji_dice",
             "cogs.listeners.interaction",
@@ -36,6 +41,7 @@ class Elin(commands.Bot):
             "cogs.admins.announce",
             "cogs.admins.boot",
             "cogs.admins.house",
+            "cogs.admins.give",
         ]
 
         for extension in extensions:

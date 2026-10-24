@@ -18,7 +18,7 @@ class MessageListener(commands.Cog):
 
         player_stat = Statistic.get_or_create_stat(message.author.id)
 
-        player_stat.total_message_send += 1
+        player_stat.total_message += 1
         player_stat.save()
         
         level_system.give_message_experience(message.author)

@@ -87,15 +87,15 @@ def give_voice_experience(member: discord.Member):
     Player.add_experience(member.id, total_experience)
 
     stats = Statistic.get_or_create_stat(member.id)
-    stats.total_voice_time += elapsed_minutes
+    stats.total_voice += elapsed_minutes
     stats.save()
 
-    logger.info(f"給予 {member.display_name} 語音經驗值: {total_experience} exp, 累積時間: {elapsed_minutes:.2f} 分鐘")
+    logger.debug(f"給予 {member.display_name} 語音經驗值: {total_experience} exp, 累積時間: {elapsed_minutes:.2f} 分鐘")
 
 def save_timestamp(member: discord.Member):
     Player.save_timestamp_voice(member.id)
-    logger.info(f"成功保存 {member} 的時間戳記")
+    logger.debug(f"成功保存 {member} 的時間戳記")
 
 def remove_timestamp(member: discord.Member):
     Player.remove_timestamp_voice(member.id)
-    logger.info(f"成功移除 {member} 的時間戳記")
+    logger.debug(f"成功移除 {member} 的時間戳記")

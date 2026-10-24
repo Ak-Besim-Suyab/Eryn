@@ -43,7 +43,7 @@ async def button_attendance_claim(event: ButtonEvent):
     player.set_timestamp_daily(user_id, datetime.now().timestamp())
 
     stat = Statistic.get_or_create_stat(user_id)
-    stat.total_daily_claims +=1
+    stat.total_daily +=1
     stat.save()
 
     embed = discord.Embed()

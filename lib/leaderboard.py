@@ -1,6 +1,8 @@
 import discord
 from models import Player
 
+# TODO: 需要考慮這個函式的必要性，未來有可能會採用其他排名模式，因此暫時擱置升級為 component v2 的行程
+
 class LeaderboardMenu:
     @staticmethod
     async def show(interaction: discord.Interaction):

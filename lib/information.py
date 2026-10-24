@@ -40,9 +40,9 @@ async def get_information_view(interaction: discord.Interaction, member: discord
 
         "join_time": member.joined_at.strftime(f"於 %Y 年 %m 月 %d 日加入這裡，總共經過 {join_days} 天"),
 
-        "total_daily": statistic.total_daily_claims,
-        "total_message": statistic.total_message_send,
-        "total_voice": statistic.total_voice_time,
+        "total_daily": statistic.total_daily,
+        "total_message": statistic.total_message,
+        "total_voice": statistic.total_voice,
 
         "houses": "\n".join(houses),
 

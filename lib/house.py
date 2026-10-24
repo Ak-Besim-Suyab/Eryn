@@ -1,7 +1,7 @@
 from models import Player
 from models import House
 
-from cores.database import db
+from cores.database import database
 
 """
     這個模塊用於實作 house model 的業務邏輯, 負責運行與輸出結果, 訊息輸出由 cogs, view 或其他外層邏輯負責
@@ -22,7 +22,7 @@ class HouseSystem:
 
         Player.get_or_create(id=player_id)
 
-        with db.atomic():
+        with database.atomic():
             house, created = House.get_or_create(id=channel_id, defaults={'owner': player_id})
 
         return house, created
@@ -30,7 +30,7 @@ class HouseSystem:
     @staticmethod
     def delete(channel_id: int) -> bool:
 
-        with db.atomic():
+        with database.atomic():
             house = House.get_or_none(id=channel_id)
             if house is None:
                 return False

@@ -1,5 +1,5 @@
 from peewee import *
-from cores.database import BaseModel, db
+from cores.database import BaseModel, database
 
 from datetime import datetime
 
@@ -10,10 +10,13 @@ class Player(BaseModel):
 
     level = IntegerField(default=1)
     experience = IntegerField(default=0)
+
     currency = IntegerField(default=0)
     region = TextField(default="falun")
+
+    san = FloatField(default=100.0)
     luck = FloatField(default=1.0)
-    karma = IntegerField(default=100)
+    karma = FloatField(default=100.0)
     
     card = TextField(null=True)
     use_pet = IntegerField(default=0)
@@ -27,7 +30,8 @@ class Player(BaseModel):
 
     @classmethod
     def add_experience(cls, player_id: int, amount: int):
-        with db.atomic():
+        with database.atomic():
+            player: Player
             player, _ = cls.get_or_create(id=player_id)
             player.experience += amount
 
@@ -45,7 +49,7 @@ class Player(BaseModel):
         保存玩家進入語音的時間戳記
         這個方法會保存實作時的時間戳記
         """
-        with db.atomic():
+        with database.atomic():
             player, _ = self.get_or_create(id=player_id)
             player.timestamp_voice = datetime.now().timestamp()
             player.save()
@@ -56,7 +60,7 @@ class Player(BaseModel):
         移除玩家的語音時間戳記
         這個方法會直接將時間戳記設為 None
         """
-        with db.atomic():
+        with database.atomic():
             player, _ = self.get_or_create(id=player_id)
             player.timestamp_voice = None
             player.save()
@@ -93,7 +97,7 @@ class Player(BaseModel):
     
     @classmethod
     def set_region(self, player_id: int, region: str):
-        with db.atomic():
+        with database.atomic():
             player, _ = self.get_or_create(id=player_id)
             player.region = region
             player.save()

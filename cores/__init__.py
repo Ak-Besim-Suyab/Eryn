@@ -3,7 +3,7 @@ from .event_bus import *
 from .logger import *
 
 __all__ = [
-    "db", 
+    "database", 
     "event_bus", 
     "logger"
 ]
