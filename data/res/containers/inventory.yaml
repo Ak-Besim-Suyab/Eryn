@@ -6,17 +6,11 @@ items:
   - type: separator
 
   - type: text
-  - content: "{inventory_table}"
+    content: |
+      {items}
 
-  - type: select
-    placeholder: 請選擇要顯示的物品分類
-    min_values: 1
-    max_values: 1
-    custom_id: change_item_category
-    options:
-      - label: 資源
-        emoji: 💎
-        value: resource
-      - label: 寶箱
-        emoji: 🎉
-        value: crate
+  - type: separator
+
+  - type: text
+    content: |
+      ### 第 {page} / {total_pages} 頁

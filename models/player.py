@@ -69,35 +69,3 @@ class Player(BaseModel):
     def get_timestamp_voice(self, player_id: int):
         player, _ = self.get_or_create(id=player_id)
         return player.timestamp_voice
-
-# --------------------------------------------------------------------------
-
-    @classmethod
-    def get_stat(self, player_id: int):
-        player, _ = self.get_or_create(id=player_id)
-
-        # 確保玩家統計資料存在，避免在沒有 PlayerStatistic 出現時拋出例外。
-        from models.statistic import Statistic
-        stat, created = Statistic.get_or_create_stat(id=player.id, defaults={'display_name': player.display_name})
-        if not created and stat.display_name != player.display_name:
-            stat.display_name = player.display_name
-            stat.save()
-
-        return stat
-
-# --------------------------------------------------------------------------
-
-    @classmethod
-    def get_region(self, player_id: int) -> str:
-        """
-        獲取玩家所在地區，這裡返回的是 Region ID
-        """
-        player, _ = self.get_or_create(id=player_id)
-        return player.region
-    
-    @classmethod
-    def set_region(self, player_id: int, region: str):
-        with database.atomic():
-            player, _ = self.get_or_create(id=player_id)
-            player.region = region
-            player.save()
