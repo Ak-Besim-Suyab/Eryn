@@ -4,90 +4,30 @@ from discord import ui
 import data
 from lib import builder
 
+"""此元件用於管理與發送公告和測試訊息
 """
-此元件用於管理所有公告訊息
-"""
-
 class AnnounceCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.group()
+    @commands.command()
     @commands.is_owner()
-    async def announce(self, ctx: commands.Context):
-        if ctx.invoked_subcommand is None:
-            await ctx.send("請使用 !announce + 子指令呼叫方法", ephemeral=True)
+    async def announce(self, ctx: commands.Context, message_name: str):
+        container_data = data.container.get(message_name)
+        if container_data is None:
+            await ctx.send(f"❌ 找不到名為 {message_name} 的訊息")
+            return
 
-    # 測試項目 -------------------------------------
-
-    @announce.command(name="template")
-    @commands.is_owner()
-    async def template(self, ctx: commands.Context, template_name: str = None):
-        if template_name:
-            view = ui.LayoutView(timeout = None).add_item(builder.build_container(data.container.get(template_name)))
-        await ctx.send(view = view)
-
-    @announce.command(name="template_param")
-    @commands.is_owner()
-    async def template_param(self, ctx: commands.Context):
+        # 這個片段用於測試參數傳入, 非指定測試文本則留空
+        param = {}
+        if message_name == "template_param":
+            param = {
+                "name": "Elin",
+                "level": 1,
+                "experience": 100
+            }
         
-        param = {
-            "name": "Elin",
-            "level": 1,
-            "experience": 100
-        }
-
-        view = ui.LayoutView(timeout = None).add_item(builder.build_container(data.container.get("template_param"), **param))
-        await ctx.send(view = view)
-
-    # ---------------------------------------------
-
-    @announce.command(name="travel_guide")
-    @commands.is_owner()
-    async def travel_guide(self, ctx: commands.Context):
-        view = ui.LayoutView(timeout = None).add_item(builder.build_container(data.container.get("guide_travel")))
-        await ctx.send(view = view)
-
-    @announce.command(name="explore_guide")
-    @commands.is_owner()
-    async def explore_guide(self, ctx: commands.Context):
-        view = ui.LayoutView(timeout = None).add_item(builder.build_container(data.container.get("guide_explore")))
-        await ctx.send(view = view)
-
-    @announce.command(name="channel_guide")
-    @commands.is_owner()
-    async def channel_guide(self, ctx: commands.Context):
-        view = ui.LayoutView(timeout = None).add_item(builder.build_container(data.container.get("guide_channel")))
-        await ctx.send(view = view)
-
-    @announce.command(name="cabin_guide")
-    @commands.is_owner()
-    async def cabin_guide(self, ctx: commands.Context):
-        view = ui.LayoutView(timeout = None).add_item(builder.build_container(data.container.get("guide_cabin")))
-        await ctx.send(view = view)
-        
-    @announce.command(name="tavern_guide")
-    @commands.is_owner()
-    async def tavern_guide(self, ctx: commands.Context):
-        view = ui.LayoutView(timeout = None).add_item(builder.build_container(data.container.get("tavern_guide")))
-        await ctx.send(view = view)
-
-    @announce.command(name="community_rule")
-    @commands.is_owner()
-    async def community_rule(self, ctx: commands.Context):
-        view = ui.LayoutView(timeout = None).add_item(builder.build_container(data.container.get("community_rule")))
-        await ctx.send(view = view)
-
-    @announce.command(name="role_book")
-    @commands.is_owner()
-    async def role_book(self, ctx: commands.Context):
-        view = ui.LayoutView(timeout = None).add_item(builder.build_container(data.container.get("role_book")))
-        await ctx.send(view = view)
-
-    @announce.command(name="attendance")
-    @commands.is_owner()
-    async def attendance(self, ctx: commands.Context):
-        view = ui.LayoutView(timeout = None).add_item(builder.build_container(data.container.get("attendance")))
+        view = ui.LayoutView(timeout = None).add_item(builder.build_container(container_data, **param))
         await ctx.send(view = view)
 
 async def setup(bot: commands.Bot):

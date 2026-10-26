@@ -1,11 +1,11 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 from data.schema.button import Button
 
 @dataclass
 class ActionRow:
     type: str = "action_row"
-    components: list[Button] = None
+    components: list[Button] = field(default_factory=list)
 
     def __post_init__(self):
         if self.components and isinstance(self.components, list):

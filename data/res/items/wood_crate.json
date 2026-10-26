@@ -1,5 +1,8 @@
 {
     "id": "wood_crate",
     "name": "木箱",
-    "description": "橡木製的箱子，裡面不知道裝著什麼"
+    "description": "木製的箱子，裡面不知道裝著什麼",
+    "flags": {
+        "openable": true
+    }
 }

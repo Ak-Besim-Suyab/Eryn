@@ -3,11 +3,7 @@ import discord
 from discord.ext import commands
 from discord import app_commands
 
-signs = [
-    "<:rock:1563601501442543688>", 
-    "<:paper:1563601513413087305>", 
-    "<:scissors:1563601489606222005>"
-]
+from config import SIGN_POOL
 
 class RPSCog(commands.Cog):
     def __init__(self, bot: commands.Bot):
@@ -18,9 +14,8 @@ class RPSCog(commands.Cog):
     async def rock_paper_scissors(self, interaction: discord.Interaction, moves: int = 1):
 
         turns = []
-        
         for _ in range(moves):
-            turns.append(random.choice(signs))
+            turns.append(random.choice(SIGN_POOL))
 
         await interaction.response.send_message(''.join(turns))
 

@@ -6,9 +6,10 @@ from cores.database import database
 
 from .player import *
 from .inventory import *
+from .resource import *
 from .house import *
 from .statistic import *
 
 def init_databases():
     with database:
-        database.create_tables([Player, Inventory, House, Statistic], safe=True)
+        database.create_tables([Player, Inventory, Resource, House, Statistic], safe=True)

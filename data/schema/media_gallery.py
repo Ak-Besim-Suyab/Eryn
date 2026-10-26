@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 @dataclass
 class MediaGalleryItem:
@@ -9,7 +9,7 @@ class MediaGalleryItem:
 @dataclass
 class MediaGallery:
     type: str = "media_gallery"
-    items: list[MediaGalleryItem] = None
+    items: list[MediaGalleryItem] = field(default_factory=list)
 
     def __post_init__(self):
         if self.items and isinstance(self.items, list):

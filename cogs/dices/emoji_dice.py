@@ -4,7 +4,7 @@ from discord.ext import commands
 
 from lib.emoji_dice import count_emoji
 
-from config import OMIKUJIS_POOL
+from config import OMIKUJI_POOL
 
 class EmojiDiceListener(commands.Cog):
     def __init__(self, bot):
@@ -21,9 +21,8 @@ class EmojiDiceListener(commands.Cog):
             return
 
         reply = ""
-
         for _ in range(num):
-            reply += random.choice(OMIKUJIS_POOL)
+            reply += random.choice(OMIKUJI_POOL)
 
         await message.reply(reply, mention_author=False)
 

@@ -7,13 +7,14 @@ from lib import button as button_handler
 from models import init_databases
 from cores.logger import logger
 
-intents = discord.Intents.default()
-intents.voice_states = True
-intents.message_content = True
-intents.members = True
-
 class Elin(commands.Bot):
     def __init__(self):
+
+        intents = discord.Intents.default()
+        intents.voice_states = True
+        intents.message_content = True
+        intents.members = True
+
         super().__init__(command_prefix="!", intents=intents)
 
     async def setup_hook(self):
