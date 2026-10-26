@@ -52,12 +52,12 @@ async def button_attendance_claim(event: ButtonEvent):
     
     embed.set_author(name=event.interaction.user.display_name, icon_url=event.interaction.user.display_avatar.url)
     embed.add_field(name="每日獎勵", value="50 經驗值", inline=False)
-    embed.add_field(name="累計簽到", value=f"{stat.total_daily_claims} 天", inline=False)
+    embed.add_field(name="累計簽到", value=f"{stat.total_daily} 天", inline=False)
     embed.set_footer(text="咪很開心！每天都要記得來領取獎勵喵！")
 
     await event.interaction.response.send_message(embed=embed, ephemeral=True)
 
-    logger.info(f"{user_name} 已進行簽到，總天數：{stat.total_daily_claims}")
+    logger.info(f"{user_name} 已進行簽到，總天數：{stat.total_daily}")
 
 async def button_attendance_guide(event: ButtonEvent):
     view = ui.LayoutView(timeout = None).add_item(builder.build_container(data.container.get("guide_attendance")))

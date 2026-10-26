@@ -4,14 +4,7 @@ from discord.ext import commands
 
 from lib.emoji_dice import count_emoji
 
-random_stick = [
-    "<:dai_kichi:1561975565500817428>",
-    "<:kichi:1561975597335314542>",
-    "<:sho_kichi:1561975608949481542>",
-    "<:sho_kyo:1561975734153781318>",
-    "<:kyo:1561975744417239050>",
-    "<:dai_kyo:1561975786398023780>",
-]
+from config import OMIKUJIS_POOL
 
 class EmojiDiceListener(commands.Cog):
     def __init__(self, bot):
@@ -29,8 +22,8 @@ class EmojiDiceListener(commands.Cog):
 
         reply = ""
 
-        for i in range(num):
-            reply += random.choice(random_stick)
+        for _ in range(num):
+            reply += random.choice(OMIKUJIS_POOL)
 
         await message.reply(reply, mention_author=False)
 

@@ -13,8 +13,6 @@ MAX_ROW = 20
 
 # 此函式用於取得背包頁數, 與控制頁面修正
 def get_page(player_id: int, page: int) -> list[str]:
-    """取得背包清單
-    """
     rows = (Inventory
             .select()
             .where((Inventory.player == player_id) & (Inventory.quantity > 0))

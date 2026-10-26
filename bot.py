@@ -26,11 +26,13 @@ class Elin(commands.Bot):
             "cogs.leaderboard",
             "cogs.loop",
 
-            # 隨機抽取表符系統
+            # 隨機抽取系統
             "cogs.rock_paper_scissors",
             "cogs.fortune_stick",
 
-            "cogs.listeners.emoji_dice",
+            "cogs.dices.emoji_dice",
+            "cogs.dices.message_dice",
+
             "cogs.listeners.interaction",
             "cogs.listeners.message",
             "cogs.listeners.reaction",
