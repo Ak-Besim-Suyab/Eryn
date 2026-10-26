@@ -36,6 +36,17 @@ class ItemStorage(Storage):
         
         return Item(**deepcopy(data))
 
+    def find_flag(self, **flags):
+        """返回符合所有 flags 標籤的物品
+        """
+        matchs = []
+        for data in self._storage.values():
+            item = Item(**deepcopy(data))
+            if all(getattr(item.flags, key) == value for key, value in flags.items()):
+                matchs.append(item)
+
+        return matchs
+
 class ContainerStorage(Storage):
     def __init__(self, path: str = "data/res/containers"):
         super().__init__(path)
