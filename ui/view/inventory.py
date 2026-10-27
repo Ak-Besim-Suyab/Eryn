@@ -54,22 +54,13 @@ class InventoryView(ui.LayoutView):
         self.category = category
         self.render()
 
-    def item_ids(self) -> list[str] | None:
-        return None
-
     def render(self):
-        rows, self.page, total_pages = get_page(self.user.id, self.page, self.item_ids())
+        rows, self.page, total_pages = get_page(self.user.id, self.page, self.get_item_ids())
 
         lines = [format_row(r) for r in rows] or ["> *背包裡什麼都沒有。*"]
 
-        container = builder.build_container(
-            data.container.get("inventory"),
-            player_name = self.user.display_name,
-            items = "\n".join(lines),
-            page = self.page,
-            total_pages = total_pages,
-        )
-
+        container = ui.Container(accent_color = 0)
+        container.add_item(ui.TextDisplay(content = "\n".join(lines)))
         container.add_item(self.page_action(total_pages))
 
         self.clear_items()
@@ -93,30 +84,7 @@ class InventoryView(ui.LayoutView):
         self.render()
         await interaction.response.edit_message(view=self)
 
-class OpenableInventory(InventoryView):
-    def __init__(self, user: discord.abc.User, page: int = 1):
-        super().__init__(user, page)
-
-    def item_ids(self) -> list[str]:
-        return [item.id for item in data.item.find_flag(openable=True)]
-
-    def render(self):
-        rows, self.page, total_pages = get_page(self.user.id, self.page, self.item_ids())
-
-        lines = [format_row(r) for r in rows] or ["> *背包裡沒有能開啟的物品。*"]
-
-        container = builder.build_container(
-            data.container.get("openable_inventory"),
-            player_name = self.user.display_name
-        )
-
-        for r in rows:
-            d = data.item.get(r.item_id)
-            section = ui.Section(f"{d.emoji} {d.name}：{r.quantity}", accessory = ui.Button(label = "開啟"))
-            container.add_item(section)
-
-        container.add_item(LARGE_SEPARATOR)
-        container.add_item(self.page_action(total_pages))
-
-        self.clear_items()
-        self.add_item(container)
+    def get_item_ids(self) -> list[str]:
+        match self.category:
+            case "all": return None
+            case "openable": return [item.id for item in data.item.find_flag(openable=True)]
