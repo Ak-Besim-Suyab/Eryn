@@ -1,9 +1,12 @@
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, fields
 
 @dataclass(frozen=True)
 class ItemFlag:
     openable: bool = False
     consumable: bool = False
+
+    def active(self) -> list[str]:
+        return [flag.name for flag in fields(self) if getattr(self, flag.name)]
 
 @dataclass
 class Item:

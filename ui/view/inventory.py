@@ -11,7 +11,7 @@ from models import Inventory
 
 from .item import ItemView
 
-from lib.inventory import get_page 
+from lib.inventory import get_page
 
 def format_row(row: Inventory) -> str:
     item = data.item.get(row.item_id)
@@ -38,12 +38,12 @@ class InventoryView(ui.LayoutView):
         lines = [format_row(r) for r in rows] or ["> *背包裡什麼都沒有。*"]
 
         container = ui.Container(accent_color = 0)
-        container.add_item(ui.TextDisplay(content = f"## {self.user.display_name}"))
+        container.add_item(ui.TextDisplay(content = f"### {self.user.display_name}"))
         container.add_item(ui.TextDisplay(content = "\n".join(lines)))
         container.add_item(self.category_action())
 
         if self.rows:
-            container.add_item(ui.ActionRow(ItemChoose(self.rows)))
+            container.add_item(ui.ActionRow(ItemSelect(self.rows)))
             
         container.add_item(self.page_action(total_pages))
 
@@ -99,7 +99,7 @@ class InventoryView(ui.LayoutView):
             case "all": return None
             case "openable": return [item.id for item in data.item.find_flag(openable=True)]
 
-class ItemChoose(ui.Select):
+class ItemSelect(ui.Select):
     """ 這個表單用來讀取並列出玩家指定分類的物品, 表單選項受到傳入的串列影響, 串列則由上層來自 Inventory 的讀取函式取得
     """
     def __init__(self, rows: list[Inventory]):

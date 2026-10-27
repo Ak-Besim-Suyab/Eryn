@@ -25,3 +25,4 @@ def get_page(player_id: int, page: int, item_ids: list[str] = None) -> tuple[lis
     page = min(max(page, 1), total_pages)
 
     return list(rows.paginate(page, MAX_ROW)), page, total_pages
+    
