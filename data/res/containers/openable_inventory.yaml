@@ -1,0 +1,7 @@
+accent_color: 0
+items:
+  - type: text
+    content: "## {player_name}"
+  
+  - type: separator
+    size: small

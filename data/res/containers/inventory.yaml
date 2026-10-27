@@ -1,12 +1,11 @@
 accent_color: 0
 items:
   - type: text
-    content: "## 背包（{player_name}）"
-
-  - type: separator
+    content: "## {player_name}"
 
   - type: text
     content: |
+      ### 背包總覽：
       {items}
 
   - type: separator
