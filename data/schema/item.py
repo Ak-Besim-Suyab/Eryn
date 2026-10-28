@@ -1,6 +1,9 @@
-import random
-from dataclasses import dataclass, field, fields
-from collections import Counter
+from enum import StrEnum
+from dataclasses import dataclass, field
+
+class ActionType(StrEnum):
+    OPEN = "openable"
+    CONSUME = "consumable"
 
 @dataclass
 class ItemLoot:
@@ -11,21 +14,27 @@ class ItemLoot:
     max: int = 1
 
 @dataclass
-class ItemOpenAction:
-    type: str
+class ItemConsume:
+    type: str = ActionType.CONSUME
+
+@dataclass
+class ItemOpen:
+    type: str = ActionType.OPEN
     loot: list[ItemLoot] = field(default_factory=list)
 
     def __post_init__(self):
         if isinstance(self.loot, list):
             self.loot = [ItemLoot(**loot) for loot in self.loot]
 
-@dataclass(frozen=True)
+@dataclass
 class ItemFlag:
     openable: bool = False
     consumable: bool = False
 
-    def active(self) -> list[str]:
-        return [flag.name for flag in fields(self) if getattr(self, flag.name)]
+ACTION_TYPES = {
+    ActionType.OPEN: ItemOpen,
+    ActionType.CONSUME: ItemConsume,
+}
 
 @dataclass
 class Item:
@@ -41,25 +50,25 @@ class Item:
             self.flags = ItemFlag(**self.flags)
 
         if isinstance(self.actions, list):
+
             formated_actions = []
             for action in self.actions:
-                match action["type"]:
-                    case "open":
-                        formated_actions.append(ItemOpenAction(**action))
-                    case _:
-                        raise ValueError(f"不支援的動作類型: {action['type']}")
+                cls = ACTION_TYPES.get(action["type"])
+                if cls is None:
+                    raise ValueError(f"不支援的動作類型: {action['type']}")
+
+                formated_actions.append(cls(**action))
                     
             self.actions = formated_actions
 
-    def get_action(self, action_type: type):
-        return next((action for action in self.actions if isinstance(action, action_type)), None)
+    def get_action(self, action_type: str):
+        return next((action for action in self.actions if action.type == action_type), None)
 
-    def has_action(self, action_type: type) -> bool:
+    def has_action(self, action_type: str) -> bool:
         return self.get_action(action_type) is not None
 
-    # def roll(self) -> Counter:
-    #     entry = random.choices(self.loots, weights=[loot["weight"] for loot in self.loots])[0]
+    def is_openable(self) -> bool:
+        return self.has_action(ActionType.OPEN)
 
-    #     rewards = Counter()
-    #     rewards[(entry["type"], entry["id"])] = random.randint(entry["min"], entry["max"])
-    #     return rewards
+    def is_consumable(self) -> bool:
+        return self.has_action(ActionType.CONSUME)

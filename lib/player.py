@@ -7,21 +7,15 @@ from cores import logger
 
 from models import Player
 
-from data.schema import ItemOpenAction
-
 if TYPE_CHECKING:
     from data.schema import Item
 
 async def open_item(interaction: discord.Interaction, item: Item, amount: int = 1):
-    if not item.has_action(ItemOpenAction):
+    if not item.is_openable():
         await interaction.response.send_message("這個物品好像無法被打開")
         return
 
     await interaction.response.send_message("成功打開物品")
-
-async def use(interaction: discord.Interaction, item: Item):
-    print(f"成員 {interaction.user.display_name} 使用 {item.name}") # 測試回函, 實作後刪除
-    await interaction.response.send_message(f"成員 {interaction.user.display_name} 使用 {item.name}") # 測試回函, 實作後刪除
 
 def get_timestamp_daily(player_id: int):
     player: Player

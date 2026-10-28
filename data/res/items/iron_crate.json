@@ -1,8 +1,5 @@
 {
     "id": "iron_crate",
     "name": "鐵箱",
-    "description": "鐵製的箱子，裡面不知道裝著什麼",
-    "flags": {
-        "openable": true
-    }
+    "description": "鐵製的箱子，裡面不知道裝著什麼"
 }

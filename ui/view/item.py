@@ -37,6 +37,7 @@ class UseSelect(ui.Select):
             "openable":   ("打開物品", "open"),
         }
 
+        # NOTE: 如果我這裡都已經篩選過何種動作有使用結果，那我還需要在後面的邏輯再判定一次嗎？
         options = [discord.SelectOption(label = label, value = value) for flag, (label, value) in actions.items() if getattr(self.item.flags, flag)]
         
         super().__init__(

@@ -4,9 +4,10 @@
 from .action_row import ActionRow
 from .container import *
 from .item import *
-from .button import Button
+from .button import *
 from .select import Select
 from .role import Role
+from .media_gallery import *
 
 __all__ = [
     'Text'
@@ -17,5 +18,6 @@ __all__ = [
     'Container',
     'Item',
     'Select',
-    'Role'
+    'Role',
+    'MediaGallery'
 ]
