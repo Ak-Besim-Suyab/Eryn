@@ -1,6 +1,7 @@
 import data
+from data.schema import ItemOpenAction
 
-matchs = data.item.find_flag(openable=True)
+item = data.item.get("wood_crate")
 
-for item in matchs:
-    print(item.name)
+print(item)
+print(item.has_action(ItemOpenAction))

@@ -4,7 +4,7 @@ from discord import ui, SeparatorSpacing
 import data
 from data.schema import Item
 
-from lib import item
+from lib import player
 
 class ItemView(ui.LayoutView):
     def __init__(self, user: discord.abc.User, item_id: str, quantity: int = 1):
@@ -53,3 +53,4 @@ class UseSelect(ui.Select):
                 # item.open(interaction, self.item)
                 # 目前選擇邏輯直到這裡已實作完成，但後續邏輯仍需要琢磨如何規劃與實現
                 print("opened.")
+                await player.open_item(interaction, self.item)

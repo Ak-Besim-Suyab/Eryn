@@ -29,13 +29,13 @@ class LoopCog(commands.Cog):
                     continue
 
                 item_id = random.choices(reward_choices, weights=[90, 10])[0]
-                rewards.append((member.id, item_id))
+                rewards.append((member, item_id))
 
         try:
             with database.atomic():
-                for member_id, item_id in rewards:
-                    item.give(member_id, item_id, 1)
-                    logger.debug(f"成功給予 {member_id} {item_id} x1")
+                for member, item_id in rewards:
+                    item.give(member, item_id, 1)
+                    logger.debug(f"成功給予 {member.id} {item_id} x1")
 
         except Exception as e:
             logger.exception(f"語音獎勵發放失敗：{e}")

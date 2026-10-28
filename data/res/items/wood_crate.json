@@ -2,5 +2,18 @@
     "id": "wood_crate",
     "name": "木箱",
     "description": "木製的箱子，裡面不知道裝著什麼",
-    "flags": { "openable": true }
+
+    "flags": {
+        "openable": true 
+    },
+    
+    "actions": [
+        {
+            "type": "open", 
+            "loot": [
+                {"type": "resource", "id": "wood", "weight": 50}, 
+                {"type": "resource", "id": "food", "weight": 50}
+            ]
+        }
+    ]
 }

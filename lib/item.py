@@ -1,3 +1,4 @@
+import discord
 import data
 
 from cores.logger import logger
@@ -5,6 +6,8 @@ from cores.database import database
 
 from models.player import Player
 from models.inventory import Inventory
+
+from data.schema import Item
 
 def is_valid(item_id: str, amount: int) -> bool:
     item = data.item.get(item_id)
@@ -17,16 +20,19 @@ def is_valid(item_id: str, amount: int) -> bool:
     
     return True
 
-def give(player_id: int, item_id: str, amount: int = 1) -> int:
-    """給予玩家物品，回傳運算後的持有數量
-    """
+def give(interaction: discord.Interaction | discord.abc.User, item_id: str, amount: int = 1) -> int:
+    """ Give player specific item, return quantity after operation.
+    """ 
     if not is_valid(item_id, amount):
         return
+    
+    # 取得使用者物件
+    user = interaction.user if isinstance(interaction, discord.Interaction) else interaction
 
     # 確保玩家存在
-    Player.get_or_create(id=player_id)
+    Player.get_or_create(id=user.id)
     with database.atomic():
-        entry, _ = Inventory.get_or_create(player = player_id, item_id = item_id, defaults = {"quantity": 0})
+        entry, _ = Inventory.get_or_create(player = user.id, item_id = item_id, defaults = {"quantity": 0})
         
         (Inventory
             .update(quantity = Inventory.quantity + amount)
@@ -56,17 +62,17 @@ def remove(player_id: int, item_id: str, amount: int = 1) -> tuple[bool, int]:
             .execute())
         return True, Inventory.get_by_id(entry.id).quantity
 
-def open(player_id: int, item_id: str, amount: int = 1):
+def open(interaction: discord.Interaction, item: Item, amount: int = 1):
     with database.atomic():
-        success, remaining = remove(player_id, item_id, amount)
+        success, remaining = remove(interaction.user.id, item.id, amount)
         if not success:
             return
 
-        item = data.item.get(item_id)
-        rewards = item.roll()
+        item = data.item.get(item.id)
+        # rewards = item.roll()
 
-        for (reward_type, reward_id), amount in rewards.items():
-            give(player_id, reward_id, amount)
+        # for (reward_type, reward_id), amount in rewards.items():
+        #     give(interaction, reward_id, amount)
 
 def consume(player_id: int, item_id: str, amount: int = 1):
     with database.atomic():
@@ -74,4 +80,4 @@ def consume(player_id: int, item_id: str, amount: int = 1):
         if not success:
             return
 
-        # ...
+        pass

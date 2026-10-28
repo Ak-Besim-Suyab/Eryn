@@ -3,7 +3,7 @@
 
 from .action_row import ActionRow
 from .container import *
-from .item import Item
+from .item import *
 from .button import Button
 from .select import Select
 from .role import Role
