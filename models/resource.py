@@ -7,8 +7,11 @@ from models import Player
 
 class Resource(BaseModel):
 
-    player = ForeignKeyField(Player, backref = 'resource', on_delete = 'CASCADE')
+    player = ForeignKeyField(Player, backref = 'resource', unique = True, on_delete = 'CASCADE')
 
     wood = IntegerField(default = 0)
     stone = IntegerField(default = 0)
     food = IntegerField(default = 0)
+    
+    class Meta:
+        indexes = ((('player',), True),)

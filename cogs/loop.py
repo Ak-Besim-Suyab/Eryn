@@ -4,7 +4,7 @@ from discord.ext import commands, tasks
 from cores import database
 from cores import logger
 
-from lib import player
+from lib import item
 
 from config import TH_HAVEN
 
@@ -34,7 +34,7 @@ class LoopCog(commands.Cog):
         try:
             with database.atomic():
                 for member_id, item_id in rewards:
-                    player.give_item(member_id, item_id, 1)
+                    item.give(member_id, item_id, 1)
                     logger.debug(f"成功給予 {member_id} {item_id} x1")
 
         except Exception as e:
