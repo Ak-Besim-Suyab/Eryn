@@ -22,6 +22,7 @@ class Elin(commands.Bot):
         init_databases()
 
         extensions = [
+            # 常態指令
             "cogs.passport",
             "cogs.inventory",
             "cogs.leaderboard",
@@ -35,6 +36,7 @@ class Elin(commands.Bot):
             "cogs.dices.emoji_dice",
             "cogs.dices.message_dice",
 
+            # 監聽事件
             "cogs.listeners.interaction",
             "cogs.listeners.message",
             "cogs.listeners.reaction",
@@ -42,10 +44,14 @@ class Elin(commands.Bot):
             "cogs.listeners.voice",
             "cogs.listeners.member_event",
 
+            # 管理員指令
             "cogs.admins.announce",
             "cogs.admins.boot",
             "cogs.admins.house",
             "cogs.admins.give",
+
+            # 單元測試用
+            "cogs.admins.unittest",
         ]
 
         for extension in extensions:

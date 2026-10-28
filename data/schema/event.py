@@ -1,7 +1,3 @@
-import discord
-
-from dataclasses import dataclass
-
 """
     這裡用於定義事件類型
 
@@ -20,6 +16,8 @@ from dataclasses import dataclass
 
           - 由於 SelectEvent 可能乘載不同分類的事件, 使用時可以將 custom_id 傳入 Event.id 作為唯一識別
 """
+import discord
+from dataclasses import dataclass
 
 @dataclass
 class Event:

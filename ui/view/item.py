@@ -50,5 +50,6 @@ class UseSelect(ui.Select):
                 # item.consume(interaction.user)
                 print("consumed.")
             case "open":
-                item.open(interaction, self.item)
+                # item.open(interaction, self.item)
+                # 目前選擇邏輯直到這裡已實作完成，但後續邏輯仍需要琢磨如何規劃與實現
                 print("opened.")

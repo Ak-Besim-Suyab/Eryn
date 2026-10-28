@@ -17,7 +17,6 @@ class Item:
     description: str = "沒有任何描述。"
     emoji: str = "📦"
     flags: ItemFlag = field(default_factory=ItemFlag)
-    loots: list = field(default_factory=list)
 
     def __post_init__(self):
         if isinstance(self.flags, dict):
