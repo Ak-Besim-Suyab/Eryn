@@ -12,6 +12,7 @@
             "type": "openable", 
             "loot": [
                 {"type": "resource", "id": "wood", "weight": 50}, 
+                {"type": "resource", "id": "stone", "weight": 50},
                 {"type": "resource", "id": "food", "weight": 50}
             ]
         }

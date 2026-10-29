@@ -13,4 +13,6 @@ class Inventory(BaseModel):
     quantity = IntegerField(default = 0)
 
     class Meta:
-        indexes = ((('player', 'item_id'), True),)
+        indexes = (
+            (('player', 'item_id'), True),
+        )

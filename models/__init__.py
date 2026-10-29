@@ -7,6 +7,7 @@ from cores.database import database
 from .player import *
 from .inventory import *
 from .resource import *
+from .building import *
 from .house import *
 from .statistic import *
 

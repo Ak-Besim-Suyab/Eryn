@@ -117,12 +117,6 @@ class ItemSelect(ui.Select):
             options = options
         )
 
+    # 這裡使用 send_message 回覆新視窗，以便於重複對不同物品進行操作
     async def callback(self, interaction: discord.Interaction):
-        # 這裡使用 send_message 回覆新視窗，以便於重複對不同物品進行操作
-        item_id = interaction.data["values"][0]
-
-        row: Inventory
-        row = Inventory.get_or_none(Inventory.player == interaction.user.id, Inventory.item_id == item_id)
-        quantity = row.quantity if row else 0
-
-        await interaction.response.send_message(view = ItemView(interaction.user, item_id, quantity)) 
+        await interaction.response.send_message(view=ItemView(interaction.user, self.values[0])) 

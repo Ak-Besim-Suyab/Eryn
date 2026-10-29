@@ -4,7 +4,7 @@ from discord.ext import commands, tasks
 from cores import database
 from cores import logger
 
-from lib import item
+from lib import resource
 
 from config import TH_HAVEN
 
@@ -16,26 +16,25 @@ class LoopCog(commands.Cog):
     def cog_unload(self):
         self.loop.cancel()
 
-    @tasks.loop(minutes=5)
+    @tasks.loop(minutes=1)
     async def loop(self):
         guild = self.bot.get_guild(TH_HAVEN)
 
         rewards = []
-        reward_choices = ["wood_crate", "iron_crate"]
+        pool = ["wood", "stone", "food"]
 
         for voice_channel in guild.voice_channels:
             for member in voice_channel.members:
                 if member.bot:
                     continue
 
-                item_id = random.choices(reward_choices, weights=[90, 10])[0]
-                rewards.append((member, item_id))
+                res = random.choices(pool, weights=[100, 100, 100])[0]
+                rewards.append((member, res))
 
         try:
             with database.atomic():
-                for member, item_id in rewards:
-                    item.give(member, item_id, 1)
-                    logger.debug(f"成功給予 {member.id} {item_id} x1")
+                for member, res in rewards:
+                    resource.give(member, res, 1)
 
         except Exception as e:
             logger.exception(f"語音獎勵發放失敗：{e}")

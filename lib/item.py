@@ -60,6 +60,9 @@ def remove(player_id: int, item_id: str, amount: int = 1) -> tuple[bool, int]:
             .update(quantity=Inventory.quantity - amount)
             .where(Inventory.id == entry.id)
             .execute())
+
+        logger.debug(f"成功移除 {player_id} 的物品: {item_id}")
+        
         return True, Inventory.get_by_id(entry.id).quantity
 
 def open(interaction: discord.Interaction, item: Item, amount: int = 1):

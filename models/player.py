@@ -5,9 +5,9 @@ from datetime import datetime
 
 class Player(BaseModel):
 
-    id = IntegerField(primary_key=True)
-    display_name = TextField(default="無名的旅人")
+    id = IntegerField(primary_key=True, unique=True)
 
+    display_name = TextField(default="無名的旅人")
     level = IntegerField(default=1)
     experience = IntegerField(default=0)
 

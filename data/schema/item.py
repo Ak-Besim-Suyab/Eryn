@@ -1,3 +1,5 @@
+import random
+from collections import Counter
 from enum import StrEnum
 from dataclasses import dataclass, field
 
@@ -25,6 +27,14 @@ class ItemOpen:
     def __post_init__(self):
         if isinstance(self.loot, list):
             self.loot = [ItemLoot(**loot) for loot in self.loot]
+
+    def roll(self, times: int = 1) -> Counter:
+        rewards = Counter()
+        for _ in range(times):
+            entry = random.choices(self.loot, weights = [loot.weight for loot in self.loot])[0]
+            rewards[(entry.id, entry.type)] += random.randint(entry.min, entry.max)
+
+        return rewards
 
 @dataclass
 class ItemFlag:

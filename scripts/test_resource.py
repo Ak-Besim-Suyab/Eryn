@@ -5,11 +5,11 @@ from lib import resource
 """
 
 # 測試所有參數是否正常, 並印出所有參數值
-obj = resource.give(1, wood=5, stone=10, food=10)
+obj = resource.give(1, "wood", 5)
 if obj:
     print(f"wood={obj.wood}, stone={obj.stone}, food={obj.food}")
 
 # 測試數量驗證
-obj = resource.give(1, wood=-5)
+obj = resource.give(1, "wood", -5)
 # 測試名稱驗證
-obj = resource.give(1, something=5)
+obj = resource.give(1, "somthing", 5)
