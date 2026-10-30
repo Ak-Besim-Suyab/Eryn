@@ -14,4 +14,11 @@ from .statistic import *
 
 def init_databases():
     with database:
-        database.create_tables([Player, Inventory, Resource, House, Statistic], safe=True)
+        database.create_tables([
+            Player, 
+            Inventory, 
+            Resource, 
+            Building,
+            Contribution,
+            House, 
+            Statistic,], safe=True)

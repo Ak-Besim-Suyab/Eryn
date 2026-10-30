@@ -32,14 +32,13 @@ def remove(player_id, resource: str, quantity: int = 1) -> bool:
     if not valid(resource, quantity):
         return
 
-    entry = Resource.get_or_create(player = player_id)
-
+    entry, _ = Resource.get_or_create(player = player_id)
     current = getattr(entry, resource)
 
     with database.atomic():
         updated = (Resource
-                   .update(**{resource: current - quantity})
-                   .where(Resource.player == player_id, current >= quantity)
+                   .update(**{resource: getattr(Resource, resource) - quantity})
+                   .where(Resource.player == player_id, getattr(Resource, resource) >= quantity)
                    .execute())
         
     if not updated: 

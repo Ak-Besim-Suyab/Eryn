@@ -3,7 +3,7 @@ from discord import ui
 
 from data import registry
 from lib.builder import build_container
-from lib import resource
+from lib import resource, building
 
 class SanctuaryView(ui.LayoutView):
     def __init__(self):
@@ -49,10 +49,15 @@ class SanctuaryOption(ui.Select):
         lines = ["已捐助資源："]
         for value in self.values:
             r = registry.resource.get(value)
-            # resource.remove(interaction.user.id, value, 100)
+            success = resource.remove(interaction.user.id, value, 100)
+            if not success:
+                continue
+
+            building.add_contribution(interaction.user.id, "sanctuary", value, 100)
 
             lines.append(f"- {r.name}")
 
-        self.view.render()
+        #self.view: SanctuaryView
+        #self.view.render()
         await interaction.edit_original_response(view=self.view)
-        await interaction.followup.send("\n".join(lines), ephemeral = True)
+        await interaction.followup.send("\n".join(lines))
