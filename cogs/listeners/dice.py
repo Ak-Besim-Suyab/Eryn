@@ -6,7 +6,7 @@ from lib.utils import dice
 
 from config import MAX_SIDES
 
-class MessageDiceListener(commands.Cog):
+class DiceListener(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
@@ -35,4 +35,4 @@ class MessageDiceListener(commands.Cog):
         await message.reply(reply, mention_author=False)
 
 async def setup(bot: commands.Bot):
-    await bot.add_cog(MessageDiceListener(bot))
+    await bot.add_cog(DiceListener(bot))

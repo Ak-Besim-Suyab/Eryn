@@ -33,9 +33,6 @@ class Elin(commands.Bot):
             "cogs.rock_paper_scissors",
             "cogs.fortune_stick",
 
-            "cogs.dices.emoji_dice",
-            "cogs.dices.message_dice",
-
             # 監聽事件
             "cogs.listeners.interaction",
             "cogs.listeners.message",
@@ -43,6 +40,7 @@ class Elin(commands.Bot):
             "cogs.listeners.thread_fixing",
             "cogs.listeners.voice",
             "cogs.listeners.member_event",
+            "cogs.listeners.dice",
 
             # 管理員指令
             "cogs.admins.announce",

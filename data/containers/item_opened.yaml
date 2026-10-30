@@ -1,0 +1,8 @@
+accent_color: 0
+items:
+  - type: text
+    content: |
+      ### {display_name}
+      > 你嘗試打開{item_emoji}{item_name}...
+      
+      {descriptions}

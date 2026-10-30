@@ -1,4 +1,4 @@
-from .registry import (
+from .storage import (
     container, 
     item,
     role

@@ -34,7 +34,7 @@ class LoopCog(commands.Cog):
         try:
             with database.atomic():
                 for member, res in rewards:
-                    resource.give(member, res, 1)
+                    resource.give(member.id, res, 1)
 
         except Exception as e:
             logger.exception(f"語音獎勵發放失敗：{e}")

@@ -2,13 +2,16 @@ from __future__ import annotations
 from typing import TYPE_CHECKING
 
 import discord
+from discord import ui
 from cores import logger
 
 from models import Player
 
 from lib import item as itemlib
 from lib import resource as reslib
+from lib.builder import build_container
 
+import data
 from data.schema import ActionType
 
 if TYPE_CHECKING:
@@ -46,10 +49,18 @@ async def open_item(view: ItemView, interaction: discord.Interaction, item: Item
 
     message = f"成功打開 {times} 個物品，獲得: "+ ', '.join(reward_lines)
 
+    kwargs = {
+        "display_name": interaction.user.display_name,
+        "item_emoji": item.emoji,
+        "item_name": item.name,
+    }
+
+    #NOTE 是不是可以做一個 builder_view(*args) 透過 *args 展開參數，這樣好像可以實現多容器 view
+    container = build_container(data.container.get("item_opened"))
+
     view.render()
-    
     await interaction.edit_original_response(view=view)
-    await interaction.followup.send(message)
+    await interaction.followup.send(view=ui.LayoutView().add_item(container))
 
 def get_timestamp_daily(player_id: int):
     player: Player

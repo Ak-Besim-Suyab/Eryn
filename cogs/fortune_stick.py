@@ -3,6 +3,8 @@ import discord
 from discord.ext import commands
 from discord import app_commands
 
+from lib.utils import emoji
+
 from config import OMIKUJI_POOL
 
 class FortuneStickCog(commands.Cog):
@@ -18,6 +20,22 @@ class FortuneStickCog(commands.Cog):
             turns.append(random.choice(OMIKUJI_POOL))
 
         await interaction.response.send_message(''.join(turns))
+
+    @commands.Cog.listener()
+    async def on_message(self, message: discord.Message):
+        
+        if message.author.bot:
+            return
+
+        num = emoji.count(message.content, '1561963940689354852')
+        if num == 0:
+            return
+
+        reply = ""
+        for _ in range(num):
+            reply += random.choice(OMIKUJI_POOL)
+
+        await message.reply(reply, mention_author=False)
 
 async def setup(bot: commands.Bot):
     await bot.add_cog(FortuneStickCog(bot))
