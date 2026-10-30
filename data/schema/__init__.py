@@ -9,6 +9,9 @@ from .select import Select
 from .role import Role
 from .media_gallery import *
 
+from .item import *
+from .resource import *
+
 __all__ = [
     'ActionRow',
     'Text'
@@ -16,7 +19,10 @@ __all__ = [
     'Section',
     'Button',
     'Container',
+
     'Item',
+    'Resource',
+    
     'Select',
     'Role',
     'MediaGallery'

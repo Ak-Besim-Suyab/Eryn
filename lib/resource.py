@@ -1,3 +1,4 @@
+import discord
 from typing import Optional
 
 from cores.database import database
@@ -26,8 +27,27 @@ def give(player_id: int, resource: str, quantity: int = 1) -> Optional[Resource]
 
     return Resource.get(Resource.player == player_id)
     
-def consume(player_id: int, resource: str, quantity: int = 1):
-    pass
+def remove(player_id, resource: str, quantity: int = 1) -> bool:
+
+    if not valid(resource, quantity):
+        return
+
+    entry = Resource.get_or_create(player = player_id)
+
+    current = getattr(entry, resource)
+
+    with database.atomic():
+        updated = (Resource
+                   .update(**{resource: current - quantity})
+                   .where(Resource.player == player_id, current >= quantity)
+                   .execute())
+        
+    if not updated: 
+        logger.debug(f"{player_id} 的 {resource} ({current}) 不足，無法扣除 ({quantity})")
+        return False
+
+    logger.debug(f"成功消耗 {player_id} {quantity} 個 {resource}")
+    return True
 
 def valid(resource: str, quantity: int) -> bool:
 

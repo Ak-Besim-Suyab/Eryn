@@ -60,7 +60,24 @@ def action_row(item: ActionRow, **kwargs) -> ui.ActionRow:
                     )
                 )
             case "select":
-                pass
+                options = []
+                for option in component.options:
+                    o = discord.SelectOption(
+                        label = option.label,
+                        emoji = option.emoji,
+                        description = option.description,
+                        value = option.value
+                    )
+                    options.append(o)
+
+                select = ui.Select(
+                    placeholder = component.placeholder,
+                    min_values = component.min_values,
+                    max_values = component.max_values,
+                    custom_id = component.custom_id,
+                    options = options
+                )
+                row.add_item(select)
 
     return row
 

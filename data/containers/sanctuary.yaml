@@ -1,0 +1,12 @@
+accent_color: 0
+items:
+  - type: text
+    content: |
+      ## 聖所
+      > *這裡是位於城鎮中央的教堂，無數信徒正在這裡祈禱，同時也有無數難民在等待援助。*
+      - 你可以在這裡提供__物資__讓聖所升級。
+  
+  - type: separator
+    size: small
+
+# there has a select menu implemented in ui/sanctuary.py
