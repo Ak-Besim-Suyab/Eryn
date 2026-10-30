@@ -2,7 +2,7 @@ import random
 import discord
 from discord.ext import commands
 
-from lib.emoji_dice import count_emoji
+from lib.utils import emoji
 
 from config import OMIKUJI_POOL
 
@@ -16,7 +16,7 @@ class EmojiDiceListener(commands.Cog):
         if message.author.bot:
             return
 
-        num = count_emoji(message.content, '1561963940689354852')
+        num = emoji.count(message.content, '1561963940689354852')
         if num == 0:
             return
 

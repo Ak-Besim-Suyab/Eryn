@@ -2,7 +2,7 @@ import random
 import discord
 from discord.ext import commands
 
-from lib import dice
+from lib.utils import dice
 
 from config import MAX_SIDES
 
