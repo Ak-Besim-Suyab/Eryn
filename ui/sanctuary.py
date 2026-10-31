@@ -13,10 +13,13 @@ class SanctuaryView(ui.LayoutView):
         self.render()
 
     def render(self):
+
+        contributions = building.get_building_contributions("sanctuary")
+
         action_row = ui.ActionRow()
         action_row.add_item(SanctuaryOption())
 
-        container = build_container(self.data)
+        container = build_container(self.data, **contributions)
         container.add_item(action_row)
 
         self.clear_items()
@@ -36,7 +39,7 @@ class SanctuaryOption(ui.Select):
             options.append(discord.SelectOption(label = label, value = value))
 
         super().__init__(
-            placeholder = "選擇要提供的項目", 
+            placeholder = "選擇要提供的項目（可複選）", 
             min_values = 1,
             max_values = len(data),
             options = options
@@ -48,16 +51,19 @@ class SanctuaryOption(ui.Select):
  
         lines = ["已捐助資源："]
         for value in self.values:
-            r = registry.resource.get(value)
+            res = registry.resource.get(value)
             success = resource.remove(interaction.user.id, value, 100)
             if not success:
                 continue
 
             building.add_contribution(interaction.user.id, "sanctuary", value, 100)
 
-            lines.append(f"- {r.name}")
+            lines.append(f"- {res.icon}{res.name}")
 
-        #self.view: SanctuaryView
-        #self.view.render()
-        await interaction.edit_original_response(view=self.view)
+        view: SanctuaryView
+        view = self.view
+        
+        view.render()
+
+        await interaction.edit_original_response(view=view)
         await interaction.followup.send("\n".join(lines))

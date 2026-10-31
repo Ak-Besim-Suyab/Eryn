@@ -1,7 +1,6 @@
 import data
-from data.schema import ItemOpenAction
 
-item = data.item.get("wood_crate")
+building = data.building.get("sanctuary")
 
-print(item)
-print(item.has_action(ItemOpenAction))
+for condition in building.level_conditions:
+    print(condition.level, condition.wood, condition.stone, condition.food)

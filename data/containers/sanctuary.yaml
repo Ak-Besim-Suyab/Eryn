@@ -1,12 +1,23 @@
 accent_color: 0
 items:
+  - type: media_gallery 
+    items:
+      - media: https://media.discordapp.net/attachments/1491046495812718672/1566004902998704168/sanctuary.jpg
+
+  - type: separator
+
   - type: text
     content: |
       ## 聖所
       > *這裡是位於城鎮中央的教堂，無數信徒正在這裡祈禱，同時也有無數難民在等待援助。*
-      - 你可以在這裡提供__物資__讓聖所升級。
+
+      - 你可以在這裡提供**物資**以升級聖所。
+      
+      **已獲得物資：**
+      - 🪵 木材：{wood}
+      - 🪨 石材：{stone}
+      - 🥩 食物：{food}
   
   - type: separator
-    size: small
 
-# there has a select menu implemented in ui/sanctuary.py
+# there has a select menu implemented in ui/sanctuary.py  

@@ -3,7 +3,7 @@
 from copy import deepcopy
 from lib.utils import file
 from cores import logger
-from data.schema import Container, Role, Item, Resource
+from data.schema import Container, Role, Item, Resource, Building
 
 class Storage:
     def __init__(self, path: str):
@@ -87,7 +87,19 @@ class RoleStorage(Storage):
     def find(self, **filters) -> list[Role]:
         return [Role(**deepcopy(data)) for data in self._storage.values() if all(data.get(key) == value for key, value in filters.items())]
 
+class BuildingStorage(Storage):
+    def __init__(self, path: str = "data/buildings"):
+        super().__init__(path)
+
+    def get(self, name: str):
+        data = self._storage.get(name)
+        if not data:
+            return None
+        
+        return Building(**deepcopy(data))
+
 item = ItemStorage()
 resource = ResourceStorage()
 container = ContainerStorage()
 role = RoleStorage()
+building = BuildingStorage()

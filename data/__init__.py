@@ -3,6 +3,7 @@ from .registry import (
     resource,
     container, 
     role,
+    building,
 )
 
 # 告訴所有導入此模組的函式庫該模組包含哪些函式庫
@@ -12,6 +13,7 @@ __all__ = [
     "resource",
     "container",
     "role",
+    "building",
 ]
 
 #

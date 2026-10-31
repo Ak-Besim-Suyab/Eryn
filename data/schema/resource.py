@@ -4,4 +4,4 @@ from dataclasses import dataclass
 class Resource:
     id: str
     name: str
-    emoji: str = "📦"
+    icon: str = "📦"

@@ -3,6 +3,9 @@
 import json
 import yaml
 from pathlib import Path
+
+from openpyxl import load_workbook, Workbook
+
 from cores.logger import logger
 
 filenames = {".json", ".yaml", ".yml"}
@@ -52,3 +55,7 @@ def load_dir(path: str) -> dict[str, dict]:
     
     logger.info(f"資料載入完畢，總共載入 {data_total} 個檔案")
     return data
+
+def load_excel(path: str) -> Workbook:
+    workbook = load_workbook(path, data_only=True)
+    return workbook

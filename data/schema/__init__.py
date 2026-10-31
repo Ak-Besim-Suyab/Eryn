@@ -12,6 +12,8 @@ from .media_gallery import *
 from .item import *
 from .resource import *
 
+from .building import *
+
 __all__ = [
     'ActionRow',
     'Text'
@@ -25,5 +27,7 @@ __all__ = [
     
     'Select',
     'Role',
-    'MediaGallery'
+    'MediaGallery',
+
+    'building'
 ]
