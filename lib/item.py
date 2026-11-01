@@ -65,22 +65,18 @@ def remove(player_id: int, item_id: str, amount: int = 1) -> tuple[bool, int]:
         
         return True, Inventory.get_by_id(entry.id).quantity
 
-def open(interaction: discord.Interaction, item: Item, amount: int = 1):
-    with database.atomic():
-        success, remaining = remove(interaction.user.id, item.id, amount)
-        if not success:
-            return
+# function for formatting item display.
+def summary_line(item_id: str, quantity: int) -> str:
+    """ 格式化物品摘要並返回顯示字串，包括圖示和名稱。
+    """
+    item = data.item.get(item_id)
+    if item is None:
+        logger.warning(f"背包內存在未定義的道具: {item_id}")
+        return f"- ❓{item_id} - {quantity}"
+    
+    return f"- {item.icon}{item.name} - {quantity} "
 
-        item = data.item.get(item.id)
-        # rewards = item.roll()
-
-        # for (reward_type, reward_id), amount in rewards.items():
-        #     give(interaction, reward_id, amount)
-
-def consume(player_id: int, item_id: str, amount: int = 1):
-    with database.atomic():
-        success, remaining = remove(player_id, item_id, amount)
-        if not success:
-            return
-
-        pass
+def detail_line(item_id: str, quantity: int) -> str:
+    """ 格式化物品詳細資訊並返回顯示字串，包括所有資訊。
+    """
+    pass

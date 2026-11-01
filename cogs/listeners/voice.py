@@ -7,7 +7,7 @@ from discord.ext import commands
 from cores import logger
 from lib import time, level_system
 
-notice_channel_id = 1198867692497674241
+import config
 
 class VoiceListener(commands.Cog):
     def __init__(self, bot: commands.Bot):
@@ -33,7 +33,7 @@ class VoiceListener(commands.Cog):
 
     async def send(self, type: str, member: discord.Member, channel: discord.VoiceChannel):
 
-        notice_channel = self.bot.get_channel(notice_channel_id)
+        notice_channel = self.bot.get_channel(config.NOTICE_CHANNEL)
         if notice_channel is not None:
             embed = await self.get_embed(type, member, channel)
             await notice_channel.send(embed=embed)

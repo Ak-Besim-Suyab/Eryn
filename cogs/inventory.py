@@ -12,6 +12,8 @@ class InventoryCog(commands.Cog):
     async def inventory(self, interaction: discord.Interaction):
         inventory = InventoryView(interaction.user)
         await interaction.response.send_message(view = inventory)
-        
+
+
+
 async def setup(bot: commands.Bot):
     await bot.add_cog(InventoryCog(bot))

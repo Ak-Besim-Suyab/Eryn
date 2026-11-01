@@ -5,21 +5,39 @@ from data import registry
 from lib.builder import build_container
 from lib import resource, building
 
+from models import Building
+
 class SanctuaryView(ui.LayoutView):
     def __init__(self):
         super().__init__(timeout = None)
-
-        self.data = registry.container.get("sanctuary")
+        self.name = "sanctuary"
+        self.data = registry.container.get(self.name)
         self.render()
 
     def render(self):
 
-        contributions = building.get_building_contributions("sanctuary")
+        data = registry.building.get(self.name)
+        if not data:
+            raise ValueError(f"找不到建築物資料: {self.name}")
+
+        build: Building
+        build, _ = Building.get_or_create(id=self.name)
+
+        level_conditions = data.get_leveling_conditions(build.level)
+
+        conditions = {
+            "level": build.level,
+            "required_wood": level_conditions["wood"],
+            "required_stone": level_conditions["stone"],
+            "required_food": level_conditions["food"],
+        }
+
+        contributions = building.get_building_contributions(self.name)
 
         action_row = ui.ActionRow()
         action_row.add_item(SanctuaryOption())
 
-        container = build_container(self.data, **contributions)
+        container = build_container(self.data, **contributions, **conditions)
         container.add_item(action_row)
 
         self.clear_items()
@@ -56,7 +74,7 @@ class SanctuaryOption(ui.Select):
             if not success:
                 continue
 
-            building.add_contribution(interaction.user.id, "sanctuary", value, 100)
+            upgraded, level = building.add_contribution(interaction.user.id, "sanctuary", value, 100)
 
             lines.append(f"- {res.icon}{res.name}")
 
@@ -67,3 +85,6 @@ class SanctuaryOption(ui.Select):
 
         await interaction.edit_original_response(view=view)
         await interaction.followup.send("\n".join(lines))
+
+        if upgraded:
+            await interaction.followup.send(f"聖所提升到 {level} 級！")

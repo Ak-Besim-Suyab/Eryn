@@ -21,7 +21,7 @@ if TYPE_CHECKING:
 async def open_item(view: ItemView, interaction: discord.Interaction, item: Item, times: int = 1):
 
     if not item.is_openable():
-        await interaction.response.send_message("這個物品好像無法被打開")
+        await interaction.response.send_message("這個物品好像無法被打開...")
         return
 
     await interaction.response.defer(ephemeral=True)
@@ -51,7 +51,7 @@ async def open_item(view: ItemView, interaction: discord.Interaction, item: Item
 
     kwargs = {
         "display_name": interaction.user.display_name,
-        "item_emoji": item.emoji,
+        "item_icon": item.icon,
         "item_name": item.name,
     }
 

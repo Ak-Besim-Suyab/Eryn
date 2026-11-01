@@ -51,7 +51,7 @@ class Item:
     id: str
     name: str = "未知物品"
     description: str = "沒有任何描述。"
-    emoji: str = "📦"
+    icon: str = "📦"
     flags: ItemFlag = field(default_factory=ItemFlag)
     actions: list[dict] = field(default_factory=list)
 

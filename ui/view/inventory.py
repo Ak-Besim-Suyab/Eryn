@@ -12,14 +12,7 @@ from models import Inventory
 from .item import ItemView
 
 from lib.inventory import get_page
-
-def format_row(row: Inventory) -> str:
-    item = data.item.get(row.item_id)
-    if item is None:
-        logger.warning(f"背包內存在未定義的道具: {row.item_id}")
-        return f"- ❓{row.item_id} - {row.quantity}"
-    
-    return f"- {item.emoji}{item.name} - {row.quantity} "
+from lib.item import summary_line
 
 class InventoryView(ui.LayoutView):
     def __init__(self, user: discord.abc.User, page: int = 1, category: str = "all"):
@@ -35,7 +28,7 @@ class InventoryView(ui.LayoutView):
         
         self.rows = rows
 
-        lines = [format_row(r) for r in rows] or ["> *背包裡什麼都沒有。*"]
+        lines = [summary_line(row.item_id, row.quantity) for row in rows] or ["> *背包裡什麼都沒有。*"]
 
         container = ui.Container(accent_color = 0)
         container.add_item(ui.TextDisplay(content = f"### {self.user.display_name}"))

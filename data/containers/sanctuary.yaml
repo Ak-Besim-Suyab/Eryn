@@ -12,11 +12,13 @@ items:
       > *這裡是位於城鎮中央的教堂，無數信徒正在這裡祈禱，同時也有無數難民在等待援助。*
 
       - 你可以在這裡提供**物資**以升級聖所。
+
+      **聖所等級：** {level}
       
       **已獲得物資：**
-      - 🪵 木材：{wood}
-      - 🪨 石材：{stone}
-      - 🥩 食物：{food}
+      - 🪵 木材：{wood} / {required_wood}
+      - 🪨 石材：{stone} / {required_stone}
+      - 🥩 食物：{food} / {required_food}
   
   - type: separator
 

@@ -15,6 +15,7 @@ class BootCog(commands.Cog):
     async def reload_data(self, ctx: commands.Context):
         try:
             data.container.load()
+            data.item.load()
             await ctx.send('✅ 咪！成功重新載入資料')
         except Exception as e:
             await ctx.send(f'❌ 咪... 無法重新載入資料：{e}')

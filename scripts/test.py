@@ -2,5 +2,6 @@ import data
 
 building = data.building.get("sanctuary")
 
-for condition in building.level_conditions:
-    print(condition.level, condition.wood, condition.stone, condition.food)
+conditions = building.get_leveling_conditions(5)
+
+print(conditions)

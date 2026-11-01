@@ -25,7 +25,7 @@ class ItemView(ui.LayoutView):
         container = ui.Container()
         container.add_item(ui.TextDisplay(content = f"### {self.user.display_name}"))
         container.add_item(ui.Separator(spacing = SeparatorSpacing.small))
-        container.add_item(ui.TextDisplay(content = f"{item.emoji}{item.name}（你擁有： {quantity}）"))
+        container.add_item(ui.TextDisplay(content = f"{item.icon}{item.name}（你擁有： {quantity}）"))
         container.add_item(ui.ActionRow(UseSelect(item, quantity)))
 
         self.clear_items()
