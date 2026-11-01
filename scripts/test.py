@@ -1,7 +1,5 @@
-import data
+from lib import item
 
-building = data.building.get("sanctuary")
+quantity = item.give(1, "wood_crate", 1)
 
-conditions = building.get_leveling_conditions(5)
-
-print(conditions)
+print(quantity)

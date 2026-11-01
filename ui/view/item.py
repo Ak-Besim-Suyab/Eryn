@@ -18,15 +18,23 @@ class ItemView(ui.LayoutView):
     def render(self):
         row: Inventory
         row = Inventory.get_or_none(Inventory.player == self.user.id, Inventory.item_id == self.item_id)
-        quantity = row.quantity
 
         item = data.item.get(self.item_id)
 
         container = ui.Container()
         container.add_item(ui.TextDisplay(content = f"### {self.user.display_name}"))
         container.add_item(ui.Separator(spacing = SeparatorSpacing.small))
-        container.add_item(ui.TextDisplay(content = f"{item.icon}{item.name}（你擁有： {quantity}）"))
-        container.add_item(ui.ActionRow(UseSelect(item, quantity)))
+
+        # 檢查物品是否已為空
+        if row is None:
+            container.add_item(ui.TextDisplay(content = f"> *你已不再擁有{item.name}。*"))
+
+            self.clear_items()
+            self.add_item(container)
+            return
+
+        container.add_item(ui.TextDisplay(content = f"{item.icon}{item.name}（你擁有： {row.quantity}）"))
+        container.add_item(ui.ActionRow(UseSelect(item, row.quantity)))
 
         self.clear_items()
         self.add_item(container)
@@ -39,9 +47,9 @@ class UseSelect(ui.Select):
         self.quantity = quantity
 
         actions = [
-            ("consumable", (f"使用物品", "consume")),
-            ("openable",   (f"打開物品", "open")),
-            ("openable",   (f"打開物品 ({quantity})", "open_all"))
+            ("consumable", (f"使用", "consume")),
+            ("openable",   (f"打開", "open")),
+            ("openable",   (f"打開全部", "open_all"))
         ]
 
         # NOTE: 如果我這裡都已經篩選過何種動作有使用結果，那我還需要在後面的邏輯再判定一次嗎？
@@ -53,11 +61,17 @@ class UseSelect(ui.Select):
         )
 
     async def callback(self, interaction: discord.Interaction):
+
+        await interaction.response.defer(ephemeral=True)
+
         match self.values[0]:
             case "consume":
                 pass
             case "open":
                 # 目前選擇邏輯直到這裡已實作完成，但後續邏輯仍需要琢磨如何規劃與實現
-                await player.open_item(self.view, interaction, self.item, 1)
+                success = await player.open_item(self.view, interaction, self.item, 1)
+                if not success:
+                    await interaction.response.send_message("這個物品好像無法被打開...")
+
             case "open_all":
                 await player.open_item(self.view, interaction, self.item, self.quantity)

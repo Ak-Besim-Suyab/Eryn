@@ -3,7 +3,8 @@ from discord import ui
 
 from data import registry
 from lib.builder import build_container
-from lib import resource, building
+from lib import resource
+from lib.entities import building
 
 from models import Building
 
@@ -46,20 +47,20 @@ class SanctuaryView(ui.LayoutView):
 class SanctuaryOption(ui.Select):
     def __init__(self):
 
-        data = {
+        actions = {
             ("木材（消耗：100 木材）", "wood"),
             ("石材（消耗：100 石材）", "stone"),
             ("食物（消耗：100 食物）", "food"),
         }
 
         options = []
-        for label, value in data:
+        for label, value in actions:
             options.append(discord.SelectOption(label = label, value = value))
 
         super().__init__(
-            placeholder = "選擇要提供的項目（可複選）", 
+            placeholder = "選擇提供項目（可複選）", 
             min_values = 1,
-            max_values = len(data),
+            max_values = len(actions),
             options = options
         )
 

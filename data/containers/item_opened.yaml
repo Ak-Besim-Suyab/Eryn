@@ -3,6 +3,6 @@ items:
   - type: text
     content: |
       ### {display_name}
-      > 你嘗試打開{item_emoji}{item_name}...
+      > *你嘗試打開 {times} {item_icon}{item_name}...*
       
       {descriptions}

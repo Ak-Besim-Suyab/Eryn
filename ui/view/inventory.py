@@ -28,15 +28,17 @@ class InventoryView(ui.LayoutView):
         
         self.rows = rows
 
-        lines = [summary_line(row.item_id, row.quantity) for row in rows] or ["> *背包裡什麼都沒有。*"]
+        lines = [summary_line(row.item_id, row.quantity) for row in rows] or ["> *沒有任何可以顯示的物品。*"]
 
         container = ui.Container(accent_color = 0)
         container.add_item(ui.TextDisplay(content = f"### {self.user.display_name}"))
         container.add_item(ui.TextDisplay(content = "\n".join(lines)))
         container.add_item(self.category_action())
 
-        if self.rows:
-            container.add_item(ui.ActionRow(ItemSelect(self.rows)))
+        # 檢查物品是否合法，若為空或僅有不合法物品，不顯示表單
+        valid_rows = [row for row in rows if data.item.get(row.item_id) is not None]
+        if valid_rows:
+            container.add_item(ui.ActionRow(ItemSelect(valid_rows)))
             
         container.add_item(self.page_action(total_pages))
 
@@ -103,6 +105,7 @@ class ItemSelect(ui.Select):
             item = data.item.get(row.item_id)
             if item is None:
                 continue
+
             options.append(discord.SelectOption(label = item.name, value = item.id))
         
         super().__init__(

@@ -1,0 +1,2 @@
+def catch():
+    pass
