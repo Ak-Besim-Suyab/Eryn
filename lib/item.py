@@ -65,14 +65,14 @@ def remove(player_id: int, item_id: str, amount: int = 1) -> tuple[bool, int]:
 # function for formatting item display.
 def summary_line(item_id: str, quantity: int) -> str:
     """ 
-    格式化物品摘要並返回顯示字串，包括圖示和名稱，這裡會從資料庫獲取資料。
+    搜尋物品表並返回訊息用的文字字串，僅包含數量、圖示和顯示名稱。
     """
     item = ITEMS.get(item_id)
     if item is None:
         logger.warning(f"背包內存在未定義的道具: {item_id}")
-        return f"- ❓{item_id} - {quantity}"
+        return f"{quantity}❓{item_id}"
     
-    return f"- {item.icon}{item.name} - {quantity} "
+    return f"{quantity} {item.icon}{item.name}"
 
 def detail_line(item_id: str, quantity: int) -> str:
     """ 

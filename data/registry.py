@@ -3,7 +3,7 @@
 from copy import deepcopy
 from lib.utils import file
 from cores import logger
-from data.schema import Container, Role, Item, Resource, Building, LootTable
+from data.schema import Container, Role, Item, Resource, Building, LootTable, Line
 
 class Storage:
     def __init__(self, path: str):
@@ -109,6 +109,17 @@ class LootTableStorage(Storage):
         
         return LootTable(**deepcopy(data))
 
+class LineStorage(Storage):
+    def __init__(self, path: str = "data/lines"):
+        super().__init__(path)
+
+    def get(self, name: str):
+        data = self._storage.get(name)
+        if not data:
+            return None
+        
+        return Line(**deepcopy(data))
+
 # ----
 # 註冊資料物件, 讓其他函式庫可以直接導入使用
 # ----
@@ -118,3 +129,4 @@ CONTAINERS  = ContainerStorage()
 ROLES       = RoleStorage()
 BUILDINGS   = BuildingStorage()
 LOOT_TABLES = LootTableStorage()
+LINES       = LineStorage()

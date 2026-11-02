@@ -1,0 +1,7 @@
+accent_color: 0
+items:
+  - type: text
+    content: |
+      ### {display_name}
+      > 你在附近的水域釣魚，經過一段時間後... 似乎沒有任何魚上鉤。
+      你：「{line}」

@@ -5,6 +5,7 @@ from .registry import (
     ROLES,
     BUILDINGS,
     LOOT_TABLES,
+    LINES,
 )
 
 # 告訴所有導入此模組的函式庫該模組包含哪些函式庫
@@ -16,6 +17,7 @@ __all__ = [
     "ROLES",
     "BUILDINGS",
     "LOOT_TABLES",
+    "LINES",
 ]
 
 # 用法: 

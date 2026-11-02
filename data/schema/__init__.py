@@ -13,6 +13,7 @@ from .item import *
 from .role import *
 from .resource import *
 from .loot_table import *
+from .line import *
 
 __all__ = [
     'ActionRow',
@@ -29,4 +30,5 @@ __all__ = [
     'Role',
     'Resource',
     'LootTable',
+    'Line',
 ]
