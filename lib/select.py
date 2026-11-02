@@ -6,7 +6,7 @@ from lib import builder
 from cores import event_bus
 from cores import logger
 
-import data
+from data import CONTAINERS, ROLES
 from data.schema.event import SelectEvent
 
 async def select_unique_role(event: SelectEvent):
@@ -14,7 +14,7 @@ async def select_unique_role(event: SelectEvent):
     await event.interaction.response.defer()
 
     # 取得身分組資料
-    d = data.role.get(event.values[0])
+    d = ROLES.get(event.values[0])
 
     # 取得伺服器對應身分組
     selected_role = event.interaction.guild.get_role(d.discord_id)
@@ -25,7 +25,7 @@ async def select_unique_role(event: SelectEvent):
     # 嘗試套用身分組
     try:
         # 取得相同分類的身分組資料, 用於檢查唯一身分組
-        category_roles = data.role.find(category = d.category)
+        category_roles = ROLES.find(category = d.category)
         category_roles_ids = [role.discord_id for role in category_roles]
 
         # 取得要移除的其他同類身分組
@@ -43,7 +43,7 @@ async def select_unique_role(event: SelectEvent):
         logger.exception(f"使用者套用身分組時發生錯誤：{e}")
 
 async def post_guide(event: SelectEvent):
-    view = ui.LayoutView(timeout = None).add_item(builder.build_container(data.container.get("post_guide")))
+    view = ui.LayoutView(timeout = None).add_item(builder.build_container(CONTAINERS.get("post_guide")))
     await event.interaction.response.send_message(view = view, ephemeral = True)
 
 async def select_test(event: SelectEvent):

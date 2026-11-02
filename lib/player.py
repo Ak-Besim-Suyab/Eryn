@@ -1,57 +1,43 @@
-from __future__ import annotations
-from typing import TYPE_CHECKING
-
-import discord
-from discord import ui
 from cores import logger
 
 from models import Player
 
 from lib import item as itemlib
 from lib import resource as reslib
-from lib.builder import build_container
-from lib.view import create_view
 
-import data as registry
+from data import RESOURCES, LOOT_TABLES
 from data.schema import ActionType
 
-if TYPE_CHECKING:
-    from data.schema import Item, ItemOpen
-    from ui import ItemView
+from data.schema import Item
 
-async def open_item(view: ItemView, interaction: discord.Interaction, item: Item, times: int = 1):
+async def open_item(player_id: int, item: Item, times: int = 1) -> tuple[bool, dict]:
 
-    if not item.is_openable():
-        return False
+    loot = item.get_component(ActionType.LOOT)
+    if loot is None:
+        return False, None
 
-    open_action: ItemOpen
-    open_action = item.get_action(ActionType.OPEN)
-    loots = open_action.roll(times)
+    # NOTE: 這裡先實作簡易邏輯，之後如果讓 loot_table 可以有多個，則需要再做調整
+    loot_table = LOOT_TABLES.get(loot.loot_tables[0])
+    if loot_table is None:
+        logger.warning(f"找不到物品 {item.id} 的掉落表 {loot.loot_tables[0]}")
+        return False, None
 
-    descriptions = [f"**成功打開 {times} {item.icon}{item.name}，獲得：**"]
+    looted = loot_table.roll(times)
 
-    for (item_id, item_type), quantity in loots.items():
-        match item_type:
+    item_lines = []
+    for (loot_type, loot_id), quantity in looted.items():
+        match loot_type:
             case "resource":
-                res = registry.resource.get(item_id)
-                reslib.give(interaction.user.id, item_id, quantity)
-                descriptions.append(f"- {res.icon}{res.name} {quantity}")
+                res = RESOURCES.get(loot_id)
+                reslib.give(player_id, loot_id, quantity)
+                # NOTE: 這裡之後改成 description.append(resource.get_line(item_id, quantity))
+                item_lines.append(f"- {res.icon}{res.name} {quantity}")
             case _:
                 pass
 
-    itemlib.remove(interaction.user.id, item.id, times)
+    itemlib.remove(player_id, item.id, times)
 
-    contents = {
-        "display_name": interaction.user.display_name,
-        "item_icon": item.icon,
-        "item_name": item.name,
-        "times": times,
-        "descriptions": '\n'.join(descriptions)
-    }
-
-    view.render()
-    await interaction.edit_original_response(view=view)
-    await interaction.followup.send(view=create_view("item_opened", **contents))
+    return True, item_lines
 
 def get_timestamp_daily(player_id: int):
     player: Player

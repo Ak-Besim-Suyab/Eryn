@@ -1,4 +1,4 @@
-import data as registry
+from data import BUILDINGS
 
 from peewee import fn
 
@@ -57,7 +57,7 @@ def can_upgrade(current_resources: dict, required_resources: dict) -> bool:
 def upgrade(building_id: str) -> tuple[bool, int]:
     """ 嘗試升級建築，返回 `upgraded: bool` 表示升級與否和 `level: int` 表示當前等級
     """
-    data = registry.building.get(building_id)
+    data = BUILDINGS.get(building_id)
 
     upgrade = False
     with database.atomic():

@@ -36,7 +36,7 @@ class InventoryView(ui.LayoutView):
         container.add_item(self.category_action())
 
         # 檢查物品是否合法，若為空或僅有不合法物品，不顯示表單
-        valid_rows = [row for row in rows if data.item.get(row.item_id) is not None]
+        valid_rows = [row for row in rows if data.ITEMS.get(row.item_id) is not None]
         if valid_rows:
             container.add_item(ui.ActionRow(ItemSelect(valid_rows)))
             
@@ -92,7 +92,7 @@ class InventoryView(ui.LayoutView):
     def get_item_ids(self) -> list[str]:
         match self.category:
             case "all": return None
-            case "openable": return [item.id for item in data.item.find_flag(openable=True)]
+            case "openable": return [item.id for item in data.ITEMS.find_flag(openable=True)]
 
 class ItemSelect(ui.Select):
     """ 這個表單用來讀取並列出玩家指定分類的物品, 表單選項受到傳入的串列影響, 串列則由上層來自 Inventory 的讀取函式取得
@@ -102,7 +102,7 @@ class ItemSelect(ui.Select):
 
         options = []
         for row in rows:
-            item = data.item.get(row.item_id)
+            item = data.ITEMS.get(row.item_id)
             if item is None:
                 continue
 

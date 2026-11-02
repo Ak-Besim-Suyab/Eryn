@@ -2,19 +2,10 @@
     "id": "wooden_crate",
     "name": "木箱",
     "description": "裝著物資的木製儲物箱，裡面不知道裝著什麼。",
-
-    "flags": {
-        "openable": true 
-    },
-
-    "actions": [
+    "components": [
         {
-            "type": "openable", 
-            "loot": [
-                {"type": "resource", "id": "wood", "weight": 50}, 
-                {"type": "resource", "id": "stone", "weight": 50},
-                {"type": "resource", "id": "food", "weight": 50}
-            ]
+            "type": "loot",
+            "loot_tables": ["wooden_crate"]
         }
     ]
 }

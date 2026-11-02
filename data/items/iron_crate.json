@@ -1,20 +1,11 @@
 {
     "id": "iron_crate",
     "name": "鐵箱",
-    "description": "鐵製的箱子，裡面不知道裝著什麼",
-
-    "flags": {
-        "openable": true 
-    },
-
-    "actions": [
+    "description": "裝著物資的鐵製儲物箱，裡面不知道裝著什麼。",
+    "components": [
         {
-            "type": "openable", 
-            "loot": [
-                {"type": "resource", "id": "wood", "weight": 50}, 
-                {"type": "resource", "id": "stone", "weight": 50},
-                {"type": "resource", "id": "food", "weight": 50}
-            ]
+            "type": "loot", 
+            "loot_tables": ["iron_crate"]
         }
     ]
 }

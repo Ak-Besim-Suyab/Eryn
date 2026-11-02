@@ -6,7 +6,7 @@ from datetime import datetime, timezone
 from models import Player
 from models import Statistic
 
-import data
+from data import CONTAINERS
 from lib import builder
 
 async def get_information_view(interaction: discord.Interaction, member: discord.Member = None):
@@ -50,6 +50,6 @@ async def get_information_view(interaction: discord.Interaction, member: discord
         "display_avator": member.avatar.url
     }
 
-    view = ui.LayoutView(timeout = None).add_item(builder.build_container(data.container.get("information"), **kwargs))
+    view = ui.LayoutView(timeout = None).add_item(builder.build_container(CONTAINERS.get("information"), **kwargs))
 
     return view

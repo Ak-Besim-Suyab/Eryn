@@ -1,5 +1,4 @@
-import discord
-import data
+from data import ITEMS
 
 from cores.logger import logger
 from cores.database import database
@@ -10,7 +9,7 @@ from models.inventory import Inventory
 def is_valid(item_id: str, amount: int) -> bool:
     """ 驗證執行邏輯的物品與數量是否合法，全數通過後回傳資料物件
     """
-    item = data.item.get(item_id)
+    item = ITEMS.get(item_id)
     if item is None:
         logger.warning(f"警告，出現未定義或名稱錯誤的物品: {item_id}")
         return False
@@ -65,9 +64,10 @@ def remove(player_id: int, item_id: str, amount: int = 1) -> tuple[bool, int]:
 
 # function for formatting item display.
 def summary_line(item_id: str, quantity: int) -> str:
-    """ 格式化物品摘要並返回顯示字串，包括圖示和名稱。
+    """ 
+    格式化物品摘要並返回顯示字串，包括圖示和名稱，這裡會從資料庫獲取資料。
     """
-    item = data.item.get(item_id)
+    item = ITEMS.get(item_id)
     if item is None:
         logger.warning(f"背包內存在未定義的道具: {item_id}")
         return f"- ❓{item_id} - {quantity}"
@@ -75,6 +75,7 @@ def summary_line(item_id: str, quantity: int) -> str:
     return f"- {item.icon}{item.name} - {quantity} "
 
 def detail_line(item_id: str, quantity: int) -> str:
-    """ 格式化物品詳細資訊並返回顯示字串，包括所有資訊。
+    """ 
+    格式化物品詳細資訊並返回顯示字串，包括所有資訊，這裡會從資料庫獲取資料。
     """
     pass

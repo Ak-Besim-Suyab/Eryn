@@ -1,0 +1,6 @@
+accent_color: 0
+items:
+  - type: text
+    content: |
+      ### {display_name}
+      > *你嘗試打開{item_name}，但這個物品好像無法被打開...*

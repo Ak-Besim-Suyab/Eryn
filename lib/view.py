@@ -1,4 +1,4 @@
-import data as register
+from data import CONTAINERS
 
 from discord import ui
 from lib.builder import build_container
@@ -21,7 +21,7 @@ def create_view(*containers: Container, timeout: int = None, **kwargs):
 
     for container in containers:
         if isinstance(container, str):
-            data = register.container.get(container)
+            data = CONTAINERS.get(container)
             if data is None:
                 raise ValueError(f"can't find container data: {container}")
 

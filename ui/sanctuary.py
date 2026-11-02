@@ -1,7 +1,7 @@
 import discord
 from discord import ui
 
-from data import registry
+from data import RESOURCES, CONTAINERS, BUILDINGS
 from lib.builder import build_container
 from lib import resource
 from lib.entities import building
@@ -12,12 +12,12 @@ class SanctuaryView(ui.LayoutView):
     def __init__(self):
         super().__init__(timeout = None)
         self.name = "sanctuary"
-        self.data = registry.container.get(self.name)
+        self.data = CONTAINERS.get(self.name)
         self.render()
 
     def render(self):
 
-        data = registry.building.get(self.name)
+        data = BUILDINGS.get(self.name)
         if not data:
             raise ValueError(f"找不到建築物資料: {self.name}")
 
@@ -70,7 +70,7 @@ class SanctuaryOption(ui.Select):
  
         lines = ["已捐助資源："]
         for value in self.values:
-            res = registry.resource.get(value)
+            res = RESOURCES.get(value)
             success = resource.remove(interaction.user.id, value, 100)
             if not success:
                 continue

@@ -28,6 +28,7 @@ class Elin(commands.Bot):
             "cogs.leaderboard",
             "cogs.loop",
             "cogs.item",
+            "cogs.fishing",
 
             # 隨機抽取系統
             "cogs.rock_paper_scissors",

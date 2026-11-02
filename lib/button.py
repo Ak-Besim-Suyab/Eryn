@@ -11,9 +11,9 @@ from models import Statistic
 from cores import event_bus
 from cores import logger
 
+from data import CONTAINERS
 from data.schema.event import ButtonEvent
 
-import data
 from lib import builder, information, player
 
 from config import daily_experience
@@ -60,7 +60,7 @@ async def button_attendance_claim(event: ButtonEvent):
     logger.info(f"{user_name} 已進行簽到，總天數：{stat.total_daily}")
 
 async def button_attendance_guide(event: ButtonEvent):
-    view = ui.LayoutView(timeout = None).add_item(builder.build_container(data.container.get("guide_attendance")))
+    view = ui.LayoutView(timeout = None).add_item(builder.build_container(CONTAINERS.get("guide_attendance")))
     await event.interaction.response.send_message(view = view, ephemeral = True)
 
 async def button_attendance_information(event: ButtonEvent):

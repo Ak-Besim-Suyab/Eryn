@@ -3,6 +3,6 @@ items:
   - type: text
     content: |
       ### {display_name}
-      > *你嘗試打開 {times} {item_icon}{item_name}...*
+      > *你嘗試打開{item_name}，發現裡面存放著豐富的資源！*
       
       {descriptions}

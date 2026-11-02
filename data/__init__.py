@@ -1,23 +1,23 @@
 from .registry import (
-    item,
-    resource,
-    container, 
-    role,
-    building,
+    ITEMS,
+    RESOURCES,
+    CONTAINERS, 
+    ROLES,
+    BUILDINGS,
+    LOOT_TABLES,
 )
 
 # 告訴所有導入此模組的函式庫該模組包含哪些函式庫
 
 __all__ = [
-    "item",
-    "resource",
-    "container",
-    "role",
-    "building",
+    "ITEMS",
+    "RESOURCES",
+    "CONTAINERS",
+    "ROLES",
+    "BUILDINGS",
+    "LOOT_TABLES",
 ]
 
-#
 # 用法: 
-# import data
-# data = data.item.get(name)
-#
+# from data imort DATA_OBJECT
+# data = DATA_OBJECT.get(name)

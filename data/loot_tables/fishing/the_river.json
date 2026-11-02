@@ -1,0 +1,7 @@
+{
+    "id": "the_river",
+    "entries": [
+        {"type": "item", "id": "salmon", "weight": 100, "min": 1, "max": 2},
+        {"type": "item", "id": "cod", "weight": 100, "min": 1, "max": 2}
+    ]
+}
