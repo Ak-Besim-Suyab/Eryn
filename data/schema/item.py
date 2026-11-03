@@ -4,6 +4,12 @@ from dataclasses import dataclass, field
 class ActionType(StrEnum):
     LOOT = "loot"
     FOOD = "food"
+    EQUIPMENT = "equipment"
+
+class Affix:
+    id: str
+    type: str
+    value: int
 
 @dataclass
 class FoodItem:
@@ -13,10 +19,21 @@ class FoodItem:
 class LootItem:
     type: str = ActionType.LOOT
     loot_tables: list[str] = field(default_factory=list)
+
+@dataclass
+class EquipmentItem:
+    type: str
+    slot: str
+    affixes: list[str] = field(default_factory=list)
+
+    def __post_init__(self):
+        if self.affixes and isinstance(self.affixes, list):
+            self.affixes = [Affix(**affix) for affix in self.affixes]
             
 ACTION_TYPES = {
     ActionType.LOOT: LootItem,
     ActionType.FOOD: FoodItem,
+    ActionType.EQUIPMENT: EquipmentItem,
 }
 
 @dataclass
@@ -25,10 +42,11 @@ class Item:
     name: str = "未知物品"
     description: str = "沒有任何描述。"
     icon: str = "📦"
-    components: list[dict] = field(default_factory=list)
+    affixes: list[str] | None = field(default_factory=list)
+    components: list[dict] | None = field(default_factory=list)
 
     def __post_init__(self):
-        if isinstance(self.components, list):
+        if self.components and isinstance(self.components, list):
             formated_components = []
             for component in self.components:
                 cls = ACTION_TYPES.get(component['type'])
@@ -50,3 +68,6 @@ class Item:
 
     def is_consumable(self) -> bool:
         return self.has_component(ActionType.FOOD)
+
+    def is_equippable(self) -> bool:
+        return self.has_component(ActionType.EQUIPMENT)

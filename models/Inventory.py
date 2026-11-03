@@ -8,7 +8,6 @@ from models import Player
 class Inventory(BaseModel):
 
     player = ForeignKeyField(Player, backref = 'inventory', on_delete = 'CASCADE')
-
     item_id = TextField()
     quantity = IntegerField(default = 0)
 

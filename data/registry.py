@@ -1,7 +1,7 @@
 """ 此函式庫用於定義資料註冊物件
 """
 from copy import deepcopy
-from lib.utils import file
+from lib.util import file
 from cores import logger
 from data.schema import Container, Role, Item, Resource, Building, LootTable, Line
 

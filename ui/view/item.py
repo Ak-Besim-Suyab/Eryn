@@ -74,7 +74,7 @@ class UseSelect(ui.Select):
                     "item_name": self.item.name,
                 }
 
-                success, item_lines = await player.open_item(interaction.user.id, self.item, 1)
+                success, item_lines = player.open_item(interaction.user.id, self.item, 1)
 
                 if not success:
                     await interaction.followup.send(view=create_view("open_fail", **contents))

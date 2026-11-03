@@ -2,7 +2,7 @@ import random
 import discord
 from discord.ext import commands
 
-from lib.utils import dice
+from lib.util import dice
 
 from config import MAX_SIDES
 
@@ -25,7 +25,7 @@ class DiceListener(commands.Cog):
         if sides > MAX_SIDES:
             return
         
-        rolls = [random.randint(1, sides) for _ in range(count)]
+        rolls = dice.roll(count, sides)
 
         if count == 1:
             reply = f"🎲 {rolls[0]}"

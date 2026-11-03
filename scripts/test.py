@@ -1,5 +1,4 @@
-from lib import item
+from data import ITEMS
 
-quantity = item.give(1, "wood_crate", 1)
-
-print(quantity)
+fishing_rod = ITEMS.get("admin_fishing_rod")
+print(fishing_rod.affixes)

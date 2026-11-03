@@ -3,7 +3,7 @@ from discord import ui, SeparatorSpacing
 
 from data.schema import Text, Separator, Section, Container, ActionRow, Select, MediaGallery
 
-from lib.utils import SafeDict
+from lib.util import SafeDict
 
 BUTTON_STYLE = {
     "primary"   : discord.ButtonStyle.primary,

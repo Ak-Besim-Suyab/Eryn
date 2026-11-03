@@ -3,7 +3,7 @@ import discord
 from discord.ext import commands
 from discord import app_commands
 
-from lib.utils import emoji
+from lib.util import emoji
 
 from config import OMIKUJI_POOL
 

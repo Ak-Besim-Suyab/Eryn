@@ -1,16 +1,23 @@
 from cores import logger
 
-from models import Player
+from models import Player, ItemInstance
 
 from lib import item as itemlib
 from lib import resource as reslib
 
-from data import RESOURCES, LOOT_TABLES
+from data import RESOURCES, LOOT_TABLES, ITEMS
 from data.schema import ActionType
 
 from data.schema import Item
 
-async def open_item(player_id: int, item: Item, times: int = 1) -> tuple[bool, dict]:
+def equip(player_id: int, item_id: str, slot: str):
+
+    item = ITEMS.get(item_id)
+
+    update = (ItemInstance
+              .update())
+
+def open_item(player_id: int, item: Item, times: int = 1) -> tuple[bool, dict]:
 
     loot = item.get_component(ActionType.LOOT)
     if loot is None:
