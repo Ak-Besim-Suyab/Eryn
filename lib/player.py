@@ -6,20 +6,54 @@ from lib import item as itemlib
 from lib import resource as reslib
 
 from data import RESOURCES, LOOT_TABLES, ITEMS
-from data.schema import ActionType
+from data.schema import ItemType
 
 from data.schema import Item
 
-def equip(player_id: int, item_id: str, slot: str):
+def equip(player_id: int, item_id: str, slot: str) -> tuple[bool, str]:
+    """ 裝備物品到指定欄位, 返回是否成功更改紀錄與對應輸出訊息
+    """
+    instance = ItemInstance.get_or_none(ItemInstance.player == player_id, ItemInstance.item_id == item_id)
+    if instance is None:
+        return False, "找不到物品"
+    if instance.slot is not None:
+        return False, "物品已裝備"
 
     item = ITEMS.get(item_id)
+    component = item.get_component(ItemType.EQUIPMENT) if item else None
+    if component is None or component.slot is None:
+        return False, "物品無法裝備"
+    if slot != component.slot:
+        return False, "物品無法裝備到該欄位"
 
-    update = (ItemInstance
-              .update())
+    (ItemInstance
+     .update(slot=None)
+     .where(ItemInstance.player == player_id, ItemInstance.slot == slot)
+     .execute())
+    
+    (ItemInstance
+     .update(slot=slot)
+     .where(ItemInstance.id == instance.id)
+     .execute())
+
+    return True, "成功裝備"
+
+def unequip(player_id: int, slot: str) -> bool:
+    """ 移除指定欄位的物品，返回是否成功移除該筆紀錄
+    """
+    deleted = (ItemInstance
+               .update(slot=None)
+               .where(
+                   ItemInstance.player == player_id, 
+                   ItemInstance.slot == slot, 
+                   ItemInstance.slot.is_null(False))
+               .execute())
+
+    return deleted > 0
 
 def open_item(player_id: int, item: Item, times: int = 1) -> tuple[bool, dict]:
 
-    loot = item.get_component(ActionType.LOOT)
+    loot = item.get_component(ItemType.LOOT)
     if loot is None:
         return False, None
 

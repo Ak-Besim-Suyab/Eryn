@@ -1,11 +1,12 @@
 from enum import StrEnum
 from dataclasses import dataclass, field
 
-class ActionType(StrEnum):
+class ItemType(StrEnum):
     LOOT = "loot"
     FOOD = "food"
     EQUIPMENT = "equipment"
 
+@dataclass(frozen=True)
 class Affix:
     id: str
     type: str
@@ -13,27 +14,38 @@ class Affix:
 
 @dataclass
 class FoodItem:
-    type: str = ActionType.FOOD
+    type: str = ItemType.FOOD
 
 @dataclass
 class LootItem:
-    type: str = ActionType.LOOT
-    loot_tables: list[str] = field(default_factory=list)
+    type: str = ItemType.LOOT
+    loot_tables: list[str] | None = field(default_factory=list)
 
 @dataclass
 class EquipmentItem:
-    type: str
-    slot: str
-    affixes: list[str] = field(default_factory=list)
+    type: str = ItemType.EQUIPMENT
+    slot: str = None
+    affixes: list[Affix] | None = field(default_factory=list)
 
     def __post_init__(self):
         if self.affixes and isinstance(self.affixes, list):
             self.affixes = [Affix(**affix) for affix in self.affixes]
+
+    def get_affix(self, id: str = None, type: str = None) -> Affix | None:
+        """
+        返回符合條件的詞綴, 可以傳入 id 或 type, 會返回符合所有條件的詞綴
+        """
+        if id and type:
+            return next((affix for affix in self.affixes if affix.id == id and affix.type == type), None)
+        if id:
+            return next((affix for affix in self.affixes if affix.id == id), None)
+        if type:
+            return next((affix for affix in self.affixes if affix.type == type), None)
             
 ACTION_TYPES = {
-    ActionType.LOOT: LootItem,
-    ActionType.FOOD: FoodItem,
-    ActionType.EQUIPMENT: EquipmentItem,
+    ItemType.LOOT: LootItem,
+    ItemType.FOOD: FoodItem,
+    ItemType.EQUIPMENT: EquipmentItem,
 }
 
 @dataclass
@@ -41,8 +53,8 @@ class Item:
     id: str
     name: str = "未知物品"
     description: str = "沒有任何描述。"
+    tooltip: str = "無。"
     icon: str = "📦"
-    affixes: list[str] | None = field(default_factory=list)
     components: list[dict] | None = field(default_factory=list)
 
     def __post_init__(self):
@@ -57,17 +69,17 @@ class Item:
                     
             self.components = formated_components
 
-    def get_component(self, component_type: str):
+    def get_component(self, component_type: str) :
         return next((component for component in self.components if component.type == component_type), None)
 
     def has_component(self, component_type: str) -> bool:
         return self.get_component(component_type) is not None
 
     def is_lootable(self) -> bool:
-        return self.has_component(ActionType.LOOT)
+        return self.has_component(ItemType.LOOT)
 
     def is_consumable(self) -> bool:
-        return self.has_component(ActionType.FOOD)
+        return self.has_component(ItemType.FOOD)
 
     def is_equippable(self) -> bool:
-        return self.has_component(ActionType.EQUIPMENT)
+        return self.has_component(ItemType.EQUIPMENT)

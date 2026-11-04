@@ -24,7 +24,7 @@ class InventoryView(ui.LayoutView):
         self.render()
 
     def render(self):
-        rows, self.page, total_pages = get_page(self.user.id, self.page, self.get_item_ids())
+        rows, self.page, total_pages = get_page(self.page, self.user.id, self.get_item_ids())
         
         self.rows = rows
 

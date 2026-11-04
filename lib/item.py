@@ -5,6 +5,7 @@ from cores.database import database
 
 from models.player import Player
 from models.inventory import Inventory
+from models.item_instance import ItemInstance
 
 def is_valid(item_id: str, amount: int) -> bool:
     """ 驗證執行邏輯的物品與數量是否合法，全數通過後回傳資料物件
@@ -27,6 +28,17 @@ def give(player_id: int, item_id: str, amount: int = 1) -> int:
     
     # 確保玩家存在
     Player.get_or_create(id=player_id)
+
+    item = ITEMS.get(item_id)
+
+    if item is None:
+        return
+
+    if item.is_equippable():
+        with database.atomic():
+            instance = ItemInstance.create(player=player_id, item_id=item_id)
+        return instance
+
     with database.atomic():
         entry, _ = Inventory.get_or_create(player=player_id, item_id=item_id, defaults={"quantity": 0})
         
@@ -70,12 +82,21 @@ def summary_line(item_id: str, quantity: int) -> str:
     item = ITEMS.get(item_id)
     if item is None:
         logger.warning(f"背包內存在未定義的道具: {item_id}")
-        return f"{quantity}❓{item_id}"
+        return f"{quantity} ❓{item_id}"
     
     return f"{quantity} {item.icon}{item.name}"
 
-def detail_line(item_id: str, quantity: int) -> str:
-    """ 
-    格式化物品詳細資訊並返回顯示字串，包括所有資訊，這裡會從資料庫獲取資料。
+def description(item_id: str, quantity: int, type: str = "summary") -> str:
     """
-    pass
+    return descriptions of item.
+    """
+    item = ITEMS.get(item_id)
+    if item is None:
+        logger.warning(f"背包內存在未定義的道具: {item_id}")
+        return f"{quantity} ❓{item_id}"
+
+    match type:
+        case "summary":
+            return f"{quantity} {item.icon}{item.name}"
+        case "detail":
+            return f"{quantity} {item.icon}{item.name}\n{item.description}"

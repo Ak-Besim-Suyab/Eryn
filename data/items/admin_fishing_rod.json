@@ -1,9 +1,0 @@
-{
-    "id": "admin_rod",
-    "name": "管理員釣竿",
-    "description": "測試工具。",
-    "affixes": [
-        {"id": "fishing", "type": "luck", "value": 1},
-        {"id": "fishing", "type": "fish_bonus", "value": 1}
-    ]
-}
