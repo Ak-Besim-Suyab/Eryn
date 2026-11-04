@@ -4,7 +4,7 @@
 from lib import player
 from models import Player
 from data import ITEMS
-from data.schema import ItemType
+from data.schema.type import ItemType
 
 # 取得裝備
 _item = ITEMS.get("wooden_fishing_rod")

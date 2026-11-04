@@ -1,10 +1,5 @@
-from enum import StrEnum
 from dataclasses import dataclass, field
-
-class ItemType(StrEnum):
-    LOOT = "loot"
-    FOOD = "food"
-    EQUIPMENT = "equipment"
+from type import ItemType
 
 @dataclass(frozen=True)
 class Affix:

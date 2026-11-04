@@ -6,8 +6,7 @@ from lib import item as itemlib
 from lib import resource as reslib
 
 from data import RESOURCES, LOOT_TABLES, ITEMS
-from data.schema import ItemType
-
+from data.schema.type import ItemType
 from data.schema import Item
 
 def equip(player_id: int, item_id: str, slot: str) -> tuple[bool, str]:
