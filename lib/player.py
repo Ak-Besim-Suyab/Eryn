@@ -1,4 +1,5 @@
 from cores import logger
+from cores.database import database
 
 from models import Player, ItemInstance
 
@@ -10,43 +11,69 @@ from data.schema.type import ItemType
 from data.schema import Item
 
 def equip(player_id: int, item_id: str, slot: str) -> tuple[bool, str]:
-    """ 裝備物品到指定欄位, 返回是否成功更改紀錄與對應輸出訊息
+    """ 
+    裝備物品到指定欄位, 返回是否成功更改紀錄與對應輸出訊息
     """
+    #NOTE: 這裡有個問題, 是否會搜尋到名稱相同的裝備? 需要處理
     instance = ItemInstance.get_or_none(ItemInstance.player == player_id, ItemInstance.item_id == item_id)
+
+    # 沒有任何裝備存在
     if instance is None:
         return False, "找不到物品"
+
+    # 物品已被裝備
     if instance.slot is not None:
         return False, "物品已裝備"
 
     item = ITEMS.get(item_id)
     component = item.get_component(ItemType.EQUIPMENT) if item else None
+
+    # 沒有可裝備的標籤, 或該物品被定位成不可裝備
     if component is None or component.slot is None:
         return False, "物品無法裝備"
+
+    # 物品槽位與指定槽位不符
+    #NOTE: 之後在選取時可能就會直接過濾掉不可裝備的欄位, 目前保留檢查
     if slot != component.slot:
         return False, "物品無法裝備到該欄位"
 
-    (ItemInstance
-     .update(slot=None)
-     .where(ItemInstance.player == player_id, ItemInstance.slot == slot)
-     .execute())
-    
-    (ItemInstance
-     .update(slot=slot)
-     .where(ItemInstance.id == instance.id)
-     .execute())
+    with database.atomic():
+        # 尋找可裝備的物品
+        instance = (ItemInstance
+                    .select()
+                    .where(ItemInstance.player == player_id,
+                           ItemInstance.item_id == item_id,
+                           ItemInstance.slot.is_null(True))
+                    .order_by(ItemInstance.id)
+                    .first())
+        if instance is None:
+            return False, "找不到可裝備的物品"
+        
+        # 卸下舊裝備
+        (ItemInstance
+        .update(slot=None)
+        .where(ItemInstance.player == player_id, ItemInstance.slot == slot)
+        .execute())
+
+        # 穿上裝備
+        (ItemInstance
+        .update(slot=slot)
+        .where(ItemInstance.id == instance.id)
+        .execute())
 
     return True, "成功裝備"
 
 def unequip(player_id: int, slot: str) -> bool:
     """ 移除指定欄位的物品，返回是否成功移除該筆紀錄
     """
-    deleted = (ItemInstance
-               .update(slot=None)
-               .where(
-                   ItemInstance.player == player_id, 
-                   ItemInstance.slot == slot, 
-                   ItemInstance.slot.is_null(False))
-               .execute())
+    with database.atomic():
+        deleted = (ItemInstance
+                   .update(slot=None)
+                   .where(
+                       ItemInstance.player == player_id, 
+                       ItemInstance.slot == slot, 
+                       ItemInstance.slot.is_null(False))
+                    .execute())
 
     return deleted > 0
 

@@ -6,6 +6,7 @@ from data import LOOT_TABLES, LINES
 from lib.item import summary_line
 from lib.view import create_view
 from lib.util.dice import roll, judge, Outcome
+from lib.stat import get_stats
 
 # 職骰結果對應的戰利品獲得次數
 fallback = {

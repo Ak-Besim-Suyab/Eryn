@@ -1,11 +1,12 @@
 from dataclasses import dataclass, field
-from type import ItemType
+from data.schema.type import ItemType
 
 @dataclass(frozen=True)
 class Affix:
-    id: str
-    type: str
-    value: int
+    scope: str
+    stat: str
+    value: int | float
+    operator: str = "add"
 
 @dataclass
 class FoodItem:

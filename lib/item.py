@@ -37,6 +37,9 @@ def give(player_id: int, item_id: str, amount: int = 1) -> int:
     if item.is_equippable():
         with database.atomic():
             instance = ItemInstance.create(player=player_id, item_id=item_id)
+
+            #NOTE: 這裡未來可能需要實作將獲得物品時得到的隨機詞綴存入 ItemAffix 資料表
+
         return instance
 
     with database.atomic():

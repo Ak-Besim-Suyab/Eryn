@@ -4,6 +4,7 @@ from models.item_instance import ItemInstance
 
 class ItemAffix(BaseModel):
     item = ForeignKeyField(ItemInstance, backref='affixes', on_delete='CASCADE')
-    type = TextField()
-    modifier = TextField()
+    scope = TextField()
+    stat = TextField()
+    operator = TextField()
     value = IntegerField()
