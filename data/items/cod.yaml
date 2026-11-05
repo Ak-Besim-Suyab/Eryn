@@ -1,8 +1,8 @@
 id: cod
-sort_order: 1001.1
+sort_order: 3001
 
 name: 鱈魚
-tooltips: "*可食用、可分解*"
+tooltip: "*可食用、可分解*"
 description: |
   生活在寒冷海域的魚，但由於大陸經過翻天覆地的變化，現在甚至能在較為溫暖的河域見到。
   

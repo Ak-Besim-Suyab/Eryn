@@ -6,9 +6,9 @@ import discord
 from discord import ui, SeparatorSpacing
 
 from data import ITEMS
-from models import Inventory
+from models import Inventory, ItemInstance
 
-from .item import ItemView
+from ui.view.item import ItemView
 
 from lib.inventory import get_page
 from lib.item import summary_line, sort_key
@@ -23,35 +23,40 @@ class InventoryView(ui.LayoutView):
         self.render()
 
     def render(self):
-        
+        # 取得當前頁面的物品列表
         rows, page, total_pages = get_page(self.page, self.user.id, self.get_item_ids())
 
+        # 存入物件狀態, 並進行排序
         self.page = page
         self.rows = rows.sort(key=sort_key)
 
+        # 將物品轉換為字串, 並根據物品分類修正參數
         lines = []
         for row in rows:
             if isinstance(row, Inventory):
-                lines.append(summary_line(row.item_id, row.quantity))
+                lines.append((row.id, summary_line(row.item_id, row.quantity)))
             else:
                 lines.append(summary_line(row.item_id, 1))
         
         if not lines: lines = ["> *沒有任何可以顯示的物品。*"]
 
+        # 創建容器
         container = ui.Container(accent_color = 0)
-        container.add_item(ui.TextDisplay(content = f"## 🪎 {self.user.display_name}"))
-        container.add_item(ui.Separator())
+        container.add_item(ui.TextDisplay(content = f"## 🪎 {self.user.display_name} 背包"))
+        container.add_item(ui.Separator(spacing=SeparatorSpacing.large))
 
-        for line in lines:
-            container.add_item(ui.TextDisplay(content = line))
+        # 印出物品列表
+        for row in rows:
+            if isinstance(row, Inventory):
+                line = summary_line(row.item_id, row.quantity)
+            else:
+                line = summary_line(row.item_id, 1)
+
+            container.add_item(
+                ui.Section(line, accessory=ItemButton(row))
+            )
 
         container.add_item(self.category_action())
-
-        # 檢查物品是否合法，若為空或僅有不合法物品，不顯示表單
-        valid_rows = [row for row in rows if ITEMS.get(row.item_id) is not None]
-        if valid_rows:
-            container.add_item(ui.ActionRow(ItemSelect(valid_rows)))
-            
         container.add_item(self.page_action(total_pages))
 
         self.clear_items()
@@ -78,9 +83,9 @@ class InventoryView(ui.LayoutView):
     def category_action(self):
 
         categorys = {
-            "all":        "全部",
-            "openable":   "可使用",
-            "comsumable": "可消耗",
+            "all"      : "全部",
+            "loot"     : "戰利品",
+            "equipment": "裝備",
         }
 
         options = []
@@ -104,29 +109,17 @@ class InventoryView(ui.LayoutView):
     def get_item_ids(self) -> list[str]:
         match self.category:
             case "all": return None
-            case "openable": return [item.id for item in ITEMS.find_flag(openable=True)]
+            case _: return [item.id for item in ITEMS.find(self.category)]
 
-class ItemSelect(ui.Select):
-    """ 這個表單用來讀取並列出玩家指定分類的物品, 表單選項受到傳入的串列影響, 串列則由上層來自 Inventory 的讀取函式取得
-    """
-    def __init__(self, rows: list[Inventory]):
-        self.rows = rows
+class ItemButton(ui.Button):
 
-        options = []
-        for row in rows:
-            item = ITEMS.get(row.item_id)
-            if item is None:
-                continue
+    def __init__(self, record: Inventory | ItemInstance):
+        self.record = record
 
-            #NOTE: 這裡需要處理傳入裝備造成的 The specified option value is already used 錯誤
-            #NOTE: 好像可以透過 ItemInstance.id 來區分裝備
-            options.append(discord.SelectOption(label = item.name, value = item.id))
-        
         super().__init__(
-            placeholder = "選擇物品",
-            options = options
+            label = "選擇",
+            style = discord.ButtonStyle.secondary
         )
 
-    # 這裡使用 send_message 回覆新視窗，以便於重複對不同物品進行操作
     async def callback(self, interaction: discord.Interaction):
-        await interaction.response.send_message(view=ItemView(interaction.user, self.values[0])) 
+        await interaction.response.send_message(view=ItemView(interaction.user, self.record)) 

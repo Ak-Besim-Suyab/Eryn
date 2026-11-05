@@ -19,7 +19,7 @@ from models import ItemInstance
 
 deleted = (ItemInstance
            .delete()
-           .where(ItemInstance.item_id == "wooden_fishing_rod")
+           .where(ItemInstance.item_id == "hazel_fishing_rod")
            .execute())
 
 # 怎麼找到某個未穿戴的裝備, 然後只刪掉一筆, 查詢條件還能再增加

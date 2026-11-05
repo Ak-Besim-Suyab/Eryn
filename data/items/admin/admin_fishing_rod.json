@@ -1,14 +1,14 @@
 {
     "id": "admin_rod",
-    "sort_order": 101.1,
+    "sort_order": 2,
     "name": "管理員釣竿",
     "description": "測試工具。",
     "components":[
         {
             "type": "equipment",
             "affixes": [
-                {"id": "fishing", "type": "luck", "value": 1},
-                {"id": "fishing", "type": "fish_bonus", "value": 1}
+                {"scope": "fishing", "stat": "luck", "operator": "add", "value": 1},
+                {"scope": "fishing", "stat": "fish_bonus", "operator": "add", "value": 1}
             ]
         }
     ]

@@ -1,9 +1,10 @@
-from lib import player, item
-from lib.stat import get_stats
+s = "stri:val"
 
-item.give(1, "hazel_fishing_rod", 1)
+key, sep, value = s.partition("_")
 
-player.equip(1, "hazel_fishing_rod", "main_hand")
+if not sep:
+    print(key, value)
+else:
+    print(key, sep, value)
 
-stat = get_stats(1)
-print(stat.get("fishing", "luck"))
+print(value)

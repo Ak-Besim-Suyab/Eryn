@@ -90,13 +90,13 @@ def summary_line(item_id: str, quantity: int) -> str:
     if item.has_component("equipment"):
         lines = [
             f"**{item.icon} {item.name}（持有： {quantity} 個）**",
-            f"> -# {item.tooltips}",
+            f"> -# {item.tooltip}",
         ]
         return "\n".join(lines)
     
     lines = [
         f"**{item.icon} {item.name}（持有： {quantity} 個）**",
-        f"> -# {item.tooltips}",
+        f"> -# {item.tooltip}",
     ]
     
     return "\n".join(lines)

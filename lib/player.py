@@ -10,6 +10,10 @@ from data import RESOURCES, LOOT_TABLES, ITEMS
 from data.schema.type import ItemType
 from data.schema import Item
 
+def get_race(player_id: int):
+    player, _ = Player.get_or_create(id=player_id)
+    return player.race
+
 def equip(player_id: int, item_id: str, slot: str) -> tuple[bool, str]:
     """ 
     裝備物品到指定欄位, 返回是否成功更改紀錄與對應輸出訊息

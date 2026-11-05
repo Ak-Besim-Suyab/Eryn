@@ -47,4 +47,3 @@ def get_page(page: int, player_id: int, item_ids: list[str] = None) -> tuple[lis
     #
     start = (MAX_ROW * (page - 1))
     return rows[start:start + MAX_ROW], page, total_pages
-

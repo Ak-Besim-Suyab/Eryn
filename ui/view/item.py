@@ -3,27 +3,48 @@ from discord import ui, SeparatorSpacing
 
 from lib import player
 from lib.view import create_view
+from lib.item import summary_line
 
 from data import ITEMS
 from data.schema import Item
 
-from models import Inventory
+from models import Inventory, ItemInstance
 
 class ItemView(ui.LayoutView):
-    def __init__(self, user: discord.abc.User, item_id: str):
+    def __init__(self, user: discord.abc.User, row: Inventory | ItemInstance):
         super().__init__(timeout = None)
         self.user = user
-        self.item_id = item_id
+        self.row = row
         self.render()
 
     def render(self):
-        row = Inventory.get_or_none(Inventory.player == self.user.id, Inventory.item_id == self.item_id)
+        # 重新獲取物品 (裝備或背包, 可擴充分類)
+        item = ITEMS.get(self.row.item_id)
+        if item.is_equippable():
+            row = ItemInstance.get_or_none(
+                ItemInstance.player == self.user.id,
+                ItemInstance.id == self.row.id,
+                ItemInstance.item_id == self.row.item_id)
 
-        item = ITEMS.get(self.item_id)
+            if row is None:
+                quantity = 0
+            else:
+                quantity = 1
+        else:
+            row = Inventory.get_or_none(
+                Inventory.player == self.user.id,
+                Inventory.id == self.row.id,
+                Inventory.item_id == self.row.item_id)
 
+            if row is None:
+                quantity = 0
+            else:
+                quantity = row.quantity
+
+        # 建構容器
         container = ui.Container()
-        container.add_item(ui.TextDisplay(content = f"### {self.user.display_name}"))
-        container.add_item(ui.Separator(spacing = SeparatorSpacing.small))
+        container.add_item(ui.TextDisplay(content = f"## {self.user.display_name} 物品"))
+        container.add_item(ui.Separator(spacing=SeparatorSpacing.large))
 
         # 檢查物品是否已為空
         if row is None:
@@ -33,8 +54,8 @@ class ItemView(ui.LayoutView):
             self.add_item(container)
             return
 
-        container.add_item(ui.TextDisplay(content = f"{item.icon}{item.name}（你擁有： {row.quantity}）"))
-        container.add_item(ui.ActionRow(UseSelect(item, row.quantity)))
+        container.add_item(ui.TextDisplay(content=summary_line(item.id, quantity)))
+        container.add_item(ui.ActionRow(UseSelect(item, quantity)))
 
         self.clear_items()
         self.add_item(container)
@@ -46,18 +67,38 @@ class UseSelect(ui.Select):
         self.item = item
         self.quantity = quantity
 
-        actions = [
-            ("food", (f"吃", "eat")),
-            ("loot", (f"打開", "open")),
-            ("loot", (f"打開全部", "open_all"))
-        ]
+        # 蒐集物品可執行行動
+        placeholder = "要對這個物品做什麼？"
+        disabled = False
 
-        # NOTE: 如果我這裡都已經篩選過何種動作有使用結果，那我還需要在後面的邏輯再判定一次嗎？
-        options = [discord.SelectOption(label = label, value = value) for flag, (label, value) in actions if item.has_component(flag)]
+        actions = []
+        if item.is_equippable():
+            actions.append(("裝備", "equip"))
+
+        if item.is_lootable():
+            actions.append(("打開", "loot"))
+
+        if item.is_consumable():
+            actions.append(("使用", "consume"))
+
+        # 印出行動
+        options = []
+        for label, value in actions:
+            options.append(discord.SelectOption(label = label, value = value))
+
+        # 若沒有任何行動, 印出空行動, 避免空選項報錯
+        if not options:
+            placeholder = "沒有可用行動"
+            disabled = True
+            
+            options = [discord.SelectOption(label = "沒有可用行動", value = 0)]
         
         super().__init__(
-            placeholder = "要對這個物品做什麼？",
-            options = options
+            placeholder = placeholder,
+            min_values = 1,
+            max_values = 1,
+            options = options,
+            disabled = disabled
         )
 
     async def callback(self, interaction: discord.Interaction):
@@ -65,10 +106,9 @@ class UseSelect(ui.Select):
         await interaction.response.defer(ephemeral=True)
 
         match self.values[0]:
-            case "consume":
+            case "equip":
                 pass
-            case "open":
-
+            case "loot":
                 contents = {
                     "display_name": interaction.user.display_name,
                     "item_name": self.item.name,
@@ -91,5 +131,5 @@ class UseSelect(ui.Select):
                 await interaction.edit_original_response(view=view)
                 await interaction.followup.send(view=create_view("open_success", **contents))
 
-            case "open_all":
-                pass
+            case _:
+                await interaction.followup.send(f"> *你拿起{self.item.name}，但似乎什麼事也不能做。*")

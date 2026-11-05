@@ -2,7 +2,5 @@ accent_color: 0
 items:
   - type: text
     content: |
-      ### {display_name}
-      > *你嘗試打開{item_name}，發現裡面存放著豐富的資源！*
-      
+      > *{display_name}嘗試打開{item_name}，裡面存放著資源。*
       {descriptions}

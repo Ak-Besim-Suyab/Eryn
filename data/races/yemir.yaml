@@ -1,0 +1,17 @@
+id: yemir
+name: 耶米利安人
+
+equip_slots:
+  - main_hand
+  - off_hand
+  - ammo
+  - head
+  - body
+  - arms
+  - belt
+  - legs
+  - feet
+  - earring
+  - necklace
+  - ring:1
+  - ring:2

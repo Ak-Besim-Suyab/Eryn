@@ -3,7 +3,17 @@
 from copy import deepcopy
 from lib.util import file
 from cores import logger
-from data.schema import Container, Role, Item, Resource, Building, LootTable, Line
+from data.schema import (
+    Container, 
+    Role, 
+    Item, 
+    Resource, 
+    Building, 
+    LootTable, 
+    Line,
+    Race,
+)
+from data.schema.type import ItemType
 
 class Storage:
     def __init__(self, path: str):
@@ -36,13 +46,15 @@ class ItemStorage(Storage):
         
         return Item(**deepcopy(data))
 
-    def find_flag(self, **flags):
-        """返回符合所有 flags 標籤的物品
+    def find(self, item_type: ItemType):
+        """
+        返回符合所有條件的物品
         """
         matchs = []
         for data in self._storage.values():
             item = Item(**deepcopy(data))
-            if all(getattr(item.flags, key) == value for key, value in flags.items()):
+
+            if item.has_component(item_type):
                 matchs.append(item)
 
         return matchs
@@ -120,6 +132,17 @@ class LineStorage(Storage):
         
         return Line(**deepcopy(data))
 
+class RaceStorage(Storage):
+    def __init__(self, path: str = "data/races"):
+        super().__init__(path)
+
+    def get(self, name: str):
+        data = self._storage.get(name)
+        if not data:
+            return None
+        
+        return Race(**deepcopy(data))
+
 # ----
 # 註冊資料物件, 讓其他函式庫可以直接導入使用
 # ----
@@ -130,3 +153,4 @@ ROLES       = RoleStorage()
 BUILDINGS   = BuildingStorage()
 LOOT_TABLES = LootTableStorage()
 LINES       = LineStorage()
+RACES       = RaceStorage()

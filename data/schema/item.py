@@ -55,7 +55,7 @@ class Item:
 
     name: str        = "未知物品"
     description: str = "沒有任何描述"
-    tooltips: str    = "無"
+    tooltip: str     = "無"
     icon: str        = "📦"
 
     components: list[dict] | None = field(default_factory=list)
@@ -72,10 +72,10 @@ class Item:
                     
             self.components = formated_components
 
-    def get_component(self, component_type: str) :
+    def get_component(self, component_type: ItemType) -> dict | None:
         return next((component for component in self.components if component.type == component_type), None)
 
-    def has_component(self, component_type: str) -> bool:
+    def has_component(self, component_type: ItemType) -> bool:
         return self.get_component(component_type) is not None
 
     def is_lootable(self) -> bool:

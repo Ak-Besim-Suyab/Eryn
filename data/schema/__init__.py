@@ -14,6 +14,7 @@ from .role import *
 from .resource import *
 from .loot_table import *
 from .line import *
+from .race import *
 
 __all__ = [
     'ActionRow',
@@ -31,4 +32,5 @@ __all__ = [
     'Resource',
     'LootTable',
     'Line',
+    'Race',
 ]
