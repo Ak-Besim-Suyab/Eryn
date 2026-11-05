@@ -1,4 +1,6 @@
 id: cod
+sort_order: 1001.1
+
 name: 鱈魚
 tooltips: "*可食用、可分解*"
 description: |

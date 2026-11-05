@@ -1,7 +1,7 @@
 accent_color: 0
 items:
   - type: text
-    content: "## {player_name}"
+    content: "## 🪎 {player_name}"
 
   - type: text
     content: |
@@ -9,7 +9,7 @@ items:
       {items}
 
   - type: separator
-
+  
   - type: text
     content: |
       ### 第 {page} / {total_pages} 頁

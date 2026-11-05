@@ -77,6 +77,16 @@ def unequip(player_id: int, slot: str) -> bool:
 
     return deleted > 0
 
+def get_equipped(player_id: int, slot: str) -> ItemInstance | None:
+    return (ItemInstance
+            .select()
+            .where(ItemInstance.player == player_id, 
+                   ItemInstance.slot == slot)
+            .first())
+
+def is_equipped(player_id: int, slot: str) -> bool:
+    return get_equipped(player_id, slot) is not None
+
 def open_item(player_id: int, item: Item, times: int = 1) -> tuple[bool, dict]:
 
     loot = item.get_component(ItemType.LOOT)

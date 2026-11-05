@@ -3,16 +3,15 @@
     self.rows 用於保存抽取的背包結果, 在選擇表單中使用
 """
 import discord
-from discord import ui
+from discord import ui, SeparatorSpacing
 
-import data
-from cores import logger
+from data import ITEMS
 from models import Inventory
 
 from .item import ItemView
 
 from lib.inventory import get_page
-from lib.item import summary_line
+from lib.item import summary_line, sort_key
 
 class InventoryView(ui.LayoutView):
     def __init__(self, user: discord.abc.User, page: int = 1, category: str = "all"):
@@ -24,19 +23,32 @@ class InventoryView(ui.LayoutView):
         self.render()
 
     def render(self):
-        rows, self.page, total_pages = get_page(self.page, self.user.id, self.get_item_ids())
         
-        self.rows = rows
+        rows, page, total_pages = get_page(self.page, self.user.id, self.get_item_ids())
 
-        lines = [summary_line(row.item_id, row.quantity) for row in rows] or ["> *沒有任何可以顯示的物品。*"]
+        self.page = page
+        self.rows = rows.sort(key=sort_key)
+
+        lines = []
+        for row in rows:
+            if isinstance(row, Inventory):
+                lines.append(summary_line(row.item_id, row.quantity))
+            else:
+                lines.append(summary_line(row.item_id, 1))
+        
+        if not lines: lines = ["> *沒有任何可以顯示的物品。*"]
 
         container = ui.Container(accent_color = 0)
-        container.add_item(ui.TextDisplay(content = f"### {self.user.display_name}"))
-        container.add_item(ui.TextDisplay(content = "\n".join(lines)))
+        container.add_item(ui.TextDisplay(content = f"## 🪎 {self.user.display_name}"))
+        container.add_item(ui.Separator())
+
+        for line in lines:
+            container.add_item(ui.TextDisplay(content = line))
+
         container.add_item(self.category_action())
 
         # 檢查物品是否合法，若為空或僅有不合法物品，不顯示表單
-        valid_rows = [row for row in rows if data.ITEMS.get(row.item_id) is not None]
+        valid_rows = [row for row in rows if ITEMS.get(row.item_id) is not None]
         if valid_rows:
             container.add_item(ui.ActionRow(ItemSelect(valid_rows)))
             
@@ -92,7 +104,7 @@ class InventoryView(ui.LayoutView):
     def get_item_ids(self) -> list[str]:
         match self.category:
             case "all": return None
-            case "openable": return [item.id for item in data.ITEMS.find_flag(openable=True)]
+            case "openable": return [item.id for item in ITEMS.find_flag(openable=True)]
 
 class ItemSelect(ui.Select):
     """ 這個表單用來讀取並列出玩家指定分類的物品, 表單選項受到傳入的串列影響, 串列則由上層來自 Inventory 的讀取函式取得
@@ -102,10 +114,12 @@ class ItemSelect(ui.Select):
 
         options = []
         for row in rows:
-            item = data.ITEMS.get(row.item_id)
+            item = ITEMS.get(row.item_id)
             if item is None:
                 continue
 
+            #NOTE: 這裡需要處理傳入裝備造成的 The specified option value is already used 錯誤
+            #NOTE: 好像可以透過 ItemInstance.id 來區分裝備
             options.append(discord.SelectOption(label = item.name, value = item.id))
         
         super().__init__(

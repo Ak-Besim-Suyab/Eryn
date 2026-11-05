@@ -86,8 +86,20 @@ def summary_line(item_id: str, quantity: int) -> str:
     if item is None:
         logger.warning(f"背包內存在未定義的道具: {item_id}")
         return f"{quantity} ❓{item_id}"
+
+    if item.has_component("equipment"):
+        lines = [
+            f"**{item.icon} {item.name}（持有： {quantity} 個）**",
+            f"> -# {item.tooltips}",
+        ]
+        return "\n".join(lines)
     
-    return f"{quantity} {item.icon}{item.name}"
+    lines = [
+        f"**{item.icon} {item.name}（持有： {quantity} 個）**",
+        f"> -# {item.tooltips}",
+    ]
+    
+    return "\n".join(lines)
 
 def description(item_id: str, quantity: int, type: str = "summary") -> str:
     """
@@ -103,3 +115,8 @@ def description(item_id: str, quantity: int, type: str = "summary") -> str:
             return f"{quantity} {item.icon}{item.name}"
         case "detail":
             return f"{quantity} {item.icon}{item.name}\n{item.description}"
+
+def sort_key(row: Inventory | ItemInstance) -> tuple[float, str]:
+    item = ITEMS.get(row.item_id)
+    return (item.sort_order if item else 9999.9, row.item_id)
+    

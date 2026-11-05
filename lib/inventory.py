@@ -13,7 +13,7 @@ def get_page(page: int, player_id: int, item_ids: list[str] = None) -> tuple[lis
     .. player_id:: 玩家`id`
     .. item_ids:: 物品`id`串列, 未指定`None`時將列出所有物品
     """
-    
+
     Player.get_or_create(id = player_id)
 
     # 取得可堆疊物品
@@ -47,3 +47,4 @@ def get_page(page: int, player_id: int, item_ids: list[str] = None) -> tuple[lis
     #
     start = (MAX_ROW * (page - 1))
     return rows[start:start + MAX_ROW], page, total_pages
+

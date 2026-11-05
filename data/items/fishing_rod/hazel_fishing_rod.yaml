@@ -1,7 +1,10 @@
 id: hazel_fishing_rod
+sort_order: 101.2
+
 name: 榛木釣竿
 description: |
   以榛木製作的簡易釣竿，結構非常粗糙，甚至說不上能夠用來釣魚。
+
 components:
   - type: equipment
     slot: main_hand

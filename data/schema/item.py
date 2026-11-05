@@ -46,11 +46,18 @@ ACTION_TYPES = {
 
 @dataclass
 class Item:
+    """
+    .. sort::
+        排序用浮點數
+    """
     id: str
-    name: str = "未知物品"
-    description: str = "沒有任何描述。"
-    tooltip: str = "無。"
-    icon: str = "📦"
+    sort_order: float   = 9999.9
+
+    name: str        = "未知物品"
+    description: str = "沒有任何描述"
+    tooltips: str    = "無"
+    icon: str        = "📦"
+
     components: list[dict] | None = field(default_factory=list)
 
     def __post_init__(self):

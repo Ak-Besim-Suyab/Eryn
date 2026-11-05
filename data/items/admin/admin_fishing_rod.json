@@ -1,5 +1,6 @@
 {
     "id": "admin_rod",
+    "sort_order": 101.1,
     "name": "管理員釣竿",
     "description": "測試工具。",
     "components":[

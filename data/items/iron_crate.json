@@ -1,5 +1,7 @@
 {
     "id": "iron_crate",
+    "sort_order": 1002.2,
+
     "name": "鐵箱",
     "description": "裝著物資的鐵製儲物箱，裡面不知道裝著什麼。",
     "components": [
