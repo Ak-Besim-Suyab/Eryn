@@ -1,12 +1,11 @@
 # id        : 物品識別碼, 用於內部查詢
-# sort_order: 排序用變數, 用於內部查詢
+# serial    : 排序用變數, 用於內部查詢
 # name      : 物品顯示名稱
 # tooltip   : 物品提示說明, 會出現在背包頁面等簡易顯示道具的地方
-
+serial: 1
 id: admin_kit
-sort_order: 1
-
 "name": 管理員工具
+
 "tooltip": 可以測試所有功能
 "description": |
   > 管理員工具，用於測試所有已實裝功能。

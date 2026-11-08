@@ -1,10 +1,16 @@
-s = "stri:val"
+from data import ITEMS, SLOTS
+from lib import player, item
+slot = SLOTS.get("head")
+print(slot)
 
-key, sep, value = s.partition("_")
+i = ITEMS.get("leather_hat")
+print(i)
 
-if not sep:
-    print(key, value)
-else:
-    print(key, sep, value)
+item.give(1184440057596235817, "leather_hat", 1)
 
-print(value)
+success, msg = player.equip(1184440057596235817, "leather_hat", "head")
+print(success, msg)
+
+lst = player.get_equipments(player_id=1184440057596235817)
+for i in lst:
+    print(i.slot)

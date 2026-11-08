@@ -51,8 +51,7 @@ class Item:
         排序用浮點數
     """
     id: str
-    sort_order: float   = 9999.9
-
+    serial: float    = 9999.9
     name: str        = "未知物品"
     description: str = "沒有任何描述"
     tooltip: str     = "無"

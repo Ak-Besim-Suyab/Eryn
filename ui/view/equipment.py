@@ -1,54 +1,86 @@
 import discord
 from discord import ui
 
-from data import RACES
-from data.schema import Item
+from data import SLOTS
 
-from lib import player
+from lib.inventory import get_equip_page
 
 class EquipmentView(ui.LayoutView):
-    def __init__(self, user: discord.abc.User, item: Item = None):
+    def __init__(self, user: discord.abc.User, page: int = 1):
         super().__init__(timeout = None)
         self.user = user
-        self.item = item
+        self.page = page
         self.render()
 
-
     def render(self):
-        action_row = ui.ActionRow()
-        action_row.add_item(EquipmentSelect(self.user, self.item))
+        rows, page, total_page = get_equip_page(self.page, self.user.id)
 
+        self.page = page
+
+        # 創建容器
         container = ui.Container()
         container.add_item(ui.TextDisplay(content = f"## {self.user.display_name} 裝備"))
         container.add_item(ui.Separator(spacing=discord.SeparatorSpacing.large))
-        container.add_item(action_row)
+
+        for slot_key, item_id in rows:
+            print(slot_key, item_id)
+
+            # 解析欄位
+            key, _, _ = slot_key.partition(":")
+            slot = SLOTS.get(key)
+
+            if slot is None:
+                continue
+
+            if item_id is None:
+                container.add_item(
+                    ui.Section(
+                        f"{slot.name}：空", 
+                        accessory=ui.Button(label="裝備", style=discord.ButtonStyle.secondary)
+                    )
+                )
+            else:
+                container.add_item(
+                    ui.Section(
+                        f"{slot.name}：{item_id}", 
+                        accessory=ui.Button(label="卸下", style=discord.ButtonStyle.secondary)
+                    )
+                )
+
+        container.add_item(self.page_action(total_page))
 
         self.clear_items()
         self.add_item(container)
 
-class EquipmentSelect(ui.Select):
-    def __init__(self, user: discord.abc.User, item: Item):
-        self.user = user
-        self.item = item
+    #NOTE: 翻頁函式之後或許可以提出來做成父類, 然後再讓重用相似函式的子類繼承 (e.g. inventory)
+    def page_action(self, total_pages):
+        prev_btn = ui.Button(label = "上一頁", style = discord.ButtonStyle.secondary, disabled = self.page <= 1)
+        next_btn = ui.Button(label = "下一頁", style = discord.ButtonStyle.secondary, disabled = self.page >= total_pages)
+        prev_btn.callback = self.on_prev
+        next_btn.callback = self.on_next
 
-        race = RACES.get(player.get_race(self.user.id))
+        return ui.ActionRow(prev_btn, next_btn)
 
-        options = []
-        for slot in race.equip_slots:
+    async def on_prev(self, interaction: discord.Interaction):
+        self.page -= 1
+        self.render()
+        await interaction.response.edit_message(view=self)
 
-            key, sep, value = slot.partition(":")
+    async def on_next(self, interaction: discord.Interaction):
+        self.page += 1
+        self.render()
+        await interaction.response.edit_message(view=self)
 
-            options.append(discord.SelectOption(
-                label = key,
-                value = slot
-            ))
+class EquipButton(ui.Button):
+    def __init__(self):
+        super().__init__(label = "裝備", style = discord.ButtonStyle.secondary)
 
-        super().__init__(
-            placeholder = "要裝備在哪？",
-            min_values = 1,
-            max_values = 1,
-            options=options
-        )
+    def callback(self, interaction: discord.Interaction):
+        pass
 
-    async def callback(self, interaction: discord.Interaction):
-        await interaction.response.send_message(f"{self.values[0]}", ephemeral=True)
+class UnequipButton(ui.Button):
+    def __init__(self):
+        super().__init__(label = "卸下", style = discord.ButtonStyle.secondary)
+
+    def callback(self, interaction: discord.Interaction):
+        pass

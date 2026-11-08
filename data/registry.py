@@ -7,6 +7,7 @@ from data.schema import (
     Container, 
     Role, 
     Item, 
+    Slot,
     Resource, 
     Building, 
     LootTable, 
@@ -58,6 +59,17 @@ class ItemStorage(Storage):
                 matchs.append(item)
 
         return matchs
+
+class SlotStorage(Storage):
+    def __init__(self, path: str = "data/slot"):
+        super().__init__(path)
+
+    def get(self, name: str):
+        data = self._storage.get(name)
+        if not data:
+            return None
+        
+        return Slot(**deepcopy(data))
 
 class ResourceStorage(Storage):
     def __init__(self, path: str = "data/resources"):
@@ -143,10 +155,13 @@ class RaceStorage(Storage):
         
         return Race(**deepcopy(data))
 
+
+
 # ----
 # 註冊資料物件, 讓其他函式庫可以直接導入使用
 # ----
 ITEMS       = ItemStorage()
+SLOTS       = SlotStorage()
 RESOURCES   = ResourceStorage()
 CONTAINERS  = ContainerStorage()
 ROLES       = RoleStorage()

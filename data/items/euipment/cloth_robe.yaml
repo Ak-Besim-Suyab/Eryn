@@ -1,0 +1,15 @@
+serial: 5001
+id    : robe
+name  : 長袍
+
+tooltip    : 可裝備 
+description: 寬鬆的衣袍，能提供簡單的防禦。
+
+components:
+  - type: equipment
+    slot: chest
+    affixes:
+      - scope: defense
+        stat: defense
+        operator: add
+        value: 1

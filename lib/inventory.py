@@ -1,7 +1,15 @@
 import math
-from models import Inventory, Player, ItemInstance
+from data import RACES
 
-MAX_ROW = 20
+from models import Player
+from models import Inventory
+from models import ItemInstance
+
+from lib import player
+from lib import item
+
+MAX_ITEM_ROW = 20
+MAX_EQUIP_ROW = 10
 
 def get_page(page: int, player_id: int, item_ids: list[str] = None) -> tuple[list[Inventory | ItemInstance], int, int]:
     """ *
@@ -28,7 +36,7 @@ def get_page(page: int, player_id: int, item_ids: list[str] = None) -> tuple[lis
                      .where(ItemInstance.player == player_id)
                      .where(ItemInstance.slot.is_null(True)))
 
-    # 排序 (先查詢傳入的 item_id 列表, 然後以 item_id 排序)
+    # 如果有傳入分類, 則將查詢縮限到分類以內
     if item_ids is not None:
         rows_stackable = rows_stackable.where(Inventory.item_id.in_(item_ids)).order_by(Inventory.item_id)
         rows_instance  = rows_instance.where(ItemInstance.item_id.in_(item_ids)).order_by(ItemInstance.item_id)
@@ -36,14 +44,39 @@ def get_page(page: int, player_id: int, item_ids: list[str] = None) -> tuple[lis
     # 合併
     rows = list(rows_stackable) + list(rows_instance)
 
-    # 計算頁數
-    total_pages = max(1, math.ceil(len(rows) / MAX_ROW))
+    return _page_caculated(rows, page, MAX_ITEM_ROW)
+
+def get_equip_page(page: int, player_id: int) -> tuple[list[tuple[str, str | None]], int, int]:
+    """
+    返回經過欄位匹配後的裝備列表`rows(list)`, 當前頁數`page(int)`與總頁數`total_pages(int)`
+    裝備欄位有不同的最大顯示行數，目前最大為`MAX_EQUIP_ROW`
+    """
+    Player.get_or_create(id = player_id)
+
+    # 取得所有裝備中的物品
+    rows = player.get_equipments(player_id=player_id, unequipped=False)
+
+    # 根據裝備順序重新排序
+    rows.sort(key=item.equip_sort_key)
+    rows = {row.slot: row.item_id for row in rows}
+
+    # 取得所有可裝備欄位
+    # NOTE: 之後補上其他來源的欄位
+    race = RACES.get(player.get_race(player_id))
+
+    # 匹配欄位
+    slots = [(slot, rows.get(slot, None)) for slot in race.slots]
+
+    return _page_caculated(page, slots, MAX_EQUIP_ROW)
+
+def _page_caculated(rows: list, page: int, max_row: int):
+    """
+    返回根據最大行數計算後的指定分頁串列, 當前頁數與總頁數 (最大頁數會向上取整以避免缺頁)
+    """
+    # 計算當前頁數與總頁數
+    total_pages = max(1, math.ceil(len(rows) / MAX_EQUIP_ROW))
     page = min(max(page, 1), total_pages)
 
-    # 取得指定頁數的物品
-    #
-    # rows[0:20] 為第一頁
-    # rows[20:40] 為第二頁, 以此類推
-    #
-    start = (MAX_ROW * (page - 1))
-    return rows[start:start + MAX_ROW], page, total_pages
+    # 取得指定頁數的物品, rows[0:20] 為第一頁, rows[20:40] 為第二頁, 以此類推
+    start = (MAX_EQUIP_ROW * (page - 1))
+    return rows[start:start + MAX_EQUIP_ROW], page, total_pages

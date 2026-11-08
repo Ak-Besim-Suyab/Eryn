@@ -10,6 +10,7 @@ from .media_gallery import *
 
 # data schema of game 
 from .item import *
+from .slot import *
 from .role import *
 from .resource import *
 from .loot_table import *
@@ -28,6 +29,7 @@ __all__ = [
     'MediaGallery',
 
     'Item',
+    'Slot',
     'Role',
     'Resource',
     'LootTable',

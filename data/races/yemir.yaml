@@ -1,12 +1,12 @@
 id: yemir
 name: 耶米利安人
 
-equip_slots:
+slots:
   - main_hand
   - off_hand
   - ammo
   - head
-  - body
+  - chest
   - arms
   - belt
   - legs

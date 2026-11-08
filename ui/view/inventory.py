@@ -19,7 +19,6 @@ class InventoryView(ui.LayoutView):
         self.user = user
         self.page = page
         self.category = category
-        self.rows = []
         self.render()
 
     def render(self):
@@ -28,9 +27,10 @@ class InventoryView(ui.LayoutView):
 
         # 存入物件狀態, 並進行排序
         self.page = page
-        self.rows = rows.sort(key=sort_key)
+        rows.sort(key=sort_key)
 
         # 將物品轉換為字串, 並根據物品分類修正參數
+        # NOTE: 這段好像可以刪除？
         lines = []
         for row in rows:
             if isinstance(row, Inventory):

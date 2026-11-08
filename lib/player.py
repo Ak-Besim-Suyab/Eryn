@@ -82,11 +82,24 @@ def unequip(player_id: int, slot: str) -> bool:
     return deleted > 0
 
 def get_equipped(player_id: int, slot: str) -> ItemInstance | None:
+    """
+    返回指定裝備欄位的物品
+    """
     return (ItemInstance
             .select()
             .where(ItemInstance.player == player_id, 
                    ItemInstance.slot == slot)
             .first())
+
+def get_equipments(player_id: int, unequipped: bool = True) -> list[ItemInstance] | None:
+    """
+    返回裝備欄, `equipped` 為 `True` 代表已裝備, `False` 代表未裝備
+    """
+    rows = (ItemInstance
+            .select()
+            .where(ItemInstance.player == player_id)
+            .where(ItemInstance.slot.is_null(unequipped)))
+    return list(rows)
 
 def is_equipped(player_id: int, slot: str) -> bool:
     return get_equipped(player_id, slot) is not None

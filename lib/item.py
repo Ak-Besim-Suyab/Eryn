@@ -1,4 +1,4 @@
-from data import ITEMS
+from data import ITEMS, SLOTS
 
 from cores.logger import logger
 from cores.database import database
@@ -118,5 +118,11 @@ def description(item_id: str, quantity: int, type: str = "summary") -> str:
 
 def sort_key(row: Inventory | ItemInstance) -> tuple[float, str]:
     item = ITEMS.get(row.item_id)
-    return (item.sort_order if item else 9999.9, row.item_id)
-    
+    return (item.serial if item else 9999, row.item_id)
+
+def equip_sort_key(row: ItemInstance) -> tuple[int, str]:
+    """
+    這個函式用於返回物品可裝備欄位的序列號碼, 用於裝備欄位排序
+    """
+    slot = SLOTS.get(row.slot)
+    return (slot.serial if slot else 99, row.item_id)
