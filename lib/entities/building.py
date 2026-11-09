@@ -5,9 +5,9 @@ from peewee import fn
 from cores.database import database
 from cores.logger import logger
 
-from models import Player
-from models import Building
-from models import Contribution
+from model import Player
+from model import Building
+from model import Contribution
 
 def add_contribution(player_id: int, build_id: str, resource: str, quantity: int = 1) -> tuple[bool, int]:
     """

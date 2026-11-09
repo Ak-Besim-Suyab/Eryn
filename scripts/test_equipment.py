@@ -2,7 +2,7 @@
 測試 player.equip(), player.unequip() 裝備函式
 """
 from lib import player
-from models import Player
+from model import Player
 from data import ITEMS
 from data.schema.type import ItemType
 

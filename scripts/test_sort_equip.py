@@ -2,8 +2,8 @@ from lib import player
 from lib import item
 from lib.item import equip_sort_key
 
-from models import Player
-from models import ItemInstance
+from model import Player
+from model import ItemInstance
 
 Player.get_or_create(id=1)
 

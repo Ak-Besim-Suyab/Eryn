@@ -3,7 +3,7 @@ from discord.ext import commands
 
 from lib import level_system
 
-from models import Statistic
+from model import Statistic
 
 class MessageListener(commands.Cog):
     def __init__(self, bot):

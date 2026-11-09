@@ -4,7 +4,7 @@ from discord.ext import commands
 from lib import select as select_handler
 from lib import button as button_handler
 
-from models import init_databases
+from model import init_databases
 from cores.logger import logger
 
 class Elin(commands.Bot):

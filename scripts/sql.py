@@ -1,5 +1,5 @@
-from models import Inventory
-from models import ItemInstance
+from model import Inventory
+from model import ItemInstance
 
 # 如何查詢指定道具然後刪除所有符合名稱的道具, 如果只要刪除特定玩家, where 加上玩家條件即可
 # deleted = (Inventory

@@ -3,8 +3,8 @@ from discord import ui
 
 from data import SLOTS, ITEMS
 
-from lib import inventory, item
-from models import Inventory
+from lib import inventory, item, player
+from model import Inventory
 
 class EquipmentView(ui.LayoutView):
     def __init__(self, user: discord.abc.User, page: int = 1):
@@ -154,5 +154,5 @@ class QuickEquipButton(ui.Button):
     def __init__(self):
         super().__init__(label = "快速裝備", style = discord.ButtonStyle.secondary)
 
-    def callback(self, interaction: discord.Interaction):
-        pass
+    async def callback(self, interaction: discord.Interaction):
+        player.equip()

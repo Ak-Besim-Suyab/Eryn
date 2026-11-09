@@ -4,7 +4,7 @@
 from data import RACES
 from data.schema import Race
 
-from models import Player
+from model import Player
 
 from lib import player
 

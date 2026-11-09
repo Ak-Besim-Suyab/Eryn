@@ -7,7 +7,7 @@ import discord
 from discord import ui, SeparatorSpacing
 
 from data import ITEMS
-from models import Inventory, ItemInstance
+from model import Inventory, ItemInstance
 
 from ui.view.item import ItemView
 

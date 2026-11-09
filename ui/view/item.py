@@ -8,7 +8,7 @@ from lib.item import summary_line
 from data import ITEMS
 from data.schema import Item
 
-from models import Inventory, ItemInstance
+from model import Inventory, ItemInstance
 
 class ItemView(ui.LayoutView):
     def __init__(self, user: discord.abc.User, row: Inventory | ItemInstance):

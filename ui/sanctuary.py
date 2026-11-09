@@ -6,7 +6,7 @@ from lib.builder import build_container
 from lib import resource
 from lib.entities import building
 
-from models import Building
+from model import Building
 
 class SanctuaryView(ui.LayoutView):
     def __init__(self):

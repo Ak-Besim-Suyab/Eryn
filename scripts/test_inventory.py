@@ -2,7 +2,7 @@
 測試背包函式
 """
 from lib import item, inventory
-from models import Inventory, ItemInstance
+from model import Inventory, ItemInstance
 
 # 嘗試在背包加入道具
 # entry, _ = Inventory.get_or_create(player=1, item_id="wooden_crate", defaults={"quantity": 0})

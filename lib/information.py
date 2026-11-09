@@ -3,8 +3,8 @@ from discord import ui
 
 from datetime import datetime, timezone
 
-from models import Player
-from models import Statistic
+from model import Player
+from model import Statistic
 
 from data import CONTAINERS
 from lib import builder

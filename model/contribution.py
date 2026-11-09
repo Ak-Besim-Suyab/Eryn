@@ -1,8 +1,8 @@
 from peewee import *
 from cores.database import BaseModel
 
-from models import Building
-from models import Player
+from model import Building
+from model import Player
 
 class Contribution(BaseModel):
     building = ForeignKeyField(Building, backref='contributions', on_delete='CASCADE')

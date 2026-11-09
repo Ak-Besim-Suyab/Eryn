@@ -1,7 +1,7 @@
 from cores import logger
 from cores.database import database
 
-from models import Player, ItemInstance
+from model import Player, ItemInstance
 
 from lib import item as itemlib
 from lib import resource as reslib

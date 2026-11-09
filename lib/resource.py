@@ -4,8 +4,8 @@ from typing import Optional
 from cores.database import database
 from cores.logger import logger
 
-from models import Player
-from models import Resource
+from model import Player
+from model import Resource
 
 RESOURCE_NAMES = ["wood", "stone", "food"]
 
