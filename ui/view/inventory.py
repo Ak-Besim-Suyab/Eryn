@@ -1,6 +1,7 @@
-""" 此類別用於建構背包 UI
-    self.category 用於保存當前顯示的物品類別, 在分類表單中使用
-    self.rows 用於保存抽取的背包結果, 在選擇表單中使用
+""" 
+此類別用於建構背包 UI
+self.category 用於保存當前顯示的物品類別, 在分類表單中使用
+self.rows 用於保存抽取的背包結果, 在選擇表單中使用
 """
 import discord
 from discord import ui, SeparatorSpacing
@@ -59,6 +60,7 @@ class InventoryView(ui.LayoutView):
         container.add_item(self.category_action())
         container.add_item(self.page_action(total_pages))
 
+        # 清除舊元件，加入更新後的元件
         self.clear_items()
         self.add_item(container)
 
@@ -108,8 +110,11 @@ class InventoryView(ui.LayoutView):
 
     def get_item_ids(self) -> list[str]:
         match self.category:
-            case "all": return None
-            case _: return [item.id for item in ITEMS.find(self.category)]
+            case "all": 
+                return None
+            case _: 
+                tags = self.category.split(":")
+                return [item.id for item in ITEMS.find_tags(*tags)]
 
 class ItemButton(ui.Button):
 

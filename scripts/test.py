@@ -1,16 +1,15 @@
-from data import ITEMS, SLOTS
-from lib import player, item
-slot = SLOTS.get("head")
-print(slot)
+from data import ITEMS
 
-i = ITEMS.get("leather_hat")
-print(i)
+tags = "equipment:chest:cloth"
 
-item.give(1184440057596235817, "leather_hat", 1)
+t = tags.split(":")
 
-success, msg = player.equip(1184440057596235817, "leather_hat", "head")
-print(success, msg)
+print(t)
 
-lst = player.get_equipments(player_id=1184440057596235817)
-for i in lst:
-    print(i.slot)
+items = ITEMS.find_tags(*t)
+
+if items:
+    for i in items:
+        print(i.name)
+else:
+    print("None")

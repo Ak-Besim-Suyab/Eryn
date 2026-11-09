@@ -20,7 +20,7 @@ def is_valid(item_id: str, amount: int) -> bool:
     
     return item, True
 
-def give(player_id: int, item_id: str, amount: int = 1) -> int:
+def give(player_id: int, item_id: str, amount: int = 1) -> bool:
     """ 給予玩家物品，返回給予後的持有數量
     """ 
     if not is_valid(item_id, amount):
@@ -32,7 +32,7 @@ def give(player_id: int, item_id: str, amount: int = 1) -> int:
     item = ITEMS.get(item_id)
 
     if item is None:
-        return
+        return False
 
     if item.is_equippable():
         with database.atomic():
@@ -50,7 +50,7 @@ def give(player_id: int, item_id: str, amount: int = 1) -> int:
             .where(Inventory.id == entry.id)
             .execute())
         
-    return Inventory.get_by_id(entry.id).quantity
+    return True
 
 def remove(player_id: int, item_id: str, amount: int = 1) -> tuple[bool, int]:
     """移除玩家物品，回傳是否移除成功以及運算後的持有數量

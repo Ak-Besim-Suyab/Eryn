@@ -1,0 +1,8 @@
+id: helmet
+serial: 4002
+name: 頭盔
+description: 金屬製成的護具，對頭部有相當好的保護能力。
+tooltip: 可裝備
+tags:
+  - equipment
+  - head

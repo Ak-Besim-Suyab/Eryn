@@ -57,6 +57,7 @@ class Item:
     tooltip: str     = "無"
     icon: str        = "📦"
 
+    tags: list[str] | None        = field(default_factory=list)
     components: list[dict] | None = field(default_factory=list)
 
     def __post_init__(self):
@@ -70,6 +71,9 @@ class Item:
                 formated_components.append(cls(**component))
                     
             self.components = formated_components
+
+    def has_tags(self, *tags):
+        return set(tags).issubset(self.tags)
 
     def get_component(self, component_type: ItemType) -> dict | None:
         return next((component for component in self.components if component.type == component_type), None)

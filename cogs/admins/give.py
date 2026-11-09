@@ -15,7 +15,10 @@ class GiveCog(commands.Cog):
     @commands.is_owner()
     async def give(self, ctx: commands.Context, member: discord.Member, item_id: str, amount: int=1):
         
-        quantity = item.give(member.id, item_id, amount)
+        success = item.give(member.id, item_id, amount)
+
+        if not success:
+            await ctx.send(f"❌ 給予 {member.name} {amount} 個 {item_id} 失敗")
 
         await ctx.send(f"✅ 已給予 {member.name} {amount} 個 {item_id}")
 

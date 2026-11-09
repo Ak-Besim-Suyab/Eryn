@@ -47,6 +47,24 @@ class ItemStorage(Storage):
         
         return Item(**deepcopy(data))
 
+    def find_tags(self, *tags, match_any: bool = False) -> list[Item]:
+
+        tags = set(tags)
+        matchs = []
+
+        for data in self._storage.values():
+            item_tags = set(data.get("tags", []))
+
+            if match_any:
+                find = not tags.isdisjoint(item_tags) # 判斷兩個集合是否有交集, 有共同元素時會返回 False, 這裡要取反
+            else:
+                find = tags.issubset(item_tags) # 判斷傳入集合是否為物品標籤的子集合
+
+            if find:
+                matchs.append(Item(**deepcopy(data)))
+
+        return matchs
+
     def find(self, item_type: ItemType):
         """
         返回符合所有條件的物品

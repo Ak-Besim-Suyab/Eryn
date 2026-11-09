@@ -1,7 +1,10 @@
-serial: 4001
 id    : leather_hat
-name  : 皮革帽
+serial: 4001
+tags:
+  - equipment
+  - head
 
+name  : 皮革帽
 tooltip    : 可裝備 
 description: 以皮革製作的帽子，能提供簡單的防禦。
 

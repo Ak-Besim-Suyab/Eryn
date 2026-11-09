@@ -1,9 +1,13 @@
+id    : cloth_robe
 serial: 5001
-id    : robe
-name  : 長袍
+tags:
+  - equipment
+  - chest
+  - cloth
 
+name  : 布袍
 tooltip    : 可裝備 
-description: 寬鬆的衣袍，能提供簡單的防禦。
+description: 麻布製成的寬鬆衣袍，只能提供簡單的防禦。
 
 components:
   - type: equipment

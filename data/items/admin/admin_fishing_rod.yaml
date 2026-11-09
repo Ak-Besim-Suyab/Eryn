@@ -1,19 +1,21 @@
-"serial": 2
-"id": "admin_fishing_rod"
+id: admin_fishing_rod
+serial: 2
+tags:
+  - fishing_rod
 
-"name": "管理員釣竿"
-"tooltip": "測試工具"
-"description": "測試工具"
+name: 管理員釣竿
+tooltip: 測試工具
+description: 測試工具
 
-"components":
-  - "type": "equipment"
-    "slot": Null
-    "affixes":
-      - "scope": "fishing"
-        "stat": "luck"
-        "operator": "add"
-        "value": 1
-      - "scope": "fishing"
-        "stat": "fish_bonus"
-        "operator": "add"
-        "value": 1
+components:
+  - type: equipment
+    slot: Null
+    affixes:
+      - scope: fishing
+        stat: luck
+        operator: add
+        value: 1
+      - scope: fishing
+        stat: fish_bonus
+        operator: add
+        value: 1
