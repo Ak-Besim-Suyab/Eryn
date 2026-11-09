@@ -19,6 +19,7 @@ class GiveCog(commands.Cog):
 
         if not success:
             await ctx.send(f"❌ 給予 {member.name} {amount} 個 {item_id} 失敗")
+            return
 
         await ctx.send(f"✅ 已給予 {member.name} {amount} 個 {item_id}")
 

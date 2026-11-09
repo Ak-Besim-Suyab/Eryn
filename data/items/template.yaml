@@ -1,0 +1,28 @@
+# serial     : 物品排序編號, 以便於梳理物品列表
+# id         : 物品識別碼, 用於所有邏輯在調用物品時直接透過識別碼取得物件
+# tags       : 物品標籤, 以便於查詢時取得關聯或集合
+# name       : 物品名稱
+# description: 物品描述
+# tooltip    : 物品提示說明
+# components : 物品元件, 這個區塊會指示物品有什麼樣的行為, type 決定行為種類以及後續應填寫哪些參數
+#
+# type: 元件行為種類, 可用的種類有: equipment, food
+#
+# :: equipment:
+# slot   : 裝備位置, 這個參數將決定該物品能裝備在哪個部位, 可用位置: main_hand, off_hand, ammo, head, chest, arms, legs, foot, earring, necklace, ring
+# affixes: 裝備效果, 這些效果將決定物品被裝備後對角色產生的效果, 關於更詳細的裝備效果請參考 affixes.txt
+
+serial: 0
+id: template
+tags: [material, misc]
+
+name: 石頭
+description: 測試道具
+tooltip: 測試工具
+
+components:
+  - type: equipment
+    slot: main_hand
+    affixes:
+      - {scope: attack, stat: attack, operator: add, value: 1}
+      - {scope: defense, stat: defense, operator: add, value: 1}

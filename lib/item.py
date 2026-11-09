@@ -87,15 +87,15 @@ def summary_line(item_id: str, quantity: int) -> str:
         logger.warning(f"背包內存在未定義的道具: {item_id}")
         return f"{quantity} ❓{item_id}"
 
-    if item.has_component("equipment"):
+    if item.has_tags("equipment"):
         lines = [
-            f"**{item.icon} {item.name}（持有： {quantity} 個）**",
+            f"**{item.icon} {item.name}**",
             f"> -# {item.tooltip}",
         ]
         return "\n".join(lines)
     
     lines = [
-        f"**{item.icon} {item.name}（持有： {quantity} 個）**",
+        f"**{item.icon} {item.name}（持有：{quantity} 個）**",
         f"> -# {item.tooltip}",
     ]
     

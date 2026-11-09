@@ -1,15 +1,13 @@
 serial: 10001
 id: rough_fishing_rod
+tags: [fishing_rod]
 
 name: 簡易釣竿
-description: |
-  以粗糙手藝製作的釣竿，甚至有點說不上能用來釣魚。
+description: 以粗糙手藝製作的釣竿，甚至有點說不上能用來釣魚。
+tooltip: 無
 
 components:
   - type: equipment
     slot: main_hand
     affixes: 
-      - scope: fishing
-        stat: luck
-        operator: add
-        value: 1
+      - {scope: fishing, stat: luck, operator: add, value: 1}

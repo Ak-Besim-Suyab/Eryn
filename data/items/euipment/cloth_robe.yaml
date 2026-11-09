@@ -6,7 +6,7 @@ tags:
   - cloth
 
 name  : 布袍
-tooltip    : 可裝備 
+tooltip    : 可裝備於胸部
 description: 麻布製成的寬鬆衣袍，只能提供簡單的防禦。
 
 components:

@@ -40,7 +40,7 @@ class ItemStorage(Storage):
     def __init__(self, path: str = "data/items"):
         super().__init__(path)
 
-    def get(self, name: str):
+    def get(self, name: str) -> Item:
         data = self._storage.get(name)
         if not data:
             return None

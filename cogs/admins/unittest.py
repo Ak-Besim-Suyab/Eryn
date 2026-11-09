@@ -17,6 +17,8 @@ class UnitTestCog(commands.Cog):
 
         line = "**📦 鱈魚（持有： 2 個）**\n> -# 可以吃 | 可以分解"
 
+        empty_item = ui.TextDisplay(content = "測試")
+
         container = ui.Container()
         container.add_item(ui.TextDisplay(content = "## 🪎 Suyab 背包"))
         container.add_item(ui.Separator(spacing = discord.SeparatorSpacing.large))
@@ -66,6 +68,9 @@ class UnitTestCog(commands.Cog):
         container.add_item(row)
 
         view = ui.LayoutView().add_item(container)
+
+        for _ in range(10):
+            view.add_item(empty_item)
         
         await ctx.send(view=view)
 

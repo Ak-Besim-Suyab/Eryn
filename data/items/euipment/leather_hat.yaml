@@ -1,12 +1,10 @@
-id    : leather_hat
+id: leather_hat
 serial: 4001
-tags:
-  - equipment
-  - head
+tags: [equipment, head]
 
-name  : 皮革帽
-tooltip    : 可裝備 
+name: 皮革帽
 description: 以皮革製作的帽子，能提供簡單的防禦。
+tooltip: 可裝備於頭部
 
 components:
   - type: equipment

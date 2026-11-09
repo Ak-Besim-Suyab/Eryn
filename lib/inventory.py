@@ -42,6 +42,7 @@ def get_page(page: int, player_id: int, item_ids: list[str] = None) -> tuple[lis
 
     # 合併
     rows = list(rows_stackable) + list(rows_instance)
+    rows.sort(key=item.sort_key)
 
     return _page_caculated(rows, page, MAX_ITEM_ROW)
 
