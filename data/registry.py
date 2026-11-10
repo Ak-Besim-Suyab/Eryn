@@ -6,6 +6,7 @@ from cores import logger
 from data.schema import (
     Container, 
     Role, 
+    Region,
     Item, 
     Slot,
     Resource, 
@@ -16,36 +17,37 @@ from data.schema import (
 )
 from data.schema.type import ItemType
 
-class Storage:
-    def __init__(self, path: str):
+from typing import Generic, TypeVar
+
+T = TypeVar("T")
+
+class Storage(Generic[T]):
+    def __init__(self, path: str, schema: type[T]):
         self._path = path
-        self._storage = {}
+        self._schema = schema
+        self._storage: dict[str, T] = {}
 
-        self.load()
+        self._load()
 
-    def load(self):
-        self._storage = file.load_dir(self._path)
-        if not self._storage:
+    def _load(self):
+        raw = file.load_dir(self._path)
+        if not raw:
             logger.warning(f"路徑所取得的資料為空: {self._path}")
 
-    # 取得單筆資料
-    def get(self, name: str):
-        pass
+        self._storage = {name: self._schema(**data) for name, data in raw.items()}
 
-    # 取得符合條件的所有資料, filters 為不定長度位置參數, 可填入多個條件, 參數名稱要對應查詢項目
-    def find(self, **filters):
-        pass
+    # 取得單筆資料
+    def get(self, name: str) -> T | None:
+        obj = self._storage.get(name)
+        return deepcopy(obj) if obj else None
+    
+class RegionStorage(Storage):
+    def __init__(self):
+        super().__init__("data/regions", Region)
 
 class ItemStorage(Storage):
-    def __init__(self, path: str = "data/items"):
-        super().__init__(path)
-
-    def get(self, name: str) -> Item:
-        data = self._storage.get(name)
-        if not data:
-            return None
-        
-        return Item(**deepcopy(data))
+    def __init__(self):
+        super().__init__("data/items", Item)
 
     def find_tags(self, *tags, match_any: bool = False) -> list[Item]:
 
@@ -53,7 +55,7 @@ class ItemStorage(Storage):
         matchs = []
 
         for data in self._storage.values():
-            item_tags = set(data.get("tags", []))
+            item_tags = data.tags
 
             if match_any:
                 find = not tags.isdisjoint(item_tags) # 判斷兩個集合是否有交集, 有共同元素時會返回 False, 這裡要取反
@@ -61,123 +63,65 @@ class ItemStorage(Storage):
                 find = tags.issubset(item_tags) # 判斷傳入集合是否為物品標籤的子集合
 
             if find:
-                matchs.append(Item(**deepcopy(data)))
+                matchs.append(deepcopy(data))
 
         return matchs
 
-    def find(self, item_type: ItemType):
+    # 取得符合條件的所有資料, filters 為不定長度位置參數, 可填入多個條件, 參數名稱要對應查詢項目
+    def find(self, item_type: ItemType) -> list[Item]:
         """
         返回符合所有條件的物品
         """
         matchs = []
         for data in self._storage.values():
-            item = Item(**deepcopy(data))
-
-            if item.has_component(item_type):
-                matchs.append(item)
+            if data.has_component(item_type):
+                matchs.append(deepcopy(data))
 
         return matchs
 
 class SlotStorage(Storage):
-    def __init__(self, path: str = "data/slot"):
-        super().__init__(path)
-
-    def get(self, name: str):
-        data = self._storage.get(name)
-        if not data:
-            return None
-        
-        return Slot(**deepcopy(data))
+    def __init__(self):
+        super().__init__("data/slots", Slot)
 
 class ResourceStorage(Storage):
-    def __init__(self, path: str = "data/resources"):
-        super().__init__(path)
-
-    def get(self, name: str):
-        data = self._storage.get(name)
-        if not data:
-            return None
-        
-        return Resource(**deepcopy(data))
+    def __init__(self):
+        super().__init__("data/resources", Resource)
 
 class ContainerStorage(Storage):
-    def __init__(self, path: str = "data/containers"):
-        super().__init__(path)
-
-    def get(self, name: str):
-        data = self._storage.get(name)
-        if not data:
-            return None
-        
-        return Container(**deepcopy(data))
+    def __init__(self):
+        super().__init__("data/containers", Container)
 
 class RoleStorage(Storage):
-    def __init__(self, path: str = "data/roles"):
-        super().__init__(path)
-
-    def get(self, name: str):
-        data = self._storage.get(name)
-        if not data:
-            return None
-        
-        return Role(**deepcopy(data))
+    def __init__(self):
+        super().__init__("data/roles", Role)
     
-    def get_all(self):
-        return [Role(**deepcopy(data)) for data in self._storage.values()]
+    def get_all(self) -> list[Role]:
+        return [deepcopy(data) for data in self._storage.values()]
     
     # 例如: 找查特定分類時, 填入 (category = "specific_category"), 找查特定標籤時, 填入 (tag = "specific_tag")
     def find(self, **filters) -> list[Role]:
-        return [Role(**deepcopy(data)) for data in self._storage.values() if all(data.get(key) == value for key, value in filters.items())]
+        return [deepcopy(data) for data in self._storage.values() if all(getattr(data, key) == value for key, value in filters.items())]
 
 class BuildingStorage(Storage):
-    def __init__(self, path: str = "data/buildings"):
-        super().__init__(path)
-
-    def get(self, name: str):
-        data = self._storage.get(name)
-        if not data:
-            return None
-        
-        return Building(**deepcopy(data))
+    def __init__(self):
+        super().__init__("data/buildings", Building)
     
 class LootTableStorage(Storage):
-    def __init__(self, path: str = "data/loot_tables"):
-        super().__init__(path)
-
-    def get(self, name: str):
-        data = self._storage.get(name)
-        if not data:
-            return None
-        
-        return LootTable(**deepcopy(data))
+    def __init__(self):
+        super().__init__("data/loot_tables", LootTable)
 
 class LineStorage(Storage):
-    def __init__(self, path: str = "data/lines"):
-        super().__init__(path)
-
-    def get(self, name: str):
-        data = self._storage.get(name)
-        if not data:
-            return None
-        
-        return Line(**deepcopy(data))
+    def __init__(self):
+        super().__init__("data/lines", Line)
 
 class RaceStorage(Storage):
-    def __init__(self, path: str = "data/races"):
-        super().__init__(path)
-
-    def get(self, name: str):
-        data = self._storage.get(name)
-        if not data:
-            return None
-        
-        return Race(**deepcopy(data))
-
-
+    def __init__(self):
+        super().__init__("data/races", Race)
 
 # ----
 # 註冊資料物件, 讓其他函式庫可以直接導入使用
 # ----
+REGIONS     = RegionStorage()
 ITEMS       = ItemStorage()
 SLOTS       = SlotStorage()
 RESOURCES   = ResourceStorage()

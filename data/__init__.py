@@ -1,4 +1,5 @@
 from .registry import (
+    REGIONS,
     ITEMS,
     SLOTS,
     RESOURCES,
@@ -12,6 +13,7 @@ from .registry import (
 
 # 告訴所有導入此模組的函式庫該模組包含哪些函式庫
 __all__ = [
+    "REGIONS",
     "ITEMS",
     "SLOTS",
     "RESOURCES",

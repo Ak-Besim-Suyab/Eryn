@@ -9,6 +9,7 @@ from .select import *
 from .media_gallery import *
 
 # data schema of game 
+from .region import *
 from .item import *
 from .slot import *
 from .role import *
@@ -28,6 +29,7 @@ __all__ = [
     'Select',
     'MediaGallery',
 
+    'Region',
     'Item',
     'Slot',
     'Role',

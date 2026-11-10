@@ -1,15 +1,8 @@
-from data import ITEMS
+from data import REGIONS, ITEMS
 
-tags = "equipment:chest:cloth"
+region = REGIONS.get("boreal_forest")
+print(region)
 
-t = tags.split(":")
-
-print(t)
-
-items = ITEMS.find_tags(*t)
-
-if items:
-    for i in items:
-        print(i.name)
-else:
-    print("None")
+items = ITEMS.find("equipment")
+for item in items:
+    print(item.name)
