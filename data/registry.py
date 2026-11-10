@@ -41,11 +41,11 @@ class Storage(Generic[T]):
         obj = self._storage.get(name)
         return deepcopy(obj) if obj else None
     
-class RegionStorage(Storage):
+class RegionStorage(Storage[Region]):
     def __init__(self):
         super().__init__("data/regions", Region)
 
-class ItemStorage(Storage):
+class ItemStorage(Storage[Item]):
     def __init__(self):
         super().__init__("data/items", Item)
 
@@ -79,19 +79,19 @@ class ItemStorage(Storage):
 
         return matchs
 
-class SlotStorage(Storage):
+class SlotStorage(Storage[Slot]):
     def __init__(self):
         super().__init__("data/slots", Slot)
 
-class ResourceStorage(Storage):
+class ResourceStorage(Storage[Resource]):
     def __init__(self):
         super().__init__("data/resources", Resource)
 
-class ContainerStorage(Storage):
+class ContainerStorage(Storage[Container]):
     def __init__(self):
         super().__init__("data/containers", Container)
 
-class RoleStorage(Storage):
+class RoleStorage(Storage[Role]):
     def __init__(self):
         super().__init__("data/roles", Role)
     
@@ -102,19 +102,19 @@ class RoleStorage(Storage):
     def find(self, **filters) -> list[Role]:
         return [deepcopy(data) for data in self._storage.values() if all(getattr(data, key) == value for key, value in filters.items())]
 
-class BuildingStorage(Storage):
+class BuildingStorage(Storage[Building]):
     def __init__(self):
         super().__init__("data/buildings", Building)
     
-class LootTableStorage(Storage):
+class LootTableStorage(Storage[LootTable]):
     def __init__(self):
         super().__init__("data/loot_tables", LootTable)
 
-class LineStorage(Storage):
+class LineStorage(Storage[Line]):
     def __init__(self):
         super().__init__("data/lines", Line)
 
-class RaceStorage(Storage):
+class RaceStorage(Storage[Race]):
     def __init__(self):
         super().__init__("data/races", Race)
 

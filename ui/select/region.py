@@ -13,11 +13,9 @@ class RegionSelect(ui.Select):
         for region in regions:
             region = REGIONS.get(region)
             options.append(
-                discord.SelectOption(
-                    label = region.name,
-                    description = region.description, 
-                    value = region.id
-                )
+                discord.SelectOption(label=region.name,
+                                     description=region.description, 
+                                     value=region.id)
             )
 
         super().__init__(
@@ -26,5 +24,11 @@ class RegionSelect(ui.Select):
         )
 
     async def callback(self, interaction: discord.Interaction):
-        region.change(interaction.user.id, self.values[0])
-        await interaction.response.send_message(self.values[0])
+        success, line = region.move(interaction.user.id, self.values[0])
+        container = (ui.Container()
+                     .add_item(ui.TextDisplay(content=line))
+        )
+        view = (ui.LayoutView()
+                .add_item(container)
+        )
+        await interaction.response.send_message(view=view)
