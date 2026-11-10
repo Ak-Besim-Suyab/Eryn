@@ -6,7 +6,7 @@ from lib.builder import build_container
 from typing import TypeAlias
 Container: TypeAlias = str | ui.Container
 
-def create_view(*containers: Container, timeout: int = None, **kwargs):
+def create(*containers: Container, timeout: int = None, **kwargs):
     """
     container has two data types:
         - `str`: when `str` is provided, it will get the data from register.container and build a `Container` from container builder.

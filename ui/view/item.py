@@ -1,8 +1,7 @@
 import discord
 from discord import ui, SeparatorSpacing
 
-from lib import player
-from lib.view import create_view
+from lib import player, view
 from lib.item import summary_line
 
 from data import ITEMS
@@ -117,7 +116,7 @@ class UseSelect(ui.Select):
                 success, item_lines = player.open_item(interaction.user.id, self.item, 1)
 
                 if not success:
-                    await interaction.followup.send(view=create_view("open_fail", **contents))
+                    await interaction.followup.send(view=view.create("open_fail", **contents))
                     return
 
                 descriptions = [f"**獲得物品：**"]
@@ -125,11 +124,11 @@ class UseSelect(ui.Select):
 
                 contents.update({"descriptions": "\n".join(descriptions)})
 
-                view = self.view
-                view.render()
+                v = self.view
+                v.render()
 
-                await interaction.edit_original_response(view=view)
-                await interaction.followup.send(view=create_view("open_success", **contents))
+                await interaction.edit_original_response(view=v)
+                await interaction.followup.send(view=view.create("open_success", **contents))
 
             case _:
                 await interaction.followup.send(f"> *你拿起{self.item.name}，但似乎什麼事也不能做。*")

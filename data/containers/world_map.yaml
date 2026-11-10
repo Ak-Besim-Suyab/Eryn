@@ -1,0 +1,10 @@
+accent_color: 0
+items:
+  - type: media_gallery 
+    items:
+      - media: https://cdn.discordapp.com/attachments/1491046495812718672/1569648509114777660/world_map.jpg
+
+  - type: text
+    content: "## 世界地圖"
+  
+  - type: separator

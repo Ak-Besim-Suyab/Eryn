@@ -4,7 +4,7 @@ from discord import app_commands
 
 from data import LOOT_TABLES, LINES
 from lib.item import summary_line
-from lib.view import create_view
+from lib import view
 from lib.util.dice import roll, judge, Outcome
 from lib.stat import get_stats
 
@@ -40,7 +40,7 @@ class FishingCog(commands.Cog):
         contents.update({"line": line.random()})
         contents.update({"fishes": "、".join(fishes)})
 
-        await interaction.response.send_message(view=create_view(f"fishing_success", **contents))
+        await interaction.response.send_message(view=view.create(f"fishing_success", **contents))
 
 async def setup(bot: commands.Bot):
     await bot.add_cog(FishingCog(bot))

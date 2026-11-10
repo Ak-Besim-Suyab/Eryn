@@ -9,3 +9,4 @@ from dataclasses import dataclass
 class Region:
     id: str
     name: str
+    description: str

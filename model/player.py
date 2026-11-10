@@ -14,11 +14,13 @@ class Player(BaseModel):
     race = TextField(default="yemir")
 
     currency = IntegerField(default=0)
-    region = TextField(default="falun")
+    region = TextField(default="the_town")
 
     san = FloatField(default=100.0)
     luck = FloatField(default=1.0)
     karma = FloatField(default=100.0)
+
+    turn = IntegerField(default=0)
     
     card = TextField(null=True)
     use_pet = IntegerField(default=0)
