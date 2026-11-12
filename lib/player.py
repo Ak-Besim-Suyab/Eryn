@@ -1,14 +1,22 @@
 from cores import logger
-from cores.database import database
+from cores import database
 
-from model import Player, ItemInstance
+from models import Player, ItemInstance
 
 from lib import item as itemlib
-from lib import resource as reslib
+from lib import resource
 
 from data import RESOURCES, LOOT_TABLES, ITEMS
 from data.schema.type import ItemType
 from data.schema import Item
+
+def get(player_id: int) -> Player:
+    player, _ = Player.get_or_create(id=player_id)
+    return player
+
+def get_region(player_id: int) -> str:
+    player, _ = Player.get_or_create(id=player_id)
+    return player.region
 
 def get_race(player_id: int):
     player, _ = Player.get_or_create(id=player_id)
@@ -123,7 +131,7 @@ def open_item(player_id: int, item: Item, times: int = 1) -> tuple[bool, dict]:
         match loot_type:
             case "resource":
                 res = RESOURCES.get(loot_id)
-                reslib.give(player_id, loot_id, quantity)
+                resource.give(player_id, loot_id, quantity)
                 # NOTE: 這裡之後改成 description.append(resource.get_line(item_id, quantity))
                 item_lines.append(f"- {res.icon}{res.name} {quantity}")
             case _:

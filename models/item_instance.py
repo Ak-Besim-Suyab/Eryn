@@ -1,6 +1,6 @@
 from peewee import *
 from cores.database import BaseModel
-from model import Player
+from models import Player
 
 class ItemInstance(BaseModel):
     """

@@ -1,4 +1,4 @@
-from lib import region
+from lib import resource
 
-success, line = region.move(1, "haven")
-print(success, line)
+success = resource.remove(1, "wood", 500)
+print(success)

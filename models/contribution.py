@@ -1,8 +1,8 @@
 from peewee import *
 from cores.database import BaseModel
 
-from model import Building
-from model import Player
+from models import Building
+from models import Player
 
 class Contribution(BaseModel):
     building = ForeignKeyField(Building, backref='contributions', on_delete='CASCADE')
@@ -11,6 +11,7 @@ class Contribution(BaseModel):
     wood = IntegerField(default=0)
     stone = IntegerField(default=0)
     food = IntegerField(default=0)
+    metal = IntegerField(default=0)
 
     class Meta:
         indexes = (

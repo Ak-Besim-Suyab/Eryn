@@ -1,9 +1,9 @@
 import math
 from data import ITEMS, RACES
 
-from model import Player
-from model import Inventory
-from model import ItemInstance
+from models import Player
+from models import Inventory
+from models import ItemInstance
 
 from lib import player
 from lib import item

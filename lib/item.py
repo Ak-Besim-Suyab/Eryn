@@ -3,9 +3,9 @@ from data import ITEMS, SLOTS
 from cores.logger import logger
 from cores.database import database
 
-from model.player import Player
-from model.inventory import Inventory
-from model.item_instance import ItemInstance
+from models.player import Player
+from models.inventory import Inventory
+from models.item_instance import ItemInstance
 
 def is_valid(item_id: str, amount: int) -> bool:
     """ 驗證執行邏輯的物品與數量是否合法，全數通過後回傳資料物件

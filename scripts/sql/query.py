@@ -1,4 +1,4 @@
-from model import Player
+from models import Player
 
 player, _ = Player.get_or_create(id=1)
 

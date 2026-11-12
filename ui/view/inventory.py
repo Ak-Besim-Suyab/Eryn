@@ -7,7 +7,7 @@ import discord
 from discord import ui
 
 from data import ITEMS
-from model import Inventory, ItemInstance
+from models import Inventory, ItemInstance
 
 from ui.view.item import ItemView
 

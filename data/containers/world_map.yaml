@@ -1,10 +1,14 @@
 accent_color: 0
 items:
-  - type: media_gallery 
-    items:
-      - media: https://cdn.discordapp.com/attachments/1491046495812718672/1569648509114777660/world_map.jpg
-
   - type: text
-    content: "## 世界地圖"
-  
+    content: |
+      ## 世界地圖
+      > *這個世界有很多地方正在等待你前往探索。*
+
+      旅人可以在這裡變更自己的地圖位置，不同地圖位置將會影響旅人的遊玩內容：
+      - 探索資源會隨著地圖位置改變
+      - 事件頻道會隨著地圖位置改變
+
+      移動時將會累積[回合數](https://discord.com/channels/1190027756482859038/1570315748105256992/1570316204944396298)。
+
   - type: separator

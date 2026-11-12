@@ -4,7 +4,7 @@ from discord import ui
 from data import SLOTS, ITEMS
 
 from lib import inventory, item, player
-from model import Inventory
+from models import Inventory
 
 from ui.view import Page
 

@@ -1,4 +1,4 @@
 id: mine
 name: 山脈礦場
 description: 位於主城東北部橫貫山脈裡的採礦場
-cost: {haven: 2, boreal_forest: 5}
+cost: {haven: 12, boreal_forest: 25}

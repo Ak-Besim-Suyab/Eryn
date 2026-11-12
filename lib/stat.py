@@ -7,7 +7,7 @@ from data import ITEMS
 from data.schema import Affix
 from data.schema.type import ItemType
 
-from model import ItemInstance
+from models import ItemInstance
 
 def _collect(player_id: int) -> list[Affix]:
     """

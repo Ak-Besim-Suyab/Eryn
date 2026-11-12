@@ -3,7 +3,7 @@
 
 from peewee import *
 from cores.database import BaseModel
-from model import Player
+from models import Player
 
 class Resource(BaseModel):
 
@@ -12,6 +12,7 @@ class Resource(BaseModel):
     wood = IntegerField(default = 0)
     stone = IntegerField(default = 0)
     food = IntegerField(default = 0)
+    metal = IntegerField(default = 0)
     
     class Meta:
         indexes = ((('player',), True),)

@@ -1,4 +1,7 @@
 id: boreal_forest
 name: 北方森林
 description: 主城北部的針葉林地帶
-cost: {haven: 3, mine: 5}
+cost: {haven: 13, mine: 25}
+
+# 北方森林 > 避風港 13
+# 避風港 > 礦場 12

@@ -1,8 +1,10 @@
 """ 此函式庫用於定義資料註冊物件
 """
 from copy import deepcopy
+
 from lib.util import file
 from cores import logger
+
 from data.schema import (
     Container, 
     Role, 
@@ -27,9 +29,9 @@ class Storage(Generic[T]):
         self._schema = schema
         self._storage: dict[str, T] = {}
 
-        self._load()
+        self.load()
 
-    def _load(self):
+    def load(self):
         raw = file.load_dir(self._path)
         if not raw:
             logger.warning(f"路徑所取得的資料為空: {self._path}")

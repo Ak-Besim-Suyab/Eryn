@@ -5,8 +5,8 @@ from discord import ui
 
 from datetime import datetime
 
-from model import Player
-from model import Statistic
+from models import Player
+from models import Statistic
 
 from cores import event_bus
 from cores import logger

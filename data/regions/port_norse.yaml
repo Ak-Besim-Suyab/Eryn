@@ -1,0 +1,4 @@
+id: port_norse
+name: 諾斯港
+description: 位於遠北大陸的海岸城鎮，無數外來者聚集的地方
+cost: {boreal_forest: 13, mine: 12}

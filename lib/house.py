@@ -1,5 +1,5 @@
-from model import Player
-from model import House
+from models import Player
+from models import House
 
 from cores.database import database
 

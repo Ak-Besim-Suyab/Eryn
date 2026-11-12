@@ -6,14 +6,17 @@ from pathlib import Path
 
 from openpyxl import load_workbook, Workbook
 
-from cores.logger import logger
+from cores import logger
 
 filenames = {".json", ".yaml", ".yml"}
 
 def load_dir(path: str) -> dict[str, dict]:
-    """ 讀取目標資料夾底下的所有檔案, 支援 `json, yaml, yml` 格式, 讀取完畢後回傳字典, `key` 為檔案名稱, `value` 為檔案內容.
+    """ 
+    讀取目標資料夾底下的所有檔案, 支援 `json, yaml, yml` 格式, 讀取完畢後回傳字典, `key` 為檔案名稱, `value` 為檔案內容.
     """
+
     folder = Path(path)
+
     if not folder.exists(): 
         raise FileNotFoundError(f"錯誤，找不到資料夾: {path}")
 

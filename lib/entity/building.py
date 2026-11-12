@@ -5,33 +5,55 @@ from peewee import fn
 from cores.database import database
 from cores.logger import logger
 
-from model import Player
-from model import Building
-from model import Contribution
+from models import Building
+from models import Contribution
+from models import Resource
 
-def add_contribution(player_id: int, build_id: str, resource: str, quantity: int = 1) -> tuple[bool, int]:
+from lib import resource
+
+def add_contribution(
+        player_id: int,
+        building_id: str,
+        resource_id: str,
+        quantity: int) -> tuple:
+
     """
-    增加建築的資源貢獻，並計算增加後是否升級，返回 `upgraded: bool` 表示升級與否和 `level: int` 表示當前等級
+    增加建築的資源貢獻
     """
-    Player.get_or_create(id=player_id)
-    building, _ = Building.get_or_create(id=build_id)
+    
+    Building.get_or_create(id=building_id)
 
     with database.atomic():
 
-        contribution, _ = Contribution.get_or_create(building=build_id, player=player_id)
+        contribution, _ = Contribution.get_or_create(building=building_id, player=player_id)
 
+        # 檢查資源類別是否存在
+        if not hasattr(contribution, resource_id):
+            raise ValueError(f"錯誤，未知的資源 {resource_id}")
+
+        res, _ = Resource.get_or_create(player=player_id)
+
+        # 檢查玩家資源數量
+        if getattr(res, resource) < quantity:
+            return False, "資源不足"
+        
+        # 移除玩家資源數量
+        # NOTE: 這裡回傳的資訊是臨時的，請記得補全正確回傳資訊
+        success = resource.remove(player_id, resource_id, quantity)
+        if not success:
+            return False, "扣除資源時發生錯誤"
+
+        # 增加建築物貢獻值
         (Contribution
             .update(**{resource: getattr(Contribution, resource) + quantity})
             .where(Contribution.id == contribution.id)
             .execute())
 
-        logger.debug(f"成功給予 {player_id} {quantity} 個 {resource} 到 {build_id}")
+        logger.debug(f"成功給予 {player_id} {quantity} 個 {resource} 到 {building_id}")
 
-    # try upgrade.
-    upgraded, level = upgrade(build_id)
-    return upgraded, level
+    return True, "成功"
 
-def get_building_contributions(build_id: str) -> dict[str, int]:
+def get_building_contributions(building_id: str) -> dict[str, int]:
     """
     取得指定建築的所有資源貢獻值總和
     """
@@ -44,7 +66,7 @@ def get_building_contributions(build_id: str) -> dict[str, int]:
 
     rows = (Contribution
         .select(*sum)
-        .where(Contribution.building == build_id)
+        .where(Contribution.building == building_id)
         .dicts()
         .get()
     )

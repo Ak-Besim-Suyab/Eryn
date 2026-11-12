@@ -1,12 +1,11 @@
 import discord
 from discord import ui
 
-from data import RESOURCES, CONTAINERS, BUILDINGS
-from lib.builder import build_container
-from lib import resource
-from lib.entities import building
+from data import CONTAINERS, RESOURCES, BUILDINGS
+from lib import container, resource
+from lib.entity import building
 
-from model import Building
+from models import Building
 
 class SanctuaryView(ui.LayoutView):
     def __init__(self):
@@ -38,11 +37,11 @@ class SanctuaryView(ui.LayoutView):
         action_row = ui.ActionRow()
         action_row.add_item(SanctuaryOption())
 
-        container = build_container(self.data, **contributions, **conditions)
-        container.add_item(action_row)
+        con = container.build(self.data, **contributions, **conditions)
+        con.add_item(action_row)
 
         self.clear_items()
-        self.add_item(container)
+        self.add_item(con)
 
 class SanctuaryOption(ui.Select):
     def __init__(self):
