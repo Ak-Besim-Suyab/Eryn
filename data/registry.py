@@ -15,6 +15,7 @@ from data.schema import (
     LootTable, 
     Line,
     Race,
+    Skill,
 )
 from data.schema.type import ItemType
 
@@ -30,6 +31,9 @@ class Storage(Generic[T]):
 
         self.load()
 
+    def __contains__(self, key) -> bool:
+        return key in self._storage
+
     def load(self):
         raw = file.load_dir(self._path)
         if not raw:
@@ -41,7 +45,11 @@ class Storage(Generic[T]):
     def get(self, name: str) -> T | None:
         obj = self._storage.get(name)
         return deepcopy(obj) if obj else None
-    
+
+class SkillStorage(Storage[Skill]):
+    def __init__(self):
+        super().__init__("data/skills", Skill)
+
 class RegionStorage(Storage[Region]):
     def __init__(self):
         super().__init__("data/regions", Region)
@@ -118,6 +126,7 @@ class RaceStorage(Storage[Race]):
 # ----
 # 註冊資料物件, 讓其他函式庫可以直接導入使用
 # ----
+SKILLS      = SkillStorage()
 REGIONS     = RegionStorage()
 ITEMS       = ItemStorage()
 SLOTS       = SlotStorage()

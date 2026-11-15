@@ -12,7 +12,7 @@ class Resource(BaseModel):
     wood = IntegerField(default = 0)
     stone = IntegerField(default = 0)
     food = IntegerField(default = 0)
-    metal = IntegerField(default = 0)
+    iron = IntegerField(default = 0)
     
     class Meta:
         indexes = ((('player',), True),)

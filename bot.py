@@ -7,6 +7,8 @@ from lib import button as button_handler
 from models import init_databases
 from cores.logger import logger
 
+from ui import SanctuaryView
+
 class Elin(commands.Bot):
     def __init__(self):
 
@@ -60,6 +62,8 @@ class Elin(commands.Bot):
         # register event
         select_handler.register() 
         button_handler.register()
+
+        self.add_view(SanctuaryView())
 
         synced_global = await self.tree.sync()
         logger.info(f'Synced {len(synced_global)} commands to Global')

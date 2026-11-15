@@ -1,7 +1,7 @@
 from lib.entity import building
 
-contr = building.get_contributions("modelhouse")
-print(contr)
-
-contr = building.get_contributions("sanctuary")
-print(contr)
+total = 0
+for i in range(1, 100):
+    req = building.get_required_resources(i)
+    total += req
+    print(i, req, total)

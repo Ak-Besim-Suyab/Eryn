@@ -8,6 +8,7 @@ from .select import *
 from .media_gallery import *
 
 # data schema of game 
+from .skill import *
 from .region import *
 from .item import *
 from .slot import *
@@ -27,6 +28,7 @@ __all__ = [
     'Select',
     'MediaGallery',
 
+    'Skill',
     'Region',
     'Item',
     'Slot',

@@ -1,9 +1,11 @@
 import discord
 from discord import ui
 
-from data import CONTAINERS, RESOURCES
-from lib import container, resource
+from data import CONTAINERS, LINES
+from lib import container
 from lib.entity import building
+from lib import view
+from lib import skill
 
 from models import Building
 
@@ -48,33 +50,53 @@ class SanctuaryView(ui.LayoutView):
 class SanctuaryOption(ui.Select):
     def __init__(self):
 
-        actions = {
-            ("木材（消耗：100 木材）", "wood:100"),
-            ("石材（消耗：100 石材）", "stone:100"),
-            ("食物（消耗：100 食物）", "food:100"),
-            ("木材（消耗：1000 木材）", "wood:1000"),
-            ("石材（消耗：1000 石材）", "stone:1000"),
-            ("食物（消耗：1000 食物）", "food:1000"),
-        }
+        actions = [
+            ("提供 100 份木材",   "wood:100"),
+            ("提供 500 份木材",   "wood:500"),
+            ("提供 1,000 份木材", "wood:1000"),
+
+            ("提供 100 份食物",   "food:100"),
+            ("提供 500 份食物",   "food:500"),
+            ("提供 1,000 份食物", "food:1000"),
+
+            ("提供 100 份石材",   "stone:100"),
+            ("提供 500 份石材",   "stone:500"),
+            ("提供 1,000 份石材", "stone:1000"),
+
+            ("提供 100 份鐵",   "iron:100"),
+            ("提供 500 份鐵",   "iron:500"),
+            ("提供 1,000 份鐵", "iron:1000"),
+        ]
 
         options = []
         for label, value in actions:
             options.append(discord.SelectOption(label = label, value = value))
 
         super().__init__(
-            placeholder = "選擇提供項目（可複選）", 
-            min_values = 1,
-            max_values = len(actions),
-            options = options
+            placeholder = "選擇提供項目", 
+            options = options,
+            custom_id = "sanctuary:select",
         )
 
     async def callback(self, interaction: discord.Interaction):
 
         await interaction.response.defer(ephemeral=True)
  
-        for value in self.values:
-            res, quantity = value.split(":")
-            success, msg = building.add_contribution(interaction.user.id, "sanctuary", res, int(quantity))
+        res, quantity = self.values[0].split(":")
+        success, msg = building.add_contribution(interaction.user.id, "sanctuary", res, int(quantity))
 
-        view = self.view; view.render()
-        await interaction.edit_original_response(view=view)
+        if success:
+            skill.add_experience(interaction.user.id, "faith", float(quantity))
+
+            v = self.view; v.render()
+            await interaction.edit_original_response(view=v)
+
+        if not success and msg:
+            kwargs = {
+                "player_name": interaction.user.display_name,
+                "line": LINES.get("offer_fail").random(),
+            }
+
+            v = view.create("offer_fail", **kwargs)
+
+            await interaction.followup.send(view=v, ephemeral=True)

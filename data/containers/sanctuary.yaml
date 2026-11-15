@@ -16,14 +16,14 @@ items:
       **聖所等級：** {level}
       
       **已獲得資源：**
-      - 🪵 木材：{current_wood} / {required_wood}
-      -# （目前等級：{level_wood}）
-      - 🥩 食物：{current_food} / {required_food}
-      -# （目前等級：{level_food}）
-      - 🪨 石材：{current_stone} / {required_stone}
-      -# （目前等級：{level_stone}）
-      - 🪨 金屬：{current_metal} / {required_metal}
-      -# （目前等級：{level_metal}）
+      - 🪵 木材：{current_wood:,} / {required_wood:,}
+      -# （階級：{level_wood}）
+      - 🥩 食物：{current_food} / {required_food:,}
+      -# （階級：{level_food}）
+      - 🪨 石材：{current_stone:,} / {required_stone:,}
+      -# （階級：{level_stone}）
+      - 🪨 鐵：{current_iron:,} / {required_iron:,}
+      -# （階級：{level_iron}）
   
   - type: separator
 

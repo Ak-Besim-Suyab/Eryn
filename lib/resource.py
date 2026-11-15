@@ -25,13 +25,13 @@ def give(player_id: int, resource_id: str, quantity: int) -> bool:
 
     return True
     
-def remove(player_id: int, resource_id: str, quantity: int) -> bool:
+def remove(player_id: int, resource_id: str, quantity: int) -> tuple[bool, str]:
     """
     移除玩家資源, 驗證參數與移除數量是否合法, 回傳是否成功通過資料庫更新
     """
     # 驗證參數合法性, 若不合法則直接回傳 False
     if not valid(resource_id, quantity):
-        return False
+        return False, ""
 
     # 更新資料庫, 查詢條件包含數量驗證
     with database.atomic():
@@ -43,10 +43,10 @@ def remove(player_id: int, resource_id: str, quantity: int) -> bool:
     # 沒有資料庫更新紀錄 (updated = 0) 返回 False
     if not updated: 
         logger.debug(f"玩家 {player_id} {resource_id} 不足，無法扣除 ({quantity})")
-        return False
+        return False, "你的資源已不足以扣除。"
 
     logger.debug(f"成功消耗 {player_id} {quantity} 個 {resource_id}")
-    return True
+    return True, ""
 
 def valid(resource_id: str, quantity: int) -> bool:
 

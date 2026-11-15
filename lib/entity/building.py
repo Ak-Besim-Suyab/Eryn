@@ -25,10 +25,10 @@ def add_contribution(
     with database.atomic():
 
         # 移除玩家資源, 參數合法性, 資源數量都交由資源模組處理, 這裡只負責接收是否成功
-        # NOTE: 這裡回傳的資訊是臨時的，請記得補全正確回傳資訊
-        success = resource.remove(player_id, resource_id, quantity)
+        success, msg = resource.remove(player_id, resource_id, quantity)
+
         if not success:
-            return False, "扣除資源失敗"
+            return False, msg
 
         # 增加建築物貢獻值, 需要查詢兩個外鍵, 否則會變成增加所有建築物或所有玩家指定欄位上的值
         (Contribution
@@ -40,14 +40,28 @@ def add_contribution(
     logger.debug(f"成功給予 {player_id} {quantity} 個 {resource_id} 到 {building_id}")
     return True, "成功"
 
+def get_contribution(building_id: str, resource: str) -> dict[str, int]:
+    """
+    取得單位指定資源貢獻值總和，返回字典：資源名稱為 key, 總數為 value
+    """
+    sum = fn.COALESCE(fn.SUM(getattr(Contribution, resource)), 0).alias(resource)
+
+    contribution = (Contribution
+                    .select(sum)
+                    .where(Contribution.building == building_id)
+                    .dicts()
+                    .get())
+
+    return contribution
+
 def get_contributions(building_id: str) -> dict[str, int]:
     """
     取得建築的所有資源貢獻值總和, 返回資源名稱為鍵, 總數為值的字典
     """
-    resources = ["wood", "stone", "food", "metal"]
+    resources = ["wood", "stone", "food", "iron"]
 
     sum = [
-        fn.COALESCE( fn.SUM(getattr(Contribution, resource)), 0 ).alias(resource)
+        fn.COALESCE(fn.SUM(getattr(Contribution, resource)), 0).alias(resource)
         for resource in resources]
 
     rows = (Contribution
@@ -78,6 +92,9 @@ def get_required_resources(level: int,
     scaling = ceil - (ceil - init) * (multiplier ** (level - 1))
 
     return round(base * scaling / 10) * 10
+
+def get_resource_level(build_id: str, resource: str) -> int:
+    pass
 
 # 因為更改了資源總量對於等級的計算模式，所以這個函數不再使用了，之後要更換成建築物本體的經驗值模式或刪除
 def can_upgrade(current: dict, required: dict) -> bool:

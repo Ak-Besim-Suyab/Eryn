@@ -5,6 +5,7 @@ from data.schema.select import *
 from cores.database import database
 
 from .player import *
+from .skill import *
 from .inventory import *
 from .item_instance import *
 from .item_affix import *
@@ -18,6 +19,7 @@ def init_databases():
     with database:
         database.create_tables([
             Player, 
+            Skill,
             Inventory,
             ItemInstance,
             ItemAffix,

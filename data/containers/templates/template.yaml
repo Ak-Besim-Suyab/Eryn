@@ -7,7 +7,7 @@
 #   ::: accessory type: thumbnail - 對應 ui.Thumbnail 元件, media 為縮圖連結 (必須填寫) 
 #
 
-accent_color: 0 # 視圖左邊邊框的顏色, 預設為 0 (不顯示)
+accent_color: null # 視圖左邊邊框的顏色, 預設為 None (不顯示)
 
 items: # 元件清單
 

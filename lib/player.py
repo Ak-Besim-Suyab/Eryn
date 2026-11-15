@@ -10,6 +10,14 @@ from data import RESOURCES, LOOT_TABLES, ITEMS
 from data.schema.type import ItemType
 from data.schema import Item
 
+def get_required_exp(level: int) -> float:
+
+    base = 100
+    exponent = 1.5
+    addition = 20
+
+    return float(base * (level ** exponent) + level * addition)
+
 def get(player_id: int) -> Player:
     player, _ = Player.get_or_create(id=player_id)
     return player
