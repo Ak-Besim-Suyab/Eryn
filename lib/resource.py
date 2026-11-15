@@ -27,7 +27,7 @@ def give(player_id: int, resource_id: str, quantity: int) -> bool:
     
 def remove(player_id: int, resource_id: str, quantity: int) -> bool:
     """
-    移除玩家指定資源, 回傳是否成功通過資料庫更新
+    移除玩家資源, 驗證參數與移除數量是否合法, 回傳是否成功通過資料庫更新
     """
     # 驗證參數合法性, 若不合法則直接回傳 False
     if not valid(resource_id, quantity):

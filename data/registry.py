@@ -12,7 +12,6 @@ from data.schema import (
     Item, 
     Slot,
     Resource, 
-    Building, 
     LootTable, 
     Line,
     Race,
@@ -103,10 +102,6 @@ class RoleStorage(Storage[Role]):
     # 例如: 找查特定分類時, 填入 (category = "specific_category"), 找查特定標籤時, 填入 (tag = "specific_tag")
     def find(self, **filters) -> list[Role]:
         return [deepcopy(data) for data in self._storage.values() if all(getattr(data, key) == value for key, value in filters.items())]
-
-class BuildingStorage(Storage[Building]):
-    def __init__(self):
-        super().__init__("data/buildings", Building)
     
 class LootTableStorage(Storage[LootTable]):
     def __init__(self):
@@ -129,7 +124,6 @@ SLOTS       = SlotStorage()
 RESOURCES   = ResourceStorage()
 CONTAINERS  = ContainerStorage()
 ROLES       = RoleStorage()
-BUILDINGS   = BuildingStorage()
 LOOT_TABLES = LootTableStorage()
 LINES       = LineStorage()
 RACES       = RaceStorage()

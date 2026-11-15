@@ -19,6 +19,12 @@ class UnitTestCog(commands.Cog):
 
     @commands.command()
     @commands.is_owner()
+    async def sanctuary(self, ctx: commands.Context):
+        v = ui.SanctuaryView()
+        await ctx.send(view=v)
+
+    @commands.command()
+    @commands.is_owner()
     async def line(self, ctx: commands.Context):
 
         content = "您目前位於**避風港**，選擇前往**北方森林**將會累積 **12** 回合，確定要前往嗎？"

@@ -1,5 +1,3 @@
-from data import BUILDINGS
-
 from peewee import fn
 
 from cores.database import database
@@ -7,90 +5,102 @@ from cores.logger import logger
 
 from models import Building
 from models import Contribution
-from models import Resource
 
 from lib import resource
 
 def add_contribution(
-        player_id: int,
-        building_id: str,
-        resource_id: str,
-        quantity: int) -> tuple:
-
-    """
-    增加建築的資源貢獻
-    """
+        player_id: int, 
+        building_id: str, 
+        resource_id: str, 
+        quantity: int) -> tuple[bool, str]:
     
+    """
+    增加建築的資源貢獻同時移除玩家資源, 返回是否成功與訊息
+    """
+
+    # 確保貢獻與建築物資料存在
     Building.get_or_create(id=building_id)
+    Contribution.get_or_create(building=building_id, player=player_id)
 
     with database.atomic():
 
-        contribution, _ = Contribution.get_or_create(building=building_id, player=player_id)
-
-        # 檢查資源類別是否存在
-        if not hasattr(contribution, resource_id):
-            raise ValueError(f"錯誤，未知的資源 {resource_id}")
-
-        res, _ = Resource.get_or_create(player=player_id)
-
-        # 檢查玩家資源數量
-        if getattr(res, resource) < quantity:
-            return False, "資源不足"
-        
-        # 移除玩家資源數量
+        # 移除玩家資源, 參數合法性, 資源數量都交由資源模組處理, 這裡只負責接收是否成功
         # NOTE: 這裡回傳的資訊是臨時的，請記得補全正確回傳資訊
         success = resource.remove(player_id, resource_id, quantity)
         if not success:
-            return False, "扣除資源時發生錯誤"
+            return False, "扣除資源失敗"
 
-        # 增加建築物貢獻值
+        # 增加建築物貢獻值, 需要查詢兩個外鍵, 否則會變成增加所有建築物或所有玩家指定欄位上的值
         (Contribution
-            .update(**{resource: getattr(Contribution, resource) + quantity})
-            .where(Contribution.id == contribution.id)
+            .update(**{resource_id: getattr(Contribution, resource_id) + quantity})
+            .where(Contribution.building == building_id)
+            .where(Contribution.player   == player_id)
             .execute())
 
-        logger.debug(f"成功給予 {player_id} {quantity} 個 {resource} 到 {building_id}")
-
+    logger.debug(f"成功給予 {player_id} {quantity} 個 {resource_id} 到 {building_id}")
     return True, "成功"
 
-def get_building_contributions(building_id: str) -> dict[str, int]:
+def get_contributions(building_id: str) -> dict[str, int]:
     """
-    取得指定建築的所有資源貢獻值總和
+    取得建築的所有資源貢獻值總和, 返回資源名稱為鍵, 總數為值的字典
     """
-    resources = ["wood", "stone", "food"]
+    resources = ["wood", "stone", "food", "metal"]
 
     sum = [
         fn.COALESCE( fn.SUM(getattr(Contribution, resource)), 0 ).alias(resource)
-        for resource in resources
-    ]
+        for resource in resources]
 
     rows = (Contribution
         .select(*sum)
         .where(Contribution.building == building_id)
         .dicts()
-        .get()
-    )
+        .get())
 
     return rows
 
-def can_upgrade(current_resources: dict, required_resources: dict) -> bool:
-    return all(current_resources.get(resource, 0) >= required for resource, required in required_resources.items())
+def get_required_resources(level: int,
+                           base: int = 1350,
+                           init: float = 2.0,
+                           ceil: float = 4.0,
+                           multiplier: float = 0.95) -> int:
+
+    """
+    資源數量預設計算公式：
+    scaling = ceil - (ceil - init) * (multiplier ** (level - 1))
+
+    .. level:: 為傳入值, 為乘區指數
+    .. base:: 基礎值, 受倍率公式影響後產出最終值
+    .. init:: 初始倍率, 代指預期天數, 倍率公式會嘗試將此值與最大倍率得差值, 並使差值逼近於 0
+    .. ceil:: 最大倍率, 代指預期天數, 倍率公式的結果會逼近此值, 但不會超過
+    .. multiplier:: 乘區, 預設小於 1, 以等級為指數, 等級越大時將會逼近於 0
+    """
+
+    scaling = ceil - (ceil - init) * (multiplier ** (level - 1))
+
+    return round(base * scaling / 10) * 10
+
+# 因為更改了資源總量對於等級的計算模式，所以這個函數不再使用了，之後要更換成建築物本體的經驗值模式或刪除
+def can_upgrade(current: dict, required: dict) -> bool:
+    """
+    判定是否升級, 需要傳入當前資料與條件資料的字典, 返回是否完全符合
+    """
+    return all(current.get(resource, 0) >= quantity for resource, quantity in required.items())
 
 def upgrade(building_id: str) -> tuple[bool, int]:
-    """ 嘗試升級建築，返回 `upgraded: bool` 表示升級與否和 `level: int` 表示當前等級
+    """ 
+    升級建築，返回`upgraded: bool`表示升級與否和`level: int`表示當前等級
     """
-    data = BUILDINGS.get(building_id)
-
     upgrade = False
     with database.atomic():
 
         building: Building
         building, _ = Building.get_or_create(id=building_id)
 
-        current = get_building_contributions(building_id)
+        current = get_contributions(building_id)
 
         while True:
-            required = data.get_leveling_conditions(building.level)
+            # NOTE: 這裡移除了原本的函數，要改
+            required = 0
             # check if max level.
             if required is None:
                 break

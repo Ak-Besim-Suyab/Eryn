@@ -2,7 +2,6 @@
 """
 # data schema of ui components
 from .action_row import *
-from .building import *
 from .button import *
 from .container import *
 from .select import *
@@ -20,7 +19,6 @@ from .race import *
 
 __all__ = [
     'ActionRow',
-    'Building',
     'Button',
     'Container',
     'Text',

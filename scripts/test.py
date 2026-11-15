@@ -1,4 +1,7 @@
-from lib import resource
+from lib.entity import building
 
-success = resource.remove(1, "wood", 500)
-print(success)
+contr = building.get_contributions("modelhouse")
+print(contr)
+
+contr = building.get_contributions("sanctuary")
+print(contr)

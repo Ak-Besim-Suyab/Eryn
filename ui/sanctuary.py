@@ -1,7 +1,7 @@
 import discord
 from discord import ui
 
-from data import CONTAINERS, RESOURCES, BUILDINGS
+from data import CONTAINERS, RESOURCES
 from lib import container, resource
 from lib.entity import building
 
@@ -16,28 +16,30 @@ class SanctuaryView(ui.LayoutView):
 
     def render(self):
 
-        data = BUILDINGS.get(self.name)
-        if not data:
-            raise ValueError(f"找不到建築物資料: {self.name}")
-
         build: Building
         build, _ = Building.get_or_create(id=self.name)
 
-        level_conditions = data.get_leveling_conditions(build.level)
+        contributions = building.get_contributions(self.name)
 
-        conditions = {
-            "level": build.level,
-            "required_wood": level_conditions["wood"],
-            "required_stone": level_conditions["stone"],
-            "required_food": level_conditions["food"],
-        }
+        kwargs = {"level": build.level}
 
-        contributions = building.get_building_contributions(self.name)
+        for res, current in contributions.items():
+            level = 1
+            required = 0
+            while True:
+                required += building.get_required_resources(level=level)
+                if required >= current:
+                    break
+                level += 1
 
+            kwargs[f"level_{res}"] = level
+            kwargs[f"current_{res}"] = current
+            kwargs[f"required_{res}"] = required
+            
         action_row = ui.ActionRow()
         action_row.add_item(SanctuaryOption())
 
-        con = container.build(self.data, **contributions, **conditions)
+        con = container.build(self.data, **contributions, **kwargs)
         con.add_item(action_row)
 
         self.clear_items()
@@ -47,9 +49,12 @@ class SanctuaryOption(ui.Select):
     def __init__(self):
 
         actions = {
-            ("木材（消耗：100 木材）", "wood"),
-            ("石材（消耗：100 石材）", "stone"),
-            ("食物（消耗：100 食物）", "food"),
+            ("木材（消耗：100 木材）", "wood:100"),
+            ("石材（消耗：100 石材）", "stone:100"),
+            ("食物（消耗：100 食物）", "food:100"),
+            ("木材（消耗：1000 木材）", "wood:1000"),
+            ("石材（消耗：1000 石材）", "stone:1000"),
+            ("食物（消耗：1000 食物）", "food:1000"),
         }
 
         options = []
@@ -65,26 +70,11 @@ class SanctuaryOption(ui.Select):
 
     async def callback(self, interaction: discord.Interaction):
 
-        await interaction.response.defer(ephemeral = True)
+        await interaction.response.defer(ephemeral=True)
  
-        lines = ["已捐助資源："]
         for value in self.values:
-            res = RESOURCES.get(value)
-            success = resource.remove(interaction.user.id, value, 100)
-            if not success:
-                continue
+            res, quantity = value.split(":")
+            success, msg = building.add_contribution(interaction.user.id, "sanctuary", res, int(quantity))
 
-            upgraded, level = building.add_contribution(interaction.user.id, "sanctuary", value, 100)
-
-            lines.append(f"- {res.icon}{res.name}")
-
-        view: SanctuaryView
-        view = self.view
-        
-        view.render()
-
+        view = self.view; view.render()
         await interaction.edit_original_response(view=view)
-        await interaction.followup.send("\n".join(lines))
-
-        if upgraded:
-            await interaction.followup.send(f"聖所提升到 {level} 級！")

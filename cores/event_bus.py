@@ -2,9 +2,13 @@
 這個類別是全域的事件發布、訂閱總線
 其他類別會實作打包資料的事件 (event) 並發布 (publish) 至感興趣的監聽者 (listener)
 """
+from __future__ import annotations
+
 import inspect
-from typing import Callable
-from data.schema.event import Event
+from typing import TYPE_CHECKING, Callable
+
+if TYPE_CHECKING:
+    from data.schema.event import Event
 
 __all__ = ["subscribe", "publish"]
 

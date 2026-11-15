@@ -15,10 +15,15 @@ items:
 
       **聖所等級：** {level}
       
-      **已獲得物資：**
-      - 🪵 木材：{wood} / {required_wood}
-      - 🪨 石材：{stone} / {required_stone}
-      - 🥩 食物：{food} / {required_food}
+      **已獲得資源：**
+      - 🪵 木材：{current_wood} / {required_wood}
+      -# （目前等級：{level_wood}）
+      - 🥩 食物：{current_food} / {required_food}
+      -# （目前等級：{level_food}）
+      - 🪨 石材：{current_stone} / {required_stone}
+      -# （目前等級：{level_stone}）
+      - 🪨 金屬：{current_metal} / {required_metal}
+      -# （目前等級：{level_metal}）
   
   - type: separator
 
