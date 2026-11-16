@@ -1,0 +1,4 @@
+id: mine
+entries:
+  - {"type": "resource", "id": "stone", "weight": 200, "min": 1, "max": 2}
+  - {"type": "resource", "id": "iron", "weight": 100, "min": 1, "max": 1}

@@ -4,12 +4,14 @@ from cores import logger
 from models import Player
 from models import Resource
 
+from data import RESOURCES
+
 def give(player_id: int, resource_id: str, quantity: int) -> bool:
     """
     給予玩家指定資源, 回傳是否成功通過資料庫更新
     """
     # 驗證參數合法性, 若不合法則直接回傳 False
-    if not valid(resource_id, quantity):
+    if not is_valid(resource_id, quantity):
         return False
 
     Player.get_or_create(id = player_id)
@@ -30,7 +32,7 @@ def remove(player_id: int, resource_id: str, quantity: int) -> tuple[bool, str]:
     移除玩家資源, 驗證參數與移除數量是否合法, 回傳是否成功通過資料庫更新
     """
     # 驗證參數合法性, 若不合法則直接回傳 False
-    if not valid(resource_id, quantity):
+    if not is_valid(resource_id, quantity):
         return False, ""
 
     # 更新資料庫, 查詢條件包含數量驗證
@@ -48,15 +50,19 @@ def remove(player_id: int, resource_id: str, quantity: int) -> tuple[bool, str]:
     logger.debug(f"成功消耗 {player_id} {quantity} 個 {resource_id}")
     return True, ""
 
-def valid(resource_id: str, quantity: int) -> bool:
-
-    # 檢查資源是否為空, 或不存在於資料庫欄位
-    if not resource_id or resource_id not in Resource._meta.fields:
+def is_valid(resource_id: str, quantity: int = 0) -> bool:
+    """
+    驗證資源參數是否合法
+    """
+    if resource_id not in RESOURCES:
         logger.warning(f"出現未定義的資源: {resource_id}")
         return False
 
-    # 檢查資源數量是否大於零
-    if quantity <= 0:
+    if resource_id not in Resource._meta.fields:
+        logger.warning(f"出現不符合資料庫欄位的資源: {resource_id}")
+        return False
+
+    if quantity < 0:
         logger.warning(f"變更的資源數量必須大於零，傳入值為: {quantity}")
         return False
 

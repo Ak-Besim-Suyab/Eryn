@@ -40,17 +40,20 @@ def add_contribution(
     logger.debug(f"成功給予 {player_id} {quantity} 個 {resource_id} 到 {building_id}")
     return True, "成功"
 
-def get_contribution(building_id: str, resource: str) -> dict[str, int]:
+def get_contribution(building_id: str, res: str) -> int:
     """
     取得單位指定資源貢獻值總和，返回字典：資源名稱為 key, 總數為 value
     """
-    sum = fn.COALESCE(fn.SUM(getattr(Contribution, resource)), 0).alias(resource)
+
+    if not resource.is_valid(res):
+        raise ValueError
+
+    column = getattr(Contribution, res)
 
     contribution = (Contribution
-                    .select(sum)
+                    .select(fn.COALESCE(fn.SUM(column), 0))
                     .where(Contribution.building == building_id)
-                    .dicts()
-                    .get())
+                    .scalar())
 
     return contribution
 
@@ -72,71 +75,93 @@ def get_contributions(building_id: str) -> dict[str, int]:
 
     return rows
 
-def get_required_resources(level: int,
-                           base: int = 1350,
-                           init: float = 2.0,
-                           ceil: float = 4.0,
-                           multiplier: float = 0.95) -> int:
+def add_experience(building_id: str, amount: float):
 
+    if amount < 0:
+        raise ValueError
+
+    updated = (Building
+               .update(experience = Building.experience + amount)
+               .where(Building.id == building_id)
+               .execute())
+
+    if updated:
+        upgrade(building_id)
+
+        logger.info(f"已為 {building_id} 增加 {amount} 點經驗值")
+
+def get_experience(building_id: str) -> float:
+    return round(Building.select(Building.experience).where(Building.id == building_id).scalar(), 1)
+
+def get_experience_requirement(level: int, 
+                               base: int = 1000, 
+                               exponent: float = 1.225, 
+                               addition: int = 50) -> float:
     """
-    資源數量預設計算公式：
-    scaling = ceil - (ceil - init) * (multiplier ** (level - 1))
-
-    .. level:: 為傳入值, 為乘區指數
-    .. base:: 基礎值, 受倍率公式影響後產出最終值
-    .. init:: 初始倍率, 代指預期天數, 倍率公式會嘗試將此值與最大倍率得差值, 並使差值逼近於 0
-    .. ceil:: 最大倍率, 代指預期天數, 倍率公式的結果會逼近此值, 但不會超過
-    .. multiplier:: 乘區, 預設小於 1, 以等級為指數, 等級越大時將會逼近於 0
+    返回單位升級所需要的`experience`經驗值
     """
+    
+    return round(base * (level ** exponent) + level * addition, 1)
 
-    scaling = ceil - (ceil - init) * (multiplier ** (level - 1))
-
-    return round(base * scaling / 10) * 10
-
-def get_resource_level(build_id: str, resource: str) -> int:
-    pass
-
-# 因為更改了資源總量對於等級的計算模式，所以這個函數不再使用了，之後要更換成建築物本體的經驗值模式或刪除
-def can_upgrade(current: dict, required: dict) -> bool:
+def get_reqrsc(level: int, 
+               base: int = 1350, 
+               exponent: float = 1.15) -> float:
     """
-    判定是否升級, 需要傳入當前資料與條件資料的字典, 返回是否完全符合
+    返回單位資源升級所需的`contrubution`貢獻值總量
     """
-    return all(current.get(resource, 0) >= quantity for resource, quantity in required.items())
+    
+    return round((base * level ** exponent) / 10) * 10
 
+def get_rlevel(build_id: str, resource: str) -> int:
+    current = get_contribution(build_id, resource)
+    level = 1
+    
+    while True:
+        required = get_reqrsc(level)
+        if current >= required:
+            level += 1
+        else:
+            break
+
+    return level
+
+def get_level(building_id: str) -> int:
+    return Building.select(Building.level).where(Building.id == building_id).scalar()
+        
 def upgrade(building_id: str) -> tuple[bool, int]:
     """ 
     升級建築，返回`upgraded: bool`表示升級與否和`level: int`表示當前等級
     """
     upgrade = False
     with database.atomic():
-
-        building: Building
-        building, _ = Building.get_or_create(id=building_id)
-
-        current = get_contributions(building_id)
-
         while True:
-            # NOTE: 這裡移除了原本的函數，要改
-            required = 0
-            # check if max level.
-            if required is None:
+
+            # 每個循環重新獲取資料庫，避免其他來源的變更或本次更新後造成未同步問題
+            building: Building
+            building, _ = Building.get_or_create(id=building_id)
+
+            # 每個循環重新獲取升級所需經驗
+            require = get_experience_requirement(building.level)
+            current = get_experience(building_id)
+
+            # 檢查是否滿級或經驗值是否符合升級條件
+            if require is None or current < require:
                 break
 
-            # check if enough resource.
-            if not can_upgrade(current, required):
-                break
-
+            # 更新建築物等級
             updated = (Building
                 .update(level=Building.level + 1)
-                .where(Building.id == building_id, Building.level == building.level)
+                .where(Building.id == building_id)
+                .where(Building.level == building.level)
                 .execute()
             )
 
-            # check if upgrade success, prevent race condition.
+            # 檢查是否成功更新, 避免競讀發生
             if not updated:
                 break
 
-            building.level += 1
             upgrade = True
+
+            logger.info(f"單位 {building_id} 升級成功，現在等級為 {building.level}")
 
     return upgrade, building.level

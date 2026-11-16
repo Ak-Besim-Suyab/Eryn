@@ -5,4 +5,4 @@ class Building(BaseModel):
     id = TextField(primary_key=True, unique=True)
     
     level = IntegerField(default=1)
-    experience = IntegerField(default=0)
+    experience = FloatField(default=0.0)

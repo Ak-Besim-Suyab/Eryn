@@ -23,20 +23,27 @@ class SanctuaryView(ui.LayoutView):
 
         contributions = building.get_contributions(self.name)
 
-        kwargs = {"level": build.level}
+        kwargs = {
+            "level": build.level
+        }
 
         for res, current in contributions.items():
-            level = 1
-            required = 0
-            while True:
-                required += building.get_required_resources(level=level)
-                if required >= current:
-                    break
-                level += 1
 
-            kwargs[f"level_{res}"] = level
+            rlevel = building.get_rlevel(self.name, res)
+
+            kwargs[f"level_{res}"] = rlevel
             kwargs[f"current_{res}"] = current
-            kwargs[f"required_{res}"] = required
+            kwargs[f"required_{res}"] = building.get_reqrsc(level=rlevel)
+
+            match res:
+                case "food":
+                    kwargs[f"effect_{res}"] = rlevel * 2
+                case "wood":
+                    kwargs[f"effect_{res}"] = rlevel * 2
+                case "stone":
+                    kwargs[f"effect_{res}"] = rlevel * 1.5
+                case "iron":
+                    kwargs[f"effect_{res}"] = rlevel * 1
             
         action_row = ui.ActionRow()
         action_row.add_item(SanctuaryOption())
@@ -51,21 +58,21 @@ class SanctuaryOption(ui.Select):
     def __init__(self):
 
         actions = [
-            ("提供 100 份木材",   "wood:100"),
-            ("提供 500 份木材",   "wood:500"),
-            ("提供 1,000 份木材", "wood:1000"),
+            ("🥩提供 100 份食物",   "food:100"),
+            ("🥩提供 500 份食物",   "food:500"),
+            ("🥩提供 1,000 份食物", "food:1000"),
 
-            ("提供 100 份食物",   "food:100"),
-            ("提供 500 份食物",   "food:500"),
-            ("提供 1,000 份食物", "food:1000"),
+            ("🪵提供 100 份木材",   "wood:100"),
+            ("🪵提供 500 份木材",   "wood:500"),
+            ("🪵提供 1,000 份木材", "wood:1000"),
 
-            ("提供 100 份石材",   "stone:100"),
-            ("提供 500 份石材",   "stone:500"),
-            ("提供 1,000 份石材", "stone:1000"),
+            ("🪨提供 100 份石材",   "stone:100"),
+            ("🪨提供 500 份石材",   "stone:500"),
+            ("🪨提供 1,000 份石材", "stone:1000"),
 
-            ("提供 100 份鐵",   "iron:100"),
-            ("提供 500 份鐵",   "iron:500"),
-            ("提供 1,000 份鐵", "iron:1000"),
+            ("🪨提供 100 份鐵",   "iron:100"),
+            ("🪨提供 500 份鐵",   "iron:500"),
+            ("🪨提供 1,000 份鐵", "iron:1000"),
         ]
 
         options = []
@@ -86,6 +93,7 @@ class SanctuaryOption(ui.Select):
         success, msg = building.add_contribution(interaction.user.id, "sanctuary", res, int(quantity))
 
         if success:
+            building.add_experience("sanctuary", float(quantity))
             skill.add_experience(interaction.user.id, "faith", float(quantity))
 
             v = self.view; v.render()

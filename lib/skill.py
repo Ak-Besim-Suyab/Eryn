@@ -4,6 +4,9 @@ def get(player: int, name: str) -> Skill:
     skill, _ = Skill.get_or_create(player=player, name=name)
     return skill
 
+def get_requirement(level: int):
+    pass
+
 def add_experience(player: int, name: str, amount: float):
     """
     增加玩家技能經驗, `player`為玩家`id`,`name`為技能名稱,`amount`為要增加的數量

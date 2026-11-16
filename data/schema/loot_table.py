@@ -20,7 +20,7 @@ class LootTable:
 
     def roll(self, times: int = 1) -> Counter:
         """
-        抽取戰利品表, 返回一個 Counter 物件, key 為 tuple[item_type, item_id], value 為 quantity
+        抽取戰利品表, 將所有抽取次數存入 Counter 物件並返回, key 為 tuple[item_type, item_id], value 為 quantity
         """
         rewards = Counter()
         for _ in range(times):

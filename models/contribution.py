@@ -8,9 +8,9 @@ class Contribution(BaseModel):
     building = ForeignKeyField(Building, backref='contributions', on_delete='CASCADE')
     player = ForeignKeyField(Player, backref='contributions', on_delete='CASCADE')
 
+    food = IntegerField(default=0)
     wood = IntegerField(default=0)
     stone = IntegerField(default=0)
-    food = IntegerField(default=0)
     iron = IntegerField(default=0)
 
     class Meta:

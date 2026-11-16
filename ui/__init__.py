@@ -2,4 +2,4 @@ from .view import *
 
 from .sanctuary import SanctuaryView
 
-from .region import *
+from .world_map import *

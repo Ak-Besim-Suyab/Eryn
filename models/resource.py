@@ -9,9 +9,9 @@ class Resource(BaseModel):
 
     player = ForeignKeyField(Player, backref = 'resource', unique = True, on_delete = 'CASCADE')
 
+    food = IntegerField(default = 0)
     wood = IntegerField(default = 0)
     stone = IntegerField(default = 0)
-    food = IntegerField(default = 0)
     iron = IntegerField(default = 0)
     
     class Meta:

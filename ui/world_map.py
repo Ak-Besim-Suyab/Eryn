@@ -2,7 +2,24 @@ import discord
 from discord import ui
 
 from data import REGIONS
-from lib import player, region
+from data import CONTAINERS
+
+from lib import player
+from lib import region
+from lib import container
+
+class WorldMap(ui.LayoutView):
+    def __init__(self):
+        super().__init__(timeout = None)
+
+        self.name = "world_map"
+
+        _select = ui.ActionRow(RegionSelect())
+        _container = (container
+                      .build(CONTAINERS.get("world_map"))
+                      .add_item(_select))
+
+        self.add_item(_container)
 
 class RegionConfirmView(ui.LayoutView):
     def __init__(self, user: discord.abc.User, destination: str):

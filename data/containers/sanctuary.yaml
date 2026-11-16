@@ -8,22 +8,22 @@ items:
 
   - type: text
     content: |
-      ## 聖所
-      > *這裡是位於城鎮中央的教堂，無數信徒正在這裡祈禱，同時也有無數難民在等待援助。*
+      ## 聖所（Lv. {level}）
+      > *位於城鎮中心的教堂，無數信徒正在這裡祈禱，同時也有無數苦難者在等待援助。*
 
-      - 你可以在這裡提供**物資**以升級聖所。
+      - 旅行者可以在這裡提供**資源**以升級聖所，並強化相應效果
+      - 所有旅行者都可以獲得來自聖所的效果
 
-      **聖所等級：** {level}
-      
       **已獲得資源：**
+      - 🥩 食物：{current_food:,} / {required_food:,}
+      -# （階級 {level_food}）發送訊息獲得的經驗值增加 {effect_food:,}%
+      -# 　　
       - 🪵 木材：{current_wood:,} / {required_wood:,}
-      -# （階級：{level_wood}）
-      - 🥩 食物：{current_food} / {required_food:,}
-      -# （階級：{level_food}）
+      -# （階級 {level_wood}）發送表情符號獲得的經驗值增加 {effect_wood:,}%
       - 🪨 石材：{current_stone:,} / {required_stone:,}
-      -# （階級：{level_stone}）
+      -# （階級 {level_stone}）語音頻道累積的經驗值增加 {effect_stone:,}%
       - 🪨 鐵：{current_iron:,} / {required_iron:,}
-      -# （階級：{level_iron}）
+      -# （階級 {level_iron}）探索獲得的經驗值增加 {effect_iron:,}%
   
   - type: separator
 
