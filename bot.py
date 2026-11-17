@@ -8,6 +8,7 @@ from models import init_databases
 from cores.logger import logger
 
 from ui import SanctuaryView
+from ui import WorldMap
 
 class Elin(commands.Bot):
     def __init__(self):
@@ -64,6 +65,7 @@ class Elin(commands.Bot):
         button_handler.register()
 
         self.add_view(SanctuaryView())
+        self.add_view(WorldMap())
 
         synced_global = await self.tree.sync()
         logger.info(f'Synced {len(synced_global)} commands to Global')

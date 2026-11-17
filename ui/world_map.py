@@ -7,6 +7,9 @@ from data import CONTAINERS
 from lib import player
 from lib import region
 from lib import container
+from lib import view
+
+from ui.buttons import StatButton
 
 class WorldMap(ui.LayoutView):
     def __init__(self):
@@ -14,12 +17,14 @@ class WorldMap(ui.LayoutView):
 
         self.name = "world_map"
 
-        _select = ui.ActionRow(RegionSelect())
+        _select = ui.ActionRow(WorldMapSelect())
         _container = (container
                       .build(CONTAINERS.get("world_map"))
                       .add_item(_select))
 
         self.add_item(_container)
+
+        self.add_item(ui.ActionRow(StatButton()))
 
 class RegionConfirmView(ui.LayoutView):
     def __init__(self, user: discord.abc.User, destination: str):
@@ -38,11 +43,19 @@ class RegionConfirmView(ui.LayoutView):
 
         self.add_item(container)
 
-class RegionSelect(ui.Select):
+        confirm_btn = ui.Button(label="確定", style=discord.ButtonStyle.primary)
+
+        self.add_item(ui.ActionRow(confirm_btn))
+
+class WorldMapSelect(ui.Select):
     def __init__(self):
 
         # 選項列表, 修改列表請調整此參數
-        regions = {"port_norse", "boreal_forest", "mine"}
+        regions = [
+            "port_norse", 
+            "boreal_forest", 
+            "mine"
+        ]
 
         options = []
         for region in regions:
@@ -56,6 +69,7 @@ class RegionSelect(ui.Select):
         super().__init__(
             placeholder = "選擇要前往的地區",
             options = options,
+            custom_id = "world_map:select",
         )
 
     async def callback(self, interaction: discord.Interaction):
@@ -63,15 +77,12 @@ class RegionSelect(ui.Select):
         region = REGIONS.get(player.get_region(interaction.user.id))
 
         if region.id == self.values[0]:
-
-            container = ui.Container()
-            container.add_item(ui.TextDisplay(content = f"> *你覺得在{region.name}原地打轉還蠻有意思（無法移動，原因：選擇和所處地點相同的位置）*"))
-
-            view = ui.LayoutView(timeout = None)
-            view.add_item(container)
-
-            await interaction.response.send_message(view=view)
+            load = {
+                "player_name": interaction.user.display_name,
+                "region_name": region.name
+            }
+            await interaction.response.send_message(view=view.create("map_choose_fail", **load), ephemeral=True)
             return
 
-        await interaction.response.send_message(view=RegionConfirmView(interaction.user, self.values[0]))
+        await interaction.response.send_message(view=RegionConfirmView(interaction.user, self.values[0]), ephemeral=True)
 

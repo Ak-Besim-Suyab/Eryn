@@ -14,7 +14,7 @@ def get_required_exp(level: int) -> float:
     base = 100
     exponent = 1.5
     addition = 20
-    return float(base * (level ** exponent) + level * addition)
+    return round(base * (level ** exponent) + level * addition, 1)
 
 def get(player_id: int) -> Player:
     player, _ = Player.get_or_create(id=player_id)

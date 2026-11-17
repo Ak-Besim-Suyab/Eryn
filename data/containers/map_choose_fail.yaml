@@ -1,0 +1,3 @@
+items:
+  - {type: text, content: "## {player_name}"}
+  - {type: text, content: "你已經在{region_name}了。"}

@@ -1,6 +1,7 @@
+import discord
 from discord.ext import commands
-from discord import ui
 
+import ui
 import data
 from lib import builder
 
@@ -27,8 +28,13 @@ class AnnounceCog(commands.Cog):
                 "experience": 100
             }
         
-        view = ui.LayoutView(timeout = None).add_item(builder.build_container(container_data, **param))
+        view = discord.ui.LayoutView(timeout = None).add_item(builder.build_container(container_data, **param))
         await ctx.send(view = view)
+
+    @commands.command()
+    @commands.is_owner()
+    async def world_map(self, ctx: commands.Context):
+        await ctx.send(view = ui.WorldMap())
 
 async def setup(bot: commands.Bot):
     await bot.add_cog(AnnounceCog(bot))

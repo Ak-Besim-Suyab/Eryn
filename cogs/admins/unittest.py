@@ -26,15 +26,10 @@ class UnitTestCog(commands.Cog):
 
         content = "您目前位於**避風港**，選擇前往**北方森林**將會累積 **12** 回合，確定要前往嗎？"
 
-        c = discord.ui.Container()
-        c.add_item(discord.ui.TextDisplay(content=f"### {ctx.author.display_name}"))
-        c.add_item(discord.ui.TextDisplay(content=content))
-
+        text = discord.ui.TextDisplay(content=content)
         v = discord.ui.LayoutView()
-        v.add_item(c)
-
+        v.add_item(text)
         await ctx.send(view=v)
-
 
     @commands.command()
     @commands.is_owner()
@@ -51,11 +46,6 @@ class UnitTestCog(commands.Cog):
                 .add_item(container))
         
         await ctx.send(view = view)
-
-    @commands.command()
-    @commands.is_owner()
-    async def test(self, ctx: commands.Context):
-        await ctx.send(view = ui.WorldMap())
 
     @app_commands.command(name="測試", description="測試用指令")
     @app_commands.default_permissions(administrator=True)
