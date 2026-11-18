@@ -1,8 +1,6 @@
-#
 # Container Builder 圖片元件測試 2
-#
+accent_color: ~
 
-accent_color: 0
 items:
   - type: text
     content: |

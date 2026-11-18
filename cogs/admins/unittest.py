@@ -16,20 +16,11 @@ class UnitTestCog(commands.Cog):
 
     @commands.command()
     @commands.is_owner()
-    async def sanctuary(self, ctx: commands.Context):
-        v = ui.SanctuaryView()
-        await ctx.send(view=v)
+    async def test(self, ctx: commands.Context):
 
-    @commands.command()
-    @commands.is_owner()
-    async def line(self, ctx: commands.Context):
+        load = {"player_name": ctx.author.display_name}
 
-        content = "您目前位於**避風港**，選擇前往**北方森林**將會累積 **12** 回合，確定要前往嗎？"
-
-        text = discord.ui.TextDisplay(content=content)
-        v = discord.ui.LayoutView()
-        v.add_item(text)
-        await ctx.send(view=v)
+        await ctx.send(view=view.create("test", **load))
 
     @commands.command()
     @commands.is_owner()
@@ -47,28 +38,10 @@ class UnitTestCog(commands.Cog):
         
         await ctx.send(view = view)
 
-    @app_commands.command(name="測試", description="測試用指令")
+    @app_commands.command(name="測試", description="測試")
     @app_commands.default_permissions(administrator=True)
     async def unittest_slash(self, interaction: discord.Interaction):
-
-        await interaction.response.send_message(view=view.create("sanctuary"))
-
-        # # test if create_view function works.
-        # view = create_view("template")
-        # await interaction.response.send_message(view=view)
-
-        # # create fake param dict.
-        # param = {
-        #     "name": "Elin",
-        #     "level": 1,
-        #     "experience": 100
-        # }
-
-        # # test if function works with container object, string and param 
-        # container = ui.Container()
-        # container.add_item(ui.TextDisplay(content = "# This is Another Container Test."))
-        # view = create_view(container, "template_param", **param)
-        # await interaction.followup.send(view=view)
+        pass
 
 async def setup(bot: commands.Bot):
     await bot.add_cog(UnitTestCog(bot))

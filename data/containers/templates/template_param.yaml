@@ -1,8 +1,6 @@
-#
 # Container Builder 參數傳入測試
-#
+accent_color: ~
 
-accent_color: 0
 items:
   - type: text
     content: "## Hello, {name} !"

@@ -151,4 +151,3 @@ class QuickEquipButton(ui.Button):
         success, msg = player.equip(self.user.id, self.item_id, self.slot)
 
         await interaction.response.send_message(msg)
-

@@ -1,5 +1,3 @@
 from .view import *
-
-from .sanctuary import SanctuaryView
-
+from .sanctuary import *
 from .world_map import *

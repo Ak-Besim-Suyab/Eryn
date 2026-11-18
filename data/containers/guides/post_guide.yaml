@@ -1,4 +1,5 @@
-accent_color: 0
+accent_color: ~
+
 items:
   - type: text
     content: "## 🍹發布貼文時需要注意什麼?"

@@ -9,7 +9,7 @@ class Player(BaseModel):
     display_name = TextField(default="無名的旅人")
 
     level = IntegerField(default=1)
-    experience = IntegerField(default=0)
+    experience = FloatField(default=0.0)
 
     race = TextField(default="yemir")
 

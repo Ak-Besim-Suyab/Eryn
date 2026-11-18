@@ -39,7 +39,7 @@ async def get_information_view(interaction: discord.Interaction, member: discord
     kwargs = {
         "level": _player.level,
         "experience": _player.experience,
-        "required_experience": player.get_required_exp(_player.level),
+        "required_experience": player.get_experience_requirement(_player.level),
 
         "join_time": member.joined_at.strftime(f"於 %Y 年 %m 月 %d 日加入這裡，總共經過 {join_days} 天"),
 
@@ -83,7 +83,7 @@ def get(member: discord.Member):
     info = {
         "level": _player.level,
         "experience": _player.experience,
-        "required_experience": player.get_required_exp(_player.level),
+        "required_experience": player.get_experience_requirement(_player.level),
         "region": REGIONS.get(_player.region).name,
 
         "join_time": member.joined_at.strftime(f"於 %Y 年 %m 月 %d 日加入這裡，已經過 **{join_days}** 天"),

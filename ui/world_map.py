@@ -8,8 +8,7 @@ from lib import player
 from lib import region
 from lib import container
 from lib import view
-
-from ui.buttons import StatButton
+from lib import information
 
 class WorldMap(ui.LayoutView):
     def __init__(self):
@@ -24,9 +23,22 @@ class WorldMap(ui.LayoutView):
 
         self.add_item(_container)
 
-        self.add_item(ui.ActionRow(StatButton()))
+        info_button = ui.Button(label="查看個人狀態", style=discord.ButtonStyle.secondary)
+        info_button.callback = self.info_button
 
-class RegionConfirmView(ui.LayoutView):
+        guide_button = ui.Button(label="查看地圖說明", style=discord.ButtonStyle.secondary)
+        guide_button.callback = self.guide_button
+
+        self.add_item(ui.ActionRow(info_button, guide_button))
+
+    async def info_button(self, interaction: discord.Interaction):
+        info = information.get(interaction.user)
+        await interaction.response.send_message(view=view.create("information", **info), ephemeral=True)
+
+    async def guide_button(self, interaction: discord.Interaction):
+        await interaction.response.send_message(view=view.create("map_guide"), ephemeral=True)
+
+class WorldMapConfirm(ui.LayoutView):
     def __init__(self, user: discord.abc.User, destination: str):
         super().__init__(timeout = None)
 
@@ -84,5 +96,4 @@ class WorldMapSelect(ui.Select):
             await interaction.response.send_message(view=view.create("map_choose_fail", **load), ephemeral=True)
             return
 
-        await interaction.response.send_message(view=RegionConfirmView(interaction.user, self.values[0]), ephemeral=True)
-
+        await interaction.response.send_message(view=WorldMapConfirm(interaction.user, self.values[0]), ephemeral=True)

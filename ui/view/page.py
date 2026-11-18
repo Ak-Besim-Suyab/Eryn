@@ -12,7 +12,6 @@ class Page(ABC, ui.LayoutView):
     """
     def __init__(self, user: discord.abc.User, timeout: float | None = 180):
         super().__init__(timeout = timeout)
-
         self.user        = user
         self.page        = 1
         self.total_pages = 1

@@ -1,4 +1,5 @@
-accent_color: 0
+accent_color: ~
+
 items:
   - type: text
     content: |

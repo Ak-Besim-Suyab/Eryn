@@ -10,23 +10,35 @@ from data import RESOURCES, LOOT_TABLES, ITEMS
 from data.schema.type import ItemType
 from data.schema import Item
 
-def get_required_exp(level: int) -> float:
-    base = 100
-    exponent = 1.5
-    addition = 20
-    return round(base * (level ** exponent) + level * addition, 1)
-
 def get(player_id: int) -> Player:
+    """ 
+    取得玩家資料庫紀錄
+    """
     player, _ = Player.get_or_create(id=player_id)
     return player
 
 def get_region(player_id: int) -> str:
+    """
+    取得玩家所在地區
+    """
     player, _ = Player.get_or_create(id=player_id)
     return player.region
 
 def get_race(player_id: int):
+    """
+    取得玩家種族
+    """
     player, _ = Player.get_or_create(id=player_id)
     return player.race
+
+def get_experience_requirement(level: int) -> float:
+    """
+    取得指定等級所需經驗值
+    """
+    base = 100
+    exponent = 1.5
+    addition = 20
+    return round(base * (level ** exponent) + level * addition, 1)
 
 def equip(player_id: int, item_id: str, slot: str) -> tuple[bool, str]:
     """ 

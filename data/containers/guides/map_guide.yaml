@@ -1,0 +1,10 @@
+accent_color: ~
+
+items:
+  - type: media_gallery 
+    items:
+      - media: https://cdn.discordapp.com/attachments/1491046495812718672/1572333710341054584/guide.png
+
+  - type: text
+    content: |
+      測試

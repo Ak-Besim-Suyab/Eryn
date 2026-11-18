@@ -34,7 +34,12 @@ class AnnounceCog(commands.Cog):
     @commands.command()
     @commands.is_owner()
     async def world_map(self, ctx: commands.Context):
-        await ctx.send(view = ui.WorldMap())
+        await ctx.send(view=ui.WorldMap())
+
+    @commands.command()
+    @commands.is_owner()
+    async def sanctuary(self, ctx: commands.Context):
+        await ctx.send(view=ui.SanctuaryView())
 
 async def setup(bot: commands.Bot):
     await bot.add_cog(AnnounceCog(bot))
