@@ -1,3 +1,5 @@
-from models import Resource
+from lib import resource
 
-Resource.delete().execute()
+s = resource.give(1, "wood", 0)
+
+print(s)

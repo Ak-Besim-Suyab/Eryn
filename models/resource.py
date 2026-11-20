@@ -7,7 +7,7 @@ from models import Player
 
 class Resource(BaseModel):
 
-    player = ForeignKeyField(Player, backref = 'resource', unique = True, on_delete = 'CASCADE')
+    player = ForeignKeyField(Player, backref = 'resources', unique = True, on_delete = 'CASCADE')
 
     food = IntegerField(default = 0)
     wood = IntegerField(default = 0)

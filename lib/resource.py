@@ -18,10 +18,13 @@ def give(player_id: int, resource_id: str, quantity: int) -> bool:
     Resource.get_or_create(player = player_id)
 
     with database.atomic():
-        (Resource
-        .update(**{resource_id: getattr(Resource, resource_id) + quantity})
-        .where(Resource.player == player_id)
-        .execute())
+        updated = (Resource
+                   .update(**{resource_id: getattr(Resource, resource_id) + quantity})
+                   .where(Resource.player == player_id)
+                   .execute())
+
+        if not updated:
+            return False
 
     logger.debug(f"成功給予 {player_id} {quantity} 個 {resource_id}")
 
