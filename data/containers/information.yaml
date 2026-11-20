@@ -7,6 +7,8 @@ items:
       - 等級：{level}
       - 經驗值：{experience} / {required_experience}
       - 位置：{region}
+      ### 通貨
+      - {vin} Vin
       ### 加入時間
       - {join_time}
       ### 統計

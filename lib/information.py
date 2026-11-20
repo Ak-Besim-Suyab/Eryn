@@ -5,6 +5,7 @@ from datetime import datetime, timezone
 
 from models import Player
 from models import Statistic
+from models import Currency
 
 from data import CONTAINERS
 from data import REGIONS
@@ -18,6 +19,7 @@ async def get_information_view(interaction: discord.Interaction, member: discord
 
     _player, _ = Player.get_or_create(id = member.id)
     statistic = Statistic.get_or_create_stat(member.id)
+
 
     if not isinstance(member, discord.Member):
         return
@@ -40,6 +42,8 @@ async def get_information_view(interaction: discord.Interaction, member: discord
         "level": _player.level,
         "experience": _player.experience,
         "required_experience": player.get_experience_requirement(_player.level),
+
+        "vin": Currency.select(Currency.vin).where(Currency.player == _player.id).scalar(),
 
         "join_time": member.joined_at.strftime(f"於 %Y 年 %m 月 %d 日加入這裡，總共經過 {join_days} 天"),
 
@@ -85,6 +89,8 @@ def get(member: discord.Member):
         "experience": _player.experience,
         "required_experience": player.get_experience_requirement(_player.level),
         "region": REGIONS.get(_player.region).name,
+
+        "vin": Currency.select(Currency.vin).where(Currency.player == _player.id).scalar(),
 
         "join_time": member.joined_at.strftime(f"於 %Y 年 %m 月 %d 日加入這裡，已經過 **{join_days}** 天"),
 

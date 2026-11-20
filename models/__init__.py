@@ -10,6 +10,7 @@ from .inventory import *
 from .item_instance import *
 from .item_affix import *
 from .resource import *
+from .currency import *
 from .building import *
 from .contribution import *
 from .house import *
@@ -24,6 +25,7 @@ def init_databases():
             ItemInstance,
             ItemAffix,
             Resource, 
+            Currency,
             Building,
             Contribution,
             House, 

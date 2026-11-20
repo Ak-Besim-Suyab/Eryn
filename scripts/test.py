@@ -1,5 +1,3 @@
+from lib.system import reward
 from lib import resource
-
-s = resource.give(1, "wood", 0)
-
-print(s)
+reward.give(1, "resource", "metal", 5)

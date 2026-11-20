@@ -6,8 +6,8 @@ from data import LOOT_TABLES
 from cores import database
 from cores import logger
 
-from lib import resource
 from lib import player
+from lib.system import reward
 
 from config import TH_HAVEN
 
@@ -43,7 +43,7 @@ class LoopCog(commands.Cog):
             with database.atomic():
                 for member, roll in rewards:
                     for (item_type, item_id), quantity in roll.items():
-                        resource.give(member.id, item_id, quantity)
+                        reward.give(member.id, item_type, item_id, quantity)
 
         except Exception as e:
             logger.exception(f"語音獎勵發放失敗：{e}")
