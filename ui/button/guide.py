@@ -17,3 +17,14 @@ class MapGuideButton(discord.ui.Button):
             label="查看說明", 
             url=url
         )
+
+class BuildingGuideButton(discord.ui.Button):
+    def __init__(self):
+
+        url = "https://suyab42.notion.site/Building-41f66f39eca680f7a65dc7e2eb9b80af"
+
+        super().__init__(
+            style=discord.ButtonStyle.secondary,
+            label="查看說明", 
+            url=url
+        )

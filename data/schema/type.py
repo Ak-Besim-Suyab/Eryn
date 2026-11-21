@@ -4,3 +4,6 @@ class ItemType(StrEnum):
     LOOT = "loot"
     FOOD = "food"
     EQUIPMENT = "equipment"
+
+class ResourceName(StrEnum):
+    ...

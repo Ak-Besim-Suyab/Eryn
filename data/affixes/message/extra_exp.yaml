@@ -1,0 +1,4 @@
+attribute   : message
+stat        : experience
+operator    : increase
+description : 增加 %(percent)f % 訊息經驗值獲得 

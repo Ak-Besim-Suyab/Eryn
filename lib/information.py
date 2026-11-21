@@ -1,67 +1,44 @@
 import discord
-from discord import ui
 
 from datetime import datetime, timezone
 
 from models import Player
 from models import Statistic
-from models import Currency
 
-from data import CONTAINERS
 from data import REGIONS
+from data.enums import ResourceName, CurrencyName
 
-from lib import builder
-from lib import player
+from lib import player, resource
+from lib import currency
 
-async def get_information_view(interaction: discord.Interaction, member: discord.Member = None):
+def get_resource(user: discord.abc.User) -> dict[str, int]:
+    """
+    返回提供資源頁面使用的玩家資料字典
+    """
+    load = {}
 
-    member = interaction.user if member is None else member
+    # 取得資源
+    for res in ResourceName:
+        load.update({res: resource.get(user.id, res)})
 
-    _player, _ = Player.get_or_create(id = member.id)
-    statistic = Statistic.get_or_create_stat(member.id)
+    # 取得通貨
+    for cur in CurrencyName:
+        load.update({cur: currency.get(user.id, cur)})
 
+    # 取得玩家
+    load.update(
+        {
+            "player_name"   : user.display_name,
+            "player_avatar" : user.avatar.url,
+        }
+    )
 
-    if not isinstance(member, discord.Member):
-        return
+    return load
 
-    # 取得加入時間與經過天數
-    now = datetime.now(timezone.utc)
-    join_times = now - member.joined_at
-    join_days = join_times.days
-
-    houses = []
-
-    if not _player.houses:
-        houses.append("> *尚未擁有任何小屋*")
-    else:
-        for house in _player.houses:
-            houses.append(f"> - <#{house.id}>")
-
-    # 請留意這裡的日期轉換佔位符，大小寫會顯示不同的時間格式
-    kwargs = {
-        "level": _player.level,
-        "experience": _player.experience,
-        "required_experience": player.get_experience_requirement(_player.level),
-
-        "vin": Currency.select(Currency.vin).where(Currency.player == _player.id).scalar(),
-
-        "join_time": member.joined_at.strftime(f"於 %Y 年 %m 月 %d 日加入這裡，總共經過 {join_days} 天"),
-
-        "total_daily": statistic.total_daily,
-        "total_message": statistic.total_message,
-        "total_voice": statistic.total_voice,
-
-        "houses": "\n".join(houses),
-
-        "display_name": member.display_name,
-        "display_avator": member.avatar.url
-    }
-
-    view = ui.LayoutView(timeout = None).add_item(builder.build_container(CONTAINERS.get("information"), **kwargs))
-
-    return view
-
-def get(member: discord.Member):
+def get(member: discord.Member) -> dict:
+    """
+    返回玩家資料彙整後的字典，由於此處需要取得伺服器的加入時間，因此需要傳入`discord.Member`物件
+    """
 
     # 取得資料
     _player, _ = Player.get_or_create(id = member.id)
@@ -84,15 +61,13 @@ def get(member: discord.Member):
             houses.append(f"- <#{house.id}>")
 
     # 彙總
-    info = {
+    load = {
         "level": _player.level,
         "experience": _player.experience,
         "required_experience": player.get_experience_requirement(_player.level),
         "region": REGIONS.get(_player.region).name,
-
-        "vin": Currency.select(Currency.vin).where(Currency.player == _player.id).scalar(),
-
-        "join_time": member.joined_at.strftime(f"於 %Y 年 %m 月 %d 日加入這裡，已經過 **{join_days}** 天"),
+        
+        "join_time": member.joined_at.strftime(f"於 %Y 年 %m 月 %d 日加入這裡，已經過 **{join_days:,}** 天"),
 
         "total_daily": statistic.total_daily,
         "total_message": statistic.total_message,
@@ -101,8 +76,8 @@ def get(member: discord.Member):
 
         "houses": "\n".join(houses),
 
-        "display_name": member.display_name,
-        "display_avator": member.avatar.url
+        "player_name": member.display_name,
+        "player_avatar": member.avatar.url
     }
 
-    return info
+    return load

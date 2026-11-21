@@ -14,7 +14,7 @@ from cores import logger
 from data import CONTAINERS
 from data.schema.event import ButtonEvent
 
-from lib import builder, information, player
+from lib import builder, information, player, view
 
 from config import daily_experience
 from config import timezone
@@ -64,8 +64,8 @@ async def button_attendance_guide(event: ButtonEvent):
     await event.interaction.response.send_message(view = view, ephemeral = True)
 
 async def button_attendance_information(event: ButtonEvent):
-    view = await information.get_information_view(event.interaction)
-    await event.interaction.response.send_message(view = view, ephemeral = True)
+    info = information.get(event.interaction.user)
+    await event.interaction.response.send_message(view=view.create("information", **info), ephemeral=True)
 
 async def button_attendance_leaderboard(event: ButtonEvent):
     pass

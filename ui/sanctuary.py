@@ -7,9 +7,11 @@ from lib.entity import building
 from lib import view
 from lib import skill
 
+from ui.button import ResourceButton, BuildingGuideButton
+
 from models import Building
 
-class SanctuaryView(ui.LayoutView):
+class Sanctuary(ui.LayoutView):
     def __init__(self):
         super().__init__(timeout = None)
         self.name = "sanctuary"
@@ -46,41 +48,42 @@ class SanctuaryView(ui.LayoutView):
                     kwargs[f"effect_{res}"] = rlevel * 1
             
         action_row = ui.ActionRow()
-        action_row.add_item(SanctuaryOption())
+        action_row.add_item(SanctuarySelect())
 
         con = container.build(self.data, **contributions, **kwargs)
         con.add_item(action_row)
 
         self.clear_items()
         self.add_item(con)
+        self.add_item(ui.ActionRow(ResourceButton(), BuildingGuideButton()))
 
-class SanctuaryOption(ui.Select):
+class SanctuarySelect(ui.Select):
     def __init__(self):
 
         actions = [
-            ("🥩提供 100 份食物",   "food:100"),
-            ("🥩提供 500 份食物",   "food:500"),
-            ("🥩提供 1,000 份食物", "food:1000"),
+            ("提供 100 食物",   "food:100",  "🥩"),
+            ("提供 500 食物",   "food:500",  "🥩"),
+            ("提供 1,000 食物", "food:1000", "🥩"),
 
-            ("🪵提供 100 份木材",   "wood:100"),
-            ("🪵提供 500 份木材",   "wood:500"),
-            ("🪵提供 1,000 份木材", "wood:1000"),
+            ("提供 100 木材",   "wood:100",  "🪵"),
+            ("提供 500 木材",   "wood:500",  "🪵"),
+            ("提供 1,000 木材", "wood:1000", "🪵"),
 
-            ("🪨提供 100 份石材",   "stone:100"),
-            ("🪨提供 500 份石材",   "stone:500"),
-            ("🪨提供 1,000 份石材", "stone:1000"),
+            ("提供 100 石材",   "stone:100",  "🪨"),
+            ("提供 500 石材",   "stone:500",  "🪨"),
+            ("提供 1,000 石材", "stone:1000", "🪨"),
 
-            ("🪨提供 100 份鐵",   "iron:100"),
-            ("🪨提供 500 份鐵",   "iron:500"),
-            ("🪨提供 1,000 份鐵", "iron:1000"),
+            ("提供 100 鐵",   "iron:100",  "<:iron:1573435315522248725>"),
+            ("提供 500 鐵",   "iron:500",  "<:iron:1573435315522248725>"),
+            ("提供 1,000 鐵", "iron:1000", "<:iron:1573435315522248725>"),
         ]
 
         options = []
-        for label, value in actions:
-            options.append(discord.SelectOption(label = label, value = value))
+        for label, value, emoji in actions:
+            options.append(discord.SelectOption(label = label, value = value, emoji = emoji))
 
         super().__init__(
-            placeholder = "選擇提供項目", 
+            placeholder = "選擇要提供的材料", 
             options = options,
             custom_id = "sanctuary:select",
         )
@@ -96,8 +99,8 @@ class SanctuaryOption(ui.Select):
             building.add_experience("sanctuary", float(quantity))
             skill.add_experience(interaction.user.id, "faith", float(quantity))
 
-            v = self.view; v.render()
-            await interaction.edit_original_response(view=v)
+        v = self.view; v.render()
+        await interaction.edit_original_response(view=v)
 
         if not success and msg:
             kwargs = {

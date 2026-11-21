@@ -2,10 +2,9 @@ import discord
 from discord.ext import commands
 from discord import app_commands
 
-import ui
-
 from lib import view
 from lib.util.ansi import ANSI, wrap_ansi
+from lib import information
 
 class UnitTestCog(commands.Cog):
     """ 
@@ -17,10 +16,8 @@ class UnitTestCog(commands.Cog):
     @commands.command()
     @commands.is_owner()
     async def test(self, ctx: commands.Context):
-
-        load = {"player_name": ctx.author.display_name}
-
-        await ctx.send(view=view.create("test", **load))
+        load = information.get_resource(ctx.author)
+        await ctx.send(view=view.create("resource_inv", **load))
 
     @commands.command()
     @commands.is_owner()

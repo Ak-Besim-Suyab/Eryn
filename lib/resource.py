@@ -5,6 +5,20 @@ from models import Player
 from models import Resource
 
 from data import RESOURCES
+from data.enums import ResourceName
+
+def get(player_id: int, resource: str) -> int:
+
+    Player.get_or_create(id = player_id)
+    Resource.get_or_create(player = player_id)
+
+    if resource not in ResourceName:
+        raise ValueError(f"unknown resource name: {resource}")
+
+    return (Resource
+            .select(getattr(Resource, resource))
+            .where(Resource.player == player_id)
+            .scalar())
 
 def give(player_id: int, resource_id: str, quantity: int) -> bool:
     """
@@ -26,7 +40,7 @@ def give(player_id: int, resource_id: str, quantity: int) -> bool:
         if not updated:
             return False
 
-    logger.debug(f"成功給予 {player_id} {quantity} 個 {resource_id}")
+    logger.debug(f"成功給予 {player_id} {quantity} {resource_id}.")
 
     return True
     

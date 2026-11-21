@@ -39,7 +39,7 @@ class AnnounceCog(commands.Cog):
     @commands.command()
     @commands.is_owner()
     async def sanctuary(self, ctx: commands.Context):
-        await ctx.send(view=ui.SanctuaryView())
+        await ctx.send(view=ui.Sanctuary())
 
 async def setup(bot: commands.Bot):
     await bot.add_cog(AnnounceCog(bot))

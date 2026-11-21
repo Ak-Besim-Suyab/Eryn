@@ -12,11 +12,11 @@ from models import Inventory, ItemInstance
 from ui.view.item import ItemView
 
 from lib.inventory import get_page
-from lib.item import summary_line, sort_key
+from lib.item import summary_line
 
 from ui.view import Page
 
-class InventoryView(Page):
+class Inventory(Page):
     def __init__(self, user: discord.abc.User, tags: list[str] | None = None):
         self.tags = tags
 

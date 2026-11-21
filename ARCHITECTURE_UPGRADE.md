@@ -199,3 +199,10 @@ utils   : 工具層，負責最外部的額外運算或插入邏輯，比如裝�
 判定是否消耗資源
   ↓
 增加個人貢獻度、給予相關經驗、消耗資源
+
+### Affix 詞綴
+
+attribute : 詞綴會應用在哪個屬性，比如 attack, defense, fishing, message 
+stat      : 詞綴會應用在哪個狀態
+operator  : 詞綴的計算方式
+value     : 應用的值

@@ -7,7 +7,7 @@ from lib import button as button_handler
 from models import init_databases
 from cores.logger import logger
 
-from ui import SanctuaryView
+from ui import Sanctuary
 from ui import WorldMap
 
 class Elin(commands.Bot):
@@ -26,7 +26,7 @@ class Elin(commands.Bot):
 
         extensions = [
             # 常態指令
-            "cogs.passport",
+            "cogs.character_card",
             "cogs.inventory",
             "cogs.leaderboard",
             "cogs.loop",
@@ -64,7 +64,7 @@ class Elin(commands.Bot):
         select_handler.register() 
         button_handler.register()
 
-        self.add_view(SanctuaryView())
+        self.add_view(Sanctuary())
         self.add_view(WorldMap())
 
         synced_global = await self.tree.sync()
