@@ -2,4 +2,4 @@ id          : increase_message_experience
 scope       : message
 stat        : experience
 operator    : increase
-description : 增加 %(percent)f % 經驗值獲得
+description : 增加 %(percent)f % 訊息經驗值獲得

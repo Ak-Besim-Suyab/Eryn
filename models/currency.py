@@ -1,7 +1,4 @@
-"""
-"""
-
-from peewee import *  # pyright: ignore[reportWildcardImportFromLibrary]
+from peewee import *
 from cores.database import BaseModel
 from .player import Player
 

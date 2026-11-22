@@ -14,7 +14,7 @@ from cores import logger
 from data import CONTAINERS
 from data.schema.event import ButtonEvent
 
-from lib import builder, information, player, view
+from lib import builder, player
 
 from config import daily_experience
 from config import timezone

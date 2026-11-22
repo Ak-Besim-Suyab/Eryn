@@ -26,7 +26,7 @@ class Elin(commands.Bot):
 
         extensions = [
             # 常態指令
-            "cogs.character_card",
+            "cogs.character_tab",
             "cogs.stash",
             "cogs.leaderboard",
             "cogs.loop",

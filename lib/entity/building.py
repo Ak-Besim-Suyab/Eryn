@@ -3,10 +3,16 @@ from peewee import fn
 from cores.database import database
 from cores.logger import logger
 
+from data.enums import MaterialName
+
 from models import Building
 from models import Contribution
 
-from lib import resource
+from lib import material
+
+def get(building_id: str) -> Building:
+    building, _ = Building.get_or_create(id=building_id)
+    return building
 
 def add_contribution(
         player_id: int, 
@@ -24,8 +30,8 @@ def add_contribution(
 
     with database.atomic():
 
-        # 移除玩家資源, 參數合法性, 資源數量都交由資源模組處理, 這裡只負責接收是否成功
-        success, msg = resource.remove(player_id, resource_id, quantity)
+        # 移除玩家材料, 參數合法性, 材料數量都交由材料模組處理, 這裡只負責接收是否成功
+        success, msg = material.remove(player_id, resource_id, quantity)
 
         if not success:
             return False, msg
@@ -45,7 +51,7 @@ def get_contribution(building_id: str, res: str) -> int:
     取得單位指定資源貢獻值總和，返回字典：資源名稱為 key, 總數為 value
     """
 
-    if not resource.is_valid(res):
+    if not material.is_valid(res):
         raise ValueError
 
     column = getattr(Contribution, res)
@@ -61,17 +67,15 @@ def get_contributions(building_id: str) -> dict[str, int]:
     """
     取得建築的所有資源貢獻值總和, 返回資源名稱為鍵, 總數為值的字典
     """
-    resources = ["wood", "stone", "food", "iron"]
-
     sum = [
-        fn.COALESCE(fn.SUM(getattr(Contribution, resource)), 0).alias(resource)
-        for resource in resources]
+        fn.COALESCE(fn.SUM(getattr(Contribution, mat)), 0).alias(mat)
+        for mat in MaterialName]
 
     rows = (Contribution
-        .select(*sum)
-        .where(Contribution.building == building_id)
-        .dicts()
-        .get())
+            .select(*sum)
+            .where(Contribution.building == building_id)
+            .dicts()
+            .get())
 
     return rows
 

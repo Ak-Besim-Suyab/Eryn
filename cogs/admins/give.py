@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 
 from lib import item
-from lib import resource
+from lib import material
 
 """
 此元件用於管理物品給予或移除的指令
@@ -32,7 +32,7 @@ class GiveCog(commands.Cog):
             await ctx.send("❌ 請輸入數量")
             return
         
-        success = resource.give(member.id, rid, amount)
+        success = material.give(member.id, rid, amount)
 
         if not success:
             await ctx.send(f"❌ 給予 {member.name} {amount} 個 {rid} 失敗")

@@ -11,7 +11,7 @@ from data.schema import (
     Region,
     Item, 
     Slot,
-    Resource, 
+    Material, 
     LootTable, 
     Line,
     Race,
@@ -92,9 +92,9 @@ class SlotStorage(Storage[Slot]):
     def __init__(self):
         super().__init__("data/slots", Slot)
 
-class ResourceStorage(Storage[Resource]):
+class MaterialStorage(Storage[Material]):
     def __init__(self):
-        super().__init__("data/resources", Resource)
+        super().__init__("data/materials", Material)
 
 class ContainerStorage(Storage[Container]):
     def __init__(self):
@@ -130,7 +130,7 @@ SKILLS      = SkillStorage()
 REGIONS     = RegionStorage()
 ITEMS       = ItemStorage()
 SLOTS       = SlotStorage()
-RESOURCES   = ResourceStorage()
+MATERIALS   = MaterialStorage()
 CONTAINERS  = ContainerStorage()
 ROLES       = RoleStorage()
 LOOT_TABLES = LootTableStorage()

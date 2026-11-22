@@ -2,9 +2,7 @@ import discord
 from discord.ext import commands
 from discord import app_commands
 
-from lib import view
 from lib.util.ansi import ANSI, wrap_ansi
-from lib import information
 
 class UnitTestCog(commands.Cog):
     """ 

@@ -3,7 +3,7 @@
 """
 
 from lib import item
-from lib import resource
+from lib import material
 from lib import currency
 
 def give(player_id: int, item_type: str, reward: str, quantity: int):
@@ -13,6 +13,6 @@ def give(player_id: int, item_type: str, reward: str, quantity: int):
     
     match item_type:
         case "item": item.give(player_id, reward, quantity)
-        case "resource": resource.give(player_id, reward, quantity)
+        case "material" | "resource": material.give(player_id, reward, quantity)
         case "currency": currency.give(player_id, reward, quantity)
         case _: raise ValueError(f"unknown item type: {item_type}")

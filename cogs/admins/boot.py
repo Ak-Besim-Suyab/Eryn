@@ -14,7 +14,7 @@ class BootCog(commands.Cog):
     @commands.is_owner()
     async def reload_data(self, ctx: commands.Context):
         try:
-            RESOURCES.load()
+            MATERIALS.load()
             SKILLS.load()
             CONTAINERS.load()
             ITEMS.load()

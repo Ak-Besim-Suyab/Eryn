@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 
 @dataclass
-class Resource:
+class Material:
     id: str
     name: str
     icon: str = "📦"

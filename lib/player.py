@@ -1,28 +1,42 @@
 from cores import logger
 from cores import database
 
-from models import Player, ItemInstance, Statistic
+from models import Player, ItemInstance, Statistic, Material, Currency
 
 from lib import item as itemlib
-from lib import resource
+from lib import material
 
-from data import RESOURCES, LOOT_TABLES, ITEMS
+from data import MATERIALS, LOOT_TABLES, ITEMS
 from data.schema.type import ItemType
 from data.schema import Item
 
-def get_player(player_id: int) -> Player:
+def get(player_id: int) -> Player:
     """ 
     取得玩家資料庫紀錄
     """
-    player, _ = Player.get_or_create(id=player_id)
+    player, _ = Player.get_or_create(id = player_id)
     return player
 
 def get_statistic(player_id: int) -> Statistic:
     """
     取得玩家統計資料
     """
-    statistic = Statistic.get_or_create_stat(player_id)
+    statistic, _ = Statistic.get_or_create(player = player_id)
     return statistic
+
+def get_currency(player_id: int) -> Currency:
+    """
+    取得玩家通貨
+    """
+    currency, _ = Currency.get_or_create(player = player_id)
+    return currency
+
+def get_material(player_id: int) -> Material:
+    """
+    取得玩家材料
+    """
+    mat, _ = Material.get_or_create(player = player_id)
+    return mat
 
 def get_region(player_id: int) -> str:
     """
@@ -154,11 +168,11 @@ def open_item(player_id: int, item: Item, times: int = 1) -> tuple[bool, dict]:
     item_lines = []
     for (loot_type, loot_id), quantity in looted.items():
         match loot_type:
-            case "resource":
-                res = RESOURCES.get(loot_id)
-                resource.give(player_id, loot_id, quantity)
-                # NOTE: 這裡之後改成 description.append(resource.get_line(item_id, quantity))
-                item_lines.append(f"- {res.icon}{res.name} {quantity}")
+            case "material" | "resource":
+                mat = MATERIALS.get(loot_id)
+                material.give(player_id, loot_id, quantity)
+                # NOTE: 這裡之後改成 description.append(material.get_line(item_id, quantity))
+                item_lines.append(f"- {mat.icon}{mat.name} {quantity}")
             case _:
                 pass
 

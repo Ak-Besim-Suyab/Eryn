@@ -1,4 +1,4 @@
-from peewee import *  # pyright: ignore[reportWildcardImportFromLibrary]
+from peewee import *
 from cores.database import BaseModel
 
 class Building(BaseModel):

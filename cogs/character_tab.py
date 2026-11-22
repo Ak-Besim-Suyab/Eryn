@@ -8,8 +8,8 @@ from lib import player, region
 
 from ui.button import RESOURCE_BUTTON
 
-class CharacterCardCog(commands.Cog):
-    def __init__(self, bot):
+class CharacterTabCog(commands.Cog):
+    def __init__(self, bot: commands.Bot):
         self.bot = bot
 
     @app_commands.command(name="角色卡", description="查看角色卡，角色卡包含旅人的各項遊戲資訊與紀錄")
@@ -51,7 +51,7 @@ def character_section(member: discord.Member) -> discord.ui.Section:
         raise ValueError("member must be a discord.Member")
     
     # 取得玩家資料
-    p = player.get_player(member.id)
+    p = player.get(member.id)
     s = player.get_statistic(member.id)
 
     player_name       = member.display_name
@@ -102,4 +102,4 @@ def character_section(member: discord.Member) -> discord.ui.Section:
     return section
 
 async def setup(bot: commands.Bot):
-    await bot.add_cog(CharacterCardCog(bot))
+    await bot.add_cog(CharacterTabCog(bot))

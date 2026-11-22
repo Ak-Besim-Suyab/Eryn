@@ -13,7 +13,7 @@ from .region import *
 from .item import *
 from .slot import *
 from .role import *
-from .resource import *
+from .material import *
 from .loot_table import *
 from .line import *
 from .race import *
@@ -34,7 +34,7 @@ __all__ = [
     'Item',
     'Slot',
     'Role',
-    'Resource',
+    'Material',
     'LootTable',
     'Line',
     'Race',

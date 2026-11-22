@@ -9,7 +9,7 @@ from .skill import *
 from .inventory import *
 from .item_instance import *
 from .item_affix import *
-from .resource import *
+from .material import *
 from .currency import *
 from .building import *
 from .contribution import *
@@ -24,7 +24,7 @@ def init_databases():
             Inventory,
             ItemInstance,
             ItemAffix,
-            Resource, 
+            Material, 
             Currency,
             Building,
             Contribution,

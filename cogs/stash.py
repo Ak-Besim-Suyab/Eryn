@@ -3,7 +3,8 @@ from discord.ext import commands
 from discord import app_commands
 
 import ui
-from lib import information, view
+from data.enums import MaterialName, CurrencyName
+from lib import player
 
 class StashCog(commands.Cog):
     def __init__(self, bot: commands.Bot):
@@ -45,8 +46,50 @@ class StashCog(commands.Cog):
         await interaction.response.send_message(view=inventory, ephemeral=ephemeral)
 
     async def on_resource_tab(self, interaction: discord.Interaction, ephemeral: bool = False):
-        v = view.create("resource_tab", **information.get_resource(interaction.user))
-        await interaction.response.send_message(view=v, ephemeral=ephemeral)
+        await interaction.response.send_message(view=ResourceTabView(interaction), ephemeral=ephemeral)
+
+class ResourceTabView(discord.ui.LayoutView):
+    def __init__(self, interaction: discord.Interaction):
+        super().__init__(timeout=None)
+        
+        container = discord.ui.Container()
+        container.add_item(get_resource_tab(interaction))
+        
+        self.add_item(container)
+
+def get_resource_tab(interaction: discord.Interaction) -> discord.ui.TextDisplay:
+
+    # 取得玩家資料
+    player_name = interaction.user.display_name
+
+    # 取得通貨
+    currencies = player.get_currency(interaction.user.id)
+
+    vin = getattr(currencies, CurrencyName.VIN, 0)
+
+    # 取得材料
+    materials = player.get_material(interaction.user.id)
+
+    food  = getattr(materials, MaterialName.FOOD, 0)
+    wood  = getattr(materials, MaterialName.WOOD, 0)
+    stone = getattr(materials, MaterialName.STONE, 0)
+    iron  = getattr(materials, MaterialName.IRON, 0)
+
+    # 組裝內容
+    tab = "\n".join(
+        [
+            f"## {player_name}",
+            f"### 通貨",
+            f"<:vin:1573407096463163503> **{vin:,}**",
+            f"### 材料",
+            f"🥩 **{food:,}**",
+            f"🪵 **{wood:,}**",
+            f"🪨 **{stone:,}**",
+            f"<:iron:1573435315522248725> **{iron:,}**"
+        ]
+    )
+    
+    return discord.ui.TextDisplay(content=tab)
 
 async def setup(bot: commands.Bot):
     await bot.add_cog(StashCog(bot))
