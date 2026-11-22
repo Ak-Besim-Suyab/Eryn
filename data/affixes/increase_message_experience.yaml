@@ -1,0 +1,5 @@
+id          : increase_message_experience
+scope       : message
+stat        : experience
+operator    : increase
+description : 增加 %(percent)f % 經驗值獲得

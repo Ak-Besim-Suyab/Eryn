@@ -1,9 +1,9 @@
-from peewee import *
+"""小屋模塊, 用於紀錄成員的小屋頻道 ID"""
+
+from peewee import *  # pyright: ignore[reportWildcardImportFromLibrary]
 from cores.database import BaseModel
 
-from . import Player
-
-"""小屋模塊, 用於紀錄成員的小屋頻道 ID"""
+from .player import Player
 
 class House(BaseModel):
 

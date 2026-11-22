@@ -17,3 +17,10 @@ items:
       ### 持有小屋
       {houses}
     accessory: {type: thumbnail, media: "{player_avatar}"}
+  
+  - type: action_row
+    components:
+      - type: button
+        style: secondary
+        label: 查看資源
+        custom_id: resource_tab

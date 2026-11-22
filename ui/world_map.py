@@ -11,7 +11,7 @@ from lib import view
 from lib import information
 from lib.system import turn
 
-from ui.button import MapGuideButton
+from ui.button import MAP_GUIDE_BUTTON
 
 class WorldMap(ui.LayoutView):
     def __init__(self):
@@ -33,7 +33,7 @@ class WorldMap(ui.LayoutView):
         )
         info_button.callback = self.info_button
 
-        self.add_item(ui.ActionRow(info_button, MapGuideButton()))
+        self.add_item(ui.ActionRow(info_button, MAP_GUIDE_BUTTON))
 
     async def info_button(self, interaction: discord.Interaction):
         info = information.get(interaction.user)

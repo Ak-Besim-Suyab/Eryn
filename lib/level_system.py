@@ -15,12 +15,21 @@ from models import Player
 from models import Statistic
 
 from cores.logger import logger
+from lib.entity import building
 
 player_message_cooldowns = {}
 player_reaction_cooldowns = {}
 
 message_experience = 5
 reaction_experience = 5
+voice_experience = 1
+
+def _get_sanctuary_bonus(resource_name: str, per_level: float) -> float:
+    """
+    依據聖所指定材料的等級計算經驗加成倍率（等級 1 為 1.0，每升 1 級增加 per_level）
+    """
+    level = building.get_rlevel("sanctuary", resource_name)
+    return 1 + max(0, level - 1) * per_level
 
 def give_message_experience(member: discord.Member):
     """
@@ -37,9 +46,11 @@ def give_message_experience(member: discord.Member):
     # 更新冷卻時間戳
     player_message_cooldowns[user_id] = now
 
-    Player.add_experience(user_id, message_experience)
+    bonus = _get_sanctuary_bonus("food", 0.02)
+    total_experience = round(message_experience * bonus, 2)
+    Player.add_experience(user_id, total_experience)
 
-    logger.debug(f"給予 {member.display_name} 訊息經驗值: {message_experience} exp")
+    logger.debug(f"給予 {member.display_name} 訊息經驗值: {total_experience} exp (倍率: {bonus:.2f}x)")
 
 def give_reaction_experience(member: discord.Member):
     
@@ -54,9 +65,11 @@ def give_reaction_experience(member: discord.Member):
     # 更新冷卻時間戳
     player_reaction_cooldowns[user_id] = now
 
-    Player.add_experience(user_id, reaction_experience)
+    bonus = _get_sanctuary_bonus("wood", 0.02)
+    total_experience = round(reaction_experience * bonus, 2)
+    Player.add_experience(user_id, total_experience)
 
-    logger.debug(f"給予 {member.display_name} 反應經驗值: {reaction_experience} exp")
+    logger.debug(f"給予 {member.display_name} 反應經驗值: {total_experience} exp (倍率: {bonus:.2f}x)")
 
 def give_voice_experience(member: discord.Member):
 
@@ -72,25 +85,24 @@ def give_voice_experience(member: discord.Member):
     # 計算待在語音的時間
     elapsed_minutes = (now - timestamp) / 60
 
-    # 獎勵機制
-    # 根據待在語音的時間給予不同的經驗值，在 2 小時後有最大值
-    voice_experience = 0
-    match elapsed_minutes:
-        case minutes if minutes > 0 and minutes <= 60:
-            voice_experience = 1
-        case minutes if minutes > 60 and minutes <= 120:
-            voice_experience = 1.5
-        case minutes if minutes > 120:
-            voice_experience = 2
+    # 暫時移除 2 小時有最大值的時長分段倍率設定，先固定以每分鐘基礎經驗結算
+    # match elapsed_minutes:
+    #     case minutes if minutes > 0 and minutes <= 60:
+    #         voice_experience = 1
+    #     case minutes if minutes > 60 and minutes <= 120:
+    #         voice_experience = 1.5
+    #     case minutes if minutes > 120:
+    #         voice_experience = 2
 
-    total_experience = int(elapsed_minutes * voice_experience)
+    bonus = _get_sanctuary_bonus("stone", 0.01)
+    total_experience = round(elapsed_minutes * voice_experience * bonus, 2)
     Player.add_experience(member.id, total_experience)
 
     stats = Statistic.get_or_create_stat(member.id)
     stats.total_voice += elapsed_minutes
     stats.save()
 
-    logger.debug(f"給予 {member.display_name} 語音經驗值: {total_experience} exp, 累積時間: {elapsed_minutes:.2f} 分鐘")
+    logger.debug(f"給予 {member.display_name} 語音經驗值: {total_experience} exp (倍率: {bonus:.2f}x), 累積時間: {elapsed_minutes:.2f} 分鐘")
 
 def save_timestamp(member: discord.Member):
     Player.save_timestamp_voice(member.id)

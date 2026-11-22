@@ -1,9 +1,9 @@
-from peewee import *
-from cores.database import BaseModel, database
-
 """
 這個模塊用於定義與管理玩家的統計數據
 """
+
+from peewee import *
+from cores.database import BaseModel
 
 class Statistic(BaseModel):
 
@@ -15,6 +15,6 @@ class Statistic(BaseModel):
     total_message = IntegerField(default=0)
 
     @classmethod
-    def get_or_create_stat(cls, user_id: int) -> Statistic:
+    def get_or_create_stat(cls, user_id: int) -> "Statistic":
         stat, _ = cls.get_or_create(id=user_id)
         return stat

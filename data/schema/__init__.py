@@ -28,6 +28,7 @@ __all__ = [
     'Select',
     'MediaGallery',
 
+    'Affix',
     'Skill',
     'Region',
     'Item',

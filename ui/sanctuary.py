@@ -7,7 +7,7 @@ from lib.entity import building
 from lib import view
 from lib import skill
 
-from ui.button import ResourceButton, BuildingGuideButton
+from ui.button import RESOURCE_BUTTON, BUILDING_GUIDE_BUTTON
 
 from models import Building
 
@@ -25,7 +25,7 @@ class Sanctuary(ui.LayoutView):
 
         contributions = building.get_contributions(self.name)
 
-        kwargs = {
+        kwargs: dict = {
             "level": build.level
         }
 
@@ -55,7 +55,7 @@ class Sanctuary(ui.LayoutView):
 
         self.clear_items()
         self.add_item(con)
-        self.add_item(ui.ActionRow(ResourceButton(), BuildingGuideButton()))
+        self.add_item(ui.ActionRow(RESOURCE_BUTTON, BUILDING_GUIDE_BUTTON))
 
 class SanctuarySelect(ui.Select):
     def __init__(self):

@@ -1,9 +1,9 @@
 """該模組為道具欄位, 以道具名稱與數量進行紀錄, 這個欄位無法存取任何道具狀態
 """
 
-from peewee import *
+from peewee import *  # pyright: ignore[reportWildcardImportFromLibrary]
 from cores.database import BaseModel
-from models import Player
+from .player import Player
 
 class Inventory(BaseModel):
 

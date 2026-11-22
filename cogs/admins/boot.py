@@ -14,10 +14,11 @@ class BootCog(commands.Cog):
     @commands.is_owner()
     async def reload_data(self, ctx: commands.Context):
         try:
+            RESOURCES.load()
+            SKILLS.load()
             CONTAINERS.load()
             ITEMS.load()
             LOOT_TABLES.load()
-            RESOURCES.load()
             REGIONS.load()
             await ctx.send('✅ 咪！成功重新載入資料')
         except Exception as e:

@@ -1,9 +1,9 @@
 """該模組為資源欄位, 這個欄位用於存取所有單位資源 (木材, 石材, 食物等等)
 """
 
-from peewee import *
+from peewee import *  # pyright: ignore[reportWildcardImportFromLibrary]
 from cores.database import BaseModel
-from models import Player
+from .player import Player
 
 class Resource(BaseModel):
 
@@ -13,6 +13,3 @@ class Resource(BaseModel):
     wood = IntegerField(default = 0)
     stone = IntegerField(default = 0)
     iron = IntegerField(default = 0)
-    
-    class Meta:
-        indexes = ((('player',), True),)

@@ -8,9 +8,8 @@ class CharacterCardCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @app_commands.command(name="角色卡", description="輸入這個指令可以查看角色卡，角色卡內有關於你的各項資料、紀錄與統計")
-    async def info_command(self, interaction: discord.Interaction):
-
+    @app_commands.command(name="角色卡", description="查看角色卡，角色卡包含旅人的各項遊戲資訊與紀錄")
+    async def character_tab(self, interaction: discord.Interaction):
         info = information.get(interaction.user)
         await interaction.response.send_message(view=view.create("information", **info), ephemeral=True)
 

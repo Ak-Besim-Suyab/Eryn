@@ -1,2 +1,3 @@
-from models import Inventory
+from models import Contribution
 
+Contribution.delete().execute()

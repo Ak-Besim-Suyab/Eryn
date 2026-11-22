@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field
+
 from data.schema.type import ItemType
 
 @dataclass(frozen=True)
@@ -20,14 +21,14 @@ class LootItem:
 @dataclass
 class EquipmentItem:
     type: str = ItemType.EQUIPMENT
-    slot: str = None
+    slot: str | None = None
     affixes: list[Affix] | None = field(default_factory=list)
 
     def __post_init__(self):
         if self.affixes and isinstance(self.affixes, list):
             self.affixes = [Affix(**affix) for affix in self.affixes]
 
-    def get_affix(self, id: str = None, type: str = None) -> Affix | None:
+    def get_affix(self, id: str | None = None, type: str = None) -> Affix | None:
         """
         返回符合條件的詞綴, 可以傳入 id 或 type, 會返回符合所有條件的詞綴
         """

@@ -1,3 +1,5 @@
+from typing import Any
+
 import discord
 from discord.ext import commands
 from discord import app_commands
@@ -26,9 +28,11 @@ class FishingCog(commands.Cog):
         dice = roll(1, 20)
 
         loot_table = LOOT_TABLES.get("the_river")
-        results = loot_table.roll(3)
+        if loot_table is None:
+            await interaction.response.send_message("找不到對應的戰利品表。", ephemeral=True)
+            return
 
-        contents = {"display_name": interaction.user.display_name}
+        results = loot_table.roll(3)
 
         fishes = []
         for (_, item_id), quantity in results.items():
@@ -36,9 +40,12 @@ class FishingCog(commands.Cog):
 
         line = LINES.get("fishing_success")
 
-        contents.update({"dice": dice})
-        contents.update({"line": line.random()})
-        contents.update({"fishes": "、".join(fishes)})
+        contents: dict[str, Any] = {
+            "display_name": interaction.user.display_name,
+            "dice": dice,
+            "line": line.random() if line else "",
+            "fishes": "、".join(fishes),
+        }
 
         await interaction.response.send_message(view=view.create(f"fishing_success", **contents))
 

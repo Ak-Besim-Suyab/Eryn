@@ -38,8 +38,8 @@ def load_dir(path: str) -> dict[str, dict]:
                 if not d: 
                     logger.debug(f"檔案內容為空, 已略過: {file.name}")
                     continue
-                if file.stem in d: 
-                    logger.debug(f"檔案名稱重複, 已略過: {file.name}")
+                if file.stem in data: 
+                    logger.warning(f"檔案名稱重複, 已略過: {file.name}")
                     continue
                 
                 data[file.stem] = d

@@ -1,4 +1,8 @@
 {
+    "python.defaultInterpreterPath": "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+    "basedpyright.analysis.typeCheckingMode": "basic",
     "python.REPL.enableREPLSmartSend": false,
-    "python.terminal.useEnvFile": true
+    "python.terminal.useEnvFile": true,
+    "antigravity.enableInlineDiff": true,
+    "python-envs.defaultEnvManager": "ms-python.python:system"
 }

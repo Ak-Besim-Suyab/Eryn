@@ -1,6 +1,6 @@
 from peewee import *
 from cores.database import BaseModel
-from models import Player
+from .player import Player
 
 class Skill(BaseModel):
     player = ForeignKeyField(Player, backref = 'skill', on_delete = 'CASCADE')
