@@ -3,6 +3,7 @@ from discord.ext import commands
 
 import ui
 import data
+from data import CONTAINERS
 from lib import builder
 
 """此元件用於管理與發送公告和測試訊息
@@ -30,6 +31,11 @@ class AnnounceCog(commands.Cog):
         
         view = discord.ui.LayoutView(timeout = None).add_item(builder.build_container(container_data, **param))
         await ctx.send(view = view)
+
+    @commands.command()
+    @commands.is_owner()
+    async def attendance(self, ctx: commands.Context):
+        await ctx.send(view=discord.ui.LayoutView(timeout = None).add_item(builder.build_container(CONTAINERS.get("attendance"))))
 
     @commands.command()
     @commands.is_owner()

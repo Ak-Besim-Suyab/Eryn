@@ -48,6 +48,5 @@ class StashCog(commands.Cog):
         v = view.create("resource_tab", **information.get_resource(interaction.user))
         await interaction.response.send_message(view=v, ephemeral=ephemeral)
 
-
 async def setup(bot: commands.Bot):
     await bot.add_cog(StashCog(bot))

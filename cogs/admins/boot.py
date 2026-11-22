@@ -20,6 +20,7 @@ class BootCog(commands.Cog):
             ITEMS.load()
             LOOT_TABLES.load()
             REGIONS.load()
+            LINES.load()
             await ctx.send('✅ 咪！成功重新載入資料')
         except Exception as e:
             await ctx.send(f'❌ 咪... 無法重新載入資料：{e}')

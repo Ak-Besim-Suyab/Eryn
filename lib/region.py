@@ -1,8 +1,10 @@
-import random
-
 from data import REGIONS, LINES
 
 from models import Player
+
+def get_name(region: str) -> str:
+    reg = REGIONS.get(region)
+    return reg.name
 
 def move(player_id: int, region: str) -> tuple[bool, str]:
     # 取得玩家

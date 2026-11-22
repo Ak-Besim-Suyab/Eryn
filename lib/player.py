@@ -1,7 +1,7 @@
 from cores import logger
 from cores import database
 
-from models import Player, ItemInstance
+from models import Player, ItemInstance, Statistic
 
 from lib import item as itemlib
 from lib import resource
@@ -10,12 +10,19 @@ from data import RESOURCES, LOOT_TABLES, ITEMS
 from data.schema.type import ItemType
 from data.schema import Item
 
-def get(player_id: int) -> Player:
+def get_player(player_id: int) -> Player:
     """ 
     取得玩家資料庫紀錄
     """
     player, _ = Player.get_or_create(id=player_id)
     return player
+
+def get_statistic(player_id: int) -> Statistic:
+    """
+    取得玩家統計資料
+    """
+    statistic = Statistic.get_or_create_stat(player_id)
+    return statistic
 
 def get_region(player_id: int) -> str:
     """

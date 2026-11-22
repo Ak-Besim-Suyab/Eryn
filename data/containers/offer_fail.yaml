@@ -1,8 +1,6 @@
-accent_color: red
-
 items:
   - type: text
     content: |
-      > *{player_name} 對著自己說：「{line}」*
+      > *「{line}」你喃喃自語。*
 
       你沒有那麼多資源可以提供了。

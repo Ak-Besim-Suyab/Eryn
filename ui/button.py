@@ -1,5 +1,6 @@
 import discord
 
+CHARACTER_BUTTON = discord.ui.Button(style=discord.ButtonStyle.secondary, label="查看角色卡", custom_id="character_tab")
 RESOURCE_BUTTON = discord.ui.Button(style=discord.ButtonStyle.secondary, label="查看資源", custom_id="resource_tab")
 
 MAP_GUIDE_BUTTON = discord.ui.Button(
@@ -9,5 +10,5 @@ MAP_GUIDE_BUTTON = discord.ui.Button(
 
 BUILDING_GUIDE_BUTTON = discord.ui.Button(
     style=discord.ButtonStyle.secondary, 
-    label="查看建築說明",
+    label="查看說明",
     url="https://suyab42.notion.site/Building-41f66f39eca680f7a65dc7e2eb9b80af")

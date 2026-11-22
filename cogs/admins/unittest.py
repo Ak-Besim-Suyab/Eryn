@@ -16,8 +16,7 @@ class UnitTestCog(commands.Cog):
     @commands.command()
     @commands.is_owner()
     async def test(self, ctx: commands.Context):
-        load = information.get_resource(ctx.author)
-        await ctx.send(view=view.create("resource_inv", **load))
+        pass
 
     @commands.command()
     @commands.is_owner()

@@ -63,10 +63,6 @@ async def button_attendance_guide(event: ButtonEvent):
     view = ui.LayoutView(timeout = None).add_item(builder.build_container(CONTAINERS.get("guide_attendance")))
     await event.interaction.response.send_message(view = view, ephemeral = True)
 
-async def button_attendance_information(event: ButtonEvent):
-    info = information.get(event.interaction.user)
-    await event.interaction.response.send_message(view=view.create("information", **info), ephemeral=True)
-
 async def button_attendance_leaderboard(event: ButtonEvent):
     pass
     
@@ -76,7 +72,6 @@ async def button_test(event: ButtonEvent):
 def register():
     event_bus.subscribe(ButtonEvent, "attendance_claim", button_attendance_claim)
     event_bus.subscribe(ButtonEvent, "attendance_guide", button_attendance_guide)
-    event_bus.subscribe(ButtonEvent, "attendance_information", button_attendance_information)
 
     event_bus.subscribe(ButtonEvent, "button_test", button_test)
 

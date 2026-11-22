@@ -8,16 +8,13 @@ from lib import player
 from lib import region
 from lib import container
 from lib import view
-from lib import information
 from lib.system import turn
 
-from ui.button import MAP_GUIDE_BUTTON
+from ui.button import CHARACTER_BUTTON, MAP_GUIDE_BUTTON
 
 class WorldMap(ui.LayoutView):
     def __init__(self):
         super().__init__(timeout = None)
-
-        self.name = "world_map"
 
         _select = ui.ActionRow(WorldMapSelect())
         _container = (container
@@ -26,18 +23,7 @@ class WorldMap(ui.LayoutView):
 
         self.add_item(_container)
 
-        info_button = ui.Button(
-            label="查看角色卡", 
-            style=discord.ButtonStyle.secondary,
-            custom_id="world_map:card"
-        )
-        info_button.callback = self.info_button
-
-        self.add_item(ui.ActionRow(info_button, MAP_GUIDE_BUTTON))
-
-    async def info_button(self, interaction: discord.Interaction):
-        info = information.get(interaction.user)
-        await interaction.response.send_message(view=view.create("information", **info), ephemeral=True)
+        self.add_item(ui.ActionRow(CHARACTER_BUTTON, MAP_GUIDE_BUTTON))
 
 class WorldMapConfirm(ui.LayoutView):
     def __init__(self, user: discord.abc.User, destination: str):
@@ -71,7 +57,13 @@ class WorldMapConfirm(ui.LayoutView):
         if success:
             turn.add(interaction.user.id, self.cost)
 
-        await interaction.response.send_message(f"成功前往{self.destination.name}", ephemeral=True)
+        c = discord.ui.Container()
+        c.add_item(ui.TextDisplay(content=f"經過一段時間的跋涉後，你成功到達{self.destination.name}。"))
+
+        v = discord.ui.LayoutView()
+        v.add_item(c)
+
+        await interaction.response.send_message(view=v, ephemeral=True)
 
 class WorldMapSelect(ui.Select):
     def __init__(self):

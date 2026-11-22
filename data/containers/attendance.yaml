@@ -26,15 +26,15 @@ items:
 
       - type: button
         style: secondary
-        label: 狀態
-        custom_id: attendance_information
+        label: 查看角色卡
+        custom_id: character_tab
       
       - type: button
         style: secondary
-        label: 排名
+        label: 查看排名
         custom_id: attendance_rank
       
       - type: button
         style: secondary
-        label: 說明
+        label: 查看說明
         custom_id: attendance_guide
