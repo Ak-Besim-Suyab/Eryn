@@ -2,12 +2,14 @@ import discord
 from discord.ext import commands
 from discord import ui
 
-from data import CONTAINERS, MATERIALS
-from data.enums import BuildingName
+from data import MATERIALS, LINES
+from data.enums import BuildingName, MaterialName
 
 from ui.button import BUILDING_GUIDE_BUTTON, RESOURCE_BUTTON
-from lib.entity import building
-from lib import view, skill, container
+from lib import building
+from lib import view, skill
+
+MEDIA = "https://cdn.discordapp.com/attachments/1491046495812718672/1573663788362633267/sanctuary.png"
 
 class SanctuaryCog(commands.Cog):
     def __init__(self, bot: commands.Bot):
@@ -21,46 +23,78 @@ class SanctuaryCog(commands.Cog):
 class SanctuaryView(discord.ui.LayoutView):
     def __init__(self):
         super().__init__(timeout = None)
+
         self.name = BuildingName.SANCTUARY
         self.render()
 
     def render(self):
-        b         = building.get(self.name)
-        contributions = building.get_contributions(self.name)
+    
+        # 宣告容器
+        c = discord.ui.Container()
 
-        build_level = b.level
+        # 內容
+        c.add_item(discord.ui.MediaGallery().add_item(media=MEDIA))
+        c.add_item(discord.ui.Separator(spacing=discord.SeparatorSpacing.large))
+        c.add_item(self.intro())
+        c.add_item(discord.ui.Separator(spacing=discord.SeparatorSpacing.large))
+        c.add_item(self.status())
+        c.add_item(discord.ui.Separator(spacing=discord.SeparatorSpacing.large))
 
-        kwargs: dict = {
-            "level": build_level
-        }
-
-        for res, current in contributions.items():
-
-            rlevel = building.get_rlevel(self.name, res)
-
-            kwargs[f"level_{res}"] = rlevel
-            kwargs[f"current_{res}"] = current
-            kwargs[f"required_{res}"] = building.get_reqrsc(level=rlevel)
-
-            match res:
-                case "food":
-                    kwargs[f"effect_{res}"] = rlevel * 2
-                case "wood":
-                    kwargs[f"effect_{res}"] = rlevel * 2
-                case "stone":
-                    kwargs[f"effect_{res}"] = rlevel * 1.5
-                case "iron":
-                    kwargs[f"effect_{res}"] = rlevel * 1
-            
+        # 操作
         action_row = ui.ActionRow()
         action_row.add_item(SanctuarySelect())
 
-        con = container.build(CONTAINERS.get(self.name), **contributions, **kwargs)
-        con.add_item(action_row)
+        c.add_item(action_row)
 
+        # 清除舊元件
         self.clear_items()
-        self.add_item(con)
+
+        # 添加新元件 (這裡的按鈕在容器外，所以此時才添加)
+        self.add_item(c)
         self.add_item(ui.ActionRow(RESOURCE_BUTTON, BUILDING_GUIDE_BUTTON))
+
+    def intro(self) -> discord.ui.TextDisplay:
+
+        b = building.get(self.name)
+        
+        intro = "\n".join(
+            [
+                f"## 聖所（Lv. {b.level}）",
+                f"> *位於城鎮中心的教堂，無數信徒正在這裡祈禱，同時也有無數苦難者在等待援助。*",
+                f"",
+                f"- 旅行者可以提供材料以升級聖所並強化相應效果",
+                f"- 所有旅行者都可以獲得來自聖所的效果",
+            ]
+        )
+        
+        return discord.ui.TextDisplay(intro)
+
+    def status(self) -> discord.ui.TextDisplay:
+
+        # 該建築不支援的材料
+        EXCLUDED_MATERIALS = ["iron"]
+
+        status = []
+
+        for mat in MaterialName:
+
+            # 檢查是否為不支援材料
+            if mat in EXCLUDED_MATERIALS:
+                continue
+
+            mat = MATERIALS.get(mat)
+
+            if not mat:
+                raise ValueError(f"Material {mat} not found")
+
+            mat_icon    = mat.icon
+            mat_level   = building.get_rlevel(self.name, mat.id)
+            mat_current = building.get_contribution(self.name, mat.id)
+            mat_require = building.get_resource_requirement(level=mat_level)
+                
+            status.append(f"- {mat_icon} **{mat_current} / {mat_require}**（階級 **{mat_level}**）")
+
+        return discord.ui.TextDisplay("\n".join(status))
 
 class SanctuarySelect(ui.Select):
     def __init__(self):
@@ -77,10 +111,6 @@ class SanctuarySelect(ui.Select):
             ("提供 100 石材",   "stone:100",  "🪨"),
             ("提供 500 石材",   "stone:500",  "🪨"),
             ("提供 1,000 石材", "stone:1000", "🪨"),
-
-            ("提供 100 鐵",   "iron:100",  "<:iron:1573435315522248725>"),
-            ("提供 500 鐵",   "iron:500",  "<:iron:1573435315522248725>"),
-            ("提供 1,000 鐵", "iron:1000", "<:iron:1573435315522248725>"),
         ]
 
         options = []

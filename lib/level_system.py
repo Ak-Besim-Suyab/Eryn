@@ -15,7 +15,7 @@ from models import Player
 from models import Statistic
 
 from cores.logger import logger
-from lib.entity import building
+from lib import building
 
 player_message_cooldowns = {}
 player_reaction_cooldowns = {}

@@ -1,7 +1,14 @@
 import discord
 
-CHARACTER_BUTTON = discord.ui.Button(style=discord.ButtonStyle.secondary, label="查看角色卡", custom_id="character_tab")
-RESOURCE_BUTTON = discord.ui.Button(style=discord.ButtonStyle.secondary, label="查看資源", custom_id="resource_tab")
+CHARACTER_BUTTON = discord.ui.Button(
+    style=discord.ButtonStyle.secondary, 
+    label="查看角色卡", 
+    custom_id="character_tab")
+    
+RESOURCE_BUTTON  = discord.ui.Button(
+    style=discord.ButtonStyle.secondary, 
+    label="查看資源",   
+    custom_id="resource_tab")
 
 MAP_GUIDE_BUTTON = discord.ui.Button(
     style=discord.ButtonStyle.secondary, 

@@ -65,7 +65,7 @@ def get_contribution(building_id: str, res: str) -> int:
 
 def get_contributions(building_id: str) -> dict[str, int]:
     """
-    取得建築的所有資源貢獻值總和, 返回資源名稱為鍵, 總數為值的字典
+    取得建築的所有材料貢獻值總和, 返回材料名稱為鍵, 總數為值的字典
     """
     sum = [
         fn.COALESCE(fn.SUM(getattr(Contribution, mat)), 0).alias(mat)
@@ -107,9 +107,9 @@ def get_experience_requirement(level: int,
     
     return round(base * (level ** exponent) + level * addition, 1)
 
-def get_reqrsc(level: int, 
-               base: int = 1350, 
-               exponent: float = 1.15) -> float:
+def get_resource_requirement(level: int, 
+                             base: int = 1350, 
+                             exponent: float = 1.15) -> float:
     """
     返回單位資源升級所需的`contrubution`貢獻值總量
     """
@@ -121,7 +121,7 @@ def get_rlevel(build_id: str, resource: str) -> int:
     level = 1
     
     while True:
-        required = get_reqrsc(level)
+        required = get_resource_requirement(level)
         if current >= required:
             level += 1
         else:

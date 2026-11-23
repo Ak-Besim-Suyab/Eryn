@@ -7,7 +7,7 @@ from lib import button as button_handler
 from models import init_databases
 from cores.logger import logger
 
-from ui import Sanctuary
+from cogs.buildings.sanctuary import SanctuaryView
 from ui import WorldMap
 
 class Elin(commands.Bot):
@@ -33,6 +33,9 @@ class Elin(commands.Bot):
             "cogs.item",
             "cogs.fishing",
             "cogs.equipment",
+
+            # 建築
+            "cogs.buildings.sanctuary",
 
             # 隨機抽取系統
             "cogs.rock_paper_scissors",
@@ -64,7 +67,7 @@ class Elin(commands.Bot):
         select_handler.register() 
         button_handler.register()
 
-        self.add_view(Sanctuary())
+        self.add_view(SanctuaryView())
         self.add_view(WorldMap())
 
         synced_global = await self.tree.sync()
