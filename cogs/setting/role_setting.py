@@ -17,7 +17,6 @@ CHARGE_SELECTS: list[tuple[str, str, str]] = [
 TINCTURE_SELECTS: list[tuple[str, str, str]] = [
     ("主題：花朵 Flower", "select_flower_role", "flower"),
     ("主題：食物 Food", "select_food_role", "food"),
-    ("主題：漸層 Gradient", "select_gradient_role", "gradient"),
 ]
 
 
@@ -60,7 +59,7 @@ class RoleSettingView(discord.ui.LayoutView):
             )
         )
         for placeholder, custom_id, tag in CHARGE_SELECTS:
-            c.add_item(ui.ActionRow(RoleSelect(placeholder, custom_id, tag=tag)))
+            c.add_item(ui.ActionRow(RoleSelect(custom_id=custom_id, placeholder=placeholder, tag=tag)))
 
         c.add_item(discord.ui.Separator(spacing=discord.SeparatorSpacing.large))
 
@@ -75,13 +74,13 @@ class RoleSettingView(discord.ui.LayoutView):
             )
         )
         for placeholder, custom_id, tag in TINCTURE_SELECTS:
-            c.add_item(ui.ActionRow(RoleSelect(placeholder, custom_id, tag=tag)))
+            c.add_item(ui.ActionRow(RoleSelect(custom_id=custom_id, placeholder=placeholder, tag=tag)))
 
         self.add_item(c)
 
 
 class RoleSelect(discord.ui.Select):
-    def __init__(self, placeholder: str, custom_id: str, **filters):
+    def __init__(self, custom_id: str, placeholder: str = "選擇想套用的身分組", **filters):
 
         roles = ROLES.find(**filters)
         if not roles:
@@ -90,7 +89,6 @@ class RoleSelect(discord.ui.Select):
         options = [
             discord.SelectOption(
                 label=role_data.name,
-                description="選擇後會套用身分組",
                 emoji=role_data.icon,
                 value=role_data.id,
             )
