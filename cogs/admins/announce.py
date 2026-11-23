@@ -1,7 +1,6 @@
 import discord
 from discord.ext import commands
 
-import ui
 import data
 from data import CONTAINERS
 from lib import builder
@@ -15,7 +14,7 @@ class AnnounceCog(commands.Cog):
     @commands.command()
     @commands.is_owner()
     async def announce(self, ctx: commands.Context, message_name: str):
-        container_data = data.container.get(message_name)
+        container_data = CONTAINERS.get(message_name)
         if container_data is None:
             await ctx.send(f"❌ 找不到名為 {message_name} 的訊息")
             return
@@ -36,11 +35,6 @@ class AnnounceCog(commands.Cog):
     @commands.is_owner()
     async def attendance(self, ctx: commands.Context):
         await ctx.send(view=discord.ui.LayoutView(timeout = None).add_item(builder.build_container(CONTAINERS.get("attendance"))))
-
-    @commands.command()
-    @commands.is_owner()
-    async def world_map(self, ctx: commands.Context):
-        await ctx.send(view=ui.WorldMap())
 
 async def setup(bot: commands.Bot):
     await bot.add_cog(AnnounceCog(bot))

@@ -2,3 +2,4 @@ id: port_norse
 name: 北方港
 description: 遠北大陸僅存的海岸城鎮，無數旅行者聚集的地方
 cost: {boreal_forest: 13, mine: 12}
+role_id: 1

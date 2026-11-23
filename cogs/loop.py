@@ -1,12 +1,6 @@
-import random
 from discord.ext import commands, tasks
 
-from data import LOOT_TABLES
-
-from cores import database
 from cores import logger
-
-from lib import player
 from lib.system import reward
 
 from config import TH_HAVEN
@@ -21,30 +15,20 @@ class LoopCog(commands.Cog):
 
     @tasks.loop(minutes=1)
     async def loop(self):
+        
         guild = self.bot.get_guild(TH_HAVEN)
+        if guild is None:
+            return
 
-        rewards = []
-
-        for voice_channel in guild.voice_channels:
-            for member in voice_channel.members:
-
-                # 忽略機器人
-                if member.bot:
-                    continue
-
-                # 取得戰利品表
-                loot_table = LOOT_TABLES.get(player.get_region(member.id))
-                if not loot_table:
-                    continue
-
-                rewards.append((member, loot_table.roll(1)))
+        member_ids = [
+            member.id
+            for voice_channel in guild.voice_channels
+            for member in voice_channel.members
+            if not member.bot
+        ]
 
         try:
-            with database.atomic():
-                for member, roll in rewards:
-                    for (item_type, item_id), quantity in roll.items():
-                        reward.give(member.id, item_type, item_id, quantity)
-
+            reward.give_region_rewards(member_ids)
         except Exception as e:
             logger.exception(f"語音獎勵發放失敗：{e}")
 

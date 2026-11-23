@@ -54,6 +54,9 @@ class RegionStorage(Storage[Region]):
     def __init__(self):
         super().__init__("data/regions", Region)
 
+    def get_all(self) -> list[Region]:
+        return [deepcopy(data) for data in self._storage.values()]
+
 class ItemStorage(Storage[Item]):
     def __init__(self):
         super().__init__("data/items", Item)

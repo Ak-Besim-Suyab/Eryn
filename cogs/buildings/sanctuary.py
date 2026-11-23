@@ -9,6 +9,7 @@ from ui.button import BUILDING_GUIDE_BUTTON, RESOURCE_BUTTON
 from lib import building
 from lib import view, skill
 
+BUILDING_NAME = BuildingName.SANCTUARY
 MEDIA = "https://cdn.discordapp.com/attachments/1491046495812718672/1573663788362633267/sanctuary.png"
 
 class SanctuaryCog(commands.Cog):
@@ -24,7 +25,6 @@ class SanctuaryView(discord.ui.LayoutView):
     def __init__(self):
         super().__init__(timeout = None)
 
-        self.name = BuildingName.SANCTUARY
         self.render()
 
     def render(self):
@@ -50,12 +50,15 @@ class SanctuaryView(discord.ui.LayoutView):
         self.clear_items()
 
         # 添加新元件 (這裡的按鈕在容器外，所以此時才添加)
+        EFFECT_BUTTON = ui.Button(label="查看效果", style=discord.ButtonStyle.secondary, custom_id="sanctuary_effect")
+        EFFECT_BUTTON.callback = self.effect_callback
+
         self.add_item(c)
-        self.add_item(ui.ActionRow(RESOURCE_BUTTON, BUILDING_GUIDE_BUTTON))
+        self.add_item(ui.ActionRow(RESOURCE_BUTTON, EFFECT_BUTTON, BUILDING_GUIDE_BUTTON))
 
     def intro(self) -> discord.ui.TextDisplay:
 
-        b = building.get(self.name)
+        b = building.get(BUILDING_NAME)
         
         intro = "\n".join(
             [
@@ -88,13 +91,48 @@ class SanctuaryView(discord.ui.LayoutView):
                 raise ValueError(f"Material {mat} not found")
 
             mat_icon    = mat.icon
-            mat_level   = building.get_rlevel(self.name, mat.id)
-            mat_current = building.get_contribution(self.name, mat.id)
+            mat_level   = building.get_rlevel(BUILDING_NAME, mat.id)
+            mat_current = building.get_contribution(BUILDING_NAME, mat.id)
             mat_require = building.get_resource_requirement(level=mat_level)
                 
             status.append(f"- {mat_icon} **{mat_current} / {mat_require}**（階級 **{mat_level}**）")
 
         return discord.ui.TextDisplay("\n".join(status))
+    
+    async def effect_callback(self, interaction: discord.Interaction):
+        await interaction.response.send_message(view=SanctuaryEffectView(), ephemeral=True)
+
+class SanctuaryEffectView(discord.ui.LayoutView):
+    def __init__(self):
+        super().__init__()
+
+        c = discord.ui.Container()
+        c.add_item(self.effect())
+        
+        self.add_item(c)
+    
+    def effect(self) -> discord.ui.TextDisplay:
+
+        b = building.get(BUILDING_NAME)
+
+        build_level = b.level
+        food_level  = building.get_rlevel(BUILDING_NAME, MaterialName.FOOD)
+        wood_level  = building.get_rlevel(BUILDING_NAME, MaterialName.WOOD)
+        stone_level = building.get_rlevel(BUILDING_NAME, MaterialName.STONE)
+        
+        effect = "\n".join(
+            [
+                f"## 效果",
+                f"### 聖所",
+                f"- 獲得更多經驗值（階級 {build_level}）",
+                f"### 合建結果",
+                f"- 來自發送訊息所獲得的經驗值提升（階級 {food_level}）",
+                f"- 來自發送表情所獲得的經驗值提升（階級 {wood_level}）",
+                f"- 來自語音所獲得的經驗值提升（階級 {stone_level}）",
+            ]
+        )
+
+        return discord.ui.TextDisplay(effect)
 
 class SanctuarySelect(ui.Select):
     def __init__(self):

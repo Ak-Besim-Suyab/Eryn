@@ -16,6 +16,7 @@ from models import Statistic
 
 from cores.logger import logger
 from lib import building
+from lib.system import reward
 
 player_message_cooldowns = {}
 player_reaction_cooldowns = {}
@@ -26,10 +27,14 @@ voice_experience = 1
 
 def _get_sanctuary_bonus(resource_name: str, per_level: float) -> float:
     """
-    依據聖所指定材料的等級計算經驗加成倍率（等級 1 為 1.0，每升 1 級增加 per_level）
+    依據聖所的等級計算經驗加成倍率, 公式為 reward * (1 + 材料等級 * 每材料等級加成) * (1 + 聖所等級 * 0.01)
+
+    b_level: 聖所等級, 增加更多經驗值 (外部乘算)
+    m_level: 聖所材料等級, 增加額外經驗值 (內部加算)
     """
-    level = building.get_rlevel("sanctuary", resource_name)
-    return 1 + max(0, level - 1) * per_level
+    b_level = building.get_level("sanctuary")
+    m_level = building.get_rlevel("sanctuary", resource_name)
+    return (1 + max(0, m_level) * per_level) * (1 + max(0, b_level) * 0.01)
 
 def give_message_experience(member: discord.Member):
     """
@@ -49,6 +54,7 @@ def give_message_experience(member: discord.Member):
     bonus = _get_sanctuary_bonus("food", 0.02)
     total_experience = round(message_experience * bonus, 2)
     Player.add_experience(user_id, total_experience)
+    reward.give_region_reward(user_id)
 
     logger.debug(f"給予 {member.display_name} 訊息經驗值: {total_experience} exp (倍率: {bonus:.2f}x)")
 
@@ -68,6 +74,7 @@ def give_reaction_experience(member: discord.Member):
     bonus = _get_sanctuary_bonus("wood", 0.02)
     total_experience = round(reaction_experience * bonus, 2)
     Player.add_experience(user_id, total_experience)
+    reward.give_region_reward(user_id)
 
     logger.debug(f"給予 {member.display_name} 反應經驗值: {total_experience} exp (倍率: {bonus:.2f}x)")
 
