@@ -1,11 +1,10 @@
-import discord
-from discord import ui
 from discord.ext import commands
 
-from cogs.setting.role_setting import RoleSelect
+from ui.views import RoleSettingView
 
-# TODO: 補上漸層身分組預覽圖片網址，留空時不會顯示圖片區塊
-MEDIA = "https://cdn.discordapp.com/attachments/1491046495812718672/1574512342295904348/gradient.jpg"
+TITLE = "<:prism:1508384924628025374> 漸層 Gradient 身分組（顏色）"
+MEDIA = "https://cdn.discordapp.com/attachments/1491046495812718672/1574517682240487546/gradient_2.jpg"
+POOL  = "gradient"
 
 
 class GradientRoleSettingCog(commands.Cog):
@@ -15,36 +14,9 @@ class GradientRoleSettingCog(commands.Cog):
     @commands.command(name="gradient_role_setting")
     @commands.is_owner()
     async def gradient_role_setting(self, ctx: commands.Context):
-        await ctx.send(view=GradientRoleSettingView())
-
-
-class GradientRoleSettingView(discord.ui.LayoutView):
-    def __init__(self):
-        super().__init__(timeout=None)
-
-        select = RoleSelect(custom_id="select_gradient_role", tag="gradient")
-
-        c = discord.ui.Container()
-
-        if MEDIA:
-            c.add_item(discord.ui.MediaGallery().add_item(media=MEDIA))
-            c.add_item(discord.ui.Separator(spacing=discord.SeparatorSpacing.large))
-
-        c.add_item(
-            discord.ui.TextDisplay(
-                "\n".join(
-                    [
-                        "## <:prism:1508384924628025374> 漸層 Gradient 身分組（顏色）",
-                        "> 請注意：同類型的顏色身分組同時只會套用 1 個",
-                    ]
-                )
-            )
-        )
-        c.add_item(discord.ui.Separator(spacing=discord.SeparatorSpacing.large))
-        c.add_item(ui.ActionRow(select))
-
-        self.add_item(c)
+        await ctx.send(view=RoleSettingView(title=TITLE, media=MEDIA, pool=POOL))
 
 
 async def setup(bot: commands.Bot):
     await bot.add_cog(GradientRoleSettingCog(bot))
+    bot.add_view(RoleSettingView(title=TITLE, media=MEDIA, pool=POOL))

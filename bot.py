@@ -9,9 +9,6 @@ from cores.logger import logger
 
 from cogs.buildings.sanctuary import SanctuaryView
 from cogs.world_map import WorldMapView
-from cogs.setting.role_setting import RoleSettingView
-from cogs.setting.ffxiv_role import FFXIVRoleSettingView
-from cogs.setting.gradient_role import GradientRoleSettingView
 
 class Elin(commands.Bot):
     def __init__(self):
@@ -41,10 +38,17 @@ class Elin(commands.Bot):
             # 建築
             "cogs.buildings.sanctuary",
 
-            # 設定
-            "cogs.setting.role_setting",
+            # 設定（圖案身分組）
             "cogs.setting.ffxiv_role",
+            "cogs.setting.minecraft_role",
+            "cogs.setting.pikmin_role",
+            "cogs.setting.afternoon_tea_role",
+            "cogs.setting.plurk_role",
+
+            # 設定（顏色身分組）
             "cogs.setting.gradient_role",
+            "cogs.setting.flower_role",
+            "cogs.setting.food_role",
 
             # 隨機抽取系統
             "cogs.rock_paper_scissors",
@@ -78,10 +82,6 @@ class Elin(commands.Bot):
 
         self.add_view(SanctuaryView())
         self.add_view(WorldMapView())
-
-        self.add_view(RoleSettingView())
-        self.add_view(FFXIVRoleSettingView())
-        self.add_view(GradientRoleSettingView())
 
         synced_global = await self.tree.sync()
         logger.info(f'Synced {len(synced_global)} commands to Global')

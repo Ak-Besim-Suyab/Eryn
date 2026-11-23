@@ -1,0 +1,22 @@
+from discord.ext import commands
+
+from ui.views import RoleSettingView
+
+TITLE = "<:minecraft_potato:1484222538606313473> 麥塊 Minecraft 身分組（圖案）"
+MEDIA = "https://cdn.discordapp.com/attachments/1491046495812718672/1574496239456882840/ffxiv_evercold.png"
+POOL  = "minecraft"
+
+
+class MinecraftRoleSettingCog(commands.Cog):
+    def __init__(self, bot: commands.Bot):
+        self.bot = bot
+
+    @commands.command(name="minecraft_role_setting")
+    @commands.is_owner()
+    async def minecraft_role_setting(self, ctx: commands.Context):
+        await ctx.send(view=RoleSettingView(title=TITLE, media=MEDIA, pool=POOL))
+
+
+async def setup(bot: commands.Bot):
+    await bot.add_cog(MinecraftRoleSettingCog(bot))
+    bot.add_view(RoleSettingView(title=TITLE, media=MEDIA, pool=POOL))
