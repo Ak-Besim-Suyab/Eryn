@@ -5,7 +5,7 @@ from discord.ext import commands
 from cogs.setting.role_setting import RoleSelect
 
 # TODO: 補上漸層身分組預覽圖片網址，留空時不會顯示圖片區塊
-MEDIA = ""
+MEDIA = "https://cdn.discordapp.com/attachments/1491046495812718672/1574512342295904348/gradient.jpg"
 
 
 class GradientRoleSettingCog(commands.Cog):
@@ -35,7 +35,7 @@ class GradientRoleSettingView(discord.ui.LayoutView):
                 "\n".join(
                     [
                         "## <:prism:1508384924628025374> 漸層 Gradient 身分組（顏色）",
-                        "> 請注意：同類型的顏色身分組同時只會套用 1 個。",
+                        "> 請注意：同類型的顏色身分組同時只會套用 1 個",
                     ]
                 )
             )

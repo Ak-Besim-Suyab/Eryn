@@ -14,3 +14,14 @@
 - models : 資料庫模型 (目前使用 peewee)
 - utils  : 工具函數 (還未建立，之後會想辦法整理)
 - ui     : 可以被重用的視圖元件
+
+# 規則
+
+## Git Commit
+盡量遵循 Conventional Commits 規範
+- `feat`     : 新功能
+- `fix`      : 修復
+- `docs`     : 文件
+- `style`    : 格式調整
+- `refactor` : 重構
+- `test`     : 測試

@@ -32,12 +32,11 @@ class FFXIVRoleSettingView(discord.ui.LayoutView):
                 "\n".join(
                     [
                         "## <:ffxiv_mentor:1484220305617715300> Final Fantasy XIV 身分組（圖案）",
-                        "> 請注意：同類型的圖案身分組同時只會套用 1 個。",
+                        "> 請注意：同類型的圖案身分組同時只會套用 1 個",
                     ]
                 )
             )   
         )
-        c.add_item(discord.ui.Separator(spacing=discord.SeparatorSpacing.large))
         c.add_item(ui.ActionRow(select))
 
         self.add_item(c)
