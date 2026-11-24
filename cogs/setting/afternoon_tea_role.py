@@ -2,9 +2,9 @@ from discord.ext import commands
 
 from ui.views import RoleSettingView
 
-TITLE = "<:berry_pie:1484226514336612472> 下午茶 Afternoon Tea 身分組（圖案）"
+TITLE = "<:berry_pie:1484226514336612472> 下午茶身分組（圖案）"
 MEDIA = "https://cdn.discordapp.com/attachments/1491046495812718672/1574496239456882840/ffxiv_evercold.png"
-POOL  = "afternoon_tea"
+TAG   = "afternoon_tea"
 
 
 class AfternoonTeaRoleSettingCog(commands.Cog):
@@ -14,9 +14,9 @@ class AfternoonTeaRoleSettingCog(commands.Cog):
     @commands.command(name="afternoon_tea_role_setting")
     @commands.is_owner()
     async def afternoon_tea_role_setting(self, ctx: commands.Context):
-        await ctx.send(view=RoleSettingView(title=TITLE, media=MEDIA, pool=POOL))
+        await ctx.send(view=RoleSettingView(title=TITLE, media=MEDIA, tag=TAG))
 
 
 async def setup(bot: commands.Bot):
     await bot.add_cog(AfternoonTeaRoleSettingCog(bot))
-    bot.add_view(RoleSettingView(title=TITLE, media=MEDIA, pool=POOL))
+    bot.add_view(RoleSettingView(title=TITLE, media=MEDIA, tag=TAG))

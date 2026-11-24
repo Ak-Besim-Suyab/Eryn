@@ -111,8 +111,13 @@ class RoleStorage(Storage[Role]):
         return [deepcopy(data) for data in self._storage.values()]
     
     # 例如: 找查特定分類時, 填入 (category = "specific_category"), 找查特定標籤時, 填入 (tag = "specific_tag")
-    def find(self, **filters) -> list[Role]:
-        return [deepcopy(data) for data in self._storage.values() if all(getattr(data, key) == value for key, value in filters.items())]
+    def find(self, **filters) -> list[Role] | None:
+        result = [
+            deepcopy(data)
+            for data in self._storage.values()
+            if all(getattr(data, key) == value for key, value in filters.items())
+        ]
+        return result or None
     
 class LootTableStorage(Storage[LootTable]):
     def __init__(self):
