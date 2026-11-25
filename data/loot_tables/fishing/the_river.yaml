@@ -1,0 +1,3 @@
+pools:
+  - {type: "item", id: "salmon", weight: 100, count: 2}
+  - {type: "item", id: "cod",    weight: 100, count: 2}

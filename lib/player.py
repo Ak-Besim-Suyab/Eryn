@@ -12,7 +12,7 @@ from data.schema import Item
 
 def get(player_id: int) -> Player:
     """ 
-    取得玩家資料庫紀錄
+    取得玩家
     """
     player, _ = Player.get_or_create(id = player_id)
     return player
@@ -60,6 +60,64 @@ def get_experience_requirement(level: int) -> float:
     exponent = 1.5
     addition = 20
     return round(base * (level ** exponent) + level * addition, 1)
+
+def add_experience(player_id: int, amount: int | float):
+    """
+    增加玩家經驗值並檢查是否符合升級條件
+    """
+    if amount < 0:
+        raise ValueError("經驗值不可為負數")
+
+    if amount == 0:
+        return
+
+    with database.atomic():
+        Player.get_or_create(id=player_id)
+
+        updated = (Player
+                   .update(experience = Player.experience + amount)
+                   .where(Player.id == player_id)
+                   .execute())
+
+        if updated:
+            level_up(player_id)
+
+def level_up(player_id: int) -> tuple[bool, int]:
+    """
+    檢查並執行玩家升級，返回 (是否升級, 當前等級)
+    """
+    upgraded = False
+
+    with database.atomic():
+        while True:
+            player, _ = Player.get_or_create(id=player_id)
+            required = get_experience_requirement(player.level)
+
+            if player.experience < required:
+                break
+
+            updated = (Player
+                       .update(
+                           level      = Player.level + 1,
+                           experience = Player.experience - required,
+                       )
+                       .where(Player.id == player_id)
+                       .where(Player.level == player.level)
+                       .where(Player.experience >= required)
+                       .execute())
+
+            if not updated:
+                break
+
+            upgraded = True
+            logger.info(f"玩家 {player_id} 升級成功，現在等級為 {player.level + 1}")
+
+        current_level = (Player
+                         .select(Player.level)
+                         .where(Player.id == player_id)
+                         .scalar())
+
+    return upgraded, current_level
 
 def equip(player_id: int, item_id: str, slot: str) -> tuple[bool, str]:
     """ 

@@ -5,7 +5,6 @@ from discord import ui
 
 from datetime import datetime
 
-from models import Player
 from models import Statistic
 
 from cores import event_bus
@@ -39,7 +38,7 @@ async def button_attendance_claim(event: ButtonEvent):
             await event.interaction.response.send_message("咪！你今天已經領取過每日獎勵了！", ephemeral=True)
             return
     
-    Player.add_experience(user_id, daily_experience)
+    player.add_experience(user_id, daily_experience)
     player.set_timestamp_daily(user_id, datetime.now().timestamp())
 
     stat = Statistic.get_or_create_stat(user_id)

@@ -8,17 +8,20 @@ from models.inventory import Inventory
 from models.item_instance import ItemInstance
 
 def is_valid(item_id: str, amount: int) -> bool:
-    """ 驗證執行邏輯的物品與數量是否合法，全數通過後回傳資料物件
+    """ 
+    驗證物品與數量是否合法
     """
     item = ITEMS.get(item_id)
+    
     if item is None:
         logger.warning(f"警告，出現未定義或名稱錯誤的物品: {item_id}")
         return False
+
     if amount <= 0:
         logger.warning(f"警告，數量必須為正整數: {amount}")
         return False
     
-    return item, True
+    return True
 
 def give(player_id: int, item_id: str, amount: int = 1) -> bool:
     """ 給予玩家物品，返回給予後的持有數量
@@ -77,6 +80,10 @@ def remove(player_id: int, item_id: str, amount: int = 1) -> tuple[bool, int]:
         
         return True, Inventory.get_by_id(entry.id).quantity
 
+def fmtstr_short(item_id: str, quantity: int):
+    item = ITEMS.get(item_id)
+    return f"{quantity}{item.icon}{item.name}" if is_valid(item_id, quantity) else f"{quantity}❓{item_id}"
+
 # function for formatting item display.
 def summary_line(item_id: str, quantity: int) -> str:
     """ 
@@ -100,21 +107,6 @@ def summary_line(item_id: str, quantity: int) -> str:
     ]
     
     return "\n".join(lines)
-
-def description(item_id: str, quantity: int, type: str = "summary") -> str:
-    """
-    return descriptions of item.
-    """
-    item = ITEMS.get(item_id)
-    if item is None:
-        logger.warning(f"背包內存在未定義的道具: {item_id}")
-        return f"{quantity} ❓{item_id}"
-
-    match type:
-        case "summary":
-            return f"{quantity} {item.icon}{item.name}"
-        case "detail":
-            return f"{quantity} {item.icon}{item.name}\n{item.description}"
 
 def sort_key(row: Inventory | ItemInstance) -> tuple[float, str]:
     item = ITEMS.get(row.item_id)

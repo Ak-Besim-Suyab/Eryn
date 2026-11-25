@@ -2,8 +2,8 @@ from discord.ext import commands
 
 from ui.views import RoleSettingView
 
-TITLE = "<:red_pikmin:1532614703367454742> 皮克敏身分組（圖案）"
-MEDIA = "https://cdn.discordapp.com/attachments/1491046495812718672/1574496239456882840/ffxiv_evercold.png"
+TITLE = "<:ice_pikmin:1532621199450837002> 皮克敏身分組（圖案）"
+MEDIA = "https://cdn.discordapp.com/attachments/1491046495812718672/1574712678499229717/pikmin_bloom_1.png"
 TAG   = "pikmin"
 
 

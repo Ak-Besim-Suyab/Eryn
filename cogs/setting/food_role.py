@@ -2,8 +2,8 @@ from discord.ext import commands
 
 from ui.views import RoleSettingView
 
-TITLE = "<:latte:1538825725971533924> 食物身分組（顏色）"
-MEDIA = "https://cdn.discordapp.com/attachments/1491046495812718672/1574517682240487546/gradient_2.jpg"
+TITLE = "<:watermelon:1539354918098444328> 食物身分組（顏色）"
+MEDIA = "https://cdn.discordapp.com/attachments/1491046495812718672/1574781002600030319/fruit.png"
 TAG   = "food"
 
 

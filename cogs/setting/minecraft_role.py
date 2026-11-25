@@ -2,7 +2,7 @@ from discord.ext import commands
 
 from ui.views import RoleSettingView
 
-TITLE = "<:minecraft_potato:1484222538606313473> 麥塊身分組（圖案）"
+TITLE = "<:minecraft_pufferfish:1484222619439071363> 麥塊身分組（圖案）"
 MEDIA = "https://cdn.discordapp.com/attachments/1491046495812718672/1574574777333457027/minecraft_sift_1.png"
 TAG   = "minecraft"
 

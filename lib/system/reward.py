@@ -5,11 +5,11 @@ from collections import Counter
 from typing import Iterable
 
 from cores import database
-from data import LOOT_TABLES
 from lib import item
 from lib import material
 from lib import currency
 from lib import player
+from lib import region
 
 def give(player_id: int, item_type: str, reward: str, quantity: int):
 
@@ -22,11 +22,11 @@ def give(player_id: int, item_type: str, reward: str, quantity: int):
         case "currency": currency.give(player_id, reward, quantity)
         case _: raise ValueError(f"unknown item type: {item_type}")
 
-def roll_region(player_id: int, times: int = 1) -> Counter | None:
+def roll_region(player_id: int, times: int = 1, skill: str = "explore") -> Counter | None:
     """
-    依據玩家目前所在地區抽取戰利品表，若該地區沒有戰利品表則返回 None
+    依據玩家目前所在地區與技能抽取戰利品表，若該地區沒有對應戰利品表則返回 None
     """
-    loot_table = LOOT_TABLES.get(player.get_region(player_id))
+    loot_table = region.get_loot_table(player.get_region(player_id), skill)
     if not loot_table:
         return None
     return loot_table.roll(times)

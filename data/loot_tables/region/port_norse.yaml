@@ -1,3 +1,0 @@
-id: port_norse
-entries:
-  - {"type": "currency", "id": "vin", "weight": 100, "min": 0, "max": 1}

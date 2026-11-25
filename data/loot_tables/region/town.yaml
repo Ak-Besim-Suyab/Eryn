@@ -1,0 +1,2 @@
+pools:
+  - {type: "currency", id: "vin", weight: 100, count: 1}

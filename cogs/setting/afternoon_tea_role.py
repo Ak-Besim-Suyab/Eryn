@@ -3,7 +3,7 @@ from discord.ext import commands
 from ui.views import RoleSettingView
 
 TITLE = "<:berry_pie:1484226514336612472> 下午茶身分組（圖案）"
-MEDIA = "https://cdn.discordapp.com/attachments/1491046495812718672/1574496239456882840/ffxiv_evercold.png"
+MEDIA = "https://cdn.discordapp.com/attachments/1491046495812718672/1574822279454654544/tea.png"
 TAG   = "afternoon_tea"
 
 

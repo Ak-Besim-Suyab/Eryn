@@ -4,7 +4,7 @@ from data.schema.select import *
 # -----------------------------------------------------------
 from cores.database import database
 
-from .player import *
+from .player import Player, Attribute
 from .skill import *
 from .inventory import *
 from .item_instance import *
@@ -18,15 +18,19 @@ from .statistic import *
 
 def init_databases():
     with database:
-        database.create_tables([
-            Player, 
-            Skill,
-            Inventory,
-            ItemInstance,
-            ItemAffix,
-            Material, 
-            Currency,
-            Building,
-            Contribution,
-            House, 
-            Statistic], safe=True)
+        database.create_tables(
+            [
+                Player, 
+                Attribute,
+                Skill,
+                Currency,
+                Material, 
+                Inventory,
+                ItemInstance,
+                ItemAffix,
+                Building,
+                Contribution,
+                House, 
+                Statistic
+            ], 
+            safe=True)

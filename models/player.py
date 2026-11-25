@@ -1,24 +1,15 @@
 from peewee import *
-from cores.database import BaseModel, database
-
-from datetime import datetime
+from cores.database import BaseModel
 
 class Player(BaseModel):
 
-    id = IntegerField(primary_key=True)
+    id           = IntegerField(primary_key=True)
     display_name = TextField(default="無名的旅人")
+    level        = IntegerField(default=1)
+    experience   = FloatField(default=0.0)
 
-    level = IntegerField(default=1)
-    experience = FloatField(default=0.0)
-
-    race = TextField(default="yemir")
-
-    currency = IntegerField(default=0)
+    race   = TextField(default="yemir")
     region = TextField(default="the_town")
-
-    san = FloatField(default=100.0)
-    luck = FloatField(default=1.0)
-    karma = FloatField(default=100.0)
 
     turn = IntegerField(default=0)
     
@@ -28,48 +19,18 @@ class Player(BaseModel):
     timestamp_daily = FloatField(null=True)
     timestamp_voice = FloatField(null=True)
 
-    @staticmethod
-    def get_required_exp(level: int) -> int:
-        return int(100 * (level ** 1.5) + level * 20)
+class Attribute(BaseModel):
+    player = ForeignKeyField(Player, backref = "attributes", on_delete = "CASCADE")
+    
+    # 基礎屬性
+    strength     = IntegerField(default=0)   # 力量
+    constitution = IntegerField(default=0)   # 體質
+    dexterity    = IntegerField(default=0)   # 敏捷
+    perception   = IntegerField(default=0)   # 感知
+    intelligence = IntegerField(default=0)   # 智力
+    charisma     = IntegerField(default=0)   # 魅力
 
-    @classmethod
-    def add_experience(cls, player_id: int, amount: int | float):
-        with database.atomic():
-            player: Player
-            player, _ = cls.get_or_create(id=player_id)
-            player.experience += amount
-
-            while player.experience >= player.get_required_exp(player.level):  # pyright: ignore[reportArgumentType]
-                player.experience -= player.get_required_exp(player.level)  # pyright: ignore[reportArgumentType]
-                player.level += 1
-
-            player.save()
-
-# timestamp_voice methods --------------------------------------------------
-
-    @classmethod
-    def save_timestamp_voice(cls, player_id: int):
-        """
-        保存玩家進入語音的時間戳記
-        這個方法會保存實作時的時間戳記
-        """
-        with database.atomic():
-            player, _ = cls.get_or_create(id=player_id)
-            player.timestamp_voice = datetime.now().timestamp()
-            player.save()
-
-    @classmethod
-    def remove_timestamp_voice(cls, player_id: int):
-        """
-        移除玩家的語音時間戳記
-        這個方法會直接將時間戳記設為 None
-        """
-        with database.atomic():
-            player, _ = cls.get_or_create(id=player_id)
-            player.timestamp_voice = None
-            player.save()
-
-    @classmethod
-    def get_timestamp_voice(cls, player_id: int):
-        player, _ = cls.get_or_create(id=player_id)
-        return player.timestamp_voice
+    # 其他屬性
+    luck         = IntegerField(default=0)   # 幸運
+    sanity       = IntegerField(default=100) # 理智
+    karma        = IntegerField(default=20)  # 善惡

@@ -1,33 +1,21 @@
 """
-這個類別用來處理玩家在伺服器活動時能獲得的經驗管道
-目前能獲得經驗的管道有：
-- 發送訊息 / message experience
-- 給予反應 / reaction experience
-- 加入/離開語音 / voice experience
+這個模組用來處理玩家在伺服器活動時的經驗值加成計算與語音經驗結算
 """
 
 import discord
-import config
 
 from datetime import datetime
 
-from models import Player
 from models import Statistic
 
 from cores.logger import logger
-from lib import building
-from lib.system import reward
+from lib import building, player
 
-player_message_cooldowns = {}
-player_reaction_cooldowns = {}
-
-message_experience = 5
-reaction_experience = 5
 voice_experience = 1
 
-def _get_sanctuary_bonus(resource_name: str, per_level: float) -> float:
+def get_sanctuary_bonus(resource_name: str, per_level: float) -> float:
     """
-    依據聖所的等級計算經驗加成倍率, 公式為 reward * (1 + 材料等級 * 每材料等級加成) * (1 + 聖所等級 * 0.01)
+    依據聖所的等級計算經驗加成倍率, 公式為 (1 + 材料等級 * 每材料等級加成) * (1 + 聖所等級 * 0.01)
 
     b_level: 聖所等級, 增加更多經驗值 (外部乘算)
     m_level: 聖所材料等級, 增加額外經驗值 (內部加算)
@@ -36,55 +24,13 @@ def _get_sanctuary_bonus(resource_name: str, per_level: float) -> float:
     m_level = building.get_rlevel("sanctuary", resource_name)
     return (1 + max(0, m_level) * per_level) * (1 + max(0, b_level) * 0.01)
 
-def give_message_experience(member: discord.Member):
-    """
-    注意事項：這裡傳入的物件是 message.author 需要確保物件本身指向 discord.Member 否則會報錯
-    """
-    user_id = member.id
-    now = datetime.now().timestamp()
-    
-    # 檢查冷卻時間
-    if user_id in player_message_cooldowns:
-        if now - player_message_cooldowns[user_id] < config.MESSAGE_COOLDOWN:
-            return
-    
-    # 更新冷卻時間戳
-    player_message_cooldowns[user_id] = now
-
-    bonus = _get_sanctuary_bonus("food", 0.02)
-    total_experience = round(message_experience * bonus, 2)
-    Player.add_experience(user_id, total_experience)
-    reward.give_region_reward(user_id)
-
-    logger.debug(f"給予 {member.display_name} 訊息經驗值: {total_experience} exp (倍率: {bonus:.2f}x)")
-
-def give_reaction_experience(member: discord.Member):
-    
-    user_id = member.id
-    now = datetime.now().timestamp()
-
-    # 檢查冷卻時間
-    if user_id in player_reaction_cooldowns:
-        if now - player_reaction_cooldowns[user_id] < config.REACTION_COOLDOWN:
-            return
-    
-    # 更新冷卻時間戳
-    player_reaction_cooldowns[user_id] = now
-
-    bonus = _get_sanctuary_bonus("wood", 0.02)
-    total_experience = round(reaction_experience * bonus, 2)
-    Player.add_experience(user_id, total_experience)
-    reward.give_region_reward(user_id)
-
-    logger.debug(f"給予 {member.display_name} 反應經驗值: {total_experience} exp (倍率: {bonus:.2f}x)")
-
 def give_voice_experience(member: discord.Member):
 
     # 取得現在的時間
     now = datetime.now().timestamp()
 
     # 取得玩家最後加入語音的時間
-    timestamp = Player.get_timestamp_voice(member.id)
+    timestamp = player.get_timestamp_voice(member.id)
     if timestamp is None:
         logger.warning(f"{member.display_name} 沒有語音時間戳記，無法進行結算。")
         return
@@ -101,9 +47,9 @@ def give_voice_experience(member: discord.Member):
     #     case minutes if minutes > 120:
     #         voice_experience = 2
 
-    bonus = _get_sanctuary_bonus("stone", 0.01)
+    bonus = get_sanctuary_bonus("stone", 0.01)
     total_experience = round(elapsed_minutes * voice_experience * bonus, 2)
-    Player.add_experience(member.id, total_experience)
+    player.add_experience(member.id, total_experience)
 
     stats = Statistic.get_or_create_stat(member.id)
     stats.total_voice += elapsed_minutes
@@ -112,9 +58,7 @@ def give_voice_experience(member: discord.Member):
     logger.debug(f"給予 {member.display_name} 語音經驗值: {total_experience} exp (倍率: {bonus:.2f}x), 累積時間: {elapsed_minutes:.2f} 分鐘")
 
 def save_timestamp(member: discord.Member):
-    Player.save_timestamp_voice(member.id)
-    logger.debug(f"成功保存 {member} 的時間戳記")
+    player.set_timestamp_voice(member.id, datetime.now().timestamp())
 
 def remove_timestamp(member: discord.Member):
-    Player.remove_timestamp_voice(member.id)
-    logger.debug(f"成功移除 {member} 的時間戳記")
+    player.set_timestamp_voice(member.id, None)

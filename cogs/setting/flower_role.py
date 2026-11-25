@@ -3,7 +3,7 @@ from discord.ext import commands
 from ui.views import RoleSettingView
 
 TITLE = "<:rudbeckia:1467093280071094333> 花朵身分組（顏色）"
-MEDIA = "https://cdn.discordapp.com/attachments/1491046495812718672/1574517682240487546/gradient_2.jpg"
+MEDIA = "https://cdn.discordapp.com/attachments/1491046495812718672/1574727401190068284/flower.png"
 TAG   = "flower"
 
 

@@ -1,0 +1,3 @@
+pools:
+  - {type: "resource", id: "food",  weight: 100, count: 2}
+  - {type: "resource", id: "wood",  weight: 100, count: 2}

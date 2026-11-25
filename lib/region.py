@@ -1,10 +1,25 @@
-from data import REGIONS, LINES
+from data import REGIONS, LINES, LOOT_TABLES
+from data.schema import LootTable
 
 from models import Player
 
 def get_name(region: str) -> str:
     reg = REGIONS.get(region)
     return reg.name
+
+def get_loot_table(region_id: str, skill: str) -> LootTable | None:
+    """
+    依據地區與技能名稱取得對應的戰利品表
+    """
+    reg = REGIONS.get(region_id)
+    if not reg:
+        return None
+
+    table_name = reg.loot_table.get(skill)
+    if not table_name:
+        return None
+
+    return LOOT_TABLES.get(table_name)
 
 def move(player_id: int, region: str) -> tuple[bool, str]:
     # 取得玩家

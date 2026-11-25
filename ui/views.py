@@ -19,7 +19,7 @@ class RoleSettingView(discord.ui.LayoutView):
             c.add_item(discord.ui.Separator(spacing=discord.SeparatorSpacing.large))
 
         c.add_item(discord.ui.TextDisplay(f"## {title}"))
-        c.add_item(discord.ui.TextDisplay("> 請注意，相同分類的身分組同時只能套用 1 個，變更時會自動撤換"))
+        c.add_item(discord.ui.TextDisplay("> 請注意，相同分類的身分組同時只能套用 1 個"))
         c.add_item(ui.ActionRow(select))
 
         self.add_item(c)
