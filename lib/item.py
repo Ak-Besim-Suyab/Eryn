@@ -52,6 +52,8 @@ def give(player_id: int, item_id: str, amount: int = 1) -> bool:
             .update(quantity = Inventory.quantity + amount)
             .where(Inventory.id == entry.id)
             .execute())
+    
+    logger.debug(f"成功給予 {player_id} {amount} {item_id} (item)")
         
     return True
 
@@ -76,13 +78,13 @@ def remove(player_id: int, item_id: str, amount: int = 1) -> tuple[bool, int]:
             .where(Inventory.id == entry.id)
             .execute())
 
-        logger.debug(f"成功移除 {player_id} 的物品: {item_id}")
+        logger.debug(f"成功移除 {player_id} {amount} {item_id} (item)")
         
         return True, Inventory.get_by_id(entry.id).quantity
 
 def fmtstr_short(item_id: str, quantity: int):
     item = ITEMS.get(item_id)
-    return f"{quantity}{item.icon}{item.name}" if is_valid(item_id, quantity) else f"{quantity}❓{item_id}"
+    return f"{quantity} {item.icon} {item.name}" if is_valid(item_id, quantity) else f"{quantity} ❓ {item_id}"
 
 # function for formatting item display.
 def summary_line(item_id: str, quantity: int) -> str:
@@ -92,7 +94,7 @@ def summary_line(item_id: str, quantity: int) -> str:
     item = ITEMS.get(item_id)
     if item is None:
         logger.warning(f"背包內存在未定義的道具: {item_id}")
-        return f"{quantity} ❓{item_id}"
+        return f"{quantity} ❓ {item_id}"
 
     if item.has_tags("equipment"):
         lines = [

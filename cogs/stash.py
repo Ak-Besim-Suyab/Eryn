@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 from discord import app_commands
 
-import ui
+from cogs.inventory import InventoryView
 from data.enums import MaterialName, CurrencyName
 from lib import player
 
@@ -42,7 +42,7 @@ class StashCog(commands.Cog):
 
 
     async def on_inventory_tab(self, interaction: discord.Interaction, ephemeral: bool = False):
-        inventory = ui.Inventory(interaction.user)
+        inventory = InventoryView(interaction.user)
         await interaction.response.send_message(view=inventory, ephemeral=ephemeral)
 
     async def on_resource_tab(self, interaction: discord.Interaction, ephemeral: bool = False):

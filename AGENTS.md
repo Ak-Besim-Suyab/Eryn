@@ -8,7 +8,6 @@
 - 避免過度複雜的邏輯，保持程式碼易讀性，若需要複雜的處理時請和我討論組織方向。
 - 與資料庫有關的邏輯盡可能使用 SQL 函數語句進行操作。
 - 最終回傳給使用者在 Discord 的訊息請使用 `discord.ui.Container` 等 component v2 版本的元件進行組織。
-- 
 
 ## 結構
 - cogs   : 機器人功能模組，指令會用到的視圖元件與相關函數也都放在相同檔案內，如果有高度重用的邏輯才會考慮另外拆成獨立檔案
@@ -21,10 +20,11 @@
 # 規則
 
 ## Git Commit
-盡量遵循 Conventional Commits 規範
-- `feat`     : 新功能
-- `fix`      : 修復
-- `docs`     : 文件
-- `style`    : 格式調整
-- `refactor` : 重構
-- `test`     : 測試
+- 請盡量遵循 Conventional Commits 規範來撰寫 commit 訊息。
+    - `feat`     : 新功能
+    - `fix`      : 修復
+    - `docs`     : 文件
+    - `style`    : 格式調整
+    - `refactor` : 重構
+    - `test`     : 測試
+- 請盡量用較少的字數描述 commit 訊息，可以只列出大綱。

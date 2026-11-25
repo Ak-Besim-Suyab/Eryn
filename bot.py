@@ -28,6 +28,7 @@ class Elin(commands.Bot):
             # 常態指令
             "cogs.character_tab",
             "cogs.stash",
+            "cogs.inventory",
             "cogs.leaderboard",
             "cogs.loop",
             "cogs.item",

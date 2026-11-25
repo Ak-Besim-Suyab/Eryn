@@ -9,7 +9,7 @@ class Player(BaseModel):
     experience   = FloatField(default=0.0)
 
     race   = TextField(default="yemir")
-    region = TextField(default="the_town")
+    region = TextField(default="port_norse")
 
     turn = IntegerField(default=0)
     
