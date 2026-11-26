@@ -6,8 +6,6 @@ import discord
 
 from datetime import datetime
 
-from models import Statistic
-
 from cores.logger import logger
 from lib import building, player
 
@@ -38,20 +36,11 @@ def give_voice_experience(member: discord.Member):
     # 計算待在語音的時間
     elapsed_minutes = (now - timestamp) / 60
 
-    # 暫時移除 2 小時有最大值的時長分段倍率設定，先固定以每分鐘基礎經驗結算
-    # match elapsed_minutes:
-    #     case minutes if minutes > 0 and minutes <= 60:
-    #         voice_experience = 1
-    #     case minutes if minutes > 60 and minutes <= 120:
-    #         voice_experience = 1.5
-    #     case minutes if minutes > 120:
-    #         voice_experience = 2
-
     bonus = get_sanctuary_bonus("stone", 0.01)
     total_experience = round(elapsed_minutes * voice_experience * bonus, 2)
     player.add_experience(member.id, total_experience)
 
-    stats = Statistic.get_or_create_stat(member.id)
+    stats = player.get_statistic(member.id)
     stats.total_voice += elapsed_minutes
     stats.save()
 

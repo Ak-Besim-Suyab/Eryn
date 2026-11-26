@@ -12,6 +12,17 @@ class CurrencyName(StrEnum):
 class BuildingName(StrEnum):
     SANCTUARY = auto()
 
+class AttributeName(StrEnum):
+    STRENGTH     = auto()
+    CONSTITUTION = auto()
+    DEXTERITY    = auto()
+    PERCEPTION   = auto()
+    INTELLIGENCE = auto()
+    CHARISMA     = auto()
+    LUCK         = auto()
+    SANITY       = auto()
+    KARMA        = auto()
+
 class Outcome(StrEnum):
     CRITICAL_FAILURE = auto()
     FAILURE          = auto()

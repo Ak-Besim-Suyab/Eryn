@@ -5,8 +5,6 @@ from discord import ui
 
 from datetime import datetime
 
-from models import Statistic
-
 from cores import event_bus
 from cores import logger
 
@@ -41,7 +39,7 @@ async def button_attendance_claim(event: ButtonEvent):
     player.add_experience(user_id, daily_experience)
     player.set_timestamp_daily(user_id, datetime.now().timestamp())
 
-    stat = Statistic.get_or_create_stat(user_id)
+    stat = player.get_statistic(user_id)
     stat.total_daily +=1
     stat.save()
 

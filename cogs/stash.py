@@ -42,8 +42,7 @@ class StashCog(commands.Cog):
 
 
     async def on_inventory_tab(self, interaction: discord.Interaction, ephemeral: bool = False):
-        inventory = InventoryView(interaction.user)
-        await interaction.response.send_message(view=inventory, ephemeral=ephemeral)
+        await interaction.response.send_message(view=InventoryView(interaction.user), ephemeral=ephemeral)
 
     async def on_resource_tab(self, interaction: discord.Interaction, ephemeral: bool = False):
         await interaction.response.send_message(view=ResourceTabView(interaction), ephemeral=ephemeral)

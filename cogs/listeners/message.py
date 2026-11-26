@@ -7,7 +7,6 @@ import config
 from cores import logger
 from lib import level_system, player
 from lib.system import reward
-from models import Statistic
 
 MESSAGE_EXPERIENCE = 5
 
@@ -37,7 +36,7 @@ class MessageListener(commands.Cog):
 
         user_id = message.author.id
 
-        player_stat = Statistic.get_or_create_stat(user_id)
+        player_stat = player.get_statistic(user_id)
         player_stat.total_message += 1
         player_stat.save()
 

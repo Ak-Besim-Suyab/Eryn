@@ -9,11 +9,20 @@ class Statistic(BaseModel):
 
     player = ForeignKeyField(Player, backref="statistics", unique=True, on_delete="CASCADE")
 
-    total_daily = IntegerField(default=0)
-    total_voice = IntegerField(default=0)
+    total_daily   = IntegerField(default=0)
+    total_voice   = IntegerField(default=0)
     total_message = IntegerField(default=0)
 
-    @classmethod
-    def get_or_create_stat(cls, player_id: int) -> "Statistic":
-        stat, _ = cls.get_or_create(player_id=player_id)
-        return stat
+
+class FishStatistic(BaseModel):
+
+    player = ForeignKeyField(Player, backref="fish_statistics", on_delete="CASCADE")
+
+    name  = TextField()
+    count = IntegerField(default=0)
+    size  = FloatField(default=0.0)
+
+    class Meta:
+        indexes = (
+            (("player", "name"), True),
+        )

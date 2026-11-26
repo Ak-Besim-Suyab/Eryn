@@ -30,11 +30,13 @@ class Elin(commands.Bot):
             "cogs.stash",
             "cogs.inventory",
             "cogs.leaderboard",
-            "cogs.loop",
             "cogs.item",
             "cogs.fishing",
             "cogs.equipment",
             "cogs.world_map",
+
+            # 迴圈任務
+            "cogs.loop.explore",
 
             # 建築
             "cogs.buildings.sanctuary",

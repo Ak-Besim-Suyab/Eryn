@@ -31,6 +31,7 @@ def init_databases():
                 Building,
                 Contribution,
                 House, 
-                Statistic
+                Statistic,
+                FishStatistic,
             ], 
             safe=True)

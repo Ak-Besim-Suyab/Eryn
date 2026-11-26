@@ -5,7 +5,8 @@ from lib.system import reward
 
 from config import TH_HAVEN
 
-class LoopCog(commands.Cog):
+
+class ExploreLoopCog(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
         self.loop.start()
@@ -15,7 +16,6 @@ class LoopCog(commands.Cog):
 
     @tasks.loop(minutes=1)
     async def loop(self):
-        
         guild = self.bot.get_guild(TH_HAVEN)
         if guild is None:
             return
@@ -36,5 +36,6 @@ class LoopCog(commands.Cog):
     async def loop_wait(self):
         await self.bot.wait_until_ready()
 
+
 async def setup(bot: commands.Bot):
-    await bot.add_cog(LoopCog(bot))
+    await bot.add_cog(ExploreLoopCog(bot))
