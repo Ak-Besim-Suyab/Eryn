@@ -73,15 +73,7 @@ class WorldMapConfirmView(discord.ui.LayoutView):
             turn.add(interaction.user.id, self.cost)
 
             if isinstance(interaction.user, discord.Member) and self.destination.role_id is not None:
-                region_role_ids = [
-                    r.role_id for r in REGIONS.get_all() if r.role_id is not None
-                ]
-                await role.switch(
-                    interaction.user,
-                    self.destination.role_id,
-                    region_role_ids,
-                    reason=f"移動至地區：{self.destination.name}",
-                )
+                await role.switch(interaction.user, self.destination.role_id)
 
         c = discord.ui.Container()
         c.add_item(ui.TextDisplay(content=f"經過一段時間的跋涉後，你成功到達{self.destination.name}。"))

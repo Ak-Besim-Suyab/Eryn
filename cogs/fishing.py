@@ -19,7 +19,7 @@ class FishingCog(commands.Cog):
 
 class FishingView(discord.ui.LayoutView):
     def __init__(self, interaction: discord.Interaction):
-        super().__init__()
+        super().__init__(timeout=None)
         self.user = interaction.user
         self.render()
 
