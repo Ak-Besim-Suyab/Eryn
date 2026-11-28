@@ -4,20 +4,16 @@
 from lib import player
 from models import Player
 from data import ITEMS
-from data.schema.type import ItemType
+from data.schema.item_component import EQUIPMENT
 
 # 取得裝備
-_item = ITEMS.get("wooden_fishing_rod")
+_item = ITEMS.get("rough_fishing_rod")
 
-# 查看詞綴
-component = _item.get_component(ItemType.EQUIPMENT)
+# 查看詞綴與裝備欄位
+component = _item.get(EQUIPMENT)
 if component:
-    print(component.get_affix(id="fishing", type="misc_bonus"))
-
-# 查看裝備欄位
-for c in _item.components:
-    if c.type == "equipment":
-        print(c.slot)
+    print(component.slot)
+    print(component.affixes)
 
 # 模擬物件
 Player.get_or_create(id=1)

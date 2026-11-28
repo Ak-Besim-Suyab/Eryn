@@ -7,7 +7,7 @@ description: 以粗糙手藝製作的釣竿，甚至有點說不上能用來釣�
 tooltip: 無
 
 components:
-  - type: equipment
+  equipment:
     slot: main_hand
-    affixes: 
+    affixes:
       - {scope: fishing, stat: luck, operator: add, value: 1}

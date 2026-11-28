@@ -1,4 +1,5 @@
 from data import ITEMS, SLOTS
+from data.schema.item_component import EQUIPMENT
 
 from cores.logger import logger
 from cores.database import database
@@ -37,7 +38,7 @@ def give(player_id: int, item_id: str, amount: int = 1) -> bool:
     if item is None:
         return False
 
-    if item.is_equippable():
+    if item.has(EQUIPMENT):
         with database.atomic():
             instance = ItemInstance.create(player=player_id, item_id=item_id)
 
@@ -84,7 +85,7 @@ def remove(player_id: int, item_id: str, amount: int = 1) -> tuple[bool, int]:
 
 def fmtstr_short(item_id: str, quantity: int):
     item = ITEMS.get(item_id)
-    return f"{quantity} {item.icon} {item.name}" if is_valid(item_id, quantity) else f"{quantity} ❓ {item_id}"
+    return f"{item.icon} {item.name} ‧ {quantity}" if is_valid(item_id, quantity) else f"❓ {item_id} ‧ {quantity}"
 
 # function for formatting item display.
 def summary_line(item_id: str, quantity: int) -> str:
@@ -99,12 +100,12 @@ def summary_line(item_id: str, quantity: int) -> str:
     if item.has_tags("equipment"):
         lines = [
             f"**{item.icon} {item.name}**",
-            f"> -# {item.tooltip}",
+            f"-# {item.tooltip}",
         ]
         return "\n".join(lines)
     
     lines = [
-        f"**{item.icon} {item.name}（持有：{quantity} 個）**",
+        f"**{item.icon} {item.name} ‧ {quantity}**",
         f"> -# {item.tooltip}",
     ]
     

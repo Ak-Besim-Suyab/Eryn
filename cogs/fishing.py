@@ -9,84 +9,99 @@ from lib.util import dice
 from lib import player, region
 from lib.system import reward
 
+from ui.button import INVENTORY_BUTTON
+
+fishing_messages = {
+    Outcome.CRITICAL_SUCCESS : "釣到了很多魚！",
+    Outcome.SUCCESS          : "釣到了不少魚！",
+    Outcome.FAILURE          : "什麼都沒釣到。",
+    Outcome.CRITICAL_FAILURE : "什麼都沒釣到，甚至不小心睡著了。",
+}
+
 class FishingCog(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
 
     @app_commands.command(name="釣魚", description="於所在地點釣魚")
     async def fishing(self, interaction: discord.Interaction):
-        await interaction.response.send_message(view=FishingView(interaction))
+        result = dice.roll(20)
+        await interaction.response.send_message(view=FishingResultView(interaction, result))
 
-class FishingView(discord.ui.LayoutView):
-    def __init__(self, interaction: discord.Interaction):
+class FishingResultView(discord.ui.LayoutView):
+    def __init__(self, interaction: discord.Interaction, result: dice.RollResult):
         super().__init__(timeout=None)
-        self.user = interaction.user
+
+        self.interaction = interaction
+        self.result = result
+        self.render()
+
+    def update(self, interaction: discord.Interaction, result: dice.RollResult):
+        """更新互動資料與擲骰結果，並重新渲染介面"""
+        self.interaction = interaction
+        self.result = result
         self.render()
 
     def render(self):
-        result, outcome, items = self.roll()
+        container = discord.ui.Container()
 
-        if outcome == Outcome.CRITICAL_FAILURE:
-            message = f"什麼都沒釣到，甚至不小心睡著了。（{result}）"
-        elif outcome == Outcome.FAILURE:
-            message = f"什麼都沒釣到。（{result}）"
-        else:
-            message = f"釣到了不少魚！（{result}）"
+        accessory = discord.ui.Button(
+            label=self.result.total, 
+            style=discord.ButtonStyle.secondary, 
+            emoji="🎲"
+        )
 
-        c = discord.ui.Container()
-        c.add_item(discord.ui.TextDisplay(content=f"### {self.user.display_name}"))
-        c.add_item(discord.ui.TextDisplay(content=f"你在附近的水域嘗試釣魚... 經過一段時間後，{message}"))
+        container.add_item(discord.ui.TextDisplay(content=f"**{self.interaction.user.display_name}**"))
+        container.add_item(discord.ui.Section(f"你嘗試釣魚... 經過一段時間後，{fishing_messages[self.result.outcome]}", accessory=accessory))
 
-        if (outcome == Outcome.SUCCESS or outcome == Outcome.CRITICAL_SUCCESS) and items:
-            c.add_item(discord.ui.TextDisplay(content="**獲得：**\n" + "\n".join(items)))
-
-        fish_again_btn = discord.ui.Button(label="繼續釣", style=discord.ButtonStyle.secondary)
-        fish_again_btn.callback = self.on_fish_again
+        if self.result.is_success():
+            items = roll_item(self.interaction)
+            if items:
+                container.add_item(discord.ui.Separator())
+                container.add_item(discord.ui.TextDisplay(content="-# 獲得物品\n" + "\n".join(items)))
 
         self.clear_items()
-        self.add_item(c)
-        self.add_item(discord.ui.ActionRow(fish_again_btn))
+        self.add_item(container)
+        self.add_item(discord.ui.ActionRow(FishingButton(label="繼續釣（難度 5）"), INVENTORY_BUTTON))
+    
+    def dice_info(self):
+        # NOTE: 顯示擲骰的詳細資訊，但暫時不考慮實作
+        pass
 
-    async def on_fish_again(self, interaction: discord.Interaction):
-        if interaction.user.id != self.user.id:
-            await interaction.response.send_message(view=FishingView(interaction))
-            return
+class FishingButton(discord.ui.Button):
+    def __init__(
+        self,
+        label: str = "釣魚",
+        style: discord.ButtonStyle = discord.ButtonStyle.secondary,
+    ):
+        super().__init__(
+            label=label,
+            style=style,
+        )
 
-        self.render()
-        await interaction.response.edit_message(view=self)
+    async def callback(self, interaction: discord.Interaction):
+        result = dice.roll(20, 5)
 
-    def roll(self):
+        # 同一個使用者觸發時編輯原訊息，不同使用者時發送新訊息
+        if isinstance(self.view, FishingResultView) and interaction.user.id == self.view.interaction.user.id:
+            await interaction.response.edit_message(view=FishingResultView(interaction, result))
+        else:
+            await interaction.response.send_message(view=FishingResultView(interaction, result))
 
-        # 擲骰決定結果
-        result = dice.roll(1, 20)[0]
+def roll_item(interaction: discord.Interaction):
 
-        match result:
-            case 20: # 大成功
-                outcome = Outcome.CRITICAL_SUCCESS
-            case r if r >= 5: # 成功
-                outcome = Outcome.SUCCESS
-            case r if r < 5: # 失敗
-                outcome = Outcome.FAILURE
-            case 1:  # 大失敗
-                outcome = Outcome.CRITICAL_FAILURE
+    # 取得戰利品表
+    loot_table = region.get_loot_table(player.get_region(interaction.user.id), "fishing")
+    if loot_table is None:
+        raise ValueError("Fishing | Loot table not found.")
+    
+    loots = loot_table.roll()
 
-        # 大失敗或失敗直接跳過戰利品取得
-        if outcome == Outcome.CRITICAL_FAILURE or outcome == Outcome.FAILURE:
-            return result, outcome, None
+    items = []
+    for (item_type, item_id), quantity in loots.items():
+        reward.give(interaction.user.id, item_type, item_id, quantity)
+        items.append(f"{item.fmtstr_short(item_id, quantity)}")
 
-        # 取得戰利品表
-        loot_table = region.get_loot_table(player.get_region(self.user.id), "fishing")
-        if loot_table is None:
-            raise ValueError("Fishing | Loot table not found.")
-        
-        loots = loot_table.roll(1)
-
-        items = []
-        for (item_type, item_id), quantity in loots.items():
-            reward.give(self.user.id, item_type, item_id, quantity)
-            items.append(f"- {item.fmtstr_short(item_id, quantity)}")
-
-        return result, outcome, items
+    return items
 
 async def setup(bot: commands.Bot):
     await bot.add_cog(FishingCog(bot))

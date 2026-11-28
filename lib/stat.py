@@ -5,7 +5,7 @@ from collections import defaultdict
 
 from data import ITEMS
 from data.schema import Affix
-from data.schema.type import ItemType
+from data.schema.item_component import EQUIPMENT
 
 from models import ItemInstance
 
@@ -23,7 +23,7 @@ def _collect(player_id: int) -> list[Affix]:
     collections = []
     for inst in equipped:
         item = ITEMS.get(inst.item_id)
-        comp = item.get_component(ItemType.EQUIPMENT) if item else None
+        comp = item.get(EQUIPMENT) if item else None
         
         # 裝備固有屬性，本身就是 Affix 物件，直接加入列表
         if comp:

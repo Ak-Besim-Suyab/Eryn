@@ -1,11 +1,11 @@
 import discord
-from discord import ui, SeparatorSpacing
+from discord import ui
 
 from lib import player, view
-from lib.item import summary_line
 
 from data import ITEMS
 from data.schema import Item
+from data.schema.item_component import EQUIPMENT, FOOD, LOOT
 
 from models import Inventory, ItemInstance
 
@@ -19,7 +19,7 @@ class ItemView(ui.LayoutView):
     def render(self):
         # 重新獲取物品 (裝備或背包, 可擴充分類)
         item = ITEMS.get(self.row.item_id)
-        if item.is_equippable():
+        if item.has(EQUIPMENT):
             row = ItemInstance.get_or_none(
                 ItemInstance.player == self.user.id,
                 ItemInstance.id == self.row.id,
@@ -42,8 +42,6 @@ class ItemView(ui.LayoutView):
 
         # 建構容器
         container = ui.Container()
-        container.add_item(ui.TextDisplay(content = f"## {self.user.display_name} 物品"))
-        container.add_item(ui.Separator(spacing=SeparatorSpacing.large))
 
         # 檢查物品是否已為空
         if row is None:
@@ -53,7 +51,8 @@ class ItemView(ui.LayoutView):
             self.add_item(container)
             return
 
-        container.add_item(ui.TextDisplay(content=summary_line(item.id, quantity)))
+        container.add_item(ui.TextDisplay(content = f"## {item.icon} {item.name} ‧ {quantity}"))
+        container.add_item(ui.Separator())
         container.add_item(ui.ActionRow(UseSelect(item, quantity)))
 
         self.clear_items()
@@ -71,13 +70,14 @@ class UseSelect(ui.Select):
         disabled = False
 
         actions = []
-        if item.is_equippable():
+
+        if item.has(EQUIPMENT):
             actions.append(("裝備", "equip"))
 
-        if item.is_lootable():
-            actions.append(("打開", "loot"))
+        if item.has(LOOT):
+            actions.append(("開啟", "loot"))
 
-        if item.is_consumable():
+        if item.has(FOOD):
             actions.append(("使用", "consume"))
 
         # 印出行動
@@ -90,7 +90,7 @@ class UseSelect(ui.Select):
             placeholder = "沒有可用行動"
             disabled = True
             
-            options = [discord.SelectOption(label = "沒有可用行動", value = 0)]
+            options = [discord.SelectOption(label = "none", value = "none")]
         
         super().__init__(
             placeholder = placeholder,

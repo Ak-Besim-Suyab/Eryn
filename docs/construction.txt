@@ -1,4 +1,0 @@
-cogs -- discord 的 commands.Cog 物件集
-cores -- 底層邏輯、抽象類物件
-models -- 資料模型（peewee）
-scripts -- 腳本

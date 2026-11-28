@@ -2,16 +2,25 @@ import random
 import bisect
 from config import DICE_PATTERN
 
-from enum import IntEnum
+from dataclasses import dataclass
 
-BREAKPOINTS = [1, 5, 20]
+from data.enums import Outcome
 
-# 檢定結果
-class Outcome(IntEnum):
-    CRITICAL_FAILURE = 0
-    FAILURE = 1
-    SUCCESS = 2
-    CRITICAL_SUCCESS = 3
+@dataclass
+class RollResult:
+    roll       : int     # 擲骰結果
+    modifier   : int     # 修正值
+    difficulty : int     # 難度
+    outcome    : Outcome # 檢定結果
+
+    @property
+    def total(self) -> int:
+        """擲骰總和（擲骰結果 + 修正值）"""
+        return self.roll + self.modifier
+
+    def is_success(self) -> bool:
+        """是否成功"""
+        return self.outcome in (Outcome.SUCCESS, Outcome.CRITICAL_SUCCESS)
 
 def parse(content: str) -> tuple[int, int] | None:
     """
@@ -32,20 +41,13 @@ def parse(content: str) -> tuple[int, int] | None:
 
     return count, sides
 
-def roll(count: int, sides: int) -> list[int]:
+def roll(sides: int, difficulty: int = 5, modifier: int = 0) -> RollResult:
     """
-    計算指定數量與面數的擲骰結果，不論多少結果都返回為串列
+    計算指定面數的擲骰結果
     """
-    return [random.randint(1, sides) for _ in range(count)]
+    roll = random.randint(1, sides)
 
-def judge(roll: int):
-    """
-    使用 bisect 模組進行擲骰檢定，返回擲骰對應的檢定結果 `Outcomes` 用於判定成功與失敗
-    .. Outcomes::
-        `0` 為大失敗 (Critical Failure),
-        `1` 為失敗 (Failure),
-        `2` 為成功 (Success),
-        `3` 為大成功 (Critical Success)
-    """
-    index = bisect.bisect(BREAKPOINTS, roll)
-    return Outcome(index)
+    index = bisect.bisect([2, difficulty, sides], roll)
+    outcome = Outcome(index)
+    
+    return RollResult(roll, modifier, difficulty, outcome)

@@ -25,12 +25,12 @@ class DiceListener(commands.Cog):
         if sides > MAX_SIDES:
             return
         
-        rolls = dice.roll(count, sides)
+        rolls = []
+        for _ in range(count):
+            roll = dice.roll(sides)
+            rolls.append(roll.total)
 
-        if count == 1:
-            reply = f"🎲 {rolls[0]}"
-        else:
-            reply = f"🎲 {sum(rolls)} ({' + '.join(map(str, rolls))})"
+        reply = f"🎲 {' + '.join(map(str, rolls))}"
 
         await message.reply(reply, mention_author=False)
 

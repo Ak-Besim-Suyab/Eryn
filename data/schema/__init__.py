@@ -11,6 +11,18 @@ from .media_gallery import *
 from .skill import *
 from .region import *
 from .item import *
+from .item_component import (
+    Food,
+    Affix,
+    Equipment,
+    Loot,
+    ItemComponent,
+    COMPONENTS,
+    FOOD,
+    LOOT,
+    EQUIPMENT,
+    AFFIX,
+)
 from .slot import *
 from .role import *
 from .material import *
@@ -29,6 +41,11 @@ __all__ = [
     'MediaGallery',
 
     'Affix',
+    'Food',
+    'Equipment',
+    'Loot',
+    'ItemComponent',
+    'ComponentMap',
     'Skill',
     'Region',
     'Item',

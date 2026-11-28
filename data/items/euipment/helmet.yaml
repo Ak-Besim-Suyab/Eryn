@@ -6,3 +6,7 @@ tooltip: 可裝備於頭部
 tags:
   - equipment
   - head
+
+components:
+  equipment:
+    slot: head

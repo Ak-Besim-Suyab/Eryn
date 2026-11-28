@@ -4,13 +4,17 @@
 # name       : 物品名稱
 # description: 物品描述
 # tooltip    : 物品提示說明
-# components : 物品元件, 這個區塊會指示物品有什麼樣的行為, type 決定行為種類以及後續應填寫哪些參數
-#
-# type: 元件行為種類, 可用的種類有: equipment, food
+# components : 物品元件, 以元件名稱為鍵對應各自的參數, 可用元件: equipment, food, loot
 #
 # :: equipment:
 # slot   : 裝備位置, 這個參數將決定該物品能裝備在哪個部位, 可用位置: main_hand, off_hand, ammo, head, chest, arms, legs, foot, earring, necklace, ring
 # affixes: 裝備效果, 這些效果將決定物品被裝備後對角色產生的效果, 關於更詳細的裝備效果請參考 affixes.txt
+#
+# :: food:
+# saturation: 飽食度
+#
+# :: loot:
+# loot_tables: 對應的戰利品表列表
 
 serial: 0
 id: template
@@ -21,7 +25,7 @@ description: 測試道具
 tooltip: 測試工具
 
 components:
-  - type: equipment
+  equipment:
     slot: main_hand
     affixes:
       - {scope: attack, stat: attack, operator: add, value: 1}

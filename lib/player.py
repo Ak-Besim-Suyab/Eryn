@@ -7,8 +7,8 @@ from lib import item as itemlib
 from lib import material
 
 from data import MATERIALS, LOOT_TABLES, ITEMS
-from data.schema.type import ItemType
 from data.schema import Item
+from data.schema.item_component import EQUIPMENT, LOOT
 
 def get(player_id: int) -> Player:
     """ 
@@ -135,7 +135,7 @@ def equip(player_id: int, item_id: str, slot: str) -> tuple[bool, str]:
         return False, "物品已裝備"
 
     item = ITEMS.get(item_id)
-    component = item.get_component(ItemType.EQUIPMENT) if item else None
+    component = item.get(EQUIPMENT) if item else None
 
     # 沒有可裝備的標籤, 或該物品被定位成不可裝備
     if component is None or component.slot is None:
@@ -211,8 +211,8 @@ def is_equipped(player_id: int, slot: str) -> bool:
 
 def open_item(player_id: int, item: Item, times: int = 1) -> tuple[bool, dict]:
 
-    loot = item.get_component(ItemType.LOOT)
-    if loot is None:
+    loot = item.get(LOOT)
+    if loot is None or not loot.loot_tables:
         return False, None
 
     # NOTE: 這裡先實作簡易邏輯，之後如果讓 loot_table 可以有多個，則需要再做調整

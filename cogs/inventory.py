@@ -21,6 +21,21 @@ class InventoryCog(commands.Cog):
     async def inventory(self, interaction: discord.Interaction):
         await interaction.response.send_message(view=InventoryView(interaction.user))
 
+    # 背包按鈕的元件事件監聽
+    @commands.Cog.listener()
+    async def on_interaction(self, interaction: discord.Interaction):
+        # 檢查互動類型是否為元件，並確認有資料存在
+        if interaction.type != discord.InteractionType.component or interaction.data is None:
+            return
+
+        # 檢查元件類型是否為 button
+        if interaction.data.get("component_type") != 2:
+            return
+
+        # 檢查按鈕 custom_id 是否為 inventory
+        if interaction.data.get("custom_id") == "inventory":
+            await interaction.response.send_message(view=InventoryView(interaction.user), ephemeral=True)
+
 
 class InventoryView(Page):
     def __init__(self, user: discord.abc.User, tags: list[str] | None = None):
@@ -38,7 +53,8 @@ class InventoryView(Page):
 
         # 建立容器
         container = ui.Container(accent_color=0)
-        container.add_item(ui.TextDisplay(content=f"## 🪎 {self.user.display_name} 背包"))
+        container.add_item(ui.TextDisplay(content=f"## 🪎 背包"))
+        container.add_item(ui.Separator())
 
         # 印出物品列表
         if not rows:

@@ -10,7 +10,7 @@ tooltip    : 可裝備於胸部
 description: 麻布製成的寬鬆衣袍，只能提供簡單的防禦。
 
 components:
-  - type: equipment
+  equipment:
     slot: chest
     affixes:
       - scope: defense

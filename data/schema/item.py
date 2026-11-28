@@ -1,49 +1,14 @@
 from dataclasses import dataclass, field
 
-from data.schema.type import ItemType
+class ComponentMap:
+    def __init__(self, data: dict):
+        self._data = data # {ItemComponent: values}
 
-@dataclass(frozen=True)
-class Affix:
-    scope: str
-    stat: str
-    value: int | float
-    operator: str = "add"
+    def get(self, type, default=None):
+        return self._data.get(type, default)
 
-@dataclass
-class FoodItem:
-    type: str = ItemType.FOOD
-
-@dataclass
-class LootItem:
-    type: str = ItemType.LOOT
-    loot_tables: list[str] | None = field(default_factory=list)
-
-@dataclass
-class EquipmentItem:
-    type: str = ItemType.EQUIPMENT
-    slot: str | None = None
-    affixes: list[Affix] | None = field(default_factory=list)
-
-    def __post_init__(self):
-        if self.affixes and isinstance(self.affixes, list):
-            self.affixes = [Affix(**affix) for affix in self.affixes]
-
-    def get_affix(self, id: str | None = None, type: str = None) -> Affix | None:
-        """
-        返回符合條件的詞綴, 可以傳入 id 或 type, 會返回符合所有條件的詞綴
-        """
-        if id and type:
-            return next((affix for affix in self.affixes if affix.id == id and affix.type == type), None)
-        if id:
-            return next((affix for affix in self.affixes if affix.id == id), None)
-        if type:
-            return next((affix for affix in self.affixes if affix.type == type), None)
-            
-ACTION_TYPES = {
-    ItemType.LOOT: LootItem,
-    ItemType.FOOD: FoodItem,
-    ItemType.EQUIPMENT: EquipmentItem,
-}
+    def has(self, type) -> bool:
+        return type in self._data
 
 @dataclass
 class Item:
@@ -58,35 +23,14 @@ class Item:
     tooltip: str     = "無"
     icon: str        = "📦"
 
-    tags: list[str] | None        = field(default_factory=list)
-    components: list[dict] | None = field(default_factory=list)
+    tags: list[str] | None   = field(default_factory=list)
+    components: ComponentMap = field(default_factory=lambda: ComponentMap({}))
 
-    def __post_init__(self):
-        if self.components and isinstance(self.components, list):
-            formated_components = []
-            for component in self.components:
-                cls = ACTION_TYPES.get(component['type'])
-                if cls is None:
-                    raise ValueError(f"不支援的組件類型: {component['type']}")
-
-                formated_components.append(cls(**component))
-                    
-            self.components = formated_components
-
-    def has_tags(self, *tags):
+    def has_tags(self, *tags) -> bool:
         return set(tags).issubset(self.tags)
 
-    def get_component(self, component_type: ItemType) -> dict | None:
-        return next((component for component in self.components if component.type == component_type), None)
+    def get(self, type, default=None):
+        return self.components.get(type, default)
 
-    def has_component(self, component_type: ItemType) -> bool:
-        return self.get_component(component_type) is not None
-
-    def is_lootable(self) -> bool:
-        return self.has_component(ItemType.LOOT)
-
-    def is_consumable(self) -> bool:
-        return self.has_component(ItemType.FOOD)
-
-    def is_equippable(self) -> bool:
-        return self.has_component(ItemType.EQUIPMENT)
+    def has(self, type) -> bool:
+        return self.components.has(type)

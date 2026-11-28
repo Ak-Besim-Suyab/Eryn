@@ -1,0 +1,9 @@
+serial: 50001
+id: wooden_crate
+
+name: 木箱
+description: 裝著物資的木製儲物箱，裡面不知道裝著什麼。
+
+components:
+  loot:
+    loot_tables: [wooden_crate]

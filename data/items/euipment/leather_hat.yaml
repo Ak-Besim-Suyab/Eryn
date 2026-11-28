@@ -7,7 +7,7 @@ description: 以皮革製作的帽子，能提供簡單的防禦。
 tooltip: 可裝備於頭部
 
 components:
-  - type: equipment
+  equipment:
     slot: head
     affixes:
       - scope: defense
